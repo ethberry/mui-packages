@@ -9,6 +9,10 @@
     {
       "matchPackagePatterns": ["^@material-ui/"],
       "rollbackPrs": false
+    },
+    {
+      "matchPackagePatterns": ["^notistack/"],
+      "rollbackPrs": false
     }
   ]
 }
