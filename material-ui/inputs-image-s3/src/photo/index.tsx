@@ -10,7 +10,7 @@ import { ConfirmationDialog } from "@gemunion/material-ui-dialog-confirmation";
 import { S3FileInput } from "@gemunion/material-ui-inputs-file-s3";
 import { openUrlOnClick } from "@gemunion/popup";
 
-import { useStyles } from "./styles";
+import useStyles from "./styles";
 import { useDeleteUrl } from "../utils";
 
 interface IPhotoInputProps {

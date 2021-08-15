@@ -1,11 +1,12 @@
 import React, { FC, Children, cloneElement, ReactElement } from "react";
-import { Grid, ButtonProps, GridJustification } from "@material-ui/core";
+import { Grid, ButtonProps } from "@material-ui/core";
+import { Property } from "csstype";
 
 import useStyles from "./styles";
 
 export interface IButtonToolbarProps {
   className?: string;
-  justifyContent?: GridJustification;
+  justifyContent?: Property.JustifyContent;
 }
 
 export const ButtonToolbar: FC<IButtonToolbarProps> = ({ children = [], ...props }) => {

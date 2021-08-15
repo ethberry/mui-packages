@@ -1,16 +1,16 @@
-import { createStyles, makeStyles } from "@material-ui/core";
+import { Theme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/styles";
 
-export default makeStyles(
-  () =>
-    createStyles({
-      text: {
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        margin: "0 auto",
-        marginTop: "-120px",
-      },
-    }),
+export default makeStyles<Theme>(
+  () => ({
+    text: {
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      margin: "0 auto",
+      marginTop: "-120px",
+    },
+  }),
   { name: "NotFound" },
 );

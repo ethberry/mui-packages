@@ -4,7 +4,7 @@ import { IconButton, InputBase, InputBaseProps, Paper } from "@material-ui/core"
 import { SearchOutlined } from "@material-ui/icons";
 import { getIn, useFormikContext } from "formik";
 
-import { useStyles } from "./styles";
+import useStyles from "./styles";
 
 export interface ISearchInputProps extends InputBaseProps {}
 

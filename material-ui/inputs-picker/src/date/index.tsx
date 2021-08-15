@@ -2,7 +2,7 @@ import React, { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
 import { TextField, TextFieldProps } from "@material-ui/core";
-import { DatePicker } from "@material-ui/pickers";
+import { DatePicker } from "@material-ui/lab";
 
 interface IDateInputProps {
   name: string;

@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState } from "react";
 import { match } from "css-mediaquery";
 
-import { createTheme, CssBaseline, MuiThemeProvider } from "@material-ui/core";
+import { createTheme, adaptV4Theme, CssBaseline, ThemeProvider } from "@material-ui/core";
 import { MuiMediaQueryList } from "@material-ui/core/useMediaQuery";
 import { PaletteOptions } from "@material-ui/core/styles/createPalette";
 
@@ -14,7 +14,7 @@ export interface IThemeProviderProps {
   lightPalette?: PaletteOptions;
 }
 
-export const ThemeProvider: FC<IThemeProviderProps> = props => {
+export const GemunionThemeProvider: FC<IThemeProviderProps> = props => {
   const { type: defaultType = ThemeType.light, darkPalette = dark, lightPalette = light, children } = props;
 
   const [type, setType] = useState<ThemeType>(defaultType);
@@ -38,20 +38,22 @@ export const ThemeProvider: FC<IThemeProviderProps> = props => {
     }),
   });
 
-  const theme = createTheme({
-    props: {
-      MuiUseMediaQuery: {
-        ssrMatchMedia,
+  const theme = createTheme(
+    adaptV4Theme({
+      props: {
+        MuiUseMediaQuery: {
+          ssrMatchMedia,
+        },
       },
-    },
-    palette: {
-      light: lightPalette,
-      dark: darkPalette,
-    }[type],
-  });
+      palette: {
+        light: lightPalette,
+        dark: darkPalette,
+      }[type],
+    }),
+  );
 
   return (
-    <MuiThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <ThemeContext.Provider
         value={{
@@ -61,6 +63,6 @@ export const ThemeProvider: FC<IThemeProviderProps> = props => {
       >
         {children}
       </ThemeContext.Provider>
-    </MuiThemeProvider>
+    </ThemeProvider>
   );
 };

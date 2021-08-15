@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 
-import { createTheme, CssBaseline, MuiThemeProvider } from "@material-ui/core";
+import { createTheme, CssBaseline, ThemeProvider } from "@material-ui/core";
 import { PaletteOptions } from "@material-ui/core/styles/createPalette";
 
 import { ThemeContext, ThemeType } from "./context";
@@ -12,7 +12,7 @@ export interface IThemeProviderProps {
   lightPalette?: PaletteOptions;
 }
 
-export const ThemeProvider: FC<IThemeProviderProps> = props => {
+export const GemunionThemeProvider: FC<IThemeProviderProps> = props => {
   const { type: defaultType = ThemeType.light, darkPalette = dark, lightPalette = light, children } = props;
 
   const [type, setType] = useState<ThemeType>(defaultType);
@@ -29,7 +29,7 @@ export const ThemeProvider: FC<IThemeProviderProps> = props => {
   });
 
   return (
-    <MuiThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <ThemeContext.Provider
         value={{
@@ -39,6 +39,6 @@ export const ThemeProvider: FC<IThemeProviderProps> = props => {
       >
         {children}
       </ThemeContext.Provider>
-    </MuiThemeProvider>
+    </ThemeProvider>
   );
 };

@@ -1,8 +1,8 @@
-import React, { FC, ReactElement, Fragment } from "react";
+import React, { FC, Fragment, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
-import { TextField, TextFieldProps } from "@material-ui/core";
-import { DateRangePicker, DateRange, DateRangeDelimiter } from "@material-ui/pickers";
+import { Box, TextField, TextFieldProps } from "@material-ui/core";
+import { DateRange, DateRangePicker } from "@material-ui/lab";
 
 interface IDateTimeInputProps {
   name: string;
@@ -34,7 +34,7 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
         return (
           <Fragment>
             <TextField {...startProps} name={`${name}Start`} variant="standard" onBlur={formik.handleBlur} fullWidth />
-            <DateRangeDelimiter> &raquo; </DateRangeDelimiter>
+            <Box sx={{ mx: 1 }}> &raquo; </Box>
             <TextField {...endProps} name={`${name}End`} variant="standard" onBlur={formik.handleBlur} fullWidth />
           </Fragment>
         );

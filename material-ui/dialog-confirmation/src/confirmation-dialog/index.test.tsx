@@ -1,7 +1,7 @@
 import React from "react";
 import { IntlProvider } from "react-intl";
-import { render, cleanup } from "@testing-library/react";
-import { MuiThemeProvider, createTheme } from "@material-ui/core";
+import { cleanup, render } from "@testing-library/react";
+import { createTheme, ThemeProvider } from "@material-ui/core";
 
 import { ConfirmationDialog } from "./index";
 
@@ -27,11 +27,11 @@ describe("<ConfirmationDialog />", () => {
     };
 
     const { asFragment } = render(
-      <MuiThemeProvider theme={createTheme()}>
+      <ThemeProvider theme={createTheme()}>
         <IntlProvider locale="en" messages={i18n}>
           <ConfirmationDialog {...props} />
         </IntlProvider>
-      </MuiThemeProvider>,
+      </ThemeProvider>,
       { container },
     );
 
@@ -51,11 +51,11 @@ describe("<ConfirmationDialog />", () => {
     };
 
     const { asFragment } = render(
-      <MuiThemeProvider theme={createTheme()}>
+      <ThemeProvider theme={createTheme()}>
         <IntlProvider locale="en" messages={i18n}>
           <ConfirmationDialog {...props} />
         </IntlProvider>
-      </MuiThemeProvider>,
+      </ThemeProvider>,
       { container },
     );
 

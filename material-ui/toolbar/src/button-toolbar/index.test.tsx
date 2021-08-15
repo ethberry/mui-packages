@@ -1,6 +1,6 @@
 import React from "react";
 import { render, cleanup } from "@testing-library/react";
-import { MuiThemeProvider, createTheme } from "@material-ui/core";
+import { ThemeProvider, createTheme } from "@material-ui/core";
 
 import { ButtonToolbar } from "./index";
 
@@ -9,9 +9,9 @@ afterEach(cleanup);
 describe("<ButtonToolbar />", () => {
   it("renders component", () => {
     const { asFragment } = render(
-      <MuiThemeProvider theme={createTheme()}>
+      <ThemeProvider theme={createTheme()}>
         <ButtonToolbar />
-      </MuiThemeProvider>,
+      </ThemeProvider>,
     );
 
     expect(asFragment()).toMatchSnapshot();

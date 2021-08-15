@@ -2,8 +2,7 @@ import React, { ChangeEvent, FC, ReactElement, useContext, useEffect, useState }
 import { useIntl } from "react-intl";
 import { useSnackbar } from "notistack";
 import { getIn, useFormikContext } from "formik";
-import { TextField } from "@material-ui/core";
-import { Autocomplete, AutocompleteRenderInputParams } from "@material-ui/lab";
+import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@material-ui/core";
 
 import { ProgressOverlay } from "@gemunion/material-ui-progress";
 import { ApiContext } from "@gemunion/provider-api";
