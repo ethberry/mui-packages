@@ -1,6 +1,6 @@
 module.exports = {
   stories: [
-    "../packages/**/*.stories.@(ts|tsx)",
+    "../material-ui/**/*.stories.@(ts|tsx)",
   ],
   addons: [
     "@storybook/addon-links",
