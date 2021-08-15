@@ -1,12 +1,12 @@
-import { createStyles, makeStyles } from "@material-ui/core";
+import { Theme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/styles";
 
-export default makeStyles(
-  () =>
-    createStyles({
-      popup: {
-        width: 400,
-        margin: "auto",
-      },
-    }),
+export default makeStyles<Theme>(
+  () => ({
+    popup: {
+      width: 400,
+      margin: "auto",
+    },
+  }),
   { name: "VerifyEmail" },
 );
