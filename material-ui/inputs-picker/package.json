@@ -17,7 +17,7 @@
     "@types/react": "17.0.18",
     "formik": "2.2.9",
     "react": "17.0.2",
-    "react-intl": "5.20.7"
+    "react-intl": "5.20.8"
   },
   "engines": {
     "node": ">=12.13"
