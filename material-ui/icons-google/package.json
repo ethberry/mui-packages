@@ -23,7 +23,7 @@
   "main": "./dist/index.js",
   "name": "@gemunion/material-ui-icons-google",
   "peerDependencies": {
-    "@material-ui/core": "^5",
+    "@material-ui/core": "^5.0.0-beta",
     "react": "^17"
   },
   "publishConfig": {

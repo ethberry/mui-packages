@@ -28,7 +28,7 @@
   "main": "./dist/index.js",
   "name": "@gemunion/material-ui-form",
   "peerDependencies": {
-    "@material-ui/core": "^5",
+    "@material-ui/core": "^5.0.0-beta",
     "formik": "^2",
     "react": "^17",
     "react-intl": "^5",
