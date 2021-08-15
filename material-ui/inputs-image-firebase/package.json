@@ -49,7 +49,7 @@
     "@material-ui/icons": "^5",
     "@material-ui/styles": "^5",
     "formik": "^2",
-    "notistack": "^2",
+    "notistack": "^2.0.1-alpha",
     "react": "^17",
     "react-intl": "^5"
   },
