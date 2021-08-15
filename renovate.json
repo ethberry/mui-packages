@@ -5,6 +5,10 @@
     {
       "matchPackageNames": ["*"],
       "automerge": false
+    },
+    {
+      "matchPackagePatterns": ["^@material-ui/"],
+      "rollbackPrs": false
     }
   ]
 }
