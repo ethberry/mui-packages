@@ -11,7 +11,7 @@
       "rollbackPrs": false
     },
     {
-      "matchPackagePatterns": ["^notistack/"],
+      "matchPackagePatterns": ["^notistack"],
       "rollbackPrs": false
     }
   ]
