@@ -5,7 +5,7 @@
     "url": "https://trejgun.github.io/"
   },
   "bugs": {
-    "url": "https://github.com/gemunion/material-ui-packages/issues"
+    "url": "https://github.com/gemunion/common-packages/issues"
   },
   "description": "Set of social networks flat icons for Material UI",
   "devDependencies": {
@@ -32,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gemunion/material-ui-packages"
+    "url": "https://github.com/gemunion/common-packages"
   },
   "scripts": {
     "build": "tsc",
@@ -45,5 +45,5 @@
   "sideEffects": false,
   "title": "Material UI social network flat icons",
   "types": "./dist/index.d.ts",
-  "version": "0.1.11"
+  "version": "0.2.0"
 }
