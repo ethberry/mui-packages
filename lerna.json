@@ -1,4 +1,4 @@
 {
-  "packages": ["material-ui/*"],
+  "packages": ["material-ui/*", "other/*"],
   "version": "independent"
 }
