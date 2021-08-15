@@ -3,10 +3,10 @@
 exports[`<AvatarInput /> renders empty field with error: image is required 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root AvatarInput-root-18 MuiFormControl-fullWidth"
+    class="MuiFormControl-root MuiFormControl-fullWidth AvatarInput-root-18 css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root AvatarInput-label-19 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary AvatarInput-label-19 css-d6jbqa-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       id="avatar-select-label"
     >
@@ -26,7 +26,8 @@ exports[`<AvatarInput /> renders empty field with error: image is required 1`] =
       />
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root InputFile-icon-24"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium InputFile-icon-24 css-i4bv87-MuiSvgIcon-root"
+        data-testid="CloudUploadIcon"
         focusable="false"
         viewBox="0 0 24 24"
       >
@@ -36,7 +37,7 @@ exports[`<AvatarInput /> renders empty field with error: image is required 1`] =
       </svg>
     </div>
     <p
-      class="MuiFormHelperText-root Mui-error"
+      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
       id="avatar-helper-text"
     >
       Avatar is required
@@ -48,10 +49,10 @@ exports[`<AvatarInput /> renders empty field with error: image is required 1`] =
 exports[`<AvatarInput /> renders image with error from server 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root AvatarInput-root-13 MuiFormControl-fullWidth"
+    class="MuiFormControl-root MuiFormControl-fullWidth AvatarInput-root-13 css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root AvatarInput-label-14 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary AvatarInput-label-14 css-d6jbqa-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       id="avatar-select-label"
     >
@@ -59,27 +60,24 @@ exports[`<AvatarInput /> renders image with error from server 1`] = `
     </label>
     <button
       aria-label="delete"
-      class="MuiButtonBase-root MuiIconButton-root AvatarInput-button-15"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium AvatarInput-button-15 css-1i8snpa-MuiButtonBase-root-MuiIconButton-root"
+      data-mui-internal-clone-element="true"
       tabindex="0"
-      title="Delete"
       type="button"
     >
-      <span
-        class="MuiIconButton-label"
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+        data-testid="DeleteIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
       >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-          />
-        </svg>
-      </span>
+        <path
+          d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+        />
+      </svg>
       <span
-        class="MuiTouchRipple-root"
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
       />
     </button>
     <img
@@ -88,7 +86,7 @@ exports[`<AvatarInput /> renders image with error from server 1`] = `
       src="https://lms2-dev.s3-us-west-2.amazonaws.com/7f0f427f-eeba-4ffb-a1c8-f730721bfd46.jpeg"
     />
     <p
-      class="MuiFormHelperText-root Mui-error"
+      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
       id="avatar-helper-text"
     >
       Property Avatar is not recognized
@@ -100,10 +98,10 @@ exports[`<AvatarInput /> renders image with error from server 1`] = `
 exports[`<AvatarInput /> renders the empty field 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root AvatarInput-root-1 MuiFormControl-fullWidth"
+    class="MuiFormControl-root MuiFormControl-fullWidth AvatarInput-root-1 css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root AvatarInput-label-2 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary AvatarInput-label-2 css-d6jbqa-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       id="avatar-select-label"
     >
@@ -123,7 +121,8 @@ exports[`<AvatarInput /> renders the empty field 1`] = `
       />
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root InputFile-icon-7"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium InputFile-icon-7 css-i4bv87-MuiSvgIcon-root"
+        data-testid="CloudUploadIcon"
         focusable="false"
         viewBox="0 0 24 24"
       >
@@ -139,10 +138,10 @@ exports[`<AvatarInput /> renders the empty field 1`] = `
 exports[`<AvatarInput /> renders the field with image 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root AvatarInput-root-8 MuiFormControl-fullWidth"
+    class="MuiFormControl-root MuiFormControl-fullWidth AvatarInput-root-8 css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root AvatarInput-label-9 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary AvatarInput-label-9 css-d6jbqa-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       id="avatar-select-label"
     >
@@ -150,27 +149,24 @@ exports[`<AvatarInput /> renders the field with image 1`] = `
     </label>
     <button
       aria-label="delete"
-      class="MuiButtonBase-root MuiIconButton-root AvatarInput-button-10"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium AvatarInput-button-10 css-1i8snpa-MuiButtonBase-root-MuiIconButton-root"
+      data-mui-internal-clone-element="true"
       tabindex="0"
-      title="Delete"
       type="button"
     >
-      <span
-        class="MuiIconButton-label"
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+        data-testid="DeleteIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
       >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-          />
-        </svg>
-      </span>
+        <path
+          d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+        />
+      </svg>
       <span
-        class="MuiTouchRipple-root"
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
       />
     </button>
     <img
