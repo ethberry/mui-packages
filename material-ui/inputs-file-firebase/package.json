@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/firebase": "0.1.12",
-    "@gemunion/material-ui-inputs-file": "0.1.14"
+    "@gemunion/material-ui-inputs-file": "0.2.0"
   },
   "description": "react widget",
   "devDependencies": {
@@ -43,5 +43,5 @@
   "sideEffects": false,
   "title": "-=Encoder=-",
   "types": "./dist/index.d.ts",
-  "version": "0.1.15"
+  "version": "0.1.16"
 }

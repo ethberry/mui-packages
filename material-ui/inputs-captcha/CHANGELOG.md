@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/gemunion/common-packages/compare/@gemunion/material-ui-inputs-captcha@0.1.13...@gemunion/material-ui-inputs-captcha@0.2.0) (2021-08-15)
+
+
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/common-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+
+
+### BREAKING CHANGES
+
+* version bump
+
+
+
+
+
 ## 0.1.13 (2021-08-13)
 
 

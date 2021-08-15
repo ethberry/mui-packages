@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/gemunion/common-packages/compare/@gemunion/material-ui-provider-theme@0.4.0...@gemunion/material-ui-provider-theme@0.5.0) (2021-08-15)
+
+
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/common-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+
+
+### BREAKING CHANGES
+
+* version bump
+
+
+
+
+
 # 0.4.0 (2021-08-13)
 
 

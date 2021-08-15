@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/common-packages/issues"
   },
   "dependencies": {
-    "@gemunion/material-ui-inputs-file": "0.1.14",
+    "@gemunion/material-ui-inputs-file": "0.2.0",
     "@gemunion/provider-api": "4.0.0",
     "react-s3-uploader": "5.0.0"
   },
@@ -44,5 +44,5 @@
   "sideEffects": false,
   "title": "-=TrejGun=-",
   "types": "./dist/index.d.ts",
-  "version": "0.2.17"
+  "version": "0.2.18"
 }
