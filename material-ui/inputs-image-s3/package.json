@@ -14,11 +14,11 @@
     "@gemunion/material-ui-progress": "0.1.11",
     "@gemunion/popup": "0.0.5",
     "@gemunion/provider-api": "4.0.0",
-    "notistack": "1.0.6",
     "react-beautiful-dnd": "13.1.0"
   },
   "description": "react widget",
   "devDependencies": {
+    "notistack": "2.0.1-alpha.4",
     "@material-ui/core": "5.0.0-beta.4",
     "@material-ui/icons": "5.0.0-beta.4",
     "@material-ui/styles": "5.0.0-beta.4",
@@ -46,6 +46,7 @@
     "@material-ui/icons": "^5",
     "@material-ui/styles": "^5",
     "formik": "^2",
+    "notistack": "^2",
     "react": "^17",
     "react-intl": "^5"
   },
