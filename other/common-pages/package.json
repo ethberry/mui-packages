@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/constants-regexp": "0.1.9",
+    "@gemunion/constants-regexp": "0.1.10",
     "@gemunion/material-ui-form": "0.1.17",
     "@gemunion/material-ui-icons-social-networks": "0.1.12",
     "@gemunion/material-ui-inputs-captcha": "0.1.15",
@@ -16,7 +16,7 @@
     "@gemunion/material-ui-page-header": "0.1.17",
     "@gemunion/material-ui-progress": "0.1.12",
     "@gemunion/material-ui-toolbar": "0.1.16",
-    "@gemunion/popup": "0.0.6",
+    "@gemunion/popup": "0.0.7",
     "@gemunion/provider-api": "4.0.1",
     "@gemunion/provider-user": "0.1.20",
     "@gemunion/yup-rules": "0.1.20",
