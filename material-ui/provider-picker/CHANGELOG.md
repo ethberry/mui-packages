@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.12](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-provider-picker@0.1.11...@gemunion/material-ui-provider-picker@0.1.12) (2021-08-16)
+
+**Note:** Version bump only for package @gemunion/material-ui-provider-picker
+
+
+
+
+
 ## [0.1.11](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-provider-picker@0.1.10...@gemunion/material-ui-provider-picker@0.1.11) (2021-08-16)
 
 **Note:** Version bump only for package @gemunion/material-ui-provider-picker
