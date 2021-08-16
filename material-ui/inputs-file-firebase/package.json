@@ -5,11 +5,11 @@
     "url": "https://trejgun.github.io/"
   },
   "bugs": {
-    "url": "https://github.com/gemunion/common-packages/issues"
+    "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
     "@gemunion/firebase": "0.1.12",
-    "@gemunion/material-ui-inputs-file": "0.2.0"
+    "@gemunion/material-ui-inputs-file": "1.0.0"
   },
   "description": "react widget",
   "devDependencies": {
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gemunion/common-packages"
+    "url": "https://github.com/gemunion/material-ui-packages"
   },
   "scripts": {
     "build": "tsc",
@@ -41,7 +41,7 @@
     "test": "exit 0"
   },
   "sideEffects": false,
-  "title": "-=Encoder=-",
+  "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "0.1.16"
+  "version": "1.0.0"
 }
