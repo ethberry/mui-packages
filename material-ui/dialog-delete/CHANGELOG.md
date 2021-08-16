@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.15](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-dialog-delete@0.1.14...@gemunion/material-ui-dialog-delete@0.1.15) (2021-08-16)
+
+**Note:** Version bump only for package @gemunion/material-ui-dialog-delete
+
+
+
+
+
 ## 0.1.14 (2021-08-13)
 
 
