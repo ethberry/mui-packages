@@ -41,7 +41,7 @@
     "test": "exit 0"
   },
   "sideEffects": false,
-  "title": "-=Material UI=-",
+  "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
   "version": "1.0.1"
 }
