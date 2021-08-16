@@ -8,18 +8,18 @@
     "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/material-ui-progress": "0.2.0",
+    "@gemunion/material-ui-progress": "0.1.11",
     "@gemunion/provider-api": "4.0.0"
   },
   "description": "react widget",
   "devDependencies": {
-    "@material-ui/core": "5.0.0-beta.4",
-    "@material-ui/icons": "5.0.0-beta.4",
-    "@material-ui/lab": "5.0.0-alpha.43",
-    "@material-ui/styles": "5.0.0-beta.4",
+    "@material-ui/core": "4.12.3",
+    "@material-ui/icons": "4.11.2",
+    "@material-ui/lab": "4.0.0-alpha.60",
+    "@material-ui/styles": "4.11.4",
     "@types/react": "17.0.18",
     "formik": "2.2.9",
-    "notistack": "2.0.1-alpha.4",
+    "notistack": "1.0.6",
     "react": "17.0.2",
     "react-intl": "5.20.8"
   },
@@ -31,12 +31,12 @@
   "main": "./dist/index.js",
   "name": "@gemunion/material-ui-inputs-entity",
   "peerDependencies": {
-    "@material-ui/core": "^5",
-    "@material-ui/icons": "^5",
-    "@material-ui/lab": "^5",
-    "@material-ui/styles": "^5",
+    "@material-ui/core": "4",
+    "@material-ui/icons": "4",
+    "@material-ui/lab": "^4.11.3-deprecations",
+    "@material-ui/styles": "^4",
     "formik": "^2",
-    "notistack": "^2",
+    "notistack": "^1",
     "react": "^17",
     "react-intl": "^5"
   },
@@ -58,5 +58,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "1.0.1"
+  "version": "0.1.22"
 }

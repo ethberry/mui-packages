@@ -3,23 +3,9 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.0.1](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-form@0.2.0...@gemunion/material-ui-form@1.0.1) (2021-08-15)
+## [0.1.16](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-form@0.1.15...@gemunion/material-ui-form@0.1.16) (2021-08-16)
 
 **Note:** Version bump only for package @gemunion/material-ui-form
-
-
-
-
-
-# [0.2.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-form@0.1.15...@gemunion/material-ui-form@0.2.0) (2021-08-15)
-
-
-* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/material-ui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
-
-
-### BREAKING CHANGES
-
-* version bump
 
 
 

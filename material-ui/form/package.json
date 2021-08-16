@@ -8,11 +8,11 @@
     "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/material-ui-toolbar": "0.2.0"
+    "@gemunion/material-ui-toolbar": "0.1.15"
   },
   "description": "react widget",
   "devDependencies": {
-    "@material-ui/core": "5.0.0-beta.4",
+    "@material-ui/core": "4.12.3",
     "@types/react": "17.0.18",
     "@types/react-router-dom": "5.1.8",
     "formik": "2.2.9",
@@ -28,7 +28,7 @@
   "main": "./dist/index.js",
   "name": "@gemunion/material-ui-form",
   "peerDependencies": {
-    "@material-ui/core": "^5",
+    "@material-ui/core": "^4",
     "formik": "^2",
     "react": "^17",
     "react-intl": "^5",
@@ -52,5 +52,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "1.0.1"
+  "version": "0.1.16"
 }

@@ -9,7 +9,7 @@
   },
   "description": "Set of Google flat icons for Material UI",
   "devDependencies": {
-    "@material-ui/core": "5.0.0-beta.4",
+    "@material-ui/core": "4.12.3",
     "react": "17.0.2"
   },
   "keywords": [
@@ -23,7 +23,7 @@
   "main": "./dist/index.js",
   "name": "@gemunion/material-ui-icons-google",
   "peerDependencies": {
-    "@material-ui/core": "^5",
+    "@material-ui/core": "^4",
     "react": "^17"
   },
   "publishConfig": {
@@ -44,5 +44,5 @@
   "sideEffects": false,
   "title": "Material UI Google flat icons",
   "types": "./dist/index.d.ts",
-  "version": "1.0.1"
+  "version": "0.1.11"
 }

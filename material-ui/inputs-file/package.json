@@ -13,11 +13,10 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@material-ui/core": "5.0.0-beta.4",
-    "@material-ui/icons": "5.0.0-beta.4",
-    "@material-ui/styles": "5.0.0-beta.4",
+    "@material-ui/core": "4.12.3",
+    "@material-ui/icons": "4.11.2",
     "@types/react": "17.0.18",
-    "notistack": "2.0.1-alpha.4",
+    "notistack": "1.0.6",
     "react": "17.0.2",
     "react-intl": "5.20.8"
   },
@@ -29,10 +28,9 @@
   "main": "./dist/index.js",
   "name": "@gemunion/material-ui-inputs-file",
   "peerDependencies": {
-    "@material-ui/core": "^5",
-    "@material-ui/icons": "^5",
-    "@material-ui/styles": "^5",
-    "notistack": "^2",
+    "@material-ui/core": "^4",
+    "@material-ui/icons": "^4",
+    "notistack": "^1",
     "react": "^17",
     "react-intl": "^5"
   },
@@ -54,5 +52,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "1.0.1"
+  "version": "0.1.15"
 }

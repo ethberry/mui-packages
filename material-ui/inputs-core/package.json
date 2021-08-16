@@ -9,9 +9,9 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@material-ui/core": "5.0.0-beta.4",
-    "@material-ui/icons": "5.0.0-beta.4",
-    "@material-ui/styles": "5.0.0-beta.4",
+    "@material-ui/core": "4.12.3",
+    "@material-ui/icons": "4.11.2",
+    "@material-ui/styles": "4.11.4",
     "@storybook/react": "6.3.7",
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "12.0.0",
@@ -33,12 +33,12 @@
   "main": "./dist/index.js",
   "name": "@gemunion/material-ui-inputs-core",
   "peerDependencies": {
-    "@material-ui/core": "^5",
-    "@material-ui/icons": "^5",
-    "@material-ui/styles": "^5",
+    "@material-ui/core": "^4",
+    "@material-ui/icons": "^4",
+    "@material-ui/styles": "^4",
     "formik": "^2",
-    "react": "^17",
-    "react-dom": "^17",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-intl": "^5"
   },
   "publishConfig": {
@@ -61,5 +61,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "1.0.1"
+  "version": "0.1.15"
 }
