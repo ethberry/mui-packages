@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-file-firebase@1.0.1...@gemunion/material-ui-inputs-file-firebase@2.0.1) (2021-08-16)
+
+
+### Bug Fixes
+
+* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+
+
+
 ## [1.0.1](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-file-firebase@1.0.1...@gemunion/material-ui-inputs-file-firebase@1.0.1) (2021-08-16)
 
 
