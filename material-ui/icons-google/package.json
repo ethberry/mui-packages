@@ -5,7 +5,7 @@
     "url": "https://trejgun.github.io/"
   },
   "bugs": {
-    "url": "https://github.com/gemunion/common-packages/issues"
+    "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "description": "Set of Google flat icons for Material UI",
   "devDependencies": {
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gemunion/common-packages"
+    "url": "https://github.com/gemunion/material-ui-packages"
   },
   "scripts": {
     "build": "tsc",

@@ -5,7 +5,7 @@
     "url": "https://trejgun.github.io/"
   },
   "bugs": {
-    "url": "https://github.com/gemunion/common-packages/issues"
+    "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
     "clsx": "1.1.1",
@@ -39,7 +39,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gemunion/common-packages"
+    "url": "https://github.com/gemunion/material-ui-packages"
   },
   "scripts": {
     "build": "tsc",
@@ -50,7 +50,7 @@
     "test": "exit 0"
   },
   "sideEffects": false,
-  "title": "-=Encoder=-",
+  "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
   "version": "0.1.14"
 }
