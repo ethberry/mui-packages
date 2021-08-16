@@ -8,10 +8,10 @@
     "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/material-ui-dialog-confirmation": "0.1.15",
-    "@gemunion/material-ui-inputs-core": "0.1.16",
-    "@gemunion/material-ui-inputs-file-s3": "0.2.18",
-    "@gemunion/material-ui-progress": "0.1.11",
+    "@gemunion/material-ui-dialog-confirmation": "0.1.16",
+    "@gemunion/material-ui-inputs-core": "0.1.17",
+    "@gemunion/material-ui-inputs-file-s3": "0.2.19",
+    "@gemunion/material-ui-progress": "0.1.12",
     "@gemunion/popup": "0.0.6",
     "@gemunion/provider-api": "4.0.1",
     "notistack": "1.0.6",
@@ -67,5 +67,5 @@
   "sideEffects": false,
   "title": "-=TrejGun=-",
   "types": "./dist/index.d.ts",
-  "version": "0.1.26"
+  "version": "0.1.27"
 }
