@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/common-pages@0.2.20...@gemunion/common-pages@2.0.0) (2021-08-16)
+
+
+### Bug Fixes
+
+* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+* feat!: mui4 -> 5 ([46cd86e](https://github.com/gemunion/material-ui-packages/commit/46cd86e665052fcc62e8d3e09346b878eb2a78e4))
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/material-ui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/material-ui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+
+
+### BREAKING CHANGES
+
+* version bump
+* version bump
+* version bump
+
+
+
+
+
 ## [0.2.19](https://github.com/gemunion/common-packages/compare/@gemunion/common-pages@0.2.18...@gemunion/common-pages@0.2.19) (2021-08-15)
 
 **Note:** Version bump only for package @gemunion/common-pages
