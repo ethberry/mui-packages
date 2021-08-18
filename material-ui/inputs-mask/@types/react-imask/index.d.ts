@@ -8,14 +8,15 @@ declare module "react-imask" {
   type masked<T> = T extends DateConstructor
     ? Imask.MaskedDate
     : T extends NumberConstructor
-      ? Imask.MaskedNumber
-      : T extends RegExpConstructor
-        ? Imask.MaskedRegExp
-        : T extends Function
-          ? Imask.MaskedFunction
-          : Imask.Masked<IMaskInputProps["mask"]>;
+    ? Imask.MaskedNumber
+    : T extends RegExpConstructor
+    ? Imask.MaskedRegExp
+    : // eslint-disable-next-line @typescript-eslint/ban-types
+    T extends Function
+    ? Imask.MaskedFunction
+    : Imask.Masked<IMaskInputProps["mask"]>;
 
-  interface InputMask<T extends Imask.AnyMaskedOptions> {
+  interface IInputMask<T extends Imask.AnyMaskedOptions> {
     el: Imask.MaskElement;
     masked: masked<T>;
     mask: T["mask"];
@@ -26,6 +27,7 @@ declare module "react-imask" {
     readonly selectionStart: number;
 
     alignCursor(): void;
+
     alignCursorFriendly(): void;
   }
 
@@ -78,7 +80,7 @@ declare module "react-imask" {
   }
 
   export function IMaskMixin<T, D>(
-    Component: React.ComponentType<{ inputRef: React.Ref<D> } & T>
+    Component: React.ComponentType<{ inputRef: React.Ref<D> } & T>,
   ): React.ComponentType<T & IMaskInputProps>;
 
   export class IMaskInput extends React.Component<IMaskInputProps> {}

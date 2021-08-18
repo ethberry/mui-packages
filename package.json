@@ -59,7 +59,7 @@
     "release:publish": "lerna publish from-package --yes --exact --ignore-scripts --registry=https://npm.pkg.github.com/",
     "release:version": "lerna version --yes --exact --conventional-commits",
     "storybook": "start-storybook -p 6006",
-    "test": "lerna run test --stream"
+    "test": "sh scripts/test.sh"
   },
   "version": "0.0.1"
 }

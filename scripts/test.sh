@@ -11,4 +11,4 @@ lerna bootstrap --hoist
 
 lerna run lint --stream --parallel
 
-lerna exec --parallel -- npm run test
+lerna exec -- npm run test
