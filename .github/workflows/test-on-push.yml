@@ -3,9 +3,8 @@ name: CI Test
 on:
   push:
     branches:
-      - dev
       - master
-      - test-ci
+      - mui5
 
 jobs:
   test:
