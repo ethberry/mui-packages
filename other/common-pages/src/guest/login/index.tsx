@@ -38,6 +38,7 @@ export const Login: FC = () => {
         return user.sync("/dashboard");
       })
       .catch(e => {
+        api.setToken(null);
         if (e.status) {
           // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
