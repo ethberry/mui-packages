@@ -16,7 +16,7 @@
   "devDependencies": {
     "@material-ui/core": "4.12.3",
     "@storybook/react": "6.3.7",
-    "@types/react": "17.0.18",
+    "@types/react": "17.0.19",
     "formik": "2.2.9",
     "react": "17.0.2",
     "react-intl": "5.20.9"
