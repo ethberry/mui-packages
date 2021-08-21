@@ -18,7 +18,7 @@
     "@storybook/react": "6.3.7",
     "history": "4.10.1",
     "react": "17.0.2",
-    "react-intl": "5.20.9",
+    "react-intl": "5.20.10",
     "react-router-dom": "5.2.0"
   },
   "engines": {
