@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.1 (2021-08-21)
+
+
+### Bug Fixes
+
+* publish action [skip-ci] ([0a7dc17](https://github.com/gemunion/material-ui-packages/commit/0a7dc17c291690b045871be266e5b48d8f896b33))
+
+
+
+
+
 # [2.0.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-form@0.1.16...@gemunion/material-ui-form@2.0.0) (2021-08-16)
 
 
