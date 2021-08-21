@@ -1,16 +1,17 @@
-import React, { FC } from "react";
+import React, { forwardRef } from "react";
 import { IMaskInput } from "react-imask";
 
-export const MaskedInputWrapper: FC<any> = props => {
-  const { inputRef, maskedRef, ...rest } = props;
+export const MaskedInputWrapper = forwardRef<any, any>((props, inputRef) => {
+  const { maskedRef, ...rest } = props;
 
   return (
     <IMaskInput
       ref={(ref: any) => {
         if (ref && maskedRef && !maskedRef.current) maskedRef.current = ref.maskRef;
+        // @ts-ignore
         inputRef(ref ? ref.inputElement : null);
       }}
       {...rest}
     />
   );
-};
+});
