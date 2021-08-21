@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 import { Grid, Typography } from "@material-ui/core";
 import { ButtonToolbar } from "@gemunion/material-ui-toolbar";
 
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 export interface IPageHeader {
   message: string;

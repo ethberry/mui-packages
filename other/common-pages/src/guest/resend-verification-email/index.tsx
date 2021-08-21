@@ -10,7 +10,7 @@ import { TextInput } from "@gemunion/material-ui-inputs-core";
 import { FormikForm } from "@gemunion/material-ui-form";
 import { ApiContext, localizeErrors } from "@gemunion/provider-api";
 
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 import { validationSchema } from "./validation";
 
 interface IResendVerificationEmailDto {

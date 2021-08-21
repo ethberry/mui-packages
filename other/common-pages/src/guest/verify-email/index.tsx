@@ -8,7 +8,7 @@ import { ProgressOverlay } from "@gemunion/material-ui-progress";
 import { UserContext } from "@gemunion/provider-user";
 import { ApiContext } from "@gemunion/provider-api";
 
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 export const VerifyEmail: FC = () => {
   const classes = useStyles();

@@ -7,7 +7,7 @@ import { useIntl } from "react-intl";
 
 import { ACCEPTED_FORMATS, MAX_FILE_SIZE } from "./constants";
 import { humanFileSize } from "./utils";
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 export interface IFileInputProps extends DropzoneOptions {
   classes?: {

@@ -11,7 +11,7 @@ import { ConfirmationDialog } from "@gemunion/material-ui-dialog-confirmation";
 import { FirebaseFileInput } from "@gemunion/material-ui-inputs-file-firebase";
 import { openUrlOnClick } from "@gemunion/popup";
 
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 import { useDeleteUrl } from "../utils";
 
 interface IPhotoInputProps {

@@ -13,7 +13,7 @@ import { ButtonToolbar } from "@gemunion/material-ui-toolbar";
 import { openUrlOnClick } from "@gemunion/popup";
 
 import { validationSchema } from "./validation";
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 import { LoginButtons } from "./buttons";
 

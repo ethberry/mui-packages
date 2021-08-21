@@ -5,7 +5,7 @@ import { FormattedMessage } from "react-intl";
 import { getIn, useFormikContext } from "formik";
 import { Grid, FormHelperText } from "@material-ui/core";
 
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 interface ICaptchaProps {
   name?: string;

@@ -3,7 +3,7 @@ import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
 import { FormControlLabel, Slider, SliderProps } from "@material-ui/core";
 
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 export interface ISliderInputProps extends SliderProps {
   name: string;

@@ -11,7 +11,7 @@ import { PageHeader } from "@gemunion/material-ui-page-header";
 import { FormikForm } from "@gemunion/material-ui-form";
 import { ApiContext, IJwt, localizeErrors } from "@gemunion/provider-api";
 
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 import { validationSchema } from "./validation";
 import { emptyUser } from "./utils";
 

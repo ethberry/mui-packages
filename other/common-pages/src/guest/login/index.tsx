@@ -10,7 +10,7 @@ import { ApiContext, IJwt } from "@gemunion/provider-api";
 import { UserContext } from "@gemunion/provider-user";
 
 import { validationSchema } from "./validation";
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 import { LoginButtons } from "./buttons";
 
 interface ILoginDto {

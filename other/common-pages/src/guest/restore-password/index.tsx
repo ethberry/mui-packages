@@ -10,7 +10,7 @@ import { FormikForm } from "@gemunion/material-ui-form";
 import { ApiContext, localizeErrors } from "@gemunion/provider-api";
 
 import { validationSchema } from "./validation";
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 interface IRestorePasswordDto {
   password: string;

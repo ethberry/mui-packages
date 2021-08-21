@@ -1,7 +1,7 @@
 import { Theme } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/styles";
 
-export default makeStyles<Theme>(
+export const useStyles = makeStyles<Theme>(
   theme => ({
     "flex-end": {
       marginTop: theme.spacing(1),

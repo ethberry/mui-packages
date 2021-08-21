@@ -3,7 +3,7 @@ import { FormattedMessage } from "react-intl";
 import { Alert } from "@material-ui/lab";
 import { useParams } from "react-router";
 
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 export const Error: FC = () => {
   const classes = useStyles();

@@ -6,7 +6,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { S3FileInput } from "@gemunion/material-ui-inputs-file-s3";
 
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 import { useDeleteUrl } from "../utils";
 
 export interface IAvatarInputProps {

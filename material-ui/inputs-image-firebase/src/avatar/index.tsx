@@ -6,7 +6,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { FirebaseFileInput } from "@gemunion/material-ui-inputs-file-firebase";
 
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 import { useDeleteUrl } from "../utils";
 
 export interface IAvatarInputProps {

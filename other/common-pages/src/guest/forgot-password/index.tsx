@@ -12,7 +12,7 @@ import { UserContext } from "@gemunion/provider-user";
 import { ApiContext, localizeErrors } from "@gemunion/provider-api";
 
 import { validationSchema } from "./validation";
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 interface IForgotPasswordDto {
   email: string;
