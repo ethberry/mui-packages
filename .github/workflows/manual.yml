@@ -2,11 +2,6 @@
 name: Manual release Publish
 on:
   workflow_dispatch:
-    inputs:
-      version:
-        description: Bump Version
-        default: patch
-        required: true
 
 
 jobs:
