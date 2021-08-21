@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-mask@2.0.2...@gemunion/material-ui-inputs-mask@2.0.3) (2021-08-21)
+
+
+### Bug Fixes
+
+* masked input ([7eb674e](https://github.com/gemunion/material-ui-packages/commit/7eb674ecdbf425b7d29af4c1686468716e73a95c))
+
+
+
+
+
 ## 2.0.2 (2021-08-21)
 
 **Note:** Version bump only for package @gemunion/material-ui-inputs-mask

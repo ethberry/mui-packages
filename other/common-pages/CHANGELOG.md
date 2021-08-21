@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/gemunion/material-ui-packages/compare/@gemunion/common-pages@2.0.2...@gemunion/common-pages@2.0.3) (2021-08-21)
+
+
+### Bug Fixes
+
+* styles ([a65c1b7](https://github.com/gemunion/material-ui-packages/commit/a65c1b72b303b24a10e8602725b44d496a17d207))
+
+
+
+
+
 ## 2.0.2 (2021-08-21)
 
 **Note:** Version bump only for package @gemunion/common-pages
