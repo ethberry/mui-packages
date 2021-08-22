@@ -15,7 +15,7 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <Formik onSubmit={() => {}} initialValues={{ number: 50 }}>
+        <Formik onSubmit={() => {}} initialValues={{ autocomplete: "sw" }}>
           <Story />
         </Formik>
       </IntlProvider>

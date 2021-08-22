@@ -3,6 +3,8 @@ import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
 import { TextField, StandardTextFieldProps, FilledTextFieldProps, OutlinedTextFieldProps } from "@material-ui/core";
 
+import { useStyles } from "./styles";
+
 export interface IStandardTextInputProps extends StandardTextFieldProps {
   name: string;
   readOnly?: boolean;
@@ -22,6 +24,7 @@ export type ITextInputProps = IStandardTextInputProps | IFilledTextInputProps | 
 
 export const TextInput: FC<ITextInputProps> = props => {
   const { name, readOnly, InputProps, label, placeholder, ...rest } = props;
+  const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
 
@@ -38,6 +41,7 @@ export const TextInput: FC<ITextInputProps> = props => {
 
   return (
     <TextField
+      classes={classes}
       name={name}
       label={localizedLabel}
       placeholder={localizedPlaceholder}
