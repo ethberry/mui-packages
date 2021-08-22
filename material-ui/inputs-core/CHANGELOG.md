@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.4](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-core@2.0.3...@gemunion/material-ui-inputs-core@2.0.4) (2021-08-22)
+
+
+### Bug Fixes
+
+* move autocomplete input ([83ae271](https://github.com/gemunion/material-ui-packages/commit/83ae271777fb23bd37c11f65d0c1821f81fede43))
+* static input ([e571da8](https://github.com/gemunion/material-ui-packages/commit/e571da8409d7b5df4468a3dbd2cd82c51aafe3db))
+
+
+
+
+
 ## [2.0.3](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-core@2.0.2...@gemunion/material-ui-inputs-core@2.0.3) (2021-08-21)
 
 
