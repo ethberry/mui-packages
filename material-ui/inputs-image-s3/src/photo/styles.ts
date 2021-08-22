@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/styles";
 
 export const useStyles = makeStyles<Theme>(
   theme => ({
-    images: {
+    container: {
       marginTop: theme.spacing(1),
     },
     media: {

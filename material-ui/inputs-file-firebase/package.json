@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/firebase": "0.1.14",
+    "@gemunion/firebase": "0.1.15",
     "@gemunion/material-ui-inputs-file": "2.0.3"
   },
   "description": "react widget",

@@ -1,3 +1,4 @@
+import "../env";
 import React from "react";
 import { IntlProvider } from "react-intl";
 import { cleanup, render } from "@testing-library/react";
@@ -5,7 +6,6 @@ import { createTheme, ThemeProvider } from "@material-ui/core";
 import { Formik } from "formik";
 import { SnackbarProvider } from "notistack";
 
-import "../env";
 import { AvatarInput } from "./index";
 
 afterEach(cleanup);

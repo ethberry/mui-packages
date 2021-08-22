@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { getIn, useFormikContext } from "formik";
-import { FormControl, FormHelperText, IconButton, InputLabel, Tooltip } from "@material-ui/core";
+import { FormControl, FormHelperText, Grid, IconButton, InputLabel, Tooltip } from "@material-ui/core";
 import { Delete } from "@material-ui/icons";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -61,15 +61,19 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
 
   return (
     <FormControl fullWidth className={classes.root}>
-      <InputLabel id={`${name}-select-label`} shrink className={classes.label}>
+      <InputLabel id={`${name}-select-label`} shrink>
         <FormattedMessage id={`form.labels.${name}`} />
       </InputLabel>
-      <S3FileInput onProgress={() => {}} onChange={onChange} classes={{ root: classes.input }} />
-      {touched && error && (
-        <FormHelperText id={`${name}-helper-text`} error>
-          {localizedHelperText}
-        </FormHelperText>
-      )}
+      <Grid container className={classes.container}>
+        <Grid item>
+          <S3FileInput onProgress={() => {}} onChange={onChange} />
+          {touched && error && (
+            <FormHelperText id={`${name}-helper-text`} error>
+              {localizedHelperText}
+            </FormHelperText>
+          )}
+        </Grid>
+      </Grid>
     </FormControl>
   );
 };
