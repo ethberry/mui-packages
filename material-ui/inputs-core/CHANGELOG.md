@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-core@2.0.4...@gemunion/material-ui-inputs-core@2.0.5) (2021-08-22)
+
+
+### Bug Fixes
+
+* add spacing to text input ([94e8b3b](https://github.com/gemunion/material-ui-packages/commit/94e8b3b72d05ba0e5b7a9386c87022b9353b137b))
+
+
+
+
+
 ## [2.0.4](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-core@2.0.3...@gemunion/material-ui-inputs-core@2.0.4) (2021-08-22)
 
 

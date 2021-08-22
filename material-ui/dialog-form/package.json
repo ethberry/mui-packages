@@ -14,7 +14,7 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@gemunion/material-ui-inputs-core": "2.0.4",
+    "@gemunion/material-ui-inputs-core": "2.0.5",
     "@storybook/react": "6.3.7",
     "history": "4.10.1",
     "react": "17.0.2",
@@ -49,5 +49,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.5"
+  "version": "2.0.6"
 }

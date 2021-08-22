@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.4](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-file@2.0.3...@gemunion/material-ui-inputs-file@2.0.4) (2021-08-22)
+
+
+### Bug Fixes
+
+* icon size ([7220ca1](https://github.com/gemunion/material-ui-packages/commit/7220ca14df1c78a83b7ab62056ff2e35460962b1))
+
+
+
+
+
 ## [2.0.3](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-file@2.0.2...@gemunion/material-ui-inputs-file@2.0.3) (2021-08-21)
 
 
