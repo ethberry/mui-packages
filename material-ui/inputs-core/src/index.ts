@@ -1,3 +1,4 @@
+export * from "./autocomplete";
 export * from "./checkbox";
 export * from "./number";
 export * from "./password";
