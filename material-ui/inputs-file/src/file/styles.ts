@@ -11,8 +11,8 @@ export const useStyles = makeStyles<Theme>(
       justifyContent: "center",
     },
     icon: {
-      width: "100%",
-      height: "100%",
+      width: "100% !important",
+      height: "100% !important",
       border: "#D7D7D7 3px dashed",
       color: "#D7D7D7",
     },
