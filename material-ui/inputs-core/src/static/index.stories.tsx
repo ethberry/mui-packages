@@ -7,6 +7,7 @@ import { StaticInput, IStaticInputProps } from "./index";
 
 const i18n = {
   "form.labels.static": "Static",
+  "form.placeholders.static": "Static",
 };
 
 export default {
