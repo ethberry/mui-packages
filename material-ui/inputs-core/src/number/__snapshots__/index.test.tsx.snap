@@ -6,34 +6,22 @@ exports[`<NumberInput /> renders decimal value 1`] = `
     class="MuiFormControl-root MuiFormControl-fullWidth TextInput-root-3 MuiTextField-root css-nlu209-MuiFormControl-root-MuiTextField-root"
   >
     <label
-      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled css-d6jbqa-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled css-1jxvthj-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
     >
       Number
     </label>
     <div
-      class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+      class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ghsjzk-MuiInputBase-root-MuiInput-root"
     >
       <input
         aria-invalid="false"
-        class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+        class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
         name="number"
         placeholder="50"
         type="number"
         value="9.99"
       />
-      <fieldset
-        aria-hidden="true"
-        class="MuiOutlinedInput-notchedOutline css-vnw5qe-MuiOutlinedInput-notchedOutline"
-      >
-        <legend
-          class="css-17xdsu"
-        >
-          <span>
-            Number
-          </span>
-        </legend>
-      </fieldset>
     </div>
   </div>
 </DocumentFragment>
@@ -45,34 +33,22 @@ exports[`<NumberInput /> renders negative value 1`] = `
     class="MuiFormControl-root MuiFormControl-fullWidth TextInput-root-2 MuiTextField-root css-nlu209-MuiFormControl-root-MuiTextField-root"
   >
     <label
-      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled css-d6jbqa-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled css-1jxvthj-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
     >
       Number
     </label>
     <div
-      class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+      class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ghsjzk-MuiInputBase-root-MuiInput-root"
     >
       <input
         aria-invalid="false"
-        class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+        class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
         name="number"
         placeholder="50"
         type="number"
         value="-50"
       />
-      <fieldset
-        aria-hidden="true"
-        class="MuiOutlinedInput-notchedOutline css-vnw5qe-MuiOutlinedInput-notchedOutline"
-      >
-        <legend
-          class="css-17xdsu"
-        >
-          <span>
-            Number
-          </span>
-        </legend>
-      </fieldset>
     </div>
   </div>
 </DocumentFragment>
@@ -84,34 +60,22 @@ exports[`<NumberInput /> renders positive value 1`] = `
     class="MuiFormControl-root MuiFormControl-fullWidth TextInput-root-1 MuiTextField-root css-nlu209-MuiFormControl-root-MuiTextField-root"
   >
     <label
-      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled css-d6jbqa-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled css-1jxvthj-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
     >
       Number
     </label>
     <div
-      class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+      class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ghsjzk-MuiInputBase-root-MuiInput-root"
     >
       <input
         aria-invalid="false"
-        class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+        class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
         name="number"
         placeholder="50"
         type="number"
         value="50"
       />
-      <fieldset
-        aria-hidden="true"
-        class="MuiOutlinedInput-notchedOutline css-vnw5qe-MuiOutlinedInput-notchedOutline"
-      >
-        <legend
-          class="css-17xdsu"
-        >
-          <span>
-            Number
-          </span>
-        </legend>
-      </fieldset>
     </div>
   </div>
 </DocumentFragment>
