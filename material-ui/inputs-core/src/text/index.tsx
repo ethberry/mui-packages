@@ -23,7 +23,7 @@ export interface IOutlinedTextInputProps extends OutlinedTextFieldProps {
 export type ITextInputProps = IStandardTextInputProps | IFilledTextInputProps | IOutlinedTextInputProps;
 
 export const TextInput: FC<ITextInputProps> = props => {
-  const { name, readOnly, InputProps, label, placeholder, ...rest } = props;
+  const { name, readOnly, InputProps, label, placeholder, variant = "standard", ...rest } = props;
   const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
@@ -50,6 +50,7 @@ export const TextInput: FC<ITextInputProps> = props => {
       error={error && touched}
       onChange={formik.handleChange}
       onBlur={formik.handleBlur}
+      variant={variant}
       InputProps={{
         ...InputProps,
         readOnly,

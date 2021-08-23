@@ -8,6 +8,7 @@ import { ITextInputProps, TextInput } from "./index";
 const i18n = {
   "form.labels.text": "Text",
   "form.placeholders.text": "Lorem ipsum...",
+  "form.validations.required": "Required",
 };
 
 export default {
@@ -22,17 +23,50 @@ export default {
       </IntlProvider>
     ),
   ],
+  argTypes: {
+    variant: {
+      control: {
+        type: "select",
+      },
+      options: ["standard", "outlined", "filled"],
+    },
+    disabled: {
+      control: { type: "boolean" },
+    },
+    readOnly: {
+      control: { type: "boolean" },
+    },
+  },
+  args: {
+    variant: "standard",
+    disabled: false,
+    readOnly: false,
+  },
 };
 
-const Template: Story<ITextInputProps> = args => <TextInput {...args} />;
+const SimpleTemplate: Story<ITextInputProps> = args => (
+  <Formik onSubmit={() => {}} initialValues={{ text: "qwerty" }}>
+    <TextInput {...args} />
+  </Formik>
+);
 
-export const Simple = Template.bind({});
+export const Simple = SimpleTemplate.bind({});
 Simple.args = {
   name: "text",
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
+const ErroredTemplate: Story<ITextInputProps> = args => (
+  <Formik
+    onSubmit={() => {}}
+    initialValues={{ text: "qwerty" }}
+    initialErrors={{ text: "form.validations.required" }}
+    initialTouched={{ text: true }}
+  >
+    <TextInput {...args} />
+  </Formik>
+);
+
+export const Errored = ErroredTemplate.bind({});
+Errored.args = {
   name: "text",
-  disabled: true,
 };
