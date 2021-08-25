@@ -9,7 +9,7 @@
   },
   "description": "Set of social networks flat icons for Material UI",
   "devDependencies": {
-    "@material-ui/core": "5.0.0-beta.4",
+    "@material-ui/core": "5.0.0-beta.5",
     "react": "17.0.2"
   },
   "keywords": [
