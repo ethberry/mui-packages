@@ -3,8 +3,11 @@
   "baseBranches": ["master", "mui5"],
   "packageRules": [
     {
-      "matchPackageNames": ["*"],
-      "automerge": false
+      "updateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true
     },
     {
       "matchPackagePatterns": ["^@material-ui/"],
