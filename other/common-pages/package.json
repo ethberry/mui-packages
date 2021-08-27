@@ -35,8 +35,8 @@
     "notistack": "1.0.6",
     "react": "17.0.2",
     "react-intl": "5.20.10",
-    "react-router": "5.2.0",
-    "react-router-dom": "5.2.0"
+    "react-router": "5.2.1",
+    "react-router-dom": "5.2.1"
   },
   "engines": {
     "node": ">=12.13"
