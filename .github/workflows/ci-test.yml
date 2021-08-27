@@ -5,6 +5,10 @@ on:
     branches:
       - master
       - mui5
+  pull_request:
+    branches:
+      - master
+      - mui5
 
 jobs:
   test:
