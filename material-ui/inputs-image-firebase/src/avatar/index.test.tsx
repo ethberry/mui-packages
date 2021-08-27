@@ -17,7 +17,7 @@ const i18n = {
   "form.validations.whitelistValidation": "Property Avatar is not recognized",
 };
 
-describe("<AvatarInput />", () => {
+describe.skip("<AvatarInput />", () => {
   it("renders the empty field", () => {
     const props = {
       name: "avatar",
