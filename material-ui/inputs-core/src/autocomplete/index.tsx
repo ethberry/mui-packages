@@ -3,6 +3,8 @@ import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@materia
 import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
 
+import { useStyles } from "./styles";
+
 export interface IAutocompleteOptions {
   key: string | number;
   value: string;
@@ -17,6 +19,7 @@ export interface IAutocompleteInputProps {
 
 export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
   const { name, options, multiple } = props;
+  const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
 
@@ -31,6 +34,7 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
   if (multiple) {
     return (
       <Autocomplete
+        classes={classes}
         multiple={true}
         options={options}
         value={options.filter((option: IAutocompleteOptions) => value.includes(option.key) as boolean)}
@@ -54,6 +58,7 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
   } else {
     return (
       <Autocomplete
+        classes={classes}
         multiple={false}
         options={options}
         value={options.find((option: IAutocompleteOptions) => value === option.key) || null}

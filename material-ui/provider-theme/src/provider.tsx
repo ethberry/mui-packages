@@ -1,6 +1,7 @@
 import React, { FC, useState } from "react";
 
-import { createTheme, CssBaseline, ThemeProvider } from "@material-ui/core";
+import { CssBaseline } from "@material-ui/core";
+import { createTheme, ThemeProvider, StyledEngineProvider } from "@material-ui/core/styles";
 import { PaletteOptions } from "@material-ui/core/styles/createPalette";
 
 import { ThemeContext, ThemeType } from "./context";
@@ -30,15 +31,17 @@ export const GemunionThemeProvider: FC<IThemeProviderProps> = props => {
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <ThemeContext.Provider
-        value={{
-          type,
-          changeThemeType,
-        }}
-      >
-        {children}
-      </ThemeContext.Provider>
+      <StyledEngineProvider injectFirst>
+        <CssBaseline />
+        <ThemeContext.Provider
+          value={{
+            type,
+            changeThemeType,
+          }}
+        >
+          {children}
+        </ThemeContext.Provider>
+      </StyledEngineProvider>
     </ThemeProvider>
   );
 };

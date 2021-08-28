@@ -1,6 +1,7 @@
 import React from "react";
 
-import {createTheme, CssBaseline, ThemeProvider} from "@material-ui/core";
+import {CssBaseline} from "@material-ui/core";
+import {createTheme, ThemeProvider} from "@material-ui/core/styles";
 
 export const decorators = [
   Story => (
@@ -19,4 +20,7 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+  docs: {
+    page: null
+  }
+};
