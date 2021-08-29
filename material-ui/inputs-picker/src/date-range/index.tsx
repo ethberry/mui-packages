@@ -4,6 +4,8 @@ import { getIn, useFormikContext } from "formik";
 import { Box, TextField, TextFieldProps } from "@material-ui/core";
 import { DateRange, DateRangePicker } from "@material-ui/lab";
 
+import { useStyles } from "./styles";
+
 interface IDateTimeInputProps {
   name: string;
   readOnly?: boolean;
@@ -13,6 +15,7 @@ interface IDateTimeInputProps {
 
 export const DateRangeInput: FC<IDateTimeInputProps> = props => {
   const { name, ...rest } = props;
+  const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
 
@@ -23,6 +26,7 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
 
   return (
     <DateRangePicker
+      className={classes.root}
       inputFormat="MM/dd/yyyy"
       startText={formatMessage({ id: `form.labels.${suffix}Start` })}
       endText={formatMessage({ id: `form.labels.${suffix}End` })}
