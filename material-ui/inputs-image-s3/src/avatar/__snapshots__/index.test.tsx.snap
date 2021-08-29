@@ -3,7 +3,7 @@
 exports[`<AvatarInput /> renders empty field with error: image is required 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root MuiFormControl-fullWidth AvatarInput-root-15 css-q8hpuo-MuiFormControl-root"
+    class="MuiFormControl-root MuiFormControl-fullWidth AvatarInput-root-16 css-q8hpuo-MuiFormControl-root"
   >
     <label
       class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-d6jbqa-MuiFormLabel-root-MuiInputLabel-root"
@@ -13,13 +13,13 @@ exports[`<AvatarInput /> renders empty field with error: image is required 1`] =
       Avatar
     </label>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-undefined AvatarInput-container-16 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-undefined AvatarInput-container-17 css-11lq3yg-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
       >
         <div
-          class="InputFile-placeholder-19"
+          class="InputFile-placeholder-21 InputFile-root-20"
           tabindex="0"
         >
           <input
@@ -32,7 +32,7 @@ exports[`<AvatarInput /> renders empty field with error: image is required 1`] =
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium InputFile-icon-20 css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium InputFile-icon-22 css-i4bv87-MuiSvgIcon-root"
             data-testid="CloudUploadIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -57,7 +57,7 @@ exports[`<AvatarInput /> renders empty field with error: image is required 1`] =
 exports[`<AvatarInput /> renders image with error from server 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root MuiFormControl-fullWidth AvatarInput-root-11 css-q8hpuo-MuiFormControl-root"
+    class="MuiFormControl-root MuiFormControl-fullWidth AvatarInput-root-12 css-q8hpuo-MuiFormControl-root"
   >
     <label
       class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-d6jbqa-MuiFormLabel-root-MuiInputLabel-root"
@@ -68,7 +68,7 @@ exports[`<AvatarInput /> renders image with error from server 1`] = `
     </label>
     <button
       aria-label="delete"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium AvatarInput-button-13 css-1i8snpa-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium AvatarInput-button-14 css-1i8snpa-MuiButtonBase-root-MuiIconButton-root"
       data-mui-internal-clone-element="true"
       tabindex="0"
       type="button"
@@ -90,7 +90,7 @@ exports[`<AvatarInput /> renders image with error from server 1`] = `
     </button>
     <img
       alt="Avatar"
-      class="AvatarInput-image-14"
+      class="AvatarInput-image-15"
       src="https://lms2-dev.s3-us-west-2.amazonaws.com/7f0f427f-eeba-4ffb-a1c8-f730721bfd46.jpeg"
     />
     <p
@@ -122,7 +122,7 @@ exports[`<AvatarInput /> renders the empty field 1`] = `
         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
       >
         <div
-          class="InputFile-placeholder-5"
+          class="InputFile-placeholder-6 InputFile-root-5"
           tabindex="0"
         >
           <input
@@ -135,7 +135,7 @@ exports[`<AvatarInput /> renders the empty field 1`] = `
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium InputFile-icon-6 css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium InputFile-icon-7 css-i4bv87-MuiSvgIcon-root"
             data-testid="CloudUploadIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -154,7 +154,7 @@ exports[`<AvatarInput /> renders the empty field 1`] = `
 exports[`<AvatarInput /> renders the field with image 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root MuiFormControl-fullWidth AvatarInput-root-7 css-q8hpuo-MuiFormControl-root"
+    class="MuiFormControl-root MuiFormControl-fullWidth AvatarInput-root-8 css-q8hpuo-MuiFormControl-root"
   >
     <label
       class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-d6jbqa-MuiFormLabel-root-MuiInputLabel-root"
@@ -165,7 +165,7 @@ exports[`<AvatarInput /> renders the field with image 1`] = `
     </label>
     <button
       aria-label="delete"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium AvatarInput-button-9 css-1i8snpa-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium AvatarInput-button-10 css-1i8snpa-MuiButtonBase-root-MuiIconButton-root"
       data-mui-internal-clone-element="true"
       tabindex="0"
       type="button"
@@ -187,7 +187,7 @@ exports[`<AvatarInput /> renders the field with image 1`] = `
     </button>
     <img
       alt="Avatar"
-      class="AvatarInput-image-10"
+      class="AvatarInput-image-11"
       src="https://lms2-dev.s3-us-west-2.amazonaws.com/7f0f427f-eeba-4ffb-a1c8-f730721bfd46.jpeg"
     />
   </div>
