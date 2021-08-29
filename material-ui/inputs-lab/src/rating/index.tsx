@@ -1,9 +1,11 @@
-import React, { FC, Fragment, createElement, ChangeEvent } from "react";
+import React, { FC, createElement, ChangeEvent } from "react";
+import clsx from "clsx";
 import { FormattedMessage } from "react-intl";
 import { getIn, useFormikContext } from "formik";
 import { InputLabel } from "@material-ui/core";
 import { Rating, RatingProps } from "@material-ui/lab";
 import { Star, SvgIconComponent } from "@material-ui/icons";
+import { useStyles } from "./styles";
 
 export interface IRatingInputProps extends RatingProps {
   name: string;
@@ -13,6 +15,7 @@ export interface IRatingInputProps extends RatingProps {
 
 export const RatingInput: FC<IRatingInputProps> = props => {
   const { name, icon = Star, color, ...rest } = props;
+  const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
 
@@ -20,7 +23,7 @@ export const RatingInput: FC<IRatingInputProps> = props => {
   const value = getIn(formik.values, name);
 
   return (
-    <Fragment>
+    <div className={clsx(classes.root)}>
       <InputLabel filled shrink>
         <FormattedMessage id={`form.labels.${suffix}`} />
       </InputLabel>
@@ -34,6 +37,6 @@ export const RatingInput: FC<IRatingInputProps> = props => {
         }}
         {...rest}
       />
-    </Fragment>
+    </div>
   );
 };

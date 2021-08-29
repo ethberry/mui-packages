@@ -5,6 +5,8 @@ import { TextField, TextFieldProps } from "@material-ui/core";
 import { DatePicker } from "@material-ui/lab";
 import { addMinutes, subMinutes } from "date-fns";
 
+import { useStyles } from "./styles";
+
 interface IDateUtcInputProps {
   name: string;
   readOnly?: boolean;
@@ -14,6 +16,7 @@ interface IDateUtcInputProps {
 
 export const DateUtcInput: FC<IDateUtcInputProps> = props => {
   const { name, ...rest } = props;
+  const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
 
@@ -34,6 +37,7 @@ export const DateUtcInput: FC<IDateUtcInputProps> = props => {
 
   return (
     <DatePicker
+      className={classes.root}
       inputFormat="MM/dd/yyyy"
       label={formatMessage({ id: `form.labels.${suffix}` })}
       value={value ? setter(value) : value}

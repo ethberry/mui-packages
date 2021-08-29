@@ -70,14 +70,14 @@ export const FileInput: FC<IFileInputProps> = props => {
 
   if (disabled) {
     return (
-      <div className={clsx(classes.placeholder, props.classes?.root)}>
+      <div className={clsx(classes.placeholder, classes.root, props.classes?.root)}>
         <CloudOff className={clsx(classes.icon, props.classes?.disabled)} />
       </div>
     );
   }
 
   return (
-    <div {...getRootProps()} className={clsx(classes.placeholder, props.classes?.root)}>
+    <div {...getRootProps()} className={clsx(classes.placeholder, classes.root, props.classes?.root)}>
       <input {...getInputProps()} />
       {isDragActive ? (
         <CloudUploadOutlined className={clsx(classes.icon, props.classes?.active)} />

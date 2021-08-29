@@ -4,6 +4,8 @@ import { getIn, useFormikContext } from "formik";
 import { TextField, TextFieldProps } from "@material-ui/core";
 import { DatePicker } from "@material-ui/lab";
 
+import { useStyles } from "./styles";
+
 interface IDateInputProps {
   name: string;
   readOnly?: boolean;
@@ -13,6 +15,7 @@ interface IDateInputProps {
 
 export const DateInput: FC<IDateInputProps> = props => {
   const { name, ...rest } = props;
+  const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
 
@@ -23,6 +26,7 @@ export const DateInput: FC<IDateInputProps> = props => {
 
   return (
     <DatePicker
+      className={classes.root}
       inputFormat="MM/dd/yyyy"
       label={formatMessage({ id: `form.labels.${suffix}` })}
       value={value}
