@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/material-ui-progress": "2.0.3",
+    "@gemunion/material-ui-progress": "3.0.0",
     "@gemunion/provider-api": "4.0.3"
   },
   "description": "react widget",
@@ -58,5 +58,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.4"
+  "version": "3.0.0"
 }

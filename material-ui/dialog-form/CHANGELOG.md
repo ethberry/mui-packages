@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.7](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-dialog-form@0.1.19...@gemunion/material-ui-dialog-form@2.0.7) (2021-08-29)
+
+
+### Bug Fixes
+
+* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+
+
+
 ## [2.0.6](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-dialog-form@2.0.5...@gemunion/material-ui-dialog-form@2.0.6) (2021-08-22)
 
 **Note:** Version bump only for package @gemunion/material-ui-dialog-form

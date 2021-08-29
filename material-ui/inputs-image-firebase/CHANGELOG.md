@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.28...@gemunion/material-ui-inputs-image-firebase@3.0.0) (2021-08-29)
+
+
+### Bug Fixes
+
+* deps ([6ea3740](https://github.com/gemunion/material-ui-packages/commit/6ea3740b9ceb00ef44428b180ea8468ffaeebe9b))
+* **deps:** update all non-major dependencies ([74f0590](https://github.com/gemunion/material-ui-packages/commit/74f0590bca4e94124036fb2fc49efc8b15d3ab6f))
+* **deps:** update all non-major dependencies ([be30b79](https://github.com/gemunion/material-ui-packages/commit/be30b79bf815c8917a3eb187be21e788ecedca9f))
+* proper styles for image inputs ([388437f](https://github.com/gemunion/material-ui-packages/commit/388437f94ed7554e82bfe44b64f888a8ab36c508))
+* styles ([a65c1b7](https://github.com/gemunion/material-ui-packages/commit/a65c1b72b303b24a10e8602725b44d496a17d207))
+* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/material-ui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/material-ui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+
+
+### BREAKING CHANGES
+
+* version bump
+* version bump
+
+
+
+
+
 ## [2.0.6](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@2.0.5...@gemunion/material-ui-inputs-image-firebase@2.0.6) (2021-08-22)
 
 

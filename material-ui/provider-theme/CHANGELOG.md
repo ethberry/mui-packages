@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-provider-theme@0.4.3...@gemunion/material-ui-provider-theme@3.0.0) (2021-08-29)
+
+
+### Bug Fixes
+
+* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/material-ui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/material-ui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+
+
+### BREAKING CHANGES
+
+* version bump
+* version bump
+
+
+
+
+
 ## 2.0.2 (2021-08-21)
 
 **Note:** Version bump only for package @gemunion/material-ui-provider-theme

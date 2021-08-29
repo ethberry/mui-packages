@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.7](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-file-s3@0.2.20...@gemunion/material-ui-inputs-file-s3@2.0.7) (2021-08-29)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([74f0590](https://github.com/gemunion/material-ui-packages/commit/74f0590bca4e94124036fb2fc49efc8b15d3ab6f))
+* **deps:** update all non-major dependencies ([be30b79](https://github.com/gemunion/material-ui-packages/commit/be30b79bf815c8917a3eb187be21e788ecedca9f))
+* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+
+
+
 ## [2.0.6](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-file-s3@2.0.5...@gemunion/material-ui-inputs-file-s3@2.0.6) (2021-08-22)
 
 
