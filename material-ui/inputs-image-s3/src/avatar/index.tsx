@@ -12,10 +12,12 @@ import { useDeleteUrl } from "../utils";
 export interface IAvatarInputProps {
   name: string;
   label?: string;
+  bucket?: string;
+  accept?: string | string[];
 }
 
 export const AvatarInput: FC<IAvatarInputProps> = props => {
-  const { name, label } = props;
+  const { name, label, bucket, accept } = props;
 
   const formik = useFormikContext<any>();
   const error = getIn(formik.errors, name);
@@ -24,7 +26,7 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
 
   const classes = useStyles();
   const { formatMessage } = useIntl();
-  const deleteUrl = useDeleteUrl();
+  const deleteUrl = useDeleteUrl(bucket);
   const suffix = name.split(".").pop() as string;
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
   const localizedHelperText = error ? formatMessage({ id: error }, { label: localizedLabel }) : "";
@@ -66,7 +68,7 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
       </InputLabel>
       <Grid container className={classes.container}>
         <Grid item>
-          <S3FileInput onProgress={() => {}} onChange={onChange} />
+          <S3FileInput onChange={onChange} bucket={bucket} accept={accept} />
           {touched && error && (
             <FormHelperText id={`${name}-helper-text`} error>
               {localizedHelperText}

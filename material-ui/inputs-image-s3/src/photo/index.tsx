@@ -26,11 +26,12 @@ import { useDeleteUrl } from "../utils";
 export interface IPhotoInputProps {
   name: string;
   label?: string;
+  bucket?: string;
   accept?: string | string[];
 }
 
 export const PhotoInput: FC<IPhotoInputProps> = props => {
-  const { name, label, accept } = props;
+  const { name, label, bucket, accept } = props;
 
   const formik = useFormikContext<any>();
   const error = getIn(formik.errors, name);
@@ -39,7 +40,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
 
   const classes = useStyles();
   const { formatMessage } = useIntl();
-  const deleteUrl = useDeleteUrl();
+  const deleteUrl = useDeleteUrl(bucket);
   const [isLoading, setIsLoading] = useState(false);
   const [isDeleteImageDialogOpen, setIsDeleteImageDialogOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -116,9 +117,9 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
               <Grid item>
                 <ProgressOverlay isLoading={isLoading}>
                   <S3FileInput
-                    onProgress={() => {}}
                     onChange={handleFileChange}
                     classes={{ root: classes.media }}
+                    bucket={bucket}
                     accept={accept}
                   />
                 </ProgressOverlay>

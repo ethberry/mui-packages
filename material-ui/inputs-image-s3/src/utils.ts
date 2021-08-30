@@ -4,7 +4,7 @@ import { useIntl } from "react-intl";
 
 import { ApiContext, IApiContext, IJwt } from "@gemunion/provider-api";
 
-export const useDeleteUrl = (): ((url: string) => Promise<void>) => {
+export const useDeleteUrl = (bucket?: string): ((url: string) => Promise<void>) => {
   const api = useContext<IApiContext<IJwt>>(ApiContext);
 
   const { enqueueSnackbar } = useSnackbar();
@@ -16,6 +16,7 @@ export const useDeleteUrl = (): ((url: string) => Promise<void>) => {
         url: "/s3/delete",
         data: {
           objectName: url.split("/").pop(),
+          bucket,
         },
       })
       .then(() => {
