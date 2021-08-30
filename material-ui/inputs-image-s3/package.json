@@ -8,10 +8,10 @@
     "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/material-ui-dialog-confirmation": "3.0.0",
-    "@gemunion/material-ui-inputs-core": "3.0.0",
+    "@gemunion/material-ui-dialog-confirmation": "2.0.3",
+    "@gemunion/material-ui-inputs-core": "2.0.6",
     "@gemunion/material-ui-inputs-file-s3": "2.0.7",
-    "@gemunion/material-ui-progress": "3.0.0",
+    "@gemunion/material-ui-progress": "2.0.4",
     "@gemunion/popup": "0.0.8",
     "@gemunion/provider-api": "4.0.3",
     "react-beautiful-dnd": "13.1.0"

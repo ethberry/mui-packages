@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/material-ui-progress": "3.0.0",
+    "@gemunion/material-ui-progress": "2.0.4",
     "@gemunion/provider-api": "4.0.3"
   },
   "description": "react widget",

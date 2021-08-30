@@ -8,8 +8,8 @@
     "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/material-ui-dialog-confirmation": "3.0.0",
-    "@gemunion/material-ui-progress": "3.0.0"
+    "@gemunion/material-ui-dialog-confirmation": "2.0.3",
+    "@gemunion/material-ui-progress": "2.0.4"
   },
   "description": "react widget",
   "devDependencies": {

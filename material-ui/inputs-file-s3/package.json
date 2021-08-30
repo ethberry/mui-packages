@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/material-ui-inputs-file": "3.0.0",
+    "@gemunion/material-ui-inputs-file": "2.0.5",
     "@gemunion/provider-api": "4.0.3",
     "react-s3-uploader": "5.0.0"
   },

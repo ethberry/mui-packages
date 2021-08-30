@@ -8,8 +8,8 @@
     "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/material-ui-form": "3.0.0",
-    "@gemunion/material-ui-inputs-core": "3.0.0"
+    "@gemunion/material-ui-form": "2.0.4",
+    "@gemunion/material-ui-inputs-core": "2.0.6"
   },
   "description": "react widget",
   "devDependencies": {
