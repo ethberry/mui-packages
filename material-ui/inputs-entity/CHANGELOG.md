@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.27 (2021-08-30)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#51](https://github.com/gemunion/material-ui-packages/issues/51)) ([67d6520](https://github.com/gemunion/material-ui-packages/commit/67d65207df5082d1712b7306503c27e6b6df7ff7))
+
+
+
+
+
 ## 0.1.26 (2021-08-30)
 
 **Note:** Version bump only for package @gemunion/material-ui-inputs-entity
