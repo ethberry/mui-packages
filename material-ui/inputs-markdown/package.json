@@ -11,7 +11,7 @@
     "@gemunion/mui-rte": "1.0.1",
     "draft-js": "0.11.7",
     "markdown-draft-js": "2.3.0",
-    "use-debounce": "6.0.1"
+    "use-debounce": "7.0.0"
   },
   "description": "react widget",
   "devDependencies": {
