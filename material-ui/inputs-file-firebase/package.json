@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/firebase": "1.0.1",
     "@gemunion/material-ui-inputs-file": "2.0.6",
-    "firebase": "9.0.0",
+    "firebase": "9.0.1",
     "uuid": "8.3.2"
   },
   "description": "react widget",
