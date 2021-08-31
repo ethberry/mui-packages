@@ -15,7 +15,7 @@
     "@gemunion/material-ui-progress": "2.0.5",
     "@gemunion/popup": "0.0.9",
     "@gemunion/provider-api": "4.0.5",
-    "firebase": "9.0.0",
+    "firebase": "9.0.1",
     "react-beautiful-dnd": "13.1.0"
   },
   "description": "react widget",
