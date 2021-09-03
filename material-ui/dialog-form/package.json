@@ -15,7 +15,7 @@
   "description": "react widget",
   "devDependencies": {
     "@gemunion/material-ui-inputs-core": "2.0.7",
-    "@storybook/react": "6.3.7",
+    "@storybook/react": "6.3.8",
     "history": "4.10.1",
     "react": "17.0.2",
     "react-intl": "5.20.10",
