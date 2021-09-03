@@ -15,11 +15,11 @@
   "description": "react widget",
   "devDependencies": {
     "@gemunion/material-ui-inputs-core": "0.1.21",
-    "@storybook/react": "6.3.7",
+    "@storybook/react": "6.3.8",
     "history": "4.10.1",
     "react": "17.0.2",
     "react-intl": "5.20.10",
-    "react-router-dom": "5.2.1"
+    "react-router-dom": "5.3.0"
   },
   "engines": {
     "node": ">=12.13"
