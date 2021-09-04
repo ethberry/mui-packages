@@ -21,7 +21,7 @@ interface IS3FileInputProps extends Omit<IFileInputProps, "onChange"> {
 export const S3FileInput: FC<IS3FileInputProps> = props => {
   const { bucket = process.env.AWS_S3_BUCKET, onChange, onError, onProgress, validate, ...rest } = props;
 
-  const { baseUrl = `https://${bucket}.s3-${process.env.AWS_REGION}.amazonaws.com` } = props;
+  const { baseUrl = `https://${bucket}.s3.${process.env.AWS_REGION}.amazonaws.com` } = props;
 
   const api = useContext<IApiContext<IJwt>>(ApiContext);
 
