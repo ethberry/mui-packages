@@ -18,7 +18,7 @@
     "@gemunion/material-ui-toolbar": "2.0.5",
     "@gemunion/popup": "0.0.9",
     "@gemunion/provider-api": "4.0.5",
-    "@gemunion/provider-user": "0.1.24",
+    "@gemunion/provider-user": "0.1.25",
     "@gemunion/yup-rules": "0.1.24",
     "yup": "0.32.9"
   },
