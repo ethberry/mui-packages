@@ -34,14 +34,17 @@ module.exports = {
                   allExtensions: true,
                 },
               ],
-              ["@babel/react", {
-                "runtime": "automatic"
-              }]
+              [
+                "@babel/react",
+                {
+                  "runtime": "automatic",
+                },
+              ],
             ],
             plugins: [
               "@babel/plugin-proposal-nullish-coalescing-operator",
               "@babel/plugin-proposal-optional-chaining",
-              "babel-plugin-inline-import"
+              "babel-plugin-inline-import",
             ],
           },
         },
