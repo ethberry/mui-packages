@@ -1,4 +1,4 @@
-import React, { FC, useContext, useEffect } from "react";
+import { FC, useContext, useEffect } from "react";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Grid } from "@material-ui/core";

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { FormControl, InputLabel, MenuItem, Select, SelectProps } from "@material-ui/core";
 import { FormattedMessage, useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";

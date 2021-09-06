@@ -1,5 +1,5 @@
 import "../env";
-import React from "react";
+
 import { IntlProvider } from "react-intl";
 import { cleanup, render } from "@testing-library/react";
 import { createTheme, ThemeProvider } from "@material-ui/core";

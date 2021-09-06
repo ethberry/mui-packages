@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC, ReactElement } from "react";
+import { ChangeEvent, FC, ReactElement } from "react";
 import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@material-ui/core";
 import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";

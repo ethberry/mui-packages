@@ -1,4 +1,4 @@
-import React, { FC, createElement, ChangeEvent } from "react";
+import { FC, createElement, ChangeEvent } from "react";
 import clsx from "clsx";
 import { FormattedMessage } from "react-intl";
 import { getIn, useFormikContext } from "formik";

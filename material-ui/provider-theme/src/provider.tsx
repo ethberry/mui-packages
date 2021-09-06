@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import { FC, useState } from "react";
 
 import { CssBaseline } from "@material-ui/core";
 import { createTheme, ThemeProvider, StyledEngineProvider } from "@material-ui/core/styles";

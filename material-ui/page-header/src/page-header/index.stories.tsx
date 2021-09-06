@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import { IntlProvider, FormattedMessage } from "react-intl";
 import { Button } from "@material-ui/core";
 import { Story } from "@storybook/react";

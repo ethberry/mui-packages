@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { getStorage, ref, getDownloadURL, uploadBytes } from "firebase/storage";
 import { v4 } from "uuid";
 

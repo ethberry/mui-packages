@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from "react";
+import { FC, useCallback } from "react";
 import clsx from "clsx";
 import { useDropzone, FileRejection, DropzoneOptions } from "react-dropzone";
 import { CloudUpload, CloudUploadOutlined, CloudOff } from "@material-ui/icons";

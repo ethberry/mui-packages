@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import {FC} from "react";
 import {SvgIcon} from "@material-ui/core";
 import {SvgIconProps} from "@material-ui/core/SvgIcon/SvgIcon";
 

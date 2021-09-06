@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import AdapterDateFns from "@material-ui/lab/AdapterDateFns";
 import LocalizationProvider from "@material-ui/lab/LocalizationProvider";
 

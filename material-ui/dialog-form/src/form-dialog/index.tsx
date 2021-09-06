@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState } from "react";
+import { FC, useRef, useState } from "react";
 
 import { ConfirmationDialog } from "@gemunion/material-ui-dialog-confirmation";
 import { ProgressOverlay } from "@gemunion/material-ui-progress";

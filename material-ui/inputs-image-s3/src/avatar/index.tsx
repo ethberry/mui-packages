@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { getIn, useFormikContext } from "formik";
 import { FormControl, FormHelperText, Grid, IconButton, InputLabel, Tooltip } from "@material-ui/core";
 import { Delete } from "@material-ui/icons";

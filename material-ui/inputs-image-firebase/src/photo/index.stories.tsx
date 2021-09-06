@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { Formik } from "formik";
 import { SnackbarProvider } from "notistack";

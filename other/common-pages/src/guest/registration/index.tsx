@@ -1,4 +1,4 @@
-import React, { FC, useContext, useEffect } from "react";
+import { FC, useContext, useEffect } from "react";
 import { Grid } from "@material-ui/core";
 import { useHistory } from "react-router";
 import { useSnackbar } from "notistack";

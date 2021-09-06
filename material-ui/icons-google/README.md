@@ -11,7 +11,7 @@ npm install @gemunion/material-ui-icons-google
 ## Usage
 
 ```typescript
-import React, { FC } from "react";
+import { FC } from "react";
 import {Grid, Button, makeStyles} from "@material-ui/core";
 
 import {

@@ -34,7 +34,9 @@ module.exports = {
                   allExtensions: true,
                 },
               ],
-              "@babel/react",
+              ["@babel/react", {
+                "runtime": "automatic"
+              }]
             ],
             plugins: [
               "@babel/plugin-proposal-nullish-coalescing-operator",

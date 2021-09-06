@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { Collapse, Grid } from "@material-ui/core";
 
 import { AutoSave, FormikForm } from "@gemunion/material-ui-form";

@@ -1,4 +1,4 @@
-import React, { FC, useState, MouseEvent } from "react";
+import { FC, useState, MouseEvent } from "react";
 
 import { IconButton, InputAdornment } from "@material-ui/core";
 import { Visibility, VisibilityOff } from "@material-ui/icons";

@@ -1,4 +1,4 @@
-import React, { FC, useContext, useEffect } from "react";
+import { FC, useContext, useEffect } from "react";
 import { useHistory, useParams } from "react-router";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";

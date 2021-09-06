@@ -1,4 +1,4 @@
-import React, { FC, KeyboardEvent } from "react";
+import { FC, KeyboardEvent } from "react";
 import { getIn, useFormikContext } from "formik";
 
 import { IFilledTextInputProps, IOutlinedTextInputProps, IStandardTextInputProps, TextInput } from "../text";

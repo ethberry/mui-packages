@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { Story } from "@storybook/react";
 import { Router } from "react-router-dom";

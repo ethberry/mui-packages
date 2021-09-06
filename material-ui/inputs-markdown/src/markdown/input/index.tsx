@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import { InputBaseComponentProps } from "@material-ui/core/InputBase";
 import { EditorState } from "draft-js";
 import { IRichTextEditorRef, RichTextEditor, TToolbarControl } from "@gemunion/mui-rte";

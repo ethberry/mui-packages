@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { FormattedMessage } from "react-intl";
 import { Alert } from "@material-ui/lab";
 import { useParams } from "react-router";

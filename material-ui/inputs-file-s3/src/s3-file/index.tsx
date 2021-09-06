@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useContext } from "react";
+import { FC, useCallback, useContext } from "react";
 import "react-s3-uploader"; // this is required for types
 import S3Upload from "react-s3-uploader/s3upload";
 import { ApiContext, IApiContext, IJwt } from "@gemunion/provider-api";
