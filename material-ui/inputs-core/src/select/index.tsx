@@ -3,6 +3,8 @@ import { FormControl, InputLabel, MenuItem, Select, SelectProps } from "@materia
 import { FormattedMessage, useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
 
+import { useStyles } from "./styles";
+
 export interface ISelectInputProps extends SelectProps {
   name: string;
   options: any; // enum
@@ -10,6 +12,7 @@ export interface ISelectInputProps extends SelectProps {
 
 export const SelectInput: FC<ISelectInputProps> = props => {
   const { options, name, multiple, ...rest } = props;
+  const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
 
@@ -24,6 +27,7 @@ export const SelectInput: FC<ISelectInputProps> = props => {
         <FormattedMessage id={`form.labels.${suffix}`} />
       </InputLabel>
       <Select
+        classes={classes}
         multiple={multiple}
         labelId={`${name}-select-label`}
         id={`${name}-select`}
