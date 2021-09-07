@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.29...@gemunion/material-ui-inputs-image-firebase@2.1.0) (2021-09-07)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([c013d14](https://github.com/gemunion/material-ui-packages/commit/c013d14692da60ac7fc63ea560f35111a0643a36))
+* **deps:** update all non-major dependencies ([#52](https://github.com/gemunion/material-ui-packages/issues/52)) ([6c8f2e2](https://github.com/gemunion/material-ui-packages/commit/6c8f2e2360a76e51ff9b681a234fe9e2d4fe8668))
+* **deps:** update dependency firebase to v9.0.1 ([c32d877](https://github.com/gemunion/material-ui-packages/commit/c32d877b4111fbdb09cd8ae5e324527e10fc8c34))
+
+
+### Features
+
+* update firebase ([2c7a548](https://github.com/gemunion/material-ui-packages/commit/2c7a5489e01278b263839a793676da2667893d97))
+
+
+
+
+
 ## [2.0.8](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@3.0.0...@gemunion/material-ui-inputs-image-firebase@2.0.8) (2021-08-30)
 
 **Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase

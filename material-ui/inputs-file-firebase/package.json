@@ -9,14 +9,14 @@
   },
   "dependencies": {
     "@gemunion/firebase": "1.0.2",
-    "@gemunion/material-ui-inputs-file": "2.0.6",
+    "@gemunion/material-ui-inputs-file": "2.0.7",
     "firebase": "9.0.1",
     "uuid": "8.3.2"
   },
   "description": "react widget",
   "devDependencies": {
-    "react": "17.0.2",
-    "@types/uuid": "8.3.1"
+    "@types/uuid": "8.3.1",
+    "react": "17.0.2"
   },
   "engines": {
     "node": ">=12.13"
@@ -46,5 +46,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.7"
+  "version": "2.1.0"
 }
