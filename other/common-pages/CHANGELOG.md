@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.10](https://github.com/gemunion/material-ui-packages/compare/@gemunion/common-pages@2.0.9...@gemunion/common-pages@2.0.10) (2021-09-07)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#74](https://github.com/gemunion/material-ui-packages/issues/74)) ([63e053d](https://github.com/gemunion/material-ui-packages/commit/63e053d5e72d4e012b52eaccf2de6632e2d9b882))
+
+
+
+
+
 ## [2.0.9](https://github.com/gemunion/material-ui-packages/compare/@gemunion/common-pages@0.2.23...@gemunion/common-pages@2.0.9) (2021-09-07)
 
 
