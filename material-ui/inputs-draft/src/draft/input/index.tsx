@@ -1,4 +1,3 @@
-// import { FC, Fragment, forwardRef, Ref, useCallback, useEffect, useImperativeHandle, useRef } from "react";
 import { forwardRef, Fragment } from "react";
 import { InputBaseComponentProps } from "@material-ui/core/InputBase";
 import { EditorState } from "draft-js";
