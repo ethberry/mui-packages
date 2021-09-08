@@ -52,7 +52,7 @@ jobs:
         continue-on-error: true
 
       - name: Version & Publish by lerna
-        run: lerna version --ignore-scripts -m "Renovate publish %s [skip ci]" && npm run release:publish,
+        run: lerna version --ignore-scripts && npm run release:publish,
         if: steps.lerna_changed.outcome == 'success'
         env:
           GITHUBTOKEN: ${{ secrets.GITHUBTOKEN }}
