@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.10 (2021-09-08)
+
+**Note:** Version bump only for package @gemunion/material-ui-dialog-form
+
+
+
+
+
 ## [2.0.9](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-dialog-form@0.1.20...@gemunion/material-ui-dialog-form@2.0.9) (2021-09-07)
 
 **Note:** Version bump only for package @gemunion/material-ui-dialog-form

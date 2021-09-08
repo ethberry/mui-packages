@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.9 (2021-09-08)
+
+
+### Bug Fixes
+
+* fix styles for SelectInput and SwitchInput ([57fe26b](https://github.com/gemunion/material-ui-packages/commit/57fe26bee0b1a38b07fd5675e2f721e1d497c22e))
+
+
+
+
+
 ## [2.0.8](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-core@0.1.19...@gemunion/material-ui-inputs-core@2.0.8) (2021-09-07)
 
 **Note:** Version bump only for package @gemunion/material-ui-inputs-core

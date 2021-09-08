@@ -8,10 +8,10 @@
     "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
-    "@material-ui/core": "5.0.0-beta.5",
-    "@material-ui/icons": "5.0.0-beta.5",
     "@gemunion/material-ui-inputs-file-firebase": "2.1.0",
     "@gemunion/mui-rte": "1.0.2",
+    "@material-ui/core": "5.0.0-beta.5",
+    "@material-ui/icons": "5.0.0-beta.5",
     "@storybook/react": "6.3.8",
     "clsx": "1.1.1",
     "draft-js": "0.11.7",
@@ -71,5 +71,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "0.0.1"
+  "version": "0.1.0"
 }
