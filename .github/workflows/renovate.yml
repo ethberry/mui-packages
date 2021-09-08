@@ -1,13 +1,11 @@
 name: CD Renovate
 
 on:
-  workflow_dispatch:
-
-#on:
-#  pull_request:
-#    branches:
-#      - master
-#    types: [closed]
+  pull_request:
+    branches:
+      - master
+      - mui5
+    types: [closed]
 
 jobs:
   # publish only renovate PR with 'deps' label
@@ -54,7 +52,7 @@ jobs:
         continue-on-error: true
 
       - name: Version & Publish by lerna
-        run: npm run release
+        run: lerna version -m "%s [skip ci]" && npm run release:publish,
         if: steps.lerna_changed.outcome == 'success'
         env:
           GITHUBTOKEN: ${{ secrets.GITHUBTOKEN }}
