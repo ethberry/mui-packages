@@ -1,0 +1,74 @@
+{
+  "author": {
+    "email": "TrejGun@gmail.com",
+    "name": "TrejGun",
+    "url": "https://trejgun.github.io/"
+  },
+  "bugs": {
+    "url": "https://github.com/gemunion/material-ui-packages/issues"
+  },
+  "dependencies": {
+    "@material-ui/core": "5.0.0-beta.5",
+    "@material-ui/icons": "5.0.0-beta.5",
+    "@gemunion/material-ui-inputs-file-firebase": "2.1.0",
+    "@gemunion/mui-rte": "1.0.2",
+    "clsx": "1.1.1",
+    "draft-js": "0.11.7",
+    "formik": "2.2.9",
+    "react": "17.0.2",
+    "react-intl": "5.20.10"
+  },
+  "description": "react widget",
+  "devDependencies": {
+    "@gemunion/eslint-config": "0.1.10",
+    "@types/draft-js": "0.11.5",
+    "@types/react": "17.0.20",
+    "@typescript-eslint/eslint-plugin": "4.31.0",
+    "@typescript-eslint/parser": "4.31.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-config-standard": "16.0.3",
+    "eslint-import-resolver-ts": "0.4.2",
+    "eslint-plugin-import": "2.24.2",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "3.4.1",
+    "eslint-plugin-promise": "5.1.0",
+    "eslint-plugin-react": "7.25.1",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "eslint-plugin-standard": "4.1.0",
+    "typescript": "4.4.2"
+  },
+  "engines": {
+    "node": ">=12.13"
+  },
+  "keywords": [],
+  "license": "UNLICENSED",
+  "main": "./dist/index.js",
+  "name": "@gemunion/material-ui-inputs-draft",
+  "peerDependencies": {
+    "@material-ui/core": "^5",
+    "@material-ui/icons": "^5",
+    "formik": "^2",
+    "react": "^17",
+    "react-intl": "^5"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gemunion/material-ui-packages"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --fix",
+    "prebuild": "rimraf dist/",
+    "prepare": "npm run build",
+    "preversion": "npm run build && npm run test",
+    "test": "exit 0"
+  },
+  "sideEffects": false,
+  "title": "-=Gemun Ion Studio=-",
+  "types": "./dist/index.d.ts",
+  "version": "2.0.7"
+}
