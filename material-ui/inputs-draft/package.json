@@ -12,6 +12,7 @@
     "@material-ui/icons": "5.0.0-beta.5",
     "@gemunion/material-ui-inputs-file-firebase": "2.1.0",
     "@gemunion/mui-rte": "1.0.2",
+    "@storybook/react": "6.3.8",
     "clsx": "1.1.1",
     "draft-js": "0.11.7",
     "formik": "2.2.9",
