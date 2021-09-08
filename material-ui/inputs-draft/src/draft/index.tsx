@@ -4,6 +4,7 @@ import { getIn, useFormikContext } from "formik";
 import { TToolbarControl } from "@gemunion/mui-rte";
 import { useIntl } from "react-intl";
 
+import { useStyles } from './styles';
 import { IRichTextInputProps, RichTextInput } from "./input";
 
 const defaultControls = [
@@ -28,6 +29,7 @@ export interface IRichTextFieldProps {
 
 export const RichTextEditor: FC<IRichTextFieldProps & TextFieldProps> = props => {
   const { id, name, InputLabelProps, customControls = [], ...rest } = props;
+  const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
 
@@ -60,6 +62,7 @@ export const RichTextEditor: FC<IRichTextFieldProps & TextFieldProps> = props =>
     <TextField
       id={id}
       name={name}
+      classes={classes}
       error={error && touched}
       label={localizedLabel}
       placeholder={localizedPlaceholder}
