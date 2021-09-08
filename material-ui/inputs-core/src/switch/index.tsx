@@ -24,15 +24,9 @@ export const SwitchInput: FC<ISwitchInputProps & SwitchProps> = props => {
 
   return (
     <FormControlLabel
+      classes={classes}
       control={
-        <Switch
-          classes={classes}
-          name={name}
-          checked={value}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          {...rest}
-        />
+        <Switch name={name} checked={value} onChange={formik.handleChange} onBlur={formik.handleBlur} {...rest} />
       }
       label={localizedLabel}
     />
