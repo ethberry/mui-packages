@@ -20,5 +20,5 @@ export const useStyles = makeStyles<Theme>(
       margin: 4,
     },
   }),
-  { name: "Search" },
+  { name: "SearchInput" },
 );

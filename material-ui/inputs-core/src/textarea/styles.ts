@@ -7,5 +7,5 @@ export const useStyles = makeStyles<Theme>(
       margin: theme.spacing(1),
     },
   }),
-  { name: "TextArea" },
+  { name: "TextAreaInput" },
 );

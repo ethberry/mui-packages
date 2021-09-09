@@ -12,5 +12,5 @@ export const useStyles = makeStyles<Theme>(
       marginLeft: theme.spacing(2),
     },
   }),
-  { name: "Slider" },
+  { name: "SliderInput" },
 );

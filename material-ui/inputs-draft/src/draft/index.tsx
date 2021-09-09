@@ -4,7 +4,7 @@ import { getIn, useFormikContext } from "formik";
 import { TToolbarControl } from "@gemunion/mui-rte";
 import { useIntl } from "react-intl";
 
-import { useStyles } from './styles';
+import { useStyles } from "./styles";
 import { IRichTextInputProps, RichTextInput } from "./input";
 
 const defaultControls = [
