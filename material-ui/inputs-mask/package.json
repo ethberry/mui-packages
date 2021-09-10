@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "@gemunion/material-ui-inputs-core": "0.1.22",
-    "imask": "6.1.0",
-    "react-imask": "6.1.0"
+    "imask": "6.2.0",
+    "react-imask": "6.2.1"
   },
   "description": "react widget",
   "devDependencies": {
