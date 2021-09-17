@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.23](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-page-header@0.1.22...@gemunion/material-ui-page-header@0.1.23) (2021-09-17)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#82](https://github.com/gemunion/material-ui-packages/issues/82)) ([ed742c1](https://github.com/gemunion/material-ui-packages/commit/ed742c1a9ade7f234bb838dbf99144fa17164323))
+
+
+
+
+
 ## 0.1.22 (2021-09-05)
 
 **Note:** Version bump only for package @gemunion/material-ui-page-header
