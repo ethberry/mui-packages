@@ -9,14 +9,14 @@
   },
   "dependencies": {
     "@gemunion/material-ui-inputs-core": "2.0.9",
-    "imask": "6.2.0",
-    "react-imask": "6.2.1"
+    "imask": "6.2.2",
+    "react-imask": "6.2.2"
   },
   "description": "react widget",
   "devDependencies": {
     "@material-ui/core": "5.0.0-beta.5",
     "@storybook/react": "6.3.8",
-    "@types/react": "17.0.20",
+    "@types/react": "17.0.21",
     "formik": "2.2.9",
     "react": "17.0.2",
     "react-intl": "5.20.10"
