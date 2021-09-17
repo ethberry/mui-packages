@@ -8,13 +8,13 @@
     "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
-    "date-fns": "2.23.0"
+    "date-fns": "2.24.0"
   },
   "description": "react widget",
   "devDependencies": {
     "@material-ui/core": "4.12.3",
     "@material-ui/pickers": "4.0.0-alpha.12",
-    "@types/react": "17.0.20",
+    "@types/react": "17.0.21",
     "formik": "2.2.9",
     "react": "17.0.2",
     "react-intl": "5.20.10"

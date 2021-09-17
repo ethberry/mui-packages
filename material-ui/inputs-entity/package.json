@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/material-ui-progress": "0.1.16",
-    "@gemunion/provider-api": "4.0.5"
+    "@gemunion/provider-api": "4.0.6"
   },
   "description": "react widget",
   "devDependencies": {
@@ -17,7 +17,7 @@
     "@material-ui/icons": "4.11.2",
     "@material-ui/lab": "4.0.0-alpha.60",
     "@material-ui/styles": "4.11.4",
-    "@types/react": "17.0.20",
+    "@types/react": "17.0.21",
     "formik": "2.2.9",
     "notistack": "1.0.6",
     "react": "17.0.2",

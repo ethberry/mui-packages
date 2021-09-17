@@ -13,8 +13,8 @@
   "description": "react widget",
   "devDependencies": {
     "@material-ui/core": "4.12.3",
-    "@types/react": "17.0.20",
-    "@types/react-router-dom": "5.1.8",
+    "@types/react": "17.0.21",
+    "@types/react-router-dom": "5.1.9",
     "formik": "2.2.9",
     "react": "17.0.2",
     "react-intl": "5.20.10",

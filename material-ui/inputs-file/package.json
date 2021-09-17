@@ -9,13 +9,13 @@
   },
   "dependencies": {
     "clsx": "1.1.1",
-    "react-dropzone": "11.3.4"
+    "react-dropzone": "11.4.0"
   },
   "description": "react widget",
   "devDependencies": {
     "@material-ui/core": "4.12.3",
     "@material-ui/icons": "4.11.2",
-    "@types/react": "17.0.20",
+    "@types/react": "17.0.21",
     "notistack": "1.0.6",
     "react": "17.0.2",
     "react-intl": "5.20.10"
