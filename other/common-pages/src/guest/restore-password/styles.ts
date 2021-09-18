@@ -1,21 +1,21 @@
-import { createStyles, makeStyles } from "@material-ui/core";
+import { Theme } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
 
-export default makeStyles(
-  () =>
-    createStyles({
-      popup: {
-        width: 400,
-        margin: "auto",
-      },
-      section: {
-        alignItems: "center",
-        justifyContent: "center",
-        maxWidth: 500,
-        margin: "0 auto",
-      },
-      button: {
-        marginRight: 0,
-      },
-    }),
+export const useStyles = makeStyles<Theme>(
+  () => ({
+    popup: {
+      width: 400,
+      margin: "auto",
+    },
+    section: {
+      alignItems: "center",
+      justifyContent: "center",
+      maxWidth: 500,
+      margin: "0 auto",
+    },
+    button: {
+      marginRight: 0,
+    },
+  }),
   { name: "RestorePassword" },
 );

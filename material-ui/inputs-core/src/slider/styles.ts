@@ -1,6 +1,7 @@
-import { makeStyles } from "@material-ui/core";
+import { Theme } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
 
-export const useStyles = makeStyles(
+export const useStyles = makeStyles<Theme>(
   theme => ({
     label: {
       width: "100%",
@@ -11,5 +12,5 @@ export const useStyles = makeStyles(
       marginLeft: theme.spacing(2),
     },
   }),
-  { name: "Slider" },
+  { name: "SliderInput" },
 );

@@ -1,11 +1,12 @@
 module.exports = {
   stories: [
-    "../packages/**/*.stories.@(ts|tsx)",
+    "../material-ui/**/*.stories.@(ts|tsx)",
   ],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/preset-create-react-app",
+    // storybook-addon-material-ui
   ],
   webpackFinal: config => {
     config.module.rules.push({
@@ -33,12 +34,17 @@ module.exports = {
                   allExtensions: true,
                 },
               ],
-              "@babel/react",
+              [
+                "@babel/react",
+                {
+                  "runtime": "automatic",
+                },
+              ],
             ],
             plugins: [
               "@babel/plugin-proposal-nullish-coalescing-operator",
               "@babel/plugin-proposal-optional-chaining",
-              "babel-plugin-inline-import"
+              "babel-plugin-inline-import",
             ],
           },
         },

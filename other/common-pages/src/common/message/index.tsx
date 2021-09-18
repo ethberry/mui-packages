@@ -1,10 +1,10 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { FormattedMessage } from "react-intl";
 import { useParams } from "react-router";
 
-import { Alert } from "@material-ui/lab";
+import { Alert } from "@mui/lab";
 
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 export const Message: FC = () => {
   const classes = useStyles();

@@ -1,11 +1,11 @@
-import React from "react";
+import "../env";
+
 import { IntlProvider } from "react-intl";
 import { cleanup, render } from "@testing-library/react";
-import { createTheme, MuiThemeProvider } from "@material-ui/core";
+import { createTheme, ThemeProvider } from "@mui/material";
 import { Formik } from "formik";
 import { SnackbarProvider } from "notistack";
 
-import "../env";
 import { AvatarInput } from "./index";
 
 afterEach(cleanup);
@@ -17,7 +17,7 @@ const i18n = {
   "form.validations.whitelistValidation": "Property Avatar is not recognized",
 };
 
-describe.skip("<AvatarInput />", () => {
+describe("<AvatarInput />", () => {
   it("renders the empty field", () => {
     const props = {
       name: "avatar",
@@ -32,7 +32,7 @@ describe.skip("<AvatarInput />", () => {
     };
 
     const { asFragment } = render(
-      <MuiThemeProvider theme={createTheme()}>
+      <ThemeProvider theme={createTheme()}>
         <IntlProvider locale="en" messages={i18n}>
           <SnackbarProvider maxSnack={3}>
             <Formik {...formikProps}>
@@ -40,7 +40,7 @@ describe.skip("<AvatarInput />", () => {
             </Formik>
           </SnackbarProvider>
         </IntlProvider>
-      </MuiThemeProvider>,
+      </ThemeProvider>,
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -60,7 +60,7 @@ describe.skip("<AvatarInput />", () => {
     };
 
     const { asFragment } = render(
-      <MuiThemeProvider theme={createTheme()}>
+      <ThemeProvider theme={createTheme()}>
         <IntlProvider locale="en" messages={i18n}>
           <SnackbarProvider maxSnack={3}>
             <Formik {...formikProps}>
@@ -68,7 +68,7 @@ describe.skip("<AvatarInput />", () => {
             </Formik>
           </SnackbarProvider>
         </IntlProvider>
-      </MuiThemeProvider>,
+      </ThemeProvider>,
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -91,7 +91,7 @@ describe.skip("<AvatarInput />", () => {
     };
 
     const { asFragment } = render(
-      <MuiThemeProvider theme={createTheme()}>
+      <ThemeProvider theme={createTheme()}>
         <IntlProvider locale="en" messages={i18n}>
           <SnackbarProvider maxSnack={3}>
             <Formik {...formikProps}>
@@ -99,7 +99,7 @@ describe.skip("<AvatarInput />", () => {
             </Formik>
           </SnackbarProvider>
         </IntlProvider>
-      </MuiThemeProvider>,
+      </ThemeProvider>,
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -123,7 +123,7 @@ describe.skip("<AvatarInput />", () => {
     };
 
     const { asFragment } = render(
-      <MuiThemeProvider theme={createTheme()}>
+      <ThemeProvider theme={createTheme()}>
         <IntlProvider locale="en" messages={i18n}>
           <SnackbarProvider maxSnack={3}>
             <Formik {...formikProps}>
@@ -131,7 +131,7 @@ describe.skip("<AvatarInput />", () => {
             </Formik>
           </SnackbarProvider>
         </IntlProvider>
-      </MuiThemeProvider>,
+      </ThemeProvider>,
     );
 
     expect(asFragment()).toMatchSnapshot();

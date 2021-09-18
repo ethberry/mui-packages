@@ -1,8 +1,10 @@
-import React, { FC, ReactElement } from "react";
+import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
-import { TextField, TextFieldProps } from "@material-ui/core";
-import { DateTimePicker } from "@material-ui/pickers";
+import { TextField, TextFieldProps } from "@mui/material";
+import { DateTimePicker } from "@mui/lab";
+
+import { useStyles } from "./styles";
 
 interface IDateTimeInputProps {
   name: string;
@@ -13,6 +15,7 @@ interface IDateTimeInputProps {
 
 export const DateTimeInput: FC<IDateTimeInputProps> = props => {
   const { name, ...rest } = props;
+  const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
 
@@ -23,6 +26,7 @@ export const DateTimeInput: FC<IDateTimeInputProps> = props => {
 
   return (
     <DateTimePicker
+      className={classes.root}
       inputFormat="MM/dd/yyyy hh:mm a"
       label={formatMessage({ id: `form.labels.${suffix}` })}
       value={value}

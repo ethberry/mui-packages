@@ -1,11 +1,11 @@
-import React, { FC } from "react";
+import { FC } from "react";
 // eslint-disable-next-line import/no-named-as-default
 import ReCAPTCHA from "react-google-recaptcha";
 import { FormattedMessage } from "react-intl";
 import { getIn, useFormikContext } from "formik";
-import { Grid, FormHelperText } from "@material-ui/core";
+import { Grid, FormHelperText } from "@mui/material";
 
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 interface ICaptchaProps {
   name?: string;

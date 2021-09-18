@@ -3,82 +3,156 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.1.33](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.32...@gemunion/material-ui-inputs-image-firebase@0.1.33) (2021-09-17)
+## 2.1.1 (2021-09-08)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
+
+
+
+
+
+# [2.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.29...@gemunion/mui-inputs-image-firebase@2.1.0) (2021-09-07)
 
 
 ### Bug Fixes
 
-* **deps:** update all non-major dependencies ([#82](https://github.com/gemunion/material-ui-packages/issues/82)) ([ed742c1](https://github.com/gemunion/material-ui-packages/commit/ed742c1a9ade7f234bb838dbf99144fa17164323))
+* **deps:** update all non-major dependencies ([c013d14](https://github.com/gemunion/mui-packages/commit/c013d14692da60ac7fc63ea560f35111a0643a36))
+* **deps:** update all non-major dependencies ([#52](https://github.com/gemunion/mui-packages/issues/52)) ([6c8f2e2](https://github.com/gemunion/mui-packages/commit/6c8f2e2360a76e51ff9b681a234fe9e2d4fe8668))
+* **deps:** update dependency firebase to v9.0.1 ([c32d877](https://github.com/gemunion/mui-packages/commit/c32d877b4111fbdb09cd8ae5e324527e10fc8c34))
+
+
+### Features
+
+* update firebase ([2c7a548](https://github.com/gemunion/mui-packages/commit/2c7a5489e01278b263839a793676da2667893d97))
 
 
 
 
 
-## 0.1.32 (2021-09-05)
+## [2.0.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@3.0.0...@gemunion/mui-inputs-image-firebase@2.0.8) (2021-08-30)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
-
-
-
-
-
-## 0.1.31 (2021-08-30)
-
-
-### Bug Fixes
-
-* **deps:** update all non-major dependencies ([#51](https://github.com/gemunion/material-ui-packages/issues/51)) ([67d6520](https://github.com/gemunion/material-ui-packages/commit/67d65207df5082d1712b7306503c27e6b6df7ff7))
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
 
 
-## 0.1.30 (2021-08-30)
-
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
-
-
-
-
-
-## [0.1.29](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.28...@gemunion/material-ui-inputs-image-firebase@0.1.29) (2021-08-30)
-
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
-
-
-
-
-
-## 0.1.28 (2021-08-25)
-
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
-
-
-
-
-
-## 0.1.27 (2021-08-16)
+# [3.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.28...@gemunion/mui-inputs-image-firebase@3.0.0) (2021-08-29)
 
 
 ### Bug Fixes
 
-* **deps:** update all non-major dependencies ([#9](https://github.com/gemunion/material-ui-packages/issues/9)) ([a751286](https://github.com/gemunion/material-ui-packages/commit/a75128693be078621e6f325a93c09a841509b49f))
+* deps ([6ea3740](https://github.com/gemunion/mui-packages/commit/6ea3740b9ceb00ef44428b180ea8468ffaeebe9b))
+* **deps:** update all non-major dependencies ([74f0590](https://github.com/gemunion/mui-packages/commit/74f0590bca4e94124036fb2fc49efc8b15d3ab6f))
+* **deps:** update all non-major dependencies ([be30b79](https://github.com/gemunion/mui-packages/commit/be30b79bf815c8917a3eb187be21e788ecedca9f))
+* proper styles for image inputs ([388437f](https://github.com/gemunion/mui-packages/commit/388437f94ed7554e82bfe44b64f888a8ab36c508))
+* styles ([a65c1b7](https://github.com/gemunion/mui-packages/commit/a65c1b72b303b24a10e8602725b44d496a17d207))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/mui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/mui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+
+
+### BREAKING CHANGES
+
+* version bump
+* version bump
 
 
 
 
 
-## [0.1.26](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.25...@gemunion/material-ui-inputs-image-firebase@0.1.26) (2021-08-16)
-
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+## [2.0.6](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@2.0.5...@gemunion/mui-inputs-image-firebase@2.0.6) (2021-08-22)
 
 
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([74f0590](https://github.com/gemunion/mui-packages/commit/74f0590bca4e94124036fb2fc49efc8b15d3ab6f))
 
 
 
-## [0.1.25](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.24...@gemunion/material-ui-inputs-image-firebase@0.1.25) (2021-08-16)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+
+## [2.0.5](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@2.0.4...@gemunion/mui-inputs-image-firebase@2.0.5) (2021-08-22)
+
+
+### Bug Fixes
+
+* proper styles for image inputs ([388437f](https://github.com/gemunion/mui-packages/commit/388437f94ed7554e82bfe44b64f888a8ab36c508))
+
+
+
+
+
+## [2.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@2.0.3...@gemunion/mui-inputs-image-firebase@2.0.4) (2021-08-22)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
+
+
+
+
+
+## [2.0.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@2.0.2...@gemunion/mui-inputs-image-firebase@2.0.3) (2021-08-21)
+
+
+### Bug Fixes
+
+* styles ([a65c1b7](https://github.com/gemunion/mui-packages/commit/a65c1b72b303b24a10e8602725b44d496a17d207))
+
+
+
+
+
+## 2.0.2 (2021-08-21)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
+
+
+
+
+
+## 2.0.1 (2021-08-21)
+
+
+### Bug Fixes
+
+* publish action [skip-ci] ([0a7dc17](https://github.com/gemunion/mui-packages/commit/0a7dc17c291690b045871be266e5b48d8f896b33))
+
+
+
+
+
+# [2.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.26...@gemunion/mui-inputs-image-firebase@2.0.0) (2021-08-16)
+
+
+### Bug Fixes
+
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/mui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/mui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+
+
+### BREAKING CHANGES
+
+* version bump
+* version bump
+
+
+
+
+
+# [0.2.0](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.24...@gemunion/mui-inputs-image-firebase@0.2.0) (2021-08-15)
+
+
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/common-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+
+
+### BREAKING CHANGES
+
+* version bump
 
 
 
@@ -89,19 +163,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **deps:** update all non-major dependencies ([17134c5](https://github.com/gemunion/material-ui-packages/commit/17134c5509a87ea00c96807b7ce0ec39dcf85000))
-* **deps:** update all non-major dependencies ([c588d74](https://github.com/gemunion/material-ui-packages/commit/c588d74d0de68cc8e21ed317da1b73314bcda884))
-* downgrade notistack ([a7c477a](https://github.com/gemunion/material-ui-packages/commit/a7c477add3b0a4a7fcc157ddbad70bb510512c07))
-* move repo to org ([ac9a7e5](https://github.com/gemunion/material-ui-packages/commit/ac9a7e51e47bf69ef30b19abbc67274405c13200))
-* name ([2d72dc4](https://github.com/gemunion/material-ui-packages/commit/2d72dc44efbbfbbe0fdd5163254492fa9370f494))
+* **deps:** update all non-major dependencies ([17134c5](https://github.com/gemunion/common-packages/commit/17134c5509a87ea00c96807b7ce0ec39dcf85000))
+* **deps:** update all non-major dependencies ([c588d74](https://github.com/gemunion/common-packages/commit/c588d74d0de68cc8e21ed317da1b73314bcda884))
+* downgrade notistack ([a7c477a](https://github.com/gemunion/common-packages/commit/a7c477add3b0a4a7fcc157ddbad70bb510512c07))
+* move repo to org ([ac9a7e5](https://github.com/gemunion/common-packages/commit/ac9a7e51e47bf69ef30b19abbc67274405c13200))
+* name ([2d72dc4](https://github.com/gemunion/common-packages/commit/2d72dc44efbbfbbe0fdd5163254492fa9370f494))
 
 
 
 
 
-## [0.1.23](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.22...@gemunion/material-ui-inputs-image-firebase@0.1.23) (2021-08-07)
+## [0.1.23](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.22...@gemunion/mui-inputs-image-firebase@0.1.23) (2021-08-07)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -112,87 +186,87 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **deps:** update all non-major dependencies ([17134c5](https://github.com/gemunion/material-ui-packages/commit/17134c5509a87ea00c96807b7ce0ec39dcf85000))
-* **deps:** update all non-major dependencies ([c588d74](https://github.com/gemunion/material-ui-packages/commit/c588d74d0de68cc8e21ed317da1b73314bcda884))
-* downgrade notistack ([a7c477a](https://github.com/gemunion/material-ui-packages/commit/a7c477add3b0a4a7fcc157ddbad70bb510512c07))
-* move repo to org ([ac9a7e5](https://github.com/gemunion/material-ui-packages/commit/ac9a7e51e47bf69ef30b19abbc67274405c13200))
-* name ([2d72dc4](https://github.com/gemunion/material-ui-packages/commit/2d72dc44efbbfbbe0fdd5163254492fa9370f494))
+* **deps:** update all non-major dependencies ([17134c5](https://github.com/gemunion/common-packages/commit/17134c5509a87ea00c96807b7ce0ec39dcf85000))
+* **deps:** update all non-major dependencies ([c588d74](https://github.com/gemunion/common-packages/commit/c588d74d0de68cc8e21ed317da1b73314bcda884))
+* downgrade notistack ([a7c477a](https://github.com/gemunion/common-packages/commit/a7c477add3b0a4a7fcc157ddbad70bb510512c07))
+* move repo to org ([ac9a7e5](https://github.com/gemunion/common-packages/commit/ac9a7e51e47bf69ef30b19abbc67274405c13200))
+* name ([2d72dc4](https://github.com/gemunion/common-packages/commit/2d72dc44efbbfbbe0fdd5163254492fa9370f494))
 
 
 
 
 
-## [0.1.21](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.20...@gemunion/material-ui-inputs-image-firebase@0.1.21) (2021-08-06)
-
-
-### Bug Fixes
-
-* **deps:** update all non-major dependencies ([17134c5](https://github.com/gemunion/material-ui-packages/commit/17134c5509a87ea00c96807b7ce0ec39dcf85000))
-
-
-
-
-
-## [0.1.20](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.19...@gemunion/material-ui-inputs-image-firebase@0.1.20) (2021-07-24)
+## [0.1.21](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.20...@gemunion/mui-inputs-image-firebase@0.1.21) (2021-08-06)
 
 
 ### Bug Fixes
 
-* name ([2d72dc4](https://github.com/gemunion/material-ui-packages/commit/2d72dc44efbbfbbe0fdd5163254492fa9370f494))
+* **deps:** update all non-major dependencies ([17134c5](https://github.com/gemunion/common-packages/commit/17134c5509a87ea00c96807b7ce0ec39dcf85000))
 
 
 
 
 
-## [0.1.19](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.18...@gemunion/material-ui-inputs-image-firebase@0.1.19) (2021-07-23)
-
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
-
-
-
-
-
-## [0.1.18](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.17...@gemunion/material-ui-inputs-image-firebase@0.1.18) (2021-07-22)
+## [0.1.20](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.19...@gemunion/mui-inputs-image-firebase@0.1.20) (2021-07-24)
 
 
 ### Bug Fixes
 
-* **deps:** update all non-major dependencies ([c588d74](https://github.com/gemunion/material-ui-packages/commit/c588d74d0de68cc8e21ed317da1b73314bcda884))
+* name ([2d72dc4](https://github.com/gemunion/common-packages/commit/2d72dc44efbbfbbe0fdd5163254492fa9370f494))
 
 
 
 
 
-## [0.1.17](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.16...@gemunion/material-ui-inputs-image-firebase@0.1.17) (2021-07-22)
+## [0.1.19](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.18...@gemunion/mui-inputs-image-firebase@0.1.19) (2021-07-23)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
-
-
-
-
-
-## [0.1.16](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.15...@gemunion/material-ui-inputs-image-firebase@0.1.16) (2021-07-22)
-
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
 
 
-## [0.1.15](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.14...@gemunion/material-ui-inputs-image-firebase@0.1.15) (2021-07-18)
+## [0.1.18](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.17...@gemunion/mui-inputs-image-firebase@0.1.18) (2021-07-22)
 
 
 ### Bug Fixes
 
-* downgrade notistack ([a7c477a](https://github.com/gemunion/material-ui-packages/commit/a7c477add3b0a4a7fcc157ddbad70bb510512c07))
+* **deps:** update all non-major dependencies ([c588d74](https://github.com/gemunion/common-packages/commit/c588d74d0de68cc8e21ed317da1b73314bcda884))
 
 
 
 
 
-## [0.1.14](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.13...@gemunion/material-ui-inputs-image-firebase@0.1.14) (2021-07-15)
+## [0.1.17](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.16...@gemunion/mui-inputs-image-firebase@0.1.17) (2021-07-22)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
+
+
+
+
+
+## [0.1.16](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.15...@gemunion/mui-inputs-image-firebase@0.1.16) (2021-07-22)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
+
+
+
+
+
+## [0.1.15](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.14...@gemunion/mui-inputs-image-firebase@0.1.15) (2021-07-18)
+
+
+### Bug Fixes
+
+* downgrade notistack ([a7c477a](https://github.com/gemunion/common-packages/commit/a7c477add3b0a4a7fcc157ddbad70bb510512c07))
+
+
+
+
+
+## [0.1.14](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.13...@gemunion/mui-inputs-image-firebase@0.1.14) (2021-07-15)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -200,34 +274,34 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.13 (2021-07-13)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
 
 
-## [0.1.12](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.11...@gemunion/material-ui-inputs-image-firebase@0.1.12) (2021-07-11)
+## [0.1.12](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.11...@gemunion/mui-inputs-image-firebase@0.1.12) (2021-07-11)
 
 
 ### Bug Fixes
 
-* justify ([22c6ea0](https://github.com/gemunion/material-ui-packages/commit/22c6ea0e669175ba2207ff44d60a919a30a58253))
+* justify ([22c6ea0](https://github.com/gemunion/common-packages/commit/22c6ea0e669175ba2207ff44d60a919a30a58253))
 
 
 
 
 
-## [0.1.11](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.10...@gemunion/material-ui-inputs-image-firebase@0.1.11) (2021-07-10)
+## [0.1.11](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.10...@gemunion/mui-inputs-image-firebase@0.1.11) (2021-07-10)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
-
-
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
-## [0.1.10](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.9...@gemunion/material-ui-inputs-image-firebase@0.1.10) (2021-07-08)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+
+## [0.1.10](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.9...@gemunion/mui-inputs-image-firebase@0.1.10) (2021-07-08)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -235,7 +309,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.9 (2021-07-02)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -243,54 +317,54 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.8 (2021-06-24)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
 
 
-## [0.1.7](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.6...@gemunion/material-ui-inputs-image-firebase@0.1.7) (2021-06-21)
-
-
-### Bug Fixes
-
-* fix gitignore, add env sample and fix tests formik value ([26c2c72](https://github.com/gemunion/material-ui-packages/commit/26c2c72a2bd121154c35866edbc71ef45e41e280))
-* image-firebase test and env issue ([019b321](https://github.com/gemunion/material-ui-packages/commit/019b3216c734c5515bc7029e56c3d547bf2002d9))
-
-
-
-
-
-## [0.1.6](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.5...@gemunion/material-ui-inputs-image-firebase@0.1.6) (2021-06-19)
+## [0.1.7](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.6...@gemunion/mui-inputs-image-firebase@0.1.7) (2021-06-21)
 
 
 ### Bug Fixes
 
-* file upload and validation message ([7ab62ad](https://github.com/gemunion/material-ui-packages/commit/7ab62ad1b5164fbf7a3ce7960c6d6b861fb787d8))
+* fix gitignore, add env sample and fix tests formik value ([26c2c72](https://github.com/gemunion/common-packages/commit/26c2c72a2bd121154c35866edbc71ef45e41e280))
+* image-firebase test and env issue ([019b321](https://github.com/gemunion/common-packages/commit/019b3216c734c5515bc7029e56c3d547bf2002d9))
 
 
 
 
 
-## [0.1.5](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.4...@gemunion/material-ui-inputs-image-firebase@0.1.5) (2021-06-19)
-
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+## [0.1.6](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.5...@gemunion/mui-inputs-image-firebase@0.1.6) (2021-06-19)
 
 
+### Bug Fixes
 
-
-
-## [0.1.4](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.3...@gemunion/material-ui-inputs-image-firebase@0.1.4) (2021-06-16)
-
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+* file upload and validation message ([7ab62ad](https://github.com/gemunion/common-packages/commit/7ab62ad1b5164fbf7a3ce7960c6d6b861fb787d8))
 
 
 
 
 
-## [0.1.3](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.1.2...@gemunion/material-ui-inputs-image-firebase@0.1.3) (2021-06-09)
+## [0.1.5](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.4...@gemunion/mui-inputs-image-firebase@0.1.5) (2021-06-19)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
+
+
+
+
+
+## [0.1.4](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.3...@gemunion/mui-inputs-image-firebase@0.1.4) (2021-06-16)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
+
+
+
+
+
+## [0.1.3](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.1.2...@gemunion/mui-inputs-image-firebase@0.1.3) (2021-06-09)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -298,7 +372,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.2 (2021-06-09)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -306,18 +380,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.1 (2021-06-09)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
 
 
-# [0.1.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.0.181...@gemunion/material-ui-inputs-image-firebase@0.1.0) (2021-06-09)
+# [0.1.0](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.0.181...@gemunion/mui-inputs-image-firebase@0.1.0) (2021-06-09)
 
 
 ### Features
 
-* use fetchJson ([fc3d86e](https://github.com/gemunion/material-ui-packages/commit/fc3d86e0a27e2cf4387d8706222abae24bde9b16))
+* use fetchJson ([fc3d86e](https://github.com/gemunion/common-packages/commit/fc3d86e0a27e2cf4387d8706222abae24bde9b16))
 
 
 
@@ -328,7 +402,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* send app name to logDna ([df3476a](https://github.com/gemunion/material-ui-packages/commit/df3476a4a17098fdf80f99cf2400d114cd4e47ad))
+* send app name to logDna ([df3476a](https://github.com/gemunion/common-packages/commit/df3476a4a17098fdf80f99cf2400d114cd4e47ad))
 
 
 
@@ -336,7 +410,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.180 (2021-05-31)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -347,15 +421,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* typeOrm config logging ([7734340](https://github.com/gemunion/material-ui-packages/commit/77343402c7e0c63d3d19bfc55df29b961f68eaaa))
+* typeOrm config logging ([7734340](https://github.com/gemunion/common-packages/commit/77343402c7e0c63d3d19bfc55df29b961f68eaaa))
 
 
 
 
 
-## [0.0.178](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.0.177...@gemunion/material-ui-inputs-image-firebase@0.0.178) (2021-05-18)
+## [0.0.178](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.0.177...@gemunion/mui-inputs-image-firebase@0.0.178) (2021-05-18)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -363,15 +437,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.177 (2021-05-14)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
 
 
-## [0.0.176](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.0.175...@gemunion/material-ui-inputs-image-firebase@0.0.176) (2021-05-11)
+## [0.0.176](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.0.175...@gemunion/mui-inputs-image-firebase@0.0.176) (2021-05-11)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -382,7 +456,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **deps:** update all non-major dependencies ([#48](https://github.com/gemunion/material-ui-packages/issues/48)) ([1854092](https://github.com/gemunion/material-ui-packages/commit/1854092c4d51e9ec43aa1d75bb43037c21b11630))
+* **deps:** update all non-major dependencies ([#48](https://github.com/gemunion/common-packages/issues/48)) ([1854092](https://github.com/gemunion/common-packages/commit/1854092c4d51e9ec43aa1d75bb43037c21b11630))
 
 
 
@@ -393,7 +467,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **deps:** update dependency aws-sdk to v2.902.0 ([#47](https://github.com/gemunion/material-ui-packages/issues/47)) ([06b9b84](https://github.com/gemunion/material-ui-packages/commit/06b9b845709c6eb67b7e04277f86ecb9bf19fc73))
+* **deps:** update dependency aws-sdk to v2.902.0 ([#47](https://github.com/gemunion/common-packages/issues/47)) ([06b9b84](https://github.com/gemunion/common-packages/commit/06b9b845709c6eb67b7e04277f86ecb9bf19fc73))
 
 
 
@@ -401,7 +475,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.173 (2021-05-06)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -409,15 +483,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.172 (2021-04-30)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
 
 
-## [0.0.171](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.0.170...@gemunion/material-ui-inputs-image-firebase@0.0.171) (2021-04-28)
+## [0.0.171](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.0.170...@gemunion/mui-inputs-image-firebase@0.0.171) (2021-04-28)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -425,7 +499,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.170 (2021-04-27)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -433,15 +507,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.169 (2021-04-27)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
 
 
-## [0.0.168](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.0.167...@gemunion/material-ui-inputs-image-firebase@0.0.168) (2021-04-24)
+## [0.0.168](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.0.167...@gemunion/mui-inputs-image-firebase@0.0.168) (2021-04-24)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -449,7 +523,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.167 (2021-04-19)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -457,7 +531,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.166 (2021-04-18)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -465,7 +539,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.165 (2021-04-15)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -473,7 +547,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.164 (2021-04-15)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -481,63 +555,63 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.163 (2021-04-14)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
 
 
-## [0.0.162](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.0.161...@gemunion/material-ui-inputs-image-firebase@0.0.162) (2021-04-14)
+## [0.0.162](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.0.161...@gemunion/mui-inputs-image-firebase@0.0.162) (2021-04-14)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
-
-
-
-
-
-## [0.0.160](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.0.159...@gemunion/material-ui-inputs-image-firebase@0.0.160) (2021-04-05)
-
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
 
 
-## [0.0.159](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.0.158...@gemunion/material-ui-inputs-image-firebase@0.0.159) (2021-04-05)
+## [0.0.160](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.0.159...@gemunion/mui-inputs-image-firebase@0.0.160) (2021-04-05)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
-
-
-
-
-
-## [0.0.158](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.0.157...@gemunion/material-ui-inputs-image-firebase@0.0.158) (2021-04-03)
-
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
 
 
-## [0.0.157](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.0.156...@gemunion/material-ui-inputs-image-firebase@0.0.157) (2021-04-02)
+## [0.0.159](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.0.158...@gemunion/mui-inputs-image-firebase@0.0.159) (2021-04-05)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
-
-
-
-
-
-## [0.0.156](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.0.155...@gemunion/material-ui-inputs-image-firebase@0.0.156) (2021-03-30)
-
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
 
 
-## [0.0.155](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-inputs-image-firebase@0.0.154...@gemunion/material-ui-inputs-image-firebase@0.0.155) (2021-03-29)
+## [0.0.158](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.0.157...@gemunion/mui-inputs-image-firebase@0.0.158) (2021-04-03)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
+
+
+
+
+
+## [0.0.157](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.0.156...@gemunion/mui-inputs-image-firebase@0.0.157) (2021-04-02)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
+
+
+
+
+
+## [0.0.156](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.0.155...@gemunion/mui-inputs-image-firebase@0.0.156) (2021-03-30)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
+
+
+
+
+
+## [0.0.155](https://github.com/gemunion/common-packages/compare/@gemunion/mui-inputs-image-firebase@0.0.154...@gemunion/mui-inputs-image-firebase@0.0.155) (2021-03-29)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -545,7 +619,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.154 (2021-03-29)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -553,7 +627,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.153 (2021-03-28)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -594,7 +668,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.149 (2021-03-17)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -657,7 +731,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.143 (2021-03-08)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -665,7 +739,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.142 (2021-03-07)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -673,7 +747,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.141 (2021-03-07)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -681,7 +755,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.140 (2021-03-05)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -689,7 +763,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.139 (2021-03-05)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -697,7 +771,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.138 (2021-03-02)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -705,7 +779,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.137 (2021-03-01)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -713,7 +787,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.136 (2021-03-01)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -787,7 +861,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.129 (2021-02-24)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -817,15 +891,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.126 (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
 
 
-## [0.0.125](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.124...@gemunion/material-ui-inputs-image-firebase@0.0.125) (2021-02-23)
+## [0.0.125](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.124...@gemunion/mui-inputs-image-firebase@0.0.125) (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -833,7 +907,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.124 (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -841,7 +915,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.123 (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -849,7 +923,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.122 (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -860,7 +934,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **deps:** update dependency @gemunion/material-ui-form to v0.0.123 ([28829cc](https://github.com/memoryOS/material-ui/commit/28829cc99b2eaaec06fa01c8010104b382724f90))
+* **deps:** update dependency @gemunion/mui-form to v0.0.123 ([28829cc](https://github.com/memoryOS/material-ui/commit/28829cc99b2eaaec06fa01c8010104b382724f90))
 
 
 
@@ -868,7 +942,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.120 (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -887,7 +961,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.118 (2021-02-22)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -961,7 +1035,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.111 (2021-02-17)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -969,7 +1043,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.110 (2021-02-16)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -977,7 +1051,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.109 (2021-02-13)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -985,7 +1059,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.108 (2021-02-13)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -993,7 +1067,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.107 (2021-02-12)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -1034,7 +1108,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.103 (2021-02-09)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -1086,7 +1160,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.98 (2021-02-04)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -1094,7 +1168,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.97 (2021-02-04)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -1102,7 +1176,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.96 (2021-02-03)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -1110,7 +1184,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.95 (2021-02-02)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -1270,9 +1344,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.80](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.79...@gemunion/material-ui-inputs-image-firebase@0.0.80) (2021-01-14)
+## [0.0.80](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.79...@gemunion/mui-inputs-image-firebase@0.0.80) (2021-01-14)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -1379,7 +1453,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.70 (2021-01-03)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -1387,7 +1461,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.69 (2021-01-03)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -1560,7 +1634,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.53 (2020-12-08)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -1577,9 +1651,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.51](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.50...@gemunion/material-ui-inputs-image-firebase@0.0.51) (2020-12-08)
+## [0.0.51](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.50...@gemunion/mui-inputs-image-firebase@0.0.51) (2020-12-08)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -1686,7 +1760,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.41 (2020-11-23)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -1742,7 +1816,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.38](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.37...@gemunion/material-ui-inputs-image-firebase@0.0.38) (2020-11-19)
+## [0.0.38](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.37...@gemunion/mui-inputs-image-firebase@0.0.38) (2020-11-19)
 
 
 ### Bug Fixes
@@ -1753,7 +1827,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.37](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.36...@gemunion/material-ui-inputs-image-firebase@0.0.37) (2020-11-16)
+## [0.0.37](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.36...@gemunion/mui-inputs-image-firebase@0.0.37) (2020-11-16)
 
 
 ### Bug Fixes
@@ -1764,15 +1838,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.36](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.35...@gemunion/material-ui-inputs-image-firebase@0.0.36) (2020-11-16)
+## [0.0.36](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.35...@gemunion/mui-inputs-image-firebase@0.0.36) (2020-11-16)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
-
-
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
-## [0.0.35](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.34...@gemunion/material-ui-inputs-image-firebase@0.0.35) (2020-11-12)
+
+
+## [0.0.35](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.34...@gemunion/mui-inputs-image-firebase@0.0.35) (2020-11-12)
 
 
 ### Bug Fixes
@@ -1783,7 +1857,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.34](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.33...@gemunion/material-ui-inputs-image-firebase@0.0.34) (2020-11-11)
+## [0.0.34](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.33...@gemunion/mui-inputs-image-firebase@0.0.34) (2020-11-11)
 
 
 ### Bug Fixes
@@ -1794,7 +1868,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.33](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.32...@gemunion/material-ui-inputs-image-firebase@0.0.33) (2020-11-10)
+## [0.0.33](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.32...@gemunion/mui-inputs-image-firebase@0.0.33) (2020-11-10)
 
 
 ### Bug Fixes
@@ -1805,7 +1879,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.32](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.31...@gemunion/material-ui-inputs-image-firebase@0.0.32) (2020-11-10)
+## [0.0.32](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.31...@gemunion/mui-inputs-image-firebase@0.0.32) (2020-11-10)
 
 
 ### Bug Fixes
@@ -1816,7 +1890,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.31](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.30...@gemunion/material-ui-inputs-image-firebase@0.0.31) (2020-11-10)
+## [0.0.31](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.30...@gemunion/mui-inputs-image-firebase@0.0.31) (2020-11-10)
 
 
 ### Bug Fixes
@@ -1827,7 +1901,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.30](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.29...@gemunion/material-ui-inputs-image-firebase@0.0.30) (2020-11-10)
+## [0.0.30](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.29...@gemunion/mui-inputs-image-firebase@0.0.30) (2020-11-10)
 
 
 ### Bug Fixes
@@ -1838,15 +1912,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.29](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.28...@gemunion/material-ui-inputs-image-firebase@0.0.29) (2020-11-09)
+## [0.0.29](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.28...@gemunion/mui-inputs-image-firebase@0.0.29) (2020-11-09)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
-
-
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
-## [0.0.28](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.27...@gemunion/material-ui-inputs-image-firebase@0.0.28) (2020-11-09)
+
+
+## [0.0.28](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.27...@gemunion/mui-inputs-image-firebase@0.0.28) (2020-11-09)
 
 
 ### Bug Fixes
@@ -1857,7 +1931,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.27](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.26...@gemunion/material-ui-inputs-image-firebase@0.0.27) (2020-11-09)
+## [0.0.27](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.26...@gemunion/mui-inputs-image-firebase@0.0.27) (2020-11-09)
 
 
 ### Bug Fixes
@@ -1868,15 +1942,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.26](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.25...@gemunion/material-ui-inputs-image-firebase@0.0.26) (2020-11-08)
+## [0.0.26](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.25...@gemunion/mui-inputs-image-firebase@0.0.26) (2020-11-08)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
-
-
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
-## [0.0.25](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.24...@gemunion/material-ui-inputs-image-firebase@0.0.25) (2020-11-08)
+
+
+## [0.0.25](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.24...@gemunion/mui-inputs-image-firebase@0.0.25) (2020-11-08)
 
 
 ### Bug Fixes
@@ -1887,7 +1961,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.24](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.23...@gemunion/material-ui-inputs-image-firebase@0.0.24) (2020-11-07)
+## [0.0.24](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.23...@gemunion/mui-inputs-image-firebase@0.0.24) (2020-11-07)
 
 
 ### Bug Fixes
@@ -1898,7 +1972,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.23](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.22...@gemunion/material-ui-inputs-image-firebase@0.0.23) (2020-11-05)
+## [0.0.23](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.22...@gemunion/mui-inputs-image-firebase@0.0.23) (2020-11-05)
 
 
 ### Bug Fixes
@@ -1909,7 +1983,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.22](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.21...@gemunion/material-ui-inputs-image-firebase@0.0.22) (2020-11-05)
+## [0.0.22](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.21...@gemunion/mui-inputs-image-firebase@0.0.22) (2020-11-05)
 
 
 ### Bug Fixes
@@ -1920,7 +1994,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.21](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.20...@gemunion/material-ui-inputs-image-firebase@0.0.21) (2020-11-05)
+## [0.0.21](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.20...@gemunion/mui-inputs-image-firebase@0.0.21) (2020-11-05)
 
 
 ### Bug Fixes
@@ -1931,7 +2005,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.20](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.19...@gemunion/material-ui-inputs-image-firebase@0.0.20) (2020-11-05)
+## [0.0.20](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.19...@gemunion/mui-inputs-image-firebase@0.0.20) (2020-11-05)
 
 
 ### Bug Fixes
@@ -1942,7 +2016,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.19](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.18...@gemunion/material-ui-inputs-image-firebase@0.0.19) (2020-11-05)
+## [0.0.19](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.18...@gemunion/mui-inputs-image-firebase@0.0.19) (2020-11-05)
 
 
 ### Bug Fixes
@@ -1953,15 +2027,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.18](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.17...@gemunion/material-ui-inputs-image-firebase@0.0.18) (2020-11-03)
+## [0.0.18](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.17...@gemunion/mui-inputs-image-firebase@0.0.18) (2020-11-03)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
-
-
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
-## [0.0.17](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.16...@gemunion/material-ui-inputs-image-firebase@0.0.17) (2020-11-02)
+
+
+## [0.0.17](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.16...@gemunion/mui-inputs-image-firebase@0.0.17) (2020-11-02)
 
 
 ### Bug Fixes
@@ -1972,31 +2046,31 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.16](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.15...@gemunion/material-ui-inputs-image-firebase@0.0.16) (2020-11-02)
+## [0.0.16](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.15...@gemunion/mui-inputs-image-firebase@0.0.16) (2020-11-02)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
-
-
-
-
-
-## [0.0.15](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.14...@gemunion/material-ui-inputs-image-firebase@0.0.15) (2020-11-02)
-
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
 
 
-## [0.0.14](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.13...@gemunion/material-ui-inputs-image-firebase@0.0.14) (2020-10-30)
+## [0.0.15](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.14...@gemunion/mui-inputs-image-firebase@0.0.15) (2020-11-02)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
-
-
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
-## [0.0.13](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.12...@gemunion/material-ui-inputs-image-firebase@0.0.13) (2020-10-28)
+
+
+## [0.0.14](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.13...@gemunion/mui-inputs-image-firebase@0.0.14) (2020-10-30)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
+
+
+
+
+
+## [0.0.13](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.12...@gemunion/mui-inputs-image-firebase@0.0.13) (2020-10-28)
 
 
 ### Bug Fixes
@@ -2007,15 +2081,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.12](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.11...@gemunion/material-ui-inputs-image-firebase@0.0.12) (2020-10-28)
+## [0.0.12](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.11...@gemunion/mui-inputs-image-firebase@0.0.12) (2020-10-28)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
-
-
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
-## [0.0.11](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.10...@gemunion/material-ui-inputs-image-firebase@0.0.11) (2020-10-28)
+
+
+## [0.0.11](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.10...@gemunion/mui-inputs-image-firebase@0.0.11) (2020-10-28)
 
 
 ### Bug Fixes
@@ -2026,7 +2100,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.10](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.9...@gemunion/material-ui-inputs-image-firebase@0.0.10) (2020-10-27)
+## [0.0.10](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.9...@gemunion/mui-inputs-image-firebase@0.0.10) (2020-10-27)
 
 
 ### Bug Fixes
@@ -2037,7 +2111,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.9](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.8...@gemunion/material-ui-inputs-image-firebase@0.0.9) (2020-10-27)
+## [0.0.9](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.8...@gemunion/mui-inputs-image-firebase@0.0.9) (2020-10-27)
 
 
 ### Bug Fixes
@@ -2048,7 +2122,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.8](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.7...@gemunion/material-ui-inputs-image-firebase@0.0.8) (2020-10-26)
+## [0.0.8](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.7...@gemunion/mui-inputs-image-firebase@0.0.8) (2020-10-26)
 
 
 ### Bug Fixes
@@ -2059,7 +2133,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.7](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.6...@gemunion/material-ui-inputs-image-firebase@0.0.7) (2020-10-26)
+## [0.0.7](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.6...@gemunion/mui-inputs-image-firebase@0.0.7) (2020-10-26)
 
 
 ### Bug Fixes
@@ -2070,7 +2144,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.6](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.3...@gemunion/material-ui-inputs-image-firebase@0.0.6) (2020-10-26)
+## [0.0.6](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.3...@gemunion/mui-inputs-image-firebase@0.0.6) (2020-10-26)
 
 
 ### Bug Fixes
@@ -2083,9 +2157,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.3](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-inputs-image-firebase@0.0.2...@gemunion/material-ui-inputs-image-firebase@0.0.3) (2020-10-23)
+## [0.0.3](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-inputs-image-firebase@0.0.2...@gemunion/mui-inputs-image-firebase@0.0.3) (2020-10-23)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 
@@ -2093,7 +2167,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.2 (2020-10-23)
 
-**Note:** Version bump only for package @gemunion/material-ui-inputs-image-firebase
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
 
 
 

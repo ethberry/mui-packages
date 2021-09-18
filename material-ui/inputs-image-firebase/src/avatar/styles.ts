@@ -1,14 +1,15 @@
-import { makeStyles } from "@material-ui/core";
+import { Theme } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
 
-export default makeStyles(
-  () => ({
+export const useStyles = makeStyles<Theme>(
+  theme => ({
     root: {
-      height: 200 + 12,
+      height: 150 + 12,
       width: 200,
       position: "relative",
     },
-    label: {
-      position: "relative",
+    container: {
+      marginTop: theme.spacing(1),
     },
     button: {
       position: "absolute",
@@ -16,7 +17,7 @@ export default makeStyles(
       right: 0,
     },
     image: {
-      height: 200 + 12,
+      height: 150 + 12,
       width: 200,
       borderRadius: "50%",
       borderColor: "#fff",
@@ -26,11 +27,6 @@ export default makeStyles(
       backgroundSize: "contain",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
-    },
-    input: {
-      height: 200,
-      width: 200,
-      opacity: 0.4,
     },
   }),
   { name: "AvatarInput" },

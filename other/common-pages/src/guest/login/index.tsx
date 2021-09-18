@@ -1,16 +1,16 @@
-import React, { FC, useContext, useEffect } from "react";
+import { FC, useContext, useEffect } from "react";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 
-import { PasswordInput, TextInput } from "@gemunion/material-ui-inputs-core";
-import { PageHeader } from "@gemunion/material-ui-page-header";
-import { FormikForm } from "@gemunion/material-ui-form";
+import { PasswordInput, TextInput } from "@gemunion/mui-inputs-core";
+import { PageHeader } from "@gemunion/mui-page-header";
+import { FormikForm } from "@gemunion/mui-form";
 import { ApiContext, IJwt } from "@gemunion/provider-api";
 import { UserContext } from "@gemunion/provider-user";
 
 import { validationSchema } from "./validation";
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 import { LoginButtons } from "./buttons";
 
 interface ILoginDto {
@@ -38,6 +38,7 @@ export const Login: FC = () => {
         return user.sync("/dashboard");
       })
       .catch(e => {
+        api.setToken(null);
         if (e.status) {
           // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });

@@ -1,21 +1,23 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { getIn, useFormikContext } from "formik";
-import { FormControl, FormHelperText, IconButton, InputLabel, Tooltip } from "@material-ui/core";
-import { Delete } from "@material-ui/icons";
+import { FormControl, FormHelperText, Grid, IconButton, InputLabel, Tooltip } from "@mui/material";
+import { Delete } from "@mui/icons-material";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { FirebaseFileInput } from "@gemunion/material-ui-inputs-file-firebase";
+import { FirebaseFileInput } from "@gemunion/mui-inputs-file-firebase";
 
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 import { useDeleteUrl } from "../utils";
 
 export interface IAvatarInputProps {
   name: string;
   label?: string;
+  bucket?: string;
+  accept?: string | string[];
 }
 
 export const AvatarInput: FC<IAvatarInputProps> = props => {
-  const { label, name } = props;
+  const { name, label, bucket, accept } = props;
 
   const formik = useFormikContext<any>();
   const error = getIn(formik.errors, name);
@@ -24,7 +26,7 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
 
   const classes = useStyles();
   const { formatMessage } = useIntl();
-  const deleteUrl = useDeleteUrl();
+  const deleteUrl = useDeleteUrl(bucket);
   const suffix = name.split(".").pop() as string;
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
   const localizedHelperText = error ? formatMessage({ id: error }, { label: localizedLabel }) : "";
@@ -64,12 +66,16 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
       <InputLabel id={`${name}-select-label`} shrink className={classes.label}>
         <FormattedMessage id={`form.labels.${name}`} />
       </InputLabel>
-      <FirebaseFileInput onChange={onChange} classes={{ root: classes.input }} />
-      {touched && error && (
-        <FormHelperText id={`${name}-helper-text`} error>
-          {localizedHelperText}
-        </FormHelperText>
-      )}
+      <Grid container className={classes.container}>
+        <Grid item>
+          <FirebaseFileInput onChange={onChange} bucket={bucket} accept={accept} />
+          {touched && error && (
+            <FormHelperText id={`${name}-helper-text`} error>
+              {localizedHelperText}
+            </FormHelperText>
+          )}
+        </Grid>
+      </Grid>
     </FormControl>
   );
 };

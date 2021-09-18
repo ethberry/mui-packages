@@ -1,8 +1,8 @@
-import React, { ChangeEvent, FC } from "react";
+import { FC } from "react";
 import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
+import { FormControlLabel, Slider, SliderProps } from "@mui/material";
 
-import { FormControlLabel, Slider, SliderProps } from "@material-ui/core";
 import { useStyles } from "./styles";
 
 export interface ISliderInputProps extends SliderProps {
@@ -31,7 +31,7 @@ export const SliderInput: FC<ISliderInputProps> = props => {
           name={name}
           value={value}
           classes={{ root: classes.slider }}
-          onChange={(_event: ChangeEvent<unknown>, value): void => {
+          onChange={(_event, value): void => {
             formik.setFieldValue(name, value);
           }}
           onBlur={formik.handleBlur}

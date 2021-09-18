@@ -1,9 +1,9 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { useFormikContext } from "formik";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 
-import { ButtonToolbar } from "@gemunion/material-ui-toolbar";
+import { ButtonToolbar } from "@gemunion/mui-toolbar";
 
 interface IFormButtonsProps {
   visible?: boolean;

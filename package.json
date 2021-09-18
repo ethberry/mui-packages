@@ -9,6 +9,7 @@
     "react-scripts": "4.0.3"
   },
   "devDependencies": {
+    "@emotion/react": "11.4.1",
     "@gemunion/eslint-config": "0.1.10",
     "@storybook/addon-actions": "6.3.8",
     "@storybook/addon-essentials": "6.3.8",
@@ -34,6 +35,7 @@
     "husky": "4.3.8",
     "lint-staged": "11.1.2",
     "prettier": "2.4.1",
+    "react-dom": "17.0.2",
     "rimraf": "3.0.2",
     "typescript": "4.4.3"
   },
@@ -41,10 +43,10 @@
     "node": ">=12.13"
   },
   "license": "UNLICENSED",
-  "name": "@gemunion/material-ui-packages",
+  "name": "@gemunion/mui-packages",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gemunion/material-ui-packages"
+    "url": "https://github.com/gemunion/mui-packages"
   },
   "scripts": {
     "bootstrap": "lerna bootstrap --hoist",
@@ -53,7 +55,7 @@
     "kill": "sudo pkill -9 node",
     "lint": "lerna run lint --stream --parallel",
     "precommit": "lint-staged",
-    "prettier": "prettier \"other/**/*.{ts,tsx}\" \"nest-js/**/*.{ts,tsx}\" \"nest-js-modules/**/*.{ts,tsx}\" \"material-ui/**/*.{ts,tsx}\" \"types/**/*.{ts,tsx}\" --write",
+    "prettier": "prettier \"other/**/*.{ts,tsx}\" \"material-ui/**/*.{ts,tsx}\" --write",
     "registry": "lerna publish",
     "release": "npm run release:version && npm run release:publish",
     "release:publish": "lerna publish from-package --yes --exact --ignore-scripts --registry=https://npm.pkg.github.com/",

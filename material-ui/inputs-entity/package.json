@@ -5,21 +5,21 @@
     "url": "https://trejgun.github.io/"
   },
   "bugs": {
-    "url": "https://github.com/gemunion/material-ui-packages/issues"
+    "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/material-ui-progress": "0.1.16",
+    "@gemunion/mui-progress": "2.0.6",
     "@gemunion/provider-api": "4.0.6"
   },
   "description": "react widget",
   "devDependencies": {
-    "@material-ui/core": "4.12.3",
-    "@material-ui/icons": "4.11.2",
-    "@material-ui/lab": "4.0.0-alpha.60",
-    "@material-ui/styles": "4.11.4",
+    "@mui/material": "5.0.0",
+    "@mui/icons-material": "5.0.0",
+    "@mui/lab": "5.0.0-alpha.47",
+    "@mui/styles": "5.0.0",
     "@types/react": "17.0.21",
     "formik": "2.2.9",
-    "notistack": "1.0.6",
+    "notistack": "1.0.6-next.3",
     "react": "17.0.2",
     "react-intl": "5.20.10"
   },
@@ -29,14 +29,14 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/material-ui-inputs-entity",
+  "name": "@gemunion/mui-inputs-entity",
   "peerDependencies": {
-    "@material-ui/core": "4",
-    "@material-ui/icons": "4",
-    "@material-ui/lab": "^4",
-    "@material-ui/styles": "^4",
+    "@mui/material": "^5",
+    "@mui/icons-material": "^5",
+    "@mui/lab": "^5",
+    "@mui/styles": "^5",
     "formik": "^2",
-    "notistack": "^1",
+    "notistack": "^2",
     "react": "^17",
     "react-intl": "^5"
   },
@@ -45,7 +45,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gemunion/material-ui-packages"
+    "url": "https://github.com/gemunion/mui-packages"
   },
   "scripts": {
     "build": "tsc",
@@ -58,5 +58,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "0.1.29"
+  "version": "2.0.7"
 }

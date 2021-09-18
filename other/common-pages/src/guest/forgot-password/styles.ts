@@ -1,15 +1,15 @@
-import { createStyles, makeStyles } from "@material-ui/core";
+import { Theme } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
 
-export default makeStyles(
-  () =>
-    createStyles({
-      section: {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        maxWidth: 500,
-        margin: "0 auto",
-      },
-    }),
+export const useStyles = makeStyles<Theme>(
+  () => ({
+    section: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      maxWidth: 500,
+      margin: "0 auto",
+    },
+  }),
   { name: "ForgotPassword" },
 );

@@ -1,8 +1,8 @@
-import React, { FC, useRef, useState } from "react";
+import { FC, useRef, useState } from "react";
 
-import { ConfirmationDialog } from "@gemunion/material-ui-dialog-confirmation";
-import { ProgressOverlay } from "@gemunion/material-ui-progress";
-import { FormikForm } from "@gemunion/material-ui-form";
+import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
+import { ProgressOverlay } from "@gemunion/mui-progress";
+import { FormikForm } from "@gemunion/mui-form";
 
 export interface IFormikFormProps<T> {
   showButtons?: boolean;

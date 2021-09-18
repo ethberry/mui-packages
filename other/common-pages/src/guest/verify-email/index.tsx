@@ -1,14 +1,14 @@
-import React, { FC, useContext, useEffect } from "react";
+import { FC, useContext, useEffect } from "react";
 import { useHistory, useParams } from "react-router";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 
-import { ProgressOverlay } from "@gemunion/material-ui-progress";
+import { ProgressOverlay } from "@gemunion/mui-progress";
 import { UserContext } from "@gemunion/provider-user";
 import { ApiContext } from "@gemunion/provider-api";
 
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 export const VerifyEmail: FC = () => {
   const classes = useStyles();

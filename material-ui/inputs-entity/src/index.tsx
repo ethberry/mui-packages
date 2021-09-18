@@ -1,12 +1,12 @@
-import React, { ChangeEvent, FC, ReactElement, useContext, useEffect, useState } from "react";
+import { ChangeEvent, FC, ReactElement, useContext, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import { useSnackbar } from "notistack";
 import { getIn, useFormikContext } from "formik";
-import { TextField } from "@material-ui/core";
-import { Autocomplete, AutocompleteRenderInputParams } from "@material-ui/lab";
+import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/material";
 
-import { ProgressOverlay } from "@gemunion/material-ui-progress";
+import { ProgressOverlay } from "@gemunion/mui-progress";
 import { ApiContext } from "@gemunion/provider-api";
+import { useStyles } from "./styles";
 
 export interface IAutocompleteOption {
   id: string | number;
@@ -26,6 +26,7 @@ export interface IEntityInputProps {
 export const EntityInput: FC<IEntityInputProps> = props => {
   const { name, controller, getTitle, multiple, data, onChange } = props;
   const suffix = name.split(".").pop() as string;
+  const classes = useStyles();
 
   const formik = useFormikContext<any>();
   const error = getIn(formik.errors, name);
@@ -70,6 +71,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
     return (
       <ProgressOverlay isLoading={isLoading}>
         <Autocomplete
+          classes={classes}
           multiple={true}
           options={options}
           // preserve order
@@ -102,6 +104,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
     return (
       <ProgressOverlay isLoading={isLoading}>
         <Autocomplete
+          classes={classes}
           multiple={false}
           options={options}
           value={options.find((option: IAutocompleteOption) => value === option.id) || null}

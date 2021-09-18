@@ -5,10 +5,10 @@
     "url": "https://trejgun.github.io/"
   },
   "bugs": {
-    "url": "https://github.com/gemunion/material-ui-packages/issues"
+    "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/material-ui-inputs-file": "0.1.21",
+    "@gemunion/mui-inputs-file": "2.0.7",
     "@gemunion/provider-api": "4.0.6",
     "react-s3-uploader": "5.0.0"
   },
@@ -22,7 +22,7 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/material-ui-inputs-file-s3",
+  "name": "@gemunion/mui-inputs-file-s3",
   "peerDependencies": {
     "react": "^17"
   },
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gemunion/material-ui-packages"
+    "url": "https://github.com/gemunion/mui-packages"
   },
   "scripts": {
     "build": "tsc",
@@ -44,5 +44,5 @@
   "sideEffects": false,
   "title": "-=TrejGun=-",
   "types": "./dist/index.d.ts",
-  "version": "0.2.24"
+  "version": "2.0.9"
 }

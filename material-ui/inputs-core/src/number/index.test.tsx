@@ -1,7 +1,6 @@
-import React from "react";
 import { IntlProvider } from "react-intl";
-import { render, cleanup } from "@testing-library/react";
-import { MuiThemeProvider, createTheme } from "@material-ui/core";
+import { cleanup, render } from "@testing-library/react";
+import { createTheme, ThemeProvider } from "@mui/material";
 import { Formik } from "formik";
 
 import { NumberInput } from "./index";
@@ -28,13 +27,13 @@ describe("<NumberInput />", () => {
     };
 
     const { asFragment } = render(
-      <MuiThemeProvider theme={createTheme()}>
+      <ThemeProvider theme={createTheme()}>
         <IntlProvider locale="en" messages={i18n}>
           <Formik {...formikProps}>
             <NumberInput {...props} />
           </Formik>
         </IntlProvider>
-      </MuiThemeProvider>,
+      </ThemeProvider>,
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -54,13 +53,13 @@ describe("<NumberInput />", () => {
     };
 
     const { asFragment } = render(
-      <MuiThemeProvider theme={createTheme()}>
+      <ThemeProvider theme={createTheme()}>
         <IntlProvider locale="en" messages={i18n}>
           <Formik {...formikProps}>
             <NumberInput {...props} />
           </Formik>
         </IntlProvider>
-      </MuiThemeProvider>,
+      </ThemeProvider>,
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -80,13 +79,13 @@ describe("<NumberInput />", () => {
     };
 
     const { asFragment } = render(
-      <MuiThemeProvider theme={createTheme()}>
+      <ThemeProvider theme={createTheme()}>
         <IntlProvider locale="en" messages={i18n}>
           <Formik {...formikProps}>
             <NumberInput {...props} />
           </Formik>
         </IntlProvider>
-      </MuiThemeProvider>,
+      </ThemeProvider>,
     );
 
     expect(asFragment()).toMatchSnapshot();

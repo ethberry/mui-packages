@@ -1,26 +1,37 @@
-import React, { FC, Fragment, useState } from "react";
-import { Button, Card, CardActions, FormHelperText, CardContent, CardMedia, Grid, Typography } from "@material-ui/core";
-import { useFormikContext, getIn } from "formik";
+import { FC, useState } from "react";
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  FormControl,
+  FormHelperText,
+  Grid,
+  InputLabel,
+} from "@mui/material";
+import { getIn, useFormikContext } from "formik";
 import { FormattedMessage, useIntl } from "react-intl";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 
-import { TextInput } from "@gemunion/material-ui-inputs-core";
-import { ProgressOverlay } from "@gemunion/material-ui-progress";
-import { ConfirmationDialog } from "@gemunion/material-ui-dialog-confirmation";
-import { S3FileInput } from "@gemunion/material-ui-inputs-file-s3";
+import { TextInput } from "@gemunion/mui-inputs-core";
+import { ProgressOverlay } from "@gemunion/mui-progress";
+import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
+import { S3FileInput } from "@gemunion/mui-inputs-file-s3";
 import { openUrlOnClick } from "@gemunion/popup";
 
 import { useStyles } from "./styles";
 import { useDeleteUrl } from "../utils";
 
-interface IPhotoInputProps {
+export interface IPhotoInputProps {
   name: string;
   label?: string;
+  bucket?: string;
   accept?: string | string[];
 }
 
 export const PhotoInput: FC<IPhotoInputProps> = props => {
-  const { name, label, accept } = props;
+  const { name, label, bucket, accept } = props;
 
   const formik = useFormikContext<any>();
   const error = getIn(formik.errors, name);
@@ -29,7 +40,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
 
   const classes = useStyles();
   const { formatMessage } = useIntl();
-  const deleteUrl = useDeleteUrl();
+  const deleteUrl = useDeleteUrl(bucket);
   const [isLoading, setIsLoading] = useState(false);
   const [isDeleteImageDialogOpen, setIsDeleteImageDialogOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -86,30 +97,29 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
   };
 
   return (
-    <Fragment>
-      <Typography>
+    <FormControl fullWidth className={classes.root}>
+      <InputLabel id={`form.labels.${name}`} shrink className={classes.label}>
         <FormattedMessage id={`form.labels.${name}`} />
-      </Typography>
+      </InputLabel>
 
       <DragDropContext onDragEnd={handleDragEnd}>
         <Droppable droppableId="droppable" direction="horizontal">
           {provided => (
             <Grid
               container
-              spacing={2}
               direction="row"
               justifyContent="flex-start"
               alignItems="flex-start"
-              className={classes.images}
+              className={classes.container}
               ref={provided.innerRef}
               {...provided.droppableProps}
             >
               <Grid item>
                 <ProgressOverlay isLoading={isLoading}>
                   <S3FileInput
-                    onProgress={() => {}}
                     onChange={handleFileChange}
                     classes={{ root: classes.media }}
+                    bucket={bucket}
                     accept={accept}
                   />
                 </ProgressOverlay>
@@ -152,6 +162,6 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
       <ConfirmationDialog open={isDeleteImageDialogOpen} onCancel={handleDeleteCancel} onConfirm={handleDeleteConfirm}>
         <FormattedMessage id="dialogs.delete" values={value[selectedImageIndex]} />
       </ConfirmationDialog>
-    </Fragment>
+    </FormControl>
   );
 };

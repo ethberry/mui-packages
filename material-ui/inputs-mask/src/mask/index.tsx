@@ -1,8 +1,8 @@
-import React, { FC, useRef } from "react";
-import { TextFieldProps } from "@material-ui/core";
+import { FC, useRef } from "react";
+import { TextFieldProps } from "@mui/material";
 import { getIn, useFormikContext } from "formik";
 
-import { TextInput } from "@gemunion/material-ui-inputs-core";
+import { TextInput } from "@gemunion/mui-inputs-core";
 
 import { MaskedInputWrapper } from "./wrapper";
 

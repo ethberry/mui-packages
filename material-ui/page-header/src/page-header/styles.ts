@@ -1,6 +1,7 @@
-import { makeStyles } from "@material-ui/core";
+import { Theme } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
 
-export default makeStyles(
+export const useStyles = makeStyles<Theme>(
   theme => ({
     header: {
       marginBottom: theme.spacing(3),

@@ -1,6 +1,7 @@
-import { makeStyles } from "@material-ui/core";
+import { Theme } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
 
-export const useStyles = makeStyles(
+export const useStyles = makeStyles<Theme>(
   theme => ({
     root: {
       padding: "2px 4px",
@@ -19,5 +20,5 @@ export const useStyles = makeStyles(
       margin: 4,
     },
   }),
-  { name: "Search" },
+  { name: "SearchInput" },
 );

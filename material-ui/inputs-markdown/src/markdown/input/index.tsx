@@ -1,34 +1,14 @@
-import React, { FC, Ref, useCallback, useEffect, useImperativeHandle, useRef } from "react";
-import { InputBaseComponentProps } from "@material-ui/core";
+import { forwardRef } from "react";
+import { InputBaseComponentProps } from "@mui/material/InputBase";
 import { EditorState } from "draft-js";
-import { RichTextEditor, IRichTextEditorRef } from "@gemunion/mui-rte";
+import { IRichTextEditorRef, RichTextEditor, TToolbarControl } from "@gemunion/mui-rte";
 
 export interface IRichTextInputProps extends Omit<InputBaseComponentProps, "value"> {
-  inputRef?: Ref<unknown>;
-  isFocused?: boolean;
+  doFocus?: boolean;
   onStateChange?: (state: EditorState) => void;
+  controls?: Array<TToolbarControl>;
 }
 
-export const RichTextInput: FC<IRichTextInputProps> = props => {
-  const { inputRef, onStateChange, isFocused, ...rest } = props;
-
-  // Setup ref for the rich text editor
-  const richTextRef = useRef<IRichTextEditorRef>(null);
-
-  // Attempts to focus the rich text editor reference
-  const focusRichText = useCallback(() => {
-    richTextRef.current?.focus();
-  }, [richTextRef]);
-
-  // Pass on the focus event of the input ref to the rich text ref
-  useImperativeHandle(inputRef, () => ({ focus: () => focusRichText }));
-
-  // If the `isFocused` is changed and its value is `true`, focus the editor
-  useEffect(() => {
-    if (isFocused) {
-      focusRichText();
-    }
-  }, [isFocused, focusRichText]);
-
-  return <RichTextEditor {...rest} onChange={onStateChange} />;
-};
+export const RichTextInput = forwardRef<IRichTextEditorRef, IRichTextInputProps>((props, ref) => {
+  return <RichTextEditor controls={props.controls} onChange={props.onStateChange} ref={ref} />;
+});

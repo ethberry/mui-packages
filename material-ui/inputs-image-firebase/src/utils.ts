@@ -1,17 +1,18 @@
-import firebase from "@gemunion/firebase";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
+import { getStorage, ref, deleteObject } from "firebase/storage";
 
-export const useDeleteUrl = (): ((url: string) => Promise<void>) => {
-  const storageRef = firebase.storage().ref();
+import app from "@gemunion/firebase";
 
+export const useDeleteUrl = (bucket?: string): ((url: string) => Promise<void>) => {
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
+  const storage = getStorage(app, bucket);
+
   return async (url: string): Promise<void> => {
-    await storageRef
-      .child(url)
-      .delete()
+    const storageRef = ref(storage, url);
+    await deleteObject(storageRef)
       .then(message => {
         console.info("message", message);
         enqueueSnackbar(formatMessage({ id: "snackbar.deleted" }), { variant: "success" });

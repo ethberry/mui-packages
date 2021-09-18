@@ -3,20 +3,20 @@
 exports[`<NumberInput /> renders decimal value 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+    class="MuiFormControl-root MuiFormControl-fullWidth NumberInput-root-5 MuiTextField-root css-nlu209-MuiFormControl-root-MuiTextField-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled css-1jxvthj-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
     >
       Number
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+      class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ghsjzk-MuiInputBase-root-MuiInput-root"
     >
       <input
         aria-invalid="false"
-        class="MuiInputBase-input MuiInput-input"
+        class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
         name="number"
         placeholder="50"
         type="number"
@@ -30,20 +30,20 @@ exports[`<NumberInput /> renders decimal value 1`] = `
 exports[`<NumberInput /> renders negative value 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+    class="MuiFormControl-root MuiFormControl-fullWidth NumberInput-root-3 MuiTextField-root css-nlu209-MuiFormControl-root-MuiTextField-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled css-1jxvthj-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
     >
       Number
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+      class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ghsjzk-MuiInputBase-root-MuiInput-root"
     >
       <input
         aria-invalid="false"
-        class="MuiInputBase-input MuiInput-input"
+        class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
         name="number"
         placeholder="50"
         type="number"
@@ -57,20 +57,20 @@ exports[`<NumberInput /> renders negative value 1`] = `
 exports[`<NumberInput /> renders positive value 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+    class="MuiFormControl-root MuiFormControl-fullWidth NumberInput-root-1 MuiTextField-root css-nlu209-MuiFormControl-root-MuiTextField-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled css-1jxvthj-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
     >
       Number
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+      class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ghsjzk-MuiInputBase-root-MuiInput-root"
     >
       <input
         aria-invalid="false"
-        class="MuiInputBase-input MuiInput-input"
+        class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
         name="number"
         placeholder="50"
         type="number"

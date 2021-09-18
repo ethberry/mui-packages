@@ -1,19 +1,19 @@
-import React, { FC, useContext, useEffect } from "react";
+import { FC, useContext, useEffect } from "react";
 import { useSnackbar } from "notistack";
 import { FormattedMessage, useIntl } from "react-intl";
-import { Button, Grid } from "@material-ui/core";
-import { Facebook, GooglePlus } from "@gemunion/material-ui-icons-social-networks";
+import { Button, Grid } from "@mui/material";
+import { Facebook, GooglePlus } from "@gemunion/mui-icons-social-networks";
 
-import { PasswordInput, TextInput } from "@gemunion/material-ui-inputs-core";
-import { PageHeader } from "@gemunion/material-ui-page-header";
-import { FormikForm } from "@gemunion/material-ui-form";
+import { PasswordInput, TextInput } from "@gemunion/mui-inputs-core";
+import { PageHeader } from "@gemunion/mui-page-header";
+import { FormikForm } from "@gemunion/mui-form";
 import { ApiContext, IJwt } from "@gemunion/provider-api";
 import { UserContext } from "@gemunion/provider-user";
-import { ButtonToolbar } from "@gemunion/material-ui-toolbar";
+import { ButtonToolbar } from "@gemunion/mui-toolbar";
 import { openUrlOnClick } from "@gemunion/popup";
 
 import { validationSchema } from "./validation";
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 import { LoginButtons } from "./buttons";
 
@@ -42,6 +42,7 @@ export const SocialLogin: FC = () => {
         return user.sync("/dashboard");
       })
       .catch(e => {
+        api.setToken(null);
         if (e.status) {
           // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });

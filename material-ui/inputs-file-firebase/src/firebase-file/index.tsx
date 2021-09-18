@@ -1,19 +1,28 @@
-import React, { FC } from "react";
-import firebase from "@gemunion/firebase";
+import { FC } from "react";
+import { getStorage, ref, getDownloadURL, uploadBytes } from "firebase/storage";
+import { v4 } from "uuid";
 
-import { FileInput, IFileInputProps } from "@gemunion/material-ui-inputs-file";
+import app from "@gemunion/firebase";
+
+import { FileInput, IFileInputProps } from "@gemunion/mui-inputs-file";
 
 export interface IFirebaseFileInputProps extends Omit<IFileInputProps, "onChange"> {
+  bucket?: string;
   onChange: (urls: Array<string>) => void;
 }
 
 export const FirebaseFileInput: FC<IFirebaseFileInputProps> = props => {
-  const { onChange, ...rest } = props;
+  const { onChange, bucket, ...rest } = props;
 
   const handleChange = async (files: File[]): Promise<void> => {
-    const storageRef = firebase.storage().ref();
-    const snapshots = await Promise.all(files.map(file => storageRef.child(`${Date.now()}-${file.name}`).put(file)));
-    const urls = await Promise.all(snapshots.map(snapshot => snapshot.ref.getDownloadURL()));
+    const storage = getStorage(app, bucket);
+    const urls = await Promise.all(
+      files.map(async file => {
+        const storageRef = ref(storage, v4());
+        const snapshot = await uploadBytes(storageRef, file);
+        return getDownloadURL(snapshot.ref);
+      }),
+    );
     onChange(urls);
   };
 

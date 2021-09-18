@@ -1,8 +1,9 @@
-import { makeStyles } from "@material-ui/core";
+import { Theme } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
 
-export const useStyles = makeStyles(
+export const useStyles = makeStyles<Theme>(
   theme => ({
-    images: {
+    container: {
       marginTop: theme.spacing(1),
     },
     media: {

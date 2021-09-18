@@ -1,9 +1,9 @@
-import React, { FC, useCallback, useContext } from "react";
+import { FC, useCallback, useContext } from "react";
 import "react-s3-uploader"; // this is required for types
 import S3Upload from "react-s3-uploader/s3upload";
 import { ApiContext, IApiContext, IJwt } from "@gemunion/provider-api";
 
-import { FileInput, IFileInputProps } from "@gemunion/material-ui-inputs-file";
+import { FileInput, IFileInputProps } from "@gemunion/mui-inputs-file";
 
 export interface IS3Result {
   signedUrl: string;
@@ -21,7 +21,7 @@ interface IS3FileInputProps extends Omit<IFileInputProps, "onChange"> {
 export const S3FileInput: FC<IS3FileInputProps> = props => {
   const { bucket = process.env.AWS_S3_BUCKET, onChange, onError, onProgress, validate, ...rest } = props;
 
-  const { baseUrl = `https://${bucket}.s3-${process.env.AWS_REGION}.amazonaws.com` } = props;
+  const { baseUrl = `https://${bucket}.s3.${process.env.AWS_REGION}.amazonaws.com` } = props;
 
   const api = useContext<IApiContext<IJwt>>(ApiContext);
 

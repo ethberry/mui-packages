@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { MaskedEnum } from "imask";
 
 import { MaskedInput } from "../mask";

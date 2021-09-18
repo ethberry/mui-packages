@@ -1,13 +1,13 @@
-import React, { FC, useCallback } from "react";
+import { FC, useCallback } from "react";
 import clsx from "clsx";
 import { useDropzone, FileRejection, DropzoneOptions } from "react-dropzone";
-import { CloudUpload, CloudUploadOutlined, CloudOff } from "@material-ui/icons";
+import { CloudUpload, CloudUploadOutlined, CloudOff } from "@mui/icons-material";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
 import { ACCEPTED_FORMATS, MAX_FILE_SIZE } from "./constants";
 import { humanFileSize } from "./utils";
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 export interface IFileInputProps extends DropzoneOptions {
   classes?: {
@@ -70,14 +70,14 @@ export const FileInput: FC<IFileInputProps> = props => {
 
   if (disabled) {
     return (
-      <div className={clsx(classes.placeholder, props.classes?.root)}>
+      <div className={clsx(classes.placeholder, classes.root, props.classes?.root)}>
         <CloudOff className={clsx(classes.icon, props.classes?.disabled)} />
       </div>
     );
   }
 
   return (
-    <div {...getRootProps()} className={clsx(classes.placeholder, props.classes?.root)}>
+    <div {...getRootProps()} className={clsx(classes.placeholder, classes.root, props.classes?.root)}>
       <input {...getInputProps()} />
       {isDragActive ? (
         <CloudUploadOutlined className={clsx(classes.icon, props.classes?.active)} />

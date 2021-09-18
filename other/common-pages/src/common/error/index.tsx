@@ -1,9 +1,9 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { FormattedMessage } from "react-intl";
-import { Alert } from "@material-ui/lab";
+import { Alert } from "@mui/lab";
 import { useParams } from "react-router";
 
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 export const Error: FC = () => {
   const classes = useStyles();

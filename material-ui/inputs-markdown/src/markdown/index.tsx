@@ -1,5 +1,5 @@
-import React, { FC, useState } from "react";
-import { TextField, TextFieldProps } from "@material-ui/core";
+import { FC, useState } from "react";
+import { TextField, TextFieldProps } from "@mui/material";
 import { convertToRaw, EditorState } from "draft-js";
 import { getIn, useFormikContext } from "formik";
 import { TToolbarControl } from "@gemunion/mui-rte";

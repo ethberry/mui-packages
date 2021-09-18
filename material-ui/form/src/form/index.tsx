@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 
 import { Form, Formik, FormikConfig } from "formik";
 import { PromptIfDirty } from "../prompt";

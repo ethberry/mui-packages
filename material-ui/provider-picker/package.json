@@ -5,12 +5,12 @@
     "url": "https://trejgun.github.io/"
   },
   "bugs": {
-    "url": "https://github.com/gemunion/material-ui-packages/issues"
+    "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "description": "Material UI theme provider",
   "devDependencies": {
-    "@material-ui/core": "4.12.3",
-    "@material-ui/pickers": "4.0.0-alpha.12",
+    "@mui/material": "5.0.0",
+    "@mui/lab": "5.0.0-alpha.47",
     "react": "17.0.2"
   },
   "engines": {
@@ -19,10 +19,10 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/material-ui-provider-picker",
+  "name": "@gemunion/mui-provider-picker",
   "peerDependencies": {
-    "@material-ui/core": "^4",
-    "@material-ui/pickers": "^4",
+    "@mui/material": "^5",
+    "@mui/lab": "^5",
     "react": "^17"
   },
   "publishConfig": {
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gemunion/material-ui-packages"
+    "url": "https://github.com/gemunion/mui-packages"
   },
   "scripts": {
     "build": "tsc",
@@ -43,5 +43,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "0.1.17"
+  "version": "2.0.5"
 }

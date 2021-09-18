@@ -5,14 +5,14 @@ This is free to use set of google style flat icons wrapped in Material UI lib
 ## Installation
 
 ```bash
-npm install @gemunion/material-ui-icons-google
+npm install @gemunion/mui-icons-google
 ```
 
 ## Usage
 
 ```typescript
-import React, { FC } from "react";
-import {Grid, Button, makeStyles} from "@material-ui/core";
+import { FC } from "react";
+import {Grid, Button, makeStyles} from "@mui/material";
 
 import {
   Account,
@@ -31,7 +31,7 @@ import {
   Slides,
   Translate,
   Youtube,
-} from "@gemunion/material-ui-icons-google";
+} from "@gemunion/mui-icons-google";
 
 
 const useStyles = makeStyles(

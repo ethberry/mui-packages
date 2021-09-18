@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { Formik } from "formik";
 import { Story } from "@storybook/react";
@@ -7,6 +7,7 @@ import { StaticInput, IStaticInputProps } from "./index";
 
 const i18n = {
   "form.labels.static": "Static",
+  "form.placeholders.static": "Static",
 };
 
 export default {

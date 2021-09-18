@@ -1,8 +1,8 @@
-import React, { FC } from "react";
+import { FC } from "react";
 
 import { Spinner } from "../spinner";
 
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 export interface IProgressOverlayProps {
   isLoading: boolean;

@@ -1,11 +1,7 @@
-name: CI Test
+name: CI Test on Push
 
 on:
   push:
-    branches:
-      - master
-      - mui5
-  pull_request:
     branches:
       - master
       - mui5
@@ -15,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [16.x ]
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -25,7 +21,7 @@ jobs:
         name: Use Node.js ${{ matrix.node-version }}
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Add token to npmrc
+      - name: Add @scope & token to npmrc
         run: |
           echo "//npm.pkg.github.com/:_authToken=$GITHUBTOKEN" >> .npmrc
         env:

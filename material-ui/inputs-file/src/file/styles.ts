@@ -1,7 +1,11 @@
-import { makeStyles } from "@material-ui/core";
+import { Theme } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
 
-export default makeStyles(
-  () => ({
+export const useStyles = makeStyles<Theme>(
+  theme => ({
+    root: {
+      margin: theme.spacing(1),
+    },
     placeholder: {
       width: 200,
       height: 150,
@@ -10,8 +14,8 @@ export default makeStyles(
       justifyContent: "center",
     },
     icon: {
-      width: "100%",
-      height: "100%",
+      width: "100% !important",
+      height: "100% !important",
       border: "#D7D7D7 3px dashed",
       color: "#D7D7D7",
     },

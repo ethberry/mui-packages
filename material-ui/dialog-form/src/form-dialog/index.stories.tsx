@@ -1,10 +1,10 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { Story } from "@storybook/react";
 import { Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
 
-import { TextInput } from "@gemunion/material-ui-inputs-core";
+import { TextInput } from "@gemunion/mui-inputs-core";
 
 import { FormDialog, IFormikFormProps } from "./index";
 

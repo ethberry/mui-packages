@@ -1,17 +1,17 @@
-import React, { FC, useContext, useEffect } from "react";
-import { Grid } from "@material-ui/core";
+import { FC, useContext, useEffect } from "react";
+import { Grid } from "@mui/material";
 import { useHistory } from "react-router";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
-import { PasswordInput, TextInput } from "@gemunion/material-ui-inputs-core";
+import { PasswordInput, TextInput } from "@gemunion/mui-inputs-core";
 import { UserContext } from "@gemunion/provider-user";
-import { Captcha } from "@gemunion/material-ui-inputs-captcha";
-import { PageHeader } from "@gemunion/material-ui-page-header";
-import { FormikForm } from "@gemunion/material-ui-form";
+import { Captcha } from "@gemunion/mui-inputs-captcha";
+import { PageHeader } from "@gemunion/mui-page-header";
+import { FormikForm } from "@gemunion/mui-form";
 import { ApiContext, IJwt, localizeErrors } from "@gemunion/provider-api";
 
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 import { validationSchema } from "./validation";
 import { emptyUser } from "./utils";
 

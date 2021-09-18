@@ -1,7 +1,6 @@
-import React from "react";
 import { IntlProvider } from "react-intl";
-import { render, cleanup } from "@testing-library/react";
-import { MuiThemeProvider, createTheme } from "@material-ui/core";
+import { cleanup, render } from "@testing-library/react";
+import { createTheme, ThemeProvider } from "@mui/material";
 
 import { PageHeader } from "./index";
 
@@ -14,11 +13,11 @@ const i18n = {
 describe("<PageHeader />", () => {
   it("renders component", () => {
     const { asFragment } = render(
-      <MuiThemeProvider theme={createTheme()}>
+      <ThemeProvider theme={createTheme()}>
         <IntlProvider locale="en" messages={i18n}>
           <PageHeader message="pages.test.title" />
         </IntlProvider>
-      </MuiThemeProvider>,
+      </ThemeProvider>,
     );
 
     expect(asFragment()).toMatchSnapshot();

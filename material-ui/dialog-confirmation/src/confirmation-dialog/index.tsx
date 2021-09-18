@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { FormattedMessage } from "react-intl";
 import {
   Button,
@@ -8,7 +8,7 @@ import {
   DialogContentText,
   DialogProps,
   DialogTitle,
-} from "@material-ui/core";
+} from "@mui/material";
 
 export interface IConfirmationDialogProps extends DialogProps {
   onCancel: () => void;
