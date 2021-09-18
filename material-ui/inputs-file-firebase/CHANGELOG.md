@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2021-09-18)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([c013d14](https://github.com/gemunion/mui-packages/commit/c013d14692da60ac7fc63ea560f35111a0643a36))
+* **deps:** update all non-major dependencies ([be30b79](https://github.com/gemunion/mui-packages/commit/be30b79bf815c8917a3eb187be21e788ecedca9f))
+* **deps:** update all non-major dependencies ([#83](https://github.com/gemunion/mui-packages/issues/83)) ([4d2742b](https://github.com/gemunion/mui-packages/commit/4d2742b418bb5fedfcb825acd3257e9c5af5b6a4))
+* **deps:** update dependency firebase to v9.0.1 ([c32d877](https://github.com/gemunion/mui-packages/commit/c32d877b4111fbdb09cd8ae5e324527e10fc8c34))
+* move repo to org ([ac9a7e5](https://github.com/gemunion/mui-packages/commit/ac9a7e51e47bf69ef30b19abbc67274405c13200))
+* proper styles for image inputs ([388437f](https://github.com/gemunion/mui-packages/commit/388437f94ed7554e82bfe44b64f888a8ab36c508))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+### Features
+
+* update firebase ([2c7a548](https://github.com/gemunion/mui-packages/commit/2c7a5489e01278b263839a793676da2667893d97))
+
+
+
+
+
 # [2.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-firebase@2.0.7...@gemunion/mui-inputs-file-firebase@2.1.0) (2021-09-07)
 
 

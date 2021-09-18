@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2021-09-18)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([1ca82cc](https://github.com/gemunion/mui-packages/commit/1ca82ccf99f2f5c0c430bb294b272128b303e936))
+* **deps:** update all non-major dependencies ([17134c5](https://github.com/gemunion/mui-packages/commit/17134c5509a87ea00c96807b7ce0ec39dcf85000))
+* move repo to org ([ac9a7e5](https://github.com/gemunion/mui-packages/commit/ac9a7e51e47bf69ef30b19abbc67274405c13200))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+
+
+
 ## 2.0.10 (2021-09-08)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form

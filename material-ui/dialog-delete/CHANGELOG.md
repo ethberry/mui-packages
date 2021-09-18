@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2021-09-18)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([1ca82cc](https://github.com/gemunion/mui-packages/commit/1ca82ccf99f2f5c0c430bb294b272128b303e936))
+* **deps:** update all non-major dependencies ([17134c5](https://github.com/gemunion/mui-packages/commit/17134c5509a87ea00c96807b7ce0ec39dcf85000))
+* **deps:** update all non-major dependencies ([c588d74](https://github.com/gemunion/mui-packages/commit/c588d74d0de68cc8e21ed317da1b73314bcda884))
+* **deps:** update all non-major dependencies ([#83](https://github.com/gemunion/mui-packages/issues/83)) ([4d2742b](https://github.com/gemunion/mui-packages/commit/4d2742b418bb5fedfcb825acd3257e9c5af5b6a4))
+* move repo to org ([ac9a7e5](https://github.com/gemunion/mui-packages/commit/ac9a7e51e47bf69ef30b19abbc67274405c13200))
+* test coverage ([1274b70](https://github.com/gemunion/mui-packages/commit/1274b700627ebed97bb342b007ef848d182e7e72))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/mui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/mui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+
+
+### BREAKING CHANGES
+
+* version bump
+* version bump
+
+
+
+
+
 ## [2.0.6](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-delete@0.1.18...@gemunion/mui-dialog-delete@2.0.6) (2021-09-07)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-delete

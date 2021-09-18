@@ -8,18 +8,18 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-dialog-confirmation": "2.0.5",
-    "@gemunion/mui-inputs-core": "2.0.9",
-    "@gemunion/mui-inputs-file-s3": "2.0.9",
-    "@gemunion/mui-progress": "2.0.6",
+    "@gemunion/mui-dialog-confirmation": "3.0.0",
+    "@gemunion/mui-inputs-core": "3.0.0",
+    "@gemunion/mui-inputs-file-s3": "3.0.0",
+    "@gemunion/mui-progress": "3.0.0",
     "@gemunion/popup": "0.0.10",
     "@gemunion/provider-api": "4.0.6",
     "react-beautiful-dnd": "13.1.0"
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.0.0",
     "@mui/icons-material": "5.0.0",
+    "@mui/material": "5.0.0",
     "@mui/styles": "5.0.0",
     "@storybook/react": "6.3.8",
     "@testing-library/jest-dom": "5.14.1",
@@ -43,8 +43,8 @@
   "main": "./dist/index.js",
   "name": "@gemunion/mui-inputs-image-s3",
   "peerDependencies": {
-    "@mui/material": "^5",
     "@mui/icons-material": "^5",
+    "@mui/material": "^5",
     "@mui/styles": "^5",
     "formik": "^2",
     "notistack": "^2",
@@ -71,5 +71,5 @@
   "sideEffects": false,
   "title": "-=TrejGun=-",
   "types": "./dist/index.d.ts",
-  "version": "2.1.1"
+  "version": "3.0.0"
 }

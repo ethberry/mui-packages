@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2021-09-18)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([17134c5](https://github.com/gemunion/mui-packages/commit/17134c5509a87ea00c96807b7ce0ec39dcf85000))
+* **deps:** update all non-major dependencies ([#83](https://github.com/gemunion/mui-packages/issues/83)) ([4d2742b](https://github.com/gemunion/mui-packages/commit/4d2742b418bb5fedfcb825acd3257e9c5af5b6a4))
+* move repo to org ([ac9a7e5](https://github.com/gemunion/mui-packages/commit/ac9a7e51e47bf69ef30b19abbc67274405c13200))
+* styles ([a65c1b7](https://github.com/gemunion/mui-packages/commit/a65c1b72b303b24a10e8602725b44d496a17d207))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/mui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/mui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+
+
+### BREAKING CHANGES
+
+* version bump
+* version bump
+
+
+
+
+
 ## [2.0.6](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-captcha@2.0.5...@gemunion/mui-inputs-captcha@2.0.6) (2021-09-07)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-captcha

@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2021-09-18)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([be30b79](https://github.com/gemunion/mui-packages/commit/be30b79bf815c8917a3eb187be21e788ecedca9f))
+* **deps:** update all non-major dependencies ([17134c5](https://github.com/gemunion/mui-packages/commit/17134c5509a87ea00c96807b7ce0ec39dcf85000))
+* **deps:** update all non-major dependencies ([18c489d](https://github.com/gemunion/mui-packages/commit/18c489d572277163ab95066eee69de85f4defab0))
+* **deps:** update all non-major dependencies ([#74](https://github.com/gemunion/mui-packages/issues/74)) ([63e053d](https://github.com/gemunion/mui-packages/commit/63e053d5e72d4e012b52eaccf2de6632e2d9b882))
+* **deps:** update all non-major dependencies ([#83](https://github.com/gemunion/mui-packages/issues/83)) ([4d2742b](https://github.com/gemunion/mui-packages/commit/4d2742b418bb5fedfcb825acd3257e9c5af5b6a4))
+* **deps:** update dependency @gemunion/mui-rte to v1 ([#29](https://github.com/gemunion/mui-packages/issues/29)) ([53d402e](https://github.com/gemunion/mui-packages/commit/53d402e9b957918bc7c2748d51ab6347ba111a30))
+* **deps:** update dependency @gemunion/mui-rte to v1.0.1 ([e4ec737](https://github.com/gemunion/mui-packages/commit/e4ec73729fa1bffb371bbb738ddcab5d7afceb8c))
+* **deps:** update dependency use-debounce to v7 ([939ffa3](https://github.com/gemunion/mui-packages/commit/939ffa35a122d918b49ed93ccb4a9a150b985734))
+* markdown input ([1afc669](https://github.com/gemunion/mui-packages/commit/1afc669347fae1cb786e19e4f6338b7ea063bf89))
+* move repo to org ([ac9a7e5](https://github.com/gemunion/mui-packages/commit/ac9a7e51e47bf69ef30b19abbc67274405c13200))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/mui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/mui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+
+
+### BREAKING CHANGES
+
+* version bump
+* version bump
+
+
+
+
+
 ## [2.0.7](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-markdown@2.0.6...@gemunion/mui-inputs-markdown@2.0.7) (2021-09-07)
 
 

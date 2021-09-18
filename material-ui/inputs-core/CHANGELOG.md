@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2021-09-18)
+
+
+### Bug Fixes
+
+* add spacing to text input ([94e8b3b](https://github.com/gemunion/mui-packages/commit/94e8b3b72d05ba0e5b7a9386c87022b9353b137b))
+* **deps:** update all non-major dependencies ([1ca82cc](https://github.com/gemunion/mui-packages/commit/1ca82ccf99f2f5c0c430bb294b272128b303e936))
+* **deps:** update all non-major dependencies ([17134c5](https://github.com/gemunion/mui-packages/commit/17134c5509a87ea00c96807b7ce0ec39dcf85000))
+* **deps:** update all non-major dependencies ([c588d74](https://github.com/gemunion/mui-packages/commit/c588d74d0de68cc8e21ed317da1b73314bcda884))
+* **deps:** update all non-major dependencies ([#83](https://github.com/gemunion/mui-packages/issues/83)) ([4d2742b](https://github.com/gemunion/mui-packages/commit/4d2742b418bb5fedfcb825acd3257e9c5af5b6a4))
+* fix styles for SelectInput and SwitchInput ([57fe26b](https://github.com/gemunion/mui-packages/commit/57fe26bee0b1a38b07fd5675e2f721e1d497c22e))
+* move autocomplete input ([83ae271](https://github.com/gemunion/mui-packages/commit/83ae271777fb23bd37c11f65d0c1821f81fede43))
+* move repo to org ([ac9a7e5](https://github.com/gemunion/mui-packages/commit/ac9a7e51e47bf69ef30b19abbc67274405c13200))
+* small fix for styling of Switch, Select Draft and Storybook ([ebe9b71](https://github.com/gemunion/mui-packages/commit/ebe9b71895fbf29988eed8f2e28799c976c4d029))
+* static input ([e571da8](https://github.com/gemunion/mui-packages/commit/e571da8409d7b5df4468a3dbd2cd82c51aafe3db))
+* styles ([a65c1b7](https://github.com/gemunion/mui-packages/commit/a65c1b72b303b24a10e8602725b44d496a17d207))
+* test coverage ([1274b70](https://github.com/gemunion/mui-packages/commit/1274b700627ebed97bb342b007ef848d182e7e72))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/mui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/mui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+
+
+### BREAKING CHANGES
+
+* version bump
+* version bump
+
+
+
+
+
 ## 2.0.9 (2021-09-08)
 
 

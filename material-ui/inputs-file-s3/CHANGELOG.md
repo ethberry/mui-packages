@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2021-09-18)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([74f0590](https://github.com/gemunion/mui-packages/commit/74f0590bca4e94124036fb2fc49efc8b15d3ab6f))
+* **deps:** update all non-major dependencies ([be30b79](https://github.com/gemunion/mui-packages/commit/be30b79bf815c8917a3eb187be21e788ecedca9f))
+* **deps:** update all non-major dependencies ([#52](https://github.com/gemunion/mui-packages/issues/52)) ([6c8f2e2](https://github.com/gemunion/mui-packages/commit/6c8f2e2360a76e51ff9b681a234fe9e2d4fe8668))
+* **deps:** update all non-major dependencies ([#83](https://github.com/gemunion/mui-packages/issues/83)) ([4d2742b](https://github.com/gemunion/mui-packages/commit/4d2742b418bb5fedfcb825acd3257e9c5af5b6a4))
+* jwt type ([3074038](https://github.com/gemunion/mui-packages/commit/30740387dfb414ca89fd9f35489641e825271a0b))
+* move repo to org ([ac9a7e5](https://github.com/gemunion/mui-packages/commit/ac9a7e51e47bf69ef30b19abbc67274405c13200))
+* use new s3 format ([87604ba](https://github.com/gemunion/mui-packages/commit/87604baf037ff508d134dc4e009a900b2412d963))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+
+
+
 ## [2.0.9](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@2.0.8...@gemunion/mui-inputs-file-s3@2.0.9) (2021-09-07)
 
 

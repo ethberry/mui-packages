@@ -9,13 +9,13 @@
   },
   "dependencies": {
     "@gemunion/constants-regexp": "0.1.11",
-    "@gemunion/mui-form": "2.0.6",
-    "@gemunion/mui-icons-social-networks": "2.0.5",
-    "@gemunion/mui-inputs-captcha": "2.0.6",
-    "@gemunion/mui-inputs-core": "2.0.9",
-    "@gemunion/mui-page-header": "2.0.6",
-    "@gemunion/mui-progress": "2.0.6",
-    "@gemunion/mui-toolbar": "2.0.6",
+    "@gemunion/mui-form": "3.0.0",
+    "@gemunion/mui-icons-social-networks": "3.0.0",
+    "@gemunion/mui-inputs-captcha": "3.0.0",
+    "@gemunion/mui-inputs-core": "3.0.0",
+    "@gemunion/mui-page-header": "3.0.0",
+    "@gemunion/mui-progress": "3.0.0",
+    "@gemunion/mui-toolbar": "3.0.0",
     "@gemunion/popup": "0.0.10",
     "@gemunion/provider-api": "4.0.6",
     "@gemunion/provider-user": "0.1.26",
@@ -24,8 +24,8 @@
   },
   "description": "react context provider",
   "devDependencies": {
-    "@mui/material": "5.0.0",
     "@mui/lab": "5.0.0-alpha.47",
+    "@mui/material": "5.0.0",
     "@mui/styles": "5.0.0",
     "@types/node": "14.17.17",
     "@types/react": "17.0.21",
@@ -47,8 +47,8 @@
   "main": "./dist/index.js",
   "name": "@gemunion/common-pages",
   "peerDependencies": {
-    "@mui/material": "^5",
     "@mui/lab": "^5",
+    "@mui/material": "^5",
     "@mui/styles": "^5",
     "formik": "^2",
     "notistack": "^2",
@@ -75,5 +75,5 @@
   "sideEffects": false,
   "title": "-=TrejGun=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.11"
+  "version": "3.0.0"
 }

@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2021-09-18)
+
+
+### Bug Fixes
+
+* move repo to org ([ac9a7e5](https://github.com/gemunion/mui-packages/commit/ac9a7e51e47bf69ef30b19abbc67274405c13200))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/mui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/mui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+
+
+### Features
+
+* split ssr from theme provider, ake theme lighter ([ad921be](https://github.com/gemunion/mui-packages/commit/ad921beb961386cf93b0e42c111f7ab1cba9c37f))
+
+
+### BREAKING CHANGES
+
+* version bump
+* version bump
+
+
+
+
+
 ## [2.0.5](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-provider-theme@2.0.4...@gemunion/mui-provider-theme@2.0.5) (2021-09-07)
 
 **Note:** Version bump only for package @gemunion/mui-provider-theme
