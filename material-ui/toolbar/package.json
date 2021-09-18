@@ -12,8 +12,8 @@
     "csstype": "3.0.9"
   },
   "devDependencies": {
-    "@material-ui/core": "5.0.0-beta.5",
-    "@material-ui/styles": "5.0.0-beta.5",
+    "@mui/material": "5.0.0",
+    "@mui/styles": "5.0.0",
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "12.1.0",
     "@types/jest": "27.0.1",
@@ -30,10 +30,10 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/material-ui-toolbar",
+  "name": "@gemunion/mui-toolbar",
   "peerDependencies": {
-    "@material-ui/core": "^5",
-    "@material-ui/styles": "^5",
+    "@mui/material": "^5",
+    "@mui/styles": "^5",
     "react": "^17"
   },
   "publishConfig": {

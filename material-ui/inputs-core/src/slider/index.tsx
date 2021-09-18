@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
-import { FormControlLabel, Slider, SliderProps } from "@material-ui/core";
+import { FormControlLabel, Slider, SliderProps } from "@mui/material";
 
 import { useStyles } from "./styles";
 

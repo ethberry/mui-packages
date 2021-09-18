@@ -8,12 +8,12 @@
     "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/material-ui-toolbar": "2.0.6"
+    "@gemunion/mui-toolbar": "2.0.6"
   },
   "description": "react widget",
   "devDependencies": {
-    "@material-ui/core": "5.0.0-beta.5",
-    "@material-ui/styles": "5.0.0-beta.5",
+    "@mui/material": "5.0.0",
+    "@mui/styles": "5.0.0",
     "@storybook/react": "6.3.8",
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "12.1.0",
@@ -32,10 +32,10 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/material-ui-page-header",
+  "name": "@gemunion/mui-page-header",
   "peerDependencies": {
-    "@material-ui/core": "^5",
-    "@material-ui/styles": "^5",
+    "@mui/material": "^5",
+    "@mui/styles": "^5",
     "react": "^17",
     "react-intl": "^5"
   },

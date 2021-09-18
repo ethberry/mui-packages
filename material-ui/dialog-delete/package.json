@@ -8,12 +8,12 @@
     "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/material-ui-dialog-confirmation": "2.0.5",
-    "@gemunion/material-ui-progress": "2.0.6"
+    "@gemunion/mui-dialog-confirmation": "2.0.5",
+    "@gemunion/mui-progress": "2.0.6"
   },
   "description": "react widget",
   "devDependencies": {
-    "@material-ui/core": "5.0.0-beta.5",
+    "@mui/material": "5.0.0",
     "@storybook/react": "6.3.8",
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "12.1.0",
@@ -32,9 +32,9 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/material-ui-dialog-delete",
+  "name": "@gemunion/mui-dialog-delete",
   "peerDependencies": {
-    "@material-ui/core": "^5",
+    "@mui/material": "^5",
     "react": "^17",
     "react-intl": "^5"
   },

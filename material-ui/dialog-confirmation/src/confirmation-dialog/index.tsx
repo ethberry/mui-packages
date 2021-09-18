@@ -8,7 +8,7 @@ import {
   DialogContentText,
   DialogProps,
   DialogTitle,
-} from "@material-ui/core";
+} from "@mui/material";
 
 export interface IConfirmationDialogProps extends DialogProps {
   onCancel: () => void;

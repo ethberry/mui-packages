@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider, FormattedMessage } from "react-intl";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import { Story } from "@storybook/react";
 
 import { PageHeader, IPageHeader } from "./index";

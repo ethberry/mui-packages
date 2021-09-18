@@ -9,8 +9,8 @@
   },
   "description": "Material UI theme provider",
   "devDependencies": {
-    "@material-ui/core": "5.0.0-beta.5",
-    "@material-ui/lab": "5.0.0-alpha.44",
+    "@mui/material": "5.0.0",
+    "@mui/lab": "5.0.0-alpha.47",
     "react": "17.0.2"
   },
   "engines": {
@@ -19,10 +19,10 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/material-ui-provider-picker",
+  "name": "@gemunion/mui-provider-picker",
   "peerDependencies": {
-    "@material-ui/core": "^5",
-    "@material-ui/lab": "^5",
+    "@mui/material": "^5",
+    "@mui/lab": "^5",
     "react": "^17"
   },
   "publishConfig": {

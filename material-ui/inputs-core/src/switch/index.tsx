@@ -2,7 +2,7 @@ import { FC } from "react";
 import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
 
-import { FormControlLabel, Switch, SwitchProps } from "@material-ui/core";
+import { FormControlLabel, Switch, SwitchProps } from "@mui/material";
 import { useStyles } from "./styles";
 
 export interface ISwitchInputProps extends SwitchProps {

@@ -1,5 +1,5 @@
 import { ChangeEvent, FC, ReactElement } from "react";
-import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@material-ui/core";
+import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/material";
 import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
 

@@ -2,9 +2,9 @@ import { FC, createElement, ChangeEvent } from "react";
 import clsx from "clsx";
 import { FormattedMessage } from "react-intl";
 import { getIn, useFormikContext } from "formik";
-import { InputLabel } from "@material-ui/core";
-import { Rating, RatingProps } from "@material-ui/lab";
-import { Star, SvgIconComponent } from "@material-ui/icons";
+import { InputLabel } from "@mui/material";
+import { Rating, RatingProps } from "@mui/lab";
+import { Star, SvgIconComponent } from "@mui/icons-material";
 import { useStyles } from "./styles";
 
 export interface IRatingInputProps extends RatingProps {

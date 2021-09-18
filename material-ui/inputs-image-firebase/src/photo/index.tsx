@@ -9,16 +9,16 @@ import {
   FormHelperText,
   Grid,
   InputLabel,
-} from "@material-ui/core";
+} from "@mui/material";
 import { getIn, useFormikContext } from "formik";
 import { FormattedMessage, useIntl } from "react-intl";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import path from "path";
 
-import { TextInput } from "@gemunion/material-ui-inputs-core";
-import { ProgressOverlay } from "@gemunion/material-ui-progress";
-import { ConfirmationDialog } from "@gemunion/material-ui-dialog-confirmation";
-import { FirebaseFileInput } from "@gemunion/material-ui-inputs-file-firebase";
+import { TextInput } from "@gemunion/mui-inputs-core";
+import { ProgressOverlay } from "@gemunion/mui-progress";
+import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
+import { FirebaseFileInput } from "@gemunion/mui-inputs-file-firebase";
 import { openUrlOnClick } from "@gemunion/popup";
 
 import { useStyles } from "./styles";

@@ -1,7 +1,7 @@
 import { FC, useCallback } from "react";
 import clsx from "clsx";
 import { useDropzone, FileRejection, DropzoneOptions } from "react-dropzone";
-import { CloudUpload, CloudUploadOutlined, CloudOff } from "@material-ui/icons";
+import { CloudUpload, CloudUploadOutlined, CloudOff } from "@mui/icons-material";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 

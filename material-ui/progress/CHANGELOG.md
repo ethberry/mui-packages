@@ -3,23 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [2.0.6](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-progress@2.0.5...@gemunion/material-ui-progress@2.0.6) (2021-09-07)
+## [2.0.6](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-progress@2.0.5...@gemunion/mui-progress@2.0.6) (2021-09-07)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
-
-
-
-
-
-## [2.0.5](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-progress@3.0.0...@gemunion/material-ui-progress@2.0.5) (2021-08-30)
-
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
 
 
-# [3.0.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-progress@0.1.13...@gemunion/material-ui-progress@3.0.0) (2021-08-29)
+## [2.0.5](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-progress@3.0.0...@gemunion/mui-progress@2.0.5) (2021-08-30)
+
+**Note:** Version bump only for package @gemunion/mui-progress
+
+
+
+
+
+# [3.0.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-progress@0.1.13...@gemunion/mui-progress@3.0.0) (2021-08-29)
 
 
 ### Bug Fixes
@@ -41,7 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.3](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-progress@2.0.2...@gemunion/material-ui-progress@2.0.3) (2021-08-21)
+## [2.0.3](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-progress@2.0.2...@gemunion/mui-progress@2.0.3) (2021-08-21)
 
 
 ### Bug Fixes
@@ -54,7 +54,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.2 (2021-08-21)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -71,7 +71,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [2.0.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/material-ui-progress@0.1.11...@gemunion/material-ui-progress@2.0.0) (2021-08-16)
+# [2.0.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-progress@0.1.11...@gemunion/mui-progress@2.0.0) (2021-08-16)
 
 
 ### Bug Fixes
@@ -92,7 +92,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.2.0](https://github.com/gemunion/common-packages/compare/@gemunion/material-ui-progress@0.1.10...@gemunion/material-ui-progress@0.2.0) (2021-08-15)
+# [0.2.0](https://github.com/gemunion/common-packages/compare/@gemunion/mui-progress@0.1.10...@gemunion/mui-progress@0.2.0) (2021-08-15)
 
 
 * feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/common-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
@@ -128,17 +128,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.1.8](https://github.com/gemunion/common-packages/compare/@gemunion/material-ui-progress@0.1.7...@gemunion/material-ui-progress@0.1.8) (2021-08-06)
+## [0.1.8](https://github.com/gemunion/common-packages/compare/@gemunion/mui-progress@0.1.7...@gemunion/mui-progress@0.1.8) (2021-08-06)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
-
-
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
-## [0.1.7](https://github.com/gemunion/common-packages/compare/@gemunion/material-ui-progress@0.1.6...@gemunion/material-ui-progress@0.1.7) (2021-07-22)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+
+## [0.1.7](https://github.com/gemunion/common-packages/compare/@gemunion/mui-progress@0.1.6...@gemunion/mui-progress@0.1.7) (2021-07-22)
+
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -146,15 +146,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.6 (2021-07-13)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
 
 
-## [0.1.5](https://github.com/gemunion/common-packages/compare/@gemunion/material-ui-progress@0.1.4...@gemunion/material-ui-progress@0.1.5) (2021-07-10)
+## [0.1.5](https://github.com/gemunion/common-packages/compare/@gemunion/mui-progress@0.1.4...@gemunion/mui-progress@0.1.5) (2021-07-10)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -162,7 +162,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.4 (2021-07-02)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -170,7 +170,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.3 (2021-06-24)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -178,7 +178,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.2 (2021-06-09)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -186,13 +186,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.1 (2021-06-09)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
 
 
-# [0.1.0](https://github.com/gemunion/common-packages/compare/@gemunion/material-ui-progress@0.0.160...@gemunion/material-ui-progress@0.1.0) (2021-06-09)
+# [0.1.0](https://github.com/gemunion/common-packages/compare/@gemunion/mui-progress@0.0.160...@gemunion/mui-progress@0.1.0) (2021-06-09)
 
 
 ### Features
@@ -216,7 +216,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.159 (2021-05-31)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -235,7 +235,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.157 (2021-05-14)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -265,7 +265,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.154 (2021-05-06)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -273,15 +273,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.153 (2021-04-30)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
 
 
-## [0.0.152](https://github.com/gemunion/common-packages/compare/@gemunion/material-ui-progress@0.0.151...@gemunion/material-ui-progress@0.0.152) (2021-04-28)
+## [0.0.152](https://github.com/gemunion/common-packages/compare/@gemunion/mui-progress@0.0.151...@gemunion/mui-progress@0.0.152) (2021-04-28)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -289,7 +289,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.151 (2021-04-27)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -297,7 +297,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.150 (2021-04-27)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -305,7 +305,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.149 (2021-04-19)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -313,7 +313,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.148 (2021-04-18)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -321,7 +321,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.147 (2021-04-15)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -329,7 +329,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.146 (2021-04-15)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -337,7 +337,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.145 (2021-04-14)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -345,7 +345,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.144 (2021-03-29)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -353,7 +353,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.143 (2021-03-28)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -394,7 +394,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.139 (2021-03-17)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -457,7 +457,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.133 (2021-03-08)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -465,7 +465,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.132 (2021-03-07)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -473,7 +473,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.131 (2021-03-07)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -481,7 +481,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.130 (2021-03-05)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -489,7 +489,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.129 (2021-03-05)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -497,7 +497,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.128 (2021-03-02)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -505,7 +505,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.127 (2021-03-01)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -513,7 +513,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.126 (2021-03-01)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -587,7 +587,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.119 (2021-02-24)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -617,15 +617,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.116 (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
 
 
-## [0.0.115](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-progress@0.0.114...@gemunion/material-ui-progress@0.0.115) (2021-02-23)
+## [0.0.115](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-progress@0.0.114...@gemunion/mui-progress@0.0.115) (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -633,7 +633,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.114 (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -641,7 +641,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.113 (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -649,7 +649,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.112 (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -660,7 +660,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **deps:** update dependency @gemunion/material-ui-form to v0.0.123 ([28829cc](https://github.com/memoryOS/material-ui/commit/28829cc99b2eaaec06fa01c8010104b382724f90))
+* **deps:** update dependency @gemunion/mui-form to v0.0.123 ([28829cc](https://github.com/memoryOS/material-ui/commit/28829cc99b2eaaec06fa01c8010104b382724f90))
 
 
 
@@ -668,7 +668,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.110 (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -687,7 +687,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.108 (2021-02-22)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -761,7 +761,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.101 (2021-02-17)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -769,7 +769,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.100 (2021-02-16)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -777,7 +777,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.99 (2021-02-13)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -785,7 +785,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.98 (2021-02-13)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -793,7 +793,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.97 (2021-02-12)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -834,7 +834,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.93 (2021-02-09)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -886,7 +886,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.88 (2021-02-04)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -894,7 +894,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.87 (2021-02-04)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -902,7 +902,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.86 (2021-02-03)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -910,7 +910,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.85 (2021-02-02)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -1171,7 +1171,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.61 (2021-01-03)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -1179,7 +1179,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.60 (2021-01-03)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -1352,7 +1352,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.44 (2020-12-08)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -1470,7 +1470,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.33 (2020-11-23)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
@@ -1498,79 +1498,79 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.30](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-progress@0.0.29...@gemunion/material-ui-progress@0.0.30) (2020-11-16)
+## [0.0.30](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-progress@0.0.29...@gemunion/mui-progress@0.0.30) (2020-11-16)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
-
-
-
-
-
-## [0.0.29](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-progress@0.0.28...@gemunion/material-ui-progress@0.0.29) (2020-11-12)
-
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
 
 
-## [0.0.28](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-progress@0.0.27...@gemunion/material-ui-progress@0.0.28) (2020-11-10)
+## [0.0.29](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-progress@0.0.28...@gemunion/mui-progress@0.0.29) (2020-11-12)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
-
-
-
-
-
-## [0.0.27](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-progress@0.0.26...@gemunion/material-ui-progress@0.0.27) (2020-11-09)
-
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
 
 
-## [0.0.26](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-progress@0.0.25...@gemunion/material-ui-progress@0.0.26) (2020-11-07)
+## [0.0.28](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-progress@0.0.27...@gemunion/mui-progress@0.0.28) (2020-11-10)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
-
-
-
-
-
-## [0.0.25](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-progress@0.0.24...@gemunion/material-ui-progress@0.0.25) (2020-11-02)
-
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
 
 
-## [0.0.24](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-progress@0.0.23...@gemunion/material-ui-progress@0.0.24) (2020-11-02)
+## [0.0.27](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-progress@0.0.26...@gemunion/mui-progress@0.0.27) (2020-11-09)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
-
-
-
-
-
-## [0.0.23](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-progress@0.0.22...@gemunion/material-ui-progress@0.0.23) (2020-10-30)
-
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
 
 
-## [0.0.22](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-progress@0.0.21...@gemunion/material-ui-progress@0.0.22) (2020-10-28)
+## [0.0.26](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-progress@0.0.25...@gemunion/mui-progress@0.0.26) (2020-11-07)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
-
-
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
-## [0.0.21](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-progress@0.0.20...@gemunion/material-ui-progress@0.0.21) (2020-10-27)
+
+
+## [0.0.25](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-progress@0.0.24...@gemunion/mui-progress@0.0.25) (2020-11-02)
+
+**Note:** Version bump only for package @gemunion/mui-progress
+
+
+
+
+
+## [0.0.24](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-progress@0.0.23...@gemunion/mui-progress@0.0.24) (2020-11-02)
+
+**Note:** Version bump only for package @gemunion/mui-progress
+
+
+
+
+
+## [0.0.23](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-progress@0.0.22...@gemunion/mui-progress@0.0.23) (2020-10-30)
+
+**Note:** Version bump only for package @gemunion/mui-progress
+
+
+
+
+
+## [0.0.22](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-progress@0.0.21...@gemunion/mui-progress@0.0.22) (2020-10-28)
+
+**Note:** Version bump only for package @gemunion/mui-progress
+
+
+
+
+
+## [0.0.21](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-progress@0.0.20...@gemunion/mui-progress@0.0.21) (2020-10-27)
 
 
 ### Bug Fixes
@@ -1581,46 +1581,46 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.20](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-progress@0.0.19...@gemunion/material-ui-progress@0.0.20) (2020-10-26)
+## [0.0.20](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-progress@0.0.19...@gemunion/mui-progress@0.0.20) (2020-10-26)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
-
-
-
-
-
-## [0.0.19](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-progress@0.0.18...@gemunion/material-ui-progress@0.0.19) (2020-10-26)
-
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
 
 
-## [0.0.18](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-progress@0.0.17...@gemunion/material-ui-progress@0.0.18) (2020-10-22)
+## [0.0.19](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-progress@0.0.18...@gemunion/mui-progress@0.0.19) (2020-10-26)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
-
-
-
-
-
-## [0.0.17](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-progress@0.0.16...@gemunion/material-ui-progress@0.0.17) (2020-10-21)
-
-**Note:** Version bump only for package @gemunion/material-ui-progress
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
 
 
-## [0.0.16](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-progress@0.0.14...@gemunion/material-ui-progress@0.0.16) (2020-10-19)
+## [0.0.18](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-progress@0.0.17...@gemunion/mui-progress@0.0.18) (2020-10-22)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
-
-
+**Note:** Version bump only for package @gemunion/mui-progress
 
 
 
-## [0.0.15](https://github.com/memoryOS/material-ui/compare/@gemunion/material-ui-progress@0.0.14...@gemunion/material-ui-progress@0.0.15) (2020-10-15)
 
-**Note:** Version bump only for package @gemunion/material-ui-progress
+
+## [0.0.17](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-progress@0.0.16...@gemunion/mui-progress@0.0.17) (2020-10-21)
+
+**Note:** Version bump only for package @gemunion/mui-progress
+
+
+
+
+
+## [0.0.16](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-progress@0.0.14...@gemunion/mui-progress@0.0.16) (2020-10-19)
+
+**Note:** Version bump only for package @gemunion/mui-progress
+
+
+
+
+
+## [0.0.15](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-progress@0.0.14...@gemunion/mui-progress@0.0.15) (2020-10-15)
+
+**Note:** Version bump only for package @gemunion/mui-progress

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { FormControl, InputLabel, MenuItem, Select, SelectProps } from "@material-ui/core";
+import { FormControl, InputLabel, MenuItem, Select, SelectProps } from "@mui/material";
 import { FormattedMessage, useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
 

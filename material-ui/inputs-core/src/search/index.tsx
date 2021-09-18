@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useIntl } from "react-intl";
-import { IconButton, InputBase, InputBaseProps, Paper } from "@material-ui/core";
-import { SearchOutlined } from "@material-ui/icons";
+import { IconButton, InputBase, InputBaseProps, Paper } from "@mui/material";
+import { SearchOutlined } from "@mui/icons-material";
 import { getIn, useFormikContext } from "formik";
 
 import { useStyles } from "./styles";

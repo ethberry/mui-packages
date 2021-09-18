@@ -1,4 +1,4 @@
-import { PaletteOptions } from "@material-ui/core/styles/createPalette";
+import { PaletteOptions } from "@mui/material/styles/createPalette";
 
 export const light: PaletteOptions = {
   mode: "light",

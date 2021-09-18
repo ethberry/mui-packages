@@ -1,8 +1,8 @@
 import { FC, Fragment, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
-import { Box, TextField, TextFieldProps } from "@material-ui/core";
-import { DateRange, DateRangePicker } from "@material-ui/lab";
+import { Box, TextField, TextFieldProps } from "@mui/material";
+import { DateRange, DateRangePicker } from "@mui/lab";
 
 import { useStyles } from "./styles";
 

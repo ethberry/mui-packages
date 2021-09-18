@@ -2,7 +2,7 @@ import { FC } from "react";
 import { useIntl } from "react-intl";
 import { useFormikContext, getIn } from "formik";
 
-import { Checkbox, CheckboxProps, FormControlLabel } from "@material-ui/core";
+import { Checkbox, CheckboxProps, FormControlLabel } from "@mui/material";
 import { useStyles } from "./styles";
 
 export interface ICheckboxInputProps extends CheckboxProps {

@@ -5,14 +5,14 @@ This is free to use set of social network flat icons wrapped in Material UI lib
 ## Installation
 
 ```bash
-npm install @gemunion/material-ui-icons-social-networks
+npm install @gemunion/mui-icons-social-networks
 ```
 
 ## Usage
 
 ```typescript
 import { FC } from "react";
-import {Grid, Button, makeStyles} from "@material-ui/core";
+import {Grid, Button, makeStyles} from "@mui/material";
 
 import {
   Badoo,
@@ -45,7 +45,7 @@ import {
   Whatsapp,
   Xing,
   Youtube,
-} from "@gemunion/material-ui-icons-social-networks";
+} from "@gemunion/mui-icons-social-networks";
 
 
 const useStyles = makeStyles(

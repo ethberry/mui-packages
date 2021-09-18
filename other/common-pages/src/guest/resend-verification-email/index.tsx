@@ -1,13 +1,13 @@
 import { FC, useContext } from "react";
 import { useHistory } from "react-router";
 import { useSnackbar } from "notistack";
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import { useIntl } from "react-intl";
 
-import { Captcha } from "@gemunion/material-ui-inputs-captcha";
-import { PageHeader } from "@gemunion/material-ui-page-header";
-import { TextInput } from "@gemunion/material-ui-inputs-core";
-import { FormikForm } from "@gemunion/material-ui-form";
+import { Captcha } from "@gemunion/mui-inputs-captcha";
+import { PageHeader } from "@gemunion/mui-page-header";
+import { TextInput } from "@gemunion/mui-inputs-core";
+import { FormikForm } from "@gemunion/mui-form";
 import { ApiContext, localizeErrors } from "@gemunion/provider-api";
 
 import { useStyles } from "./styles";

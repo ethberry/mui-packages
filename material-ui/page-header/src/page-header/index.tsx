@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { FormattedMessage } from "react-intl";
 
-import { Grid, Typography } from "@material-ui/core";
-import { ButtonToolbar } from "@gemunion/material-ui-toolbar";
+import { Grid, Typography } from "@mui/material";
+import { ButtonToolbar } from "@gemunion/mui-toolbar";
 
 import { useStyles } from "./styles";
 

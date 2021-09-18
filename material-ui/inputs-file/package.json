@@ -13,12 +13,12 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@material-ui/core": "5.0.0-beta.5",
-    "@material-ui/icons": "5.0.0-beta.5",
-    "@material-ui/styles": "5.0.0-beta.5",
+    "@mui/material": "5.0.0",
+    "@mui/icons-material": "5.0.0",
+    "@mui/styles": "5.0.0",
     "@storybook/react": "6.3.8",
     "@types/react": "17.0.21",
-    "notistack": "2.0.1-alpha.4",
+    "notistack": "1.0.6-next.3",
     "react": "17.0.2",
     "react-intl": "5.20.10"
   },
@@ -28,11 +28,11 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/material-ui-inputs-file",
+  "name": "@gemunion/mui-inputs-file",
   "peerDependencies": {
-    "@material-ui/core": "^5",
-    "@material-ui/icons": "^5",
-    "@material-ui/styles": "^5",
+    "@mui/material": "^5",
+    "@mui/icons-material": "^5",
+    "@mui/styles": "^5",
     "notistack": "^2",
     "react": "^17",
     "react-intl": "^5"

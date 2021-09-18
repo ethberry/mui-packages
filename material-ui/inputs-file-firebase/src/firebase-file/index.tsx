@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 
 import app from "@gemunion/firebase";
 
-import { FileInput, IFileInputProps } from "@gemunion/material-ui-inputs-file";
+import { FileInput, IFileInputProps } from "@gemunion/mui-inputs-file";
 
 export interface IFirebaseFileInputProps extends Omit<IFileInputProps, "onChange"> {
   bucket?: string;

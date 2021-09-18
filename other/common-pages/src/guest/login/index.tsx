@@ -1,11 +1,11 @@
 import { FC, useContext, useEffect } from "react";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 
-import { PasswordInput, TextInput } from "@gemunion/material-ui-inputs-core";
-import { PageHeader } from "@gemunion/material-ui-page-header";
-import { FormikForm } from "@gemunion/material-ui-form";
+import { PasswordInput, TextInput } from "@gemunion/mui-inputs-core";
+import { PageHeader } from "@gemunion/mui-page-header";
+import { FormikForm } from "@gemunion/mui-form";
 import { ApiContext, IJwt } from "@gemunion/provider-api";
 import { UserContext } from "@gemunion/provider-user";
 

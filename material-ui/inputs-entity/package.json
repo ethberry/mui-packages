@@ -8,18 +8,18 @@
     "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/material-ui-progress": "2.0.6",
+    "@gemunion/mui-progress": "2.0.6",
     "@gemunion/provider-api": "4.0.6"
   },
   "description": "react widget",
   "devDependencies": {
-    "@material-ui/core": "5.0.0-beta.5",
-    "@material-ui/icons": "5.0.0-beta.5",
-    "@material-ui/lab": "5.0.0-alpha.44",
-    "@material-ui/styles": "5.0.0-beta.5",
+    "@mui/material": "5.0.0",
+    "@mui/icons-material": "5.0.0",
+    "@mui/lab": "5.0.0-alpha.47",
+    "@mui/styles": "5.0.0",
     "@types/react": "17.0.21",
     "formik": "2.2.9",
-    "notistack": "2.0.1-alpha.4",
+    "notistack": "1.0.6-next.3",
     "react": "17.0.2",
     "react-intl": "5.20.10"
   },
@@ -29,12 +29,12 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/material-ui-inputs-entity",
+  "name": "@gemunion/mui-inputs-entity",
   "peerDependencies": {
-    "@material-ui/core": "^5",
-    "@material-ui/icons": "^5",
-    "@material-ui/lab": "^5",
-    "@material-ui/styles": "^5",
+    "@mui/material": "^5",
+    "@mui/icons-material": "^5",
+    "@mui/lab": "^5",
+    "@mui/styles": "^5",
     "formik": "^2",
     "notistack": "^2",
     "react": "^17",

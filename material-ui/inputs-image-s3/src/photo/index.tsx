@@ -9,15 +9,15 @@ import {
   FormHelperText,
   Grid,
   InputLabel,
-} from "@material-ui/core";
+} from "@mui/material";
 import { getIn, useFormikContext } from "formik";
 import { FormattedMessage, useIntl } from "react-intl";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 
-import { TextInput } from "@gemunion/material-ui-inputs-core";
-import { ProgressOverlay } from "@gemunion/material-ui-progress";
-import { ConfirmationDialog } from "@gemunion/material-ui-dialog-confirmation";
-import { S3FileInput } from "@gemunion/material-ui-inputs-file-s3";
+import { TextInput } from "@gemunion/mui-inputs-core";
+import { ProgressOverlay } from "@gemunion/mui-progress";
+import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
+import { S3FileInput } from "@gemunion/mui-inputs-file-s3";
 import { openUrlOnClick } from "@gemunion/popup";
 
 import { useStyles } from "./styles";

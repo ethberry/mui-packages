@@ -1,7 +1,7 @@
 import { FC, useState, MouseEvent } from "react";
 
-import { IconButton, InputAdornment } from "@material-ui/core";
-import { Visibility, VisibilityOff } from "@material-ui/icons";
+import { IconButton, InputAdornment } from "@mui/material";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 import { TextInput, ITextInputProps } from "../text";
 import { useStyles } from "./styles";

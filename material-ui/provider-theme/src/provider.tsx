@@ -1,8 +1,8 @@
 import { FC, useState } from "react";
 
-import { CssBaseline } from "@material-ui/core";
-import { createTheme, ThemeProvider, StyledEngineProvider } from "@material-ui/core/styles";
-import { PaletteOptions } from "@material-ui/core/styles/createPalette";
+import { CssBaseline } from "@mui/material";
+import { createTheme, ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
+import { PaletteOptions } from "@mui/material/styles/createPalette";
 
 import { ThemeContext, ThemeType } from "./context";
 import { dark, light } from "./palette";

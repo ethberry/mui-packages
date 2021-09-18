@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { Collapse, Grid } from "@material-ui/core";
+import { Collapse, Grid } from "@mui/material";
 
-import { AutoSave, FormikForm } from "@gemunion/material-ui-form";
-import { SearchInput } from "@gemunion/material-ui-inputs-core";
+import { AutoSave, FormikForm } from "@gemunion/mui-form";
+import { SearchInput } from "@gemunion/mui-inputs-core";
 
 interface ICommonSearchFormProps {
   onSubmit: (values: any) => void;

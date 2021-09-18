@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/material-ui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/material-ui-inputs-file": "2.0.7",
+    "@gemunion/mui-inputs-file": "2.0.7",
     "@gemunion/provider-api": "4.0.6",
     "react-s3-uploader": "5.0.0"
   },
@@ -22,7 +22,7 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/material-ui-inputs-file-s3",
+  "name": "@gemunion/mui-inputs-file-s3",
   "peerDependencies": {
     "react": "^17"
   },

@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { getIn, useFormikContext } from "formik";
-import { FormControl, FormHelperText, Grid, IconButton, InputLabel, Tooltip } from "@material-ui/core";
-import { Delete } from "@material-ui/icons";
+import { FormControl, FormHelperText, Grid, IconButton, InputLabel, Tooltip } from "@mui/material";
+import { Delete } from "@mui/icons-material";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { S3FileInput } from "@gemunion/material-ui-inputs-file-s3";
+import { S3FileInput } from "@gemunion/mui-inputs-file-s3";
 
 import { useStyles } from "./styles";
 import { useDeleteUrl } from "../utils";

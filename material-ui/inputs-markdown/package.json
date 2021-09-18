@@ -15,8 +15,8 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@material-ui/core": "5.0.0-beta.5",
-    "@material-ui/icons": "5.0.0-beta.5",
+    "@mui/material": "5.0.0",
+    "@mui/icons-material": "5.0.0",
     "@storybook/react": "6.3.8",
     "@types/markdown-draft-js": "2.2.4",
     "@types/react": "17.0.21",
@@ -30,10 +30,10 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/material-ui-inputs-markdown",
+  "name": "@gemunion/mui-inputs-markdown",
   "peerDependencies": {
-    "@material-ui/core": "^5",
-    "@material-ui/icons": "^5",
+    "@mui/material": "^5",
+    "@mui/icons-material": "^5",
     "formik": "^2",
     "react": "^17",
     "react-intl": "^5"

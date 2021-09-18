@@ -9,7 +9,7 @@
   },
   "description": "Material UI theme provider",
   "devDependencies": {
-    "@material-ui/core": "5.0.0-beta.5",
+    "@mui/material": "5.0.0",
     "react": "17.0.2"
   },
   "engines": {
@@ -18,9 +18,9 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/material-ui-provider-theme",
+  "name": "@gemunion/mui-provider-theme",
   "peerDependencies": {
-    "@material-ui/core": "^5",
+    "@mui/material": "^5",
     "react": "^17"
   },
   "publishConfig": {

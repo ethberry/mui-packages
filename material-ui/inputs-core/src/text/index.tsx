@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
-import { TextField, StandardTextFieldProps, FilledTextFieldProps, OutlinedTextFieldProps } from "@material-ui/core";
+import { TextField, StandardTextFieldProps, FilledTextFieldProps, OutlinedTextFieldProps } from "@mui/material";
 
 import { useStyles } from "./styles";
 

@@ -43,7 +43,7 @@
     "node": ">=12.13"
   },
   "license": "UNLICENSED",
-  "name": "@gemunion/material-ui-packages",
+  "name": "@gemunion/mui-packages",
   "repository": {
     "type": "git",
     "url": "https://github.com/gemunion/material-ui-packages"

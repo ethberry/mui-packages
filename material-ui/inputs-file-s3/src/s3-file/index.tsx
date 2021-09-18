@@ -3,7 +3,7 @@ import "react-s3-uploader"; // this is required for types
 import S3Upload from "react-s3-uploader/s3upload";
 import { ApiContext, IApiContext, IJwt } from "@gemunion/provider-api";
 
-import { FileInput, IFileInputProps } from "@gemunion/material-ui-inputs-file";
+import { FileInput, IFileInputProps } from "@gemunion/mui-inputs-file";
 
 export interface IS3Result {
   signedUrl: string;

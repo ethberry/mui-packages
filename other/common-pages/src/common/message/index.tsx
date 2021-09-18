@@ -2,7 +2,7 @@ import { FC } from "react";
 import { FormattedMessage } from "react-intl";
 import { useParams } from "react-router";
 
-import { Alert } from "@material-ui/lab";
+import { Alert } from "@mui/lab";
 
 import { useStyles } from "./styles";
 

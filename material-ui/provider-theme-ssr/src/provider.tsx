@@ -1,9 +1,9 @@
 import { FC, useEffect, useState } from "react";
 import { match } from "css-mediaquery";
 
-import { createTheme, adaptV4Theme, CssBaseline, ThemeProvider } from "@material-ui/core";
-import { MuiMediaQueryList } from "@material-ui/core/useMediaQuery";
-import { PaletteOptions } from "@material-ui/core/styles/createPalette";
+import { createTheme, adaptV4Theme, CssBaseline, ThemeProvider } from "@mui/material";
+import { MuiMediaQueryList } from "@mui/material/useMediaQuery";
+import { PaletteOptions } from "@mui/material/styles/createPalette";
 
 import { ThemeContext, ThemeType } from "./context";
 import { dark, light } from "./palette";

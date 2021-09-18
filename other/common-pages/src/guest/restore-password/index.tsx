@@ -1,12 +1,12 @@
 import { FC, useContext } from "react";
 import { useHistory, useParams } from "react-router";
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
-import { PasswordInput } from "@gemunion/material-ui-inputs-core";
-import { PageHeader } from "@gemunion/material-ui-page-header";
-import { FormikForm } from "@gemunion/material-ui-form";
+import { PasswordInput } from "@gemunion/mui-inputs-core";
+import { PageHeader } from "@gemunion/mui-page-header";
+import { FormikForm } from "@gemunion/mui-form";
 import { ApiContext, localizeErrors } from "@gemunion/provider-api";
 
 import { validationSchema } from "./validation";

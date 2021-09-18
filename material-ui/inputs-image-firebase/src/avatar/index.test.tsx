@@ -2,7 +2,7 @@ import "../env";
 
 import { IntlProvider } from "react-intl";
 import { cleanup, render } from "@testing-library/react";
-import { createTheme, ThemeProvider } from "@material-ui/core";
+import { createTheme, ThemeProvider } from "@mui/material";
 import { Formik } from "formik";
 import { SnackbarProvider } from "notistack";
 

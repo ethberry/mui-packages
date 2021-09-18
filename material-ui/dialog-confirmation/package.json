@@ -9,7 +9,7 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@material-ui/core": "5.0.0-beta.5",
+    "@mui/material": "5.0.0",
     "@storybook/react": "6.3.8",
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "12.1.0",
@@ -28,9 +28,9 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/material-ui-dialog-confirmation",
+  "name": "@gemunion/mui-dialog-confirmation",
   "peerDependencies": {
-    "@material-ui/core": "^5",
+    "@mui/material": "^5",
     "react": "^17",
     "react-intl": "^5"
   },

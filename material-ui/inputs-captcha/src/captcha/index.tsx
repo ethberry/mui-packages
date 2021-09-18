@@ -3,7 +3,7 @@ import { FC } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { FormattedMessage } from "react-intl";
 import { getIn, useFormikContext } from "formik";
-import { Grid, FormHelperText } from "@material-ui/core";
+import { Grid, FormHelperText } from "@mui/material";
 
 import { useStyles } from "./styles";
 

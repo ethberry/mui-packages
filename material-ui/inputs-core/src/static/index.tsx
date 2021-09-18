@@ -1,5 +1,5 @@
 import { FC, forwardRef } from "react";
-import { InputBaseComponentProps } from "@material-ui/core";
+import { InputBaseComponentProps } from "@mui/material";
 import { getIn, useFormikContext } from "formik";
 
 import { ITextInputProps, TextInput } from "../text";

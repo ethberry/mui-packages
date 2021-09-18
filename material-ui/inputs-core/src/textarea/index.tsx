@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { Theme, useMediaQuery } from "@material-ui/core";
+import { Theme, useMediaQuery } from "@mui/material";
 
 import { ITextInputProps, TextInput } from "../text";
 import { useStyles } from "./styles";

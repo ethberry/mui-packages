@@ -1,5 +1,5 @@
 import { render, cleanup } from "@testing-library/react";
-import { ThemeProvider, createTheme } from "@material-ui/core";
+import { ThemeProvider, createTheme } from "@mui/material";
 
 import { ButtonToolbar } from "./index";
 

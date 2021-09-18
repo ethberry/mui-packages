@@ -1,5 +1,5 @@
 import { FC, Children, cloneElement, ReactElement } from "react";
-import { Grid, ButtonProps } from "@material-ui/core";
+import { Grid, ButtonProps } from "@mui/material";
 import { Property } from "csstype";
 
 import { useStyles } from "./styles";

@@ -1,8 +1,8 @@
 import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
-import { TextField, TextFieldProps } from "@material-ui/core";
-import { DatePicker } from "@material-ui/lab";
+import { TextField, TextFieldProps } from "@mui/material";
+import { DatePicker } from "@mui/lab";
 import { addMinutes, subMinutes } from "date-fns";
 
 import { useStyles } from "./styles";
