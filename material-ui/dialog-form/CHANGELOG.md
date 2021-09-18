@@ -11,7 +11,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.9](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-dialog-form@0.1.20...@gemunion/mui-dialog-form@2.0.9) (2021-09-07)
+## [2.0.9](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@0.1.20...@gemunion/mui-dialog-form@2.0.9) (2021-09-07)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
 
@@ -19,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.8](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-dialog-form@2.0.7...@gemunion/mui-dialog-form@2.0.8) (2021-08-30)
+## [2.0.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@2.0.7...@gemunion/mui-dialog-form@2.0.8) (2021-08-30)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
 
@@ -27,26 +27,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.7](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-dialog-form@0.1.19...@gemunion/mui-dialog-form@2.0.7) (2021-08-29)
+## [2.0.7](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@0.1.19...@gemunion/mui-dialog-form@2.0.7) (2021-08-29)
 
 
 ### Bug Fixes
 
-* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
 
 
 
 
 
-## [2.0.6](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-dialog-form@2.0.5...@gemunion/mui-dialog-form@2.0.6) (2021-08-22)
-
-**Note:** Version bump only for package @gemunion/mui-dialog-form
-
-
-
-
-
-## [2.0.5](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-dialog-form@2.0.4...@gemunion/mui-dialog-form@2.0.5) (2021-08-22)
+## [2.0.6](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@2.0.5...@gemunion/mui-dialog-form@2.0.6) (2021-08-22)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
 
@@ -54,7 +46,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.4](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-dialog-form@2.0.3...@gemunion/mui-dialog-form@2.0.4) (2021-08-21)
+## [2.0.5](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@2.0.4...@gemunion/mui-dialog-form@2.0.5) (2021-08-22)
+
+**Note:** Version bump only for package @gemunion/mui-dialog-form
+
+
+
+
+
+## [2.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@2.0.3...@gemunion/mui-dialog-form@2.0.4) (2021-08-21)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
 
@@ -75,29 +75,29 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* publish action [skip-ci] ([0a7dc17](https://github.com/gemunion/material-ui-packages/commit/0a7dc17c291690b045871be266e5b48d8f896b33))
+* publish action [skip-ci] ([0a7dc17](https://github.com/gemunion/mui-packages/commit/0a7dc17c291690b045871be266e5b48d8f896b33))
 
 
 
 
 
-## [2.0.1](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-dialog-form@0.1.17...@gemunion/mui-dialog-form@2.0.1) (2021-08-16)
-
-
-### Bug Fixes
-
-* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
-
-
-
-
-
-## [1.0.1](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-dialog-form@0.1.17...@gemunion/mui-dialog-form@1.0.1) (2021-08-16)
+## [2.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@0.1.17...@gemunion/mui-dialog-form@2.0.1) (2021-08-16)
 
 
 ### Bug Fixes
 
-* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+
+
+
+## [1.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@0.1.17...@gemunion/mui-dialog-form@1.0.1) (2021-08-16)
+
+
+### Bug Fixes
+
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
 
 
 

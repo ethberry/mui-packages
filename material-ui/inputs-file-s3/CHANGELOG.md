@@ -3,19 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [2.0.9](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-file-s3@2.0.8...@gemunion/mui-inputs-file-s3@2.0.9) (2021-09-07)
+## [2.0.9](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@2.0.8...@gemunion/mui-inputs-file-s3@2.0.9) (2021-09-07)
 
 
 ### Bug Fixes
 
-* **deps:** update all non-major dependencies ([#52](https://github.com/gemunion/material-ui-packages/issues/52)) ([6c8f2e2](https://github.com/gemunion/material-ui-packages/commit/6c8f2e2360a76e51ff9b681a234fe9e2d4fe8668))
-* use new s3 format ([87604ba](https://github.com/gemunion/material-ui-packages/commit/87604baf037ff508d134dc4e009a900b2412d963))
+* **deps:** update all non-major dependencies ([#52](https://github.com/gemunion/mui-packages/issues/52)) ([6c8f2e2](https://github.com/gemunion/mui-packages/commit/6c8f2e2360a76e51ff9b681a234fe9e2d4fe8668))
+* use new s3 format ([87604ba](https://github.com/gemunion/mui-packages/commit/87604baf037ff508d134dc4e009a900b2412d963))
 
 
 
 
 
-## [2.0.8](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-file-s3@2.0.7...@gemunion/mui-inputs-file-s3@2.0.8) (2021-08-30)
+## [2.0.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@2.0.7...@gemunion/mui-inputs-file-s3@2.0.8) (2021-08-30)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-s3
 
@@ -23,31 +23,31 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.7](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-file-s3@0.2.20...@gemunion/mui-inputs-file-s3@2.0.7) (2021-08-29)
+## [2.0.7](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@0.2.20...@gemunion/mui-inputs-file-s3@2.0.7) (2021-08-29)
 
 
 ### Bug Fixes
 
-* **deps:** update all non-major dependencies ([74f0590](https://github.com/gemunion/material-ui-packages/commit/74f0590bca4e94124036fb2fc49efc8b15d3ab6f))
-* **deps:** update all non-major dependencies ([be30b79](https://github.com/gemunion/material-ui-packages/commit/be30b79bf815c8917a3eb187be21e788ecedca9f))
-* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+* **deps:** update all non-major dependencies ([74f0590](https://github.com/gemunion/mui-packages/commit/74f0590bca4e94124036fb2fc49efc8b15d3ab6f))
+* **deps:** update all non-major dependencies ([be30b79](https://github.com/gemunion/mui-packages/commit/be30b79bf815c8917a3eb187be21e788ecedca9f))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
 
 
 
 
 
-## [2.0.6](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-file-s3@2.0.5...@gemunion/mui-inputs-file-s3@2.0.6) (2021-08-22)
+## [2.0.6](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@2.0.5...@gemunion/mui-inputs-file-s3@2.0.6) (2021-08-22)
 
 
 ### Bug Fixes
 
-* **deps:** update all non-major dependencies ([74f0590](https://github.com/gemunion/material-ui-packages/commit/74f0590bca4e94124036fb2fc49efc8b15d3ab6f))
+* **deps:** update all non-major dependencies ([74f0590](https://github.com/gemunion/mui-packages/commit/74f0590bca4e94124036fb2fc49efc8b15d3ab6f))
 
 
 
 
 
-## [2.0.5](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-file-s3@2.0.4...@gemunion/mui-inputs-file-s3@2.0.5) (2021-08-22)
+## [2.0.5](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@2.0.4...@gemunion/mui-inputs-file-s3@2.0.5) (2021-08-22)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-s3
 
@@ -55,7 +55,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.4](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-file-s3@2.0.3...@gemunion/mui-inputs-file-s3@2.0.4) (2021-08-21)
+## [2.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@2.0.3...@gemunion/mui-inputs-file-s3@2.0.4) (2021-08-21)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-s3
 
@@ -76,29 +76,29 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* publish action [skip-ci] ([0a7dc17](https://github.com/gemunion/material-ui-packages/commit/0a7dc17c291690b045871be266e5b48d8f896b33))
+* publish action [skip-ci] ([0a7dc17](https://github.com/gemunion/mui-packages/commit/0a7dc17c291690b045871be266e5b48d8f896b33))
 
 
 
 
 
-## [2.0.1](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-file-s3@1.0.1...@gemunion/mui-inputs-file-s3@2.0.1) (2021-08-16)
-
-
-### Bug Fixes
-
-* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
-
-
-
-
-
-## [1.0.1](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-file-s3@1.0.1...@gemunion/mui-inputs-file-s3@1.0.1) (2021-08-16)
+## [2.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@1.0.1...@gemunion/mui-inputs-file-s3@2.0.1) (2021-08-16)
 
 
 ### Bug Fixes
 
-* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+
+
+
+
+
+## [1.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@1.0.1...@gemunion/mui-inputs-file-s3@1.0.1) (2021-08-16)
+
+
+### Bug Fixes
+
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
 
 
 

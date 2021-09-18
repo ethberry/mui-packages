@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [2.0.6](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-dialog-delete@0.1.18...@gemunion/mui-dialog-delete@2.0.6) (2021-09-07)
+## [2.0.6](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-delete@0.1.18...@gemunion/mui-dialog-delete@2.0.6) (2021-09-07)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-delete
 
@@ -11,7 +11,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.5](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-dialog-delete@3.0.0...@gemunion/mui-dialog-delete@2.0.5) (2021-08-30)
+## [2.0.5](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-delete@3.0.0...@gemunion/mui-dialog-delete@2.0.5) (2021-08-30)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-delete
 
@@ -19,16 +19,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [3.0.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-dialog-delete@0.1.17...@gemunion/mui-dialog-delete@3.0.0) (2021-08-29)
+# [3.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-delete@0.1.17...@gemunion/mui-dialog-delete@3.0.0) (2021-08-29)
 
 
 ### Bug Fixes
 
-* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
 
 
-* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/material-ui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
-* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/material-ui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/mui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/mui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
 
 
 ### BREAKING CHANGES
@@ -40,7 +40,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.3](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-dialog-delete@2.0.2...@gemunion/mui-dialog-delete@2.0.3) (2021-08-21)
+## [2.0.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-delete@2.0.2...@gemunion/mui-dialog-delete@2.0.3) (2021-08-21)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-delete
 
@@ -61,22 +61,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* publish action [skip-ci] ([0a7dc17](https://github.com/gemunion/material-ui-packages/commit/0a7dc17c291690b045871be266e5b48d8f896b33))
+* publish action [skip-ci] ([0a7dc17](https://github.com/gemunion/mui-packages/commit/0a7dc17c291690b045871be266e5b48d8f896b33))
 
 
 
 
 
-# [2.0.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-dialog-delete@0.1.15...@gemunion/mui-dialog-delete@2.0.0) (2021-08-16)
+# [2.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-delete@0.1.15...@gemunion/mui-dialog-delete@2.0.0) (2021-08-16)
 
 
 ### Bug Fixes
 
-* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
 
 
-* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/material-ui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
-* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/material-ui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/mui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/mui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
 
 
 ### BREAKING CHANGES

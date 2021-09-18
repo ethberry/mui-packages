@@ -3,29 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [2.0.7](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-markdown@2.0.6...@gemunion/mui-inputs-markdown@2.0.7) (2021-09-07)
+## [2.0.7](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-markdown@2.0.6...@gemunion/mui-inputs-markdown@2.0.7) (2021-09-07)
 
 
 ### Bug Fixes
 
-* **deps:** update all non-major dependencies ([#74](https://github.com/gemunion/material-ui-packages/issues/74)) ([63e053d](https://github.com/gemunion/material-ui-packages/commit/63e053d5e72d4e012b52eaccf2de6632e2d9b882))
+* **deps:** update all non-major dependencies ([#74](https://github.com/gemunion/mui-packages/issues/74)) ([63e053d](https://github.com/gemunion/mui-packages/commit/63e053d5e72d4e012b52eaccf2de6632e2d9b882))
 
 
 
 
 
-## [2.0.6](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-markdown@2.0.5...@gemunion/mui-inputs-markdown@2.0.6) (2021-09-07)
+## [2.0.6](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-markdown@2.0.5...@gemunion/mui-inputs-markdown@2.0.6) (2021-09-07)
 
 
 ### Bug Fixes
 
-* **deps:** update dependency use-debounce to v7 ([939ffa3](https://github.com/gemunion/material-ui-packages/commit/939ffa35a122d918b49ed93ccb4a9a150b985734))
+* **deps:** update dependency use-debounce to v7 ([939ffa3](https://github.com/gemunion/mui-packages/commit/939ffa35a122d918b49ed93ccb4a9a150b985734))
 
 
 
 
 
-## [2.0.5](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-markdown@3.0.0...@gemunion/mui-inputs-markdown@2.0.5) (2021-08-30)
+## [2.0.5](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-markdown@3.0.0...@gemunion/mui-inputs-markdown@2.0.5) (2021-08-30)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-markdown
 
@@ -33,20 +33,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [3.0.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-markdown@0.1.18...@gemunion/mui-inputs-markdown@3.0.0) (2021-08-29)
+# [3.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-markdown@0.1.18...@gemunion/mui-inputs-markdown@3.0.0) (2021-08-29)
 
 
 ### Bug Fixes
 
-* **deps:** update all non-major dependencies ([be30b79](https://github.com/gemunion/material-ui-packages/commit/be30b79bf815c8917a3eb187be21e788ecedca9f))
-* **deps:** update dependency @gemunion/mui-rte to v1 ([#29](https://github.com/gemunion/material-ui-packages/issues/29)) ([53d402e](https://github.com/gemunion/material-ui-packages/commit/53d402e9b957918bc7c2748d51ab6347ba111a30))
-* **deps:** update dependency @gemunion/mui-rte to v1.0.1 ([e4ec737](https://github.com/gemunion/material-ui-packages/commit/e4ec73729fa1bffb371bbb738ddcab5d7afceb8c))
-* markdown input ([1afc669](https://github.com/gemunion/material-ui-packages/commit/1afc669347fae1cb786e19e4f6338b7ea063bf89))
-* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+* **deps:** update all non-major dependencies ([be30b79](https://github.com/gemunion/mui-packages/commit/be30b79bf815c8917a3eb187be21e788ecedca9f))
+* **deps:** update dependency @gemunion/mui-rte to v1 ([#29](https://github.com/gemunion/mui-packages/issues/29)) ([53d402e](https://github.com/gemunion/mui-packages/commit/53d402e9b957918bc7c2748d51ab6347ba111a30))
+* **deps:** update dependency @gemunion/mui-rte to v1.0.1 ([e4ec737](https://github.com/gemunion/mui-packages/commit/e4ec73729fa1bffb371bbb738ddcab5d7afceb8c))
+* markdown input ([1afc669](https://github.com/gemunion/mui-packages/commit/1afc669347fae1cb786e19e4f6338b7ea063bf89))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
 
 
-* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/material-ui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
-* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/material-ui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/mui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/mui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
 
 
 ### BREAKING CHANGES
@@ -58,12 +58,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.3](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-markdown@2.0.2...@gemunion/mui-inputs-markdown@2.0.3) (2021-08-22)
+## [2.0.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-markdown@2.0.2...@gemunion/mui-inputs-markdown@2.0.3) (2021-08-22)
 
 
 ### Bug Fixes
 
-* markdown input ([1afc669](https://github.com/gemunion/material-ui-packages/commit/1afc669347fae1cb786e19e4f6338b7ea063bf89))
+* markdown input ([1afc669](https://github.com/gemunion/mui-packages/commit/1afc669347fae1cb786e19e4f6338b7ea063bf89))
 
 
 
@@ -82,22 +82,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* publish action [skip-ci] ([0a7dc17](https://github.com/gemunion/material-ui-packages/commit/0a7dc17c291690b045871be266e5b48d8f896b33))
+* publish action [skip-ci] ([0a7dc17](https://github.com/gemunion/mui-packages/commit/0a7dc17c291690b045871be266e5b48d8f896b33))
 
 
 
 
 
-# [2.0.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-markdown@0.1.16...@gemunion/mui-inputs-markdown@2.0.0) (2021-08-16)
+# [2.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-markdown@0.1.16...@gemunion/mui-inputs-markdown@2.0.0) (2021-08-16)
 
 
 ### Bug Fixes
 
-* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
 
 
-* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/material-ui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
-* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/material-ui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/mui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/mui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
 
 
 ### BREAKING CHANGES

@@ -5,7 +5,7 @@
     "url": "https://trejgun.github.io/"
   },
   "bugs": {
-    "url": "https://github.com/gemunion/material-ui-packages/issues"
+    "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "description": "react widget",
   "dependencies": {
@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gemunion/material-ui-packages"
+    "url": "https://github.com/gemunion/mui-packages"
   },
   "scripts": {
     "build": "tsc",

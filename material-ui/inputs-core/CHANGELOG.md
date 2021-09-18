@@ -8,21 +8,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* fix styles for SelectInput and SwitchInput ([57fe26b](https://github.com/gemunion/material-ui-packages/commit/57fe26bee0b1a38b07fd5675e2f721e1d497c22e))
+* fix styles for SelectInput and SwitchInput ([57fe26b](https://github.com/gemunion/mui-packages/commit/57fe26bee0b1a38b07fd5675e2f721e1d497c22e))
 
 
 
 
 
-## [2.0.8](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-core@0.1.19...@gemunion/mui-inputs-core@2.0.8) (2021-09-07)
-
-**Note:** Version bump only for package @gemunion/mui-inputs-core
-
-
-
-
-
-## [2.0.7](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-core@3.0.0...@gemunion/mui-inputs-core@2.0.7) (2021-08-30)
+## [2.0.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@0.1.19...@gemunion/mui-inputs-core@2.0.8) (2021-09-07)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core
 
@@ -30,20 +22,28 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [3.0.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-core@0.1.18...@gemunion/mui-inputs-core@3.0.0) (2021-08-29)
+## [2.0.7](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@3.0.0...@gemunion/mui-inputs-core@2.0.7) (2021-08-30)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-core
+
+
+
+
+
+# [3.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@0.1.18...@gemunion/mui-inputs-core@3.0.0) (2021-08-29)
 
 
 ### Bug Fixes
 
-* add spacing to text input ([94e8b3b](https://github.com/gemunion/material-ui-packages/commit/94e8b3b72d05ba0e5b7a9386c87022b9353b137b))
-* move autocomplete input ([83ae271](https://github.com/gemunion/material-ui-packages/commit/83ae271777fb23bd37c11f65d0c1821f81fede43))
-* static input ([e571da8](https://github.com/gemunion/material-ui-packages/commit/e571da8409d7b5df4468a3dbd2cd82c51aafe3db))
-* styles ([a65c1b7](https://github.com/gemunion/material-ui-packages/commit/a65c1b72b303b24a10e8602725b44d496a17d207))
-* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+* add spacing to text input ([94e8b3b](https://github.com/gemunion/mui-packages/commit/94e8b3b72d05ba0e5b7a9386c87022b9353b137b))
+* move autocomplete input ([83ae271](https://github.com/gemunion/mui-packages/commit/83ae271777fb23bd37c11f65d0c1821f81fede43))
+* static input ([e571da8](https://github.com/gemunion/mui-packages/commit/e571da8409d7b5df4468a3dbd2cd82c51aafe3db))
+* styles ([a65c1b7](https://github.com/gemunion/mui-packages/commit/a65c1b72b303b24a10e8602725b44d496a17d207))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
 
 
-* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/material-ui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
-* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/material-ui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/mui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/mui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
 
 
 ### BREAKING CHANGES
@@ -55,35 +55,35 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.5](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-core@2.0.4...@gemunion/mui-inputs-core@2.0.5) (2021-08-22)
+## [2.0.5](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@2.0.4...@gemunion/mui-inputs-core@2.0.5) (2021-08-22)
 
 
 ### Bug Fixes
 
-* add spacing to text input ([94e8b3b](https://github.com/gemunion/material-ui-packages/commit/94e8b3b72d05ba0e5b7a9386c87022b9353b137b))
+* add spacing to text input ([94e8b3b](https://github.com/gemunion/mui-packages/commit/94e8b3b72d05ba0e5b7a9386c87022b9353b137b))
 
 
 
 
 
-## [2.0.4](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-core@2.0.3...@gemunion/mui-inputs-core@2.0.4) (2021-08-22)
-
-
-### Bug Fixes
-
-* move autocomplete input ([83ae271](https://github.com/gemunion/material-ui-packages/commit/83ae271777fb23bd37c11f65d0c1821f81fede43))
-* static input ([e571da8](https://github.com/gemunion/material-ui-packages/commit/e571da8409d7b5df4468a3dbd2cd82c51aafe3db))
-
-
-
-
-
-## [2.0.3](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-core@2.0.2...@gemunion/mui-inputs-core@2.0.3) (2021-08-21)
+## [2.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@2.0.3...@gemunion/mui-inputs-core@2.0.4) (2021-08-22)
 
 
 ### Bug Fixes
 
-* styles ([a65c1b7](https://github.com/gemunion/material-ui-packages/commit/a65c1b72b303b24a10e8602725b44d496a17d207))
+* move autocomplete input ([83ae271](https://github.com/gemunion/mui-packages/commit/83ae271777fb23bd37c11f65d0c1821f81fede43))
+* static input ([e571da8](https://github.com/gemunion/mui-packages/commit/e571da8409d7b5df4468a3dbd2cd82c51aafe3db))
+
+
+
+
+
+## [2.0.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@2.0.2...@gemunion/mui-inputs-core@2.0.3) (2021-08-21)
+
+
+### Bug Fixes
+
+* styles ([a65c1b7](https://github.com/gemunion/mui-packages/commit/a65c1b72b303b24a10e8602725b44d496a17d207))
 
 
 
@@ -102,22 +102,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* publish action [skip-ci] ([0a7dc17](https://github.com/gemunion/material-ui-packages/commit/0a7dc17c291690b045871be266e5b48d8f896b33))
+* publish action [skip-ci] ([0a7dc17](https://github.com/gemunion/mui-packages/commit/0a7dc17c291690b045871be266e5b48d8f896b33))
 
 
 
 
 
-# [2.0.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-core@0.1.16...@gemunion/mui-inputs-core@2.0.0) (2021-08-16)
+# [2.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@0.1.16...@gemunion/mui-inputs-core@2.0.0) (2021-08-16)
 
 
 ### Bug Fixes
 
-* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
 
 
-* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/material-ui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
-* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/material-ui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/mui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/mui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
 
 
 ### BREAKING CHANGES

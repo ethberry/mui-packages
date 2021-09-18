@@ -11,23 +11,23 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [2.1.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-image-s3@0.1.29...@gemunion/mui-inputs-image-s3@2.1.0) (2021-09-07)
+# [2.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-s3@0.1.29...@gemunion/mui-inputs-image-s3@2.1.0) (2021-09-07)
 
 
 ### Bug Fixes
 
-* **deps:** update all non-major dependencies ([#52](https://github.com/gemunion/material-ui-packages/issues/52)) ([6c8f2e2](https://github.com/gemunion/material-ui-packages/commit/6c8f2e2360a76e51ff9b681a234fe9e2d4fe8668))
+* **deps:** update all non-major dependencies ([#52](https://github.com/gemunion/mui-packages/issues/52)) ([6c8f2e2](https://github.com/gemunion/mui-packages/commit/6c8f2e2360a76e51ff9b681a234fe9e2d4fe8668))
 
 
 ### Features
 
-* update firebase ([2c7a548](https://github.com/gemunion/material-ui-packages/commit/2c7a5489e01278b263839a793676da2667893d97))
+* update firebase ([2c7a548](https://github.com/gemunion/mui-packages/commit/2c7a5489e01278b263839a793676da2667893d97))
 
 
 
 
 
-## [2.0.8](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-image-s3@3.0.0...@gemunion/mui-inputs-image-s3@2.0.8) (2021-08-30)
+## [2.0.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-s3@3.0.0...@gemunion/mui-inputs-image-s3@2.0.8) (2021-08-30)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-image-s3
 
@@ -35,21 +35,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [3.0.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-image-s3@0.1.28...@gemunion/mui-inputs-image-s3@3.0.0) (2021-08-29)
+# [3.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-s3@0.1.28...@gemunion/mui-inputs-image-s3@3.0.0) (2021-08-29)
 
 
 ### Bug Fixes
 
-* deps ([6ea3740](https://github.com/gemunion/material-ui-packages/commit/6ea3740b9ceb00ef44428b180ea8468ffaeebe9b))
-* **deps:** update all non-major dependencies ([74f0590](https://github.com/gemunion/material-ui-packages/commit/74f0590bca4e94124036fb2fc49efc8b15d3ab6f))
-* **deps:** update all non-major dependencies ([be30b79](https://github.com/gemunion/material-ui-packages/commit/be30b79bf815c8917a3eb187be21e788ecedca9f))
-* proper styles for image inputs ([388437f](https://github.com/gemunion/material-ui-packages/commit/388437f94ed7554e82bfe44b64f888a8ab36c508))
-* styles ([a65c1b7](https://github.com/gemunion/material-ui-packages/commit/a65c1b72b303b24a10e8602725b44d496a17d207))
-* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+* deps ([6ea3740](https://github.com/gemunion/mui-packages/commit/6ea3740b9ceb00ef44428b180ea8468ffaeebe9b))
+* **deps:** update all non-major dependencies ([74f0590](https://github.com/gemunion/mui-packages/commit/74f0590bca4e94124036fb2fc49efc8b15d3ab6f))
+* **deps:** update all non-major dependencies ([be30b79](https://github.com/gemunion/mui-packages/commit/be30b79bf815c8917a3eb187be21e788ecedca9f))
+* proper styles for image inputs ([388437f](https://github.com/gemunion/mui-packages/commit/388437f94ed7554e82bfe44b64f888a8ab36c508))
+* styles ([a65c1b7](https://github.com/gemunion/mui-packages/commit/a65c1b72b303b24a10e8602725b44d496a17d207))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
 
 
-* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/material-ui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
-* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/material-ui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/mui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/mui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
 
 
 ### BREAKING CHANGES
@@ -61,29 +61,29 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.6](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-image-s3@2.0.5...@gemunion/mui-inputs-image-s3@2.0.6) (2021-08-22)
+## [2.0.6](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-s3@2.0.5...@gemunion/mui-inputs-image-s3@2.0.6) (2021-08-22)
 
 
 ### Bug Fixes
 
-* **deps:** update all non-major dependencies ([74f0590](https://github.com/gemunion/material-ui-packages/commit/74f0590bca4e94124036fb2fc49efc8b15d3ab6f))
+* **deps:** update all non-major dependencies ([74f0590](https://github.com/gemunion/mui-packages/commit/74f0590bca4e94124036fb2fc49efc8b15d3ab6f))
 
 
 
 
 
-## [2.0.5](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-image-s3@2.0.4...@gemunion/mui-inputs-image-s3@2.0.5) (2021-08-22)
+## [2.0.5](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-s3@2.0.4...@gemunion/mui-inputs-image-s3@2.0.5) (2021-08-22)
 
 
 ### Bug Fixes
 
-* proper styles for image inputs ([388437f](https://github.com/gemunion/material-ui-packages/commit/388437f94ed7554e82bfe44b64f888a8ab36c508))
+* proper styles for image inputs ([388437f](https://github.com/gemunion/mui-packages/commit/388437f94ed7554e82bfe44b64f888a8ab36c508))
 
 
 
 
 
-## [2.0.4](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-image-s3@2.0.3...@gemunion/mui-inputs-image-s3@2.0.4) (2021-08-22)
+## [2.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-s3@2.0.3...@gemunion/mui-inputs-image-s3@2.0.4) (2021-08-22)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-image-s3
 
@@ -91,12 +91,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.3](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-image-s3@2.0.2...@gemunion/mui-inputs-image-s3@2.0.3) (2021-08-21)
+## [2.0.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-s3@2.0.2...@gemunion/mui-inputs-image-s3@2.0.3) (2021-08-21)
 
 
 ### Bug Fixes
 
-* styles ([a65c1b7](https://github.com/gemunion/material-ui-packages/commit/a65c1b72b303b24a10e8602725b44d496a17d207))
+* styles ([a65c1b7](https://github.com/gemunion/mui-packages/commit/a65c1b72b303b24a10e8602725b44d496a17d207))
 
 
 
@@ -115,22 +115,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* publish action [skip-ci] ([0a7dc17](https://github.com/gemunion/material-ui-packages/commit/0a7dc17c291690b045871be266e5b48d8f896b33))
+* publish action [skip-ci] ([0a7dc17](https://github.com/gemunion/mui-packages/commit/0a7dc17c291690b045871be266e5b48d8f896b33))
 
 
 
 
 
-# [2.0.0](https://github.com/gemunion/material-ui-packages/compare/@gemunion/mui-inputs-image-s3@0.1.26...@gemunion/mui-inputs-image-s3@2.0.0) (2021-08-16)
+# [2.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-s3@0.1.26...@gemunion/mui-inputs-image-s3@2.0.0) (2021-08-16)
 
 
 ### Bug Fixes
 
-* version ([bcdd526](https://github.com/gemunion/material-ui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
+* version ([bcdd526](https://github.com/gemunion/mui-packages/commit/bcdd5261b166d4f1e350ea18859ccdd16d9615a3))
 
 
-* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/material-ui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
-* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/material-ui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
+* feat!: mui4 -> 5 ([25d490e](https://github.com/gemunion/mui-packages/commit/25d490ea05a098906581a982d48bdc9118909d00))
+* feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/mui-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
 
 
 ### BREAKING CHANGES

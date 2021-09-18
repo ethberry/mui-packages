@@ -46,7 +46,7 @@
   "name": "@gemunion/mui-packages",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gemunion/material-ui-packages"
+    "url": "https://github.com/gemunion/mui-packages"
   },
   "scripts": {
     "bootstrap": "lerna bootstrap --hoist",
