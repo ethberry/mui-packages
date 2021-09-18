@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-markdown@3.0.0...@gemunion/mui-inputs-markdown@3.0.1) (2021-09-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @gemunion/mui-rte to v2 ([#84](https://github.com/gemunion/mui-packages/issues/84)) ([c0b8dfc](https://github.com/gemunion/mui-packages/commit/c0b8dfc8fd9205259747c17d5c8e33ab4a4b88e3))
+
+
+
+
+
 # 3.0.0 (2021-09-18)
 
 
