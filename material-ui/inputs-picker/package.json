@@ -15,7 +15,7 @@
     "@mui/lab": "5.0.0-alpha.47",
     "@mui/material": "5.0.0",
     "@mui/styles": "5.0.0",
-    "@types/react": "17.0.21",
+    "@types/react": "17.0.22",
     "formik": "2.2.9",
     "react": "17.0.2",
     "react-intl": "5.20.10"
