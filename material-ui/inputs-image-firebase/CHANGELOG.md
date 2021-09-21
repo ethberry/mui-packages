@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@3.0.1...@gemunion/mui-inputs-image-firebase@3.1.0) (2021-09-21)
+
+
+### Features
+
+* use url hooks ([0292a3b](https://github.com/gemunion/mui-packages/commit/0292a3b24dc28db96546be8859ec855e2a90f25c))
+
+
+
+
+
 ## [3.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@3.0.0...@gemunion/mui-inputs-image-firebase@3.0.1) (2021-09-21)
 
 
