@@ -18,11 +18,10 @@ import path from "path";
 import { TextInput } from "@gemunion/mui-inputs-core";
 import { ProgressOverlay } from "@gemunion/mui-progress";
 import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
-import { FirebaseFileInput } from "@gemunion/mui-inputs-file-firebase";
+import { FirebaseFileInput, useDeleteUrl } from "@gemunion/mui-inputs-file-firebase";
 import { openUrlOnClick } from "@gemunion/popup";
 
 import { useStyles } from "./styles";
-import { useDeleteUrl } from "../utils";
 
 export interface IPhotoInputProps {
   name: string;

@@ -11,7 +11,7 @@ export interface IFirebaseFileInputProps extends Omit<IFileInputProps, "onChange
 export const FirebaseFileInput: FC<IFirebaseFileInputProps> = props => {
   const { onChange, bucket, ...rest } = props;
 
-  const uploadUrl = useUploadUrl()
+  const uploadUrl = useUploadUrl(bucket);
 
   const handleChange = async (files: File[]): Promise<void> => {
     onChange(await uploadUrl(files));
