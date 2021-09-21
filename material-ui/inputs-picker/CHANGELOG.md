@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@3.0.0...@gemunion/mui-inputs-picker@3.0.1) (2021-09-21)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#85](https://github.com/gemunion/mui-packages/issues/85)) ([558f9ce](https://github.com/gemunion/mui-packages/commit/558f9ce3526e625cea280b7b548d48b3cb78c784))
+
+
+
+
+
 # 3.0.0 (2021-09-18)
 
 
