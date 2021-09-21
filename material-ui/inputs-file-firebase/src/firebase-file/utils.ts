@@ -1,8 +1,9 @@
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
-import { getStorage, ref, deleteObject } from "firebase/storage";
+import { deleteObject, getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 
 import app from "@gemunion/firebase";
+import { v4 } from "uuid";
 
 export const useDeleteUrl = (bucket?: string): ((url: string) => Promise<void>) => {
   const { enqueueSnackbar } = useSnackbar();
@@ -23,5 +24,19 @@ export const useDeleteUrl = (bucket?: string): ((url: string) => Promise<void>) 
           enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
         }
       });
+  };
+};
+
+export const useUploadUrl = (bucket?: string): ((files: File[]) => Promise<Array<string>>) => {
+  const storage = getStorage(app, bucket);
+
+  return async (files: File[]): Promise<Array<string>> => {
+    return Promise.all(
+      files.map(async file => {
+        const storageRef = ref(storage, v4());
+        const snapshot = await uploadBytes(storageRef, file);
+        return getDownloadURL(snapshot.ref);
+      }),
+    );
   };
 };
