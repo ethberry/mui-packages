@@ -4,7 +4,6 @@ on:
   pull_request:
     branches:
       - master
-      - mui5
     types: [closed]
 
 jobs:
