@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@3.0.1...@gemunion/mui-inputs-entity@3.0.2) (2021-09-26)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#86](https://github.com/gemunion/mui-packages/issues/86)) ([27138c5](https://github.com/gemunion/mui-packages/commit/27138c58403eba0755f342457b8f74bc0010f5fb))
+* **deps:** update all non-major dependencies ([#87](https://github.com/gemunion/mui-packages/issues/87)) ([0d1b8b0](https://github.com/gemunion/mui-packages/commit/0d1b8b0c8b541ff8fd1104fa6119a71e5911a9ff))
+
+
+
+
+
 ## [3.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@3.0.0...@gemunion/mui-inputs-entity@3.0.1) (2021-09-21)
 
 

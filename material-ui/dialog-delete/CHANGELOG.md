@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-delete@3.0.1...@gemunion/mui-dialog-delete@3.0.2) (2021-09-26)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#86](https://github.com/gemunion/mui-packages/issues/86)) ([27138c5](https://github.com/gemunion/mui-packages/commit/27138c58403eba0755f342457b8f74bc0010f5fb))
+
+
+
+
+
 ## [3.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-delete@3.0.0...@gemunion/mui-dialog-delete@3.0.1) (2021-09-21)
 
 
