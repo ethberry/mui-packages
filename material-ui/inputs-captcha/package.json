@@ -12,9 +12,9 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.0.0",
-    "@mui/styles": "5.0.0",
-    "@types/react": "17.0.22",
+    "@mui/material": "5.0.1",
+    "@mui/styles": "5.0.1",
+    "@types/react": "17.0.24",
     "@types/react-google-recaptcha": "2.1.2",
     "formik": "2.2.9",
     "react": "17.0.2",
