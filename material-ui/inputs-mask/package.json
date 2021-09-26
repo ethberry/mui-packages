@@ -14,9 +14,9 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.0.0",
+    "@mui/material": "5.0.1",
     "@storybook/react": "6.3.8",
-    "@types/react": "17.0.22",
+    "@types/react": "17.0.24",
     "formik": "2.2.9",
     "react": "17.0.2",
     "react-intl": "5.20.10"
