@@ -7,6 +7,7 @@ import { AutocompleteInput, IAutocompleteInputProps } from "./index";
 
 const i18n = {
   "form.labels.autocomplete": "Autocomplete",
+  "form.placeholders.autocomplete": "Star w00t",
 };
 
 export default {
