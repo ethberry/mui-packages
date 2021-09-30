@@ -11,6 +11,7 @@ import { useStyles } from "./styles";
 export interface IAutocompleteOption {
   id: string | number;
   title: string;
+
   [key: string]: string | number;
 }
 
@@ -20,11 +21,12 @@ export interface IEntityInputProps {
   multiple?: boolean;
   getTitle?: (item: any) => string;
   data?: Record<string, any>;
+  variant?: "standard" | "filled" | "outlined";
   onChange?: (event: ChangeEvent<unknown>, options: Array<IAutocompleteOption> | IAutocompleteOption | null) => void;
 }
 
 export const EntityInput: FC<IEntityInputProps> = props => {
-  const { name, controller, getTitle, multiple, data, onChange } = props;
+  const { name, controller, getTitle, multiple, data, variant = "standard", onChange } = props;
   const suffix = name.split(".").pop() as string;
   const classes = useStyles();
 
@@ -94,6 +96,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
               placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}
               error={!!error}
               helperText={localizedHelperText}
+              variant={variant}
               fullWidth
             />
           )}
@@ -123,6 +126,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
               placeholder={localizedPlaceholder}
               error={error && touched}
               helperText={localizedHelperText}
+              variant={variant}
               fullWidth
             />
           )}
