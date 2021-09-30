@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { FormattedMessage } from "react-intl";
-import { Alert } from "@mui/lab";
+import { Alert } from "@mui/material";
 import { useParams } from "react-router";
 
 import { useStyles } from "./styles";
