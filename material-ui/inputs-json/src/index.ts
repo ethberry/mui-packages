@@ -1,1 +1,1 @@
-export { JSONInput } from "./json";
+export { JsonInput } from "./json";
