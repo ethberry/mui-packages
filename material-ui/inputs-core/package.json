@@ -7,6 +7,9 @@
   "bugs": {
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
+  "dependencies": {
+    "@gemunion/yup-rules": "0.1.27"
+  },
   "description": "react widget",
   "devDependencies": {
     "@mui/icons-material": "5.0.1",

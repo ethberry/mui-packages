@@ -1,5 +1,6 @@
 export * from "./autocomplete";
 export * from "./checkbox";
+export * from "./json";
 export * from "./number";
 export * from "./password";
 export * from "./search";

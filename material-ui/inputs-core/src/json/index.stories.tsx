@@ -14,12 +14,12 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Json",
+  title: "Example/Input/Json",
   component: JsonInput,
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <Formik onSubmit={() => {}} initialValues={{ json: '' }}>
+        <Formik onSubmit={() => {}} initialValues={{ json: "" }}>
           <Story />
         </Formik>
       </IntlProvider>
