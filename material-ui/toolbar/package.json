@@ -12,14 +12,14 @@
     "csstype": "3.0.9"
   },
   "devDependencies": {
-    "@mui/material": "5.0.1",
+    "@mui/material": "5.0.2",
     "@mui/styles": "5.0.1",
     "@testing-library/jest-dom": "5.14.1",
-    "@testing-library/react": "12.1.0",
+    "@testing-library/react": "12.1.1",
     "@types/jest": "27.0.2",
-    "@types/react": "17.0.24",
-    "jest": "27.2.2",
-    "jest-environment-jsdom": "27.2.2",
+    "@types/react": "17.0.26",
+    "jest": "27.2.4",
+    "jest-environment-jsdom": "27.2.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "ts-jest": "27.0.5"
