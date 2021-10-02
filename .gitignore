@@ -1,4 +1,6 @@
 # Project
+dist/
+coverage/
 /.storybook
 
 # IDE
