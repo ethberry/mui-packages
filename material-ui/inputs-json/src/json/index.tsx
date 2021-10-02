@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, FocusEvent } from "react";
 import { TextField, TextFieldProps } from "@mui/material";
 import { getIn, useFormikContext } from "formik";
 import { useIntl } from "react-intl";
@@ -24,7 +24,7 @@ export const JsonInput: FC<TextFieldProps & { name: string }> = props => {
 
   const inputProps = {
     defaultValue: value,
-    onBlur: (event: any) => {
+    onBlur: (event: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       const { value } = event.target;
 
       try {
