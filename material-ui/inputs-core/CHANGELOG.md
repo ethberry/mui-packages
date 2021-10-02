@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@3.0.2...@gemunion/mui-inputs-core@3.1.0) (2021-10-02)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#92](https://github.com/gemunion/mui-packages/issues/92)) ([32e82d4](https://github.com/gemunion/mui-packages/commit/32e82d4a2b11746abd2b51db3f5049057d50611b))
+
+
+### Features
+
+* implement mui-inputs-json ([#88](https://github.com/gemunion/mui-packages/issues/88)) ([ff2cf29](https://github.com/gemunion/mui-packages/commit/ff2cf296e3615431a20711baa6370e40d1dcc5f0))
+
+
+
+
+
 ## [3.0.2](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@3.0.1...@gemunion/mui-inputs-core@3.0.2) (2021-09-26)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.2](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@4.0.1...@gemunion/common-pages@4.0.2) (2021-10-02)
+
+
+### Bug Fixes
+
+* Alert ([0deadca](https://github.com/gemunion/mui-packages/commit/0deadcac6d4dbd4943c860ed624136b475366e6e))
+* **deps:** update all non-major dependencies ([#92](https://github.com/gemunion/mui-packages/issues/92)) ([32e82d4](https://github.com/gemunion/mui-packages/commit/32e82d4a2b11746abd2b51db3f5049057d50611b))
+
+
+
+
+
 ## [4.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@4.0.0...@gemunion/common-pages@4.0.1) (2021-09-26)
 
 
