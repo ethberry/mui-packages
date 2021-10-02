@@ -14,13 +14,13 @@
   "description": "react widget",
   "devDependencies": {
     "@mui/icons-material": "5.0.1",
-    "@mui/material": "5.0.1",
+    "@mui/material": "5.0.2",
     "@mui/styles": "5.0.1",
-    "@storybook/react": "6.3.8",
-    "@types/react": "17.0.24",
+    "@storybook/react": "6.3.9",
+    "@types/react": "17.0.26",
     "notistack": "1.0.6-next.3",
     "react": "17.0.2",
-    "react-intl": "5.20.10"
+    "react-intl": "5.20.12"
   },
   "engines": {
     "node": ">=12.13"

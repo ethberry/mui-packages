@@ -10,9 +10,9 @@
   "dependencies": {
     "@gemunion/firebase": "1.0.4",
     "@gemunion/mui-inputs-file": "3.0.2",
-    "firebase": "9.1.0",
+    "firebase": "9.1.1",
     "notistack": "1.0.6-next.3",
-    "react-intl": "5.20.10",
+    "react-intl": "5.20.12",
     "uuid": "8.3.2"
   },
   "description": "react widget",
