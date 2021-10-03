@@ -22,6 +22,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Add @scope & token to npmrc
         run: |
+          echo "@gemunion:registry=https://npm.pkg.github.com/" >> .npmrc
           echo "//npm.pkg.github.com/:_authToken=$GITHUBTOKEN" >> .npmrc
         env:
           GITHUBTOKEN: ${{ secrets.GITHUBTOKEN }}
