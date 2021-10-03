@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@3.1.0...@gemunion/mui-inputs-core@3.1.1) (2021-10-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @gemunion/yup-rules to v0.2.2 ([#93](https://github.com/gemunion/mui-packages/issues/93)) ([17a61b3](https://github.com/gemunion/mui-packages/commit/17a61b3009487e5076690d66537489110d794374))
+
+
+
+
+
 # [3.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@3.0.2...@gemunion/mui-inputs-core@3.1.0) (2021-10-02)
 
 

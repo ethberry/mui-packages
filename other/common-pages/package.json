@@ -12,7 +12,7 @@
     "@gemunion/mui-form": "3.0.3",
     "@gemunion/mui-icons-social-networks": "3.0.2",
     "@gemunion/mui-inputs-captcha": "3.0.3",
-    "@gemunion/mui-inputs-core": "3.1.0",
+    "@gemunion/mui-inputs-core": "3.1.1",
     "@gemunion/mui-page-header": "3.0.3",
     "@gemunion/mui-progress": "3.0.2",
     "@gemunion/mui-toolbar": "3.0.3",
@@ -75,5 +75,5 @@
   "sideEffects": false,
   "title": "-=TrejGun=-",
   "types": "./dist/index.d.ts",
-  "version": "4.0.2"
+  "version": "4.0.3"
 }

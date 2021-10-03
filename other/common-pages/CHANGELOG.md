@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.3](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@4.0.2...@gemunion/common-pages@4.0.3) (2021-10-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @gemunion/yup-rules to v0.2.2 ([#93](https://github.com/gemunion/mui-packages/issues/93)) ([17a61b3](https://github.com/gemunion/mui-packages/commit/17a61b3009487e5076690d66537489110d794374))
+
+
+
+
+
 ## [4.0.2](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@4.0.1...@gemunion/common-pages@4.0.2) (2021-10-02)
 
 
