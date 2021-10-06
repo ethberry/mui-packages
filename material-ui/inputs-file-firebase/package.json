@@ -11,7 +11,7 @@
     "@gemunion/firebase": "1.0.5",
     "@gemunion/mui-inputs-file": "3.0.3",
     "firebase": "9.1.1",
-    "notistack": "1.0.6-next.3",
+    "notistack": "2.0.2",
     "react-intl": "5.20.12",
     "uuid": "8.3.2"
   },
