@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.4 (2021-10-09)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#94](https://github.com/gemunion/mui-packages/issues/94)) ([e73dcf6](https://github.com/gemunion/mui-packages/commit/e73dcf673a5250f76a46209fdcb887b18324ddeb))
+
+
+
+
+
 ## [3.0.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-lab@3.0.2...@gemunion/mui-inputs-lab@3.0.3) (2021-10-02)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-lab

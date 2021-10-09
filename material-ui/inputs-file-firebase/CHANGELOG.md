@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.2.0 (2021-10-09)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#94](https://github.com/gemunion/mui-packages/issues/94)) ([e73dcf6](https://github.com/gemunion/mui-packages/commit/e73dcf673a5250f76a46209fdcb887b18324ddeb))
+* notistack should be devDep ([e4dc637](https://github.com/gemunion/mui-packages/commit/e4dc637573471f39c45e621b42e029cb573ef808))
+* notistack should be peerDep ([2fb4a45](https://github.com/gemunion/mui-packages/commit/2fb4a4517de8fce980e30c7d1e175d94ca08ecad))
+
+
+### Features
+
+* manually update notistack ([3f3ef56](https://github.com/gemunion/mui-packages/commit/3f3ef563b6f70962dc30d0f326f7d866742cdc99))
+
+
+
+
+
 ## [3.1.2](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-firebase@3.1.1...@gemunion/mui-inputs-file-firebase@3.1.2) (2021-10-02)
 
 

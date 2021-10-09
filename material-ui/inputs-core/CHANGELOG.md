@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.2](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@3.1.1...@gemunion/mui-inputs-core@3.1.2) (2021-10-09)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#94](https://github.com/gemunion/mui-packages/issues/94)) ([e73dcf6](https://github.com/gemunion/mui-packages/commit/e73dcf673a5250f76a46209fdcb887b18324ddeb))
+* warning about rows and minRows/maxRows ([f2649f2](https://github.com/gemunion/mui-packages/commit/f2649f294b6a3ecc6677e12af70fe05cfeb666f7))
+
+
+
+
+
 ## [3.1.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@3.1.0...@gemunion/mui-inputs-core@3.1.1) (2021-10-03)
 
 
