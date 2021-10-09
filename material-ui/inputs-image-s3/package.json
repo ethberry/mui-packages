@@ -13,7 +13,7 @@
     "@gemunion/mui-inputs-file-s3": "3.0.4",
     "@gemunion/mui-progress": "3.0.3",
     "@gemunion/popup": "0.0.15",
-    "@gemunion/provider-api": "4.0.11",
+    "@gemunion/provider-api": "4.0.13",
     "react-beautiful-dnd": "13.1.0"
   },
   "description": "react widget",

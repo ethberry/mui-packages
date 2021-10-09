@@ -14,7 +14,7 @@
     "@gemunion/mui-inputs-file-firebase": "3.2.0",
     "@gemunion/mui-progress": "3.0.3",
     "@gemunion/popup": "0.0.15",
-    "@gemunion/provider-api": "4.0.11",
+    "@gemunion/provider-api": "4.0.13",
     "firebase": "9.1.2",
     "react-beautiful-dnd": "13.1.0"
   },
