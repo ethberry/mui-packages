@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.2.1 (2021-10-16)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#96](https://github.com/gemunion/mui-packages/issues/96)) ([56b7699](https://github.com/gemunion/mui-packages/commit/56b76996a7fc93d1685b057a7e26025d13536a0f))
+
+
+
+
+
 # 3.2.0 (2021-10-09)
 
 
