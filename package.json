@@ -9,7 +9,7 @@
     "react-scripts": "4.0.3"
   },
   "devDependencies": {
-    "@emotion/react": "11.4.1",
+    "@emotion/react": "11.5.0",
     "@gemunion/eslint-config": "0.1.10",
     "@storybook/addon-actions": "6.3.12",
     "@storybook/addon-essentials": "6.3.12",
@@ -28,7 +28,7 @@
     "eslint-plugin-jest": "24.7.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "4.0.0",
-    "eslint-plugin-promise": "5.1.0",
+    "eslint-plugin-promise": "5.1.1",
     "eslint-plugin-react": "7.26.1",
     "eslint-plugin-react-hooks": "4.2.0",
     "eslint-plugin-standard": "4.1.0",

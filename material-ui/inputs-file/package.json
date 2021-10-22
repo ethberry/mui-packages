@@ -17,10 +17,10 @@
     "@mui/material": "5.0.4",
     "@mui/styles": "5.0.1",
     "@storybook/react": "6.3.12",
-    "@types/react": "17.0.30",
+    "@types/react": "17.0.31",
     "notistack": "2.0.2",
     "react": "17.0.2",
-    "react-intl": "5.20.12"
+    "react-intl": "5.20.13"
   },
   "engines": {
     "node": ">=12.13"
