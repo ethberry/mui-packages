@@ -11,7 +11,7 @@ export interface ISelectInputProps extends SelectProps {
 }
 
 export const SelectInput: FC<ISelectInputProps> = props => {
-  const { options, label, name, multiple, ...rest } = props;
+  const { options, label, name, multiple, variant = "standard", ...rest } = props;
   const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
@@ -34,6 +34,7 @@ export const SelectInput: FC<ISelectInputProps> = props => {
         name={name}
         onChange={formik.handleChange}
         value={value}
+        variant={variant}
         renderValue={
           multiple
             ? (values): string =>
