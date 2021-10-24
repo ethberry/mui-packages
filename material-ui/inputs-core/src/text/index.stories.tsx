@@ -12,14 +12,12 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Input/Text",
+  title: "Input/Text",
   component: TextInput,
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <Formik onSubmit={() => {}} initialValues={{ text: "" }}>
-          <Story />
-        </Formik>
+        <Story />
       </IntlProvider>
     ),
   ],

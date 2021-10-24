@@ -14,7 +14,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/S3/Avatar",
+  title: "FileInput/S3/Avatar",
   component: AvatarInput,
   decorators: [
     (Story: Story): ReactElement => (

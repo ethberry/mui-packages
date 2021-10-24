@@ -11,7 +11,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Mask/Currency",
+  title: "MaskedInput/Currency",
   component: CurrencyInput,
   decorators: [
     (Story: Story): ReactElement => (

@@ -10,7 +10,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Input/Switch",
+  title: "Input/Switch",
   component: SwitchInput,
   decorators: [
     (Story: Story): ReactElement => (

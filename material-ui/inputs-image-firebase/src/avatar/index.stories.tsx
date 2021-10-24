@@ -12,7 +12,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Firebase/Avatar",
+  title: "FileInput/Firebase/Avatar",
   component: AvatarInput,
   decorators: [
     (Story: Story): ReactElement => (

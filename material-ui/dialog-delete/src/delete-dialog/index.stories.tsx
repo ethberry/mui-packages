@@ -12,7 +12,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Dialog/Delete",
+  title: "Dialog/Delete",
   component: DeleteDialog,
   decorators: [
     (Story: Story): ReactElement => (

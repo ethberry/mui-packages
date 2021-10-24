@@ -11,7 +11,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Input/Textarea",
+  title: "Input/Textarea",
   component: TextArea,
   decorators: [
     (Story: Story): ReactElement => (

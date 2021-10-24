@@ -10,7 +10,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Input/Slider",
+  title: "Input/Slider",
   component: SliderInput,
   decorators: [
     (Story: Story): ReactElement => (

@@ -14,10 +14,11 @@ const i18n = {
   "form.buttons.ok": "Ok",
   "form.labels.title": "Title",
   "form.placeholders.title": "...",
+  "form.hints.prompt": "Are you sure you want to leave?",
 };
 
 export default {
-  title: "Example/Dialog/Form",
+  title: "Dialog/Form",
   component: FormDialog,
   decorators: [
     (Story: Story): ReactElement => (

@@ -10,7 +10,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Input/Checkbox",
+  title: "Input/Checkbox",
   component: CheckboxInput,
   decorators: [
     (Story: Story): ReactElement => (

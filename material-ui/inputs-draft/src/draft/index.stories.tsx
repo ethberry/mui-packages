@@ -10,23 +10,51 @@ const i18n = {
   "form.placeholders.draft": "Draft",
 };
 
+const defaultValue = JSON.stringify({
+  blocks: [
+    {
+      key: "e9n5e",
+      text: "description",
+      type: "unstyled",
+      depth: 0,
+      inlineStyleRanges: [],
+      entityRanges: [],
+      data: {},
+    },
+  ],
+  entityMap: {},
+});
+
 export default {
-  title: "Example/Draft",
+  title: "ReachTextEditor/Draft",
   component: RichTextEditor,
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <Formik onSubmit={() => {}} initialValues={{ static: "static" }}>
-          <Story />
-        </Formik>
+        <Story />
       </IntlProvider>
     ),
   ],
 };
 
-const Template: Story<IRichTextFieldProps> = args => <RichTextEditor {...args} />;
+const DraftTemplate: Story<IRichTextFieldProps> = args => (
+  <Formik onSubmit={() => {}} initialValues={{}}>
+    <RichTextEditor {...args} />
+  </Formik>
+);
 
-export const Simple = Template.bind({});
+export const Simple = DraftTemplate.bind({});
 Simple.args = {
+  name: "draft",
+};
+
+const DraftDefaultValueTemplate: Story<IRichTextFieldProps> = args => (
+  <Formik onSubmit={() => {}} initialValues={{ draft: defaultValue }}>
+    <RichTextEditor {...args} />
+  </Formik>
+);
+
+export const DefaultValue = DraftDefaultValueTemplate.bind({});
+DefaultValue.args = {
   name: "draft",
 };

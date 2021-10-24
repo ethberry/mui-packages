@@ -17,7 +17,7 @@ enum SelectOptions {
 }
 
 export default {
-  title: "Example/Input/Select",
+  title: "Input/Select",
   component: SelectInput,
   decorators: [
     (Story: Story): ReactElement => (

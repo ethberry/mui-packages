@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import { TextFieldProps } from "@mui/material";
 import { getIn, useFormikContext } from "formik";
 import { useIntl } from "react-intl";
+import { draftToMarkdown, markdownToDraft } from "markdown-draft-js";
 
 import { TToolbarControl } from "@gemunion/mui-rte";
 import { TextInput } from "@gemunion/mui-inputs-core";
@@ -12,9 +13,7 @@ const defaultControls = [
   "title",
   "bold",
   "italic",
-  "underline",
   "strikethrough",
-  "highlight",
   "undo",
   "redo",
   "numberList",
@@ -22,12 +21,12 @@ const defaultControls = [
   "clear",
 ];
 
-export interface IRichTextFieldProps {
+export interface IMarkdownInputProps {
   name: string;
   customControls?: Array<TToolbarControl>;
 }
 
-export const RichTextEditor: FC<IRichTextFieldProps & TextFieldProps> = props => {
+export const MarkdownInput: FC<IMarkdownInputProps & TextFieldProps> = props => {
   const { name, InputLabelProps, customControls = [], ...rest } = props;
 
   const suffix = name.split(".").pop() as string;
@@ -42,10 +41,11 @@ export const RichTextEditor: FC<IRichTextFieldProps & TextFieldProps> = props =>
   const localizedPlaceholder = formatMessage({ id: `form.placeholders.${suffix}` });
 
   const inputProps: IRichTextInputProps = {
-    defaultValue: value,
+    defaultValue: JSON.stringify(markdownToDraft(value)),
     label: localizedPlaceholder,
     onSave: (data: string) => {
-      formik.setFieldValue(name, data);
+      const markdownString = draftToMarkdown(JSON.parse(data));
+      formik.setFieldValue(name, markdownString);
     },
     controls: defaultControls.concat(customControls),
   };

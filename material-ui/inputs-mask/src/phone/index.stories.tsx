@@ -11,7 +11,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Mask/Phone",
+  title: "MaskedInput/Phone",
   component: PhoneInput,
   decorators: [
     (Story: Story): ReactElement => (

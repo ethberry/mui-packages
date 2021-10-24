@@ -11,7 +11,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Input/Number",
+  title: "Input/Number",
   component: NumberInput,
   decorators: [
     (Story: Story): ReactElement => (

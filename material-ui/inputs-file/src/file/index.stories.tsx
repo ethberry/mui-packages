@@ -11,7 +11,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/File",
+  title: "FileInput/File",
   component: FileInput,
   decorators: [
     (Story: Story): ReactElement => (

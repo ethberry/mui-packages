@@ -11,7 +11,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Input/Autocomplete",
+  title: "Input/Autocomplete",
   component: AutocompleteInput,
   decorators: [
     (Story: Story): ReactElement => (

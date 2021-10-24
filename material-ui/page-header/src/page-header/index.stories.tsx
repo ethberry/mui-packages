@@ -12,7 +12,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/PageHeader",
+  title: "Component/PageHeader",
   component: PageHeader,
   decorators: [
     (Story: Story): ReactElement => (

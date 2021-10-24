@@ -4,7 +4,8 @@ import { makeStyles } from "@mui/styles";
 export const useStyles = makeStyles<Theme>(
   theme => ({
     root: {
-      padding: "2px 4px",
+      marginTop: theme.spacing(1),
+      marginBottom: theme.spacing(1),
       display: "flex",
       alignItems: "center",
     },

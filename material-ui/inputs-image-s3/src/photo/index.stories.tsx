@@ -21,7 +21,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/S3/Photo",
+  title: "FileInput/S3/Photo",
   component: PhotoInput,
   decorators: [
     (Story: Story): ReactElement => (

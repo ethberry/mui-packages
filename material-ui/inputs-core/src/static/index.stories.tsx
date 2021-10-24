@@ -11,7 +11,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Input/Static",
+  title: "Input/Static",
   component: StaticInput,
   decorators: [
     (Story: Story): ReactElement => (

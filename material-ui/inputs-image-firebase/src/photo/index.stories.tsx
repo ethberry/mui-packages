@@ -19,7 +19,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Firebase/Photo",
+  title: "FileInput/Firebase/Photo",
   component: PhotoInput,
   decorators: [
     (Story: Story): ReactElement => (

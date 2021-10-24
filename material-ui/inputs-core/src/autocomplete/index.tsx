@@ -15,10 +15,11 @@ export interface IAutocompleteInputProps {
   options: Array<IAutocompleteOptions>;
   multiple?: boolean;
   disableClearable?: boolean;
+  variant: "filled" | "outlined" | "standard";
 }
 
 export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
-  const { name, options, multiple } = props;
+  const { name, options, multiple, variant = "standard" } = props;
   const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
@@ -50,6 +51,7 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
             placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}
             error={!!error}
             helperText={localizedHelperText}
+            variant={variant}
             fullWidth
           />
         )}
@@ -74,6 +76,7 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
             placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}
             error={!!error}
             helperText={localizedHelperText}
+            variant={variant}
             fullWidth
           />
         )}

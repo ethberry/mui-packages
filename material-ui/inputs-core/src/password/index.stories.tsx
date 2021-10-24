@@ -11,7 +11,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Input/Password",
+  title: "Input/Password",
   component: PasswordInput,
   decorators: [
     (Story: Story): ReactElement => (

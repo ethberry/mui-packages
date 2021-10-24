@@ -4,7 +4,8 @@ import { makeStyles } from "@mui/styles";
 export const useStyles = makeStyles<Theme>(
   theme => ({
     root: {
-      margin: theme.spacing(1),
+      marginTop: theme.spacing(1),
+      marginBottom: theme.spacing(1),
     },
   }),
   { name: "DateUtcInput" },

@@ -11,7 +11,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Mask/Plate",
+  title: "MaskedInput/Plate",
   component: PlateInput,
   decorators: [
     (Story: Story): ReactElement => (

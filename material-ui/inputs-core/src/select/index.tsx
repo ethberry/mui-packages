@@ -22,8 +22,8 @@ export const SelectInput: FC<ISelectInputProps> = props => {
   const { formatMessage } = useIntl();
 
   return (
-    <FormControl fullWidth classes={classes}>
-      <InputLabel id={`${name}-select-label`}>
+    <FormControl fullWidth className={classes.root}>
+      <InputLabel id={`${name}-select-label`} variant={variant}>
         <FormattedMessage id={`form.labels.${suffix}`} />
       </InputLabel>
       <Select

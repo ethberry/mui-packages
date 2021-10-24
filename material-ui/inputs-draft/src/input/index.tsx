@@ -4,7 +4,6 @@ import { EditorState } from "draft-js";
 import { IRichTextEditorRef, RichTextEditor, TToolbarControl } from "@gemunion/mui-rte";
 
 export interface IRichTextInputProps extends Omit<InputBaseComponentProps, "value"> {
-  doFocus?: boolean;
   onStateChange?: (state: EditorState) => void;
   controls?: Array<TToolbarControl>;
 }

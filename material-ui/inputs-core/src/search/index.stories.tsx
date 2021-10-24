@@ -11,7 +11,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Input/Search",
+  title: "Input/Search",
   component: SearchInput,
   decorators: [
     (Story: Story): ReactElement => (

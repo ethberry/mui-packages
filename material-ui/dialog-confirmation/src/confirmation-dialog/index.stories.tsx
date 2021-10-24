@@ -11,7 +11,7 @@ const i18n = {
 };
 
 export default {
-  title: "Example/Dialog/Confirmation",
+  title: "Dialog/Confirmation",
   component: ConfirmationDialog,
   decorators: [
     (Story: Story): ReactElement => (
