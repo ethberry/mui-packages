@@ -20,6 +20,7 @@
     "@mui/styles": "5.0.1",
     "@storybook/react": "6.3.12",
     "@types/draft-js": "0.11.6",
+    "@types/markdown-draft-js": "2.2.4",
     "@types/react": "17.0.31",
     "formik": "2.2.9",
     "react": "17.0.2",
