@@ -4,7 +4,7 @@ import { makeStyles } from "@mui/styles";
 export const useStyles = makeStyles<Theme>(
   theme => ({
     root: {
-      height: 150 + 12,
+      height: 200,
       width: 200,
       position: "relative",
     },
@@ -17,7 +17,7 @@ export const useStyles = makeStyles<Theme>(
       right: 0,
     },
     image: {
-      height: 150 + 12,
+      height: 200,
       width: 200,
       borderRadius: "50%",
       borderColor: "#fff",
