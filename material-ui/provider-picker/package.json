@@ -9,8 +9,8 @@
   },
   "description": "Material UI theme provider",
   "devDependencies": {
-    "@mui/lab": "5.0.0-alpha.51",
-    "@mui/material": "5.0.4",
+    "@mui/lab": "5.0.0-alpha.53",
+    "@mui/material": "5.0.6",
     "react": "17.0.2"
   },
   "engines": {
