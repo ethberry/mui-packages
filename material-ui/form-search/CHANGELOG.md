@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.10](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@3.0.9...@gemunion/mui-form-search@3.0.10) (2021-10-30)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([0bd9312](https://github.com/gemunion/mui-packages/commit/0bd9312d9beed8a0a9766c0605c00721275f736b))
+
+
+
+
+
 ## [3.0.9](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@3.0.8...@gemunion/mui-form-search@3.0.9) (2021-10-22)
 
 **Note:** Version bump only for package @gemunion/mui-form-search

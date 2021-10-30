@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@3.0.7...@gemunion/mui-form@3.0.8) (2021-10-30)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([0bd9312](https://github.com/gemunion/mui-packages/commit/0bd9312d9beed8a0a9766c0605c00721275f736b))
+
+
+
+
+
 ## [3.0.7](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@3.0.6...@gemunion/mui-form@3.0.7) (2021-10-22)
 
 **Note:** Version bump only for package @gemunion/mui-form

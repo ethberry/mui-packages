@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.7](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@3.1.6...@gemunion/mui-inputs-core@3.1.7) (2021-10-30)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([0bd9312](https://github.com/gemunion/mui-packages/commit/0bd9312d9beed8a0a9766c0605c00721275f736b))
+* inputs look and feel ([88faa5f](https://github.com/gemunion/mui-packages/commit/88faa5f2ee6f40e63aad39526c49c5494ccaa91c))
+* select box look and feel ([c9948c1](https://github.com/gemunion/mui-packages/commit/c9948c1516cbb9047fb5e7ffb2701e3f1f08af0d))
+
+
+
+
+
 ## [3.1.6](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@3.1.5...@gemunion/mui-inputs-core@3.1.6) (2021-10-22)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core

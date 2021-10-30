@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.10](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@3.0.9...@gemunion/mui-dialog-form@3.0.10) (2021-10-30)
+
+
+### Bug Fixes
+
+* inputs look and feel ([88faa5f](https://github.com/gemunion/mui-packages/commit/88faa5f2ee6f40e63aad39526c49c5494ccaa91c))
+
+
+
+
+
 ## [3.0.9](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@3.0.8...@gemunion/mui-dialog-form@3.0.9) (2021-10-22)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
