@@ -1,55 +1,9 @@
 module.exports = {
   stories: [
-    "../material-ui/**/*.stories.@(ts|tsx)",
+    "../material-ui/**/*.stories.@(js|jsx|ts|tsx)",
   ],
   addons: [
-    "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/preset-create-react-app",
-    // storybook-addon-material-ui
   ],
-  webpackFinal: config => {
-    config.module.rules.push({
-      test: /\.[tj]sx?$/,
-      exclude: [/node_modules/],
-      use: [
-        {
-          loader: "babel-loader",
-          options: {
-            babelrc: false,
-            presets: [
-              [
-                "@babel/env",
-                {
-                  modules: false,
-                  targets: {
-                    browsers: ["> 1%"],
-                  },
-                },
-              ],
-              [
-                "@babel/typescript",
-                {
-                  isTSX: true,
-                  allExtensions: true,
-                },
-              ],
-              [
-                "@babel/react",
-                {
-                  "runtime": "automatic",
-                },
-              ],
-            ],
-            plugins: [
-              "@babel/plugin-proposal-nullish-coalescing-operator",
-              "@babel/plugin-proposal-optional-chaining",
-              "babel-plugin-inline-import",
-            ],
-          },
-        },
-      ],
-    });
-    return config;
-  },
 };

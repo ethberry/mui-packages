@@ -11,10 +11,7 @@
   "devDependencies": {
     "@emotion/react": "11.5.0",
     "@gemunion/eslint-config": "0.1.10",
-    "@storybook/addon-actions": "6.3.12",
     "@storybook/addon-essentials": "6.3.12",
-    "@storybook/addon-links": "6.3.12",
-    "@storybook/node-logger": "6.3.12",
     "@storybook/preset-create-react-app": "3.2.0",
     "@storybook/react": "6.3.12",
     "@typescript-eslint/eslint-plugin": "4.33.0",
@@ -44,6 +41,9 @@
   },
   "license": "UNLICENSED",
   "name": "@gemunion/mui-packages",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/gemunion/mui-packages"
