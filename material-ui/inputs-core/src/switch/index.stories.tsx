@@ -15,7 +15,7 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <Formik onSubmit={() => {}} initialValues={{ checkbox: false }}>
+        <Formik onSubmit={() => {}} initialValues={{ switch: false }}>
           <Story />
         </Formik>
       </IntlProvider>
