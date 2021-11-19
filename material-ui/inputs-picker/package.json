@@ -8,17 +8,17 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "date-fns": "2.25.0"
+    "date-fns": "2.26.0"
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/lab": "5.0.0-alpha.54",
-    "@mui/material": "5.1.0",
-    "@mui/styles": "5.1.0",
-    "@types/react": "17.0.34",
+    "@mui/lab": "5.0.0-alpha.55",
+    "@mui/material": "5.1.1",
+    "@mui/styles": "5.1.1",
+    "@types/react": "17.0.35",
     "formik": "2.2.9",
     "react": "17.0.2",
-    "react-intl": "5.21.1"
+    "react-intl": "5.21.2"
   },
   "engines": {
     "node": ">=12.13"
