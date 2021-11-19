@@ -67,7 +67,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
 
   useEffect(() => {
     void fetchOptions();
-  }, []);
+  }, [data]);
 
   if (multiple) {
     return (
