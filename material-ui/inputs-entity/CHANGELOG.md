@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@3.1.7...@gemunion/mui-inputs-entity@3.1.8) (2021-11-20)
+
+
+### Bug Fixes
+
+* input entities should refetch if data changed ([d13dd12](https://github.com/gemunion/mui-packages/commit/d13dd1221927751166549b5f33caa3c48ff3b2a6))
+
+
+
+
+
 ## [3.1.7](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@3.1.6...@gemunion/mui-inputs-entity@3.1.7) (2021-11-12)
 
 

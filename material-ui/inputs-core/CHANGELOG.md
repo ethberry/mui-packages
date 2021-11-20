@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.10](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@3.1.9...@gemunion/mui-inputs-core@3.1.10) (2021-11-20)
+
+
+### Bug Fixes
+
+* switch story ([670abb8](https://github.com/gemunion/mui-packages/commit/670abb85dc1fb86932c337193621c342b1788e5b))
+
+
+
+
+
 ## [3.1.9](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@3.1.8...@gemunion/mui-inputs-core@3.1.9) (2021-11-12)
 
 
