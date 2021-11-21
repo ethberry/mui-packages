@@ -10,11 +10,12 @@ interface IDateTimeInputProps {
   name: string;
   readOnly?: boolean;
   required?: boolean;
+  variant?: "standard" | "filled" | "outlined";
   onChange?: (date: Date | null) => void;
 }
 
 export const DateTimeInput: FC<IDateTimeInputProps> = props => {
-  const { name, ...rest } = props;
+  const { name, variant = "standard", ...rest } = props;
   const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
@@ -34,7 +35,7 @@ export const DateTimeInput: FC<IDateTimeInputProps> = props => {
         formik.setFieldValue(name, date);
       }}
       renderInput={(props: TextFieldProps): ReactElement => (
-        <TextField name={name} onBlur={formik.handleBlur} fullWidth {...props} />
+        <TextField name={name} onBlur={formik.handleBlur} fullWidth variant={variant} {...props} />
       )}
       {...rest}
     />
