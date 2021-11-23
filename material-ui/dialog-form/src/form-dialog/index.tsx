@@ -1,4 +1,5 @@
 import { FC, useRef, useState } from "react";
+import { Breakpoint } from "@mui/material";
 
 import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
 import { ProgressOverlay } from "@gemunion/mui-progress";
@@ -13,10 +14,11 @@ export interface IFormikFormProps<T> {
   open: boolean;
   initialValues: T;
   validationSchema?: any | (() => any);
+  maxWidth?: Breakpoint | false;
 }
 
 export const FormDialog: FC<IFormikFormProps<any>> = props => {
-  const { children, onConfirm, onCancel, initialValues, message, open, validationSchema } = props;
+  const { children, onConfirm, onCancel, initialValues, message, open, validationSchema, maxWidth = "lg" } = props;
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -31,7 +33,7 @@ export const FormDialog: FC<IFormikFormProps<any>> = props => {
   };
 
   return (
-    <ConfirmationDialog maxWidth="lg" onConfirm={handleSubmit} onCancel={onCancel} message={message} open={open}>
+    <ConfirmationDialog onConfirm={handleSubmit} maxWidth={maxWidth} onCancel={onCancel} message={message} open={open}>
       <ProgressOverlay isLoading={isLoading}>
         <FormikForm
           onSubmit={onConfirm}
