@@ -20,16 +20,17 @@ export const SelectInput: FC<ISelectInputProps> = props => {
   const value = getIn(formik.values, name);
 
   const { formatMessage } = useIntl();
+  const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
 
   return (
     <FormControl fullWidth className={classes.root}>
       <InputLabel id={`${name}-select-label`} variant={variant}>
-        <FormattedMessage id={`form.labels.${suffix}`} />
+        {localizedLabel}
       </InputLabel>
       <Select
         multiple={multiple}
         labelId={`${name}-select-label`}
-        label={label || <FormattedMessage id={`form.labels.${suffix}`} />}
+        label={localizedLabel}
         id={`${name}-select`}
         name={name}
         onChange={formik.handleChange}

@@ -17,6 +17,7 @@ export interface IAutocompleteOption {
 
 export interface IEntityInputProps {
   name: string;
+  label?: string;
   controller: string;
   multiple?: boolean;
   getTitle?: (item: any) => string;
@@ -26,7 +27,7 @@ export interface IEntityInputProps {
 }
 
 export const EntityInput: FC<IEntityInputProps> = props => {
-  const { name, controller, getTitle, multiple, data, variant = "standard", onChange } = props;
+  const { name, controller, getTitle, multiple, data, variant = "standard", onChange, label } = props;
   const suffix = name.split(".").pop() as string;
   const classes = useStyles();
 
@@ -36,7 +37,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
   const value = getIn(formik.values, name);
 
   const { formatMessage } = useIntl();
-  const localizedLabel = formatMessage({ id: `form.labels.${suffix}` });
+  const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
   const localizedPlaceholder = formatMessage({ id: `form.placeholders.${suffix}` });
   const localizedHelperText = error && touched ? formatMessage({ id: error }, { label: localizedLabel }) : "";
 
@@ -92,7 +93,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
           renderInput={(params: AutocompleteRenderInputParams): ReactElement => (
             <TextField
               {...params}
-              label={formatMessage({ id: `form.labels.${suffix}` })}
+              label={localizedLabel}
               placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}
               error={!!error}
               helperText={localizedHelperText}

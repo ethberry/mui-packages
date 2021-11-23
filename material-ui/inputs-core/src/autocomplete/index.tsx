@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, ReactElement } from "react";
+import { ChangeEvent, FC, ReactElement, ReactNode } from "react";
 import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/material";
 import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
@@ -12,6 +12,7 @@ export interface IAutocompleteOptions {
 
 export interface IAutocompleteInputProps {
   name: string;
+  label?: ReactNode;
   options: Array<IAutocompleteOptions>;
   multiple?: boolean;
   disableClearable?: boolean;
@@ -19,7 +20,7 @@ export interface IAutocompleteInputProps {
 }
 
 export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
-  const { name, options, multiple, variant = "standard" } = props;
+  const { name, label, options, multiple, variant = "standard" } = props;
   const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
@@ -29,7 +30,7 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
   const value = getIn(formik.values, name);
 
   const { formatMessage } = useIntl();
-  const localizedLabel = formatMessage({ id: `form.labels.${suffix}` });
+  const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
   const localizedHelperText = error ? formatMessage({ id: error }, { label: localizedLabel }) : "";
 
   if (multiple) {
@@ -47,7 +48,7 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
         renderInput={(params: AutocompleteRenderInputParams): ReactElement => (
           <TextField
             {...params}
-            label={formatMessage({ id: `form.labels.${suffix}` })}
+            label={localizedLabel}
             placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}
             error={!!error}
             helperText={localizedHelperText}
@@ -72,7 +73,7 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
         renderInput={(params: AutocompleteRenderInputParams): ReactElement => (
           <TextField
             {...params}
-            label={formatMessage({ id: `form.labels.${suffix}` })}
+            label={localizedLabel}
             placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}
             error={!!error}
             helperText={localizedHelperText}

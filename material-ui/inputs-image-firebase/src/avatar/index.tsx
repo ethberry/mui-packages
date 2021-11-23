@@ -27,7 +27,7 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
   const { formatMessage } = useIntl();
   const deleteUrl = useDeleteUrl(bucket);
   const suffix = name.split(".").pop() as string;
-  const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
+  const localizedLabel = formatMessage({ id: label || `form.labels.${suffix}` });
   const localizedHelperText = error ? formatMessage({ id: error }, { label: localizedLabel }) : "";
 
   const onChange = (urls: Array<string>) => {
@@ -43,7 +43,7 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
     return (
       <FormControl fullWidth className={classes.root}>
         <InputLabel id={`${name}-select-label`} shrink className={classes.label}>
-          <FormattedMessage id={`form.labels.${name}`} />
+          {localizedLabel}
         </InputLabel>
         <Tooltip title={formatMessage({ id: "form.tips.delete" })}>
           <IconButton aria-label="delete" onClick={onDelete} className={classes.button} size="medium">

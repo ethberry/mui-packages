@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { useIntl } from "react-intl";
 import { useFormikContext, getIn } from "formik";
 
@@ -7,7 +7,7 @@ import { useStyles } from "./styles";
 
 export interface ICheckboxInputProps extends CheckboxProps {
   name: string;
-  label?: string;
+  label?: ReactNode;
 }
 
 export const CheckboxInput: FC<ICheckboxInputProps> = props => {
@@ -20,7 +20,7 @@ export const CheckboxInput: FC<ICheckboxInputProps> = props => {
   const value = getIn(formik.values, name);
 
   const { formatMessage } = useIntl();
-  const localizedLabel = label ?? formatMessage({ id: `form.labels.${suffix}` });
+  const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
 
   return (
     <FormControlLabel

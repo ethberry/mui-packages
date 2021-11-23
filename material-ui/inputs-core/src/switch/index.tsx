@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
 
@@ -7,7 +7,7 @@ import { useStyles } from "./styles";
 
 export interface ISwitchInputProps extends SwitchProps {
   name: string;
-  label?: string;
+  label?: ReactNode;
 }
 
 export const SwitchInput: FC<ISwitchInputProps & SwitchProps> = props => {
@@ -20,7 +20,7 @@ export const SwitchInput: FC<ISwitchInputProps & SwitchProps> = props => {
   const value = getIn(formik.values, name);
 
   const { formatMessage } = useIntl();
-  const localizedLabel = label ?? formatMessage({ id: `form.labels.${suffix}` });
+  const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
 
   return (
     <FormControlLabel
