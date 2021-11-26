@@ -13,15 +13,15 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/icons-material": "5.1.1",
-    "@mui/lab": "5.0.0-alpha.55",
-    "@mui/material": "5.1.1",
-    "@mui/styles": "5.1.1",
-    "@types/react": "17.0.35",
+    "@mui/icons-material": "5.2.0",
+    "@mui/lab": "5.0.0-alpha.57",
+    "@mui/material": "5.2.1",
+    "@mui/styles": "5.2.1",
+    "@types/react": "17.0.37",
     "formik": "2.2.9",
     "notistack": "2.0.3",
     "react": "17.0.2",
-    "react-intl": "5.21.2"
+    "react-intl": "5.22.0"
   },
   "engines": {
     "node": ">=12.13"
