@@ -11,7 +11,7 @@
     "@gemunion/firebase": "1.1.0",
     "@gemunion/mui-inputs-file": "3.1.7",
     "firebase": "9.5.0",
-    "react-intl": "5.21.2",
+    "react-intl": "5.22.0",
     "uuid": "8.3.2"
   },
   "description": "react widget",
