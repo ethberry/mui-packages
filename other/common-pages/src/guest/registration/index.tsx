@@ -1,6 +1,6 @@
 import { FC, useContext, useEffect } from "react";
 import { Grid } from "@mui/material";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
@@ -16,7 +16,7 @@ import { validationSchema } from "./validation";
 import { emptyUser } from "./utils";
 
 export const Registration: FC = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const classes = useStyles();
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
@@ -36,7 +36,7 @@ export const Registration: FC = () => {
           api.setToken(json);
         }
         enqueueSnackbar(formatMessage({ id: "snackbar.created" }), { variant: "success" });
-        history.push("/message/registration-successful");
+        navigate("/message/registration-successful");
       })
       .catch(e => {
         if (e.status === 400) {

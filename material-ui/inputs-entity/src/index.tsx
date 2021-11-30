@@ -17,7 +17,7 @@ export interface IAutocompleteOption {
 
 export interface IEntityInputProps {
   name: string;
-  label?: string;
+  label?: string | number | ReactElement;
   controller: string;
   multiple?: boolean;
   getTitle?: (item: any) => string;

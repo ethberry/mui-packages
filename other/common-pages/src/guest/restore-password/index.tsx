@@ -1,5 +1,5 @@
 import { FC, useContext } from "react";
-import { useHistory, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { Grid } from "@mui/material";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
@@ -20,8 +20,8 @@ interface IRestorePasswordDto {
 
 export const RestorePassword: FC = () => {
   const classes = useStyles();
-  const history = useHistory();
-  const { token } = useParams<{ token: string }>();
+  const navigate = useNavigate();
+  const { token } = useParams<"token">();
   const { formatMessage } = useIntl();
   const { enqueueSnackbar } = useSnackbar();
 
@@ -36,7 +36,7 @@ export const RestorePassword: FC = () => {
       })
       .then(() => {
         enqueueSnackbar(formatMessage({ id: "snackbar.password-changed" }), { variant: "success" });
-        history.push("/login");
+        navigate("/login");
       })
       .catch(e => {
         if (e.status === 400) {
@@ -44,7 +44,7 @@ export const RestorePassword: FC = () => {
         } else if (e.status) {
           // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
-          history.push("/forgot-password");
+          navigate("/forgot-password");
         } else {
           console.error(e);
           enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });

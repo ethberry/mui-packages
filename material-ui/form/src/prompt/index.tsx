@@ -1,8 +1,8 @@
-import { FC, ReactElement } from "react";
-import { FormattedMessage } from "react-intl";
-import { Prompt } from "react-router-dom";
-
+import { FC } from "react";
+import { useIntl } from "react-intl";
 import { useFormikContext } from "formik";
+
+import { usePrompt } from "./workaround";
 
 interface IPromptIfDirtyProps {
   visible?: boolean;
@@ -11,16 +11,9 @@ interface IPromptIfDirtyProps {
 export const PromptIfDirty: FC<IPromptIfDirtyProps> = props => {
   const { visible = true } = props;
   const formik = useFormikContext();
+  const { formatMessage } = useIntl();
 
-  if (!visible) {
-    return null;
-  }
+  usePrompt(formatMessage({ id: "form.hints.prompt" }), visible && formik.dirty && formik.submitCount === 0);
 
-  return (
-    <FormattedMessage id="form.hints.prompt">
-      {([formattedMessage]: Array<string>): ReactElement => (
-        <Prompt when={formik.dirty && formik.submitCount === 0} message={formattedMessage} />
-      )}
-    </FormattedMessage>
-  );
+  return null;
 };

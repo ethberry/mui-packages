@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, ReactElement, useState } from "react";
 import {
   Button,
   Card,
@@ -25,7 +25,7 @@ import { useStyles } from "./styles";
 
 export interface IPhotoInputProps {
   name: string;
-  label?: string;
+  label?: string | number | ReactElement;
   bucket?: string;
   accept?: string | string[];
 }

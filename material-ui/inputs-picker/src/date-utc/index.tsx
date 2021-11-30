@@ -9,7 +9,7 @@ import { useStyles } from "./styles";
 
 interface IDateUtcInputProps {
   name: string;
-  label?: string;
+  label?: string | number | ReactElement;
   readOnly?: boolean;
   required?: boolean;
   variant?: "standard" | "filled" | "outlined";

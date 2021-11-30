@@ -7,10 +7,10 @@ import { useStyles } from "./styles";
 
 export const Error: FC = () => {
   const classes = useStyles();
-  const params = useParams<{ error: string }>();
+  const { error } = useParams<"error">();
   return (
     <Alert className={classes.text} severity="error">
-      <FormattedMessage id={`errors.${params.error}`} />
+      <FormattedMessage id={`errors.${error as string}`} />
     </Alert>
   );
 };

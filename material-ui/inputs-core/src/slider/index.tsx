@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
 import { FormControlLabel, Slider, SliderProps } from "@mui/material";
@@ -7,7 +7,7 @@ import { useStyles } from "./styles";
 
 export interface ISliderInputProps extends SliderProps {
   name: string;
-  label?: ReactNode;
+  label?: string | number | ReactElement;
 }
 
 export const SliderInput: FC<ISliderInputProps> = props => {

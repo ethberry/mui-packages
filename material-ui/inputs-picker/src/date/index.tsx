@@ -8,7 +8,7 @@ import { useStyles } from "./styles";
 
 interface IDateInputProps {
   name: string;
-  label?: string;
+  label?: string | number | ReactElement;
   readOnly?: boolean;
   required?: boolean;
   variant?: "standard" | "filled" | "outlined";

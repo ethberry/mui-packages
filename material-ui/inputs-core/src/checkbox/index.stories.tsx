@@ -35,3 +35,9 @@ Disabled.args = {
   name: "checkbox",
   disabled: true,
 };
+
+export const Label = Template.bind({});
+Disabled.args = {
+  name: "checkbox",
+  label: "label",
+};

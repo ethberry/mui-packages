@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
 
@@ -7,7 +7,7 @@ import { useStyles } from "./styles";
 
 export interface ISwitchInputProps extends SwitchProps {
   name: string;
-  label?: ReactNode;
+  label?: string | number | ReactElement;
 }
 
 export const SwitchInput: FC<ISwitchInputProps & SwitchProps> = props => {

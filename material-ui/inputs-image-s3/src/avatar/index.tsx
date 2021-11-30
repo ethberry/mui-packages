@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactElement } from "react";
 import { getIn, useFormikContext } from "formik";
 import { FormControl, FormHelperText, Grid, IconButton, InputLabel, Tooltip } from "@mui/material";
 import { Delete } from "@mui/icons-material";
@@ -11,7 +11,7 @@ import { useDeleteUrl } from "../utils";
 
 export interface IAvatarInputProps {
   name: string;
-  label?: string;
+  label?: string | number | ReactElement;
   bucket?: string;
   accept?: string | string[];
 }
@@ -28,7 +28,7 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
   const { formatMessage } = useIntl();
   const deleteUrl = useDeleteUrl(bucket);
   const suffix = name.split(".").pop() as string;
-  const localizedLabel = formatMessage({ id: label || `form.labels.${suffix}` });
+  const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
   const localizedHelperText = error ? formatMessage({ id: error }, { label: localizedLabel }) : "";
 
   const onChange = (url: string) => {

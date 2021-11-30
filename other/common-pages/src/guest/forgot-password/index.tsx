@@ -1,6 +1,6 @@
 import { FC, useContext, useEffect } from "react";
 import { Grid } from "@mui/material";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
@@ -21,7 +21,7 @@ interface IForgotPasswordDto {
 
 export const ForgotPassword: FC = () => {
   const classes = useStyles();
-  const history = useHistory();
+  const navigate = useNavigate();
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
@@ -36,7 +36,7 @@ export const ForgotPassword: FC = () => {
         data: values,
       })
       .then(() => {
-        history.push("/message/forgot-successful");
+        navigate("/message/forgot-successful");
       })
       .catch(e => {
         if (e.status === 400) {
