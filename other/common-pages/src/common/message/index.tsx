@@ -8,10 +8,10 @@ import { useStyles } from "./styles";
 
 export const Message: FC = () => {
   const classes = useStyles();
-  const params = useParams<{ message: string }>();
+  const { message } = useParams<"message">();
   return (
     <Alert className={classes.text} severity="warning">
-      <FormattedMessage id={`messages.${params.message}`} />
+      <FormattedMessage id={`messages.${message as string}`} />
     </Alert>
   );
 };

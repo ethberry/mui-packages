@@ -1,5 +1,5 @@
 import { FC, useContext, useEffect } from "react";
-import { useHistory, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Grid } from "@mui/material";
@@ -12,7 +12,7 @@ import { useStyles } from "./styles";
 
 export const VerifyEmail: FC = () => {
   const classes = useStyles();
-  const history = useHistory();
+  const navigate = useNavigate();
   const params = useParams();
   const { formatMessage } = useIntl();
   const { enqueueSnackbar } = useSnackbar();
@@ -35,7 +35,7 @@ export const VerifyEmail: FC = () => {
         if (e.status) {
           // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
-          history.push("/resend-verification-email");
+          navigate("/resend-verification-email");
         } else {
           console.error(e);
           enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });

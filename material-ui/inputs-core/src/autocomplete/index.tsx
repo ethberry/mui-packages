@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, ReactElement, ReactNode } from "react";
+import { ChangeEvent, FC, ReactElement } from "react";
 import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/material";
 import { useIntl } from "react-intl";
 import { getIn, useFormikContext } from "formik";
@@ -12,7 +12,7 @@ export interface IAutocompleteOptions {
 
 export interface IAutocompleteInputProps {
   name: string;
-  label?: ReactNode;
+  label?: string | number | ReactElement;
   options: Array<IAutocompleteOptions>;
   multiple?: boolean;
   disableClearable?: boolean;

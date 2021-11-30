@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { useFormikContext, getIn } from "formik";
 
@@ -7,7 +7,7 @@ import { useStyles } from "./styles";
 
 export interface ICheckboxInputProps extends CheckboxProps {
   name: string;
-  label?: ReactNode;
+  label?: string | number | ReactElement;
 }
 
 export const CheckboxInput: FC<ICheckboxInputProps> = props => {

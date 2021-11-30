@@ -1,5 +1,5 @@
 import { FC, useContext } from "react";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import { useSnackbar } from "notistack";
 import { Grid } from "@mui/material";
 import { useIntl } from "react-intl";
@@ -20,7 +20,7 @@ interface IResendVerificationEmailDto {
 
 export const ResendVerificationEmail: FC = () => {
   const classes = useStyles();
-  const history = useHistory();
+  const navigate = useNavigate();
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
@@ -34,7 +34,7 @@ export const ResendVerificationEmail: FC = () => {
         data: values,
       })
       .then(() => {
-        history.push("/message/resend-successful");
+        navigate("/message/resend-successful");
       })
       .catch(e => {
         if (e.status === 400) {

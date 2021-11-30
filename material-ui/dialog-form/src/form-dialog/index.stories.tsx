@@ -1,8 +1,7 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { Story } from "@storybook/react";
-import { Router } from "react-router-dom";
-import { createMemoryHistory } from "history";
+import { BrowserRouter } from "react-router-dom";
 
 import { TextInput } from "@gemunion/mui-inputs-core";
 
@@ -22,11 +21,11 @@ export default {
   component: FormDialog,
   decorators: [
     (Story: Story): ReactElement => (
-      <Router history={createMemoryHistory()}>
+      <BrowserRouter>
         <IntlProvider locale="en" messages={i18n}>
           <Story />
         </IntlProvider>
-      </Router>
+      </BrowserRouter>
     ),
   ],
   argTypes: {
