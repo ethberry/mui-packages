@@ -9,13 +9,13 @@
   },
   "dependencies": {
     "@gemunion/constants-regexp": "0.1.11",
-    "@gemunion/mui-form": "3.0.11",
-    "@gemunion/mui-icons-social-networks": "3.0.7",
-    "@gemunion/mui-inputs-captcha": "3.0.11",
-    "@gemunion/mui-inputs-core": "3.1.10",
-    "@gemunion/mui-page-header": "3.0.11",
-    "@gemunion/mui-progress": "3.0.7",
-    "@gemunion/mui-toolbar": "3.0.10",
+    "@gemunion/mui-form": "3.0.12",
+    "@gemunion/mui-icons-social-networks": "3.0.8",
+    "@gemunion/mui-inputs-captcha": "3.0.12",
+    "@gemunion/mui-inputs-core": "3.1.11",
+    "@gemunion/mui-page-header": "3.0.12",
+    "@gemunion/mui-progress": "3.0.8",
+    "@gemunion/mui-toolbar": "3.0.11",
     "@gemunion/popup": "0.0.20",
     "@gemunion/provider-api": "4.0.18",
     "@gemunion/provider-user": "0.2.3",
@@ -75,5 +75,5 @@
   "sideEffects": false,
   "title": "-=TrejGun=-",
   "types": "./dist/index.d.ts",
-  "version": "4.1.8"
+  "version": "4.1.9"
 }

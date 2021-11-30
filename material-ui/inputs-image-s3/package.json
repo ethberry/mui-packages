@@ -8,10 +8,10 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-dialog-confirmation": "3.0.11",
-    "@gemunion/mui-inputs-core": "3.1.10",
-    "@gemunion/mui-inputs-file-s3": "3.0.12",
-    "@gemunion/mui-progress": "3.0.7",
+    "@gemunion/mui-dialog-confirmation": "3.0.12",
+    "@gemunion/mui-inputs-core": "3.1.11",
+    "@gemunion/mui-inputs-file-s3": "3.0.13",
+    "@gemunion/mui-progress": "3.0.8",
     "@gemunion/popup": "0.0.20",
     "@gemunion/provider-api": "4.0.18",
     "react-beautiful-dnd": "13.1.0"
@@ -71,5 +71,5 @@
   "sideEffects": false,
   "title": "-=TrejGun=-",
   "types": "./dist/index.d.ts",
-  "version": "3.1.8"
+  "version": "3.1.9"
 }

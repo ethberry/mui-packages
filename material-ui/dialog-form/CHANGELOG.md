@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.14](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@3.0.13...@gemunion/mui-dialog-form@3.0.14) (2021-11-30)
+
+
+### Bug Fixes
+
+* pass maxWidth to form-dialog ([edb2161](https://github.com/gemunion/mui-packages/commit/edb2161f05c1a87521f9558a1b834bf81b155960))
+* support react router 6 ([e12f028](https://github.com/gemunion/mui-packages/commit/e12f028d646f679abb6eb9c015947a2a3e8ab0ce))
+
+
+
+
+
 ## [3.0.13](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@3.0.12...@gemunion/mui-dialog-form@3.0.13) (2021-11-20)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form

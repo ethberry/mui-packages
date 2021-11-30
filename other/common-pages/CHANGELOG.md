@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.9](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@4.1.8...@gemunion/common-pages@4.1.9) (2021-11-30)
+
+
+### Bug Fixes
+
+* support react router 6 ([e12f028](https://github.com/gemunion/mui-packages/commit/e12f028d646f679abb6eb9c015947a2a3e8ab0ce))
+
+
+
+
+
 ## [4.1.8](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@4.1.7...@gemunion/common-pages@4.1.8) (2021-11-20)
 
 **Note:** Version bump only for package @gemunion/common-pages

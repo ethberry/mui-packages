@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.12](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@3.0.11...@gemunion/mui-inputs-picker@3.0.12) (2021-11-30)
+
+
+### Bug Fixes
+
+* date input style ([6a406fe](https://github.com/gemunion/mui-packages/commit/6a406feb2878c1e8f04ba4175ed641ccce24c0dc))
+* localized lable ([60e1f91](https://github.com/gemunion/mui-packages/commit/60e1f91efb7638261b9dfe3dbe763ea92b1bc4f4))
+* support react router 6 ([e12f028](https://github.com/gemunion/mui-packages/commit/e12f028d646f679abb6eb9c015947a2a3e8ab0ce))
+
+
+
+
+
 ## [3.0.11](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@3.0.10...@gemunion/mui-inputs-picker@3.0.11) (2021-11-20)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-picker

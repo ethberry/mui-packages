@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.9](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-s3@3.1.8...@gemunion/mui-inputs-image-s3@3.1.9) (2021-11-30)
+
+
+### Bug Fixes
+
+* localized lable ([60e1f91](https://github.com/gemunion/mui-packages/commit/60e1f91efb7638261b9dfe3dbe763ea92b1bc4f4))
+* support react router 6 ([e12f028](https://github.com/gemunion/mui-packages/commit/e12f028d646f679abb6eb9c015947a2a3e8ab0ce))
+
+
+
+
+
 ## [3.1.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-s3@3.1.7...@gemunion/mui-inputs-image-s3@3.1.8) (2021-11-20)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-image-s3
