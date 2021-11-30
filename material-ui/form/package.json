@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-toolbar": "3.0.10"
+    "@gemunion/mui-toolbar": "3.0.11"
   },
   "description": "react widget",
   "devDependencies": {
