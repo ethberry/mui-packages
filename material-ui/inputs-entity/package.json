@@ -9,14 +9,14 @@
   },
   "dependencies": {
     "@gemunion/mui-progress": "3.0.8",
-    "@gemunion/provider-api": "4.0.18"
+    "@gemunion/provider-api": "4.0.19"
   },
   "description": "react widget",
   "devDependencies": {
     "@mui/icons-material": "5.2.0",
-    "@mui/lab": "5.0.0-alpha.57",
-    "@mui/material": "5.2.1",
-    "@mui/styles": "5.2.1",
+    "@mui/lab": "5.0.0-alpha.58",
+    "@mui/material": "5.2.2",
+    "@mui/styles": "5.2.2",
     "@types/react": "17.0.37",
     "formik": "2.2.9",
     "notistack": "2.0.3",
