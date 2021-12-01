@@ -18,7 +18,7 @@
     "@gemunion/mui-toolbar": "3.0.11",
     "@gemunion/popup": "0.0.20",
     "@gemunion/provider-api": "4.0.18",
-    "@gemunion/provider-user": "0.2.3",
+    "@gemunion/provider-user": "1.1.0",
     "@gemunion/yup-rules": "0.2.11",
     "yup": "0.32.11"
   },
