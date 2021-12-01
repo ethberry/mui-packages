@@ -9,13 +9,13 @@
   },
   "dependencies": {
     "@gemunion/constants-regexp": "0.1.11",
-    "@gemunion/mui-form": "4.0.3",
+    "@gemunion/mui-form": "4.0.4",
     "@gemunion/mui-icons-social-networks": "3.0.8",
     "@gemunion/mui-inputs-captcha": "3.0.12",
-    "@gemunion/mui-inputs-core": "4.0.3",
+    "@gemunion/mui-inputs-core": "4.0.4",
     "@gemunion/mui-page-header": "3.0.12",
-    "@gemunion/mui-progress": "3.0.8",
-    "@gemunion/mui-toolbar": "3.0.11",
+    "@gemunion/mui-progress": "3.0.9",
+    "@gemunion/mui-toolbar": "3.0.12",
     "@gemunion/popup": "0.0.21",
     "@gemunion/provider-api": "4.0.19",
     "@gemunion/provider-user": "1.1.0",
@@ -75,5 +75,5 @@
   "sideEffects": false,
   "title": "-=TrejGun=-",
   "types": "./dist/index.d.ts",
-  "version": "5.0.2"
+  "version": "5.0.3"
 }
