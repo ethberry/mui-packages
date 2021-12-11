@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@3.0.19...@gemunion/mui-form-search@4.1.0) (2021-12-11)
+
+
+### Features
+
+* history 5 ([8d1d87a](https://github.com/gemunion/mui-packages/commit/8d1d87ae02235b99092d38979626e3a5d5e489c8))
+
+
+
+
+
 ## [3.0.19](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@3.0.18...@gemunion/mui-form-search@3.0.19) (2021-12-11)
 
 

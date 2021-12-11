@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.15](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-toolbar@3.0.14...@gemunion/mui-toolbar@3.0.15) (2021-12-11)
+
+
+### Bug Fixes
+
+* test ([18fc67d](https://github.com/gemunion/mui-packages/commit/18fc67d0d8cf13f076ad8f4423c14b128ab78b38))
+
+
+
+
+
 ## [3.0.14](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-toolbar@3.0.13...@gemunion/mui-toolbar@3.0.14) (2021-12-11)
 
 

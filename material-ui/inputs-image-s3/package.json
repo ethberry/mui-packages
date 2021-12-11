@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "@gemunion/mui-dialog-confirmation": "3.0.15",
-    "@gemunion/mui-inputs-core": "5.0.0",
-    "@gemunion/mui-inputs-file-s3": "4.0.0",
+    "@gemunion/mui-inputs-core": "5.1.0",
+    "@gemunion/mui-inputs-file-s3": "4.1.0",
     "@gemunion/mui-progress": "3.0.10",
     "@gemunion/popup": "0.0.21",
     "@gemunion/provider-api": "5.3.0",
@@ -71,5 +71,5 @@
   "sideEffects": false,
   "title": "-=TrejGun=-",
   "types": "./dist/index.d.ts",
-  "version": "5.0.0"
+  "version": "5.1.0"
 }

@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/firebase": "1.1.2",
     "@gemunion/mui-dialog-confirmation": "3.0.15",
-    "@gemunion/mui-inputs-core": "5.0.0",
+    "@gemunion/mui-inputs-core": "5.1.0",
     "@gemunion/mui-inputs-file-firebase": "3.2.11",
     "@gemunion/mui-progress": "3.0.10",
     "@gemunion/popup": "0.0.21",
@@ -74,5 +74,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "5.0.0"
+  "version": "5.1.0"
 }
