@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.9 (2021-12-11)
+
+
+### Bug Fixes
+
+* add missing packages ([b28ccad](https://github.com/gemunion/mui-packages/commit/b28ccad2e165722123bd5d2d0288ef2e8fc21693))
+
+
+
+
+
 ## [3.0.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-icons-social-networks@3.0.7...@gemunion/mui-icons-social-networks@3.0.8) (2021-11-30)
 
 **Note:** Version bump only for package @gemunion/mui-icons-social-networks
