@@ -13,7 +13,7 @@ exports[`<AvatarInput /> renders empty field with error: image is required 1`] =
       Avatar
     </label>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-undefined AvatarInput-container-16 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container AvatarInput-container-16 css-11lq3yg-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -116,7 +116,7 @@ exports[`<AvatarInput /> renders the empty field 1`] = `
       Avatar
     </label>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-undefined AvatarInput-container-2 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container AvatarInput-container-2 css-11lq3yg-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
