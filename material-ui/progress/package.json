@@ -9,8 +9,8 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.2.2",
-    "@mui/styles": "5.2.2",
+    "@mui/material": "5.2.3",
+    "@mui/styles": "5.2.3",
     "react": "17.0.2"
   },
   "engines": {

@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/mui-inputs-file": "3.1.10",
-    "@gemunion/provider-api": "4.0.19",
+    "@gemunion/provider-api": "4.0.20",
     "react-s3-uploader": "5.0.0"
   },
   "description": "react widget",
