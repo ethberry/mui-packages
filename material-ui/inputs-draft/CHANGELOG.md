@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.18](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@1.0.17...@gemunion/mui-inputs-draft@1.0.18) (2021-12-11)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([83aa4b2](https://github.com/gemunion/mui-packages/commit/83aa4b211dba3aff1293d7c7b81468897dbd861d))
+
+
+
+
+
 ## [1.0.17](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@1.0.16...@gemunion/mui-inputs-draft@1.0.17) (2021-12-04)
 
 
