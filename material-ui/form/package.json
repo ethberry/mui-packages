@@ -12,12 +12,12 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.2.3",
+    "@mui/material": "5.2.4",
     "@types/react": "17.0.37",
     "formik": "2.2.9",
     "react": "17.0.2",
     "react-intl": "5.23.0",
-    "react-router-dom": "6.1.0"
+    "react-router-dom": "6.2.1"
   },
   "engines": {
     "node": ">=12.13"

@@ -9,13 +9,13 @@
   },
   "dependencies": {
     "@gemunion/mui-progress": "3.0.10",
-    "@gemunion/provider-api": "5.3.0"
+    "@gemunion/provider-api": "5.3.1"
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/icons-material": "5.2.1",
-    "@mui/lab": "5.0.0-alpha.59",
-    "@mui/material": "5.2.3",
+    "@mui/icons-material": "5.2.4",
+    "@mui/lab": "5.0.0-alpha.60",
+    "@mui/material": "5.2.4",
     "@mui/styles": "5.2.3",
     "@types/react": "17.0.37",
     "formik": "2.2.9",

@@ -12,7 +12,7 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.2.3",
+    "@mui/material": "5.2.4",
     "@mui/styles": "5.2.3",
     "@types/react": "17.0.37",
     "@types/react-google-recaptcha": "2.1.2",
