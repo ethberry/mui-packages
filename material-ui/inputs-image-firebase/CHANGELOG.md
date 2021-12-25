@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@5.1.2...@gemunion/mui-inputs-image-firebase@5.1.3) (2021-12-25)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([77f6623](https://github.com/gemunion/mui-packages/commit/77f66236a16b24d59202668e1b52c440db0103bc))
+
+
+
+
+
 ## [5.1.2](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@5.1.1...@gemunion/mui-inputs-image-firebase@5.1.2) (2021-12-25)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
