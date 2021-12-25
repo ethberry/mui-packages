@@ -15,18 +15,18 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/icons-material": "5.2.4",
-    "@mui/material": "5.2.4",
+    "@mui/icons-material": "5.2.5",
+    "@mui/material": "5.2.5",
     "@mui/styles": "5.2.3",
     "@storybook/react": "6.4.9",
-    "@types/draft-js": "0.11.7",
+    "@types/draft-js": "0.11.8",
     "@types/jest": "27.0.3",
     "@types/markdown-draft-js": "2.2.4",
-    "@types/react": "17.0.37",
+    "@types/react": "17.0.38",
     "formik": "2.2.9",
     "jest": "27.4.5",
     "react": "17.0.2",
-    "react-intl": "5.23.0",
+    "react-intl": "5.24.0",
     "ts-jest": "27.1.2"
   },
   "engines": {
