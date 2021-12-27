@@ -1,0 +1,63 @@
+{
+  "author": {
+    "email": "TrejGun@gmail.com",
+    "name": "TrejGun",
+    "url": "https://trejgun.github.io/"
+  },
+  "bugs": {
+    "url": "https://github.com/gemunion/mui-packages/issues"
+  },
+  "dependencies": {
+    "@gemunion/provider-user": "2.3.2",
+    "@web3-react/core": "6.1.9",
+    "@web3-react/injected-connector": "6.0.7",
+    "@web3-react/trezor-connector": "6.1.9",
+    "@web3-react/walletconnect-connector": "6.2.8"
+  },
+  "description": "react wallet connector",
+  "devDependencies": {
+    "@mui/icons-material": "5.2.5",
+    "@mui/material": "5.2.5",
+    "@mui/styles": "5.2.3",
+    "@types/react": "17.0.38",
+    "ethers": "5.5.2",
+    "notistack": "2.0.3",
+    "react": "17.0.2"
+  },
+  "engines": {
+    "node": ">=12.13"
+  },
+  "keywords": [],
+  "license": "UNLICENSED",
+  "main": "./dist/index.js",
+  "name": "@gemunion/connect-wallet",
+  "peerDependencies": {
+    "@mui/icons-material": "^5",
+    "@mui/lab": "^5",
+    "@mui/material": "^5",
+    "@mui/styles": "^5",
+    "ethers": "^5",
+    "notistack": "^2",
+    "react": "^17",
+    "react-intl": "^5"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gemunion/mui-packages"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --fix",
+    "prebuild": "rimraf dist/",
+    "prepare": "npm run build",
+    "preversion": "npm run build && npm run test",
+    "test": "exit 0"
+  },
+  "sideEffects": false,
+  "title": "-=TrejGun=-",
+  "types": "./dist/index.d.ts",
+  "version": "0.0.1"
+}
