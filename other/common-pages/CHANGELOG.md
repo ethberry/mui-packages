@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.2](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@6.2.1...@gemunion/common-pages@6.2.2) (2021-12-27)
+
+
+### Bug Fixes
+
+* update constants ([3dbfff1](https://github.com/gemunion/mui-packages/commit/3dbfff1a9cb37c3b52b17bbb6c7cc91207854ccf))
+
+
+
+
+
 ## [6.2.1](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@6.2.0...@gemunion/common-pages@6.2.1) (2021-12-27)
 
 
