@@ -7,3 +7,5 @@ export { Registration } from "./guest/registration";
 export { VerifyEmail } from "./guest/verify-email";
 export { Error } from "./common/error";
 export { Message } from "./common/message";
+export { Protected } from "./common/protected";
+export { SocialProtected } from "./common/social-protected";
