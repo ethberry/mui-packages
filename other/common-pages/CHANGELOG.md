@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.2.0](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@6.1.4...@gemunion/common-pages@6.2.0) (2021-12-27)
+
+
+### Features
+
+* protected ([2a07f4a](https://github.com/gemunion/mui-packages/commit/2a07f4a4f90e0b40e2d4e8860d4a1c4eaec946ee))
+
+
+
+
+
 ## [6.1.4](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@6.1.3...@gemunion/common-pages@6.1.4) (2021-12-25)
 
 
