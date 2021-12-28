@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@2.1.3...@gemunion/mui-inputs-draft@2.2.0) (2021-12-28)
+
+
+### Features
+
+* split draft-js utils ([39f4789](https://github.com/gemunion/mui-packages/commit/39f47898a255ae87da71da0c06a00aee0ded7b17))
+
+
+
+
+
 ## [2.1.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@2.1.2...@gemunion/mui-inputs-draft@2.1.3) (2021-12-25)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-draft
