@@ -19,6 +19,8 @@ export interface IEntityInputProps {
   name: string;
   label?: string | number | ReactElement;
   controller: string;
+  disabled?: boolean;
+  readOnly?: boolean;
   multiple?: boolean;
   getTitle?: (item: any) => string;
   data?: Record<string, any>;
@@ -27,9 +29,21 @@ export interface IEntityInputProps {
 }
 
 export const EntityInput: FC<IEntityInputProps> = props => {
-  const { name, controller, getTitle, multiple, data, variant = "standard", onChange, label } = props;
+  const {
+    name,
+    controller,
+    getTitle,
+    multiple,
+    data,
+    variant = "standard",
+    onChange,
+    label,
+    disabled,
+    readOnly,
+  } = props;
   const suffix = name.split(".").pop() as string;
   const classes = useStyles();
+  const [open, setOpen] = useState(false);
 
   const formik = useFormikContext<any>();
   const error = getIn(formik.errors, name);
@@ -74,8 +88,13 @@ export const EntityInput: FC<IEntityInputProps> = props => {
     return (
       <ProgressOverlay isLoading={isLoading}>
         <Autocomplete
+          open={open}
+          onOpen={() => !readOnly && setOpen(true)}
+          onClose={() => setOpen(false)}
+          disableClearable={readOnly}
           classes={classes}
           multiple={true}
+          disabled={disabled}
           options={options}
           // preserve order
           value={value
@@ -93,6 +112,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
           renderInput={(params: AutocompleteRenderInputParams): ReactElement => (
             <TextField
               {...params}
+              InputProps={{ ...params.InputProps, readOnly }}
               label={localizedLabel}
               placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}
               error={!!error}
@@ -108,8 +128,13 @@ export const EntityInput: FC<IEntityInputProps> = props => {
     return (
       <ProgressOverlay isLoading={isLoading}>
         <Autocomplete
+          open={open}
+          onOpen={() => !readOnly && setOpen(true)}
+          onClose={() => setOpen(false)}
+          disableClearable={readOnly}
           classes={classes}
           multiple={false}
+          disabled={disabled}
           options={options}
           value={options.find((option: IAutocompleteOption) => value === option.id) || null}
           onChange={
@@ -123,6 +148,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
           renderInput={(params: AutocompleteRenderInputParams): ReactElement => (
             <TextField
               {...params}
+              InputProps={{ ...params.InputProps, readOnly }}
               label={localizedLabel}
               placeholder={localizedPlaceholder}
               error={error && touched}
