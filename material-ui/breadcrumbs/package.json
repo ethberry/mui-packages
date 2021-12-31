@@ -9,7 +9,7 @@
   },
   "description": "react widget: breadcrumbs",
   "devDependencies": {
-    "@mui/material": "5.2.5",
+    "@mui/material": "5.2.6",
     "@mui/styles": "5.2.3",
     "react": "17.0.2",
     "react-intl": "5.24.0",
