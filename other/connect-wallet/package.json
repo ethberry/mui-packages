@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/provider-user": "2.3.2",
+    "@gemunion/provider-user": "2.3.3",
     "@web3-react/core": "6.1.9",
     "@web3-react/injected-connector": "6.0.7",
     "@web3-react/trezor-connector": "6.1.9",
@@ -17,7 +17,7 @@
   "description": "react wallet connector",
   "devDependencies": {
     "@mui/icons-material": "5.2.5",
-    "@mui/material": "5.2.5",
+    "@mui/material": "5.2.6",
     "@mui/styles": "5.2.3",
     "@types/react": "17.0.38",
     "ethers": "5.5.2",
