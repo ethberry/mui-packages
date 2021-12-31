@@ -4,7 +4,7 @@ import { UserRejectedRequestError, WalletConnectConnector } from "@web3-react/wa
 import { useWeb3React } from "@web3-react/core";
 import { useSnackbar } from "notistack";
 
-import { WalletConnect } from "../icons";
+import { WalletConnectIcon } from "../wallet-icons";
 import { CustomBadge } from "../custom-badge";
 
 export interface IWalletConnectButtonProps {
@@ -23,7 +23,7 @@ export const WalletConnectButton: FC<IWalletConnectButtonProps> = props => {
     enqueueSnackbar(error.message, { variant: "warning" });
   }
 
-  const handleWalletConnect = async () => {
+  const handleClick = async () => {
     const connector = new WalletConnectConnector({
       // supportedChainIds: Object.values(networkToChainId),
       rpc: {
@@ -41,8 +41,8 @@ export const WalletConnectButton: FC<IWalletConnectButtonProps> = props => {
 
   return (
     <CustomBadge invisible={!active || !(connector instanceof WalletConnectConnector)}>
-      <IconButton disabled={disabled} onClick={handleWalletConnect}>
-        <WalletConnect viewBox="0 0 60 60" sx={{ fontSize: 60 }} />
+      <IconButton disabled={disabled} onClick={handleClick}>
+        <WalletConnectIcon viewBox="0 0 60 60" sx={{ fontSize: 60 }} />
       </IconButton>
     </CustomBadge>
   );

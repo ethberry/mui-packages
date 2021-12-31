@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { SvgIcon, SvgIconProps } from "@mui/material";
 
-export const WalletConnect: FC<SvgIconProps> = props => {
+export const WalletConnectIcon: FC<SvgIconProps> = props => {
   return (
     <SvgIcon {...props}>
       <path

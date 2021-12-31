@@ -5,7 +5,7 @@ import { Button, IconButton } from "@mui/material";
 import { InjectedConnector, NoEthereumProviderError, UserRejectedRequestError } from "@web3-react/injected-connector";
 import { useWeb3React } from "@web3-react/core";
 
-import { MetaMask } from "../icons";
+import { MetaMaskIcon } from "../wallet-icons";
 import { CustomBadge } from "../custom-badge";
 
 export interface IMetaMaksButtonProps {
@@ -41,7 +41,7 @@ export const MetaMaksButton: FC<IMetaMaksButtonProps> = props => {
     });
   }
 
-  const handleMetaMask = async () => {
+  const handleClick = async () => {
     const connector = new InjectedConnector({
       // supportedChainIds: Object.values(networkToChainId),
     });
@@ -51,8 +51,8 @@ export const MetaMaksButton: FC<IMetaMaksButtonProps> = props => {
 
   return (
     <CustomBadge invisible={!active || !(connector instanceof InjectedConnector)}>
-      <IconButton disabled={disabled} onClick={handleMetaMask}>
-        <MetaMask viewBox="0 0 60 60" sx={{ fontSize: 60 }} />
+      <IconButton disabled={disabled} onClick={handleClick}>
+        <MetaMaskIcon viewBox="0 0 60 60" sx={{ fontSize: 60 }} />
       </IconButton>
     </CustomBadge>
   );

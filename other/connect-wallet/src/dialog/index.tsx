@@ -2,9 +2,11 @@ import { FC } from "react";
 import { Dialog, DialogContent, DialogTitle } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 
-import { MetaMaksButton } from "./meta-mask-button";
-import { WalletConnectButton } from "./wallet-connect-button";
-// import { TrezorButton } from "./trezor-button";
+import {
+  MetaMaksButton,
+  WalletConnectButton,
+  // TrezorButton
+} from "./buttons";
 import { CloseButton } from "./close-button";
 
 export interface IWalletConnectDialogProps {

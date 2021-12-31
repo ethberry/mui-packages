@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { SvgIcon, SvgIconProps } from "@mui/material";
 
-export const MetaMask: FC<SvgIconProps> = props => {
+export const MetaMaskIcon: FC<SvgIconProps> = props => {
   return (
     <SvgIcon {...props}>
       <mask id="mask0" maskUnits="userSpaceOnUse" x="0" y="0">

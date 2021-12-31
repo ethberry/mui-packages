@@ -40,7 +40,7 @@ export const Wallet: FC = () => {
   return (
     <Box mx={1}>
       {active ? (
-        <Tooltip title={account ?? ""} enterDelay={300}>
+        <Tooltip title={account!} enterDelay={300}>
           <IconButton color="inherit" onClick={handleOpenWalletDialog}>
             <WalletIcon />
           </IconButton>

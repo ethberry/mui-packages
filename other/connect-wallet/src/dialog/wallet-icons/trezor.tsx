@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { SvgIcon, SvgIconProps } from "@mui/material";
 
-export const Trezor: FC<SvgIconProps> = props => {
+export const TrezorIcon: FC<SvgIconProps> = props => {
   return (
     <SvgIcon {...props}>
       <circle cx="30" cy="30" r="30" fill="#DFF1FE" />
