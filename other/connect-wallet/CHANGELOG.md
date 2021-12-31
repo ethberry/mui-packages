@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/connect-wallet@0.0.3...@gemunion/connect-wallet@0.0.4) (2021-12-31)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([c06dc8a](https://github.com/gemunion/mui-packages/commit/c06dc8ae39e93003a9005c0ab7d1ad2610d48a8b))
+* wallet icons ([f082943](https://github.com/gemunion/mui-packages/commit/f0829433104359ad9d77006dd13a9b7e21c27218))
+
+
+
+
+
 ## [0.0.3](https://github.com/gemunion/mui-packages/compare/@gemunion/connect-wallet@0.0.2...@gemunion/connect-wallet@0.0.3) (2021-12-28)
 
 **Note:** Version bump only for package @gemunion/connect-wallet
