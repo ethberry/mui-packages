@@ -12,6 +12,9 @@ export const useDeleteUrl = (bucket?: string): ((url: string) => Promise<void>) 
   const storage = getStorage(app, bucket);
 
   return async (url: string): Promise<void> => {
+    if (url.includes("DO_NOT_REMOVE")) {
+      return;
+    }
     const storageRef = ref(storage, url);
     await deleteObject(storageRef)
       .then(message => {
