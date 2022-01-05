@@ -25,6 +25,8 @@ const config: Configuration = {
       crypto: require.resolve("crypto-browserify"),
       buffer: require.resolve("buffer/"),
       process: require.resolve("process/browser"),
+      https: require.resolve("https-browserify"),
+      http: require.resolve("stream-http"),
     },
   }
 };
@@ -40,6 +42,12 @@ const config: Configuration = {
     "@web3-react/injected-connector": "6.0.7",
     "@web3-react/trezor-connector": "6.1.9",
     "@web3-react/walletconnect-connector": "6.2.8",
+    "@web3-react/ledger-connector": "6.1.9",
+    "@web3-react/fortmatic-connector": "6.1.6",
+    "@web3-react/portis-connector": "6.1.9",
+    "@web3-react/torus-connector": "6.1.9",
+    "@web3-react/magic-connector": "6.1.9",
+    "@web3-react/authereum-connector": "6.2.0",
     "ethers": "5.5.2"
   },
   "devDependencies": {
@@ -49,7 +57,9 @@ const config: Configuration = {
     "assert": "2.0.0",
     "crypto-browserify": "3.12.0",
     "buffer": "6.0.3",
-    "process": "0.11.10"
+    "process": "0.11.10",
+    "stream-http": "3.2.0",
+    "https-browserify": "1.0.0",
   }
 }
 ```

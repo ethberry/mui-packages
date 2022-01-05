@@ -3,9 +3,14 @@ import { Dialog, DialogContent, DialogTitle } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 
 import {
+  // AuthereumButton,
+  // FortmaticButton,
+  // LedgerButton,
   MetaMaksButton,
+  // PortisButton,
+  // TorusButton,
+  // TrezorButton,
   WalletConnectButton,
-  // TrezorButton
 } from "./buttons";
 import { CloseButton } from "./close-button";
 
@@ -26,7 +31,12 @@ export const WalletDialog: FC<IWalletConnectDialogProps> = props => {
       <DialogContent>
         <MetaMaksButton onClick={onClose} />
         <WalletConnectButton onClick={onClose} />
-        {/* <TrezorButton /> */}
+        {/* <TrezorButton onClick={onClose} /> */}
+        {/* <LedgerButton onClick={onClose} /> */}
+        {/* <TorusButton onClick={onClose} /> */}
+        {/* <FortmaticButton onClick={onClose} /> */}
+        {/* <AuthereumButton onClick={onClose} /> */}
+        {/* <PortisButton onClick={onClose} /> */}
       </DialogContent>
     </Dialog>
   );

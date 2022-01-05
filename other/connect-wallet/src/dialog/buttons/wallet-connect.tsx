@@ -27,11 +27,7 @@ export const WalletConnectButton: FC<IWalletConnectButtonProps> = props => {
     const connector = new WalletConnectConnector({
       // supportedChainIds: Object.values(networkToChainId),
       rpc: {
-        1: "https://eth-mainnet.alchemyapi.io/v2/YlMZbDxnEu4zQyO0hIn-xFdTnpb_HJrf",
-        10: "https://opt-mainnet.g.alchemy.com/v2/GmIPLovemNAYykzfC",
-        56: "https://dataseed1.binance.org/",
-        137: "https://polygon-mainnet.g.alchemy.com/v2/HQLrgXRp7sZQHqecDe2Ljcvug2JHVp0q",
-        42161: "https://arb-mainnet.g.alchemy.com/v2/GmIPLovemNAYykzfCeeioOJNVFG8gxTd",
+        1: process.env.JSON_RPC_ADDR as string,
       },
       qrcode: true,
     });

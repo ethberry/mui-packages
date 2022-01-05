@@ -10,6 +10,7 @@ export interface ITrezorButtonButtonProps {
   disabled?: boolean;
 }
 
+// https://github.com/NoahZinsmeister/web3-react/blob/v6/docs/connectors/trezor.md
 export const TrezorButton: FC<ITrezorButtonButtonProps> = props => {
   const { disabled } = props;
 
@@ -18,7 +19,7 @@ export const TrezorButton: FC<ITrezorButtonButtonProps> = props => {
   const handleClick = () => {
     const connector = new TrezorConnector({
       chainId: 1,
-      url: process.env.RPC_URL as string,
+      url: process.env.JSON_RPC_ADDR as string,
       pollingInterval: 12000,
       manifestEmail: "dummy@abc.xyz",
       manifestAppUrl: "http://localhost:1234",
