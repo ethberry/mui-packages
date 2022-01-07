@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.5](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@5.1.4...@gemunion/mui-inputs-core@5.1.5) (2022-01-07)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-core
+
+
+
+
+
 ## 5.1.4 (2021-12-31)
 
 
