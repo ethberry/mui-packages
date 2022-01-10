@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2022-01-10)
+
+
+### Features
+
+* move buttons inside providers ([ac396cb](https://github.com/gemunion/mui-packages/commit/ac396cbd919f77512277cc5f94522156a36a435c))
+
+
+
+
+
 ## [0.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/connect-wallet@0.0.3...@gemunion/connect-wallet@0.0.4) (2021-12-31)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0 (2022-01-10)
+
+
+### Features
+
+* move buttons inside providers ([ac396cb](https://github.com/gemunion/common-packages/commit/ac396cbd919f77512277cc5f94522156a36a435c))
+
+
+
+
+
 ## 1.3.4 (2022-01-07)
 
 **Note:** Version bump only for package @gemunion/provider-localization

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.3.0](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@6.2.6...@gemunion/common-pages@6.3.0) (2022-01-10)
+
+
+### Features
+
+* move buttons inside providers ([ac396cb](https://github.com/gemunion/mui-packages/commit/ac396cbd919f77512277cc5f94522156a36a435c))
+
+
+
+
+
 ## [6.2.6](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@6.2.5...@gemunion/common-pages@6.2.6) (2022-01-08)
 
 

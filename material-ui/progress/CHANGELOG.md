@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2022-01-10)
+
+
+### Features
+
+* move buttons inside providers ([ac396cb](https://github.com/gemunion/mui-packages/commit/ac396cbd919f77512277cc5f94522156a36a435c))
+
+
+
+
+
 ## [3.0.14](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-progress@3.0.13...@gemunion/mui-progress@3.0.14) (2022-01-07)
 
 **Note:** Version bump only for package @gemunion/mui-progress

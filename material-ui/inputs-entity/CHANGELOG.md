@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.3.0 (2022-01-10)
+
+
+### Features
+
+* move buttons inside providers ([ac396cb](https://github.com/gemunion/mui-packages/commit/ac396cbd919f77512277cc5f94522156a36a435c))
+
+
+
+
+
 ## [5.2.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@5.2.0...@gemunion/mui-inputs-entity@5.2.1) (2022-01-07)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-entity

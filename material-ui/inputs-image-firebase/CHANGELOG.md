@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@5.1.6...@gemunion/mui-inputs-image-firebase@5.2.0) (2022-01-10)
+
+
+### Features
+
+* move buttons inside providers ([ac396cb](https://github.com/gemunion/mui-packages/commit/ac396cbd919f77512277cc5f94522156a36a435c))
+
+
+
+
+
 ## [5.1.6](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@5.1.5...@gemunion/mui-inputs-image-firebase@5.1.6) (2022-01-08)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@0.0.5...@gemunion/firebase-login@0.1.0) (2022-01-10)
+
+
+### Features
+
+* move buttons inside providers ([ac396cb](https://github.com/gemunion/mui-packages/commit/ac396cbd919f77512277cc5f94522156a36a435c))
+
+
+
+
+
 ## [0.0.5](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@0.0.4...@gemunion/firebase-login@0.0.5) (2022-01-08)
 
 
