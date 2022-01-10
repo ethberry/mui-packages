@@ -5,24 +5,25 @@ import { useIntl } from "react-intl";
 
 import { UserContext } from "@gemunion/provider-user";
 
-import { WalletDialog } from "./dialog";
-import { WalletIcon } from "./icon";
-import { WalletMenuDialog } from "./menu-dialog";
+import { WalletDialog } from "../dialog";
+import { WalletIcon } from "../icon";
+import { WalletMenuDialog } from "../menu-dialog";
+import { WalletContext } from "../provider";
 
 export const Wallet: FC = () => {
   const user = useContext(UserContext);
+  const wallet = useContext(WalletContext);
 
   const { active, account } = useWeb3React();
   const { formatMessage } = useIntl();
-  const [isConnectDialogOpen, setIsConnectDialogOpen] = useState(false);
   const [isWalletDialogOpen, setIsWalletDialogOpen] = useState(false);
 
   const handleOpenConnectDialog = () => {
-    setIsConnectDialogOpen(true);
+    wallet.setWalletConnectDialogOpen(true);
   };
 
   const handleCloseConnectDialog = () => {
-    setIsConnectDialogOpen(false);
+    wallet.setWalletConnectDialogOpen(false);
   };
 
   const handleOpenWalletDialog = () => {
@@ -52,7 +53,7 @@ export const Wallet: FC = () => {
           </IconButton>
         </Tooltip>
       )}
-      <WalletDialog onClose={handleCloseConnectDialog} open={isConnectDialogOpen} />
+      <WalletDialog onClose={handleCloseConnectDialog} open={wallet.getWalletConnectDialogOpen()} />
       <WalletMenuDialog onClose={handleCloseWalletDialog} open={isWalletDialogOpen} />
     </Box>
   );

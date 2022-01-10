@@ -1,10 +1,11 @@
-import { FC, useState } from "react";
+import { FC, useContext } from "react";
 
 import { CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
 import { PaletteOptions } from "@mui/material/styles/createPalette";
+import { SettingsContext } from "@gemunion/provider-settings";
+import { ThemeType } from "@gemunion/constants";
 
-import { ThemeContext, ThemeType } from "./context";
 import { dark, light } from "./palette";
 
 export interface IThemeProviderProps {
@@ -14,33 +15,22 @@ export interface IThemeProviderProps {
 }
 
 export const GemunionThemeProvider: FC<IThemeProviderProps> = props => {
-  const { type: defaultType = ThemeType.light, darkPalette = dark, lightPalette = light, children } = props;
+  const { darkPalette = dark, lightPalette = light, children } = props;
 
-  const [type, setType] = useState<ThemeType>(defaultType);
-
-  const changeThemeType = (type: ThemeType): void => {
-    setType(type);
-  };
+  const settings = useContext(SettingsContext);
 
   const theme = createTheme({
     palette: {
       light: lightPalette,
       dark: darkPalette,
-    }[type],
+    }[settings.getTheme()],
   });
 
   return (
     <ThemeProvider theme={theme}>
       <StyledEngineProvider injectFirst>
         <CssBaseline />
-        <ThemeContext.Provider
-          value={{
-            type,
-            changeThemeType,
-          }}
-        >
-          {children}
-        </ThemeContext.Provider>
+        {children}
       </StyledEngineProvider>
     </ThemeProvider>
   );

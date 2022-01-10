@@ -3,14 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [3.0.14](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-provider-theme@3.0.13...@gemunion/mui-provider-theme@3.0.14) (2022-01-07)
-
-**Note:** Version bump only for package @gemunion/mui-provider-theme
-
-
-
-
-
 ## 3.0.13 (2021-12-31)
 
 

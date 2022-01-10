@@ -1,19 +1,16 @@
 {
   "author": {
-    "email": "TrejGun@gmail.com",
+    "email": "trejgun+gemunion@gmail.com",
     "name": "TrejGun",
-    "url": "https://trejgun.github.io/"
+    "url": "https://gemunion.io/"
   },
   "bugs": {
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
-  "dependencies": {
-    "css-mediaquery": "0.1.2"
-  },
   "description": "Material UI theme provider",
   "devDependencies": {
+    "@mui/lab": "5.0.0-alpha.63",
     "@mui/material": "5.2.7",
-    "@types/css-mediaquery": "0.1.1",
     "react": "17.0.2"
   },
   "engines": {
@@ -22,8 +19,9 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/mui-provider-theme-ssr",
+  "name": "@gemunion/mui-provider-picker",
   "peerDependencies": {
+    "@mui/lab": "^5",
     "@mui/material": "^5",
     "react": "^17"
   },
@@ -45,5 +43,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.0.14"
+  "version": "3.0.13"
 }
