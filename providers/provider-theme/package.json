@@ -24,7 +24,7 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/mui-provider-theme",
+  "name": "@gemunion/provider-theme",
   "peerDependencies": {
     "@mui/icons-material": "^5",
     "@mui/material": "^5",

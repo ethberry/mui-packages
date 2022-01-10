@@ -22,7 +22,7 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/mui-provider-theme-ssr",
+  "name": "@gemunion/provider-theme-ssr",
   "peerDependencies": {
     "@mui/material": "^5",
     "react": "^17"

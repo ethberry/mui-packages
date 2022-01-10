@@ -25,9 +25,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [3.0.12](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-provider-theme-ssr@3.0.11...@gemunion/mui-provider-theme-ssr@3.0.12) (2021-12-25)
+## [3.0.12](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme-ssr@3.0.11...@gemunion/provider-theme-ssr@3.0.12) (2021-12-25)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme-ssr
+**Note:** Version bump only for package @gemunion/provider-theme-ssr
 
 
 
@@ -35,7 +35,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.11 (2021-12-19)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme-ssr
+**Note:** Version bump only for package @gemunion/provider-theme-ssr
 
 
 
@@ -63,17 +63,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [3.0.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-provider-theme-ssr@3.0.7...@gemunion/mui-provider-theme-ssr@3.0.8) (2021-11-30)
+## [3.0.8](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme-ssr@3.0.7...@gemunion/provider-theme-ssr@3.0.8) (2021-11-30)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme-ssr
-
-
+**Note:** Version bump only for package @gemunion/provider-theme-ssr
 
 
 
-## [3.0.7](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-provider-theme-ssr@3.0.6...@gemunion/mui-provider-theme-ssr@3.0.7) (2021-11-20)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme-ssr
+
+## [3.0.7](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme-ssr@3.0.6...@gemunion/provider-theme-ssr@3.0.7) (2021-11-20)
+
+**Note:** Version bump only for package @gemunion/provider-theme-ssr
 
 
 
@@ -123,15 +123,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [3.0.2](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-provider-theme-ssr@3.0.1...@gemunion/mui-provider-theme-ssr@3.0.2) (2021-10-02)
+## [3.0.2](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme-ssr@3.0.1...@gemunion/provider-theme-ssr@3.0.2) (2021-10-02)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme-ssr
-
-
+**Note:** Version bump only for package @gemunion/provider-theme-ssr
 
 
 
-## [3.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-provider-theme-ssr@3.0.0...@gemunion/mui-provider-theme-ssr@3.0.1) (2021-09-26)
+
+
+## [3.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme-ssr@3.0.0...@gemunion/provider-theme-ssr@3.0.1) (2021-09-26)
 
 
 ### Bug Fixes
@@ -169,23 +169,23 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.5](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-provider-theme-ssr@2.0.4...@gemunion/mui-provider-theme-ssr@2.0.5) (2021-09-07)
+## [2.0.5](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme-ssr@2.0.4...@gemunion/provider-theme-ssr@2.0.5) (2021-09-07)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme-ssr
-
-
-
-
-
-## [2.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-provider-theme-ssr@3.0.0...@gemunion/mui-provider-theme-ssr@2.0.4) (2021-08-30)
-
-**Note:** Version bump only for package @gemunion/mui-provider-theme-ssr
+**Note:** Version bump only for package @gemunion/provider-theme-ssr
 
 
 
 
 
-# [3.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-provider-theme-ssr@0.4.3...@gemunion/mui-provider-theme-ssr@3.0.0) (2021-08-29)
+## [2.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme-ssr@3.0.0...@gemunion/provider-theme-ssr@2.0.4) (2021-08-30)
+
+**Note:** Version bump only for package @gemunion/provider-theme-ssr
+
+
+
+
+
+# [3.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme-ssr@0.4.3...@gemunion/provider-theme-ssr@3.0.0) (2021-08-29)
 
 
 ### Bug Fixes
@@ -208,7 +208,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.2 (2021-08-21)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme-ssr
+**Note:** Version bump only for package @gemunion/provider-theme-ssr
 
 
 
@@ -225,7 +225,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [2.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-provider-theme-ssr@0.4.1...@gemunion/mui-provider-theme-ssr@2.0.0) (2021-08-16)
+# [2.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme-ssr@0.4.1...@gemunion/provider-theme-ssr@2.0.0) (2021-08-16)
 
 
 ### Bug Fixes
@@ -246,7 +246,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.5.0](https://github.com/gemunion/common-packages/compare/@gemunion/mui-provider-theme-ssr@0.4.0...@gemunion/mui-provider-theme-ssr@0.5.0) (2021-08-15)
+# [0.5.0](https://github.com/gemunion/common-packages/compare/@gemunion/provider-theme-ssr@0.4.0...@gemunion/provider-theme-ssr@0.5.0) (2021-08-15)
 
 
 * feat!: mui4 -> 5 ([dcde35f](https://github.com/gemunion/common-packages/commit/dcde35f58f2ebfef0a64f851776942e31110c3fc))
@@ -292,17 +292,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.2](https://github.com/gemunion/common-packages/compare/@gemunion/mui-provider-theme-ssr@0.2.1...@gemunion/mui-provider-theme-ssr@0.2.2) (2021-08-06)
+## [0.2.2](https://github.com/gemunion/common-packages/compare/@gemunion/provider-theme-ssr@0.2.1...@gemunion/provider-theme-ssr@0.2.2) (2021-08-06)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme-ssr
-
-
+**Note:** Version bump only for package @gemunion/provider-theme-ssr
 
 
 
-## [0.2.1](https://github.com/gemunion/common-packages/compare/@gemunion/mui-provider-theme-ssr@0.2.0...@gemunion/mui-provider-theme-ssr@0.2.1) (2021-07-22)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme-ssr
+
+## [0.2.1](https://github.com/gemunion/common-packages/compare/@gemunion/provider-theme-ssr@0.2.0...@gemunion/provider-theme-ssr@0.2.1) (2021-07-22)
+
+**Note:** Version bump only for package @gemunion/provider-theme-ssr
 
 
 
@@ -321,15 +321,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.6 (2021-07-13)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
 
 
-## [0.1.5](https://github.com/gemunion/common-packages/compare/@gemunion/mui-provider-theme@0.1.4...@gemunion/mui-provider-theme@0.1.5) (2021-07-10)
+## [0.1.5](https://github.com/gemunion/common-packages/compare/@gemunion/provider-theme@0.1.4...@gemunion/provider-theme@0.1.5) (2021-07-10)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -337,7 +337,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.4 (2021-07-02)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -345,7 +345,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.3 (2021-06-24)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -353,7 +353,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.2 (2021-06-09)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -361,13 +361,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.1 (2021-06-09)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
 
 
-# [0.1.0](https://github.com/gemunion/common-packages/compare/@gemunion/mui-provider-theme@0.0.162...@gemunion/mui-provider-theme@0.1.0) (2021-06-09)
+# [0.1.0](https://github.com/gemunion/common-packages/compare/@gemunion/provider-theme@0.0.162...@gemunion/provider-theme@0.1.0) (2021-06-09)
 
 
 ### Features
@@ -391,7 +391,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.161 (2021-05-31)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -410,7 +410,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.159 (2021-05-14)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -440,7 +440,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.156 (2021-05-06)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -448,15 +448,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.155 (2021-04-30)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
 
 
-## [0.0.154](https://github.com/gemunion/common-packages/compare/@gemunion/mui-provider-theme@0.0.153...@gemunion/mui-provider-theme@0.0.154) (2021-04-28)
+## [0.0.154](https://github.com/gemunion/common-packages/compare/@gemunion/provider-theme@0.0.153...@gemunion/provider-theme@0.0.154) (2021-04-28)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -464,7 +464,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.153 (2021-04-27)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -472,7 +472,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.152 (2021-04-27)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -480,7 +480,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.151 (2021-04-19)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -488,7 +488,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.150 (2021-04-18)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -496,7 +496,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.149 (2021-04-15)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -504,7 +504,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.148 (2021-04-15)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -512,7 +512,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.147 (2021-04-14)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -520,7 +520,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.146 (2021-03-29)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -528,7 +528,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.145 (2021-03-28)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -569,7 +569,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.141 (2021-03-17)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -632,7 +632,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.135 (2021-03-08)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -640,7 +640,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.134 (2021-03-07)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -648,7 +648,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.133 (2021-03-07)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -656,7 +656,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.132 (2021-03-05)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -664,7 +664,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.131 (2021-03-05)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -672,7 +672,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.130 (2021-03-02)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -680,7 +680,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.129 (2021-03-01)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -688,7 +688,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.128 (2021-03-01)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -762,7 +762,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.121 (2021-02-24)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -792,15 +792,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.118 (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
 
 
-## [0.0.117](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.116...@gemunion/mui-provider-theme@0.0.117) (2021-02-23)
+## [0.0.117](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.116...@gemunion/provider-theme@0.0.117) (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -808,7 +808,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.116 (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -816,7 +816,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.115 (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -824,7 +824,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.114 (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -843,7 +843,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.112 (2021-02-23)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -862,7 +862,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.110 (2021-02-22)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -936,7 +936,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.103 (2021-02-17)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -944,7 +944,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.102 (2021-02-16)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -952,7 +952,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.101 (2021-02-13)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -960,7 +960,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.100 (2021-02-13)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -968,7 +968,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.99 (2021-02-12)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -1009,7 +1009,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.95 (2021-02-09)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -1061,7 +1061,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.90 (2021-02-04)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -1069,7 +1069,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.89 (2021-02-04)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -1077,7 +1077,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.88 (2021-02-03)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -1085,7 +1085,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.87 (2021-02-02)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -1245,17 +1245,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.72](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.71...@gemunion/mui-provider-theme@0.0.72) (2021-01-14)
+## [0.0.72](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.71...@gemunion/provider-theme@0.0.72) (2021-01-14)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
-
-
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
-## [0.0.71](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.70...@gemunion/mui-provider-theme@0.0.71) (2021-01-14)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+
+## [0.0.71](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.70...@gemunion/provider-theme@0.0.71) (2021-01-14)
+
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -1362,7 +1362,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.61 (2021-01-03)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -1370,7 +1370,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.60 (2021-01-03)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -1543,7 +1543,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.44 (2020-12-08)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -1661,7 +1661,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.33 (2020-11-23)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
@@ -1689,79 +1689,79 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.30](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.29...@gemunion/mui-provider-theme@0.0.30) (2020-11-16)
+## [0.0.30](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.29...@gemunion/provider-theme@0.0.30) (2020-11-16)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
-
-
-
-
-
-## [0.0.29](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.28...@gemunion/mui-provider-theme@0.0.29) (2020-11-12)
-
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
 
 
-## [0.0.28](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.27...@gemunion/mui-provider-theme@0.0.28) (2020-11-10)
+## [0.0.29](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.28...@gemunion/provider-theme@0.0.29) (2020-11-12)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
-
-
-
-
-
-## [0.0.27](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.26...@gemunion/mui-provider-theme@0.0.27) (2020-11-09)
-
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
 
 
-## [0.0.26](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.25...@gemunion/mui-provider-theme@0.0.26) (2020-11-07)
+## [0.0.28](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.27...@gemunion/provider-theme@0.0.28) (2020-11-10)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
-
-
-
-
-
-## [0.0.25](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.24...@gemunion/mui-provider-theme@0.0.25) (2020-11-02)
-
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
 
 
-## [0.0.24](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.23...@gemunion/mui-provider-theme@0.0.24) (2020-11-02)
+## [0.0.27](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.26...@gemunion/provider-theme@0.0.27) (2020-11-09)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
-
-
-
-
-
-## [0.0.23](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.22...@gemunion/mui-provider-theme@0.0.23) (2020-10-30)
-
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
 
 
-## [0.0.22](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.21...@gemunion/mui-provider-theme@0.0.22) (2020-10-28)
+## [0.0.26](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.25...@gemunion/provider-theme@0.0.26) (2020-11-07)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
-
-
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
-## [0.0.21](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.20...@gemunion/mui-provider-theme@0.0.21) (2020-10-27)
+
+
+## [0.0.25](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.24...@gemunion/provider-theme@0.0.25) (2020-11-02)
+
+**Note:** Version bump only for package @gemunion/provider-theme
+
+
+
+
+
+## [0.0.24](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.23...@gemunion/provider-theme@0.0.24) (2020-11-02)
+
+**Note:** Version bump only for package @gemunion/provider-theme
+
+
+
+
+
+## [0.0.23](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.22...@gemunion/provider-theme@0.0.23) (2020-10-30)
+
+**Note:** Version bump only for package @gemunion/provider-theme
+
+
+
+
+
+## [0.0.22](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.21...@gemunion/provider-theme@0.0.22) (2020-10-28)
+
+**Note:** Version bump only for package @gemunion/provider-theme
+
+
+
+
+
+## [0.0.21](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.20...@gemunion/provider-theme@0.0.21) (2020-10-27)
 
 
 ### Bug Fixes
@@ -1772,46 +1772,46 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.0.20](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.19...@gemunion/mui-provider-theme@0.0.20) (2020-10-26)
+## [0.0.20](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.19...@gemunion/provider-theme@0.0.20) (2020-10-26)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
-
-
-
-
-
-## [0.0.19](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.18...@gemunion/mui-provider-theme@0.0.19) (2020-10-26)
-
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
 
 
-## [0.0.18](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.17...@gemunion/mui-provider-theme@0.0.18) (2020-10-22)
+## [0.0.19](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.18...@gemunion/provider-theme@0.0.19) (2020-10-26)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
-
-
-
-
-
-## [0.0.17](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.16...@gemunion/mui-provider-theme@0.0.17) (2020-10-21)
-
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
 
 
-## [0.0.16](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.14...@gemunion/mui-provider-theme@0.0.16) (2020-10-19)
+## [0.0.18](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.17...@gemunion/provider-theme@0.0.18) (2020-10-22)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
-
-
+**Note:** Version bump only for package @gemunion/provider-theme
 
 
 
-## [0.0.15](https://github.com/memoryOS/material-ui/compare/@gemunion/mui-provider-theme@0.0.14...@gemunion/mui-provider-theme@0.0.15) (2020-10-15)
 
-**Note:** Version bump only for package @gemunion/mui-provider-theme
+
+## [0.0.17](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.16...@gemunion/provider-theme@0.0.17) (2020-10-21)
+
+**Note:** Version bump only for package @gemunion/provider-theme
+
+
+
+
+
+## [0.0.16](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.14...@gemunion/provider-theme@0.0.16) (2020-10-19)
+
+**Note:** Version bump only for package @gemunion/provider-theme
+
+
+
+
+
+## [0.0.15](https://github.com/memoryOS/material-ui/compare/@gemunion/provider-theme@0.0.14...@gemunion/provider-theme@0.0.15) (2020-10-15)
+
+**Note:** Version bump only for package @gemunion/provider-theme
