@@ -19,7 +19,7 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/mui-provider-picker",
+  "name": "@gemunion/provider-picker",
   "peerDependencies": {
     "@mui/lab": "^5",
     "@mui/material": "^5",
