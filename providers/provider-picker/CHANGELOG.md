@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.2.0 (2022-01-10)
+
+
+### Features
+
+* rename picker provider ([5f6978f](https://github.com/gemunion/mui-packages/commit/5f6978ff478186eb43049e0ab80ec5af67987b5e))
+
+
+
+
+
 # 3.1.0 (2022-01-10)
 
 
