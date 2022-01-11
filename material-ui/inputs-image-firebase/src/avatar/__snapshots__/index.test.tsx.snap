@@ -6,7 +6,7 @@ exports[`<AvatarInput /> renders empty field with error: image is required 1`] =
     class="MuiFormControl-root MuiFormControl-fullWidth AvatarInput-root-15 css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-d6jbqa-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-zprcrz-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       id="avatar-select-label"
     >
@@ -60,7 +60,7 @@ exports[`<AvatarInput /> renders image with error from server 1`] = `
     class="MuiFormControl-root MuiFormControl-fullWidth AvatarInput-root-11 css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-d6jbqa-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-zprcrz-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       id="avatar-select-label"
     >
@@ -109,7 +109,7 @@ exports[`<AvatarInput /> renders the empty field 1`] = `
     class="MuiFormControl-root MuiFormControl-fullWidth AvatarInput-root-1 css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-d6jbqa-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-zprcrz-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       id="avatar-select-label"
     >
@@ -157,7 +157,7 @@ exports[`<AvatarInput /> renders the field with image 1`] = `
     class="MuiFormControl-root MuiFormControl-fullWidth AvatarInput-root-7 css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-d6jbqa-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-zprcrz-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       id="avatar-select-label"
     >
