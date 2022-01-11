@@ -11,9 +11,9 @@
   "devDependencies": {
     "@emotion/react": "11.7.1",
     "@gemunion/eslint-config": "0.1.10",
-    "@storybook/addon-essentials": "6.4.9",
+    "@storybook/addon-essentials": "6.4.10",
     "@storybook/preset-create-react-app": "3.2.0",
-    "@storybook/react": "6.4.9",
+    "@storybook/react": "6.4.10",
     "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
     "eslint": "7.32.0",

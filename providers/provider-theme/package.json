@@ -14,9 +14,9 @@
   "description": "Material UI theme provider",
   "devDependencies": {
     "@mui/icons-material": "5.2.5",
-    "@mui/material": "5.2.7",
+    "@mui/material": "5.2.8",
     "react": "17.0.2",
-    "react-intl": "5.24.1"
+    "react-intl": "5.24.2"
   },
   "engines": {
     "node": ">=12.13"

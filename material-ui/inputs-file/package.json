@@ -9,18 +9,18 @@
   },
   "dependencies": {
     "clsx": "1.1.1",
-    "react-dropzone": "11.4.2"
+    "react-dropzone": "11.5.1"
   },
   "description": "react widget",
   "devDependencies": {
     "@mui/icons-material": "5.2.5",
-    "@mui/material": "5.2.7",
+    "@mui/material": "5.2.8",
     "@mui/styles": "5.2.3",
-    "@storybook/react": "6.4.9",
+    "@storybook/react": "6.4.10",
     "@types/react": "17.0.38",
     "notistack": "2.0.3",
     "react": "17.0.2",
-    "react-intl": "5.24.1"
+    "react-intl": "5.24.2"
   },
   "engines": {
     "node": ">=12.13"

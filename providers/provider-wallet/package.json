@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/provider-user": "2.3.3",
+    "@gemunion/provider-user": "2.3.4",
     "@web3-react/authereum-connector": "6.2.0",
     "@web3-react/core": "6.1.9",
     "@web3-react/fortmatic-connector": "6.1.6",
@@ -23,10 +23,10 @@
   "description": "react wallet connector",
   "devDependencies": {
     "@mui/icons-material": "5.2.5",
-    "@mui/material": "5.2.7",
+    "@mui/material": "5.2.8",
     "@mui/styles": "5.2.3",
     "@types/react": "17.0.38",
-    "ethers": "5.5.2",
+    "ethers": "5.5.3",
     "notistack": "2.0.3",
     "react": "17.0.2"
   },

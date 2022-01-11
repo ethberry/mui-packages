@@ -9,19 +9,19 @@
   },
   "dependencies": {
     "@gemunion/mui-progress": "3.1.0",
-    "@gemunion/provider-api": "5.3.3"
+    "@gemunion/provider-api": "5.3.4"
   },
   "description": "react widget",
   "devDependencies": {
     "@mui/icons-material": "5.2.5",
-    "@mui/lab": "5.0.0-alpha.63",
-    "@mui/material": "5.2.7",
+    "@mui/lab": "5.0.0-alpha.64",
+    "@mui/material": "5.2.8",
     "@mui/styles": "5.2.3",
     "@types/react": "17.0.38",
     "formik": "2.2.9",
     "notistack": "2.0.3",
     "react": "17.0.2",
-    "react-intl": "5.24.1"
+    "react-intl": "5.24.2"
   },
   "engines": {
     "node": ">=12.13"
