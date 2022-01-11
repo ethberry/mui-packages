@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.4.1 (2022-01-11)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([8587705](https://github.com/gemunion/common-packages/commit/858770531e24908893c975f9616f9dd394d8162b))
+
+
+
+
+
 # 1.4.0 (2022-01-10)
 
 
