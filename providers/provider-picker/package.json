@@ -7,7 +7,7 @@
   "bugs": {
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
-  "description": "Material UI theme provider",
+  "description": "Material UI picker provider",
   "devDependencies": {
     "@mui/lab": "5.0.0-alpha.64",
     "@mui/material": "5.2.8",

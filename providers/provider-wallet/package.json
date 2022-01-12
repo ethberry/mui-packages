@@ -20,7 +20,7 @@
     "@web3-react/trezor-connector": "6.1.9",
     "@web3-react/walletconnect-connector": "6.2.8"
   },
-  "description": "react wallet connector",
+  "description": "react wallet provider",
   "devDependencies": {
     "@mui/icons-material": "5.2.5",
     "@mui/material": "5.2.8",
