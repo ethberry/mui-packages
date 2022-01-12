@@ -13,7 +13,6 @@ export const useStyles = makeStyles<Theme>(
       left: 0,
       bottom: 0,
       right: 0,
-      backgroundColor: "rgba(255,255,255,.8)",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
