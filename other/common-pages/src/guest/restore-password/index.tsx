@@ -21,7 +21,7 @@ interface IRestorePasswordDto {
 export const RestorePassword: FC = () => {
   const classes = useStyles();
   const navigate = useNavigate();
-  const { token } = useParams<"token">();
+  const { token } = useParams<{ token: string }>();
   const { formatMessage } = useIntl();
   const { enqueueSnackbar } = useSnackbar();
 
