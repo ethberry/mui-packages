@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.3.2](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@6.3.1...@gemunion/common-pages@6.3.2) (2022-01-14)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([11423bb](https://github.com/gemunion/mui-packages/commit/11423bb49e0c6b0b00db2f5093e290faa38403b6))
+* update react router interface ([b4d7228](https://github.com/gemunion/mui-packages/commit/b4d7228c692fc2cb3e25be8072b40a62bae35ccb))
+
+
+
+
+
 ## 6.3.1 (2022-01-11)
 
 

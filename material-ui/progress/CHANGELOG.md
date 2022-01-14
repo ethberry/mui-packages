@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.2](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-progress@3.1.1...@gemunion/mui-progress@3.1.2) (2022-01-14)
+
+
+### Bug Fixes
+
+* dark theme ([29ee414](https://github.com/gemunion/mui-packages/commit/29ee41436cbf6da7dc7f7d324a450ea684e17836))
+
+
+
+
+
 ## 3.1.1 (2022-01-11)
 
 
