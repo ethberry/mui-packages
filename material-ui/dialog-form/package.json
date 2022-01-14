@@ -16,9 +16,9 @@
   "devDependencies": {
     "@gemunion/mui-inputs-core": "5.2.1",
     "@mui/material": "5.2.8",
-    "@storybook/react": "6.4.10",
+    "@storybook/react": "6.4.12",
     "react": "17.0.2",
-    "react-intl": "5.24.2",
+    "react-intl": "5.24.3",
     "react-router-dom": "6.2.1"
   },
   "engines": {
