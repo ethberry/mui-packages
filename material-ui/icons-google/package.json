@@ -9,7 +9,7 @@
   },
   "description": "Set of Google flat icons for Material UI",
   "devDependencies": {
-    "@mui/material": "5.2.8",
+    "@mui/material": "5.3.0",
     "react": "17.0.2"
   },
   "keywords": [
