@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.2](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-toolbar@3.0.14...@gemunion/mui-toolbar@3.1.2) (2022-01-21)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([fef717b](https://github.com/gemunion/mui-packages/commit/fef717b72883ff4809b0a47f254ea8d327f583ea))
+
+
+
+
+
 ## 3.1.1 (2022-01-11)
 
 
