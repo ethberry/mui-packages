@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.4.0](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@6.3.3...@gemunion/common-pages@6.4.0) (2022-01-23)
+
+
+### Features
+
+* registration FL ([0521384](https://github.com/gemunion/mui-packages/commit/05213848a963b6a99296ef6ee9f57a227d9cc630))
+
+
+
+
+
 ## [6.3.3](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@6.3.2...@gemunion/common-pages@6.3.3) (2022-01-21)
 
 
