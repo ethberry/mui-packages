@@ -3,15 +3,12 @@ import { Box, IconButton, Tooltip } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 import { useIntl } from "react-intl";
 
-import { UserContext } from "@gemunion/provider-user";
-
 import { WalletDialog } from "../dialog";
 import { WalletIcon } from "../icon";
 import { WalletMenuDialog } from "../menu-dialog";
 import { WalletContext } from "../provider";
 
 export const Wallet: FC = () => {
-  const user = useContext(UserContext);
   const wallet = useContext(WalletContext);
 
   const { active, account } = useWeb3React();
@@ -33,10 +30,6 @@ export const Wallet: FC = () => {
   const handleCloseWalletDialog = () => {
     setIsWalletDialogOpen(false);
   };
-
-  if (!user.isAuthenticated()) {
-    return null;
-  }
 
   return (
     <Box mx={1}>
