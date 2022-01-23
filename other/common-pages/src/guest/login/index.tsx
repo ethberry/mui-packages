@@ -12,6 +12,7 @@ import { UserContext } from "@gemunion/provider-user";
 import { validationSchema } from "./validation";
 import { useStyles } from "./styles";
 import { LoginButtons } from "./buttons";
+import { useDidMountEffect } from "./useDidMountEffect";
 
 interface ILoginDto {
   email: string;
@@ -56,7 +57,7 @@ export const Login: FC = () => {
     }
   };
 
-  useEffect(() => {
+  useDidMountEffect(() => {
     void user.sync("/dashboard");
   }, [user.isAuthenticated()]);
 
