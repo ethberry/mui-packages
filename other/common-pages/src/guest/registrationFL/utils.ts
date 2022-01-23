@@ -2,7 +2,8 @@ export const emptyUser = {
   password: "",
   confirm: "",
   email: "",
-  displayName: "",
+  firstName: "",
+  lastName: "",
   phoneNumber: "",
   captcha: "",
 };

@@ -15,7 +15,7 @@ import { useStyles } from "./styles";
 import { validationSchema } from "./validation";
 import { emptyUser } from "./utils";
 
-export const Registration: FC = () => {
+export const RegistrationFL: FC = () => {
   const navigate = useNavigate();
   const classes = useStyles();
   const { enqueueSnackbar } = useSnackbar();
@@ -63,7 +63,8 @@ export const Registration: FC = () => {
         <PageHeader message="pages.guest.registration" />
         <FormikForm onSubmit={handleSubmit} validationSchema={validationSchema} initialValues={emptyUser}>
           <TextInput name="email" />
-          <TextInput name="displayName" />
+          <TextInput name="firstName" />
+          <TextInput name="lastName" />
           <PasswordInput name="password" autoComplete="new-password" />
           <PasswordInput name="confirm" autoComplete="new-password" />
           <Captcha />
