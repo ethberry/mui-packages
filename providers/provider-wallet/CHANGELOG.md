@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.4 (2022-01-23)
+
+
+### Bug Fixes
+
+* allow guest to connect wallet ([02b3e1a](https://github.com/gemunion/mui-packages/commit/02b3e1a3b8656896216198c97df6c965c66fbbe0))
+
+
+
+
+
 ## [0.5.3](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.5.2...@gemunion/provider-wallet@0.5.3) (2022-01-21)
 
 

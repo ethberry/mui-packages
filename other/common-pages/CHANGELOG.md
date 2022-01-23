@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.4.1](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@6.4.0...@gemunion/common-pages@6.4.1) (2022-01-23)
+
+
+### Bug Fixes
+
+* use did mount effect on login ([d7b3ead](https://github.com/gemunion/mui-packages/commit/d7b3ead1cfc805b8efd2b41cf7e1405d32f75084))
+
+
+
+
+
 # [6.4.0](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@6.3.3...@gemunion/common-pages@6.4.0) (2022-01-23)
 
 
