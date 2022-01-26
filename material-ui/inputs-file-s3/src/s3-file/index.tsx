@@ -43,8 +43,8 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
       onFinishS3Put: (data: IS3Result) => {
         onChange(`${baseUrl}${new URL(data.signedUrl).pathname}`);
       },
-      onProgress: onProgress || (() => {}),
-      onError: onError || (() => {}),
+      onProgress: onProgress || console.info,
+      onError: onError || console.error,
       signingUrlMethod: "GET",
       signingUrlWithCredentials: true,
       server: process.env.BE_URL,

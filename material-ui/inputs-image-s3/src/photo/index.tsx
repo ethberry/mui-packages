@@ -17,11 +17,10 @@ import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { TextInput } from "@gemunion/mui-inputs-core";
 import { ProgressOverlay } from "@gemunion/mui-progress";
 import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
-import { S3FileInput } from "@gemunion/mui-inputs-file-s3";
+import { S3FileInput, useDeleteUrl } from "@gemunion/mui-inputs-file-s3";
 import { openUrlOnClick } from "@gemunion/popup";
 
 import { useStyles } from "./styles";
-import { useDeleteUrl } from "../utils";
 
 export interface IPhotoInputProps {
   name: string;
