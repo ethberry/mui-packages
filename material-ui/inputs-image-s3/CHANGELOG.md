@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.2.4 (2022-01-26)
+
+
+### Bug Fixes
+
+* s3 file upload ([77dd626](https://github.com/gemunion/mui-packages/commit/77dd626dba9565874470eadd59a47936c7bcf043))
+
+
+
+
+
 ## [5.2.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-s3@5.2.2...@gemunion/mui-inputs-image-s3@5.2.3) (2022-01-21)
 
 
