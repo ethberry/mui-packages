@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.4.4 (2022-01-28)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([6630964](https://github.com/gemunion/mui-packages/commit/6630964cef9cb8dc2c6a8d0bf05f837e2374ea21))
+
+
+
+
+
 ## [1.4.3](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@1.4.2...@gemunion/provider-localization@1.4.3) (2022-01-21)
 
 

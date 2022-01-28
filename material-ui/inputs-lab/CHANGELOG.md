@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.1.4 (2022-01-28)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([6630964](https://github.com/gemunion/mui-packages/commit/6630964cef9cb8dc2c6a8d0bf05f837e2374ea21))
+
+
+
+
+
 ## [3.1.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-lab@3.1.2...@gemunion/mui-inputs-lab@3.1.3) (2022-01-21)
 
 
