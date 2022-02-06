@@ -8,20 +8,20 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/firebase": "1.1.7",
+    "@gemunion/firebase": "1.1.8",
     "@gemunion/mui-page-header": "3.0.13",
-    "@gemunion/provider-api": "5.4.0",
-    "@gemunion/provider-user": "2.4.0",
-    "firebase": "9.6.5",
+    "@gemunion/provider-api": "5.4.1",
+    "@gemunion/provider-user": "2.4.1",
+    "firebase": "9.6.6",
     "firebaseui": "6.0.0"
   },
   "description": "react component",
   "devDependencies": {
-    "@mui/material": "5.3.1",
+    "@mui/material": "5.4.0",
     "@mui/styles": "5.3.0",
     "notistack": "2.0.3",
     "react": "17.0.2",
-    "react-intl": "5.24.4"
+    "react-intl": "5.24.6"
   },
   "engines": {
     "node": ">=12.13"

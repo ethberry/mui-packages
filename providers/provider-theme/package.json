@@ -9,14 +9,14 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.6.0",
-    "@gemunion/provider-settings": "1.5.0"
+    "@gemunion/provider-settings": "1.5.1"
   },
   "description": "Material UI theme provider",
   "devDependencies": {
     "@mui/icons-material": "5.3.1",
-    "@mui/material": "5.3.1",
+    "@mui/material": "5.4.0",
     "react": "17.0.2",
-    "react-intl": "5.24.4"
+    "react-intl": "5.24.6"
   },
   "engines": {
     "node": ">=12.13"
