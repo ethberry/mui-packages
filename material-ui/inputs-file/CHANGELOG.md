@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.6](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@3.2.5...@gemunion/mui-inputs-file@3.2.6) (2022-02-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-dropzone to v12 ([4f892a6](https://github.com/gemunion/mui-packages/commit/4f892a6f79094706ef330a33ce9c1910acc3fe2b))
+
+
+
+
+
 ## [3.2.5](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@3.2.4...@gemunion/mui-inputs-file@3.2.5) (2022-02-06)
 
 
