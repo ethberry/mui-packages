@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.2.6 (2022-02-12)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([97278fa](https://github.com/gemunion/mui-packages/commit/97278facad38a5fc9804a47a584ee9cd5cac1e1e))
+
+
+
+
+
 ## [3.2.5](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@3.2.4...@gemunion/provider-theme@3.2.5) (2022-02-06)
 
 
