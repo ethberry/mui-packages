@@ -21,7 +21,9 @@ export const CoinGeckoProvider: FC = props => {
       .then((json: Pick<ICoinGeckoCoin, "name" | "tickers">) => {
         setCoinPrice(json.tickers.find(ticker => ticker.target === "USD")?.last ?? 0);
       })
-      .catch(() => enqueueSnackbar(formatMessage({ id: "snackbar.internalServerError" }), { variant: "error" }));
+      .catch(() => {
+        enqueueSnackbar(formatMessage({ id: "snackbar.internalServerError" }), { variant: "error" });
+      });
   };
 
   useEffect(() => {
@@ -36,7 +38,9 @@ export const CoinGeckoProvider: FC = props => {
     }
 
     return () => {
-      interval && clearInterval(interval);
+      if (interval) {
+        clearInterval(interval);
+      }
     };
   }, []);
 

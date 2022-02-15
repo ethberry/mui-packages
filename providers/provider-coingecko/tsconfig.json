@@ -15,7 +15,7 @@
     "noUnusedParameters": true,
     "outDir": "./dist",
     "resolveJsonModule": true,
-    "rootDirs": ["./src", "./server", "./client"],
+    "rootDirs": ["./src"],
     "skipLibCheck": true,
     "sourceMap": true,
     "strictBindCallApply": true,
