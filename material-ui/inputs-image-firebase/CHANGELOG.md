@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.2.8 (2022-02-19)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([9eec344](https://github.com/gemunion/mui-packages/commit/9eec344ffb288bea96fcb3e44d147b643dd609e1))
+
+
+
+
+
 ## [5.2.7](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@5.2.6...@gemunion/mui-inputs-image-firebase@5.2.7) (2022-02-12)
 
 
