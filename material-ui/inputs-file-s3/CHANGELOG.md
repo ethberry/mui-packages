@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@4.2.10...@gemunion/mui-inputs-file-s3@4.3.0) (2022-02-21)
+
+
+### Bug Fixes
+
+* expired token during uploading file ([f526a61](https://github.com/gemunion/mui-packages/commit/f526a61e3a3e624b00e6b37f678a545a05e49c2a))
+
+
+### Features
+
+* implemented updated provider-api ([265fde4](https://github.com/gemunion/mui-packages/commit/265fde4cf655e2eb4752d6700d83221eee09b62c))
+* moved up check on expired ([cb35037](https://github.com/gemunion/mui-packages/commit/cb35037072ebca32a1b39fc30774207da4414826))
+
+
+
+
+
 ## [4.2.10](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@4.2.9...@gemunion/mui-inputs-file-s3@4.2.10) (2022-02-21)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-s3
