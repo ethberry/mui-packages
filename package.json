@@ -9,7 +9,7 @@
     "react-scripts": "4.0.3"
   },
   "devDependencies": {
-    "@emotion/react": "11.7.1",
+    "@emotion/react": "11.8.1",
     "@gemunion/eslint-config": "1.0.1",
     "@storybook/addon-essentials": "6.4.19",
     "@storybook/preset-create-react-app": "3.2.0",
@@ -18,7 +18,7 @@
     "@typescript-eslint/parser": "5.12.0",
     "babel-plugin-inline-import": "3.0.0",
     "eslint": "7.32.0",
-    "eslint-config-prettier": "8.3.0",
+    "eslint-config-prettier": "8.4.0",
     "eslint-config-standard": "16.0.3",
     "eslint-import-resolver-typescript": "2.5.0",
     "eslint-plugin-import": "2.25.4",

@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "@gemunion/mui-page-header": "3.0.13",
-    "@gemunion/provider-api": "5.4.1",
-    "@gemunion/provider-user": "2.4.1",
+    "@gemunion/provider-api": "5.5.0",
+    "@gemunion/provider-user": "2.4.2",
     "@gemunion/provider-wallet": "0.5.8",
     "@web3-react/core": "6.1.9",
     "uuid": "8.3.2"
