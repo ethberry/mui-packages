@@ -1,9 +1,7 @@
 import { FC, useCallback, useContext } from "react";
-import { useSnackbar } from "notistack";
-import { useIntl } from "react-intl";
 import "react-s3-uploader"; // this is required for types
 import S3Upload from "react-s3-uploader/s3upload";
-import { ApiContext, ApiError, IApiContext, IJwt } from "@gemunion/provider-api";
+import { ApiContext, IApiContext, IJwt } from "@gemunion/provider-api";
 
 import { FileInput, IFileInputProps } from "@gemunion/mui-inputs-file";
 
@@ -25,34 +23,13 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
 
   const { baseUrl = `https://${bucket}.s3.${process.env.AWS_REGION}.amazonaws.com` } = props;
 
-  const { enqueueSnackbar } = useSnackbar();
-  const { formatMessage } = useIntl();
   const api = useContext<IApiContext<IJwt>>(ApiContext);
 
   const handleChange = useCallback(async (files: Array<File>): Promise<void> => {
     let authToken = api.getToken();
 
-    if (authToken?.accessTokenExpiresAt && authToken?.accessTokenExpiresAt < Date.now()) {
-      await api
-        .fetchJson({
-          url: "/auth/refresh",
-          method: "POST",
-          data: {
-            refreshToken: authToken.refreshToken,
-          },
-        })
-        .then((json: IJwt) => {
-          api.setToken(json);
-          authToken = json;
-        })
-        .catch((e: ApiError) => {
-          if (e.status) {
-            enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
-          } else {
-            console.error(e);
-            enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
-          }
-        });
+    if (api.isAccessTokenExpired()) {
+      authToken = await api.refreshToken();
     }
 
     const isValid = validate ? await validate(files) : true;
