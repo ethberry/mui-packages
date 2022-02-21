@@ -26,11 +26,11 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
   const api = useContext<IApiContext<IJwt>>(ApiContext);
 
   const handleChange = useCallback(async (files: Array<File>): Promise<void> => {
-    let authToken = api.getToken();
-
     if (api.isAccessTokenExpired()) {
-      authToken = await api.refreshToken();
+      await api.refreshToken();
     }
+
+    const authToken = api.getToken();
 
     const isValid = validate ? await validate(files) : true;
 
