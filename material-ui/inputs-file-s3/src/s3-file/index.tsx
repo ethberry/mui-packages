@@ -26,8 +26,11 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
   const api = useContext<IApiContext<IJwt>>(ApiContext);
 
   const handleChange = useCallback(async (files: Array<File>): Promise<void> => {
-    // @ts-ignore
-    const authToken = api.getToken().accessToken;
+    if (api.isAccessTokenExpired()) {
+      await api.refreshToken();
+    }
+
+    const authToken = api.getToken();
 
     const isValid = validate ? await validate(files) : true;
 
@@ -50,7 +53,7 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
       server: process.env.BE_URL,
       signingUrlHeaders: {
         // @ts-ignore
-        authorization: authToken ? `Bearer ${authToken}` : "",
+        authorization: authToken ? `Bearer ${authToken.accessToken}` : "",
       },
       signingUrlQueryParams: {
         // @ts-ignore
