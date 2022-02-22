@@ -16,6 +16,7 @@ import { validationSchema } from "./validation";
 import { useStyles } from "./styles";
 
 import { LoginButtons } from "./buttons";
+import { useDidMountEffect } from "../login/useDidMountEffect";
 
 interface ILoginDto {
   email: string;
@@ -60,7 +61,7 @@ export const SocialLogin: FC = () => {
     }
   };
 
-  useEffect(() => {
+  useDidMountEffect(() => {
     void user.sync("/dashboard");
   }, [user.isAuthenticated()]);
 

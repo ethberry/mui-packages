@@ -1,8 +1,7 @@
-export const emptyUser = {
-  password: "",
-  confirm: "",
+export const initialValues = {
   email: "",
   displayName: "",
-  phoneNumber: "",
+  password: "",
+  confirm: "",
   captcha: "",
 };

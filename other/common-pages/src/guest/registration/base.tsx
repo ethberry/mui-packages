@@ -4,18 +4,21 @@ import { useNavigate } from "react-router";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
-import { PasswordInput, TextInput } from "@gemunion/mui-inputs-core";
 import { UserContext } from "@gemunion/provider-user";
-import { Captcha } from "@gemunion/mui-inputs-captcha";
 import { PageHeader } from "@gemunion/mui-page-header";
 import { FormikForm } from "@gemunion/mui-form";
 import { ApiContext, IJwt, localizeErrors } from "@gemunion/provider-api";
 
 import { useStyles } from "./styles";
-import { validationSchema } from "./validation";
-import { emptyUser } from "./utils";
 
-export const RegistrationFL: FC = () => {
+export interface IRegistrationBaseProps {
+  initialValues: any;
+  validationSchema: any;
+}
+
+export const RegistrationBase: FC<IRegistrationBaseProps> = props => {
+  const { children, initialValues, validationSchema } = props;
+
   const navigate = useNavigate();
   const classes = useStyles();
   const { enqueueSnackbar } = useSnackbar();
@@ -61,13 +64,8 @@ export const RegistrationFL: FC = () => {
     <Grid container className={classes.section}>
       <Grid item sm={12}>
         <PageHeader message="pages.guest.registration" />
-        <FormikForm onSubmit={handleSubmit} validationSchema={validationSchema} initialValues={emptyUser}>
-          <TextInput name="email" />
-          <TextInput name="firstName" />
-          <TextInput name="lastName" />
-          <PasswordInput name="password" autoComplete="new-password" />
-          <PasswordInput name="confirm" autoComplete="new-password" />
-          <Captcha />
+        <FormikForm onSubmit={handleSubmit} validationSchema={validationSchema} initialValues={initialValues}>
+          {children}
         </FormikForm>
       </Grid>
     </Grid>

@@ -4,9 +4,12 @@ export { ForgotPassword } from "./guest/forgot-password";
 export { ResendVerificationEmail } from "./guest/resend-verification-email";
 export { RestorePassword } from "./guest/restore-password";
 export { Registration } from "./guest/registration";
-export { RegistrationFL } from "./guest/registrationFL";
 export { VerifyEmail } from "./guest/verify-email";
 export { Error } from "./common/error";
 export { Message } from "./common/message";
 export { Protected } from "./common/protected";
 export { SocialProtected } from "./common/social-protected";
+
+export { initialValues } from "./guest/registration/utils";
+export { validationSchema } from "./guest/registration/validation";
+export { RegistrationBase } from "./guest/registration/base";
