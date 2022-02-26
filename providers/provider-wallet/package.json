@@ -17,12 +17,12 @@
     "@web3-react/portis-connector": "6.2.11",
     "@web3-react/torus-connector": "6.2.9",
     "@web3-react/trezor-connector": "6.1.9",
-    "@web3-react/walletconnect-connector": "6.2.10"
+    "@web3-react/walletconnect-connector": "6.2.13"
   },
   "description": "react wallet provider",
   "devDependencies": {
     "@mui/icons-material": "5.4.2",
-    "@mui/material": "5.4.2",
+    "@mui/material": "5.4.3",
     "@mui/styles": "5.4.2",
     "@types/react": "17.0.39",
     "ethers": "5.5.4",
