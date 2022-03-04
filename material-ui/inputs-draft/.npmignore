@@ -1,6 +1,5 @@
 /src
 /node_modules
 /tsconfig.json
-/tsconfig.test.json
 **/*.stories.tsx
 **/*.test.tsx
