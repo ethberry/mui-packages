@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.5.1](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@6.5.0...@gemunion/common-pages@6.5.1) (2022-03-05)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([7d0a58d](https://github.com/gemunion/mui-packages/commit/7d0a58d2f1a4e2e83f9e779f58812715be9b6576))
+
+
+
+
+
 # 6.5.0 (2022-02-26)
 
 

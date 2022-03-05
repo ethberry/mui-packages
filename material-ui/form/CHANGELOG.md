@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.9](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@4.1.8...@gemunion/mui-form@4.1.9) (2022-03-05)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([7d0a58d](https://github.com/gemunion/mui-packages/commit/7d0a58d2f1a4e2e83f9e779f58812715be9b6576))
+
+
+
+
+
 ## 4.1.8 (2022-02-26)
 
 
