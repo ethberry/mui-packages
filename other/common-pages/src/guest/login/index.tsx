@@ -8,11 +8,11 @@ import { PageHeader } from "@gemunion/mui-page-header";
 import { FormikForm } from "@gemunion/mui-form";
 import { ApiContext, IJwt } from "@gemunion/provider-api";
 import { UserContext } from "@gemunion/provider-user";
+import { useDidMountEffect } from "@gemunion/react-hooks";
 
 import { validationSchema } from "./validation";
 import { useStyles } from "./styles";
 import { LoginButtons } from "./buttons";
-import { useDidMountEffect } from "./useDidMountEffect";
 
 interface ILoginDto {
   email: string;

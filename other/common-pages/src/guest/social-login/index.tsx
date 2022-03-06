@@ -11,12 +11,11 @@ import { ApiContext, IJwt } from "@gemunion/provider-api";
 import { UserContext } from "@gemunion/provider-user";
 import { ButtonToolbar } from "@gemunion/mui-toolbar";
 import { openUrlOnClick } from "@gemunion/popup";
+import { useDidMountEffect } from "@gemunion/react-hooks";
 
 import { validationSchema } from "./validation";
 import { useStyles } from "./styles";
-
 import { LoginButtons } from "./buttons";
-import { useDidMountEffect } from "../login/useDidMountEffect";
 
 interface ILoginDto {
   email: string;
