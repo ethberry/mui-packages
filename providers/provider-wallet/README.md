@@ -1,12 +1,14 @@
-# Connect wallet widget
+# Wallet provider and widget
 
 ## Provider
 
 ```tsx
 <SettingsProvider>
-  <NetworkProvider>
-    <Wallet />
-  </NetworkProvider>
+  <GemunionThemeProvider>
+    <WalletProvider>
+      <Wallet />
+    </WalletProvider>
+  </GemunionThemeProvider>
 </SettingsProvider>
 ```
 
@@ -59,7 +61,7 @@ const config: Configuration = {
     "buffer": "6.0.3",
     "process": "0.11.10",
     "stream-http": "3.2.0",
-    "https-browserify": "1.0.0",
+    "https-browserify": "1.0.0"
   }
 }
 ```
