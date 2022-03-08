@@ -9,6 +9,6 @@
       "yes": true
     }
   },
-  "packages": ["material-ui/*", "other/*", "providers/*"],
+  "packages": ["material-ui/*", "other/*", "providers/*", "mui-security/*"],
   "version": "independent"
 }
