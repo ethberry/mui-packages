@@ -39,7 +39,7 @@ const config: Configuration = {
 ```json
 {
   "dependencies": {
-    "@gemunion/provider-network": "0.0.2",
+    "@gemunion/provider-network": "0.0.3",
     "@web3-react/core": "6.1.9",
     "@web3-react/injected-connector": "6.0.7",
     "@web3-react/trezor-connector": "6.1.9",

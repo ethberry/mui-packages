@@ -1,12 +1,12 @@
-import { FC, useContext, useEffect } from "react";
+import { FC, useEffect } from "react";
 import { useNavigate, useParams } from "react-router";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Grid } from "@mui/material";
 
 import { ProgressOverlay } from "@gemunion/mui-progress";
-import { UserContext } from "@gemunion/provider-user";
-import { ApiContext } from "@gemunion/provider-api";
+import { useUser } from "@gemunion/provider-user";
+import { useApi } from "@gemunion/provider-api";
 
 import { useStyles } from "./styles";
 
@@ -17,8 +17,8 @@ export const VerifyEmail: FC = () => {
   const { formatMessage } = useIntl();
   const { enqueueSnackbar } = useSnackbar();
 
-  const user = useContext(UserContext);
-  const api = useContext(ApiContext);
+  const user = useUser();
+  const api = useApi();
 
   useEffect(() => {
     void api

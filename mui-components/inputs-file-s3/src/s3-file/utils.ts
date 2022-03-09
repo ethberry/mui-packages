@@ -1,11 +1,10 @@
-import { useContext } from "react";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
-import { ApiContext, IApiContext, IJwt } from "@gemunion/provider-api";
+import { useApi } from "@gemunion/provider-api";
 
 export const useDeleteUrl = (bucket?: string): ((url: string) => Promise<void>) => {
-  const api = useContext<IApiContext<IJwt>>(ApiContext);
+  const api = useApi();
 
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();

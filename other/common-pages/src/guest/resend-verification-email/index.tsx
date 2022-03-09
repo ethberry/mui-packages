@@ -1,4 +1,4 @@
-import { FC, useContext } from "react";
+import { FC } from "react";
 import { useNavigate } from "react-router";
 import { useSnackbar } from "notistack";
 import { Grid } from "@mui/material";
@@ -8,7 +8,7 @@ import { Captcha } from "@gemunion/mui-inputs-captcha";
 import { PageHeader } from "@gemunion/mui-page-header";
 import { TextInput } from "@gemunion/mui-inputs-core";
 import { FormikForm } from "@gemunion/mui-form";
-import { ApiContext, localizeErrors } from "@gemunion/provider-api";
+import { localizeErrors, useApi } from "@gemunion/provider-api";
 
 import { useStyles } from "./styles";
 import { validationSchema } from "./validation";
@@ -24,7 +24,7 @@ export const ResendVerificationEmail: FC = () => {
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
-  const api = useContext(ApiContext);
+  const api = useApi();
 
   const handleSubmit = (values: IResendVerificationEmailDto, formikBag: any): Promise<void> => {
     return api

@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect } from "react";
+import { FC, useEffect } from "react";
 import { Grid } from "@mui/material";
 import { useNavigate } from "react-router";
 import { useSnackbar } from "notistack";
@@ -8,8 +8,8 @@ import { Captcha } from "@gemunion/mui-inputs-captcha";
 import { PageHeader } from "@gemunion/mui-page-header";
 import { FormikForm } from "@gemunion/mui-form";
 import { TextInput } from "@gemunion/mui-inputs-core";
-import { UserContext } from "@gemunion/provider-user";
-import { ApiContext, localizeErrors } from "@gemunion/provider-api";
+import { useUser } from "@gemunion/provider-user";
+import { localizeErrors, useApi } from "@gemunion/provider-api";
 
 import { validationSchema } from "./validation";
 import { useStyles } from "./styles";
@@ -25,8 +25,8 @@ export const ForgotPassword: FC = () => {
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
-  const user = useContext(UserContext);
-  const api = useContext(ApiContext);
+  const user = useUser();
+  const api = useApi();
 
   const handleSubmit = (values: IForgotPasswordDto, formikBag: any): Promise<void> => {
     return api

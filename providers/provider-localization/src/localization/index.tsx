@@ -1,9 +1,9 @@
-import { FC, Fragment, MouseEvent, useContext, useState } from "react";
+import { FC, Fragment, MouseEvent, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { IconButton, Menu, MenuItem, Tooltip } from "@mui/material";
 import { Translate } from "@mui/icons-material";
 
-import { ISettingsContext, SettingsContext } from "@gemunion/provider-settings";
+import { useSettings } from "@gemunion/provider-settings";
 
 export interface ILocalizationProps {
   languages: Array<string>;
@@ -13,7 +13,7 @@ export const Localization: FC<ILocalizationProps> = props => {
   const { languages } = props;
 
   const { formatMessage } = useIntl();
-  const settings = useContext<ISettingsContext<string>>(SettingsContext);
+  const settings = useSettings();
   const [anchor, setAnchor] = useState<Element | null>(null);
 
   const handleLanguageIconClick = (e: MouseEvent): void => {

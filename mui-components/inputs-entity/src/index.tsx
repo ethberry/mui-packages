@@ -1,11 +1,11 @@
-import { ChangeEvent, FC, ReactElement, useContext, useEffect, useState } from "react";
+import { ChangeEvent, FC, ReactElement, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import { useSnackbar } from "notistack";
 import { getIn, useFormikContext } from "formik";
 import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/material";
 
 import { ProgressOverlay } from "@gemunion/mui-progress";
-import { ApiContext } from "@gemunion/provider-api";
+import { useApi } from "@gemunion/provider-api";
 import { useStyles } from "./styles";
 
 export interface IAutocompleteOption {
@@ -59,7 +59,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
   const [options, setOptions] = useState<Array<IAutocompleteOption>>([]);
 
   const { enqueueSnackbar } = useSnackbar();
-  const api = useContext(ApiContext);
+  const api = useApi();
 
   const fetchOptions = async (): Promise<void> => {
     setIsLoading(true);

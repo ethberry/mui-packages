@@ -1,4 +1,4 @@
-import { FC, useContext } from "react";
+import { FC } from "react";
 import { useNavigate, useParams } from "react-router";
 import { Grid } from "@mui/material";
 import { useSnackbar } from "notistack";
@@ -7,7 +7,7 @@ import { useIntl } from "react-intl";
 import { PasswordInput } from "@gemunion/mui-inputs-core";
 import { PageHeader } from "@gemunion/mui-page-header";
 import { FormikForm } from "@gemunion/mui-form";
-import { ApiContext, localizeErrors } from "@gemunion/provider-api";
+import { localizeErrors, useApi } from "@gemunion/provider-api";
 
 import { validationSchema } from "./validation";
 import { useStyles } from "./styles";
@@ -25,7 +25,7 @@ export const RestorePassword: FC = () => {
   const { formatMessage } = useIntl();
   const { enqueueSnackbar } = useSnackbar();
 
-  const api = useContext(ApiContext);
+  const api = useApi();
 
   const handleSubmit = (values: IRestorePasswordDto, formikBag: any): Promise<void> => {
     return api

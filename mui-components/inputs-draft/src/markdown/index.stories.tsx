@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { Formik } from "formik";
 import { Story } from "@storybook/react";
+import { markdownString } from "@gemunion/draft-js-utils";
 
 import { IMarkdownInputProps, MarkdownInput } from "./index";
 
@@ -9,8 +10,6 @@ const i18n = {
   "form.labels.markdown": "Markdown",
   "form.placeholders.markdown": "Markdown",
 };
-
-const defaultValue = "**markdown**";
 
 export default {
   title: "ReachTextEditor/Markdown",
@@ -36,7 +35,7 @@ Simple.args = {
 };
 
 const MarkdownDefaultValueTemplate: Story<IMarkdownInputProps> = args => (
-  <Formik onSubmit={() => {}} initialValues={{ markdown: defaultValue }}>
+  <Formik onSubmit={() => {}} initialValues={{ markdown: markdownString }}>
     <MarkdownInput {...args} />
   </Formik>
 );

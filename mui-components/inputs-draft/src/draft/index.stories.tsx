@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { Formik } from "formik";
 import { Story } from "@storybook/react";
+import { rawStateString } from "@gemunion/draft-js-utils";
 
 import { IRichTextFieldProps, RichTextEditor } from "./index";
 
@@ -9,21 +10,6 @@ const i18n = {
   "form.labels.draft": "Draft",
   "form.placeholders.draft": "Draft",
 };
-
-const defaultValue = JSON.stringify({
-  blocks: [
-    {
-      key: "e9n5e",
-      text: "description",
-      type: "unstyled",
-      depth: 0,
-      inlineStyleRanges: [],
-      entityRanges: [],
-      data: {},
-    },
-  ],
-  entityMap: {},
-});
 
 export default {
   title: "ReachTextEditor/Draft",
@@ -49,7 +35,7 @@ Simple.args = {
 };
 
 const DraftDefaultValueTemplate: Story<IRichTextFieldProps> = args => (
-  <Formik onSubmit={() => {}} initialValues={{ draft: defaultValue }}>
+  <Formik onSubmit={() => {}} initialValues={{ draft: rawStateString }}>
     <RichTextEditor {...args} />
   </Formik>
 );

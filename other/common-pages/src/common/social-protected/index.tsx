@@ -1,13 +1,13 @@
-import { FC, Fragment, useContext } from "react";
+import { FC, Fragment } from "react";
 
-import { UserContext } from "@gemunion/provider-user";
+import { useUser } from "@gemunion/provider-user";
 
 import { SocialLogin } from "../../guest/social-login";
 
 export const SocialProtected: FC = props => {
   const { children } = props;
 
-  const user = useContext(UserContext);
+  const user = useUser();
 
   if (!user.isAuthenticated()) {
     return <SocialLogin />;

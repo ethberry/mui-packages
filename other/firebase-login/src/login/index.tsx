@@ -1,4 +1,4 @@
-import { FC, useContext, useLayoutEffect } from "react";
+import { FC, useLayoutEffect } from "react";
 import { Grid } from "@mui/material";
 import { auth } from "firebaseui";
 import { EmailAuthProvider, getAuth, sendEmailVerification } from "firebase/auth";
@@ -8,8 +8,8 @@ import { useSnackbar } from "notistack";
 import "firebaseui/dist/firebaseui.css";
 
 import firebase from "@gemunion/firebase";
-import { ApiContext, IApiContext, IJwt } from "@gemunion/provider-api";
-import { UserContext } from "@gemunion/provider-user";
+import { useApi } from "@gemunion/provider-api";
+import { useUser } from "@gemunion/provider-user";
 
 import { useStyles } from "./styles";
 
@@ -19,8 +19,8 @@ export const FirebaseLogin: FC = () => {
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
-  const user = useContext(UserContext);
-  const api = useContext<IApiContext<IJwt>>(ApiContext);
+  const user = useUser();
+  const api = useApi();
 
   useLayoutEffect(() => {
     const authFb = getAuth(firebase);

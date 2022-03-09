@@ -1,14 +1,14 @@
-import { FC, Fragment, useContext, useState, useEffect } from "react";
+import { FC, Fragment, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { UserContext } from "@gemunion/provider-user";
+import { useUser } from "@gemunion/provider-user";
 
 export const Protected: FC = props => {
   const { children } = props;
 
   const navigate = useNavigate();
   const [isReady, setIsReady] = useState(false);
-  const user = useContext(UserContext);
+  const user = useUser();
 
   useEffect(() => {
     const id = setTimeout(() => setIsReady(true), 100);

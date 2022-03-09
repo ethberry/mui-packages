@@ -19,11 +19,12 @@ export const StaticInput: FC<IStaticInputProps> = props => {
   const { InputLabelProps, InputProps, name, ...rest } = props;
 
   const formik = useFormikContext<any>();
+  const value = getIn(formik.values, name);
 
   return (
     <TextInput
       name={name}
-      value={getIn(formik.values, name)}
+      value={value}
       InputLabelProps={{
         ...InputLabelProps,
         shrink: true,

@@ -1,13 +1,13 @@
-import { FC, useContext, useEffect } from "react";
+import { FC, useEffect } from "react";
 import { Grid } from "@mui/material";
 import { useNavigate } from "react-router";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
-import { UserContext } from "@gemunion/provider-user";
+import { useUser } from "@gemunion/provider-user";
 import { PageHeader } from "@gemunion/mui-page-header";
 import { FormikForm } from "@gemunion/mui-form";
-import { ApiContext, IJwt, localizeErrors } from "@gemunion/provider-api";
+import { IJwt, localizeErrors, useApi } from "@gemunion/provider-api";
 
 import { useStyles } from "./styles";
 
@@ -24,8 +24,8 @@ export const RegistrationBase: FC<IRegistrationBaseProps> = props => {
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
-  const user = useContext(UserContext);
-  const api = useContext(ApiContext);
+  const user = useUser();
+  const api = useApi();
 
   const handleSubmit = (values: any, formikBag: any): Promise<void> => {
     return api

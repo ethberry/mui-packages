@@ -1,6 +1,6 @@
-import { FC, Fragment, useContext, useState, useEffect } from "react";
+import { FC, Fragment, useState, useEffect } from "react";
 
-import { UserContext } from "@gemunion/provider-user";
+import { useUser } from "@gemunion/provider-user";
 
 import { Login } from "../../guest/login";
 
@@ -8,7 +8,7 @@ export const Protected: FC = props => {
   const { children } = props;
 
   const [isReady, setIsReady] = useState(false);
-  const user = useContext(UserContext);
+  const user = useUser();
 
   useEffect(() => {
     const id = setTimeout(() => setIsReady(true), 100);

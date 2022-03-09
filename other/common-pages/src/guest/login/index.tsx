@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect } from "react";
+import { FC, useEffect } from "react";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Grid } from "@mui/material";
@@ -6,8 +6,8 @@ import { Grid } from "@mui/material";
 import { PasswordInput, TextInput } from "@gemunion/mui-inputs-core";
 import { PageHeader } from "@gemunion/mui-page-header";
 import { FormikForm } from "@gemunion/mui-form";
-import { ApiContext, IJwt } from "@gemunion/provider-api";
-import { UserContext } from "@gemunion/provider-user";
+import { IJwt, useApi } from "@gemunion/provider-api";
+import { useUser } from "@gemunion/provider-user";
 import { useDidMountEffect } from "@gemunion/react-hooks";
 
 import { validationSchema } from "./validation";
@@ -24,8 +24,8 @@ export const Login: FC = () => {
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
-  const user = useContext(UserContext);
-  const api = useContext(ApiContext);
+  const user = useUser();
+  const api = useApi();
 
   const handleSubmit = (values: ILoginDto): Promise<void> => {
     return api

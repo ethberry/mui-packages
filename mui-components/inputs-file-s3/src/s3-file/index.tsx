@@ -1,7 +1,7 @@
-import { FC, useCallback, useContext } from "react";
+import { FC, useCallback } from "react";
 import "react-s3-uploader"; // this is required for types
 import S3Upload from "react-s3-uploader/s3upload";
-import { ApiContext, IApiContext, IJwt } from "@gemunion/provider-api";
+import { useApi } from "@gemunion/provider-api";
 
 import { FileInput, IFileInputProps } from "@gemunion/mui-inputs-file";
 
@@ -23,7 +23,7 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
 
   const { baseUrl = `https://${bucket}.s3.${process.env.AWS_REGION}.amazonaws.com` } = props;
 
-  const api = useContext<IApiContext<IJwt>>(ApiContext);
+  const api = useApi();
 
   const handleChange = useCallback(async (files: Array<File>): Promise<void> => {
     if (api.isAccessTokenExpired()) {

@@ -1,20 +1,18 @@
-import { PropsWithChildren, ReactElement, useContext } from "react";
+import { FC } from "react";
 import { IntlProvider } from "react-intl";
 
-import { ISettingsContext, SettingsContext } from "@gemunion/provider-settings";
+import { useSettings } from "@gemunion/provider-settings";
 
 import { flattenMessages } from "./utils";
 
-interface ILocalizationProviderProps<T extends string> {
-  i18n: Record<T, any>;
-  defaultLanguage: T;
+interface ILocalizationProviderProps {
+  i18n: Record<string, any>;
+  defaultLanguage: string;
 }
 
-export const LocalizationProvider = <T extends string>(
-  props: PropsWithChildren<ILocalizationProviderProps<T>>,
-): ReactElement | null => {
+export const LocalizationProvider: FC<ILocalizationProviderProps> = props => {
   const { children, i18n, defaultLanguage } = props;
-  const settings = useContext<ISettingsContext<T>>(SettingsContext);
+  const settings = useSettings();
 
   return (
     <IntlProvider

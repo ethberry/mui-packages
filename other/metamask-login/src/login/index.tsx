@@ -6,8 +6,8 @@ import { useWeb3React } from "@web3-react/core";
 import { v4 } from "uuid";
 
 import { PageHeader } from "@gemunion/mui-page-header";
-import { ApiContext, IJwt } from "@gemunion/provider-api";
-import { UserContext } from "@gemunion/provider-user";
+import { IJwt, useApi } from "@gemunion/provider-api";
+import { useUser } from "@gemunion/provider-user";
 import { WalletContext } from "@gemunion/provider-wallet";
 
 import { useStyles } from "./styles";
@@ -26,8 +26,8 @@ export const Login: FC = () => {
 
   const { account, library, active } = useWeb3React();
 
-  const user = useContext(UserContext);
-  const api = useContext(ApiContext);
+  const user = useUser();
+  const api = useApi();
   const wallet = useContext(WalletContext);
 
   const handleSubmit = (values: IMetamaskDto): Promise<void> => {

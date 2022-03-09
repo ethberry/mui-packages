@@ -1,9 +1,9 @@
-import { FC, useContext } from "react";
+import { FC } from "react";
 
 import { CssBaseline } from "@mui/material";
-import { createTheme, ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
+import { createTheme, StyledEngineProvider, ThemeProvider } from "@mui/material/styles";
 import { PaletteOptions } from "@mui/material/styles/createPalette";
-import { SettingsContext } from "@gemunion/provider-settings";
+import { useSettings } from "@gemunion/provider-settings";
 import { ThemeType } from "@gemunion/constants";
 
 import { dark, light } from "./palette";
@@ -17,7 +17,7 @@ export interface IThemeProviderProps {
 export const GemunionThemeProvider: FC<IThemeProviderProps> = props => {
   const { darkPalette = dark, lightPalette = light, children } = props;
 
-  const settings = useContext(SettingsContext);
+  const settings = useSettings();
 
   const theme = createTheme({
     palette: {
