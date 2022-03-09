@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.6.0](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@6.5.1...@gemunion/common-pages@6.6.0) (2022-03-09)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([b95644e](https://github.com/gemunion/mui-packages/commit/b95644e3e0609755c214c5090cb89596db895e00))
+* use react-hooks ([6f2b89c](https://github.com/gemunion/mui-packages/commit/6f2b89ce92e2e93fc471245d5f595587a165f809))
+
+
+### Features
+
+* update providers and draft utils ([4c1f4f8](https://github.com/gemunion/mui-packages/commit/4c1f4f8ca41d2321113ffa65c0b76ba634f71a73))
+
+
+
+
+
 ## [6.5.1](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@6.5.0...@gemunion/common-pages@6.5.1) (2022-03-05)
 
 

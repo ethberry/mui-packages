@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.9](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme-ssr@3.2.8...@gemunion/provider-theme-ssr@3.2.9) (2022-03-09)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([b95644e](https://github.com/gemunion/mui-packages/commit/b95644e3e0609755c214c5090cb89596db895e00))
+
+
+
+
+
 ## [3.2.8](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme-ssr@3.2.7...@gemunion/provider-theme-ssr@3.2.8) (2022-03-05)
 
 
