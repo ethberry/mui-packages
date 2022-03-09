@@ -1,1 +1,0 @@
-# Gemunion license provider
