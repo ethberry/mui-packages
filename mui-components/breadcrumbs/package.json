@@ -9,8 +9,8 @@
   },
   "description": "react widget: breadcrumbs",
   "devDependencies": {
-    "@mui/material": "5.4.4",
-    "@mui/styles": "5.4.4",
+    "@mui/material": "5.5.0",
+    "@mui/styles": "5.5.0",
     "react": "17.0.2",
     "react-intl": "5.24.6",
     "react-router-dom": "6.2.2"
