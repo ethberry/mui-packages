@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@1.5.0...@gemunion/provider-localization@1.5.1) (2022-03-09)
+
+
+### Bug Fixes
+
+* roll back generics ([3a6fd73](https://github.com/gemunion/mui-packages/commit/3a6fd731d528bdd61f73de2ab17d9f1dc6b190a0))
+
+
+
+
+
 # [1.5.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@1.4.10...@gemunion/provider-localization@1.5.0) (2022-03-09)
 
 
