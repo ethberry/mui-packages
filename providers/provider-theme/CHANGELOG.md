@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.2](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@3.3.1...@gemunion/provider-theme@3.3.2) (2022-03-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @gemunion/provider-settings to v1.6.3 ([950d3fa](https://github.com/gemunion/mui-packages/commit/950d3fa4ebf2dceef40c5720c3907e587e2ff930))
+
+
+
+
+
 ## [3.3.1](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@3.3.0...@gemunion/provider-theme@3.3.1) (2022-03-09)
 
 **Note:** Version bump only for package @gemunion/provider-theme
