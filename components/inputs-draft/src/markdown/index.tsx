@@ -6,6 +6,7 @@ import { draftToMarkdown, markdownToDraft } from "markdown-draft-js";
 
 import { TToolbarControl } from "@gemunion/mui-rte";
 import { TextInput } from "@gemunion/mui-inputs-core";
+import { useLicense } from "@gemunion/provider-license";
 
 import { IRichTextInputProps, RichTextInput } from "../input";
 
@@ -31,6 +32,7 @@ export const MarkdownInput: FC<IMarkdownInputProps & TextFieldProps> = props => 
 
   const suffix = name.split(".").pop() as string;
 
+  const license = useLicense();
   const formik = useFormikContext<any>();
   const value = getIn(formik.values, name);
 
@@ -49,6 +51,10 @@ export const MarkdownInput: FC<IMarkdownInputProps & TextFieldProps> = props => 
     },
     controls: defaultControls.concat(customControls),
   };
+
+  if (!license.isValid()) {
+    return null;
+  }
 
   return (
     <TextInput

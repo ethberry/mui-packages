@@ -5,6 +5,7 @@ import { useIntl } from "react-intl";
 
 import { TToolbarControl } from "@gemunion/mui-rte";
 import { TextInput } from "@gemunion/mui-inputs-core";
+import { useLicense } from "@gemunion/provider-license";
 
 import { IRichTextInputProps, RichTextInput } from "../input";
 
@@ -32,6 +33,7 @@ export const RichTextEditor: FC<IRichTextFieldProps & TextFieldProps> = props =>
 
   const suffix = name.split(".").pop() as string;
 
+  const license = useLicense();
   const formik = useFormikContext<any>();
   const value = getIn(formik.values, name);
 
@@ -49,6 +51,10 @@ export const RichTextEditor: FC<IRichTextFieldProps & TextFieldProps> = props =>
     },
     controls: defaultControls.concat(customControls),
   };
+
+  if (!license.isValid()) {
+    return null;
+  }
 
   return (
     <TextInput
