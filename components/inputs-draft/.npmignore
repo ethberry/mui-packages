@@ -2,4 +2,3 @@
 /node_modules
 /tsconfig.json
 **/*.stories.tsx
-**/*.test.tsx
