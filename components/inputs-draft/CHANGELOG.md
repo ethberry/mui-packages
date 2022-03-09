@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@3.0.1...@gemunion/mui-inputs-draft@3.0.2) (2022-03-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @gemunion/provider-license to v0.1.2 ([fdc3aaf](https://github.com/gemunion/mui-packages/commit/fdc3aaf1473e065069b85a40a8473ee57bddb592))
+
+
+
+
+
 ## 3.0.1 (2022-03-09)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-draft
