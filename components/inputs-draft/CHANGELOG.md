@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2022-03-09)
+
+
+### Features
+
+* license for draft and markdown ([1c8bbff](https://github.com/gemunion/mui-packages/commit/1c8bbff9d510520d29d2a7946f136d444d83f1a4))
+
+
+
+
+
 ## [2.3.12](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@2.3.11...@gemunion/mui-inputs-draft@2.3.12) (2022-03-09)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-draft
