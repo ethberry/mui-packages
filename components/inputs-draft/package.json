@@ -34,7 +34,7 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/mui-inputs-draft-2",
+  "name": "@gemunion/mui-inputs-draft",
   "peerDependencies": {
     "@mui/icons-material": "^5",
     "@mui/material": "^5",
@@ -61,5 +61,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.1.0"
+  "version": "3.0.0"
 }
