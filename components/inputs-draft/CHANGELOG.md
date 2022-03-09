@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@3.0.2...@gemunion/mui-inputs-draft@3.0.3) (2022-03-09)
+
+
+### Bug Fixes
+
+* docs ([da185b9](https://github.com/gemunion/mui-packages/commit/da185b96cf6b4980de8226690ee6887324662016))
+
+
+
+
+
 ## [3.0.2](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@3.0.1...@gemunion/mui-inputs-draft@3.0.2) (2022-03-09)
 
 
