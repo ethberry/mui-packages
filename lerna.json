@@ -9,6 +9,6 @@
       "yes": true
     }
   },
-  "packages": ["mui-components/*", "other/*", "providers/*", "mui-security/*"],
+  "packages": ["components/*", "other/*", "providers/*"],
   "version": "independent"
 }

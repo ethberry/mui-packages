@@ -1,6 +1,6 @@
 module.exports = {
   stories: [
-    "../mui-components/**/*.stories.@(ts|tsx)",
+    "../components/**/*.stories.@(ts|tsx)",
   ],
   addons: [
     "@storybook/addon-essentials",

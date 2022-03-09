@@ -1,6 +1,6 @@
 {
   "extends": [
-    "@gemunion/eslint-config/presets/ts",
+    "@gemunion/eslint-config/presets/tsx",
     "@gemunion/eslint-config/tests/jest",
     "@gemunion/eslint-config/tests/testing-library"
   ],
