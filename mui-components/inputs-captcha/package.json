@@ -12,8 +12,8 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.4.4",
-    "@mui/styles": "5.4.4",
+    "@mui/material": "5.5.0",
+    "@mui/styles": "5.5.0",
     "@types/react": "17.0.39",
     "@types/react-google-recaptcha": "2.1.5",
     "formik": "2.2.9",
