@@ -30,7 +30,13 @@ const config: Configuration = {
       https: require.resolve("https-browserify"),
       http: require.resolve("stream-http"),
     },
-  }
+  },
+  plugins: [
+    new ProvidePlugin({
+      process: "process/browser",
+      Buffer: ["buffer", "Buffer"],
+    }),
+  ],
 };
 ```
 
