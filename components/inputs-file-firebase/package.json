@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/firebase": "1.1.10",
-    "@gemunion/mui-inputs-file": "3.2.11",
+    "@gemunion/mui-inputs-file": "3.2.12",
     "firebase": "9.6.8",
     "react-intl": "5.24.6",
     "uuid": "8.3.2"
@@ -49,5 +49,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.3.11"
+  "version": "3.3.12"
 }
