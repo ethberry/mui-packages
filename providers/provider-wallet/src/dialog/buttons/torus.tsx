@@ -5,6 +5,7 @@ import { useWeb3React } from "@web3-react/core";
 
 import { TorusIcon } from "../wallet-icons";
 import { CustomBadge } from "../custom-badge";
+import { Connectors } from "../../connectors";
 
 export interface ITorusButtonButtonProps {
   onClick: () => void;
@@ -18,10 +19,7 @@ export const TorusButton: FC<ITorusButtonButtonProps> = props => {
   const { activate, connector } = useWeb3React();
 
   const handleClick = () => {
-    const connector = new TorusConnector({
-      chainId: 1,
-    });
-    void activate(connector, console.error);
+    void activate(Connectors.TORUS, console.error);
     onClick();
   };
 

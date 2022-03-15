@@ -5,6 +5,7 @@ import { useWeb3React } from "@web3-react/core";
 
 import { FortmaticIcon } from "../wallet-icons";
 import { CustomBadge } from "../custom-badge";
+import { Connectors } from "../../connectors";
 
 export interface IFortmaticButtonButtonProps {
   onClick: () => void;
@@ -18,11 +19,7 @@ export const FortmaticButton: FC<IFortmaticButtonButtonProps> = props => {
   const { activate, connector } = useWeb3React();
 
   const handleClick = () => {
-    const connector = new FortmaticConnector({
-      apiKey: "",
-      chainId: 1,
-    });
-    void activate(connector, console.error);
+    void activate(Connectors.FORMATIC, console.error);
     onClick();
   };
 

@@ -5,6 +5,7 @@ import { useWeb3React } from "@web3-react/core";
 
 import { LedgerIcon } from "../wallet-icons";
 import { CustomBadge } from "../custom-badge";
+// import { Connectors } from "../../connectors";
 
 export interface ILedgerButtonButtonProps {
   onClick: () => void;
@@ -15,15 +16,10 @@ export interface ILedgerButtonButtonProps {
 export const LedgerButton: FC<ILedgerButtonButtonProps> = props => {
   const { disabled, onClick } = props;
 
-  const { activate, connector } = useWeb3React();
+  const { connector } = useWeb3React();
 
   const handleClick = () => {
-    const connector = new LedgerConnector({
-      chainId: 1,
-      url: process.env.JSON_RPC_ADDR as string,
-      pollingInterval: 12000,
-    });
-    void activate(connector, console.error);
+    // void activate(Connectors.LEDGER, console.error);
     onClick();
   };
 
