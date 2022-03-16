@@ -5,6 +5,7 @@ import { useWeb3React } from "@web3-react/core";
 
 import { AuthereumIcon } from "../wallet-icons";
 import { CustomBadge } from "../custom-badge";
+import { Connectors } from "../../connectors";
 
 export interface IAuthereumButtonButtonProps {
   onClick: () => void;
@@ -18,10 +19,7 @@ export const AuthereumButton: FC<IAuthereumButtonButtonProps> = props => {
   const { activate, connector } = useWeb3React();
 
   const handleClick = () => {
-    const connector = new AuthereumConnector({
-      chainId: 1,
-    });
-    void activate(connector, console.error);
+    void activate(Connectors.AUTHEREUM, console.error);
     onClick();
   };
 

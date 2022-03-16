@@ -3,12 +3,20 @@ import { Box, IconButton, Tooltip } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 import { useIntl } from "react-intl";
 
-import { WalletDialog } from "../dialog";
+import { WalletDialog, IWalletConnectDialogProps } from "../dialog";
 import { WalletIcon } from "../icon";
 import { WalletMenuDialog } from "../menu-dialog";
 import { WalletContext } from "../provider";
 
-export const Wallet: FC = () => {
+interface IWalletProps {
+  walletConnectDialogProps?: Pick<IWalletConnectDialogProps, "componentsProps">;
+}
+
+export const Wallet: FC<IWalletProps> = props => {
+  const { walletConnectDialogProps = {} } = props;
+
+  const { componentsProps } = walletConnectDialogProps;
+
   const wallet = useContext(WalletContext);
 
   const { active, account } = useWeb3React();
@@ -46,7 +54,11 @@ export const Wallet: FC = () => {
           </IconButton>
         </Tooltip>
       )}
-      <WalletDialog onClose={handleCloseConnectDialog} open={wallet.getWalletConnectDialogOpen()} />
+      <WalletDialog
+        onClose={handleCloseConnectDialog}
+        open={wallet.getWalletConnectDialogOpen()}
+        componentsProps={componentsProps}
+      />
       <WalletMenuDialog onClose={handleCloseWalletDialog} open={isWalletDialogOpen} />
     </Box>
   );

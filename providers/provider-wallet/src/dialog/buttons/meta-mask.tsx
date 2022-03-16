@@ -7,6 +7,7 @@ import { useWeb3React } from "@web3-react/core";
 
 import { MetaMaskIcon } from "../wallet-icons";
 import { CustomBadge } from "../custom-badge";
+import { Connectors } from "../../connectors";
 
 export interface IMetaMaksButtonProps {
   onClick: () => void;
@@ -25,27 +26,23 @@ export const MetaMaksButton: FC<IMetaMaksButtonProps> = props => {
     enqueueSnackbar(error.message, { variant: "warning" });
   }
 
-  if (error instanceof NoEthereumProviderError) {
-    enqueueSnackbar(formatMessage({ id: "snackbar.web3-not-detected" }), {
-      variant: "warning",
-      persist: true,
-      action: () => (
-        <Button
-          onClick={() => {
-            window.open("https://metamask.io/download.html", "_blank");
-          }}
-        >
-          <FormattedMessage id="buttons.download-metamask" />
-        </Button>
-      ),
-    });
-  }
-
   const handleClick = async () => {
-    const connector = new InjectedConnector({
-      // supportedChainIds: Object.values(networkToChainId),
-    });
-    await activate(connector, console.error);
+    if (error instanceof NoEthereumProviderError || !(window as any).ethereum) {
+      enqueueSnackbar(formatMessage({ id: "snackbar.web3-not-detected" }), {
+        variant: "warning",
+        action: () => (
+          <Button
+            onClick={() => {
+              window.open("https://metamask.io/download.html", "_blank");
+            }}
+          >
+            <FormattedMessage id="buttons.download-metamask" />
+          </Button>
+        ),
+      });
+    }
+
+    await activate(Connectors.INJECTED, console.error);
     onClick();
   };
 

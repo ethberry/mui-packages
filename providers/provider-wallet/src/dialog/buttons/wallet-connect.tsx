@@ -6,6 +6,7 @@ import { useSnackbar } from "notistack";
 
 import { WalletConnectIcon } from "../wallet-icons";
 import { CustomBadge } from "../custom-badge";
+import { Connectors } from "../../connectors";
 
 export interface IWalletConnectButtonProps {
   disabled?: boolean;
@@ -24,14 +25,7 @@ export const WalletConnectButton: FC<IWalletConnectButtonProps> = props => {
   }
 
   const handleClick = async () => {
-    const connector = new WalletConnectConnector({
-      // supportedChainIds: Object.values(networkToChainId),
-      rpc: {
-        1: process.env.JSON_RPC_ADDR as string,
-      },
-      qrcode: true,
-    });
-    await activate(connector);
+    await activate(Connectors.WALLETCONNECT, console.error);
     onClick();
   };
 
