@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.6.1...@gemunion/provider-wallet@0.7.0) (2022-03-16)
+
+
+### Features
+
+* reconnect wallet, props for connect wallet dialog ([2f8ccf4](https://github.com/gemunion/mui-packages/commit/2f8ccf40653623e9cfefbe99b16b77eb55a5eb90))
+
+
+
+
+
 ## 0.6.1 (2022-03-11)
 
 **Note:** Version bump only for package @gemunion/provider-wallet
