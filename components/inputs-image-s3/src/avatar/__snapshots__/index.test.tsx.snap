@@ -20,6 +20,7 @@ exports[`<AvatarInput /> renders empty field with error: image is required 1`] =
       >
         <div
           class="InputFile-placeholder-19"
+          role="button"
           tabindex="0"
         >
           <input
@@ -123,6 +124,7 @@ exports[`<AvatarInput /> renders the empty field 1`] = `
       >
         <div
           class="InputFile-placeholder-5"
+          role="button"
           tabindex="0"
         >
           <input
