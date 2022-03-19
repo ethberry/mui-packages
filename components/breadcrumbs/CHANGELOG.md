@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.11 (2022-03-19)
+
+**Note:** Version bump only for package @gemunion/mui-breadcrumbs
+
+
+
+
+
 ## [0.1.10](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-breadcrumbs@0.1.9...@gemunion/mui-breadcrumbs@0.1.10) (2022-03-09)
 
 **Note:** Version bump only for package @gemunion/mui-breadcrumbs
