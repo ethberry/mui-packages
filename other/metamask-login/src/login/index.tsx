@@ -5,6 +5,7 @@ import { Button, Grid } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 import { v4 } from "uuid";
 
+import { phrase } from "@gemunion/constants";
 import { PageHeader } from "@gemunion/mui-page-header";
 import { IJwt, useApi } from "@gemunion/provider-api";
 import { useUser } from "@gemunion/provider-user";
@@ -61,7 +62,7 @@ export const Login: FC = () => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return library
       .getSigner()
-      .signMessage(`I am signing my one-time nonce: ${data.nonce}`)
+      .signMessage(`${phrase}${data.nonce}`)
       .then((signature: string) => {
         setData({ ...data, signature });
         return handleSubmit({ ...data, signature });
