@@ -2,7 +2,7 @@ import { FC, useEffect } from "react";
 import { useFormikContext } from "formik";
 
 export const AutoSave: FC = () => {
-  const formik = useFormikContext<any>();
+  const formik = useFormikContext();
 
   useEffect(() => {
     formik.handleSubmit();

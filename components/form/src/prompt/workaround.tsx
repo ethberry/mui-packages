@@ -1,29 +1,25 @@
-/**
- * These hooks re-implement the now removed useBlocker and usePrompt hooks in 'react-router-dom'.
- * Thanks for the idea @piecyk https://github.com/remix-run/react-router/issues/8139#issuecomment-953816315
- * Source: https://github.com/remix-run/react-router/commit/256cad70d3fd4500b1abcfea66f3ee622fb90874#diff-b60f1a2d4276b2a605c05e19816634111de2e8a4186fe9dd7de8e344b65ed4d3L344-L381
- */
-import { useContext, useEffect, useCallback } from "react";
-import { UNSAFE_NavigationContext as NavigationContext } from "react-router-dom";
+import type { Blocker, History, Transition } from "history";
+import { ContextType, useCallback, useContext, useEffect } from "react";
+import { Navigator as BaseNavigator, UNSAFE_NavigationContext as NavigationContext } from "react-router-dom";
+
+interface INavigator extends BaseNavigator {
+  block: History["block"];
+}
+
+type NavigationContextWithBlock = ContextType<typeof NavigationContext> & { navigator: INavigator };
 
 /**
- * Blocks all navigation attempts. This is useful for preventing the page from
- * changing until some condition is met, like saving form data.
- *
- * @param  blocker
- * @param  when
- * @see https://reactrouter.com/api/useBlocker
+ * @source https://github.com/remix-run/react-router/commit/256cad70d3fd4500b1abcfea66f3ee622fb90874
  */
-export function useBlocker(blocker: (tx: any) => void, when = true) {
-  const { navigator } = useContext(NavigationContext);
+export function useBlocker(blocker: Blocker, when = true) {
+  const { navigator } = useContext(NavigationContext) as NavigationContextWithBlock;
 
   useEffect(() => {
     if (!when) {
       return;
     }
 
-    // @ts-ignore
-    const unblock = navigator.block(tx => {
+    const unblock = navigator.block((tx: Transition) => {
       const autoUnblockingTx = {
         ...tx,
         retry() {
@@ -38,27 +34,33 @@ export function useBlocker(blocker: (tx: any) => void, when = true) {
       blocker(autoUnblockingTx);
     });
 
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return unblock;
   }, [navigator, blocker, when]);
 }
 
 /**
- * Prompts the user with an Alert before they leave the current screen.
- *
- * @param  message
- * @param  when
+ * @source https://github.com/remix-run/react-router/issues/8139#issuecomment-1021457943
  */
-export function usePrompt(message: string, when = true) {
+export function usePrompt(
+  message: string | ((location: Transition["location"], action: Transition["action"]) => string),
+  when = true,
+) {
   const blocker = useCallback(
-    tx => {
-      // eslint-disable-next-line no-alert
-      if (window.confirm(message)) {
+    (tx: Transition) => {
+      let response;
+      if (typeof message === "function") {
+        response = message(tx.location, tx.action);
+        if (typeof response === "string") {
+          response = window.confirm(response);
+        }
+      } else {
+        response = window.confirm(message);
+      }
+      if (response) {
         tx.retry();
       }
     },
     [message],
   );
-
-  useBlocker(blocker, when);
+  return useBlocker(blocker, when);
 }
