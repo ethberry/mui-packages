@@ -2,7 +2,7 @@ import { FC, useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 
 import { STORE_CONNECTOR } from "./constants";
-import { Connectors, TConnectors, getConnectorName } from "../connectors";
+import { TConnectors, getConnectorName, getConnectorByName } from "../connectors";
 
 export const Reconnect: FC = () => {
   const { activate, active, connector } = useWeb3React();
@@ -10,7 +10,7 @@ export const Reconnect: FC = () => {
 
   const handleConnect = async () => {
     if (connectorStored) {
-      await activate(Connectors[connectorStored]);
+      await activate(getConnectorByName(connectorStored)!);
     }
   };
 

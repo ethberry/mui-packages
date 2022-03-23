@@ -1,21 +1,23 @@
 import { FC } from "react";
-import { IconButton } from "@mui/material";
+import { BadgeProps, IconButton, IconButtonProps } from "@mui/material";
 import { UserRejectedRequestError, WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import { useWeb3React } from "@web3-react/core";
 import { useSnackbar } from "notistack";
 
 import { WalletConnectIcon } from "../wallet-icons";
 import { CustomBadge } from "../custom-badge";
-import { Connectors } from "../../connectors";
+import { walletConnectConnector } from "../../connectors/wallet-connect";
 
 export interface IWalletConnectButtonProps {
   disabled?: boolean;
   onClick: () => void;
+  BadgeProps?: BadgeProps;
+  IconButtonProps?: IconButtonProps;
 }
 
 // https://github.com/NoahZinsmeister/web3-react/blob/v6/docs/connectors/walletconnect.md
 export const WalletConnectButton: FC<IWalletConnectButtonProps> = props => {
-  const { disabled, onClick } = props;
+  const { disabled, onClick, BadgeProps, IconButtonProps } = props;
 
   const { enqueueSnackbar } = useSnackbar();
   const { activate, active, error, connector } = useWeb3React();
@@ -25,13 +27,13 @@ export const WalletConnectButton: FC<IWalletConnectButtonProps> = props => {
   }
 
   const handleClick = async () => {
-    await activate(Connectors.WALLETCONNECT, console.error);
+    await activate(walletConnectConnector, console.error);
     onClick();
   };
 
   return (
-    <CustomBadge invisible={!active || !(connector instanceof WalletConnectConnector)}>
-      <IconButton disabled={disabled} onClick={handleClick}>
+    <CustomBadge invisible={!active || !(connector instanceof WalletConnectConnector)} BadgeProps={BadgeProps}>
+      <IconButton disabled={disabled} onClick={handleClick} {...IconButtonProps}>
         <WalletConnectIcon viewBox="0 0 60 60" sx={{ fontSize: 60 }} />
       </IconButton>
     </CustomBadge>

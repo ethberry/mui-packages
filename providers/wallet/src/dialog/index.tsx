@@ -6,7 +6,7 @@ import {
   // AuthereumButton,
   // FortmaticButton,
   // LedgerButton,
-  MetaMaksButton,
+  MetaMaskButton,
   // PortisButton,
   // TorusButton,
   // TrezorButton,
@@ -36,7 +36,7 @@ export const WalletDialog: FC<IWalletConnectDialogProps> = props => {
         <CloseButton onClick={onClose} />
       </DialogTitle>
       <DialogContent {...dialogContent}>
-        <MetaMaksButton onClick={onClose} />
+        <MetaMaskButton onClick={onClose} />
         <WalletConnectButton onClick={onClose} />
         {/* <TrezorButton onClick={onClose} /> */}
         {/* <LedgerButton onClick={onClose} /> */}
