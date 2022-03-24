@@ -10,18 +10,43 @@ export interface IS3Result {
 }
 
 interface IS3FileInputProps extends Omit<IFileInputProps, "onChange"> {
-  baseUrl?: string;
+  bucketUrl?: string;
   bucket?: string;
+  region?: string;
   onChange: (url: string) => void;
   onError?: (message: string) => void;
   onProgress?: (percent: number, status: string, file: File) => void;
   validate?: (files: File[]) => Promise<boolean>;
 }
 
-export const S3FileInput: FC<IS3FileInputProps> = props => {
-  const { bucket = process.env.AWS_S3_BUCKET, onChange, onError, onProgress, validate, ...rest } = props;
+// prettier-ignore
+const defaultBaseUrl =
+  process.env.BE_URL ||
+  process.env.STORYBOOK_BE_URL ||
+  process.env.REACT_APP_BE_URL ||
+  process.env.NEXT_PUBLIC_BE_URL;
+const defaultBucket =
+  process.env.AWS_S3_BUCKET ||
+  process.env.STORYBOOK_AWS_S3_BUCKET ||
+  process.env.REACT_APP_AWS_S3_BUCKET ||
+  process.env.NEXT_PUBLIC_AWS_S3_BUCKET;
+const defaultRegion =
+  process.env.AWS_REGION ||
+  process.env.STORYBOOK_AWS_REGION ||
+  process.env.REACT_APP_AWS_REGION ||
+  process.env.NEXT_PUBLIC_AWS_REGION;
 
-  const { baseUrl = `https://${bucket}.s3.${process.env.AWS_REGION}.amazonaws.com` } = props;
+export const S3FileInput: FC<IS3FileInputProps> = props => {
+  const {
+    bucket = defaultBucket,
+    region = defaultRegion,
+    bucketUrl = `https://${bucket}.s3.${region}.amazonaws.com`,
+    onChange,
+    onError,
+    onProgress,
+    validate,
+    ...rest
+  } = props;
 
   const api = useApi();
 
@@ -35,7 +60,7 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
     const isValid = validate ? await validate(files) : true;
 
     if (!isValid) {
-      console.error("Provided file is not valid", files);
+      console.error("Some of provided files are not valid", files);
       return;
     }
 
@@ -44,13 +69,13 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
       files,
       signingUrl: "/s3/put",
       onFinishS3Put: (data: IS3Result) => {
-        onChange(`${baseUrl}${new URL(data.signedUrl).pathname}`);
+        onChange(`${bucketUrl}${new URL(data.signedUrl).pathname}`);
       },
       onProgress: onProgress || console.info,
       onError: onError || console.error,
       signingUrlMethod: "GET",
       signingUrlWithCredentials: true,
-      server: process.env.BE_URL,
+      server: defaultBaseUrl,
       signingUrlHeaders: {
         // @ts-ignore
         authorization: authToken ? `Bearer ${authToken.accessToken}` : "",

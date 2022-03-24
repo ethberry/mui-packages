@@ -6,7 +6,7 @@ import { Grid } from "@mui/material";
 
 import { ProgressOverlay } from "@gemunion/mui-progress";
 import { useUser } from "@gemunion/provider-user";
-import { useApi } from "@gemunion/provider-api";
+import { ApiError, useApi } from "@gemunion/provider-api";
 
 import { useStyles } from "./styles";
 
@@ -31,9 +31,8 @@ export const VerifyEmail: FC = () => {
         enqueueSnackbar(formatMessage({ id: "snackbar.verification" }), { variant: "success" });
         return user.sync("/profile");
       })
-      .catch(e => {
+      .catch((e: ApiError) => {
         if (e.status) {
-          // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
           navigate("/resend-verification-email");
         } else {

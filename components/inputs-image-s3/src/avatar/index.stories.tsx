@@ -11,6 +11,7 @@ import { AvatarInput, IAvatarInputProps } from "./index";
 const i18n = {
   "form.labels.avatar": "Avatar",
   "form.placeholders.avatar": "Avatar",
+  "form.tips.delete": "Delete",
 };
 
 export default {

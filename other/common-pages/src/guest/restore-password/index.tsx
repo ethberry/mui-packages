@@ -7,7 +7,7 @@ import { useIntl } from "react-intl";
 import { PasswordInput } from "@gemunion/mui-inputs-core";
 import { PageHeader } from "@gemunion/mui-page-header";
 import { FormikForm } from "@gemunion/mui-form";
-import { localizeErrors, useApi } from "@gemunion/provider-api";
+import { ApiError, useApi } from "@gemunion/provider-api";
 
 import { validationSchema } from "./validation";
 import { useStyles } from "./styles";
@@ -38,11 +38,10 @@ export const RestorePassword: FC = () => {
         enqueueSnackbar(formatMessage({ id: "snackbar.password-changed" }), { variant: "success" });
         navigate("/login");
       })
-      .catch(e => {
+      .catch((e: ApiError) => {
         if (e.status === 400) {
-          formikBag.setErrors(localizeErrors(e.message));
+          formikBag.setErrors(e.getLocalizedValidationErrors());
         } else if (e.status) {
-          // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
           navigate("/forgot-password");
         } else {

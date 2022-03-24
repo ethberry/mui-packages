@@ -1,5 +1,3 @@
-import "../env";
-
 import { IntlProvider } from "react-intl";
 import { cleanup, render } from "@testing-library/react";
 import { createTheme, ThemeProvider } from "@mui/material";

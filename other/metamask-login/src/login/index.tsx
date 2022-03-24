@@ -7,7 +7,7 @@ import { v4 } from "uuid";
 
 import { phrase } from "@gemunion/constants";
 import { PageHeader } from "@gemunion/mui-page-header";
-import { IJwt, useApi } from "@gemunion/provider-api";
+import { ApiError, IJwt, useApi } from "@gemunion/provider-api";
 import { useUser } from "@gemunion/provider-user";
 import { WalletContext } from "@gemunion/provider-wallet";
 
@@ -42,10 +42,9 @@ export const Login: FC = () => {
         api.setToken(json);
         return user.sync("/dashboard");
       })
-      .catch(e => {
+      .catch((e: ApiError) => {
         api.setToken(null);
         if (e.status) {
-          // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
         } else {
           console.error(e);

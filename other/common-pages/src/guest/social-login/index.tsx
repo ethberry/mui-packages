@@ -7,7 +7,7 @@ import { Facebook, GooglePlus } from "@gemunion/mui-icons-social-networks";
 import { PasswordInput, TextInput } from "@gemunion/mui-inputs-core";
 import { PageHeader } from "@gemunion/mui-page-header";
 import { FormikForm } from "@gemunion/mui-form";
-import { IJwt, useApi } from "@gemunion/provider-api";
+import { ApiError, IJwt, useApi } from "@gemunion/provider-api";
 import { useUser } from "@gemunion/provider-user";
 import { ButtonToolbar } from "@gemunion/mui-toolbar";
 import { openUrlOnClick } from "@gemunion/popup";
@@ -41,10 +41,9 @@ export const SocialLogin: FC = () => {
         api.setToken(json);
         return user.sync("/dashboard");
       })
-      .catch(e => {
+      .catch((e: ApiError) => {
         api.setToken(null);
         if (e.status) {
-          // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
         } else {
           console.error(e);

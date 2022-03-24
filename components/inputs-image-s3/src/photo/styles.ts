@@ -19,5 +19,5 @@ export const useStyles = makeStyles<Theme>(
       justifyContent: "center",
     },
   }),
-  { name: "ImageGallery" },
+  { name: "PhotoInput" },
 );
