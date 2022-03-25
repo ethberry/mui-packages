@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.1.12 (2022-03-25)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([e6f7750](https://github.com/gemunion/mui-packages/commit/e6f775021b6340e69defc0a3d60c567072cb75a2))
+
+
+
+
+
 ## 3.1.11 (2022-03-19)
 
 **Note:** Version bump only for package @gemunion/mui-toolbar

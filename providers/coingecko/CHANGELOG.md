@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.4 (2022-03-25)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([e6f7750](https://github.com/gemunion/mui-packages/commit/e6f775021b6340e69defc0a3d60c567072cb75a2))
+
+
+
+
+
 ## 0.1.3 (2022-03-25)
 
 **Note:** Version bump only for package @gemunion/provider-coingecko
