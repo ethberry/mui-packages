@@ -10,9 +10,9 @@ export interface IEthInputProps {
   fillByZeros?: string;
   name: string;
   readOnly?: boolean;
+  precision?: number;
+  symbol?: string;
   thousandsSeparator?: string;
-  formatValue?: (value: string) => string;
-  normalizeValue?: (value: string) => string;
 }
 
 export const EthInput: FC<IEthInputProps> = props => {
@@ -21,13 +21,19 @@ export const EthInput: FC<IEthInputProps> = props => {
     fractionalDelimiter = ".",
     fillByZeros = false,
     name,
+    precision = 2,
+    symbol = constants.EtherSymbol,
     thousandsSeparator = " ",
     ...rest
   } = props;
 
   const formatValue = (value: string): string => utils.parseEther(value).toString();
 
-  const normalizeValue = (value: string): string => utils.formatEther(value).split(".")[0];
+  const normalizeValue = (value: string): string => {
+    const normalizedValue = utils.formatEther(value);
+    const [whole, decimals] = normalizedValue.split(".");
+    return decimals === "0" ? whole : normalizedValue;
+  };
 
   const formik = useFormikContext<any>();
   const value = getIn(formik.values, name);
@@ -36,7 +42,7 @@ export const EthInput: FC<IEthInputProps> = props => {
   const maskProps = {
     mask: Number,
     thousandsSeparator,
-    scale: 0, // digits after decimal
+    scale: precision, // digits after decimal
     signed: allowNegative, // allow negative
     normalizeZeros: true, // appends or removes zeros at ends
     radix: fractionalDelimiter, // fractional delimiter
@@ -48,13 +54,13 @@ export const EthInput: FC<IEthInputProps> = props => {
       mask: "", // To hide symbol if field is empty
     },
     {
-      mask: `${constants.EtherSymbol} num`,
+      mask: `${symbol} num`,
       blocks: {
         num: maskProps,
       },
     },
     {
-      mask: `-${constants.EtherSymbol} num`,
+      mask: `-${symbol} num`,
       blocks: {
         num: maskProps,
       },
@@ -63,8 +69,8 @@ export const EthInput: FC<IEthInputProps> = props => {
 
   const updateValue = (maskedRef: any): void => {
     if (maskedRef && maskedRef.current) {
-      const EthAmount = formatValue(maskedRef.current.unmaskedValue);
-      formik.setFieldValue(name, EthAmount);
+      const currencyAmount = formatValue(maskedRef.current.unmaskedValue);
+      formik.setFieldValue(name, currencyAmount);
     }
   };
 
