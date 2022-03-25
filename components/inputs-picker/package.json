@@ -12,10 +12,10 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/lab": "5.0.0-alpha.73",
-    "@mui/material": "5.5.1",
+    "@mui/lab": "5.0.0-alpha.74",
+    "@mui/material": "5.5.2",
     "@mui/styles": "5.5.1",
-    "@types/react": "17.0.40",
+    "@types/react": "17.0.43",
     "formik": "2.2.9",
     "react": "17.0.2",
     "react-intl": "5.24.7"
