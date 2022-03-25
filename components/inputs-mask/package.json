@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@gemunion/mui-inputs-core": "5.2.13",
+    "ethers": "5.6.1",
     "imask": "6.4.2",
     "react-imask": "6.4.2"
   },

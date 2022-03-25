@@ -26,7 +26,13 @@ export default {
 
 const Template: Story<ICurrencyInputProps> = args => <CurrencyInput {...args} />;
 
-export const Simple = Template.bind({});
-Simple.args = {
+export const USD = Template.bind({});
+USD.args = {
   name: "currencyMask",
+};
+
+export const YEN = Template.bind({});
+YEN.args = {
+  name: "currencyMask",
+  precision: 0,
 };

@@ -1,33 +1,33 @@
 import { FC } from "react";
 import { getIn, useFormikContext } from "formik";
+import { utils, constants } from "ethers";
 
 import { MaskedInput } from "../mask";
 
-export interface ICurrencyInputProps {
+export interface IEthInputProps {
   allowNegative?: boolean;
   fractionalDelimiter?: string;
   fillByZeros?: string;
   name: string;
   readOnly?: boolean;
-  precision?: number;
-  symbol?: string;
   thousandsSeparator?: string;
+  formatValue?: (value: string) => string;
+  normalizeValue?: (value: string) => string;
 }
 
-export const CurrencyInput: FC<ICurrencyInputProps> = props => {
+export const EthInput: FC<IEthInputProps> = props => {
   const {
     allowNegative = false,
     fractionalDelimiter = ".",
     fillByZeros = false,
     name,
-    precision = 2,
-    symbol = "$",
     thousandsSeparator = " ",
     ...rest
   } = props;
 
-  const formatValue = (value: string): number => Number.parseFloat(value) * 10 ** precision;
-  const normalizeValue = (value: number): string => (value ? (value / 10 ** precision).toString() : "0");
+  const formatValue = (value: string): string => utils.parseEther(value).toString();
+
+  const normalizeValue = (value: string): string => utils.formatEther(value).split(".")[0];
 
   const formik = useFormikContext<any>();
   const value = getIn(formik.values, name);
@@ -36,7 +36,7 @@ export const CurrencyInput: FC<ICurrencyInputProps> = props => {
   const maskProps = {
     mask: Number,
     thousandsSeparator,
-    scale: precision, // digits after decimal
+    scale: 0, // digits after decimal
     signed: allowNegative, // allow negative
     normalizeZeros: true, // appends or removes zeros at ends
     radix: fractionalDelimiter, // fractional delimiter
@@ -48,13 +48,13 @@ export const CurrencyInput: FC<ICurrencyInputProps> = props => {
       mask: "", // To hide symbol if field is empty
     },
     {
-      mask: `${symbol} num`,
+      mask: `${constants.EtherSymbol} num`,
       blocks: {
         num: maskProps,
       },
     },
     {
-      mask: `-${symbol} num`,
+      mask: `-${constants.EtherSymbol} num`,
       blocks: {
         num: maskProps,
       },
@@ -63,8 +63,8 @@ export const CurrencyInput: FC<ICurrencyInputProps> = props => {
 
   const updateValue = (maskedRef: any): void => {
     if (maskedRef && maskedRef.current) {
-      const currencyAmount = formatValue(maskedRef.current.unmaskedValue);
-      formik.setFieldValue(name, currencyAmount);
+      const EthAmount = formatValue(maskedRef.current.unmaskedValue);
+      formik.setFieldValue(name, EthAmount);
     }
   };
 
