@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.15](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@4.2.14...@gemunion/mui-inputs-mask@4.2.15) (2022-03-25)
+
+
+### Bug Fixes
+
+* eth input ([f87e2a7](https://github.com/gemunion/mui-packages/commit/f87e2a7d72b128ba6db7bd772091788da011c61f))
+
+
+
+
+
 ## [4.2.14](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@4.2.13...@gemunion/mui-inputs-mask@4.2.14) (2022-03-25)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
