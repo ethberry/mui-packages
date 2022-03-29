@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.3.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@4.3.7...@gemunion/mui-inputs-file-s3@4.3.8) (2022-03-29)
+
+
+### Bug Fixes
+
+* move react-intl to devDeps ([2309522](https://github.com/gemunion/mui-packages/commit/2309522132cd6530babbab0d8e69eccf9710507d))
+
+
+
+
+
 ## 4.3.7 (2022-03-25)
 
 

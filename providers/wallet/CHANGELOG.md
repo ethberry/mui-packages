@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.2](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.8.1...@gemunion/provider-wallet@0.8.2) (2022-03-29)
+
+
+### Bug Fixes
+
+* move react-intl to devDeps ([2309522](https://github.com/gemunion/mui-packages/commit/2309522132cd6530babbab0d8e69eccf9710507d))
+
+
+
+
+
 ## 0.8.1 (2022-03-25)
 
 
