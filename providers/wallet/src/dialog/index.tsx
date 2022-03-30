@@ -11,6 +11,8 @@ import {
   // TorusButton,
   // TrezorButton,
   WalletConnectButton,
+  IWalletConnectButtonProps,
+  IMetaMaskButtonProps,
 } from "./buttons";
 import { CloseButton } from "./close-button";
 
@@ -22,10 +24,15 @@ export interface IWalletConnectDialogProps {
   };
   open: boolean;
   onClose: () => void;
+  ButtonsProps?: {
+    metamask?: Partial<IMetaMaskButtonProps>;
+    walletConnect?: Partial<IWalletConnectButtonProps>;
+  };
 }
 
 export const WalletDialog: FC<IWalletConnectDialogProps> = props => {
-  const { onClose, open, componentsProps = {} } = props;
+  const { onClose, open, componentsProps = {}, ButtonsProps = {} } = props;
+  const { metamask = {}, walletConnect = {} } = ButtonsProps;
 
   const { dialog, dialogContent, dialogTitle } = componentsProps;
 
@@ -36,8 +43,8 @@ export const WalletDialog: FC<IWalletConnectDialogProps> = props => {
         <CloseButton onClick={onClose} />
       </DialogTitle>
       <DialogContent {...dialogContent}>
-        <MetaMaskButton onClick={onClose} />
-        <WalletConnectButton onClick={onClose} />
+        <MetaMaskButton onClick={onClose} {...metamask} />
+        <WalletConnectButton onClick={onClose} {...walletConnect} />
         {/* <TrezorButton onClick={onClose} /> */}
         {/* <LedgerButton onClick={onClose} /> */}
         {/* <TorusButton onClick={onClose} /> */}

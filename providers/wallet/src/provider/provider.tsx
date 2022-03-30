@@ -3,7 +3,6 @@ import { Web3ReactProvider } from "@web3-react/core";
 import { ethers } from "ethers";
 
 import { WalletContext } from "./context";
-import { Reconnect } from "../reconnect";
 
 export const WalletProvider: FC = props => {
   const { children } = props;
@@ -26,7 +25,6 @@ export const WalletProvider: FC = props => {
           setWalletConnectDialogOpen,
         }}
       >
-        <Reconnect />
         {children}
       </WalletContext.Provider>
     </Web3ReactProvider>

@@ -1,12 +1,17 @@
 // import { authereumConnector, AuthereumConnector } from "./authereum";
 // import { fortmaticConnector, FortmaticConnector } from "./formatic";
 import { injectedConnector, InjectedConnector } from "./meta-mask";
+import { WalletConnectConnectorArguments } from "@web3-react/walletconnect-connector";
 // import { ledgerConnector } from "./ledger";
 // import { portisConnector, PortisConnector } from "./portis";
 // import { torusConnector, TorusConnector } from "./torus";
 // import { trezorConnector } from "./trezor";
-import { walletConnectConnector, WalletConnectConnector } from "./wallet-connect";
+import { getWalletConnectConnector, WalletConnectConnector } from "./wallet-connect";
 import { TConnectors } from "./types";
+
+export interface IConnectorsArgs {
+  walletConnect?: WalletConnectConnectorArguments;
+}
 
 // export const Connectors: Record<TConnectors, any> = {
 //   [TConnectors.AUTHEREUM]: authereumConnector,
@@ -38,7 +43,7 @@ export const getConnectorName = (connector: any) => {
   }
 };
 
-export const getConnectorByName = (name: TConnectors) => {
+export const getConnectorByName = (name: TConnectors, connectorsArgs?: IConnectorsArgs) => {
   switch (name) {
     // case connector instanceof AuthereumConnector:
     //   return TConnectors.AUTHEREUM;
@@ -51,7 +56,7 @@ export const getConnectorByName = (name: TConnectors) => {
     // case connector instanceof TorusConnector:
     //   return TConnectors.TORUS;
     case TConnectors.WALLETCONNECT:
-      return walletConnectConnector;
+      return getWalletConnectConnector(connectorsArgs?.walletConnect);
     default:
       return null;
   }

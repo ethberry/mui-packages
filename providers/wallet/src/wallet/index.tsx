@@ -7,15 +7,16 @@ import { WalletDialog, IWalletConnectDialogProps } from "../dialog";
 import { WalletIcon } from "../icon";
 import { WalletMenuDialog } from "../menu-dialog";
 import { WalletContext } from "../provider";
+import { Reconnect } from "../reconnect";
 
 interface IWalletProps {
-  walletConnectDialogProps?: Pick<IWalletConnectDialogProps, "componentsProps">;
+  walletConnectDialogProps?: Pick<IWalletConnectDialogProps, "componentsProps" | "ButtonsProps">;
 }
 
 export const Wallet: FC<IWalletProps> = props => {
   const { walletConnectDialogProps = {} } = props;
-
-  const { componentsProps } = walletConnectDialogProps;
+  const { componentsProps, ButtonsProps = {} } = walletConnectDialogProps;
+  const { walletConnect } = ButtonsProps;
 
   const wallet = useContext(WalletContext);
 
@@ -58,8 +59,10 @@ export const Wallet: FC<IWalletProps> = props => {
         onClose={handleCloseConnectDialog}
         open={wallet.getWalletConnectDialogOpen()}
         componentsProps={componentsProps}
+        ButtonsProps={ButtonsProps}
       />
       <WalletMenuDialog onClose={handleCloseWalletDialog} open={isWalletDialogOpen} />
+      <Reconnect connectorsArgs={{ walletConnect: walletConnect?.connectorArgs }} />
     </Box>
   );
 };
