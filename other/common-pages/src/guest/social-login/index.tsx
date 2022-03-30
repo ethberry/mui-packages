@@ -7,8 +7,8 @@ import { Facebook, GooglePlus } from "@gemunion/mui-icons-social-networks";
 import { PasswordInput, TextInput } from "@gemunion/mui-inputs-core";
 import { PageHeader } from "@gemunion/mui-page-header";
 import { FormikForm } from "@gemunion/mui-form";
-import { ApiError, IJwt, useApi } from "@gemunion/provider-api";
-import { useUser } from "@gemunion/provider-user";
+import { ApiError, useApi } from "@gemunion/provider-api";
+import { useUser, ILoginDto } from "@gemunion/provider-user";
 import { ButtonToolbar } from "@gemunion/mui-toolbar";
 import { openUrlOnClick } from "@gemunion/popup";
 import { useDidMountEffect } from "@gemunion/react-hooks";
@@ -16,11 +16,6 @@ import { useDidMountEffect } from "@gemunion/react-hooks";
 import { validationSchema } from "./validation";
 import { useStyles } from "./styles";
 import { LoginButtons } from "./buttons";
-
-interface ILoginDto {
-  email: string;
-  password: string;
-}
 
 export const SocialLogin: FC = () => {
   const classes = useStyles();
@@ -30,26 +25,16 @@ export const SocialLogin: FC = () => {
   const user = useUser();
   const api = useApi();
 
-  const handleSubmit = (values: ILoginDto): Promise<void> => {
-    return api
-      .fetchJson({
-        url: "/auth/login",
-        method: "POST",
-        data: values,
-      })
-      .then((json: IJwt) => {
-        api.setToken(json);
-        return user.sync("/dashboard");
-      })
-      .catch((e: ApiError) => {
-        api.setToken(null);
-        if (e.status) {
-          enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
-        } else {
-          console.error(e);
-          enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
-        }
-      });
+  const handleSubmit = (values: ILoginDto): Promise<void | ApiError> => {
+    return user.logIn(values, "/dashboard").catch((e: ApiError) => {
+      api.setToken(null);
+      if (e.status) {
+        enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
+      } else {
+        console.error(e);
+        enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
+      }
+    });
   };
 
   const onMessage = (event: MessageEvent): void => {
