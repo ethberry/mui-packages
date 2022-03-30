@@ -2,15 +2,21 @@ import { FC, useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 
 import { STORE_CONNECTOR } from "./constants";
-import { TConnectors, getConnectorName, getConnectorByName } from "../connectors";
+import { TConnectors, getConnectorName, getConnectorByName, IConnectorsArgs } from "../connectors";
 
-export const Reconnect: FC = () => {
+interface IReconnectProps {
+  connectorsArgs?: IConnectorsArgs;
+}
+
+export const Reconnect: FC<IReconnectProps> = props => {
+  const { connectorsArgs } = props;
+
   const { activate, active, connector } = useWeb3React();
   const connectorStored: TConnectors | null = localStorage.getItem(STORE_CONNECTOR) as TConnectors | null;
 
   const handleConnect = async () => {
     if (connectorStored) {
-      await activate(getConnectorByName(connectorStored)!);
+      await activate(getConnectorByName(connectorStored, connectorsArgs)!);
     }
   };
 
