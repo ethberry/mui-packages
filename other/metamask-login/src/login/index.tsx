@@ -31,7 +31,7 @@ export const Login: FC = () => {
   const api = useApi();
   const wallet = useContext(WalletContext);
 
-  const handleSubmit = (values: IMetamaskDto): Promise<void> => {
+  const handleSubmit = (values: IMetamaskDto): Promise<void | ApiError> => {
     return api
       .fetchJson({
         url: "/auth/metamask",
