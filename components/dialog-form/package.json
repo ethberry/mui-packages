@@ -30,7 +30,8 @@
   "name": "@gemunion/mui-dialog-form",
   "peerDependencies": {
     "@mui/material": "^5",
-    "react": "^17"
+    "react": "^17",
+    "react-intl": "^5"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

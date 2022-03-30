@@ -27,7 +27,8 @@
   "name": "@gemunion/mui-inputs-file-s3",
   "peerDependencies": {
     "notistack": "^2",
-    "react": "^17"
+    "react": "^17",
+    "react-intl": "^5"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
