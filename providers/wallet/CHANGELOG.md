@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.8.2...@gemunion/provider-wallet@0.9.0) (2022-03-30)
+
+
+### Features
+
+* custom arguments for connection buttons, login page updated ([b59a578](https://github.com/gemunion/mui-packages/commit/b59a57872915bd8d2fdef2d23eab76533143eb1c))
+
+
+
+
+
 ## [0.8.2](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.8.1...@gemunion/provider-wallet@0.8.2) (2022-03-29)
 
 

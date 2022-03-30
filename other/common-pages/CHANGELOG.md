@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.7.0](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@6.6.4...@gemunion/common-pages@6.7.0) (2022-03-30)
+
+
+### Bug Fixes
+
+* missed types and methods ([4cc1094](https://github.com/gemunion/mui-packages/commit/4cc109401db4f00e87aa158654b7eb9268ead68a))
+
+
+### Features
+
+* custom arguments for connection buttons, login page updated ([b59a578](https://github.com/gemunion/mui-packages/commit/b59a57872915bd8d2fdef2d23eab76533143eb1c))
+
+
+
+
+
 ## 6.6.4 (2022-03-25)
 
 
