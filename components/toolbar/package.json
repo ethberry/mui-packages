@@ -12,8 +12,8 @@
     "csstype": "3.0.11"
   },
   "devDependencies": {
-    "@mui/material": "5.5.2",
-    "@mui/styles": "5.5.1",
+    "@mui/material": "5.5.3",
+    "@mui/styles": "5.5.3",
     "@testing-library/jest-dom": "5.16.3",
     "@testing-library/react": "12.1.4",
     "@types/jest": "27.4.1",

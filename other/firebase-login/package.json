@@ -10,18 +10,18 @@
   "dependencies": {
     "@gemunion/firebase": "1.1.12",
     "@gemunion/mui-page-header": "3.0.13",
-    "@gemunion/provider-api": "5.6.2",
+    "@gemunion/provider-api": "5.7.0",
     "@gemunion/provider-user": "3.1.0",
     "firebase": "9.6.10",
     "firebaseui": "6.0.1"
   },
   "description": "react component",
   "devDependencies": {
-    "@mui/material": "5.5.2",
-    "@mui/styles": "5.5.1",
+    "@mui/material": "5.5.3",
+    "@mui/styles": "5.5.3",
     "notistack": "2.0.3",
     "react": "17.0.2",
-    "react-intl": "5.24.7"
+    "react-intl": "5.24.8"
   },
   "engines": {
     "node": ">=12.13"
