@@ -9,18 +9,18 @@
   },
   "dependencies": {
     "@gemunion/mui-inputs-core": "5.2.14",
-    "ethers": "5.6.1",
+    "ethers": "5.6.2",
     "imask": "6.4.2",
     "react-imask": "6.4.2"
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.5.2",
+    "@mui/material": "5.5.3",
     "@storybook/react": "6.4.19",
     "@types/react": "17.0.43",
     "formik": "2.2.9",
     "react": "17.0.2",
-    "react-intl": "5.24.7"
+    "react-intl": "5.24.8"
   },
   "engines": {
     "node": ">=12.13"

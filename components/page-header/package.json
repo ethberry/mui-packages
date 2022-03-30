@@ -12,8 +12,8 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.5.2",
-    "@mui/styles": "5.5.1",
+    "@mui/material": "5.5.3",
+    "@mui/styles": "5.5.3",
     "@storybook/react": "6.4.19",
     "@testing-library/jest-dom": "5.16.3",
     "@testing-library/react": "12.1.4",
@@ -23,7 +23,7 @@
     "jest-environment-jsdom": "27.5.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-intl": "5.24.7",
+    "react-intl": "5.24.8",
     "ts-jest": "27.1.4"
   },
   "engines": {
