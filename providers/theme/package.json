@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.8.0",
-    "@gemunion/provider-settings": "1.7.0"
+    "@gemunion/provider-settings": "2.0.1"
   },
   "description": "Material UI theme provider",
   "devDependencies": {
@@ -49,5 +49,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.3.7"
+  "version": "4.0.0"
 }
