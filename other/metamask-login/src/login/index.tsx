@@ -6,18 +6,13 @@ import { useWeb3React } from "@web3-react/core";
 import { v4 } from "uuid";
 
 import { phrase } from "@gemunion/constants";
+import { IMetamaskDto } from "@gemunion/types-jwt";
 import { PageHeader } from "@gemunion/mui-page-header";
 import { ApiError, IJwt, useApi } from "@gemunion/provider-api";
 import { useUser } from "@gemunion/provider-user";
 import { WalletContext } from "@gemunion/provider-wallet";
 
 import { useStyles } from "./styles";
-
-interface IMetamaskDto {
-  nonce: string;
-  signature: string;
-  wallet: string;
-}
 
 export const Login: FC = () => {
   const classes = useStyles();
@@ -40,7 +35,7 @@ export const Login: FC = () => {
       })
       .then((json: IJwt) => {
         api.setToken(json);
-        return user.sync("/dashboard");
+        return user.getProfile("/dashboard");
       })
       .catch((e: ApiError) => {
         api.setToken(null);
@@ -78,7 +73,7 @@ export const Login: FC = () => {
 
   useEffect(() => {
     if (user.isAuthenticated()) {
-      void user.sync("/dashboard");
+      void user.getProfile("/dashboard");
     }
   }, [user.isAuthenticated()]);
 

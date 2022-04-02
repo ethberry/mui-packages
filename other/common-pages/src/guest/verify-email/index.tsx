@@ -29,7 +29,7 @@ export const VerifyEmail: FC = () => {
       })
       .then(() => {
         enqueueSnackbar(formatMessage({ id: "snackbar.verification" }), { variant: "success" });
-        return user.sync("/profile");
+        return user.getProfile("/profile");
       })
       .catch((e: ApiError) => {
         if (e.status) {

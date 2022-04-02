@@ -35,9 +35,7 @@ export const RegistrationBase: FC<IRegistrationBaseProps> = props => {
         data: values,
       })
       .then((json: IJwt) => {
-        if (json.accessToken) {
-          api.setToken(json);
-        }
+        api.setToken(json);
         enqueueSnackbar(formatMessage({ id: "snackbar.created" }), { variant: "success" });
         navigate("/message/registration-successful");
       })
@@ -55,7 +53,7 @@ export const RegistrationBase: FC<IRegistrationBaseProps> = props => {
 
   useEffect(() => {
     if (user.isAuthenticated()) {
-      void user.sync("/profile");
+      void user.getProfile("/profile");
     }
   }, [user.isAuthenticated()]);
 

@@ -40,12 +40,12 @@ export const SocialLogin: FC = () => {
   const onMessage = (event: MessageEvent): void => {
     if (event.origin === process.env.BE_URL) {
       api.setToken(event.data);
-      void user.sync("/dashboard");
+      void user.getProfile("/dashboard");
     }
   };
 
   useDidMountEffect(() => {
-    void user.sync("/dashboard");
+    void user.getProfile("/dashboard");
   }, [user.isAuthenticated()]);
 
   useEffect(() => {

@@ -52,7 +52,7 @@ export const ForgotPassword: FC = () => {
 
   useEffect(() => {
     if (user.isAuthenticated()) {
-      void user.sync("/profile");
+      void user.getProfile("/profile");
     }
   }, [user.isAuthenticated()]);
 

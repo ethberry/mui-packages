@@ -24,7 +24,6 @@ export const Login: FC = () => {
 
   const handleSubmit = (values: ILoginDto): Promise<void | ApiError> => {
     return user.logIn(values, "/").catch((e: ApiError) => {
-      api.setToken(null);
       if (e.status) {
         enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
       } else {
@@ -37,12 +36,12 @@ export const Login: FC = () => {
   const onMessage = (event: MessageEvent): void => {
     if (event.origin === process.env.BE_URL) {
       api.setToken(event.data);
-      void user.sync("/dashboard");
+      void user.getProfile("/dashboard");
     }
   };
 
   useDidMountEffect(() => {
-    void user.sync("/dashboard");
+    void user.getProfile("/dashboard");
   }, [user.isAuthenticated()]);
 
   useEffect(() => {

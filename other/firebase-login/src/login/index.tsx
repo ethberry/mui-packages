@@ -43,7 +43,7 @@ export const FirebaseLogin: FC = () => {
                   refreshToken: "",
                   refreshTokenExpiresAt: now + 1000 * 60 * 60,
                 });
-                return user.sync("/dashboard");
+                return user.getProfile("/dashboard");
               })
               .catch(console.error);
           }
