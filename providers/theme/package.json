@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.8.0",
-    "@gemunion/provider-settings": "2.0.3"
+    "@gemunion/provider-settings": "2.0.4"
   },
   "description": "Material UI theme provider",
   "devDependencies": {
