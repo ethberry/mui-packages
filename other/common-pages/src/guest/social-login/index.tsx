@@ -8,7 +8,7 @@ import { PasswordInput, TextInput } from "@gemunion/mui-inputs-core";
 import { PageHeader } from "@gemunion/mui-page-header";
 import { FormikForm } from "@gemunion/mui-form";
 import { ApiError, useApi } from "@gemunion/provider-api";
-import { useUser, ILoginDto } from "@gemunion/provider-user";
+import { ILoginDto, IUser, useUser } from "@gemunion/provider-user";
 import { ButtonToolbar } from "@gemunion/mui-toolbar";
 import { openUrlOnClick } from "@gemunion/popup";
 import { useDidMountEffect } from "@gemunion/react-hooks";
@@ -22,10 +22,10 @@ export const SocialLogin: FC = () => {
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
-  const user = useUser();
+  const user = useUser<IUser>();
   const api = useApi();
 
-  const handleSubmit = (values: ILoginDto): Promise<void | ApiError> => {
+  const handleSubmit = (values: ILoginDto): Promise<IUser | void> => {
     return user.logIn(values, "/dashboard").catch((e: ApiError) => {
       api.setToken(null);
       if (e.status) {
