@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.5](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@7.0.4...@gemunion/common-pages@7.0.5) (2022-04-02)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([a5cad6f](https://github.com/gemunion/mui-packages/commit/a5cad6fe088e7c20e57efb6a1771d6e0af612483))
+* types ([026c046](https://github.com/gemunion/mui-packages/commit/026c0467f2a6ea89cec247046064d73005853188))
+* types (part 2) ([d3866bd](https://github.com/gemunion/mui-packages/commit/d3866bd006b111984cd65d84cc0146eb0294b98d))
+* use signuo from user provider ([3d413a9](https://github.com/gemunion/mui-packages/commit/3d413a96b65a009590d2df77c88a3b63fb9bc27d))
+
+
+
+
+
 ## [7.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@7.0.3...@gemunion/common-pages@7.0.4) (2022-04-02)
 
 

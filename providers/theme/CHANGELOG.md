@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@4.0.3...@gemunion/provider-theme@4.0.4) (2022-04-02)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([a5cad6f](https://github.com/gemunion/mui-packages/commit/a5cad6fe088e7c20e57efb6a1771d6e0af612483))
+
+
+
+
+
 ## [4.0.3](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@4.0.2...@gemunion/provider-theme@4.0.3) (2022-04-02)
 
 
