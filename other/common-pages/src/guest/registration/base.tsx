@@ -7,7 +7,7 @@ import { useIntl } from "react-intl";
 import { useUser } from "@gemunion/provider-user";
 import { PageHeader } from "@gemunion/mui-page-header";
 import { FormikForm } from "@gemunion/mui-form";
-import { IJwt, ApiError, useApi } from "@gemunion/provider-api";
+import { ApiError } from "@gemunion/provider-api";
 
 import { useStyles } from "./styles";
 
@@ -25,17 +25,11 @@ export const RegistrationBase: FC<IRegistrationBaseProps> = props => {
   const { formatMessage } = useIntl();
 
   const user = useUser();
-  const api = useApi();
 
   const handleSubmit = (values: any, formikBag: any): Promise<void> => {
-    return api
-      .fetchJson({
-        url: "/auth/signup",
-        method: "POST",
-        data: values,
-      })
-      .then((json: IJwt) => {
-        api.setToken(json);
+    return user
+      .signUp(values)
+      .then(() => {
         enqueueSnackbar(formatMessage({ id: "snackbar.created" }), { variant: "success" });
         navigate("/message/registration-successful");
       })
