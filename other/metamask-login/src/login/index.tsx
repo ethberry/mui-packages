@@ -9,7 +9,7 @@ import { phrase } from "@gemunion/constants";
 import { IMetamaskDto } from "@gemunion/types-jwt";
 import { PageHeader } from "@gemunion/mui-page-header";
 import { ApiError, IJwt, useApi } from "@gemunion/provider-api";
-import { useUser } from "@gemunion/provider-user";
+import { IUser, useUser } from "@gemunion/provider-user";
 import { WalletContext } from "@gemunion/provider-wallet";
 
 import { useStyles } from "./styles";
@@ -22,11 +22,11 @@ export const Login: FC = () => {
 
   const { account, library, active } = useWeb3React();
 
-  const user = useUser();
+  const user = useUser<IUser>();
   const api = useApi();
   const wallet = useContext(WalletContext);
 
-  const handleSubmit = (values: IMetamaskDto): Promise<void | ApiError> => {
+  const handleSubmit = (values: IMetamaskDto): Promise<IUser | void> => {
     return api
       .fetchJson({
         url: "/auth/metamask",

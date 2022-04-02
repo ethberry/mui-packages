@@ -7,7 +7,7 @@ import { PasswordInput, TextInput } from "@gemunion/mui-inputs-core";
 import { PageHeader } from "@gemunion/mui-page-header";
 import { FormikForm } from "@gemunion/mui-form";
 import { ApiError, useApi } from "@gemunion/provider-api";
-import { useUser, ILoginDto } from "@gemunion/provider-user";
+import { ILoginDto, IUser, useUser } from "@gemunion/provider-user";
 import { useDidMountEffect } from "@gemunion/react-hooks";
 
 import { validationSchema } from "./validation";
@@ -19,10 +19,10 @@ export const Login: FC = () => {
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
-  const user = useUser();
+  const user = useUser<IUser>();
   const api = useApi();
 
-  const handleSubmit = (values: ILoginDto): Promise<void | ApiError> => {
+  const handleSubmit = (values: ILoginDto): Promise<IUser | void> => {
     return user.logIn(values, "/").catch((e: ApiError) => {
       if (e.status) {
         enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
