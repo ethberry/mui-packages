@@ -35,7 +35,7 @@ export const RestorePassword: FC = () => {
         data: values,
       })
       .then(() => {
-        enqueueSnackbar(formatMessage({ id: "snackbar.password-changed" }), { variant: "success" });
+        enqueueSnackbar(formatMessage({ id: "snackbar.passwordChanged" }), { variant: "success" });
         navigate("/login");
       })
       .catch((e: ApiError) => {

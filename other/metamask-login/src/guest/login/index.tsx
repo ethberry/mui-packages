@@ -14,7 +14,7 @@ import { WalletContext } from "@gemunion/provider-wallet";
 
 import { useStyles } from "./styles";
 
-export const Login: FC = () => {
+export const MetamaskLogin: FC = () => {
   const classes = useStyles();
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
@@ -98,3 +98,5 @@ export const Login: FC = () => {
     </Grid>
   );
 };
+
+export const Login = MetamaskLogin;

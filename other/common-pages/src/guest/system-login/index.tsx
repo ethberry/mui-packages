@@ -14,7 +14,7 @@ import { validationSchema } from "./validation";
 import { useStyles } from "./styles";
 import { LoginButtons } from "./buttons";
 
-export const Login: FC = () => {
+export const SystemLogin: FC = () => {
   const classes = useStyles();
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
@@ -75,3 +75,5 @@ export const Login: FC = () => {
     </Grid>
   );
 };
+
+export const Login = SystemLogin;

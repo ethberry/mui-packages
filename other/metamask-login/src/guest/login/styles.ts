@@ -12,5 +12,5 @@ export const useStyles = makeStyles<Theme>(
       margin: "0 auto",
     },
   }),
-  { name: "Login" },
+  { name: "MetamaskLogin" },
 );

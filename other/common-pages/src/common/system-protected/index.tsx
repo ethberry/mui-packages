@@ -2,9 +2,9 @@ import { FC, Fragment, useState, useEffect } from "react";
 
 import { useUser } from "@gemunion/provider-user";
 
-import { Login } from "../../guest/login";
+import { SystemLogin } from "../../guest/system-login";
 
-export const Protected: FC = props => {
+export const SystemProtected: FC = props => {
   const { children } = props;
 
   const [isReady, setIsReady] = useState(false);
@@ -20,8 +20,10 @@ export const Protected: FC = props => {
   }
 
   if (!user.isAuthenticated()) {
-    return <Login />;
+    return <SystemLogin />;
   }
 
   return <Fragment>{children}</Fragment>;
 };
+
+export const Protected = SystemProtected;

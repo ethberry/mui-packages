@@ -2,9 +2,9 @@ import { FC, Fragment, useEffect, useState } from "react";
 
 import { useUser } from "@gemunion/provider-user";
 
-import { FirebaseLogin } from "../login";
+import { FirebaseLogin } from "../../guest/login";
 
-export const Protected: FC = props => {
+export const FirebaseProtected: FC = props => {
   const { children } = props;
 
   const [isReady, setIsReady] = useState(false);
@@ -25,3 +25,5 @@ export const Protected: FC = props => {
 
   return <Fragment>{children}</Fragment>;
 };
+
+export const Protected = FirebaseProtected;

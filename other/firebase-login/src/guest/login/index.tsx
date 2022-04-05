@@ -75,3 +75,5 @@ export const FirebaseLogin: FC = () => {
     </Grid>
   );
 };
+
+export const Login = FirebaseLogin;

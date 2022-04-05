@@ -1,2 +1,2 @@
-export * from "./protected";
-export * from "./login";
+export * from "./common/protected";
+export * from "./guest/login";
