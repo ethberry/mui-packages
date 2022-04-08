@@ -10,8 +10,8 @@
   "dependencies": {
     "@gemunion/firebase": "1.1.12",
     "@gemunion/mui-page-header": "3.0.13",
-    "@gemunion/provider-api": "5.7.0",
-    "@gemunion/provider-user": "3.2.1",
+    "@gemunion/provider-api": "5.7.1",
+    "@gemunion/provider-user": "3.3.0",
     "firebase": "9.6.10",
     "firebaseui": "6.0.1"
   },
