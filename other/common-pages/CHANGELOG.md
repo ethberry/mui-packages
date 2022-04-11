@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.6](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@7.0.5...@gemunion/common-pages@7.0.6) (2022-04-11)
+
+
+### Bug Fixes
+
+* [@types](https://github.com/types) ([7e08b2c](https://github.com/gemunion/mui-packages/commit/7e08b2c0034f7465f149cac4b5142a34a493e5d6))
+* exports ([01a7610](https://github.com/gemunion/mui-packages/commit/01a7610c690676e34bc2624c5a3eabb4851f691c))
+* login/protected ([63e035f](https://github.com/gemunion/mui-packages/commit/63e035f21d932c8dde3cc60fab27ace617147565))
+
+
+
+
+
 ## [7.0.5](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@7.0.4...@gemunion/common-pages@7.0.5) (2022-04-02)
 
 

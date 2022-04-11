@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.1.15 (2022-04-11)
+
+
+### Bug Fixes
+
+* [@types](https://github.com/types) ([7e08b2c](https://github.com/gemunion/mui-packages/commit/7e08b2c0034f7465f149cac4b5142a34a493e5d6))
+
+
+
+
+
 ## 3.1.14 (2022-03-30)
 
 

@@ -12,7 +12,7 @@
     "@gemunion/mui-page-header": "3.0.13",
     "@gemunion/provider-api": "5.7.1",
     "@gemunion/provider-user": "3.3.0",
-    "@gemunion/provider-wallet": "0.9.1",
+    "@gemunion/provider-wallet": "0.9.2",
     "@gemunion/types-jwt": "0.3.0",
     "@web3-react/core": "6.1.9",
     "uuid": "8.3.2"
@@ -62,5 +62,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "1.0.2"
+  "version": "1.0.3"
 }
