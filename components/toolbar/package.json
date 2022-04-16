@@ -12,10 +12,10 @@
     "csstype": "3.0.11"
   },
   "devDependencies": {
-    "@mui/material": "5.6.0",
-    "@mui/styles": "5.6.0",
+    "@mui/material": "5.6.1",
+    "@mui/styles": "5.6.1",
     "@testing-library/jest-dom": "5.16.4",
-    "@testing-library/react": "12.1.4",
+    "@testing-library/react": "12.1.5",
     "@types/jest": "27.4.1",
     "@types/react": "17.0.44",
     "jest": "27.5.1",
