@@ -44,13 +44,13 @@ export const Wallet: FC<IWalletProps> = props => {
     <Box mx={1}>
       {active ? (
         <Tooltip title={account!} enterDelay={300}>
-          <IconButton color="inherit" onClick={handleOpenWalletDialog}>
+          <IconButton color="inherit" onClick={handleOpenWalletDialog} data-testid="openWalletOptionsDialog">
             <WalletIcon />
           </IconButton>
         </Tooltip>
       ) : (
         <Tooltip title={formatMessage({ id: "components.header.wallet.connect" })} enterDelay={300}>
-          <IconButton color="inherit" onClick={handleOpenConnectDialog}>
+          <IconButton color="inherit" onClick={handleOpenConnectDialog} data-testid="openWalletConnectDialog">
             <WalletIcon />
           </IconButton>
         </Tooltip>

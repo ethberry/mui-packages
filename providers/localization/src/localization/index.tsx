@@ -38,6 +38,7 @@ export const Localization: FC<ILocalizationProps> = props => {
           aria-owns={anchor ? "language-menu" : undefined}
           aria-haspopup="true"
           onClick={handleLanguageIconClick}
+          data-testid="switchLanguage"
         >
           <Translate />
         </IconButton>

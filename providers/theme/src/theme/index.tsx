@@ -16,7 +16,7 @@ export const Theme: FC = () => {
 
   return (
     <Tooltip title={formatMessage({ id: "components.header.theme.switch" })}>
-      <IconButton color="inherit" onClick={handleThemeIconClick}>
+      <IconButton color="inherit" onClick={handleThemeIconClick} data-testid="switchTheme">
         {settings.getTheme() === ThemeType.light ? <Brightness4 /> : <Brightness7 />}
       </IconButton>
     </Tooltip>
