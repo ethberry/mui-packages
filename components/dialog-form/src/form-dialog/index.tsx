@@ -18,7 +18,7 @@ export interface IFormikFormProps<T> {
 }
 
 export const FormDialog: FC<IFormikFormProps<any>> = props => {
-  const { children, onConfirm, onCancel, initialValues, message, open, validationSchema, maxWidth = "lg" } = props;
+  const { children, onConfirm, initialValues, validationSchema, maxWidth = "lg", ...rest } = props;
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -33,7 +33,7 @@ export const FormDialog: FC<IFormikFormProps<any>> = props => {
   };
 
   return (
-    <ConfirmationDialog onConfirm={handleSubmit} maxWidth={maxWidth} onCancel={onCancel} message={message} open={open}>
+    <ConfirmationDialog onConfirm={handleSubmit} maxWidth={maxWidth} data-testid="dialogForm" {...rest}>
       <ProgressOverlay isLoading={isLoading}>
         <FormikForm
           onSubmit={onConfirm}

@@ -25,6 +25,7 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
       onClose={onCancel}
       aria-labelledby="confirmation-dialog-title"
       aria-describedby="confirmation-dialog-content"
+      data-testid="dialogConfirmation"
       {...rest}
     >
       <DialogTitle id="confirmation-dialog-title">

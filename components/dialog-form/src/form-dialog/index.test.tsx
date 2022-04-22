@@ -1,15 +1,17 @@
 import { IntlProvider } from "react-intl";
 import { cleanup, render } from "@testing-library/react";
 import { createTheme, ThemeProvider } from "@mui/material";
+import { MemoryRouter } from "react-router-dom";
 
-import { ConfirmationDialog } from "./index";
+import { FormDialog } from "./";
 
 afterEach(cleanup);
 
 const i18n = {
-  "dialogs.confirmation": "Please confirm",
+  "dialog.title": "Please fill the form",
   "form.buttons.cancel": "Cancel",
   "form.buttons.ok": "Ok",
+  "form.hints.prompt": "Prompt",
 };
 
 describe("<ConfirmationDialog />", () => {
@@ -23,14 +25,21 @@ describe("<ConfirmationDialog />", () => {
       onConfirm: jest.fn(),
       onCancel: jest.fn(),
       children: "some text",
+      message: "dialog.title",
+      initialValues: {
+        id: 1,
+        title: "Title",
+      },
     };
 
     const { asFragment } = render(
-      <ThemeProvider theme={createTheme()}>
-        <IntlProvider locale="en" messages={i18n}>
-          <ConfirmationDialog {...props} />
-        </IntlProvider>
-      </ThemeProvider>,
+      <MemoryRouter>
+        <ThemeProvider theme={createTheme()}>
+          <IntlProvider locale="en" messages={i18n}>
+            <FormDialog {...props} />
+          </IntlProvider>
+        </ThemeProvider>
+      </MemoryRouter>,
       { container },
     );
 
@@ -47,14 +56,21 @@ describe("<ConfirmationDialog />", () => {
       onConfirm: jest.fn(),
       onCancel: jest.fn(),
       children: "some text",
+      message: "dialog.title",
+      initialValues: {
+        id: 1,
+        title: "Title",
+      },
     };
 
     const { asFragment } = render(
-      <ThemeProvider theme={createTheme()}>
-        <IntlProvider locale="en" messages={i18n}>
-          <ConfirmationDialog {...props} />
-        </IntlProvider>
-      </ThemeProvider>,
+      <MemoryRouter>
+        <ThemeProvider theme={createTheme()}>
+          <IntlProvider locale="en" messages={i18n}>
+            <FormDialog {...props} />
+          </IntlProvider>
+        </ThemeProvider>
+      </MemoryRouter>,
       { container },
     );
 
