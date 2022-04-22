@@ -52,6 +52,7 @@ exports[`<DeleteDialog /> renders open component 1`] = `
         >
           <button
             class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-1mivp8c-MuiButtonBase-root-MuiButton-root"
+            data-testid="dialogCancelButton"
             tabindex="0"
             type="button"
           >
@@ -62,6 +63,7 @@ exports[`<DeleteDialog /> renders open component 1`] = `
           </button>
           <button
             class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-r85fhy-MuiButtonBase-root-MuiButton-root"
+            data-testid="dialogConfirmButton"
             tabindex="0"
             type="button"
           >
