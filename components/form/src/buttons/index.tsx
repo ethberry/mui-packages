@@ -22,7 +22,7 @@ export const FormButtons: FC<IFormButtonsProps> = props => {
 
   return (
     <ButtonToolbar>
-      <Button variant="contained" type="submit" color="primary" disabled={disabled}>
+      <Button variant="contained" type="submit" color="primary" disabled={disabled} data-testid="formSubmitButton">
         <FormattedMessage id={`form.buttons.${submit}`} />
       </Button>
     </ButtonToolbar>

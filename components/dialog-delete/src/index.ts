@@ -1,1 +1,1 @@
-export { DeleteDialog, IDeleteDialogProps } from "./delete-dialog";
+export * from "./delete-dialog";

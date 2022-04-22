@@ -20,7 +20,7 @@ export const CommonSearchForm: FC<ICommonSearchFormProps> = props => {
     <FormikForm initialValues={fixedValues} onSubmit={onSubmit} showButtons={false} showPrompt={false}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={12}>
-          <SearchInput name="query" />
+          <SearchInput name="query" data-testid="commonSearchInput" />
         </Grid>
       </Grid>
       <Collapse in={open}>

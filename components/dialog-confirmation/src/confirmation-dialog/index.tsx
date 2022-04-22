@@ -34,10 +34,10 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
         <DialogContentText component="div">{children}</DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button variant="text" onClick={onCancel}>
+        <Button variant="text" onClick={onCancel} data-testid="dialogCancelButton">
           <FormattedMessage id="form.buttons.cancel" />
         </Button>
-        <Button variant="contained" color="primary" onClick={onConfirm}>
+        <Button variant="contained" color="primary" onClick={onConfirm} data-testid="dialogConfirmButton">
           <FormattedMessage id="form.buttons.ok" />
         </Button>
       </DialogActions>
