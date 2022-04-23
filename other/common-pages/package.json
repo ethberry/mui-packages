@@ -12,7 +12,7 @@
     "@gemunion/mui-form": "4.1.19",
     "@gemunion/mui-icons-social-networks": "3.1.16",
     "@gemunion/mui-inputs-captcha": "3.1.17",
-    "@gemunion/mui-inputs-core": "5.2.19",
+    "@gemunion/mui-inputs-core": "5.2.20",
     "@gemunion/mui-page-header": "3.1.18",
     "@gemunion/mui-progress": "3.1.18",
     "@gemunion/mui-toolbar": "3.1.16",
@@ -76,5 +76,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "7.0.8"
+  "version": "7.0.9"
 }
