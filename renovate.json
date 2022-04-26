@@ -1,18 +1,4 @@
 {
   "extends": ["github>gemunion/renovate-config"],
-  "baseBranches": ["master"],
-  "packageRules": [
-    {
-      "updateTypes": ["minor", "patch"],
-      "automerge": true
-    },
-    {
-      "matchPackagePatterns": ["^@mui/"],
-      "rollbackPrs": false
-    },
-    {
-      "matchPackagePatterns": ["notistack"],
-      "rollbackPrs": false
-    }
-  ]
+  "baseBranches": ["master", "fork"]
 }
