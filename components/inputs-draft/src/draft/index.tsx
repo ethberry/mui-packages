@@ -67,7 +67,7 @@ export const RichTextEditor: FC<IRichTextFieldProps & TextFieldProps> = props =>
       }}
       InputProps={{
         inputComponent: RichTextInput,
-        inputProps: inputProps,
+        inputProps,
       }}
       onChange={() => {}}
       onFocus={() => setIsFocused(true)}

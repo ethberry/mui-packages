@@ -12,8 +12,8 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/lab": "5.0.0-alpha.78",
-    "@mui/material": "5.6.2",
+    "@mui/lab": "5.0.0-alpha.79",
+    "@mui/material": "5.6.3",
     "@mui/styles": "5.6.2",
     "@types/react": "17.0.44",
     "formik": "2.2.9",
@@ -28,12 +28,12 @@
   "main": "./dist/index.js",
   "name": "@gemunion/mui-inputs-picker",
   "peerDependencies": {
-    "@mui/lab": "^5",
-    "@mui/material": "^5",
-    "@mui/styles": "^5",
-    "formik": "^2",
-    "react": "^17",
-    "react-intl": "^5"
+    "@mui/lab": "^5.0.0-alpha.0",
+    "@mui/material": "^5.0.0",
+    "@mui/styles": "^5.0.0",
+    "formik": "^2.0.0",
+    "react": "^17.0.0",
+    "react-intl": "^5.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -53,5 +53,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "4.1.17"
+  "version": "4.1.16"
 }

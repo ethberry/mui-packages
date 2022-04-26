@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/mui-inputs-file": "3.2.19",
     "@gemunion/provider-api": "5.7.1",
-    "react-s3-uploader": "5.0.0"
+    "@gemunion/s3-uploader": "0.0.1"
   },
   "description": "react widget",
   "devDependencies": {
@@ -26,9 +26,9 @@
   "main": "./dist/index.js",
   "name": "@gemunion/mui-inputs-file-s3",
   "peerDependencies": {
-    "notistack": "^2",
-    "react": "^17",
-    "react-intl": "^5"
+    "notistack": "^2.0.0",
+    "react": "^17.0.0",
+    "react-intl": "^5.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

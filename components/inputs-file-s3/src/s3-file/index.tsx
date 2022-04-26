@@ -1,13 +1,8 @@
 import { FC, useCallback } from "react";
-import "react-s3-uploader"; // this is required for types
-import S3Upload from "react-s3-uploader/s3upload";
+import { S3Upload, S3Response } from "@gemunion/s3-uploader";
 import { useApi } from "@gemunion/provider-api";
 
 import { FileInput, IFileInputProps } from "@gemunion/mui-inputs-file";
-
-export interface IS3Result {
-  signedUrl: string;
-}
 
 interface IS3FileInputProps extends Omit<IFileInputProps, "onChange"> {
   bucketUrl?: string;
@@ -68,7 +63,7 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
     new S3Upload({
       files,
       signingUrl: "/s3/put",
-      onFinishS3Put: (data: IS3Result) => {
+      onFinishS3Put: (data: S3Response) => {
         onChange(`${bucketUrl}${new URL(data.signedUrl).pathname}`);
       },
       onProgress: onProgress || console.info,
@@ -77,11 +72,9 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
       signingUrlWithCredentials: true,
       server: defaultBaseUrl,
       signingUrlHeaders: {
-        // @ts-ignore
         authorization: authToken ? `Bearer ${authToken.accessToken}` : "",
       },
       signingUrlQueryParams: {
-        // @ts-ignore
         bucket,
       },
     });

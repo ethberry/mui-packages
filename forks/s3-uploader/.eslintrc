@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "@gemunion/eslint-config/presets/js"
+  ],
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "babelOptions": {
+      "configFile": "./.babelrc"
+    }
+  },
+  "root": true
+}
