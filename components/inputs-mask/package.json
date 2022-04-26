@@ -30,10 +30,10 @@
   "main": "./dist/index.js",
   "name": "@gemunion/mui-inputs-mask",
   "peerDependencies": {
-    "@mui/material": "^5",
-    "formik": "^2",
-    "react": "^17",
-    "react-intl": "^5"
+    "@mui/material": "^5.0.0",
+    "formik": "^2.0.0",
+    "react": "^17.0.0",
+    "react-intl": "^5.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
