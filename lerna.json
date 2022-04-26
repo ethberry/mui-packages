@@ -9,6 +9,11 @@
       "yes": true
     }
   },
-  "packages": ["components/*", "other/*", "providers/*"],
+  "packages": [
+    "components/*",
+    "other/*",
+    "providers/*",
+    "forks/*"
+  ],
   "version": "independent"
 }
