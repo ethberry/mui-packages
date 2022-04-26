@@ -67,7 +67,7 @@ export const MarkdownInput: FC<IMarkdownInputProps & TextFieldProps> = props => 
       }}
       InputProps={{
         inputComponent: RichTextInput,
-        inputProps: inputProps,
+        inputProps,
       }}
       onChange={() => {}}
       onFocus={() => setIsFocused(true)}
