@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.1.1 (2022-04-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @gemunion/provider-license to v1.0.5 ([d9f4f6d](https://github.com/gemunion/mui-packages/commit/d9f4f6d635530ae0bc4531a193e7febdc90f8059))
+
+
+
+
+
 # [3.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@3.0.12...@gemunion/mui-inputs-draft@3.1.0) (2022-04-29)
 
 
