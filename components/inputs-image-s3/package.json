@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/mui-dialog-confirmation": "3.1.19",
     "@gemunion/mui-inputs-core": "5.2.19",
-    "@gemunion/mui-inputs-file-s3": "4.3.13",
+    "@gemunion/mui-inputs-file-s3": "4.3.15",
     "@gemunion/mui-progress": "3.1.18",
     "@gemunion/popup": "0.0.28",
     "@gemunion/provider-api": "5.7.1",
