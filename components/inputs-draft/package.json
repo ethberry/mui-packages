@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/mui-inputs-core": "5.2.18",
     "@gemunion/mui-rte": "2.0.3",
-    "@gemunion/provider-license": "1.0.2",
+    "@gemunion/provider-license": "1.0.4",
     "draft-js": "0.11.7",
     "markdown-draft-js": "2.4.0"
   },
