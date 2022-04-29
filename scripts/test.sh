@@ -7,7 +7,9 @@ set -e # this will cause the shell to exit immediately if any command exits with
 
 export NODE_ENV=test
 
-lerna bootstrap --hoist && lerna run lint --stream
+lerna bootstrap --hoist
+
+lerna run lint --stream
 
 # lerna run lint --stream --parallel
 
