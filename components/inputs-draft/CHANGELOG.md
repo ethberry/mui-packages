@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@3.0.12...@gemunion/mui-inputs-draft@3.1.0) (2022-04-29)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([6b80a94](https://github.com/gemunion/mui-packages/commit/6b80a945e8ecc4e29ee9c52e2d0d58fa02f45a16))
+* **deps:** update dependency @gemunion/provider-license to v1.0.4 ([e7b710a](https://github.com/gemunion/mui-packages/commit/e7b710ada956d7bf4fdccaf876707cb3ab15def1))
+
+
+### Features
+
+* manually update license provider ([1b3b57a](https://github.com/gemunion/mui-packages/commit/1b3b57a352e79f0bd0de0eb3dc927ba3e24612be))
+
+
+
+
+
 ## [3.0.12](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@3.0.11...@gemunion/mui-inputs-draft@3.0.12) (2022-04-23)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-draft

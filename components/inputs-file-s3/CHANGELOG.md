@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.3.15](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@4.3.14...@gemunion/mui-inputs-file-s3@4.3.15) (2022-04-29)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([6b80a94](https://github.com/gemunion/mui-packages/commit/6b80a945e8ecc4e29ee9c52e2d0d58fa02f45a16))
+
+
+
+
+
 ## [4.3.14](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@4.3.13...@gemunion/mui-inputs-file-s3@4.3.14) (2022-04-23)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-s3
