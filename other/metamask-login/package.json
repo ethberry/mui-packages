@@ -11,7 +11,7 @@
     "@gemunion/constants": "0.8.0",
     "@gemunion/mui-page-header": "3.0.13",
     "@gemunion/provider-api": "5.7.1",
-    "@gemunion/provider-user": "3.3.0",
+    "@gemunion/provider-user": "3.3.1",
     "@gemunion/provider-wallet": "0.9.3",
     "@gemunion/types-jwt": "0.3.0",
     "@web3-react/core": "6.1.9",
@@ -26,7 +26,7 @@
     "@types/uuid": "8.3.4",
     "notistack": "2.0.4",
     "react": "17.0.2",
-    "react-intl": "5.25.0"
+    "react-intl": "5.25.1"
   },
   "engines": {
     "node": ">=12.13"
