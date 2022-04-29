@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/firebase": "1.1.13",
+    "@gemunion/firebase": "1.1.14",
     "@gemunion/mui-dialog-confirmation": "3.1.17",
     "@gemunion/mui-inputs-core": "5.2.18",
     "@gemunion/mui-inputs-file-firebase": "3.3.20",
@@ -35,7 +35,7 @@
     "jest-environment-jsdom": "27.5.1",
     "notistack": "2.0.4",
     "react": "17.0.2",
-    "react-intl": "5.25.0",
+    "react-intl": "5.25.1",
     "ts-jest": "27.1.4"
   },
   "engines": {
