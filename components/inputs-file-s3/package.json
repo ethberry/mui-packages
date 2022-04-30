@@ -8,9 +8,9 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-inputs-file": "3.2.20",
+    "@gemunion/mui-inputs-file": "3.2.21",
     "@gemunion/provider-api": "5.7.1",
-    "@gemunion/s3-uploader": "0.0.4"
+    "@gemunion/s3-uploader": "0.0.5"
   },
   "description": "react widget",
   "devDependencies": {
@@ -48,5 +48,5 @@
   "sideEffects": false,
   "title": "-=TrejGun=-",
   "types": "./dist/index.d.ts",
-  "version": "4.3.17"
+  "version": "4.3.18"
 }
