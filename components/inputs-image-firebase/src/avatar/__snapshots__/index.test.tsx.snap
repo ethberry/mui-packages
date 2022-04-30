@@ -25,7 +25,6 @@ exports[`<AvatarInput /> renders empty field with error: image is required 1`] =
         >
           <input
             accept="image/jpeg,image/png"
-            autocomplete="off"
             multiple=""
             style="display: none;"
             tabindex="-1"
@@ -129,7 +128,6 @@ exports[`<AvatarInput /> renders the empty field 1`] = `
         >
           <input
             accept="image/jpeg,image/png"
-            autocomplete="off"
             multiple=""
             style="display: none;"
             tabindex="-1"
