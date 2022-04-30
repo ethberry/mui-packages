@@ -10,12 +10,12 @@
   "dependencies": {
     "@gemunion/mui-inputs-core": "5.2.19",
     "@gemunion/mui-rte": "2.0.3",
-    "@gemunion/provider-license": "1.0.15",
     "draft-js": "0.11.7",
     "markdown-draft-js": "2.4.0"
   },
   "description": "react widget",
   "devDependencies": {
+    "@gemunion/provider-license": "1.0.15",
     "@gemunion/draft-js-utils": "0.3.0",
     "@mui/icons-material": "5.6.2",
     "@mui/material": "5.6.3",
@@ -36,6 +36,7 @@
   "main": "./dist/index.js",
   "name": "@gemunion/mui-inputs-draft",
   "peerDependencies": {
+    "@gemunion/provider-license": "^1.0.0",
     "@mui/icons-material": "^5.0.0",
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
