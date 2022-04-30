@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/mui-inputs-file": "3.2.19",
     "@gemunion/provider-api": "5.7.1",
-    "@gemunion/s3-uploader": "0.0.2"
+    "@gemunion/s3-uploader": "0.0.3"
   },
   "description": "react widget",
   "devDependencies": {
@@ -48,5 +48,5 @@
   "sideEffects": false,
   "title": "-=TrejGun=-",
   "types": "./dist/index.d.ts",
-  "version": "4.3.15"
+  "version": "4.3.16"
 }
