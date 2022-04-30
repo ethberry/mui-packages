@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.0.9 (2022-04-30)
+
+**Note:** Version bump only for package @gemunion/provider-theme
+
+
+
+
+
 ## [4.0.7](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@4.0.7...@gemunion/provider-theme@4.0.7) (2022-04-29)
 
 
