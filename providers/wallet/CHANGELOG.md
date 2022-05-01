@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.7 (2022-05-01)
+
+
+### Bug Fixes
+
+* move ethers to peer deps ([2845516](https://github.com/gemunion/mui-packages/commit/28455168d416d8c64202182107b4630bb8053d1d))
+
+
+
+
+
 ## [0.9.6](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.9.5...@gemunion/provider-wallet@0.9.6) (2022-04-30)
 
 **Note:** Version bump only for package @gemunion/provider-wallet

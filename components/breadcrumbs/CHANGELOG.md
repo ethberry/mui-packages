@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2022-05-01)
+
+
+### Features
+
+* make breadcrumbs better ([98ed0f6](https://github.com/gemunion/mui-packages/commit/98ed0f6f0efc01c13420c9052a35cdaac2b6f384))
+
+
+
+
+
 ## [0.1.20](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-breadcrumbs@0.1.19...@gemunion/mui-breadcrumbs@0.1.20) (2022-04-30)
 
 **Note:** Version bump only for package @gemunion/mui-breadcrumbs

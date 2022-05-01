@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.2.24 (2022-05-01)
+
+
+### Bug Fixes
+
+* move ethers to peer deps ([2845516](https://github.com/gemunion/mui-packages/commit/28455168d416d8c64202182107b4630bb8053d1d))
+
+
+
+
+
 ## [4.2.23](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@4.2.22...@gemunion/mui-inputs-mask@4.2.23) (2022-04-30)
 
 
