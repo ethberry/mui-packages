@@ -6,11 +6,11 @@ import { Link as RouterLink } from "react-router-dom";
 export interface IBreadcrumbsProps {
   path: Array<string>;
   isHidden?: boolean;
-  values?: Array<Record<string, ReactNode>>;
+  data?: Array<Record<string, ReactNode>>;
 }
 
 export const Breadcrumbs: FC<IBreadcrumbsProps> = props => {
-  const { path, isHidden, values = [] } = props;
+  const { path, isHidden, data = [] } = props;
 
   if (isHidden) {
     return null;
@@ -22,13 +22,13 @@ export const Breadcrumbs: FC<IBreadcrumbsProps> = props => {
         if (i === path.length - 1) {
           return (
             <Typography color="textPrimary" key={i}>
-              <FormattedMessage id={`pages.${e}.title`} values={values[i]} />
+              <FormattedMessage id={`pages.${e}.title`} values={data[i]} />
             </Typography>
           );
         }
         return (
           <Link color="inherit" component={RouterLink} to={`/${e}`} key={i}>
-            <FormattedMessage id={`pages.${e}.title`} values={values[i]} />
+            <FormattedMessage id={`pages.${e}.title`} values={data[i]} />
           </Link>
         );
       })}
