@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { Web3ReactProvider } from "@web3-react/core";
-import { ethers } from "ethers";
+import { providers } from "ethers";
 
 import { WalletContext } from "./context";
 
@@ -10,7 +10,7 @@ export const WalletProvider: FC = props => {
   const [isWalletConnectDialogOpen, setWalletConnectDialogOpen] = useState(false);
 
   const getLibrary = (provider: any) => {
-    return new ethers.providers.Web3Provider(provider);
+    return new providers.Web3Provider(provider);
   };
 
   const getWalletConnectDialogOpen = (): boolean => {
