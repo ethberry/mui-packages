@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { FormattedMessage } from "react-intl";
 import { Breadcrumbs as MuiBreadcrumbs, Link, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
@@ -6,7 +6,7 @@ import { Link as RouterLink } from "react-router-dom";
 export interface IBreadcrumbsProps {
   path: Array<string>;
   isHidden?: boolean;
-  data?: Array<Record<string, ReactNode>>;
+  data?: Array<any>;
 }
 
 export const Breadcrumbs: FC<IBreadcrumbsProps> = props => {
