@@ -5,8 +5,8 @@ import { Link as RouterLink } from "react-router-dom";
 
 export interface IBreadcrumbsProps {
   path: Array<string>;
-  isHidden: boolean;
-  values: Array<Record<string, ReactNode>>;
+  isHidden?: boolean;
+  values?: Array<Record<string, ReactNode>>;
 }
 
 export const Breadcrumbs: FC<IBreadcrumbsProps> = props => {
