@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-breadcrumbs@0.2.1...@gemunion/mui-breadcrumbs@0.2.2) (2022-05-02)
+
+
+### Bug Fixes
+
+* relax typings ([2cb3269](https://github.com/gemunion/mui-packages/commit/2cb32698d07b2a5d2acf0d448fa6a351b1de688c))
+* rename property to match page-header ([7e331df](https://github.com/gemunion/mui-packages/commit/7e331dfa57ab5ead155cf30a17bbcab85e0e5dbb))
+
+
+
+
+
 ## [0.2.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-breadcrumbs@0.2.0...@gemunion/mui-breadcrumbs@0.2.1) (2022-05-01)
 
 
