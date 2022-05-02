@@ -10,10 +10,10 @@
   "dependencies": {
     "@gemunion/constants": "0.8.0",
     "@gemunion/mui-page-header": "3.1.20",
-    "@gemunion/provider-api": "5.7.1",
-    "@gemunion/provider-user": "3.3.1",
+    "@gemunion/provider-api": "5.7.2",
+    "@gemunion/provider-user": "3.3.2",
     "@gemunion/provider-wallet": "0.9.7",
-    "@gemunion/types-jwt": "0.3.0",
+    "@gemunion/types-jwt": "0.3.1",
     "@web3-react/core": "6.1.9",
     "uuid": "8.3.2"
   },
