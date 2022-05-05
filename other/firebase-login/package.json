@@ -11,13 +11,13 @@
     "@gemunion/firebase": "1.1.14",
     "@gemunion/mui-page-header": "3.1.20",
     "@gemunion/provider-api": "5.7.2",
-    "@gemunion/provider-user": "3.3.2",
+    "@gemunion/provider-user": "3.3.3",
     "firebase": "9.7.0",
     "firebaseui": "6.0.1"
   },
   "description": "react component",
   "devDependencies": {
-    "@mui/material": "5.6.3",
+    "@mui/material": "5.6.4",
     "@mui/styles": "5.6.2",
     "notistack": "2.0.4",
     "react": "17.0.2",
