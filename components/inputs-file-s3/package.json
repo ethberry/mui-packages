@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-inputs-file": "3.2.22",
+    "@gemunion/mui-inputs-file": "3.2.23",
     "@gemunion/provider-api": "5.7.2",
     "@gemunion/s3-uploader": "0.0.5"
   },
@@ -48,5 +48,5 @@
   "sideEffects": false,
   "title": "-=TrejGun=-",
   "types": "./dist/index.d.ts",
-  "version": "4.3.20"
+  "version": "4.3.21"
 }
