@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.29](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@4.2.28...@gemunion/mui-inputs-mask@4.2.29) (2022-05-07)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-mask
+
+
+
+
+
+## [4.2.28](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@4.2.27...@gemunion/mui-inputs-mask@4.2.28) (2022-05-07)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-mask
+
+
+
+
+
+## [4.2.27](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@4.2.25...@gemunion/mui-inputs-mask@4.2.27) (2022-05-05)
+
+
+### Bug Fixes
+
+* casr numbers back to string ([4c55a36](https://github.com/gemunion/mui-packages/commit/4c55a366ee0cced76e7815808c07a1910d5511b9))
+
+
+
+
+
+## [4.2.26](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@4.2.25...@gemunion/mui-inputs-mask@4.2.26) (2022-05-05)
+
+
+### Bug Fixes
+
+* casr numbers back to string ([4c55a36](https://github.com/gemunion/mui-packages/commit/4c55a366ee0cced76e7815808c07a1910d5511b9))
+
+
+
+
+
 ## 4.2.25 (2022-05-02)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask

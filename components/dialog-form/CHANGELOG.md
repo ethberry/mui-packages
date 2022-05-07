@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.2.30](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@5.2.29...@gemunion/mui-dialog-form@5.2.30) (2022-05-07)
+
+**Note:** Version bump only for package @gemunion/mui-dialog-form
+
+
+
+
+
+## [5.2.29](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@5.2.28...@gemunion/mui-dialog-form@5.2.29) (2022-05-07)
+
+**Note:** Version bump only for package @gemunion/mui-dialog-form
+
+
+
+
+
+## [5.2.28](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@5.2.26...@gemunion/mui-dialog-form@5.2.28) (2022-05-05)
+
+**Note:** Version bump only for package @gemunion/mui-dialog-form
+
+
+
+
+
+## [5.2.27](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@5.2.26...@gemunion/mui-dialog-form@5.2.27) (2022-05-05)
+
+**Note:** Version bump only for package @gemunion/mui-dialog-form
+
+
+
+
+
 ## 5.2.26 (2022-05-02)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form

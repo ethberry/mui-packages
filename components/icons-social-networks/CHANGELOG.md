@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.20](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-icons-social-networks@3.1.18...@gemunion/mui-icons-social-networks@3.1.20) (2022-05-05)
+
+**Note:** Version bump only for package @gemunion/mui-icons-social-networks
+
+
+
+
+
+## 3.1.19 (2022-05-05)
+
+**Note:** Version bump only for package @gemunion/mui-icons-social-networks
+
+
+
+
+
 ## [3.1.18](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-icons-social-networks@3.1.17...@gemunion/mui-icons-social-networks@3.1.18) (2022-04-30)
 
 **Note:** Version bump only for package @gemunion/mui-icons-social-networks

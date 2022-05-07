@@ -9,8 +9,7 @@ export NODE_ENV=test
 
 lerna bootstrap --hoist
 
-lerna run lint --stream
-
+# lerna run lint --stream
 # lerna run lint --stream --parallel
 
 lerna exec -- npm run test
