@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@gemunion/firebase": "1.1.15",
-    "@gemunion/mui-page-header": "3.1.23",
     "@gemunion/provider-api": "5.7.3",
     "@gemunion/provider-user": "3.3.4",
     "firebase": "9.8.0",
