@@ -2,7 +2,7 @@ import { FC, useState } from "react";
 import { FormattedMessage } from "react-intl";
 
 import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
-import { ProgressOverlay } from "@gemunion/mui-progress";
+import { ProgressOverlay } from "@gemunion/mui-page-layout";
 
 export interface IDeleteDialogProps {
   open: boolean;

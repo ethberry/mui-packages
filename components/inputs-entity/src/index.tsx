@@ -4,7 +4,7 @@ import { useSnackbar } from "notistack";
 import { getIn, useFormikContext } from "formik";
 import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/material";
 
-import { ProgressOverlay } from "@gemunion/mui-progress";
+import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useApi } from "@gemunion/provider-api";
 import { useStyles } from "./styles";
 

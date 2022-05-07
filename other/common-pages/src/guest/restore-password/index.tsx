@@ -5,7 +5,7 @@ import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
 import { PasswordInput } from "@gemunion/mui-inputs-core";
-import { PageHeader } from "@gemunion/mui-page-header";
+import { PageHeader } from "@gemunion/mui-page-layout";
 import { FormikForm } from "@gemunion/mui-form";
 import { ApiError, useApi } from "@gemunion/provider-api";
 

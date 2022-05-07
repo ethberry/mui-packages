@@ -16,7 +16,7 @@ import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import path from "path";
 
 import { TextInput } from "@gemunion/mui-inputs-core";
-import { ProgressOverlay } from "@gemunion/mui-progress";
+import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
 import { FirebaseFileInput, useDeleteUrl } from "@gemunion/mui-inputs-file-firebase";
 import { openUrlOnClick } from "@gemunion/popup";

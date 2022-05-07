@@ -4,7 +4,7 @@ import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Grid } from "@mui/material";
 
-import { ProgressOverlay } from "@gemunion/mui-progress";
+import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useUser } from "@gemunion/provider-user";
 import { ApiError, useApi } from "@gemunion/provider-api";
 

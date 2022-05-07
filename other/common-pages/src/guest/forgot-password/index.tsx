@@ -5,7 +5,7 @@ import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
 import { Captcha } from "@gemunion/mui-inputs-captcha";
-import { PageHeader } from "@gemunion/mui-page-header";
+import { PageHeader } from "@gemunion/mui-page-layout";
 import { FormikForm } from "@gemunion/mui-form";
 import { TextInput } from "@gemunion/mui-inputs-core";
 import { useUser } from "@gemunion/provider-user";
