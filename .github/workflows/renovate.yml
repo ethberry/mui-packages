@@ -3,7 +3,8 @@ name: Renovate Publish
 on:
   pull_request:
     branches:
-      - master
+#      disabled
+      - disabled
     types: [closed]
 
 jobs:
