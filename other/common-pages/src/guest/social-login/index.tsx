@@ -2,14 +2,13 @@ import { FC, useEffect } from "react";
 import { useSnackbar } from "notistack";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Button, Grid } from "@mui/material";
-import { Facebook, GooglePlus } from "@gemunion/mui-icons-social-networks";
+import { Facebook, Google } from "@mui/icons-material";
 
 import { PasswordInput, TextInput } from "@gemunion/mui-inputs-core";
-import { PageHeader } from "@gemunion/mui-page-header";
+import { ButtonToolbar, PageHeader } from "@gemunion/mui-page-layout";
 import { FormikForm } from "@gemunion/mui-form";
 import { ApiError, useApi } from "@gemunion/provider-api";
 import { ILoginDto, IUser, useUser } from "@gemunion/provider-user";
-import { ButtonToolbar } from "@gemunion/mui-toolbar";
 import { openUrlOnClick } from "@gemunion/popup";
 import { useDidMountEffect } from "@gemunion/react-hooks";
 
@@ -78,7 +77,7 @@ export const SocialLogin: FC = () => {
         <ButtonToolbar justifyContent="center">
           <Button
             variant="outlined"
-            startIcon={<GooglePlus />}
+            startIcon={<Google />}
             type="button"
             onClick={openUrlOnClick(`${process.env.BE_URL}/auth/google`)}
             data-testid="loginWithGoogleButton"

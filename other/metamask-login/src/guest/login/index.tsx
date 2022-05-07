@@ -7,7 +7,7 @@ import { v4 } from "uuid";
 
 import { phrase } from "@gemunion/constants";
 import { IMetamaskDto } from "@gemunion/types-jwt";
-import { PageHeader } from "@gemunion/mui-page-header";
+import { PageHeader } from "@gemunion/mui-page-layout";
 import { ApiError, IJwt, useApi } from "@gemunion/provider-api";
 import { IUser, useUser } from "@gemunion/provider-user";
 import { WalletContext } from "@gemunion/provider-wallet";

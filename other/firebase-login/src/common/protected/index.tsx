@@ -1,10 +1,15 @@
-import { FC, Fragment, useEffect, useState } from "react";
+import { FC, Fragment, ReactNode, useEffect, useState } from "react";
+import { Outlet } from "react-router-dom";
 
 import { useUser } from "@gemunion/provider-user";
 
 import { FirebaseLogin } from "../../guest/login";
 
-export const FirebaseProtected: FC = props => {
+export interface IFirebaseProtectedProps {
+  children?: ReactNode;
+}
+
+export const FirebaseProtected: FC<IFirebaseProtectedProps> = props => {
   const { children } = props;
 
   const [isReady, setIsReady] = useState(false);
@@ -23,7 +28,7 @@ export const FirebaseProtected: FC = props => {
     return <FirebaseLogin />;
   }
 
-  return <Fragment>{children}</Fragment>;
+  return children ? <Fragment>{children}</Fragment> : <Outlet />;
 };
 
 export const Protected = FirebaseProtected;

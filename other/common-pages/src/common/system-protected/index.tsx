@@ -1,10 +1,15 @@
-import { FC, Fragment, useState, useEffect } from "react";
+import { FC, Fragment, ReactNode, useEffect, useState } from "react";
+import { Outlet } from "react-router-dom";
 
 import { useUser } from "@gemunion/provider-user";
 
 import { SystemLogin } from "../../guest/system-login";
 
-export const SystemProtected: FC = props => {
+export interface ISystemProtectedProps {
+  children?: ReactNode;
+}
+
+export const SystemProtected: FC<ISystemProtectedProps> = props => {
   const { children } = props;
 
   const [isReady, setIsReady] = useState(false);
@@ -23,7 +28,7 @@ export const SystemProtected: FC = props => {
     return <SystemLogin />;
   }
 
-  return <Fragment>{children}</Fragment>;
+  return children ? <Fragment>{children}</Fragment> : <Outlet />;
 };
 
 export const Protected = SystemProtected;

@@ -2,7 +2,7 @@ import { FC, useRef, useState } from "react";
 import { Breakpoint } from "@mui/material";
 
 import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
-import { ProgressOverlay } from "@gemunion/mui-progress";
+import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { FormikForm } from "@gemunion/mui-form";
 
 export interface IFormikFormProps<T> {

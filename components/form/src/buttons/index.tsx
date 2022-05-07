@@ -3,7 +3,7 @@ import { useFormikContext } from "formik";
 import { Button } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 
-import { ButtonToolbar } from "@gemunion/mui-toolbar";
+import { ButtonToolbar } from "@gemunion/mui-page-layout";
 
 interface IFormButtonsProps {
   visible?: boolean;

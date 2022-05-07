@@ -5,7 +5,7 @@ import { Grid } from "@mui/material";
 import { useIntl } from "react-intl";
 
 import { Captcha } from "@gemunion/mui-inputs-captcha";
-import { PageHeader } from "@gemunion/mui-page-header";
+import { PageHeader } from "@gemunion/mui-page-layout";
 import { TextInput } from "@gemunion/mui-inputs-core";
 import { FormikForm } from "@gemunion/mui-form";
 import { ApiError, useApi } from "@gemunion/provider-api";

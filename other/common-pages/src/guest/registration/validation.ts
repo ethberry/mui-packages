@@ -2,8 +2,8 @@ import * as Yup from "yup";
 
 import {
   confirmValidationSchema,
-  emailValidationSchema,
   displayNameValidationSchema,
+  emailValidationSchema,
   passwordValidationSchema,
 } from "@gemunion/yup-rules";
 
