@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@1.0.14...@gemunion/metamask-login@1.1.0) (2022-05-07)
+
+
+### Bug Fixes
+
+* combine packages ([152f576](https://github.com/gemunion/mui-packages/commit/152f5761fe34d803984420dc1029018ead23724e))
+
+
+### Features
+
+* routes ([cfc8d43](https://github.com/gemunion/mui-packages/commit/cfc8d4391b4d3a798e57ce99c5cf41c83735b4ff))
+
+
+
+
+
 ## [1.0.14](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@1.0.13...@gemunion/metamask-login@1.0.14) (2022-05-07)
 
 **Note:** Version bump only for package @gemunion/metamask-login

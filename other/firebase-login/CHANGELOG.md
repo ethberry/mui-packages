@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@1.0.13...@gemunion/firebase-login@1.1.0) (2022-05-07)
+
+
+### Bug Fixes
+
+* combine packages ([9b7448a](https://github.com/gemunion/mui-packages/commit/9b7448ad5dd63955eb9f790939ceca9d10bacbb5))
+
+
+### Features
+
+* routes ([cfc8d43](https://github.com/gemunion/mui-packages/commit/cfc8d4391b4d3a798e57ce99c5cf41c83735b4ff))
+
+
+
+
+
 ## [1.0.13](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@1.0.12...@gemunion/firebase-login@1.0.13) (2022-05-07)
 
 **Note:** Version bump only for package @gemunion/firebase-login

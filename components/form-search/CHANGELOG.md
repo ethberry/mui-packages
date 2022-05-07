@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.31](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@4.2.30...@gemunion/mui-form-search@4.2.31) (2022-05-07)
+
+
+### Bug Fixes
+
+* versions ([8c46fd7](https://github.com/gemunion/mui-packages/commit/8c46fd7597110c12f33b1b41ca44f5f9d17ac35e))
+
+
+
+
+
 ## [4.2.30](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@4.2.29...@gemunion/mui-form-search@4.2.30) (2022-05-07)
 
 **Note:** Version bump only for package @gemunion/mui-form-search
