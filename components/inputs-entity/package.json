@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/mui-progress": "3.1.22",
-    "@gemunion/provider-api": "5.7.2"
+    "@gemunion/provider-api": "5.7.3"
   },
   "description": "react widget",
   "devDependencies": {
