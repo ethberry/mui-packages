@@ -1,10 +1,15 @@
-import { FC, Fragment, useState, useEffect } from "react";
+import { FC, Fragment, ReactNode, useEffect, useState } from "react";
+import { Outlet } from "react-router-dom";
 
 import { useUser } from "@gemunion/provider-user";
 
 import { MetamaskLogin } from "../../guest/login";
 
-export const MetamaskProtected: FC = props => {
+export interface IMetamaskProtectedProps {
+  children?: ReactNode;
+}
+
+export const MetamaskProtected: FC<IMetamaskProtectedProps> = props => {
   const { children } = props;
 
   const [isReady, setIsReady] = useState(false);
@@ -23,7 +28,7 @@ export const MetamaskProtected: FC = props => {
     return <MetamaskLogin />;
   }
 
-  return <Fragment>{children}</Fragment>;
+  return children ? <Fragment>{children}</Fragment> : <Outlet />;
 };
 
 export const Protected = MetamaskProtected;

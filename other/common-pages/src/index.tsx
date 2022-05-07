@@ -13,3 +13,4 @@ export * from "./common/social-protected";
 export * from "./guest/registration/utils";
 export * from "./guest/registration/validation";
 export * from "./guest/registration/base";
+export * from "./guest/routes";
