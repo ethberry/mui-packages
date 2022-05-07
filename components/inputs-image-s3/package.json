@@ -12,8 +12,8 @@
     "@gemunion/mui-inputs-core": "5.2.25",
     "@gemunion/mui-inputs-file-s3": "4.3.22",
     "@gemunion/mui-progress": "3.1.22",
-    "@gemunion/popup": "0.0.29",
-    "@gemunion/provider-api": "5.7.2",
+    "@gemunion/popup": "0.0.30",
+    "@gemunion/provider-api": "5.7.3",
     "react-beautiful-dnd": "13.1.0"
   },
   "description": "react widget",
