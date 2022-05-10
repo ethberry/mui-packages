@@ -1,13 +1,14 @@
-import { FC, useContext, useState } from "react";
+import { FC, useState } from "react";
 import { Box, IconButton, Tooltip } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 import { useIntl } from "react-intl";
 
-import { WalletDialog, IWalletConnectDialogProps } from "../dialog";
+import { usePopup } from "@gemunion/provider-popup";
+
 import { WalletIcon } from "../icon";
 import { WalletMenuDialog } from "../menu-dialog";
-import { WalletContext } from "../provider";
-import { Reconnect } from "../reconnect";
+import { useWallet } from "../provider";
+import { IWalletConnectDialogProps, WalletDialog } from "../dialog";
 
 interface IWalletProps {
   walletConnectDialogProps?: Pick<IWalletConnectDialogProps, "componentsProps" | "ButtonsProps">;
@@ -16,21 +17,12 @@ interface IWalletProps {
 export const Wallet: FC<IWalletProps> = props => {
   const { walletConnectDialogProps = {} } = props;
   const { componentsProps, ButtonsProps = {} } = walletConnectDialogProps;
-  const { walletConnect } = ButtonsProps;
 
-  const wallet = useContext(WalletContext);
-
+  const { isOpenPopup, openPopup, closePopup } = usePopup();
+  const { connectPopupType } = useWallet();
   const { active, account } = useWeb3React();
   const { formatMessage } = useIntl();
   const [isWalletDialogOpen, setIsWalletDialogOpen] = useState(false);
-
-  const handleOpenConnectDialog = () => {
-    wallet.setWalletConnectDialogOpen(true);
-  };
-
-  const handleCloseConnectDialog = () => {
-    wallet.setWalletConnectDialogOpen(false);
-  };
 
   const handleOpenWalletDialog = () => {
     setIsWalletDialogOpen(true);
@@ -38,6 +30,10 @@ export const Wallet: FC<IWalletProps> = props => {
 
   const handleCloseWalletDialog = () => {
     setIsWalletDialogOpen(false);
+  };
+
+  const handleOpenConnectDialog = () => {
+    openPopup(connectPopupType);
   };
 
   return (
@@ -56,13 +52,12 @@ export const Wallet: FC<IWalletProps> = props => {
         </Tooltip>
       )}
       <WalletDialog
-        onClose={handleCloseConnectDialog}
-        open={wallet.getWalletConnectDialogOpen()}
+        onClose={closePopup}
+        open={isOpenPopup(connectPopupType)}
         componentsProps={componentsProps}
         ButtonsProps={ButtonsProps}
       />
       <WalletMenuDialog onClose={handleCloseWalletDialog} open={isWalletDialogOpen} />
-      <Reconnect connectorsArgs={{ walletConnect: walletConnect?.connectorArgs }} />
     </Box>
   );
 };

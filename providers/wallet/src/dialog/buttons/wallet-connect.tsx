@@ -35,8 +35,11 @@ export const WalletConnectButton: FC<IWalletConnectButtonProps> = props => {
 
   const handleClick = async () => {
     await activate(getWalletConnectConnector(connectorArgs), error => {
-      console.error(error);
-      enqueueSnackbar(formatMessage({ id: `snackbar.${error.name}` }), { variant: "error" });
+      if (error instanceof UserRejectedRequestError) {
+        enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
+      } else {
+        enqueueSnackbar(error.message, { variant: "error" });
+      }
     });
     onClick();
   };
