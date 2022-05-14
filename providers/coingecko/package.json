@@ -13,7 +13,7 @@
   "description": "react coin gecko provider",
   "devDependencies": {
     "@types/react": "17.0.45",
-    "notistack": "2.0.4",
+    "notistack": "2.0.5",
     "react": "17.0.2",
     "react-intl": "5.25.1"
   },
@@ -47,5 +47,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "0.1.14"
+  "version": "0.1.15"
 }
