@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@4.0.16...@gemunion/provider-theme@4.1.0) (2022-05-14)
+
+
+### Features
+
+* theme options prop ([f55e8a1](https://github.com/gemunion/mui-packages/commit/f55e8a1247f47503da3ab8cb4fb7e5378fa4eebc))
+
+
+
+
+
 ## 4.0.16 (2022-05-08)
 
 
