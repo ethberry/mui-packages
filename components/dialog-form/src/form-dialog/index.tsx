@@ -22,12 +22,12 @@ export const FormDialog: FC<IFormikFormProps<any>> = props => {
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const formRef = useRef(null) as any;
+  const innerRef = useRef(null) as any;
 
   const handleSubmit = async (): Promise<void> => {
-    if (formRef && formRef.current) {
+    if (innerRef && innerRef.current) {
       setIsLoading(true);
-      await formRef.current.submitForm();
+      await innerRef.current.submit();
       setIsLoading(false);
     }
   };
@@ -39,7 +39,7 @@ export const FormDialog: FC<IFormikFormProps<any>> = props => {
           onSubmit={onConfirm}
           validationSchema={validationSchema}
           initialValues={initialValues}
-          innerRef={formRef}
+          innerRef={innerRef}
           showButtons={false}
         >
           {children}

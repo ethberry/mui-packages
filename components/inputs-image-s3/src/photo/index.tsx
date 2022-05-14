@@ -10,7 +10,7 @@ import {
   Grid,
   InputLabel,
 } from "@mui/material";
-import { getIn, useFormikContext } from "formik";
+import { useFormContext } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 
@@ -32,10 +32,10 @@ export interface IPhotoInputProps {
 export const PhotoInput: FC<IPhotoInputProps> = props => {
   const { name, label, bucket, accept } = props;
 
-  const formik = useFormikContext<any>();
-  const error = getIn(formik.errors, name);
-  const value = getIn(formik.values, name);
-  const touched = getIn(formik.touched, name);
+  const form = useFormContext<any>();
+  const error = form.formState.errors[name];
+  const touched = Boolean(form.formState.touchedFields[name]);
+  const value = form.getValues(name);
 
   const classes = useStyles();
   const { formatMessage } = useIntl();
@@ -56,12 +56,12 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
   };
 
   const handleDeleteConfirm = async (): Promise<void> => {
-    const newValue = getIn(formik.values, name);
+    const newValue = form.getValues(name);
     const [deleted] = newValue.splice(selectedImageIndex, 1);
 
     await deleteUrl(deleted.imageUrl);
 
-    formik.setFieldValue(name, newValue);
+    form.setValue(name, newValue);
     setIsDeleteImageDialogOpen(false);
   };
 
@@ -71,12 +71,12 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
 
   const handleFileChange = (url: string): void => {
     setIsLoading(true);
-    const newValue = getIn(formik.values, name);
+    const newValue = form.getValues(name);
     newValue.push({
       imageUrl: url,
       title: "",
     });
-    formik.setFieldValue(name, newValue);
+    form.setValue(name, newValue);
     setIsLoading(false);
   };
 
@@ -87,11 +87,11 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
     }
     setIsLoading(true);
 
-    const newValue = getIn(formik.values, name);
+    const newValue = form.getValues(name);
     const [removed] = newValue.splice(result.source.index, 1);
     newValue.splice(result.destination.index, 0, removed);
 
-    formik.setFieldValue(name, newValue);
+    form.setValue(name, newValue);
     setIsLoading(false);
   };
 

@@ -2,7 +2,7 @@ import { FC } from "react";
 // eslint-disable-next-line import/no-named-as-default
 import ReCAPTCHA from "react-google-recaptcha";
 import { FormattedMessage } from "react-intl";
-import { getIn, useFormikContext } from "formik";
+import { Controller, useFormContext } from "react-hook-form";
 import { Grid, FormHelperText } from "@mui/material";
 
 import { useStyles } from "./styles";
@@ -14,23 +14,30 @@ interface ICaptchaProps {
 export const Captcha: FC<ICaptchaProps> = props => {
   const { name = "captcha" } = props;
 
-  const formik = useFormikContext<any>();
-  const error = getIn(formik.errors, name);
+  const form = useFormContext<any>();
+  const error = form.formState.errors[name];
   const classes = useStyles();
 
   return (
-    <Grid className={classes.root}>
-      <ReCAPTCHA
-        sitekey={process.env.GOOGLE_RECAPTCHA_PUBLIC}
-        onChange={(value: string | null): void => {
-          formik.setFieldValue(name, value);
-        }}
-      />
-      {error ? (
-        <FormHelperText error>
-          <FormattedMessage id={error} />
-        </FormHelperText>
-      ) : null}
-    </Grid>
+    <Controller
+      name={name}
+      control={form.control}
+      render={({ field }) => (
+        <Grid className={classes.root}>
+          <ReCAPTCHA
+            sitekey={process.env.GOOGLE_RECAPTCHA_PUBLIC}
+            {...field}
+            onChange={(value: string | null): void => {
+              form.setValue(name, value);
+            }}
+          />
+          {error ? (
+            <FormHelperText error>
+              <FormattedMessage id={error} />
+            </FormHelperText>
+          ) : null}
+        </Grid>
+      )}
+    />
   );
 };

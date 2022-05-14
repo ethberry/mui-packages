@@ -1,7 +1,7 @@
 import { FC, createElement, ChangeEvent } from "react";
 import clsx from "clsx";
 import { FormattedMessage } from "react-intl";
-import { getIn, useFormikContext } from "formik";
+import { Controller, useFormContext } from "react-hook-form";
 import { InputLabel } from "@mui/material";
 import { Rating, RatingProps } from "@mui/lab";
 import { Star, SvgIconComponent } from "@mui/icons-material";
@@ -19,23 +19,27 @@ export const RatingInput: FC<IRatingInputProps> = props => {
 
   const suffix = name.split(".").pop() as string;
 
-  const formik = useFormikContext<any>();
-  const value = getIn(formik.values, name);
+  const form = useFormContext<any>();
 
   return (
     <div className={clsx(classes.root)}>
       <InputLabel filled shrink>
         <FormattedMessage id={`form.labels.${suffix}`} />
       </InputLabel>
-      <Rating
-        max={10}
+      <Controller
         name={name}
-        icon={createElement(icon, { fontSize: "inherit", color })}
-        value={value}
-        onChange={(_event: ChangeEvent<unknown>, value): void => {
-          formik.setFieldValue(name, value);
-        }}
-        {...rest}
+        control={form.control}
+        render={({ field }) => (
+          <Rating
+            {...field}
+            max={10}
+            icon={createElement(icon, { fontSize: "inherit", color })}
+            onChange={(_event: ChangeEvent<unknown>, value): void => {
+              form.setValue(name, value);
+            }}
+            {...rest}
+          />
+        )}
       />
     </div>
   );

@@ -1,5 +1,5 @@
 import { FC, ReactElement } from "react";
-import { getIn, useFormikContext } from "formik";
+import { useFormContext } from "react-hook-form";
 import { FormControl, FormHelperText, Grid, IconButton, InputLabel, Tooltip } from "@mui/material";
 import { Delete } from "@mui/icons-material";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -18,10 +18,10 @@ export interface IAvatarInputProps {
 export const AvatarInput: FC<IAvatarInputProps> = props => {
   const { name, label, bucket, accept } = props;
 
-  const formik = useFormikContext<any>();
-  const error = getIn(formik.errors, name);
-  const value = getIn(formik.values, name);
-  const touched = getIn(formik.touched, name);
+  const form = useFormContext<any>();
+  const error = form.formState.errors[name];
+  const touched = Boolean(form.formState.touchedFields[name]);
+  const value = form.getValues(name);
 
   const classes = useStyles();
   const { formatMessage } = useIntl();
@@ -31,12 +31,12 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
   const localizedHelperText = error ? formatMessage({ id: error }, { label: localizedLabel }) : "";
 
   const onChange = (url: string) => {
-    formik.setFieldValue(name, url);
+    form.setValue(name, url);
   };
 
   const onDelete = async () => {
     await deleteUrl(value);
-    formik.setFieldValue(name, "");
+    form.setValue(name, "");
   };
 
   if (value) {

@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { TextFieldProps } from "@mui/material";
-import { getIn, useFormikContext } from "formik";
+import { useFormContext } from "react-hook-form";
 import { useIntl } from "react-intl";
 import { draftToMarkdown, markdownToDraft } from "markdown-draft-js";
 
@@ -33,8 +33,8 @@ export const MarkdownInput: FC<IMarkdownInputProps & TextFieldProps> = props => 
   const suffix = name.split(".").pop() as string;
 
   const license = useLicense();
-  const formik = useFormikContext<any>();
-  const value = getIn(formik.values, name);
+  const form = useFormContext<any>();
+  const value = form.getValues(name);
 
   // Manually handle the TextField's focused state based on the editor's focused state
   const [isFocused, setIsFocused] = useState(false);
@@ -47,7 +47,7 @@ export const MarkdownInput: FC<IMarkdownInputProps & TextFieldProps> = props => 
     label: localizedPlaceholder,
     onSave: (data: string) => {
       const markdownString = draftToMarkdown(JSON.parse(data));
-      formik.setFieldValue(name, markdownString);
+      form.setValue(name, markdownString);
     },
     controls: defaultControls.concat(customControls),
   };

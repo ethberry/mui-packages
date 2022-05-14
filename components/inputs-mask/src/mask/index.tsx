@@ -1,6 +1,6 @@
 import { FC, useRef } from "react";
 import { TextFieldProps } from "@mui/material";
-import { getIn, useFormikContext } from "formik";
+import { useFormContext } from "react-hook-form";
 
 import { TextInput } from "@gemunion/mui-inputs-core";
 
@@ -41,30 +41,25 @@ export const MaskedInput: FC<IMaskedInputProps & TextFieldProps> = props => {
     prepare,
     InputLabelProps,
     inputProps,
-    updateValue,
     useMaskedValue = true,
     value,
     ...rest
   } = props;
 
   const maskedRef = useRef<any>(null);
-  const formik = useFormikContext<any>();
-  const defaultValue = getIn(formik.values, name);
+  const form = useFormContext<any>();
+  const defaultValue = form.getValues(name);
 
   const handleOnBlur = (): void => {
-    if (updateValue) return updateValue(maskedRef);
-
     const val = useMaskedValue ? maskedRef.current.value : maskedRef.current.unmaskedValue;
-    formik.setFieldValue(name, val);
+    form.setValue(name, val);
   };
 
   return (
     <TextInput
       name={name}
       value={value || defaultValue}
-      onBlur={() => {}}
       onFocus={() => {}}
-      onChange={() => {}}
       InputLabelProps={{
         ...InputLabelProps,
         shrink: true,

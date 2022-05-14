@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { getIn, useFormikContext } from "formik";
+import { useFormContext } from "react-hook-form";
 
 import { MaskedInput } from "../mask";
 
@@ -29,8 +29,8 @@ export const CurrencyInput: FC<ICurrencyInputProps> = props => {
   const formatValue = (value: string): number => Number.parseFloat(value) * 10 ** precision;
   const normalizeValue = (value: number): string => (value ? (value / 10 ** precision).toString() : "0");
 
-  const formik = useFormikContext<any>();
-  const value = getIn(formik.values, name);
+  const form = useFormContext<any>();
+  const value = form.getValues(name);
   const formattedValue = normalizeValue(value);
 
   const maskProps = {
@@ -64,7 +64,7 @@ export const CurrencyInput: FC<ICurrencyInputProps> = props => {
   const updateValue = (maskedRef: any): void => {
     if (maskedRef && maskedRef.current) {
       const currencyAmount = formatValue(maskedRef.current.unmaskedValue);
-      formik.setFieldValue(name, currencyAmount);
+      form.setValue(name, currencyAmount);
     }
   };
 

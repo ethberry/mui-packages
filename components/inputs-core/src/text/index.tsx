@@ -1,9 +1,9 @@
-import { FC } from "react";
-import { useIntl } from "react-intl";
-import { getIn, useFormikContext } from "formik";
-import { TextField, StandardTextFieldProps, FilledTextFieldProps, OutlinedTextFieldProps } from "@mui/material";
+import { FC } from 'react';
+import { useIntl } from 'react-intl';
+import { useFormContext, Controller } from 'react-hook-form';
+import { TextField, StandardTextFieldProps, FilledTextFieldProps, OutlinedTextFieldProps } from '@mui/material';
 
-import { useStyles } from "./styles";
+import { useStyles } from './styles';
 
 export interface IStandardTextInputProps extends StandardTextFieldProps {
   name: string;
@@ -23,40 +23,42 @@ export interface IOutlinedTextInputProps extends OutlinedTextFieldProps {
 export type ITextInputProps = IStandardTextInputProps | IFilledTextInputProps | IOutlinedTextInputProps;
 
 export const TextInput: FC<ITextInputProps> = props => {
-  const { name, label, readOnly, InputProps, placeholder, variant = "standard", ...rest } = props;
+  const { name, label, readOnly, InputProps, placeholder, variant = 'standard', ...rest } = props;
   const classes = useStyles();
 
-  const suffix = name.split(".").pop() as string;
+  const suffix = name.split('.').pop() as string;
 
-  const formik = useFormikContext<any>();
-  const error = getIn(formik.errors, name);
-  const touched = getIn(formik.touched, name);
-  const value = getIn(formik.values, name);
+  const form = useFormContext<any>();
+  const error = form.formState.errors[name];
+  const touched = Boolean(form.formState.touchedFields[name]);
 
   const { formatMessage } = useIntl();
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
   const localizedPlaceholder =
     placeholder === void 0 ? formatMessage({ id: `form.placeholders.${suffix}` }) : placeholder;
-  const localizedHelperText = error && touched ? formatMessage({ id: error }, { label: localizedLabel }) : "";
+  const localizedHelperText = (error && error.message && touched) ? formatMessage({ id: error.message }, { label: localizedLabel }) : '';
 
   return (
-    <TextField
-      classes={classes}
+    <Controller
       name={name}
-      label={localizedLabel}
-      placeholder={localizedPlaceholder}
-      helperText={localizedHelperText}
-      value={value}
-      error={error && touched}
-      onChange={formik.handleChange}
-      onBlur={formik.handleBlur}
-      variant={variant}
-      InputProps={{
-        ...InputProps,
-        readOnly,
-      }}
-      fullWidth
-      {...rest}
+      control={form.control}
+      render={({ field }) => (
+        <TextField
+          classes={classes}
+          label={localizedLabel}
+          placeholder={localizedPlaceholder}
+          helperText={localizedHelperText}
+          error={error}
+          variant={variant}
+          InputProps={{
+            ...InputProps,
+            readOnly,
+          }}
+          fullWidth
+          {...field}
+          {...rest}
+        />
+      )}
     />
   );
 };

@@ -28,7 +28,7 @@ export const CommonSearchForm: FC<ICommonSearchFormProps> = props => {
           {children}
         </Grid>
       </Collapse>
-      <AutoSave />
+      <AutoSave onSubmit={onSubmit} />
     </FormikForm>
   );
 };

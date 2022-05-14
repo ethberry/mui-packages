@@ -1,37 +1,53 @@
-import { FC } from "react";
+import { FC, SyntheticEvent, useCallback } from 'react';
 import { useIntl } from "react-intl";
 import { IconButton, InputBase, InputBaseProps, Paper } from "@mui/material";
 import { SearchOutlined } from "@mui/icons-material";
-import { getIn, useFormikContext } from "formik";
+import { useFormContext, Controller } from "react-hook-form";
+import { useDebouncedCallback } from "use-debounce";
 
 import { useStyles } from "./styles";
 
-export interface ISearchInputProps extends InputBaseProps {}
+export interface ISearchInputProps extends InputBaseProps {
+  onSubmit?: (values: any) => void;
+}
 
 export const SearchInput: FC<ISearchInputProps> = props => {
-  const { name = "search", ...rest } = props;
+  const { name = "search", onSubmit } = props;
   const classes = useStyles();
 
-  const formik = useFormikContext<any>();
-  const value = getIn(formik.values, name);
+  const form = useFormContext<any>();
 
   const { formatMessage } = useIntl();
   const localizedPlaceholder = formatMessage({ id: `form.placeholders.${name}` });
 
+  const debouncedOnChange = useDebouncedCallback(() => {
+    onSubmit && onSubmit(form.getValues());
+  }, 500);
+
   return (
-    <Paper className={classes.root}>
-      <IconButton className={classes.iconButton} aria-label="search">
-        <SearchOutlined />
-      </IconButton>
-      <InputBase
-        name={name}
-        className={classes.input}
-        placeholder={localizedPlaceholder}
-        value={value}
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        {...rest}
-      />
-    </Paper>
+    <Controller
+      name={name}
+      control={form.control}
+      render={({ field }) => {
+        const handleChange = useCallback((e: SyntheticEvent<HTMLInputElement>) => {
+          field.onChange(e);
+          debouncedOnChange();
+        }, []) as any;
+
+        return (
+          <Paper className={classes.root}>
+            <IconButton className={classes.iconButton} aria-label="search">
+              <SearchOutlined />
+            </IconButton>
+            <InputBase
+              className={classes.input}
+              placeholder={localizedPlaceholder}
+              {...field}
+              onChange={handleChange}
+            />
+          </Paper>
+        )
+      }}
+    />
   );
 };

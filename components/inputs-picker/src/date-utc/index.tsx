@@ -1,6 +1,6 @@
 import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
-import { getIn, useFormikContext } from "formik";
+import { Controller, useFormContext } from "react-hook-form";
 import { TextField, TextFieldProps } from "@mui/material";
 import { DatePicker } from "@mui/lab";
 import { addMinutes, subMinutes } from "date-fns";
@@ -22,8 +22,7 @@ export const DateUtcInput: FC<IDateUtcInputProps> = props => {
 
   const suffix = name.split(".").pop() as string;
 
-  const formik = useFormikContext<any>();
-  const value = getIn(formik.values, name);
+  const form = useFormContext<any>();
 
   const { formatMessage } = useIntl();
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
@@ -39,18 +38,24 @@ export const DateUtcInput: FC<IDateUtcInputProps> = props => {
   };
 
   return (
-    <DatePicker
-      className={classes.root}
-      inputFormat="MM/dd/yyyy"
-      label={localizedLabel}
-      value={value ? setter(value) : value}
-      onChange={(date: Date | null): void => {
-        formik.setFieldValue(name, date ? getter(date) : date);
-      }}
-      renderInput={(props: TextFieldProps): ReactElement => (
-        <TextField name={name} onBlur={formik.handleBlur} fullWidth variant={variant} {...props} />
+    <Controller
+      name={name}
+      control={form.control}
+      render={({ field }) => (
+        <DatePicker
+          className={classes.root}
+          inputFormat="MM/dd/yyyy"
+          label={localizedLabel}
+          value={field.value ? setter(field.value) : field.value}
+          onChange={(date: Date | null): void => {
+            form.setValue(name, date ? getter(date) : date);
+          }}
+          renderInput={(props: TextFieldProps): ReactElement => (
+            <TextField name={field.name} inputRef={field.ref} onBlur={field.onBlur} fullWidth variant={variant} {...props} />
+          )}
+          {...rest}
+        />
       )}
-      {...rest}
     />
   );
 };

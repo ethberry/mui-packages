@@ -4,6 +4,7 @@ import { useDropzone, FileRejection, DropzoneOptions } from "react-dropzone";
 import { CloudUpload, CloudUploadOutlined, CloudOff } from "@mui/icons-material";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
+import { Controller, useFormContext } from "react-hook-form";
 
 import { ACCEPTED_FORMATS, MAX_FILE_SIZE } from "./constants";
 import { humanFileSize } from "./utils";
@@ -24,6 +25,8 @@ export const FileInput: FC<IFileInputProps> = props => {
   const classes = useStyles();
   const { formatMessage } = useIntl();
   const { enqueueSnackbar } = useSnackbar();
+
+  const form = useFormContext<any>();
 
   const onDrop = useCallback((acceptedFiles: File[], rejectedFiles: FileRejection[]) => {
     if (rejectedFiles.length) {
@@ -78,7 +81,11 @@ export const FileInput: FC<IFileInputProps> = props => {
 
   return (
     <div {...getRootProps()} className={clsx(classes.placeholder, props.classes?.root)}>
-      <input {...getInputProps()} />
+      <Controller
+        name="file"
+        control={form.control}
+        render={({ field }) => <input {...getInputProps()} {...field} />}
+      />
       {isDragActive ? (
         <CloudUploadOutlined className={clsx(classes.icon, props.classes?.active)} />
       ) : (

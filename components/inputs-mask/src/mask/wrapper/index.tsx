@@ -6,6 +6,7 @@ export const MaskedInputWrapper = forwardRef<any, any>((props, inputRef) => {
 
   return (
     <IMaskInput
+      {...rest}
       ref={(ref: any) => {
         if (ref && maskedRef && !maskedRef.current) {
           maskedRef.current = ref.maskRef;
@@ -13,7 +14,6 @@ export const MaskedInputWrapper = forwardRef<any, any>((props, inputRef) => {
         // @ts-ignore
         inputRef(ref ? ref.inputElement : null);
       }}
-      {...rest}
     />
   );
 });
