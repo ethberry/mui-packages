@@ -14,11 +14,11 @@
   "description": "react widget",
   "devDependencies": {
     "@mui/icons-material": "5.6.2",
-    "@mui/material": "5.6.4",
-    "@mui/styles": "5.6.2",
+    "@mui/material": "5.7.0",
+    "@mui/styles": "5.7.0",
     "@storybook/react": "6.4.22",
     "@types/react": "17.0.45",
-    "notistack": "2.0.4",
+    "notistack": "2.0.5",
     "react": "17.0.2",
     "react-intl": "5.25.1"
   },
