@@ -27,11 +27,11 @@ export const EthInput: FC<IEthInputProps> = props => {
     ...rest
   } = props;
 
-  const formatValue = (value: string): string => utils.parseEther(value).toString();
+  const formatValue = (value: string): string => value ? utils.parseEther(value).toString() : "0";
 
   const normalizeValue = (value: string): string => {
     // values passed from query string are parsed to number by custom qs.decoder
-    const normalizedValue = utils.formatEther(value.toString());
+    const normalizedValue = value ? utils.formatEther(value.toString()) : "0";
     const [whole, decimals] = normalizedValue.split(".");
     return decimals === "0" ? whole : normalizedValue;
   };
