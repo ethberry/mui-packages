@@ -9,7 +9,8 @@ import { ACCEPTED_FORMATS, MAX_FILE_SIZE } from "./constants";
 import { humanFileSize } from "./utils";
 import { useStyles } from "./styles";
 
-export interface IFileInputProps extends DropzoneOptions {
+export interface IFileInputProps extends Omit<DropzoneOptions, "accept"> {
+  accept?: string | string[],
   classes?: {
     root?: string;
     active?: string;
@@ -63,7 +64,9 @@ export const FileInput: FC<IFileInputProps> = props => {
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
-    accept,
+    accept: {
+      "image/*": accept as string[],
+    },
     maxSize,
     ...rest,
   });
