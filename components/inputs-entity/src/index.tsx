@@ -60,6 +60,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
 
   const { enqueueSnackbar } = useSnackbar();
   const api = useApi();
+  const { signal, abort } = new AbortController();
 
   const fetchOptions = async (): Promise<void> => {
     setIsLoading(true);
@@ -67,6 +68,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
       .fetchJson({
         url: `/${controller}/autocomplete`,
         data,
+        signal,
       })
       .then((json: Array<any>) => {
         setOptions(json);
@@ -82,6 +84,8 @@ export const EntityInput: FC<IEntityInputProps> = props => {
 
   useEffect(() => {
     void fetchOptions();
+
+    return () => abort();
   }, [data]);
 
   if (multiple) {
