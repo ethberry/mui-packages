@@ -20,11 +20,11 @@ exports[`<AvatarInput /> renders empty field with error: image is required 1`] =
       >
         <div
           class="InputFile-placeholder-19"
-          role="button"
+          role="presentation"
           tabindex="0"
         >
           <input
-            accept="image/jpeg,image/png"
+            accept="image/*,.jpeg,.png"
             multiple=""
             style="display: none;"
             tabindex="-1"
@@ -123,11 +123,11 @@ exports[`<AvatarInput /> renders the empty field 1`] = `
       >
         <div
           class="InputFile-placeholder-5"
-          role="button"
+          role="presentation"
           tabindex="0"
         >
           <input
-            accept="image/jpeg,image/png"
+            accept="image/*,.jpeg,.png"
             multiple=""
             style="display: none;"
             tabindex="-1"
