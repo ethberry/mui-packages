@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.34](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@4.2.33...@gemunion/mui-inputs-mask@4.2.34) (2022-05-19)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-mask
+
+
+
+
+
+## [4.2.33](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@4.2.32...@gemunion/mui-inputs-mask@4.2.33) (2022-05-15)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([64a7217](https://github.com/gemunion/mui-packages/commit/64a7217ac25ea90baf190f508c4bb4f64dcc94fd))
+
+
+
+
+
+## [4.2.32](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@4.2.31...@gemunion/mui-inputs-mask@4.2.32) (2022-05-14)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-mask
+
+
+
+
+
 ## [4.2.31](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@4.2.30...@gemunion/mui-inputs-mask@4.2.31) (2022-05-08)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
