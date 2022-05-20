@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.3.31](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@5.3.30...@gemunion/mui-inputs-entity@5.3.31) (2022-05-20)
+
+
+### Bug Fixes
+
+* abort controller to avoid bug with leaking of memory while closing popups with entity-inputs ([30bda8e](https://github.com/gemunion/mui-packages/commit/30bda8e88cdd142f9cd4024f3c798e2f49d753c4))
+
+
+
+
+
 ## [5.3.30](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@5.3.28...@gemunion/mui-inputs-entity@5.3.30) (2022-05-20)
 
 

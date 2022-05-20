@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@0.5.6...@gemunion/react-hooks@0.6.0) (2022-05-20)
+
+
+### Features
+
+* open connect dialog useMetamask ([31a7dce](https://github.com/gemunion/mui-packages/commit/31a7dce2f8b80450775a5b396ffe8ec0e001c69e))
+
+
+
+
+
 ## 0.5.6 (2022-05-20)
 
 **Note:** Version bump only for package @gemunion/react-hooks

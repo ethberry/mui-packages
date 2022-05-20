@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.10.0...@gemunion/provider-wallet@0.11.0) (2022-05-20)
+
+
+### Bug Fixes
+
+* add license to wallet provider ([dd1f158](https://github.com/gemunion/mui-packages/commit/dd1f15889c10935a67a3f48d39ec6755065f95b5))
+* rpc urls, readme ([f6bdf40](https://github.com/gemunion/mui-packages/commit/f6bdf407fe16f323e32546e6b34ee0ca0fb9e662))
+
+
+### Features
+
+* logout after change account ([87e8764](https://github.com/gemunion/mui-packages/commit/87e8764990e435d5ddadeffa5aa175eb1773879c))
+* metamask authorization, checkNetwork, updated wallet provider ([c9700a8](https://github.com/gemunion/mui-packages/commit/c9700a816fa5292fc4223a1947552568301c7bfe))
+* updated provider wallet with provider popup ([97d3715](https://github.com/gemunion/mui-packages/commit/97d37155db9d93dcc265fb8c8c68d8d4ef006d62))
+* updated wallet constants and provider props ([97b5eef](https://github.com/gemunion/mui-packages/commit/97b5eef8747561eca2775445ad0ed3e136b792a3))
+
+
+
+
+
 # 0.10.0 (2022-05-20)
 
 
