@@ -8,14 +8,14 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/yup-rules": "1.8.1"
+    "@gemunion/yup-rules": "1.8.2"
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/icons-material": "5.6.2",
-    "@mui/material": "5.7.0",
-    "@mui/styles": "5.7.0",
-    "@storybook/react": "6.4.22",
+    "@mui/icons-material": "5.8.0",
+    "@mui/material": "5.8.0",
+    "@mui/styles": "5.8.0",
+    "@storybook/react": "6.5.3",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "12.1.5",
     "@types/jest": "27.5.1",
