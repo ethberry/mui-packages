@@ -18,7 +18,7 @@ import path from "path";
 import { TextInput } from "@gemunion/mui-inputs-core";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
-import { FirebaseFileInput, useDeleteUrl } from "@gemunion/mui-inputs-file-firebase";
+import { FirebaseFileInput, useDeleteUrl, Accept } from "@gemunion/mui-inputs-file-firebase";
 import { openUrlOnClick } from "@gemunion/popup";
 
 import { useStyles } from "./styles";
@@ -27,7 +27,7 @@ export interface IPhotoInputProps {
   name: string;
   label?: string | number | ReactElement;
   bucket?: string;
-  accept?: string | string[];
+  accept?: Accept;
 }
 
 export const PhotoInput: FC<IPhotoInputProps> = props => {

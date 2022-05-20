@@ -18,6 +18,7 @@
     "@mui/styles": "5.7.0",
     "@storybook/react": "6.4.22",
     "@types/react": "17.0.45",
+    "formik": "2.2.9",
     "notistack": "2.0.5",
     "react": "17.0.2",
     "react-intl": "5.25.1"
@@ -55,5 +56,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.2.25"
+  "version": "4.0.0"
 }
