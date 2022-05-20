@@ -17,7 +17,12 @@
     "@web3-react/portis-connector": "6.2.11",
     "@web3-react/torus-connector": "6.2.9",
     "@web3-react/trezor-connector": "6.1.9",
-    "@web3-react/walletconnect-connector": "6.2.13"
+    "@web3-react/walletconnect-connector": "6.2.13",
+    "@gemunion/provider-api": "5.7.3",
+    "@gemunion/provider-user": "3.3.5",
+    "@gemunion/provider-popup": "0.2.6",
+    "@gemunion/constants": "0.8.0",
+    "uuid": "8.3.2"
   },
   "description": "react wallet provider",
   "devDependencies": {
@@ -25,11 +30,11 @@
     "@mui/material": "5.6.4",
     "@mui/styles": "5.6.2",
     "@types/react": "17.0.45",
+    "@types/uuid": "8.3.4",
     "ethers": "5.6.5",
     "notistack": "2.0.4",
     "react": "17.0.2",
-    "react-intl": "5.25.1",
-    "@gemunion/provider-popup": "0.2.6"
+    "react-intl": "5.25.1"
   },
   "engines": {
     "node": ">=12.13"
@@ -47,7 +52,10 @@
     "notistack": "^2.0.0",
     "react": "^17.0.0",
     "react-intl": "^5.0.0",
-    "@gemunion/provider-popup": "0.0.0"
+    "@gemunion/provider-api": "5.0.0",
+    "@gemunion/provider-user": "3.0.0",
+    "@gemunion/provider-popup": "0.0.0",
+    "uuid": "8.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

@@ -8,6 +8,7 @@ import { useWeb3React } from "@web3-react/core";
 import { MetaMaskIcon } from "../wallet-icons";
 import { CustomBadge } from "../custom-badge";
 import { injectedConnector } from "../../connectors/meta-mask";
+import { useWallet } from "../../provider";
 
 export interface IMetaMaskButtonProps {
   onClick: () => void;
@@ -23,9 +24,11 @@ export const MetaMaskButton: FC<IMetaMaskButtonProps> = props => {
   const { activate, active, error, connector } = useWeb3React();
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
+  const { setActiveConnector } = useWallet();
 
   if (error instanceof UserRejectedRequestError) {
     enqueueSnackbar(error.message, { variant: "warning" });
+    setActiveConnector(null);
   }
 
   const handleClick = async () => {

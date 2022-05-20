@@ -1,12 +1,16 @@
 import { createContext } from "react";
+
 import { TConnectors } from "../connectors";
+import { INetwork } from "../interfaces";
 
 export interface IWalletContext {
   getWalletConnectDialogOpen: () => boolean;
   setWalletConnectDialogOpen: (isOpen: boolean) => void;
   connectPopupType: symbol;
   activeConnector: TConnectors | null;
-  resetActiveConnector: () => void;
+  setActiveConnector: (value: TConnectors | null) => void;
+  setNetwork: (network: INetwork) => void;
+  network: INetwork;
 }
 
 export const WalletContext = createContext<IWalletContext>(undefined!);

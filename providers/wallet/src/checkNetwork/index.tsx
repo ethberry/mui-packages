@@ -11,44 +11,42 @@ interface ICheckNetworkProps {
 export const CheckNetwork: FC<ICheckNetworkProps> = props => {
   const { network } = props;
 
-  const { library, active, deactivate } = useWeb3React();
-  const { resetActiveConnector } = useWallet();
+  const { library, active, chainId } = useWeb3React();
+  const { handleDisconnect } = useWallet();
 
   const checkChainId = async () => {
     try {
-      await library.ethereum.request({
+      await library.provider.request({
         method: "wallet_switchEthereumChain",
         params: [{ chainId: network.chainId }],
       });
     } catch (error: any) {
       if (error.code === 4902) {
         try {
-          await library.ethereum.request({
+          await library.provider.request({
             method: "wallet_addEthereumChain",
             params: [network],
           });
-          await library.ethereum.request({
+          await library.provider.request({
             method: "wallet_switchEthereumChain",
             params: [{ chainId: network.chainId }],
           });
         } catch (addError: any) {
-          deactivate();
-          resetActiveConnector();
+          handleDisconnect();
           console.error(addError);
         }
       } else if (error.code === 4001) {
-        deactivate();
-        resetActiveConnector();
+        handleDisconnect();
         console.error(error);
       }
     }
   };
 
   useEffect(() => {
-    if (library && active) {
+    if (library && active && chainId) {
       void checkChainId();
     }
-  }, [library, active]);
+  }, [library, active, chainId]);
 
   return null;
 };

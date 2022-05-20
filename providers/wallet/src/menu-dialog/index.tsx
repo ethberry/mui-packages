@@ -1,7 +1,6 @@
 import { FC } from "react";
 import { Button, Dialog, DialogContent, DialogTitle } from "@mui/material";
 import { FormattedMessage } from "react-intl";
-import { useWeb3React } from "@web3-react/core";
 
 import { CloseButton } from "../dialog/close-button";
 import { useWallet } from "../provider";
@@ -14,12 +13,10 @@ export interface IWalletDialogProps {
 export const WalletMenuDialog: FC<IWalletDialogProps> = props => {
   const { onClose, open } = props;
 
-  const { resetActiveConnector } = useWallet();
-  const { deactivate } = useWeb3React();
+  const { handleDisconnect: handleDisconnectWallet } = useWallet();
 
   const handleDisconnect = () => {
-    deactivate();
-    resetActiveConnector();
+    handleDisconnectWallet();
     onClose();
   };
 
