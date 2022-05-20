@@ -10,20 +10,21 @@ import { useUser } from "@gemunion/provider-user";
 import { IConnectorsArgs, TConnectors } from "../connectors";
 import { INetwork } from "../interfaces";
 import { WalletContext } from "./context";
-import { STORE_CONNECTOR } from "./constants";
+import { STORE_CONNECTOR, CONNECT_POPUP_TYPE, networks } from "./constants";
 import { Reconnect } from "../reconnect";
 import { CheckNetwork } from "../checkNetwork";
 import { Authorization } from "../authorization";
 
 interface IWalletProviderProps {
-  connectPopupType: symbol;
-  targetNetwork: INetwork;
+  targetNetwork?: INetwork;
   connectorsArgs?: IConnectorsArgs;
   disableMetamaskAuthorization?: boolean;
 }
 
+const targetNetworkId = parseInt(process.env.CHAIN_ID ?? "1");
+
 export const WalletProvider: FC<IWalletProviderProps> = props => {
-  const { connectPopupType, targetNetwork, connectorsArgs, disableMetamaskAuthorization, children } = props;
+  const { targetNetwork = networks[targetNetworkId], connectorsArgs, disableMetamaskAuthorization, children } = props;
 
   const { isOpenPopup, openPopup, closePopup } = usePopup();
   const license = useLicense();
@@ -38,11 +39,11 @@ export const WalletProvider: FC<IWalletProviderProps> = props => {
   };
 
   const getWalletConnectDialogOpen = (): boolean => {
-    return isOpenPopup(connectPopupType);
+    return isOpenPopup(CONNECT_POPUP_TYPE);
   };
 
   const setWalletConnectDialogOpen = (value: boolean) => {
-    value ? openPopup(connectPopupType) : closePopup();
+    value ? openPopup(CONNECT_POPUP_TYPE) : closePopup();
   };
 
   const setActiveConnectorHandle = (value: TConnectors | null) => {
@@ -58,7 +59,7 @@ export const WalletProvider: FC<IWalletProviderProps> = props => {
     <Web3ReactProvider getLibrary={getLibrary}>
       <WalletContext.Provider
         value={{
-          connectPopupType,
+          connectPopupType: CONNECT_POPUP_TYPE,
           activeConnector,
           setActiveConnector: setActiveConnectorHandle,
           getWalletConnectDialogOpen,
