@@ -14,7 +14,7 @@ const i18n = {
   "form.hints.prompt": "Prompt",
 };
 
-describe("<ConfirmationDialog />", () => {
+describe("<FormDialog />", () => {
   it("renders closed dialog", () => {
     const container = document.createElement("div");
     document.body.append(container);
