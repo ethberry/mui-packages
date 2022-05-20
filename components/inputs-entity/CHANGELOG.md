@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.3.30](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@5.3.28...@gemunion/mui-inputs-entity@5.3.30) (2022-05-20)
+
+
+### Bug Fixes
+
+* use signal api to cancel requests ([7153dfe](https://github.com/gemunion/mui-packages/commit/7153dfeff303b8c25eb785da30b747c8f211666e))
+
+
+
+
+
 ## [5.3.29](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@5.3.28...@gemunion/mui-inputs-entity@5.3.29) (2022-05-14)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-entity

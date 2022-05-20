@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.1 (2022-05-20)
+
+
+### Bug Fixes
+
+* **deps:** update react-dropzone from 12.1.0 to 14.2.1 version #time 2h ([4cc8e10](https://github.com/gemunion/mui-packages/commit/4cc8e108d82af156b1dbd22fea99bcd50ba9c4ea))
+
+
+
+
+
 ## 4.3.24 (2022-05-14)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-s3

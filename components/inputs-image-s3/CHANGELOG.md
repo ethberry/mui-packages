@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-s3@5.2.38...@gemunion/mui-inputs-image-s3@6.0.1) (2022-05-20)
+
+
+### Bug Fixes
+
+* **deps:** tests ([1dd8fae](https://github.com/gemunion/mui-packages/commit/1dd8faeaccc72f77c5e9c770b8146748282c79ea))
+
+
+
+
+
 ## [5.2.40](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-s3@5.2.39...@gemunion/mui-inputs-image-s3@5.2.40) (2022-05-15)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-image-s3
