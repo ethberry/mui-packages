@@ -3,10 +3,10 @@
 exports[`<NumberInput /> renders decimal value 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root MuiFormControl-fullWidth NumberInput-root-5 MuiTextField-root css-nlu209-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiFormControl-fullWidth NumberInput-root-5 MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
   >
     <label
-      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled css-1jxvthj-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled css-1c2i806-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       for="mui-3"
       id="mui-3-label"
@@ -33,10 +33,10 @@ exports[`<NumberInput /> renders decimal value 1`] = `
 exports[`<NumberInput /> renders negative value 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root MuiFormControl-fullWidth NumberInput-root-3 MuiTextField-root css-nlu209-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiFormControl-fullWidth NumberInput-root-3 MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
   >
     <label
-      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled css-1jxvthj-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled css-1c2i806-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       for="mui-2"
       id="mui-2-label"
@@ -63,10 +63,10 @@ exports[`<NumberInput /> renders negative value 1`] = `
 exports[`<NumberInput /> renders positive value 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root MuiFormControl-fullWidth NumberInput-root-1 MuiTextField-root css-nlu209-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiFormControl-fullWidth NumberInput-root-1 MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
   >
     <label
-      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled css-1jxvthj-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled css-1c2i806-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       for="mui-1"
       id="mui-1-label"
