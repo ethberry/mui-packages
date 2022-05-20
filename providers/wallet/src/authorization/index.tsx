@@ -9,14 +9,14 @@ import { IUser, useUser } from "@gemunion/provider-user";
 import { phrase } from "@gemunion/constants";
 
 import { useWallet } from "../provider";
+import { INetwork } from "../interfaces";
 
 interface IAuthorizationProps {
-  targetChainIdHex: string;
+  network: INetwork;
 }
 
 export const Authorization: FC<IAuthorizationProps> = props => {
-  const { targetChainIdHex } = props;
-  const targetChainId = parseInt(targetChainIdHex, 16);
+  const { network } = props;
 
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
@@ -67,7 +67,7 @@ export const Authorization: FC<IAuthorizationProps> = props => {
 
   const handleLogin = () => {
     if (!user.isAuthenticated()) {
-      if (chainId === targetChainId || library.connection.url !== "metamask") {
+      if (chainId === parseInt(network.chainId, 16) || library.connection.url !== "metamask") {
         library
           .getSigner()
           .signMessage(`${phrase}${data.nonce}`)
@@ -107,7 +107,7 @@ export const Authorization: FC<IAuthorizationProps> = props => {
 
   useEffect(() => {
     if (active && data.wallet && account) {
-      if (chainId !== targetChainId) {
+      if (chainId !== parseInt(network.chainId, 16)) {
         if (api.getToken()) {
           void user.logOut();
         }

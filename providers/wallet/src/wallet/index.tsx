@@ -4,6 +4,7 @@ import { useWeb3React } from "@web3-react/core";
 import { useIntl } from "react-intl";
 
 import { usePopup } from "@gemunion/provider-popup";
+import { useLicense } from "@gemunion/provider-license";
 
 import { WalletIcon } from "../icon";
 import { WalletMenuDialog } from "../menu-dialog";
@@ -23,6 +24,7 @@ export const Wallet: FC<IWalletProps> = props => {
   const { active, account } = useWeb3React();
   const { formatMessage } = useIntl();
   const [isWalletDialogOpen, setIsWalletDialogOpen] = useState(false);
+  const license = useLicense();
 
   const handleOpenWalletDialog = () => {
     setIsWalletDialogOpen(true);
@@ -35,6 +37,10 @@ export const Wallet: FC<IWalletProps> = props => {
   const handleOpenConnectDialog = () => {
     openPopup(connectPopupType);
   };
+
+  if (!license.isValid()) {
+    return null;
+  }
 
   return (
     <Box mx={1}>
