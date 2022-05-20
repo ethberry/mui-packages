@@ -27,7 +27,7 @@ export const EthInput: FC<IEthInputProps> = props => {
     ...rest
   } = props;
 
-  const formatValue = (value: string): string => value ? utils.parseEther(value).toString() : "0";
+  const formatValue = (value: string): string => (value ? utils.parseEther(value).toString() : "0");
 
   const normalizeValue = (value: string): string => {
     // values passed from query string are parsed to number by custom qs.decoder

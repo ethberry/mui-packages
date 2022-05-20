@@ -17,14 +17,21 @@
     "@web3-react/portis-connector": "6.2.11",
     "@web3-react/torus-connector": "6.2.9",
     "@web3-react/trezor-connector": "6.1.9",
-    "@web3-react/walletconnect-connector": "6.2.13"
+    "@web3-react/walletconnect-connector": "6.2.13",
+    "uuid": "8.3.2"
   },
   "description": "react wallet provider",
   "devDependencies": {
+    "@gemunion/constants": "0.8.0",
+    "@gemunion/provider-api": "5.7.3",
+    "@gemunion/provider-license": "1.0.17",
+    "@gemunion/provider-popup": "0.3.0",
+    "@gemunion/provider-user": "3.3.6",
     "@mui/icons-material": "5.6.2",
     "@mui/material": "5.7.0",
     "@mui/styles": "5.7.0",
     "@types/react": "17.0.45",
+    "@types/uuid": "8.3.4",
     "ethers": "5.6.6",
     "notistack": "2.0.5",
     "react": "17.0.2",
@@ -38,6 +45,11 @@
   "main": "./dist/index.js",
   "name": "@gemunion/provider-wallet",
   "peerDependencies": {
+    "@gemunion/constants": "^0.0.0",
+    "@gemunion/provider-api": "^5.0.0",
+    "@gemunion/provider-license": "^1.0.0",
+    "@gemunion/provider-popup": "^0.0.0",
+    "@gemunion/provider-user": "^3.0.0",
     "@mui/icons-material": "^5.0.0",
     "@mui/lab": "^5.0.0-alpha.0",
     "@mui/material": "^5.0.0",
@@ -45,7 +57,8 @@
     "ethers": "^5.6.0",
     "notistack": "^2.0.0",
     "react": "^17.0.0",
-    "react-intl": "^5.0.0"
+    "react-intl": "^5.0.0",
+    "uuid": "8.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

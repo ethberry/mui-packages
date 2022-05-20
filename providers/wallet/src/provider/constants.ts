@@ -23,3 +23,5 @@ export const networkToChainId = {
   [Networks.ARBITRUM]: 42161,
   [Networks.BESU]: 1337,
 };
+
+export const STORE_CONNECTOR = "CONNECTOR";
