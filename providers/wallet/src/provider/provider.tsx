@@ -3,16 +3,17 @@ import { useWeb3React, Web3ReactProvider } from "@web3-react/core";
 import { providers } from "ethers";
 
 import { usePopup } from "@gemunion/provider-popup";
-
-import { IConnectorsArgs, TConnectors } from "../connectors";
-import { WalletContext } from "./context";
-import { Reconnect } from "../reconnect";
-import { STORE_CONNECTOR } from "./constants";
-import { CheckNetwork } from "../checkNetwork";
-import { Authorization } from "../authorization";
-import { INetwork } from "../interfaces";
+import { useLicense } from "@gemunion/provider-license";
 import { useApi } from "@gemunion/provider-api";
 import { useUser } from "@gemunion/provider-user";
+
+import { IConnectorsArgs, TConnectors } from "../connectors";
+import { INetwork } from "../interfaces";
+import { WalletContext } from "./context";
+import { STORE_CONNECTOR } from "./constants";
+import { Reconnect } from "../reconnect";
+import { CheckNetwork } from "../checkNetwork";
+import { Authorization } from "../authorization";
 
 interface IWalletProviderProps {
   connectPopupType: symbol;
@@ -25,6 +26,7 @@ export const WalletProvider: FC<IWalletProviderProps> = props => {
   const { connectPopupType, targetNetwork, connectorsArgs, disableMetamaskAuthorization, children } = props;
 
   const { isOpenPopup, openPopup, closePopup } = usePopup();
+  const license = useLicense();
 
   const [network, setNetwork] = useState<INetwork>(targetNetwork);
   const [activeConnector, setActiveConnector] = useState<TConnectors | null>(
@@ -48,6 +50,10 @@ export const WalletProvider: FC<IWalletProviderProps> = props => {
     localStorage.setItem(STORE_CONNECTOR, JSON.stringify(value));
   };
 
+  if (!license.isValid()) {
+    return null;
+  }
+
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
       <WalletContext.Provider
@@ -65,7 +71,7 @@ export const WalletProvider: FC<IWalletProviderProps> = props => {
           {children}
           <Reconnect activeConnector={activeConnector} connectorsArgs={connectorsArgs} />
           <CheckNetwork network={network} />
-          {!disableMetamaskAuthorization && <Authorization targetChainIdHex={network.chainId} />}
+          {!disableMetamaskAuthorization && <Authorization network={network} />}
         </>
       </WalletContext.Provider>
     </Web3ReactProvider>
