@@ -16,7 +16,7 @@
   "description": "react widget",
   "devDependencies": {
     "@gemunion/draft-js-utils": "0.3.5",
-    "@gemunion/provider-license": "1.0.17",
+    "@gemunion/provider-license": "1.0.18",
     "@mui/icons-material": "5.8.0",
     "@mui/material": "5.8.0",
     "@mui/styles": "5.8.0",
