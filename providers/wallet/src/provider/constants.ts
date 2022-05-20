@@ -36,17 +36,10 @@ export const rpcUrls: Record<number, string[]> = {
     "https://eth-mainnet.public.blastapi.io",
     "https://eth-rpc.gateway.pokt.network",
   ],
-  [networkToChainId[Networks.ROPSTEN]]: [
-    `wss://ropsten.infura.io/ws/v3/${INFURA_API_KEY}`,
-    `https://ropsten.infura.io/v3/${INFURA_API_KEY}`,
-  ],
-  [networkToChainId[Networks.RINKEBY]]: [
-    `wss://rinkeby.infura.io/ws/v3/${INFURA_API_KEY}`,
-    `https://rinkeby.infura.io/v3/${INFURA_API_KEY}`,
-  ],
+  [networkToChainId[Networks.ROPSTEN]]: [`https://ropsten.infura.io/v3/${INFURA_API_KEY}`],
+  [networkToChainId[Networks.RINKEBY]]: [`https://rinkeby.infura.io/v3/${INFURA_API_KEY}`],
   [networkToChainId[Networks.GORLY]]: [
     "https://rpc.goerli.mudit.blog",
-    `wss://goerli.infura.io/v3/${INFURA_API_KEY}`,
     `https://goerli.infura.io/v3/${INFURA_API_KEY}`,
   ],
   [networkToChainId[Networks.BINANCE]]: [
@@ -180,4 +173,4 @@ export const networks: Record<number, INetwork> = {
 
 export const STORE_CONNECTOR = "CONNECTOR";
 
-export const CONNECT_POPUP_TYPE = Symbol("connectPopup");
+export const CONNECT_POPUP_TYPE = Symbol("CONNECT_POPUP_TYPE");

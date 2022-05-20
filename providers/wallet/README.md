@@ -5,9 +5,15 @@
 ```tsx
 <SettingsProvider>
   <GemunionThemeProvider>
-    <WalletProvider>
-      <Wallet />
-    </WalletProvider>
+    <LocalizationProvider>
+      <SnackbarProvider>
+        <PopupProvider>
+          <WalletProvider>
+            <Wallet />
+          </WalletProvider>
+        </PopupProvider>
+      <SnackbarProvider>
+    <LocalizationProvider>
   </GemunionThemeProvider>
 </SettingsProvider>
 ```

@@ -120,7 +120,7 @@ export const Authorization: FC<IAuthorizationProps> = props => {
   useEffect(() => {
     const handleAccountsChanged = async () => {
       if (api.getToken()) {
-        await user.logOut();
+        await handleLogout();
       }
     };
 
