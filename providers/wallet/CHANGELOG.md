@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.11.3...@gemunion/provider-wallet@0.12.0) (2022-05-21)
+
+
+### Features
+
+* expose methods for dialog ([db471c6](https://github.com/gemunion/mui-packages/commit/db471c65475f15659da5f423890b4d289e8e5e07))
+
+
+
+
+
 ## [0.11.3](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.11.2...@gemunion/provider-wallet@0.11.3) (2022-05-21)
 
 
