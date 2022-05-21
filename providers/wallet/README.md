@@ -3,19 +3,17 @@
 ## Provider
 
 ```tsx
-<SettingsProvider>
-  <GemunionThemeProvider>
-    <LocalizationProvider>
-      <SnackbarProvider>
-        <PopupProvider>
-          <WalletProvider>
-            <Wallet />
-          </WalletProvider>
-        </PopupProvider>
-      <SnackbarProvider>
-    <LocalizationProvider>
-  </GemunionThemeProvider>
-</SettingsProvider>
+<GemunionThemeProvider>
+  <LocalizationProvider>
+    <SnackbarProvider>
+      <PopupProvider>
+        <WalletProvider>
+          <Wallet />
+        </WalletProvider>
+      </PopupProvider>
+    <SnackbarProvider>
+  <LocalizationProvider>
+</GemunionThemeProvider>
 ```
 
 ## Webpack

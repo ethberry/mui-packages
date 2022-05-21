@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useSnackbar } from "notistack";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Button, Grid } from "@mui/material";
@@ -10,7 +10,8 @@ import { IMetamaskDto } from "@gemunion/types-jwt";
 import { PageHeader } from "@gemunion/mui-page-layout";
 import { ApiError, IJwt, useApi } from "@gemunion/provider-api";
 import { IUser, useUser } from "@gemunion/provider-user";
-import { WalletContext } from "@gemunion/provider-wallet";
+import { WALLET_CONNECT_POPUP_TYPE } from "@gemunion/provider-wallet";
+import { usePopup } from "@gemunion/provider-popup";
 
 import { useStyles } from "./styles";
 
@@ -21,10 +22,10 @@ export const MetamaskLogin: FC = () => {
   const [data, setData] = useState<IMetamaskDto>({ nonce: "", signature: "", wallet: "" });
 
   const { account, library, active } = useWeb3React();
+  const { openPopup } = usePopup();
 
   const user = useUser<IUser>();
   const api = useApi();
-  const wallet = useContext(WalletContext);
 
   const handleSubmit = (values: IMetamaskDto): Promise<IUser | void> => {
     return api
@@ -49,7 +50,7 @@ export const MetamaskLogin: FC = () => {
   };
 
   const handleConnect = (): void => {
-    wallet.setWalletConnectDialogOpen(true);
+    openPopup(WALLET_CONNECT_POPUP_TYPE);
   };
 
   const handleLogin = (): Promise<void> => {
