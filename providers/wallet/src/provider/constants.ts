@@ -28,26 +28,24 @@ export const networkToChainId = {
   [Networks.BESU]: 1337,
 };
 
-const INFURA_API_KEY = process.env.INFURA_API_KEY ?? "";
-
 export const rpcUrls: Record<number, string[]> = {
   [networkToChainId[Networks.ETHEREUM]]: [
+    process.env.JSON_RPC_ADDR,
     "https://main-rpc.linkpool.io",
     "https://eth-mainnet.public.blastapi.io",
     "https://eth-rpc.gateway.pokt.network",
   ],
-  [networkToChainId[Networks.ROPSTEN]]: [`https://ropsten.infura.io/v3/${INFURA_API_KEY}`],
-  [networkToChainId[Networks.RINKEBY]]: [`https://rinkeby.infura.io/v3/${INFURA_API_KEY}`],
-  [networkToChainId[Networks.GORLY]]: [
-    "https://rpc.goerli.mudit.blog",
-    `https://goerli.infura.io/v3/${INFURA_API_KEY}`,
-  ],
+  [networkToChainId[Networks.ROPSTEN]]: [process.env.JSON_RPC_ADDR],
+  [networkToChainId[Networks.RINKEBY]]: [process.env.JSON_RPC_ADDR],
+  [networkToChainId[Networks.GORLY]]: [process.env.JSON_RPC_ADDR, "https://rpc.goerli.mudit.blog"],
   [networkToChainId[Networks.BINANCE]]: [
+    process.env.JSON_RPC_ADDR,
     "https://bsc-dataseed.binance.org",
     "https://bsc-dataseed1.defibit.io",
     "https://bsc-dataseed1.ninicoin.io",
   ],
   [networkToChainId[Networks.BINANCE_TEST]]: [
+    process.env.JSON_RPC_ADDR,
     "https://data-seed-prebsc-1-s1.binance.org:8545",
     "https://data-seed-prebsc-2-s1.binance.org:8545",
     "http://data-seed-prebsc-1-s2.binance.org:8545",
@@ -56,17 +54,19 @@ export const rpcUrls: Record<number, string[]> = {
     "https://data-seed-prebsc-2-s3.binance.org:8545",
   ],
   [networkToChainId[Networks.POLYGON]]: [
+    process.env.JSON_RPC_ADDR,
     "https://polygon-mainnet.public.blastapi.io",
     "https://matic-mainnet-archive-rpc.bwarelabs.com",
     "https://rpc-mainnet.matic.quiknode.pro",
     "https://polygon-rpc.com",
   ],
   [networkToChainId[Networks.MUMBAI]]: [
+    process.env.JSON_RPC_ADDR,
     "https://matic-mumbai.chainstacklabs.com",
     "https://matic-testnet-archive-rpc.bwarelabs.com",
     "https://rpc-mumbai.maticvigil.com",
   ],
-  [networkToChainId[Networks.BESU]]: ["http://127.0.0.1:8545"],
+  [networkToChainId[Networks.BESU]]: [process.env.JSON_RPC_ADDR, "http://127.0.0.1:8545"],
 };
 
 export const networks: Record<number, INetwork> = {
@@ -173,4 +173,5 @@ export const networks: Record<number, INetwork> = {
 
 export const STORE_CONNECTOR = "CONNECTOR";
 
-export const CONNECT_POPUP_TYPE = Symbol("CONNECT_POPUP_TYPE");
+export const WALLET_CONNECT_POPUP_TYPE = Symbol("WALLET_CONNECT_POPUP_TYPE");
+export const WALLET_MENU_POPUP_TYPE = Symbol("WALLET_MENU_POPUP_TYPE");

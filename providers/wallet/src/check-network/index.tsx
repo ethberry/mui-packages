@@ -2,17 +2,15 @@ import { FC, useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 
 import { useWallet } from "../provider";
-import { INetwork } from "../interfaces";
 
-interface ICheckNetworkProps {
-  network: INetwork;
-}
+export const CheckNetwork: FC = () => {
+  const { library, active, chainId, deactivate } = useWeb3React();
+  const { network, setActiveConnector } = useWallet();
 
-export const CheckNetwork: FC<ICheckNetworkProps> = props => {
-  const { network } = props;
-
-  const { library, active, chainId } = useWeb3React();
-  const { handleDisconnect } = useWallet();
+  const handleDisconnect = () => {
+    deactivate();
+    setActiveConnector(null);
+  };
 
   const checkChainId = async () => {
     try {
