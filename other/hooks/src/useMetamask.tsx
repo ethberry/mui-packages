@@ -2,19 +2,18 @@ import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { useWeb3React } from "@web3-react/core";
 
-import { WALLET_CONNECT_POPUP_TYPE } from "@gemunion/provider-wallet";
-import { usePopup } from "@gemunion/provider-popup";
+import { useWallet } from "@gemunion/provider-wallet";
 
 export const useMetamask = (fn: (...args: Array<any>) => Promise<unknown>) => {
   const { account } = useWeb3React();
 
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
-  const { openPopup } = usePopup();
+  const { openConnectWalletDialog } = useWallet();
 
   return async (...args: Array<any>) => {
     if (!account) {
-      openPopup(WALLET_CONNECT_POPUP_TYPE);
+      openConnectWalletDialog();
       enqueueSnackbar(formatMessage({ id: "snackbar.walletIsNotConnected" }), { variant: "error" });
       return;
     }

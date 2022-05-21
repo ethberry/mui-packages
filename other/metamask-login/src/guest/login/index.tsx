@@ -10,8 +10,7 @@ import { IMetamaskDto } from "@gemunion/types-jwt";
 import { PageHeader } from "@gemunion/mui-page-layout";
 import { ApiError, IJwt, useApi } from "@gemunion/provider-api";
 import { IUser, useUser } from "@gemunion/provider-user";
-import { WALLET_CONNECT_POPUP_TYPE } from "@gemunion/provider-wallet";
-import { usePopup } from "@gemunion/provider-popup";
+import { useWallet } from "@gemunion/provider-wallet";
 
 import { useStyles } from "./styles";
 
@@ -22,7 +21,7 @@ export const MetamaskLogin: FC = () => {
   const [data, setData] = useState<IMetamaskDto>({ nonce: "", signature: "", wallet: "" });
 
   const { account, library, active } = useWeb3React();
-  const { openPopup } = usePopup();
+  const { openConnectWalletDialog } = useWallet();
 
   const user = useUser<IUser>();
   const api = useApi();
@@ -50,7 +49,7 @@ export const MetamaskLogin: FC = () => {
   };
 
   const handleConnect = (): void => {
-    openPopup(WALLET_CONNECT_POPUP_TYPE);
+    openConnectWalletDialog();
   };
 
   const handleLogin = (): Promise<void> => {
