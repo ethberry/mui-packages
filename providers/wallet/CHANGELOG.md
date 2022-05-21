@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.2](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.11.1...@gemunion/provider-wallet@0.11.2) (2022-05-21)
+
+
+### Bug Fixes
+
+* remove auth completely ([407b6fa](https://github.com/gemunion/mui-packages/commit/407b6fa58f49b9dc8f320ab286c379cb590132a2))
+
+
+
+
+
 ## [0.11.1](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.11.0...@gemunion/provider-wallet@0.11.1) (2022-05-21)
 
 
