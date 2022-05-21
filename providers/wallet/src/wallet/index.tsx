@@ -8,7 +8,7 @@ import { useLicense } from "@gemunion/provider-license";
 
 import { WalletIcon } from "../icon";
 import { WalletMenuDialog } from "../menu-dialog";
-import { useWallet } from "../provider";
+import { CONNECT_POPUP_TYPE } from "../provider";
 import { IWalletConnectDialogProps, WalletDialog } from "../dialog";
 
 interface IWalletProps {
@@ -20,7 +20,6 @@ export const Wallet: FC<IWalletProps> = props => {
   const { componentsProps, ButtonsProps = {} } = walletConnectDialogProps;
 
   const { isOpenPopup, openPopup, closePopup } = usePopup();
-  const { connectPopupType } = useWallet();
   const { active, account } = useWeb3React();
   const { formatMessage } = useIntl();
   const [isWalletDialogOpen, setIsWalletDialogOpen] = useState(false);
@@ -35,7 +34,7 @@ export const Wallet: FC<IWalletProps> = props => {
   };
 
   const handleOpenConnectDialog = () => {
-    openPopup(connectPopupType);
+    openPopup(CONNECT_POPUP_TYPE);
   };
 
   if (!license.isValid()) {
@@ -59,7 +58,7 @@ export const Wallet: FC<IWalletProps> = props => {
       )}
       <WalletDialog
         onClose={closePopup}
-        open={isOpenPopup(connectPopupType)}
+        open={isOpenPopup(CONNECT_POPUP_TYPE)}
         componentsProps={componentsProps}
         ButtonsProps={ButtonsProps}
       />

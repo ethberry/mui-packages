@@ -13,18 +13,16 @@ import { WalletContext } from "./context";
 import { STORE_CONNECTOR, CONNECT_POPUP_TYPE, networks } from "./constants";
 import { Reconnect } from "../reconnect";
 import { CheckNetwork } from "../checkNetwork";
-import { Authorization } from "../authorization";
 
 interface IWalletProviderProps {
   targetNetwork?: INetwork;
   connectorsArgs?: IConnectorsArgs;
-  disableMetamaskAuthorization?: boolean;
 }
 
 const targetNetworkId = parseInt(process.env.CHAIN_ID ?? "1");
 
 export const WalletProvider: FC<IWalletProviderProps> = props => {
-  const { targetNetwork = networks[targetNetworkId], connectorsArgs, disableMetamaskAuthorization, children } = props;
+  const { targetNetwork = networks[targetNetworkId], connectorsArgs, children } = props;
 
   const { isOpenPopup, openPopup, closePopup } = usePopup();
   const license = useLicense();
@@ -59,7 +57,6 @@ export const WalletProvider: FC<IWalletProviderProps> = props => {
     <Web3ReactProvider getLibrary={getLibrary}>
       <WalletContext.Provider
         value={{
-          connectPopupType: CONNECT_POPUP_TYPE,
           activeConnector,
           setActiveConnector: setActiveConnectorHandle,
           getWalletConnectDialogOpen,
@@ -72,7 +69,6 @@ export const WalletProvider: FC<IWalletProviderProps> = props => {
           {children}
           <Reconnect activeConnector={activeConnector} connectorsArgs={connectorsArgs} />
           <CheckNetwork network={network} />
-          {!disableMetamaskAuthorization && <Authorization network={network} />}
         </>
       </WalletContext.Provider>
     </Web3ReactProvider>
