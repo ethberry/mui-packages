@@ -2,12 +2,13 @@ import { FC, useState } from "react";
 import { Web3ReactProvider } from "@web3-react/core";
 import { providers } from "ethers";
 
+import { usePopup } from "@gemunion/provider-popup";
 import { useLicense } from "@gemunion/provider-license";
 
 import { TConnectors } from "../connectors";
 import { INetwork } from "../interfaces";
 import { WalletContext } from "./context";
-import { networks, STORE_CONNECTOR } from "./constants";
+import { networks, STORE_CONNECTOR, WALLET_CONNECT_POPUP_TYPE } from "./constants";
 import { Reconnect } from "../reconnect";
 import { CheckNetwork } from "../check-network";
 
@@ -20,6 +21,7 @@ const targetNetworkId = parseInt(process.env.CHAIN_ID ?? "1");
 export const WalletProvider: FC<IWalletProviderProps> = props => {
   const { targetNetwork = networks[targetNetworkId], children } = props;
 
+  const { openPopup, closePopup } = usePopup();
   const license = useLicense();
 
   const [network, setNetwork] = useState<INetwork>(targetNetwork);
@@ -29,6 +31,14 @@ export const WalletProvider: FC<IWalletProviderProps> = props => {
 
   const getLibrary = (provider: any) => {
     return new providers.Web3Provider(provider);
+  };
+
+  const openConnectWalletDialog = (): void => {
+    openPopup(WALLET_CONNECT_POPUP_TYPE);
+  };
+
+  const closeConnectWalletDialog = (): void => {
+    closePopup();
   };
 
   const setActiveConnectorHandle = (value: TConnectors | null) => {
@@ -46,6 +56,8 @@ export const WalletProvider: FC<IWalletProviderProps> = props => {
         value={{
           activeConnector,
           setActiveConnector: setActiveConnectorHandle,
+          openConnectWalletDialog,
+          closeConnectWalletDialog,
           network,
           setNetwork,
         }}
