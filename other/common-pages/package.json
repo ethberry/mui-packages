@@ -16,7 +16,7 @@
     "@gemunion/popup": "0.0.30",
     "@gemunion/provider-api": "5.8.0",
     "@gemunion/provider-user": "3.3.8",
-    "@gemunion/react-hooks": "0.6.2",
+    "@gemunion/react-hooks": "0.6.3",
     "@gemunion/yup-rules": "1.8.2",
     "yup": "0.32.11"
   },
@@ -73,5 +73,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "7.1.7"
+  "version": "7.1.8"
 }
