@@ -4,22 +4,22 @@ import { useWeb3React } from "@web3-react/core";
 
 import { useWallet } from "@gemunion/provider-wallet";
 
-export const useMetamask = (fn: (...args: Array<any>) => Promise<unknown>) => {
-  const { account } = useWeb3React();
+export const useMetamaskValue = <T = any>(fn: (...args: Array<any>) => Promise<T>) => {
+  const { active } = useWeb3React();
 
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
   const { openConnectWalletDialog } = useWallet();
 
   return async (...args: Array<any>) => {
-    if (!account) {
+    if (!active) {
       openConnectWalletDialog();
       enqueueSnackbar(formatMessage({ id: "snackbar.walletIsNotConnected" }), { variant: "error" });
       return;
     }
 
     return fn(...args)
-      .then((result: unknown) => {
+      .then((result: T) => {
         enqueueSnackbar(formatMessage({ id: "snackbar.success" }), { variant: "success" });
         return result;
       })
