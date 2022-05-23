@@ -12,6 +12,7 @@ export enum Networks {
   OPTIMISM = "OPTIMISM",
   ARBITRUM = "ARBITRUM",
   BESU = "BESU",
+  CUSTOM = "CUSTOM",
 }
 
 export const networkToChainId = {
@@ -26,8 +27,10 @@ export const networkToChainId = {
   [Networks.OPTIMISM]: 10,
   [Networks.ARBITRUM]: 42161,
   [Networks.BESU]: 1337,
+  [Networks.CUSTOM]: ~~process.env.CHAIN_ID,
 };
 
+// information from https://chainlist.org/
 export const rpcUrls: Record<number, string[]> = {
   [networkToChainId[Networks.ETHEREUM]]: [
     process.env.JSON_RPC_ADDR,
@@ -67,6 +70,7 @@ export const rpcUrls: Record<number, string[]> = {
     "https://rpc-mumbai.maticvigil.com",
   ],
   [networkToChainId[Networks.BESU]]: [process.env.JSON_RPC_ADDR, "http://127.0.0.1:8545"],
+  [networkToChainId[Networks.CUSTOM]]: [process.env.JSON_RPC_ADDR],
 };
 
 export const networks: Record<number, INetwork> = {
@@ -161,11 +165,22 @@ export const networks: Record<number, INetwork> = {
   [networkToChainId[Networks.BESU]]: {
     chainName: "Besu",
     chainId: `0x${networkToChainId[Networks.BESU].toString(16)}`,
-    rpcUrls: rpcUrls[networkToChainId[Networks.MUMBAI]],
+    rpcUrls: rpcUrls[networkToChainId[Networks.BESU]],
     blockExplorerUrls: ["http://localhost:8080/"],
     nativeCurrency: {
       name: "BESU",
       symbol: "BESU",
+      decimals: 18,
+    },
+  },
+  [networkToChainId[Networks.CUSTOM]]: {
+    chainName: "Unidentified Custom Blockchain",
+    chainId: `0x${networkToChainId[Networks.CUSTOM].toString(16)}`,
+    rpcUrls: rpcUrls[networkToChainId[Networks.CUSTOM]],
+    blockExplorerUrls: [],
+    nativeCurrency: {
+      name: "ETH",
+      symbol: "ETH",
       decimals: 18,
     },
   },
