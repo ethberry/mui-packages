@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { useMetamask } from "./useMetamask";
 
-export const useDeploy = (deploy: (values: any) => Promise<unknown>) => {
+export const useDeploy = (deploy: (values: any) => Promise<void>) => {
   const [isDeployDialogOpen, setIsDeployDialogOpen] = useState(false);
 
   const metaDeploy = useMetamask(deploy);
