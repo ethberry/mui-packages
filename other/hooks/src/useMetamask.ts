@@ -1,6 +1,6 @@
 import { useMetamaskValue } from "./useMetamaskValue";
 
-export const useMetamask = (fn: (...args: Array<any>) => Promise<unknown>) => {
+export const useMetamask = (fn: (...args: Array<any>) => Promise<void>) => {
   const metaFn = useMetamaskValue(fn);
 
   return async (...args: Array<any>) => {

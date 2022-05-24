@@ -1,15 +1,18 @@
 import { FC, forwardRef } from "react";
 import { InputBaseComponentProps } from "@mui/material";
 import { useFormContext } from "react-hook-form";
+import clsx from "clsx";
 
 import { ITextInputProps, TextInput } from "../text";
+import { useStyles } from "./styles";
 
 export type IStaticInputProps = ITextInputProps;
 
 export const StaticInputComponent = forwardRef<any, InputBaseComponentProps>((props, ref) => {
   const { value, placeholder, className } = props;
+  const classes = useStyles();
   return (
-    <div className={className} ref={ref}>
+    <div className={clsx(className, classes.root)} ref={ref}>
       {value || placeholder}
     </div>
   );
