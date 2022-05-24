@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { yupResolver } from '@hookform/resolvers/yup';
+import { yupResolver } from "@hookform/resolvers/yup";
 
 import { PromptIfDirty } from "../prompt";
 import { FormButtons } from "../buttons";
@@ -9,32 +9,49 @@ interface IFormProps {
   showButtons?: boolean;
   showPrompt?: boolean;
   submit?: string;
+  onSubmit: (values: any, formikBag?: any) => void;
   className?: string;
+  initialValues: any;
   validationSchema?: any;
-  initialValues?: any;
+  formSubmitButtonRef?: any;
   innerRef?: any;
 }
 
 export const FormikForm: FC<IFormProps> = props => {
-  const { children, showButtons, showPrompt, submit, className, validationSchema, initialValues, innerRef } = props;
+  const {
+    children,
+    initialValues,
+    onSubmit,
+    showButtons,
+    showPrompt,
+    submit,
+    formSubmitButtonRef,
+    innerRef,
+    className,
+    validationSchema,
+  } = props;
 
   const methods = useForm({
-    resolver: yupResolver(validationSchema),
-    defaultValues: initialValues
+    defaultValues: initialValues,
+    resolver: validationSchema ? yupResolver(validationSchema) : undefined,
   });
 
-  const handleSubmit = async (data: any) => {
-    await submit(data);
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
+    methods.handleSubmit(onSubmit);
+
+    return false;
   };
 
   return (
     <FormProvider {...methods}>
-      <form className={className} ref={innerRef} onSubmit={methods.handleSubmit(handleSubmit)}>
-        <PromptIfDirty visible={showPrompt}/>
+      <form onSubmit={handleSubmit} className={className} ref={innerRef}>
+        <PromptIfDirty visible={showPrompt} />
 
         {children}
 
-        <FormButtons visible={showButtons} submit={submit}/>
+        <FormButtons ref={formSubmitButtonRef} visible={showButtons} submit={submit} handleSubmit={handleSubmit} />
       </form>
     </FormProvider>
   );

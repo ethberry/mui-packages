@@ -3,6 +3,107 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.11.3...@gemunion/provider-wallet@0.12.0) (2022-05-21)
+
+
+### Features
+
+* expose methods for dialog ([db471c6](https://github.com/gemunion/mui-packages/commit/db471c65475f15659da5f423890b4d289e8e5e07))
+
+
+
+
+
+## [0.11.3](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.11.2...@gemunion/provider-wallet@0.11.3) (2022-05-21)
+
+
+### Bug Fixes
+
+* simplify ([aace5a5](https://github.com/gemunion/mui-packages/commit/aace5a5f4a7a7fbaa9136ea6076ccc9fa5093e18))
+* simplify wallet provider ([1e2f7f3](https://github.com/gemunion/mui-packages/commit/1e2f7f32c64abaf2ed1ac3397fc33d04b18a594b))
+
+
+
+
+
+## [0.11.2](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.11.1...@gemunion/provider-wallet@0.11.2) (2022-05-21)
+
+
+### Bug Fixes
+
+* remove auth completely ([407b6fa](https://github.com/gemunion/mui-packages/commit/407b6fa58f49b9dc8f320ab286c379cb590132a2))
+
+
+
+
+
+## [0.11.1](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.11.0...@gemunion/provider-wallet@0.11.1) (2022-05-21)
+
+
+### Bug Fixes
+
+* do not use authorization component under the hood ([cac1552](https://github.com/gemunion/mui-packages/commit/cac1552c079ddea46964bee287fb29ba03091026))
+
+
+
+
+
+# [0.11.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.10.0...@gemunion/provider-wallet@0.11.0) (2022-05-20)
+
+
+### Bug Fixes
+
+* add license to wallet provider ([dd1f158](https://github.com/gemunion/mui-packages/commit/dd1f15889c10935a67a3f48d39ec6755065f95b5))
+* rpc urls, readme ([f6bdf40](https://github.com/gemunion/mui-packages/commit/f6bdf407fe16f323e32546e6b34ee0ca0fb9e662))
+
+
+### Features
+
+* logout after change account ([87e8764](https://github.com/gemunion/mui-packages/commit/87e8764990e435d5ddadeffa5aa175eb1773879c))
+* metamask authorization, checkNetwork, updated wallet provider ([c9700a8](https://github.com/gemunion/mui-packages/commit/c9700a816fa5292fc4223a1947552568301c7bfe))
+* updated provider wallet with provider popup ([97d3715](https://github.com/gemunion/mui-packages/commit/97d37155db9d93dcc265fb8c8c68d8d4ef006d62))
+* updated wallet constants and provider props ([97b5eef](https://github.com/gemunion/mui-packages/commit/97b5eef8747561eca2775445ad0ed3e136b792a3))
+
+
+
+
+
+# 0.10.0 (2022-05-20)
+
+
+### Bug Fixes
+
+* add license to wallet provider ([dd1f158](https://github.com/gemunion/mui-packages/commit/dd1f15889c10935a67a3f48d39ec6755065f95b5))
+
+
+### Features
+
+* metamask authorization, checkNetwork, updated wallet provider ([c9700a8](https://github.com/gemunion/mui-packages/commit/c9700a816fa5292fc4223a1947552568301c7bfe))
+* updated provider wallet with provider popup ([97d3715](https://github.com/gemunion/mui-packages/commit/97d37155db9d93dcc265fb8c8c68d8d4ef006d62))
+
+
+
+
+
+## [0.9.12](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.9.11...@gemunion/provider-wallet@0.9.12) (2022-05-15)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([64a7217](https://github.com/gemunion/mui-packages/commit/64a7217ac25ea90baf190f508c4bb4f64dcc94fd))
+
+
+
+
+
+## 0.9.11 (2022-05-14)
+
+**Note:** Version bump only for package @gemunion/provider-wallet
+
+
+
+
+
 ## [0.9.10](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.9.9...@gemunion/provider-wallet@0.9.10) (2022-05-07)
 
 

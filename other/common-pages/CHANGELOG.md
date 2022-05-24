@@ -3,6 +3,73 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.1.9](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@7.1.8...@gemunion/common-pages@7.1.9) (2022-05-21)
+
+**Note:** Version bump only for package @gemunion/common-pages
+
+
+
+
+
+## [7.1.8](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@7.1.7...@gemunion/common-pages@7.1.8) (2022-05-21)
+
+**Note:** Version bump only for package @gemunion/common-pages
+
+
+
+
+
+## [7.1.7](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@7.1.6...@gemunion/common-pages@7.1.7) (2022-05-21)
+
+**Note:** Version bump only for package @gemunion/common-pages
+
+
+
+
+
+## [7.1.6](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@7.1.5...@gemunion/common-pages@7.1.6) (2022-05-21)
+
+**Note:** Version bump only for package @gemunion/common-pages
+
+
+
+
+
+## [7.1.5](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@7.1.4...@gemunion/common-pages@7.1.5) (2022-05-20)
+
+**Note:** Version bump only for package @gemunion/common-pages
+
+
+
+
+
+## [7.1.4](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@7.1.1...@gemunion/common-pages@7.1.4) (2022-05-20)
+
+**Note:** Version bump only for package @gemunion/common-pages
+
+
+
+
+
+## [7.1.3](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@7.1.2...@gemunion/common-pages@7.1.3) (2022-05-15)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([64a7217](https://github.com/gemunion/mui-packages/commit/64a7217ac25ea90baf190f508c4bb4f64dcc94fd))
+
+
+
+
+
+## [7.1.2](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@7.1.1...@gemunion/common-pages@7.1.2) (2022-05-14)
+
+**Note:** Version bump only for package @gemunion/common-pages
+
+
+
+
+
 ## [7.1.1](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@7.1.0...@gemunion/common-pages@7.1.1) (2022-05-08)
 
 

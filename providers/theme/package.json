@@ -9,14 +9,14 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.8.0",
-    "@gemunion/provider-settings": "2.0.9"
+    "@gemunion/provider-settings": "2.0.13"
   },
   "description": "Material UI theme provider",
   "devDependencies": {
-    "@mui/icons-material": "5.6.2",
-    "@mui/material": "5.6.4",
+    "@mui/icons-material": "5.8.0",
+    "@mui/material": "5.8.0",
     "react": "17.0.2",
-    "react-intl": "5.25.1"
+    "react-intl": "6.0.1"
   },
   "engines": {
     "node": ">=12.13"
@@ -29,7 +29,7 @@
     "@mui/icons-material": "^5.0.0",
     "@mui/material": "^5.0.0",
     "react": "^17.0.0",
-    "react-intl": "^5.0.0"
+    "react-intl": "^5.0.0 || ^6.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -49,5 +49,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "4.0.15"
+  "version": "4.1.2"
 }

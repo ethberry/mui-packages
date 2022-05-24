@@ -5,7 +5,7 @@
     "@gemunion/eslint-config/tests/testing-library"
   ],
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.test.json"
   },
   "root": true
 }

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Collapse, Grid } from "@mui/material";
 
-import { AutoSave, FormikForm } from "@gemunion/mui-form";
+import { FormikForm } from "@gemunion/mui-form";
 import { SearchInput } from "@gemunion/mui-inputs-core";
 
 interface ICommonSearchFormProps {
@@ -20,7 +20,7 @@ export const CommonSearchForm: FC<ICommonSearchFormProps> = props => {
     <FormikForm initialValues={fixedValues} onSubmit={onSubmit} showButtons={false} showPrompt={false}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={12}>
-          <SearchInput name="query" data-testid="commonSearchInput" />
+          <SearchInput name="query" data-testid="commonSearchInput" onSubmit={onSubmit} />
         </Grid>
       </Grid>
       <Collapse in={open}>
@@ -28,7 +28,6 @@ export const CommonSearchForm: FC<ICommonSearchFormProps> = props => {
           {children}
         </Grid>
       </Collapse>
-      <AutoSave onSubmit={onSubmit} />
     </FormikForm>
   );
 };

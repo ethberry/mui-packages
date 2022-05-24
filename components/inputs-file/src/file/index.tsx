@@ -6,7 +6,7 @@ import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Controller, useFormContext } from "react-hook-form";
 
-import { ACCEPTED_FORMATS, MAX_FILE_SIZE } from "./constants";
+import { ACCEPTED_FORMATS, MAX_FILE_SIZE, MIN_FILE_SIZE } from "./constants";
 import { humanFileSize } from "./utils";
 import { useStyles } from "./styles";
 
@@ -21,7 +21,14 @@ export interface IFileInputProps extends DropzoneOptions {
 }
 
 export const FileInput: FC<IFileInputProps> = props => {
-  const { disabled, onChange, accept = ACCEPTED_FORMATS, maxSize = MAX_FILE_SIZE, ...rest } = props;
+  const {
+    disabled,
+    onChange,
+    accept = ACCEPTED_FORMATS,
+    minSize = MIN_FILE_SIZE,
+    maxSize = MAX_FILE_SIZE,
+    ...rest
+  } = props;
   const classes = useStyles();
   const { formatMessage } = useIntl();
   const { enqueueSnackbar } = useSnackbar();
@@ -29,32 +36,30 @@ export const FileInput: FC<IFileInputProps> = props => {
   const form = useFormContext<any>();
 
   const onDrop = useCallback((acceptedFiles: File[], rejectedFiles: FileRejection[]) => {
+    console.info("acceptedFiles", acceptedFiles);
+    console.info("rejectedFiles", rejectedFiles);
+
     if (rejectedFiles.length) {
       rejectedFiles.forEach(rejectedFile => {
-        console.info("rejectedFiles", rejectedFiles);
-        if (!accept.includes(rejectedFile.file.type)) {
+        console.info("rejectedFile", rejectedFile);
+        rejectedFile.errors.forEach(({ code }) => {
+          console.info("code", code);
+          console.info("accept", accept);
           enqueueSnackbar(
             formatMessage(
-              { id: "components.dropzone.format" },
+              { id: `components.dropzone.${code}` },
               {
-                type: rejectedFile.file.type,
-                accept: Array.isArray(accept) ? accept.join(", ") : accept,
-              },
-            ),
-            { variant: "error" },
-          );
-        } else if (maxSize < rejectedFile.file.size) {
-          enqueueSnackbar(
-            formatMessage(
-              { id: "components.dropzone.size" },
-              {
+                // chrome does not report filetype on drag&drop
+                type: rejectedFile.file.type || `.${rejectedFile.file.name.split(".").pop() || ""}` || "UNKNOWN",
+                accept: ([] as Array<string>).concat(...Object.values(accept)).join(", "),
                 size: humanFileSize(rejectedFile.file.size),
+                minSize: humanFileSize(minSize),
                 maxSize: humanFileSize(maxSize),
               },
             ),
             { variant: "error" },
           );
-        }
+        });
       });
     }
 
@@ -67,6 +72,7 @@ export const FileInput: FC<IFileInputProps> = props => {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     accept,
+    minSize,
     maxSize,
     ...rest,
   });

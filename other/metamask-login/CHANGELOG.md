@@ -3,6 +3,87 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.9](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@1.1.8...@gemunion/metamask-login@1.1.9) (2022-05-21)
+
+**Note:** Version bump only for package @gemunion/metamask-login
+
+
+
+
+
+## [1.1.8](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@1.1.7...@gemunion/metamask-login@1.1.8) (2022-05-21)
+
+
+### Bug Fixes
+
+* simplify wallet provider ([1e2f7f3](https://github.com/gemunion/mui-packages/commit/1e2f7f32c64abaf2ed1ac3397fc33d04b18a594b))
+
+
+
+
+
+## [1.1.7](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@1.1.6...@gemunion/metamask-login@1.1.7) (2022-05-21)
+
+**Note:** Version bump only for package @gemunion/metamask-login
+
+
+
+
+
+## [1.1.6](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@1.1.5...@gemunion/metamask-login@1.1.6) (2022-05-21)
+
+**Note:** Version bump only for package @gemunion/metamask-login
+
+
+
+
+
+## [1.1.5](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@1.1.4...@gemunion/metamask-login@1.1.5) (2022-05-20)
+
+**Note:** Version bump only for package @gemunion/metamask-login
+
+
+
+
+
+## [1.1.4](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@1.1.1...@gemunion/metamask-login@1.1.4) (2022-05-20)
+
+**Note:** Version bump only for package @gemunion/metamask-login
+
+
+
+
+
+## [1.1.3](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@1.1.2...@gemunion/metamask-login@1.1.3) (2022-05-15)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([64a7217](https://github.com/gemunion/mui-packages/commit/64a7217ac25ea90baf190f508c4bb4f64dcc94fd))
+
+
+
+
+
+## [1.1.2](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@1.1.1...@gemunion/metamask-login@1.1.2) (2022-05-14)
+
+**Note:** Version bump only for package @gemunion/metamask-login
+
+
+
+
+
+## [1.1.1](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@1.1.0...@gemunion/metamask-login@1.1.1) (2022-05-08)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([4439766](https://github.com/gemunion/mui-packages/commit/443976682e5c13a25481c95909d15e14407d67e9))
+
+
+
+
+
 # [1.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@1.0.14...@gemunion/metamask-login@1.1.0) (2022-05-07)
 
 

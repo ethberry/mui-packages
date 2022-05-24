@@ -17,7 +17,7 @@ import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { TextInput } from "@gemunion/mui-inputs-core";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
-import { S3FileInput, useDeleteUrl } from "@gemunion/mui-inputs-file-s3";
+import { S3FileInput, useDeleteUrl, Accept } from "@gemunion/mui-inputs-file-s3";
 import { openUrlOnClick } from "@gemunion/popup";
 
 import { useStyles } from "./styles";
@@ -26,7 +26,7 @@ export interface IPhotoInputProps {
   name: string;
   label?: string | number | ReactElement;
   bucket?: string;
-  accept?: string | string[];
+  accept?: Accept;
 }
 
 export const PhotoInput: FC<IPhotoInputProps> = props => {

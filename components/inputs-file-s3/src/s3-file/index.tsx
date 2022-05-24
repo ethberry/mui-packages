@@ -9,7 +9,7 @@ interface IS3FileInputProps extends Omit<IFileInputProps, "onChange"> {
   bucket?: string;
   region?: string;
   onChange: (url: string) => void;
-  onError?: (message: string) => void;
+  onError?: (err: Error) => void;
   onProgress?: (percent: number, status: string, file: File) => void;
   validate?: (files: File[]) => Promise<boolean>;
 }

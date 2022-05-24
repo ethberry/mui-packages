@@ -60,6 +60,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
 
   const { enqueueSnackbar } = useSnackbar();
   const api = useApi();
+  const abortController = new AbortController();
 
   const fetchOptions = async (): Promise<void> => {
     setIsLoading(true);
@@ -67,13 +68,16 @@ export const EntityInput: FC<IEntityInputProps> = props => {
       .fetchJson({
         url: `/${controller}/autocomplete`,
         data,
+        signal: abortController.signal,
       })
       .then((json: Array<any>) => {
         setOptions(json);
       })
       .catch(e => {
-        console.error(e);
-        enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
+        if (!e.message.includes("The user aborted a request")) {
+          console.error(e);
+          enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
+        }
       })
       .finally(() => {
         setIsLoading(false);
@@ -82,6 +86,8 @@ export const EntityInput: FC<IEntityInputProps> = props => {
 
   useEffect(() => {
     void fetchOptions();
+
+    return () => abortController.abort();
   }, [data]);
 
   return (

@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.2](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@4.0.16...@gemunion/provider-theme@4.1.2) (2022-05-20)
+
+**Note:** Version bump only for package @gemunion/provider-theme
+
+
+
+
+
+## [4.1.1](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@4.1.0...@gemunion/provider-theme@4.1.1) (2022-05-15)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([64a7217](https://github.com/gemunion/mui-packages/commit/64a7217ac25ea90baf190f508c4bb4f64dcc94fd))
+
+
+
+
+
+# [4.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@4.0.16...@gemunion/provider-theme@4.1.0) (2022-05-14)
+
+
+### Features
+
+* theme options prop ([f55e8a1](https://github.com/gemunion/mui-packages/commit/f55e8a1247f47503da3ab8cb4fb7e5378fa4eebc))
+
+
+
+
+
+## 4.0.16 (2022-05-08)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([4439766](https://github.com/gemunion/mui-packages/commit/443976682e5c13a25481c95909d15e14407d67e9))
+
+
+
+
+
 ## 4.0.15 (2022-05-07)
 
 **Note:** Version bump only for package @gemunion/provider-theme
