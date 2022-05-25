@@ -8,7 +8,7 @@ import { useStyles } from "./styles";
 export interface ISelectInputProps extends SelectProps {
   name: string;
   options: Record<string, string>; // enum
-  disabledOptions: Array<string>;
+  disabledOptions?: Array<string>;
 }
 
 export const SelectInput: FC<ISelectInputProps> = props => {
