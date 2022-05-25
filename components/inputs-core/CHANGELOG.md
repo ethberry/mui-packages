@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.3.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@5.3.0...@gemunion/mui-inputs-core@5.3.1) (2022-05-25)
+
+
+### Bug Fixes
+
+* make disabled options optional ([6e9f319](https://github.com/gemunion/mui-packages/commit/6e9f3193ba981043d64956c0a51f5802707373d4))
+
+
+
+
+
 # 5.3.0 (2022-05-25)
 
 
