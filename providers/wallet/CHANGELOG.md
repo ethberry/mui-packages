@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.1](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.12.0...@gemunion/provider-wallet@0.12.1) (2022-05-25)
+
+
+### Bug Fixes
+
+* add custom blockchain config ([b7b8811](https://github.com/gemunion/mui-packages/commit/b7b88112dfdd86d8ce241fb37a4a7a202e6fd376))
+
+
+
+
+
 # [0.12.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.11.3...@gemunion/provider-wallet@0.12.0) (2022-05-21)
 
 

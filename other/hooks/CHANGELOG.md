@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.5](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@0.6.4...@gemunion/react-hooks@0.6.5) (2022-05-25)
+
+
+### Bug Fixes
+
+* split metamask hook for two ([6e12b3b](https://github.com/gemunion/mui-packages/commit/6e12b3bff1fa713c148f8b9fd9b90c1344275561))
+* types ([af7e75e](https://github.com/gemunion/mui-packages/commit/af7e75ef39d5cdd3d2e438cafe6b757a2d555817))
+* use useWallet ([67b664e](https://github.com/gemunion/mui-packages/commit/67b664e3769982038509006182b9276c7870020d))
+
+
+
+
+
 ## [0.6.4](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@0.6.3...@gemunion/react-hooks@0.6.4) (2022-05-21)
 
 **Note:** Version bump only for package @gemunion/react-hooks

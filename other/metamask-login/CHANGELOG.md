@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.10](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@1.1.9...@gemunion/metamask-login@1.1.10) (2022-05-25)
+
+
+### Bug Fixes
+
+* use useWallet ([67b664e](https://github.com/gemunion/mui-packages/commit/67b664e3769982038509006182b9276c7870020d))
+
+
+
+
+
 ## [1.1.9](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@1.1.8...@gemunion/metamask-login@1.1.9) (2022-05-21)
 
 **Note:** Version bump only for package @gemunion/metamask-login
