@@ -16,7 +16,7 @@
     "@gemunion/popup": "0.0.30",
     "@gemunion/provider-api": "5.8.0",
     "@gemunion/provider-user": "3.3.8",
-    "@gemunion/react-hooks": "0.6.5",
+    "@gemunion/react-hooks": "0.7.2",
     "@gemunion/yup-rules": "1.8.2",
     "yup": "0.32.11"
   },
