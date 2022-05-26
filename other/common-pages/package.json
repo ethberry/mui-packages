@@ -23,8 +23,8 @@
   "description": "react context provider",
   "devDependencies": {
     "@mui/icons-material": "5.8.0",
-    "@mui/lab": "5.0.0-alpha.82",
-    "@mui/material": "5.8.0",
+    "@mui/lab": "5.0.0-alpha.83",
+    "@mui/material": "5.8.1",
     "@mui/styles": "5.8.0",
     "@types/node": "16.11.36",
     "@types/react": "17.0.45",
@@ -32,7 +32,7 @@
     "formik": "2.2.9",
     "notistack": "2.0.5",
     "react": "17.0.2",
-    "react-intl": "6.0.1",
+    "react-intl": "6.0.3",
     "react-router": "6.3.0",
     "react-router-dom": "6.3.0"
   },
