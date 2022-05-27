@@ -3,6 +3,7 @@ import { useIntl } from "react-intl";
 import { useSnackbar } from "notistack";
 import { Controller, useFormContext } from "react-hook-form";
 import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/material";
+import { useDebouncedCallback } from "use-debounce";
 
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useApi } from "@gemunion/provider-api";
@@ -26,6 +27,7 @@ export interface IEntityInputProps {
   data?: Record<string, any>;
   variant?: "standard" | "filled" | "outlined";
   onChange?: (event: ChangeEvent<unknown>, options: Array<IAutocompleteOption> | IAutocompleteOption | null) => void;
+  onSearch?: (values: any) => void;
 }
 
 export const EntityInput: FC<IEntityInputProps> = props => {
@@ -37,6 +39,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
     data,
     variant = "standard",
     onChange,
+    onSearch,
     label,
     disabled,
     readOnly,
@@ -53,7 +56,8 @@ export const EntityInput: FC<IEntityInputProps> = props => {
   const { formatMessage } = useIntl();
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
   const localizedPlaceholder = formatMessage({ id: `form.placeholders.${suffix}` });
-  const localizedHelperText = error && touched ? formatMessage({ id: error }, { label: localizedLabel }) : "";
+  const localizedHelperText =
+    error && error.message && touched ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   const [isLoading, setIsLoading] = useState(false);
   const [options, setOptions] = useState<Array<IAutocompleteOption>>([]);
@@ -83,6 +87,10 @@ export const EntityInput: FC<IEntityInputProps> = props => {
         setIsLoading(false);
       });
   };
+
+  const debouncedOnChange = useDebouncedCallback(() => {
+    onSearch && onSearch(form.getValues());
+  });
 
   useEffect(() => {
     void fetchOptions();
@@ -117,6 +125,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                   ((_event: ChangeEvent<unknown>, options: Array<IAutocompleteOption> | null): void => {
                     const value = options ? options.map((option: IAutocompleteOption) => option.id) : [];
                     form.setValue(name, value);
+                    debouncedOnChange();
                   })
                 }
                 getOptionLabel={(option: IAutocompleteOption) => (getTitle ? getTitle(option) : option.title)}

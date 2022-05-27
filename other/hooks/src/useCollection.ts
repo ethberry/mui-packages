@@ -101,7 +101,11 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     return (id ? fetchById(id) : fetchByQuery())
       .catch((e: ApiError) => {
         if (e.status) {
-          enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
+          const errors = e.getLocalizedValidationErrors();
+
+          Object.keys(errors).forEach(key => {
+            enqueueSnackbar(formatMessage({ id: errors[key] }, { label: key }), { variant: "error" });
+          });
         } else {
           console.error(e);
           enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
@@ -147,8 +151,9 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     updateQS();
   };
 
-  const handleEditConfirm = (values: Partial<T>, formikBag: any): Promise<void> => {
+  const handleEditConfirm = async (values: Partial<T>, formikBag: any): Promise<void> => {
     const { id } = values;
+
     return api
       .fetchJson({
         url: id ? `${baseUrl}/${id}` : baseUrl,
@@ -162,9 +167,17 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
       })
       .catch((e: ApiError) => {
         if (e.status === 400) {
-          formikBag.setErrors(e.getLocalizedValidationErrors());
+          const errors = e.getLocalizedValidationErrors();
+
+          Object.keys(errors).forEach(key => {
+            formikBag.setError(key, { type: "custom", message: errors[key] }, { shouldFocus: true });
+          });
         } else if (e.status) {
-          enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
+          const errors = e.getLocalizedValidationErrors();
+
+          enqueueSnackbar(formatMessage({ id: Object.values(errors)[0] }, { label: Object.keys(errors)[0] }), {
+            variant: "error",
+          });
         } else {
           console.error(e);
           enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
@@ -195,7 +208,11 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
       })
       .catch((e: ApiError) => {
         if (e.status) {
-          enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
+          const errors = e.getLocalizedValidationErrors();
+
+          Object.keys(errors).forEach(key => {
+            enqueueSnackbar(formatMessage({ id: errors[key] }, { label: key }), { variant: "error" });
+          });
         } else {
           console.error(e);
           enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
@@ -213,7 +230,7 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     });
   };
 
-  const handleSubmit = (values: S): void => {
+  const handleSearch = (values: S): void => {
     setSearch({
       ...values,
       skip: 0,
@@ -255,7 +272,7 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     handleDelete,
     handleDeleteCancel,
     handleDeleteConfirm,
-    handleSubmit,
+    handleSearch,
     handleChangePage,
     handleToggleFilters,
   };

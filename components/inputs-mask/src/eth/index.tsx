@@ -13,6 +13,7 @@ export interface IEthInputProps {
   precision?: number;
   symbol?: string;
   thousandsSeparator?: string;
+  onSearch?: (values: any) => void;
 }
 
 export const EthInput: FC<IEthInputProps> = props => {
@@ -24,20 +25,25 @@ export const EthInput: FC<IEthInputProps> = props => {
     precision = 2,
     symbol = constants.EtherSymbol,
     thousandsSeparator = " ",
+    onSearch,
     ...rest
   } = props;
 
-  const formatValue = (value: string): string => (value ? utils.parseEther(value).toString() : "0");
+  const formatValue = (value: string): string => {
+    return value ? utils.parseEther(value).toString() : "0";
+  };
 
   const normalizeValue = (value: string): string => {
     // values passed from query string are parsed to number by custom qs.decoder
-    const normalizedValue = value ? utils.formatEther(value.toString()) : "0";
+    const normalizedValue = value ? utils.formatEther(value.replace(symbol, "").trim().toString()) : "0";
     const [whole, decimals] = normalizedValue.split(".");
+
     return decimals === "0" ? whole : normalizedValue;
   };
 
   const form = useFormContext<any>();
   const value = form.getValues(name);
+
   const formattedValue = normalizeValue(value);
 
   const maskProps = {
@@ -60,12 +66,6 @@ export const EthInput: FC<IEthInputProps> = props => {
         num: maskProps,
       },
     },
-    {
-      mask: `-${symbol} num`,
-      blocks: {
-        num: maskProps,
-      },
-    },
   ];
 
   const updateValue = (maskedRef: any): void => {
@@ -82,6 +82,7 @@ export const EthInput: FC<IEthInputProps> = props => {
       updateValue={updateValue}
       useMaskedValue={false}
       value={formattedValue}
+      onSearch={onSearch}
       {...rest}
     />
   );

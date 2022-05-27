@@ -28,7 +28,8 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
   const deleteUrl = useDeleteUrl(bucket);
   const suffix = name.split(".").pop() as string;
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
-  const localizedHelperText = error ? formatMessage({ id: error }, { label: localizedLabel }) : "";
+  const localizedHelperText =
+    error && error.message ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   const onChange = (urls: Array<string>) => {
     form.setValue(name, urls[0]);

@@ -31,9 +31,9 @@ export const Captcha: FC<ICaptchaProps> = props => {
               form.setValue(name, value);
             }}
           />
-          {error ? (
+          {error && error.message ? (
             <FormHelperText error>
-              <FormattedMessage id={error} />
+              <FormattedMessage id={error.message} />
             </FormHelperText>
           ) : null}
         </Grid>

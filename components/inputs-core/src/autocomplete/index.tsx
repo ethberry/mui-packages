@@ -31,7 +31,8 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
 
   const { formatMessage } = useIntl();
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
-  const localizedHelperText = error ? formatMessage({ id: error }, { label: localizedLabel }) : "";
+  const localizedHelperText =
+    error && error.message ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   return (
     <Controller
@@ -42,7 +43,6 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
 
         if (multiple) {
           return (
-
             <Autocomplete
               classes={classes}
               multiple={true}

@@ -15,6 +15,7 @@ export interface IMaskedInputProps {
   dispatch?: (appended: string, dynamicMasked: any) => any;
   onBlur?: (event: Event) => void;
   onChange?: (event: Event) => void;
+  onSearch?: (values: any) => void;
   onFocus?: (event: Event) => void;
   definitions?: any;
   maskedRef?: any;
@@ -41,18 +42,21 @@ export const MaskedInput: FC<IMaskedInputProps & TextFieldProps> = props => {
     prepare,
     InputLabelProps,
     inputProps,
+    updateValue,
     useMaskedValue = true,
     value,
     ...rest
   } = props;
 
-  const maskedRef = useRef<any>(null);
+  const maskedRef = useRef<HTMLInputElement & { unmaskedValue?: any }>(null);
   const form = useFormContext<any>();
   const defaultValue = form.getValues(name);
 
   const handleOnBlur = (): void => {
-    const val = useMaskedValue ? maskedRef.current.value : maskedRef.current.unmaskedValue;
-    form.setValue(name, val);
+    if (maskedRef && maskedRef.current) {
+      const val = useMaskedValue ? maskedRef.current.value : maskedRef.current.unmaskedValue;
+      form.setValue(name, val);
+    }
   };
 
   return (
@@ -64,6 +68,8 @@ export const MaskedInput: FC<IMaskedInputProps & TextFieldProps> = props => {
         ...InputLabelProps,
         shrink: true,
       }}
+      maskedRef={maskedRef}
+      updateValue={updateValue}
       InputProps={{
         readOnly,
         inputComponent: MaskedInputWrapper,
@@ -77,7 +83,7 @@ export const MaskedInput: FC<IMaskedInputProps & TextFieldProps> = props => {
           commit,
           maskedRef,
           onBlur: handleOnBlur,
-          ...(dispatch ? { dispatch } : {}), // ??
+          ...(dispatch ? { dispatch } : {}),
           ...inputProps,
         },
       }}

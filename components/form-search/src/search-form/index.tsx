@@ -5,22 +5,22 @@ import { FormikForm } from "@gemunion/mui-form";
 import { SearchInput } from "@gemunion/mui-inputs-core";
 
 interface ICommonSearchFormProps {
-  onSubmit: (values: any) => void;
+  onSearch: (values: any) => void;
   initialValues: any;
   open?: boolean;
 }
 
 export const CommonSearchForm: FC<ICommonSearchFormProps> = props => {
-  const { onSubmit, initialValues, open = false, children } = props;
+  const { onSearch, initialValues, open = false, children } = props;
 
   const { query } = initialValues;
   const fixedValues = { query };
 
   return (
-    <FormikForm initialValues={fixedValues} onSubmit={onSubmit} showButtons={false} showPrompt={false}>
+    <FormikForm initialValues={fixedValues} onSubmit={onSearch} showButtons={false} showPrompt={false}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={12}>
-          <SearchInput name="query" data-testid="commonSearchInput" onSubmit={onSubmit} />
+          <SearchInput name="query" data-testid="commonSearchInput" onSearch={onSearch} />
         </Grid>
       </Grid>
       <Collapse in={open}>

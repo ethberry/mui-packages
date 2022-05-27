@@ -1,4 +1,4 @@
-import { FC, SyntheticEvent, useCallback } from 'react';
+import { FC, SyntheticEvent, useCallback } from "react";
 import { useIntl } from "react-intl";
 import { IconButton, InputBase, InputBaseProps, Paper } from "@mui/material";
 import { SearchOutlined } from "@mui/icons-material";
@@ -8,11 +8,11 @@ import { useDebouncedCallback } from "use-debounce";
 import { useStyles } from "./styles";
 
 export interface ISearchInputProps extends InputBaseProps {
-  onSubmit?: (values: any) => void;
+  onSearch?: (values: any) => void;
 }
 
 export const SearchInput: FC<ISearchInputProps> = props => {
-  const { name = "search", onSubmit } = props;
+  const { name = "search", onSearch } = props;
   const classes = useStyles();
 
   const form = useFormContext<any>();
@@ -21,7 +21,7 @@ export const SearchInput: FC<ISearchInputProps> = props => {
   const localizedPlaceholder = formatMessage({ id: `form.placeholders.${name}` });
 
   const debouncedOnChange = useDebouncedCallback(() => {
-    onSubmit && onSubmit(form.getValues());
+    onSearch && onSearch(form.getValues());
   }, 500);
 
   return (
@@ -46,7 +46,7 @@ export const SearchInput: FC<ISearchInputProps> = props => {
               onChange={handleChange}
             />
           </Paper>
-        )
+        );
       }}
     />
   );

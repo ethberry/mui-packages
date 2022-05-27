@@ -17,7 +17,7 @@ const i18n = {
 describe.skip("<CommonSearchForm />", () => {
   it("renders component", () => {
     const formikProps = {
-      onSubmit: jest.fn(),
+      onSearch: jest.fn(),
       initialValues: {
         number: 50,
       },

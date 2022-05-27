@@ -27,7 +27,16 @@ export const FormDialog: FC<IFormikFormProps<any>> = props => {
   const handleSubmit = async (): Promise<void> => {
     if (innerRef && innerRef.current) {
       setIsLoading(true);
-      await innerRef.current.submit();
+
+      if (typeof innerRef.current.requestSubmit === "function") {
+        await new Promise(resolve => {
+          innerRef.current.requestSubmit();
+          resolve(true);
+        });
+      } else {
+        innerRef.current.dispatchEvent(new Event("submit", { cancelable: true }));
+      }
+
       setIsLoading(false);
     }
   };

@@ -35,7 +35,11 @@ export const RegistrationBase: FC<IRegistrationBaseProps> = props => {
       })
       .catch((e: ApiError) => {
         if (e.status === 400) {
-          formikBag.setErrors(e.getLocalizedValidationErrors());
+          const errors = e.getLocalizedValidationErrors();
+
+          Object.keys(errors).forEach(key => {
+            formikBag.setError(key, { type: "custom", message: errors[key] });
+          });
         } else if (e.status) {
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
         } else {

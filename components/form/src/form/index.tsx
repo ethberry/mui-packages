@@ -32,14 +32,16 @@ export const FormikForm: FC<IFormProps> = props => {
   } = props;
 
   const methods = useForm({
+    mode: "onBlur",
     defaultValues: initialValues,
     resolver: validationSchema ? yupResolver(validationSchema) : undefined,
   });
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    e.stopPropagation();
 
-    methods.handleSubmit(onSubmit);
+    onSubmit(methods.getValues(), methods);
 
     return false;
   };
