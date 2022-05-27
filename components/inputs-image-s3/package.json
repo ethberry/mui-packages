@@ -12,7 +12,7 @@
     "@gemunion/mui-inputs-core": "5.3.2",
     "@gemunion/mui-inputs-file-s3": "5.0.2",
     "@gemunion/mui-page-layout": "0.1.4",
-    "@gemunion/popup": "0.0.30",
+    "@gemunion/popup": "0.0.31",
     "@gemunion/provider-api": "5.8.0",
     "react-beautiful-dnd": "13.1.0"
   },
