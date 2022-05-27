@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.3.3 (2022-05-27)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-core
+
+
+
+
+
+## 5.3.2 (2022-05-26)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-core
+
+
+
+
+
+## [5.3.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@5.3.0...@gemunion/mui-inputs-core@5.3.1) (2022-05-25)
+
+
+### Bug Fixes
+
+* make disabled options optional ([6e9f319](https://github.com/gemunion/mui-packages/commit/6e9f3193ba981043d64956c0a51f5802707373d4))
+
+
+
+
+
+# 5.3.0 (2022-05-25)
+
+
+### Bug Fixes
+
+* overflow ([daafa52](https://github.com/gemunion/mui-packages/commit/daafa52514f10a75531dc70ab52b36767179fde1))
+
+
+### Features
+
+* disabled options ([ae09211](https://github.com/gemunion/mui-packages/commit/ae0921101bc1883719b4c64a9a6ea4006bef2c7f))
+
+
+
+
+
 ## [5.2.32](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@5.2.31...@gemunion/mui-inputs-core@5.2.32) (2022-05-20)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core

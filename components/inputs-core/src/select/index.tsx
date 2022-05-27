@@ -8,12 +8,13 @@ import { useStyles } from "./styles";
 
 export interface ISelectInputProps extends SelectProps {
   name: string;
-  options: any; // enum
   onSearch?: (values: any) => void;
+  options: Record<string, string>; // enum
+  disabledOptions?: Array<string>;
 }
 
 export const SelectInput: FC<ISelectInputProps> = props => {
-  const { options, label, name, multiple, onSearch, variant = "standard", ...rest } = props;
+  const { options, label, name, multiple, onSearch, variant = "standard", disabledOptions = [], ...rest } = props;
   const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
@@ -58,7 +59,7 @@ export const SelectInput: FC<ISelectInputProps> = props => {
             {...rest}
           >
             {Object.values(options).map((option, i) => (
-              <MenuItem value={option as string} key={i}>
+              <MenuItem value={option as string} key={i} disabled={disabledOptions.includes(option)}>
                 <FormattedMessage id={`enums.${suffix}.${option as string}`} />
               </MenuItem>
             ))}

@@ -13,14 +13,12 @@
   },
   "description": "react hooks",
   "devDependencies": {
-    "@gemunion/constants": "0.8.0",
+    "@gemunion/constants": "0.8.1",
     "@gemunion/provider-api": "5.8.0",
-    "@gemunion/provider-wallet": "0.12.0",
     "@gemunion/types-collection": "1.4.0",
-    "@web3-react/core": "6.1.9",
     "notistack": "2.0.5",
     "react": "17.0.2",
-    "react-intl": "6.0.1",
+    "react-intl": "6.0.3",
     "react-router": "6.3.0"
   },
   "engines": {
@@ -33,9 +31,7 @@
   "peerDependencies": {
     "@gemunion/constants": "^0.0.0",
     "@gemunion/provider-api": "^5.0.0",
-    "@gemunion/provider-wallet": "^0.0.0",
     "@gemunion/types-collection": "^1.0.0",
-    "@web3-react/core": "^6.0.0",
     "notistack": "^2.0.0",
     "react": "^17.0.0",
     "react-intl": "^5.0.0 || ^6.0.0",
@@ -59,5 +55,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "0.6.4"
+  "version": "0.7.3"
 }

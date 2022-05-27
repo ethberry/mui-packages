@@ -9,8 +9,8 @@
   },
   "description": "Material UI picker provider",
   "devDependencies": {
-    "@mui/lab": "5.0.0-alpha.82",
-    "@mui/material": "5.8.0",
+    "@mui/lab": "5.0.0-alpha.83",
+    "@mui/material": "5.8.1",
     "react": "17.0.2"
   },
   "engines": {
@@ -43,5 +43,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.3.14"
+  "version": "3.3.15"
 }

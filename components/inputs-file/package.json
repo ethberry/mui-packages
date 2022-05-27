@@ -15,14 +15,14 @@
   "description": "react widget",
   "devDependencies": {
     "@mui/icons-material": "5.8.0",
-    "@mui/material": "5.8.0",
+    "@mui/material": "5.8.1",
     "@mui/styles": "5.8.0",
-    "@storybook/react": "6.5.3",
+    "@storybook/react": "6.5.5",
     "@types/react": "17.0.45",
     "formik": "2.2.9",
     "notistack": "2.0.5",
     "react": "17.0.2",
-    "react-intl": "6.0.1"
+    "react-intl": "6.0.3"
   },
   "engines": {
     "node": ">=12.13"
@@ -57,5 +57,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "4.0.1"
+  "version": "4.0.2"
 }
