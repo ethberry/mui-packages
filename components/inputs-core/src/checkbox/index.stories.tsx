@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Formik } from "formik";
+import { FormikForm } from "@gemunion/mui-form";
 import { Story } from "@storybook/react";
 
 import { ICheckboxInputProps, CheckboxInput } from "./index";
@@ -15,9 +15,9 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <Formik onSubmit={() => {}} initialValues={{ checkbox: false }}>
+        <FormikForm onSubmit={() => {}} initialValues={{ checkbox: false }}>
           <Story />
-        </Formik>
+        </FormikForm>
       </IntlProvider>
     ),
   ],

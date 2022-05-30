@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Formik } from "formik";
+import { FormikForm } from "@gemunion/mui-form";
 import { Story } from "@storybook/react";
 
 import { ISliderInputProps, SliderInput } from "./index";
@@ -15,9 +15,9 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <Formik onSubmit={() => {}} initialValues={{ slider: 250 }}>
+        <FormikForm onSubmit={() => {}} initialValues={{ slider: 250 }}>
           <Story />
-        </Formik>
+        </FormikForm>
       </IntlProvider>
     ),
   ],

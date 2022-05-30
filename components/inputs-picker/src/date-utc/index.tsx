@@ -43,7 +43,6 @@ export const DateUtcInput: FC<IDateUtcInputProps> = props => {
       control={form.control}
       render={({ field }) => (
         <DatePicker
-          className={classes.root}
           inputFormat="MM/dd/yyyy"
           label={localizedLabel}
           value={field.value ? setter(field.value) : field.value}
@@ -51,7 +50,15 @@ export const DateUtcInput: FC<IDateUtcInputProps> = props => {
             form.setValue(name, date ? getter(date) : date);
           }}
           renderInput={(props: TextFieldProps): ReactElement => (
-            <TextField name={field.name} inputRef={field.ref} onBlur={field.onBlur} fullWidth variant={variant} {...props} />
+            <TextField
+              className={classes.root}
+              name={field.name}
+              inputRef={field.ref}
+              onBlur={field.onBlur}
+              fullWidth
+              variant={variant}
+              {...props}
+            />
           )}
           {...rest}
         />

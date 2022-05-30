@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Formik } from "formik";
+import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 
 import { IPhoneInputProps, PhoneInput } from "./index";
@@ -16,9 +16,9 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <Formik onSubmit={() => {}} initialValues={{ phoneMask: "" }}>
+        <FormProvider {...useForm({ defaultValues: { phoneMask: "" } })}>
           <Story />
-        </Formik>
+        </FormProvider>
       </IntlProvider>
     ),
   ],

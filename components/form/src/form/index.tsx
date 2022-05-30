@@ -32,7 +32,7 @@ export const FormikForm: FC<IFormProps> = props => {
   } = props;
 
   const methods = useForm({
-    mode: "onBlur",
+    mode: "all",
     defaultValues: initialValues,
     resolver: validationSchema ? yupResolver(validationSchema) : undefined,
   });

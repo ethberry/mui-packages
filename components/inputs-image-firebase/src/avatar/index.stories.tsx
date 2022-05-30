@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Formik } from "formik";
+import { FormikForm } from "@gemunion/mui-form";
 import { SnackbarProvider } from "notistack";
 import { Story } from "@storybook/react";
 
@@ -23,9 +23,9 @@ export default {
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
         <SnackbarProvider>
-          <Formik onSubmit={() => {}} initialValues={{ avatar: "" }}>
+          <FormikForm onSubmit={() => {}} initialValues={{ avatar: "" }}>
             <Story />
-          </Formik>
+          </FormikForm>
         </SnackbarProvider>
       </IntlProvider>
     ),

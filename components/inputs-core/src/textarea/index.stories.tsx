@@ -1,34 +1,26 @@
-import { ReactElement } from 'react';
-import { IntlProvider } from 'react-intl';
-import { FormProvider, useForm } from 'react-hook-form';
-import { Story } from '@storybook/react';
+import { ReactElement } from "react";
+import { IntlProvider } from "react-intl";
+import { FormikForm } from "@gemunion/mui-form";
+import { Story } from "@storybook/react";
 
-import { ITextAreaProps, TextArea } from './index';
+import { ITextAreaProps, TextArea } from "./index";
 
 const i18n = {
-  'form.labels.textarea': 'Textarea',
-  'form.placeholders.textarea': 'Lorem ipsum...',
+  "form.labels.textarea": "Textarea",
+  "form.placeholders.textarea": "Lorem ipsum...",
 };
 
 export default {
   title: "Input/Textarea",
   component: TextArea,
   decorators: [
-    (Story: Story): ReactElement => {
-      const form = useForm({
-        defaultValues: {
-          textarea: "Lorem ipsum",
-        },
-      });
-
-      return (
-        <IntlProvider locale="en" messages={i18n}>
-          <FormProvider {...form}>
-            <Story/>
-          </FormProvider>
-        </IntlProvider>
-      );
-    },
+    (Story: Story): ReactElement => (
+      <IntlProvider locale="en" messages={i18n}>
+        <FormikForm onSubmit={() => {}} initialValues={{ textarea: "Lorem ipsum" }}>
+          <Story />
+        </FormikForm>
+      </IntlProvider>
+    ),
   ],
 };
 

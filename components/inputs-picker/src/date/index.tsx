@@ -32,12 +32,11 @@ export const DateInput: FC<IDateInputProps> = props => {
       control={form.control}
       render={({ field }) => (
         <DatePicker
-          className={classes.root}
           inputFormat="MM/dd/yyyy"
           label={localizedLabel}
           {...field}
           renderInput={(props: TextFieldProps): ReactElement => (
-            <TextField inputRef={field.ref} fullWidth variant={variant} {...props} />
+            <TextField className={classes.root} inputRef={field.ref} fullWidth variant={variant} {...props} />
           )}
           {...rest}
         />

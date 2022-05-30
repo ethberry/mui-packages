@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Formik } from "formik";
+import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 import { constants } from "ethers";
 
@@ -17,9 +17,9 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <Formik onSubmit={() => {}} initialValues={{ ethMask: constants.WeiPerEther }}>
+        <FormProvider {...useForm({ defaultValues: { ethMask: constants.WeiPerEther } })}>
           <Story />
-        </Formik>
+        </FormProvider>
       </IntlProvider>
     ),
   ],

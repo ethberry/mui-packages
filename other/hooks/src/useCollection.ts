@@ -101,11 +101,8 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     return (id ? fetchById(id) : fetchByQuery())
       .catch((e: ApiError) => {
         if (e.status) {
-          const errors = e.getLocalizedValidationErrors();
-
-          Object.keys(errors).forEach(key => {
-            enqueueSnackbar(formatMessage({ id: errors[key] }, { label: key }), { variant: "error" });
-          });
+          // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+          enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
         } else {
           console.error(e);
           enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
@@ -173,11 +170,8 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
             formikBag.setError(key, { type: "custom", message: errors[key] }, { shouldFocus: true });
           });
         } else if (e.status) {
-          const errors = e.getLocalizedValidationErrors();
-
-          enqueueSnackbar(formatMessage({ id: Object.values(errors)[0] }, { label: Object.keys(errors)[0] }), {
-            variant: "error",
-          });
+          // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+          enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
         } else {
           console.error(e);
           enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
@@ -208,11 +202,8 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
       })
       .catch((e: ApiError) => {
         if (e.status) {
-          const errors = e.getLocalizedValidationErrors();
-
-          Object.keys(errors).forEach(key => {
-            enqueueSnackbar(formatMessage({ id: errors[key] }, { label: key }), { variant: "error" });
-          });
+          // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+          enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
         } else {
           console.error(e);
           enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });

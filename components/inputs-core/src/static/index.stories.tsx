@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Formik } from "formik";
+import { FormikForm } from "@gemunion/mui-form";
 import { Story } from "@storybook/react";
 
 import { StaticInput, IStaticInputProps } from "./index";
@@ -16,9 +16,9 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <Formik onSubmit={() => {}} initialValues={{ static: "static" }}>
+        <FormikForm onSubmit={() => {}} initialValues={{ static: "static" }}>
           <Story />
-        </Formik>
+        </FormikForm>
       </IntlProvider>
     ),
   ],

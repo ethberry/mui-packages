@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Formik } from "formik";
+import { FormikForm } from "@gemunion/mui-form";
 import { SnackbarProvider } from "notistack";
 import { Story } from "@storybook/react";
 
@@ -28,9 +28,9 @@ export default {
       <ApiProvider baseUrl={"http://localhost/"}>
         <IntlProvider locale="en" messages={i18n}>
           <SnackbarProvider>
-            <Formik onSubmit={() => {}} initialValues={{ photo: [] }}>
+            <FormikForm onSubmit={() => {}} initialValues={{ photo: [] }}>
               <Story />
-            </Formik>
+            </FormikForm>
           </SnackbarProvider>
         </IntlProvider>
       </ApiProvider>

@@ -30,7 +30,6 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
       control={form.control}
       render={({ field }) => (
         <DateRangePicker
-          className={classes.root}
           inputFormat="MM/dd/yyyy"
           startText={formatMessage({ id: `form.labels.${suffix}Start` })}
           endText={formatMessage({ id: `form.labels.${suffix}End` })}
@@ -38,9 +37,22 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
           renderInput={(startProps: TextFieldProps, endProps: TextFieldProps): ReactElement => {
             return (
               <Fragment>
-                <TextField {...form.register(`${name}Start`)} {...startProps} variant={variant} fullWidth />
+                <TextField
+                  className={classes.root}
+                  {...form.register(`${name}Start`)}
+                  {...startProps}
+                  variant={variant}
+                  fullWidth
+                />
                 <Box sx={{ mx: 1 }}> &raquo; </Box>
-                <TextField {...form.register(`${name}End`)} {...endProps} name={`${name}End`} variant={variant} fullWidth />
+                <TextField
+                  className={classes.root}
+                  {...form.register(`${name}End`)}
+                  {...endProps}
+                  name={`${name}End`}
+                  variant={variant}
+                  fullWidth
+                />
               </Fragment>
             );
           }}

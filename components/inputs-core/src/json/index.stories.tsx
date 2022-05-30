@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Formik } from "formik";
+import { MemoryRouter } from "react-router-dom";
+import { FormikForm } from "@gemunion/mui-form";
 import { Story } from "@storybook/react";
 
 import { JsonInput } from "./index";
@@ -18,18 +19,20 @@ export default {
   component: JsonInput,
   decorators: [
     (Story: Story): ReactElement => (
-      <IntlProvider locale="en" messages={i18n}>
-        <Formik
-          onSubmit={() => {}}
-          initialValues={{
-            json: JSON.stringify({
-              a: 1,
-            }),
-          }}
-        >
-          <Story />
-        </Formik>
-      </IntlProvider>
+      <MemoryRouter>
+        <IntlProvider locale="en" messages={i18n}>
+          <FormikForm
+            onSubmit={() => {}}
+            initialValues={{
+              json: JSON.stringify({
+                a: 1,
+              }),
+            }}
+          >
+            <Story />
+          </FormikForm>
+        </IntlProvider>
+      </MemoryRouter>
     ),
   ],
 };
