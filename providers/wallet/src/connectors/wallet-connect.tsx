@@ -8,9 +8,7 @@ const chainId = process.env.CHAIN_ID;
 export const walletConnectConnector = new WalletConnectConnector({
   // supportedChainIds: Object.values(networkToChainId),
   rpc: {
-    /* javascript-obfuscator:disable */
     [chainId]: jsonRpcUrl,
-    /* javascript-obfuscator:enable */
   },
   qrcode: true,
 });
