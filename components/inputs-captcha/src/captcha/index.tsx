@@ -18,10 +18,14 @@ export const Captcha: FC<ICaptchaProps> = props => {
   const error = getIn(formik.errors, name);
   const classes = useStyles();
 
+  /* javascript-obfuscator:disable */
+  const siteKey = process.env.GOOGLE_RECAPTCHA_PUBLIC;
+  /* javascript-obfuscator:enable */
+
   return (
     <Grid className={classes.root}>
       <ReCAPTCHA
-        sitekey={process.env.GOOGLE_RECAPTCHA_PUBLIC}
+        sitekey={siteKey}
         onChange={(value: string | null): void => {
           formik.setFieldValue(name, value);
         }}
