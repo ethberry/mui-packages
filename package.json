@@ -58,6 +58,7 @@
     "clean": "sh scripts/clean.sh",
     "kill": "sudo pkill -9 node",
     "lint": "lerna run lint --stream",
+    "obfuscate": "sh scripts/obfuscate.sh",
     "precommit": "lint-staged",
     "prettier": "prettier \"components/**/*.{ts,tsx}\" \"other/**/*.{ts,tsx}\" \"providers/**/*.{ts,tsx}\" --write",
     "registry": "lerna publish",
