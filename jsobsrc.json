@@ -9,6 +9,7 @@
   "numbersToExpressions": false,
   "renameGlobals": false,
   "selfDefending": true,
+  "ignoreImports": true,
   "simplify": true,
   "target": "node",
   "unicodeEscapeSequence": false
