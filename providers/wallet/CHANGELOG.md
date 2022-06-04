@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.8](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.12.7...@gemunion/provider-wallet@0.12.8) (2022-06-04)
+
+
+### Bug Fixes
+
+* obfuscator ignore ([6a67850](https://github.com/gemunion/mui-packages/commit/6a67850a6d35d29811bd5262dbb1213fc2426a69))
+
+
+
+
+
 ## [0.12.7](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@0.12.6...@gemunion/provider-wallet@0.12.7) (2022-06-02)
 
 **Note:** Version bump only for package @gemunion/provider-wallet
