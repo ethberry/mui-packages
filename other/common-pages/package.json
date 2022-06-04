@@ -17,7 +17,7 @@
     "@gemunion/provider-api": "5.8.1",
     "@gemunion/provider-user": "3.3.9",
     "@gemunion/react-hooks": "0.7.7",
-    "@gemunion/yup-rules": "1.8.5",
+    "@gemunion/yup-rules": "1.8.6",
     "yup": "0.32.11"
   },
   "description": "react context provider",
