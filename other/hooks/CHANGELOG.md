@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.8 (2022-06-05)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([d60be0f](https://github.com/gemunion/mui-packages/commit/d60be0f9e96c6663bc1126f9f1c71bfa798eb5d7))
+
+
+
+
+
 ## [0.7.7](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@0.7.6...@gemunion/react-hooks@0.7.7) (2022-06-02)
 
 **Note:** Version bump only for package @gemunion/react-hooks
