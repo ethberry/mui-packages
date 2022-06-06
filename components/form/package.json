@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "@gemunion/mui-page-layout": "0.1.9",
-    "use-debounce": "8.0.1",
-    "@hookform/resolvers": "2.9.0"
+    "@hookform/resolvers": "2.9.0",
+    "use-debounce": "8.0.1"
   },
   "description": "react widget",
   "devDependencies": {
@@ -53,5 +53,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "5.1.0"
+  "version": "5.1.1"
 }

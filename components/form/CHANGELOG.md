@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@5.1.0...@gemunion/mui-form@5.1.1) (2022-06-06)
+
+
+### Bug Fixes
+
+* make yup resolvers dep ([c08a55c](https://github.com/gemunion/mui-packages/commit/c08a55c97f00e9cc92f4a6cc5b66eae7ca7c8584))
+
+
+
+
+
 # 5.1.0 (2022-06-06)
 
 
