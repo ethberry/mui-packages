@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.2](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@5.1.1...@gemunion/mui-form@5.1.2) (2022-06-06)
+
+
+### Bug Fixes
+
+* onSearch -> onSubmit ([eb3cd84](https://github.com/gemunion/mui-packages/commit/eb3cd84fc80f3524765704c436abc53dd294e70d))
+
+
+
+
+
 ## [5.1.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@5.1.0...@gemunion/mui-form@5.1.1) (2022-06-06)
 
 
