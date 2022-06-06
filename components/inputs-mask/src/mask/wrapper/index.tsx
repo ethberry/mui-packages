@@ -1,19 +1,6 @@
 import { forwardRef } from "react";
-import { IMaskInput } from "react-imask";
+import NumberFormat from "react-number-format";
 
-export const MaskedInputWrapper = forwardRef<any, any>((props, inputRef) => {
-  const { maskedRef, ...rest } = props;
-
-  return (
-    <IMaskInput
-      ref={(ref: any) => {
-        if (ref && maskedRef && !maskedRef.current) {
-          maskedRef.current = ref.maskRef;
-        }
-        // @ts-ignore
-        inputRef(ref ? ref.inputElement : null);
-      }}
-      {...rest}
-    />
-  );
+export const MaskedInputWrapper = forwardRef<NumberFormat<any>>(function NumberFormatCustom(props, ref) {
+  return <NumberFormat {...props} getInputRef={ref} />;
 });

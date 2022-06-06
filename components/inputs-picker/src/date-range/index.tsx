@@ -1,6 +1,6 @@
 import { FC, Fragment, ReactElement } from "react";
 import { useIntl } from "react-intl";
-import { getIn, useFormikContext } from "formik";
+import { Controller, useFormContext } from "react-hook-form";
 import { Box, TextField, TextFieldProps } from "@mui/material";
 import { DateRange, DateRangePicker } from "@mui/lab";
 
@@ -20,31 +20,45 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
 
   const suffix = name.split(".").pop() as string;
 
-  const formik = useFormikContext<any>();
-  const value = getIn(formik.values, name);
+  const form = useFormContext<any>();
 
   const { formatMessage } = useIntl();
 
   return (
-    <DateRangePicker
-      className={classes.root}
-      inputFormat="MM/dd/yyyy"
-      startText={formatMessage({ id: `form.labels.${suffix}Start` })}
-      endText={formatMessage({ id: `form.labels.${suffix}End` })}
-      value={value}
-      onChange={(dateRange: DateRange<Date> | null): void => {
-        formik.setFieldValue(name, dateRange);
-      }}
-      renderInput={(startProps: TextFieldProps, endProps: TextFieldProps): ReactElement => {
-        return (
-          <Fragment>
-            <TextField {...startProps} name={`${name}Start`} variant={variant} onBlur={formik.handleBlur} fullWidth />
-            <Box sx={{ mx: 1 }}> &raquo; </Box>
-            <TextField {...endProps} name={`${name}End`} variant={variant} onBlur={formik.handleBlur} fullWidth />
-          </Fragment>
-        );
-      }}
-      {...rest}
+    <Controller
+      name={name}
+      control={form.control}
+      render={({ field }) => (
+        <DateRangePicker
+          inputFormat="MM/dd/yyyy"
+          startText={formatMessage({ id: `form.labels.${suffix}Start` })}
+          endText={formatMessage({ id: `form.labels.${suffix}End` })}
+          {...field}
+          renderInput={(startProps: TextFieldProps, endProps: TextFieldProps): ReactElement => {
+            return (
+              <Fragment>
+                <TextField
+                  className={classes.root}
+                  {...form.register(`${name}Start`)}
+                  {...startProps}
+                  variant={variant}
+                  fullWidth
+                />
+                <Box sx={{ mx: 1 }}> &raquo; </Box>
+                <TextField
+                  className={classes.root}
+                  {...form.register(`${name}End`)}
+                  {...endProps}
+                  name={`${name}End`}
+                  variant={variant}
+                  fullWidth
+                />
+              </Fragment>
+            );
+          }}
+          {...rest}
+        />
+      )}
     />
   );
 };

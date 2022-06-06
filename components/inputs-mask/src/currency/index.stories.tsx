@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Formik } from "formik";
+import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 
 import { CurrencyInput, ICurrencyInputProps } from "./index";
@@ -16,9 +16,9 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <Formik onSubmit={() => {}} initialValues={{ currencyMask: 100 }}>
+        <FormProvider {...useForm({ defaultValues: { currencyMask: 100 } })}>
           <Story />
-        </Formik>
+        </FormProvider>
       </IntlProvider>
     ),
   ],

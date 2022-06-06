@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Formik } from "formik";
+import { FormWrapper } from "@gemunion/mui-form";
+// import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 
 import { ITextInputProps, TextInput } from "./index";
@@ -42,29 +43,37 @@ export default {
   },
 };
 
-const SimpleTemplate: Story<ITextInputProps> = args => (
-  <Formik onSubmit={() => {}} initialValues={{ text: "qwerty" }}>
-    <TextInput {...args} />
-  </Formik>
-);
+const SimpleTemplate: Story<ITextInputProps> = args => {
+  return (
+    <FormWrapper onSubmit={() => {}} initialValues={{ text: "qwerty" }}>
+      <TextInput {...args} />
+    </FormWrapper>
+  );
+};
 
 export const Simple = SimpleTemplate.bind({});
 Simple.args = {
   name: "text",
 };
 
-const ErroredTemplate: Story<ITextInputProps> = args => (
-  <Formik
-    onSubmit={() => {}}
-    initialValues={{ text: "qwerty" }}
-    initialErrors={{ text: "form.validations.required" }}
-    initialTouched={{ text: true }}
-  >
-    <TextInput {...args} />
-  </Formik>
-);
-
-export const Errored = ErroredTemplate.bind({});
-Errored.args = {
-  name: "text",
-};
+// const ErroredTemplate: Story<ITextInputProps> = args => {
+//   const form = useForm({
+//     defaultValues: {
+//       text: "qwerty",
+//     },
+//   });
+//
+//   form.setValue("text", "qwerty", { shouldTouch: true });
+//   form.setError("text", { message: "form.validations.required" });
+//
+//   return (
+//     <FormProvider {...form}>
+//       <TextInput {...args} />
+//     </FormProvider>
+//   );
+// };
+//
+// export const Errored = ErroredTemplate.bind({});
+// Errored.args = {
+//   name: "text",
+// };

@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Formik } from "formik";
+import { FormWrapper } from "@gemunion/mui-form";
 import { SnackbarProvider } from "notistack";
 import { Story } from "@storybook/react";
 
@@ -26,9 +26,9 @@ export default {
       <ApiProvider baseUrl={"http://localhost/"}>
         <IntlProvider locale="en" messages={i18n}>
           <SnackbarProvider>
-            <Formik onSubmit={() => {}} initialValues={{ avatar: "" }}>
+            <FormWrapper onSubmit={() => {}} initialValues={{ avatar: "" }}>
               <Story />
-            </Formik>
+            </FormWrapper>
           </SnackbarProvider>
         </IntlProvider>
       </ApiProvider>

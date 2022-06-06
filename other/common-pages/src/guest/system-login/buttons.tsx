@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useFormikContext } from "formik";
+import { useFormContext } from "react-hook-form";
 import { Button } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 import { Link as RouterLink } from "react-router-dom";
@@ -7,10 +7,12 @@ import { Link as RouterLink } from "react-router-dom";
 import { ButtonToolbar } from "@gemunion/mui-page-layout";
 
 export const LoginButtons: FC = () => {
-  const formik = useFormikContext();
+  const {
+    formState: { isSubmitting },
+  } = useFormContext();
   return (
     <ButtonToolbar>
-      <Button variant="text" type="button" to="/forgot-password" component={RouterLink} data-testid="forgotEmailButton">
+      <Button variant="text" type="button" to="/forgot-password" component={RouterLink} data-testid="ForgotEmailButton">
         <FormattedMessage id="form.buttons.forgot" />
       </Button>
       <Button
@@ -18,7 +20,7 @@ export const LoginButtons: FC = () => {
         type="button"
         to="/registration"
         component={RouterLink}
-        data-testid="signupWithEmailButton"
+        data-testid="SignupWithEmailButton"
       >
         <FormattedMessage id="form.buttons.signup" />
       </Button>
@@ -26,8 +28,8 @@ export const LoginButtons: FC = () => {
         variant="contained"
         type="submit"
         color="primary"
-        disabled={formik.isSubmitting}
-        data-testid="loginWithEmailButton"
+        disabled={isSubmitting}
+        data-testid="LoginWithEmailButton"
       >
         <FormattedMessage id="form.buttons.login" />
       </Button>

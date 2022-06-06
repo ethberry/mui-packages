@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Formik } from "formik";
+import { FormWrapper } from "@gemunion/mui-form";
 import { Story } from "@storybook/react";
 import { LicenseProvider } from "@gemunion/provider-license";
 import { markdownString } from "@gemunion/draft-js-utils";
@@ -26,22 +26,26 @@ export default {
   ],
 };
 
-const MarkdownTemplate: Story<IMarkdownInputProps> = args => (
-  <Formik onSubmit={() => {}} initialValues={{}}>
-    <MarkdownInput {...args} />
-  </Formik>
-);
+const MarkdownTemplate: Story<IMarkdownInputProps> = args => {
+  return (
+    <FormWrapper onSubmit={() => {}} initialValues={{}}>
+      <MarkdownInput {...args} />
+    </FormWrapper>
+  );
+};
 
 export const Simple = MarkdownTemplate.bind({});
 Simple.args = {
   name: "markdown",
 };
 
-const MarkdownDefaultValueTemplate: Story<IMarkdownInputProps> = args => (
-  <Formik onSubmit={() => {}} initialValues={{ markdown: markdownString }}>
-    <MarkdownInput {...args} />
-  </Formik>
-);
+const MarkdownDefaultValueTemplate: Story<IMarkdownInputProps> = args => {
+  return (
+    <FormWrapper onSubmit={() => {}} initialValues={{ markdown: markdownString }}>
+      <MarkdownInput {...args} />
+    </FormWrapper>
+  );
+};
 
 export const DefaultValue = MarkdownDefaultValueTemplate.bind({});
 DefaultValue.args = {

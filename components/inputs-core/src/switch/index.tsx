@@ -1,6 +1,6 @@
 import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
-import { getIn, useFormikContext } from "formik";
+import { Controller, useFormContext } from "react-hook-form";
 
 import { FormControlLabel, Switch, SwitchProps } from "@mui/material";
 import { useStyles } from "./styles";
@@ -16,19 +16,31 @@ export const SwitchInput: FC<ISwitchInputProps & SwitchProps> = props => {
 
   const suffix = name.split(".").pop() as string;
 
-  const formik = useFormikContext<any>();
-  const value = getIn(formik.values, name);
+  const form = useFormContext<any>();
 
   const { formatMessage } = useIntl();
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
 
   return (
-    <FormControlLabel
-      classes={classes}
-      control={
-        <Switch name={name} checked={value} onChange={formik.handleChange} onBlur={formik.handleBlur} {...rest} />
-      }
-      label={localizedLabel}
+    <Controller
+      name={name}
+      control={form.control}
+      render={({ field }) => (
+        <FormControlLabel
+          classes={classes}
+          control={
+            <Switch
+              name={field.name}
+              checked={field.value}
+              inputRef={field.ref}
+              onChange={field.onChange}
+              onBlur={field.onBlur}
+              {...rest}
+            />
+          }
+          label={localizedLabel}
+        />
+      )}
     />
   );
 };

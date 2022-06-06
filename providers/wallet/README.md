@@ -11,8 +11,8 @@
           <Wallet />
         </WalletProvider>
       </PopupProvider>
-    <SnackbarProvider>
-  <LocalizationProvider>
+    </SnackbarProvider>
+  </LocalizationProvider>
 </GemunionThemeProvider>
 ```
 

@@ -1,12 +1,21 @@
 import { FC, useEffect } from "react";
-import { useFormikContext } from "formik";
+import { useWatch } from "react-hook-form";
+import { useDebouncedCallback } from "use-debounce";
 
-export const AutoSave: FC = () => {
-  const formik = useFormikContext();
+interface IAutoSaveProps {
+  onSearch: (values: any) => void;
+}
+
+export const AutoSave: FC<IAutoSaveProps> = props => {
+  const { onSearch } = props;
+
+  const watch = useWatch();
+
+  const debouncedOnSearch = useDebouncedCallback(() => onSearch(watch), 300);
 
   useEffect(() => {
-    formik.handleSubmit();
-  }, [formik.values]);
+    debouncedOnSearch();
+  }, [watch]);
 
   return null;
 };

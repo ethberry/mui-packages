@@ -1,7 +1,7 @@
 import { IntlProvider } from "react-intl";
 import { cleanup, render } from "@testing-library/react";
 import { createTheme, ThemeProvider } from "@mui/material";
-import { Formik } from "formik";
+import { FormWrapper } from "@gemunion/mui-form";
 
 import { NumberInput } from "./index";
 
@@ -19,19 +19,12 @@ describe("<NumberInput />", () => {
       value: 50,
     };
 
-    const formikProps = {
-      onSubmit: jest.fn(),
-      initialValues: {
-        number: 50,
-      },
-    };
-
     const { asFragment } = render(
       <ThemeProvider theme={createTheme()}>
         <IntlProvider locale="en" messages={i18n}>
-          <Formik {...formikProps}>
+          <FormWrapper onSubmit={() => {}} initialValues={{ number: 50 }}>
             <NumberInput {...props} />
-          </Formik>
+          </FormWrapper>
         </IntlProvider>
       </ThemeProvider>,
     );
@@ -45,19 +38,12 @@ describe("<NumberInput />", () => {
       value: -50,
     };
 
-    const formikProps = {
-      onSubmit: jest.fn(),
-      initialValues: {
-        number: -50,
-      },
-    };
-
     const { asFragment } = render(
       <ThemeProvider theme={createTheme()}>
         <IntlProvider locale="en" messages={i18n}>
-          <Formik {...formikProps}>
+          <FormWrapper onSubmit={() => {}} initialValues={{ number: -50 }}>
             <NumberInput {...props} />
-          </Formik>
+          </FormWrapper>
         </IntlProvider>
       </ThemeProvider>,
     );
@@ -71,19 +57,12 @@ describe("<NumberInput />", () => {
       value: 9.99,
     };
 
-    const formikProps = {
-      onSubmit: jest.fn(),
-      initialValues: {
-        number: 9.99,
-      },
-    };
-
     const { asFragment } = render(
       <ThemeProvider theme={createTheme()}>
         <IntlProvider locale="en" messages={i18n}>
-          <Formik {...formikProps}>
+          <FormWrapper onSubmit={() => {}} initialValues={{ number: 9.99 }}>
             <NumberInput {...props} />
-          </Formik>
+          </FormWrapper>
         </IntlProvider>
       </ThemeProvider>,
     );

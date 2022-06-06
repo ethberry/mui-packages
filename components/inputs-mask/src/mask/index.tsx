@@ -1,92 +1,102 @@
-import { FC, useRef } from "react";
-import { TextFieldProps } from "@mui/material";
-import { getIn, useFormikContext } from "formik";
-
-import { TextInput } from "@gemunion/mui-inputs-core";
+import { FC } from "react";
+import { Controller, useFormContext } from "react-hook-form";
+import { useIntl } from "react-intl";
+import { TextField } from "@mui/material";
 
 import { MaskedInputWrapper } from "./wrapper";
+import { useStyles } from "./styled";
 
 export interface IMaskedInputProps {
   name: string;
+  thousandSeparator?: string;
+  isNumericString?: boolean;
+  prefix?: string;
+  decimalSeparator?: string;
+  allowNegative?: boolean;
+  allowLeadingZeros?: boolean;
   readOnly?: boolean;
-  disabled?: boolean;
-  mask: any;
-  unmask?: boolean | "typed";
-  dispatch?: (appended: string, dynamicMasked: any) => any;
-  onBlur?: (event: Event) => void;
-  onChange?: (event: Event) => void;
-  onFocus?: (event: Event) => void;
-  definitions?: any;
-  maskedRef?: any;
-  blocks?: any;
-  lazy?: boolean;
+  formatValue?: (value: string) => string | number;
+  InputLabelProps?: any;
+  InputProps?: any;
+  defaultValue?: any;
   value?: any;
-  useMaskedValue?: boolean;
-  updateValue?: (ref: any) => void;
-  prepare?: (value: string, masked: any) => string;
-  commit?: (value: string, masked: any) => void;
+  displayType?: "input" | "text";
+  type?: "text" | "tel" | "password";
+  format?: string;
+  mask?: string;
+  placeholder?: string;
+  variant?: "standard" | "filled" | "outlined";
+  onChange?: (event: { target: { name: string; value: string } }) => void;
+  label?: string;
 }
 
-export const MaskedInput: FC<IMaskedInputProps & TextFieldProps> = props => {
+export const MaskedInput: FC<IMaskedInputProps> = props => {
   const {
     name,
-    mask,
-    unmask,
-    readOnly,
-    dispatch,
-    definitions,
-    blocks,
-    lazy,
-    commit,
-    prepare,
+    formatValue,
+    value: _value,
+    label,
     InputLabelProps,
-    inputProps,
-    updateValue,
-    useMaskedValue = true,
-    value,
+    InputProps,
+    placeholder,
+    variant = "standard",
+    readOnly,
     ...rest
   } = props;
 
-  const maskedRef = useRef<any>(null);
-  const formik = useFormikContext<any>();
-  const defaultValue = getIn(formik.values, name);
+  const classes = useStyles();
 
-  const handleOnBlur = (): void => {
-    if (updateValue) return updateValue(maskedRef);
+  const form = useFormContext<any>();
+  const error = form.formState.errors[name];
+  const touched = Boolean(form.formState.touchedFields[name]);
 
-    const val = useMaskedValue ? maskedRef.current.value : maskedRef.current.unmaskedValue;
-    formik.setFieldValue(name, val);
-  };
+  const suffix = name.split(".").pop() as string;
+  const { formatMessage } = useIntl();
+  const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
+  const localizedPlaceholder =
+    placeholder === void 0 ? formatMessage({ id: `form.placeholders.${suffix}` }) : placeholder;
+  const localizedHelperText = error && touched ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   return (
-    <TextInput
+    <Controller
       name={name}
-      value={value || defaultValue}
-      onBlur={() => {}}
-      onFocus={() => {}}
-      onChange={() => {}}
-      InputLabelProps={{
-        ...InputLabelProps,
-        shrink: true,
+      control={form.control}
+      render={({ field }) => {
+        const onValueChange = (values: any) => {
+          field.onChange({
+            target: {
+              name: props.name,
+              value: formatValue ? formatValue(values.value) : values.value,
+            },
+          });
+        };
+
+        return (
+          <TextField
+            classes={classes}
+            label={localizedLabel}
+            placeholder={localizedPlaceholder}
+            helperText={localizedHelperText}
+            error={Boolean(error)}
+            variant={variant}
+            fullWidth
+            onBlur={field.onBlur}
+            InputLabelProps={{
+              ...InputLabelProps,
+              shrink: true,
+            }}
+            InputProps={{
+              ...InputProps,
+              readOnly,
+              inputComponent: MaskedInputWrapper as any,
+              inputProps: {
+                onValueChange,
+                ...rest,
+              },
+            }}
+          />
+        );
       }}
-      InputProps={{
-        readOnly,
-        inputComponent: MaskedInputWrapper,
-        inputProps: {
-          mask,
-          unmask,
-          definitions,
-          blocks,
-          lazy,
-          prepare,
-          commit,
-          maskedRef,
-          onBlur: handleOnBlur,
-          ...(dispatch ? { dispatch } : {}), // ??
-          ...inputProps,
-        },
-      }}
-      {...rest}
     />
   );
 };

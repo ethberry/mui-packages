@@ -10,7 +10,7 @@ import {
   Grid,
   InputLabel,
 } from "@mui/material";
-import { getIn, useFormikContext } from "formik";
+import { useFormContext, useWatch } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import path from "path";
@@ -33,10 +33,10 @@ export interface IPhotoInputProps {
 export const PhotoInput: FC<IPhotoInputProps> = props => {
   const { name, label, accept, bucket } = props;
 
-  const formik = useFormikContext<any>();
-  const error = getIn(formik.errors, name);
-  const value = getIn(formik.values, name);
-  const touched = getIn(formik.touched, name);
+  const form = useFormContext<any>();
+  const error = form.formState.errors[name];
+  const touched = Boolean(form.formState.touchedFields[name]);
+  const value = useWatch({ name });
 
   const classes = useStyles();
   const { formatMessage } = useIntl();
@@ -47,7 +47,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
 
   const suffix = name.split(".").pop() as string;
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
-  const localizedHelperText = error ? formatMessage({ id: error }, { label: localizedLabel }) : "";
+  const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   const handleOptionDelete = (index: number): (() => void) => {
     return (): void => {
@@ -57,13 +57,13 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
   };
 
   const handleDeleteConfirm = async (): Promise<void> => {
-    const newValue = getIn(formik.values, name);
+    const newValue = form.getValues(name);
     const [deleted] = newValue.splice(selectedImageIndex, 1);
     const fileName = path.basename(new URL(deleted.imageUrl).pathname);
 
     await deleteUrl(fileName);
 
-    formik.setFieldValue(name, newValue);
+    form.setValue(name, newValue, { shouldTouch: false });
     setIsDeleteImageDialogOpen(false);
   };
 
@@ -73,14 +73,14 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
 
   const handleFileChange = (urls: Array<string>): void => {
     setIsLoading(true);
-    const newValue = getIn(formik.values, name);
+    const newValue = form.getValues(name);
     urls.forEach(imageUrl => {
       newValue.push({
         imageUrl,
         title: "",
       });
     });
-    formik.setFieldValue(name, newValue);
+    form.setValue(name, newValue, { shouldTouch: true });
     setIsLoading(false);
   };
 
@@ -91,11 +91,11 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
     }
     setIsLoading(true);
 
-    const newValue = getIn(formik.values, name);
+    const newValue = form.getValues(name);
     const [removed] = newValue.splice(result.source.index, 1);
     newValue.splice(result.destination.index, 0, removed);
 
-    formik.setFieldValue(name, newValue);
+    form.setValue(name, newValue);
     setIsLoading(false);
   };
 

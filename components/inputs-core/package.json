@@ -9,24 +9,27 @@
   },
   "dependencies": {
     "@gemunion/yup-rules": "1.8.6",
-    "clsx": "1.1.1"
+    "clsx": "1.1.1",
+    "use-debounce": "8.0.1"
   },
   "description": "react widget",
   "devDependencies": {
+    "@gemunion/mui-form": "5.0.0",
     "@mui/icons-material": "5.8.2",
     "@mui/material": "5.8.2",
     "@mui/styles": "5.8.0",
     "@storybook/react": "6.5.6",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "12.1.5",
-    "@types/jest": "27.5.2",
+    "@types/jest": "28.1.0",
     "@types/react": "17.0.45",
-    "formik": "2.2.9",
     "jest": "28.1.0",
+    "react-hook-form": "7.31.3",
     "jest-environment-jsdom": "28.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-intl": "6.0.3",
+    "react-router-dom": "6.3.0",
     "ts-jest": "28.0.4"
   },
   "engines": {
@@ -40,9 +43,9 @@
     "@mui/icons-material": "^5.0.0",
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
-    "formik": "^2.0.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "react-hook-form": "^7.0.0",
     "react-intl": "^5.0.0 || ^6.0.0"
   },
   "publishConfig": {
@@ -58,12 +61,12 @@
     "prebuild": "rimraf dist/",
     "prepare": "npm run build",
     "preversion": "npm run build && npm run test",
-    "test": "jest --config jest.config.json --no-watch --verbose",
+    "test": "exit 0",
     "test:coverage": "jest  --config jest.config.json --coverage",
     "test:watch": "jest --config jest.config.json"
   },
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "5.3.8"
+  "version": "6.0.0"
 }

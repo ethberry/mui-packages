@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Formik } from "formik";
+import { FormWrapper } from "@gemunion/mui-form";
 import { Story } from "@storybook/react";
 
 import { IPasswordInputProps, PasswordInput } from "./index";
@@ -16,9 +16,9 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <Formik onSubmit={() => {}} initialValues={{ password: "" }}>
+        <FormWrapper onSubmit={() => {}} initialValues={{ password: "" }}>
           <Story />
-        </Formik>
+        </FormWrapper>
       </IntlProvider>
     ),
   ],

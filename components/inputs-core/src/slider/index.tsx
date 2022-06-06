@@ -1,6 +1,6 @@
 import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
-import { getIn, useFormikContext } from "formik";
+import { Controller, useFormContext, useWatch } from "react-hook-form";
 import { FormControlLabel, Slider, SliderProps } from "@mui/material";
 
 import { useStyles } from "./styles";
@@ -16,29 +16,35 @@ export const SliderInput: FC<ISliderInputProps> = props => {
 
   const suffix = name.split(".").pop() as string;
 
-  const formik = useFormikContext<any>();
-  const value = getIn(formik.values, name);
+  const form = useFormContext<any>();
+  const value = useWatch({ name });
 
   const { formatMessage } = useIntl();
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
 
   return (
-    <FormControlLabel
-      labelPlacement="start"
-      classes={{ root: classes.label }}
-      control={
-        <Slider
-          name={name}
-          value={value}
-          classes={{ root: classes.slider }}
-          onChange={(_event, value): void => {
-            formik.setFieldValue(name, value);
-          }}
-          onBlur={formik.handleBlur}
-          {...rest}
+    <Controller
+      name={name}
+      control={form.control}
+      render={({ field }) => (
+        <FormControlLabel
+          labelPlacement="start"
+          classes={{ root: classes.label }}
+          control={
+            <Slider
+              {...field}
+              name={name}
+              value={value}
+              classes={{ root: classes.slider }}
+              onChange={(_event, value): void => {
+                form.setValue(name, value, { shouldTouch: true });
+              }}
+              {...rest}
+            />
+          }
+          label={localizedLabel}
         />
-      }
-      label={localizedLabel}
+      )}
     />
   );
 };

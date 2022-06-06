@@ -1,7 +1,7 @@
 import { ChangeEvent, FC, ReactElement, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import { useSnackbar } from "notistack";
-import { getIn, useFormikContext } from "formik";
+import { Controller, useFormContext, useWatch } from "react-hook-form";
 import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/material";
 
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
@@ -45,15 +45,15 @@ export const EntityInput: FC<IEntityInputProps> = props => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
 
-  const formik = useFormikContext<any>();
-  const error = getIn(formik.errors, name);
-  const touched = getIn(formik.touched, name);
-  const value = getIn(formik.values, name);
+  const form = useFormContext<any>();
+  const error = form.formState.errors[name];
+  const touched = Boolean(form.formState.touchedFields[name]);
+  const value = useWatch({ name });
 
   const { formatMessage } = useIntl();
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
   const localizedPlaceholder = formatMessage({ id: `form.placeholders.${suffix}` });
-  const localizedHelperText = error && touched ? formatMessage({ id: error }, { label: localizedLabel }) : "";
+  const localizedHelperText = error && touched ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   const [isLoading, setIsLoading] = useState(false);
   const [options, setOptions] = useState<Array<IAutocompleteOption>>([]);
@@ -90,81 +90,91 @@ export const EntityInput: FC<IEntityInputProps> = props => {
     return () => abortController.abort();
   }, [data]);
 
-  if (multiple) {
-    return (
-      <ProgressOverlay isLoading={isLoading}>
-        <Autocomplete
-          open={open}
-          onOpen={() => !readOnly && setOpen(true)}
-          onClose={() => setOpen(false)}
-          disableClearable={readOnly}
-          classes={classes}
-          multiple={true}
-          disabled={disabled}
-          options={options}
-          // preserve order
-          value={value
-            .map((v: string | number) => options.find(o => o.id === v))
-            .filter((e: IAutocompleteOption | undefined) => e)}
-          // value={options.filter((option: IAutocompleteOption) => value.includes(option.id) as boolean)}
-          onChange={
-            onChange ||
-            ((_event: ChangeEvent<unknown>, options: Array<IAutocompleteOption> | null): void => {
-              const value = options ? options.map((option: IAutocompleteOption) => option.id) : [];
-              formik.setFieldValue(name, value);
-            })
-          }
-          getOptionLabel={(option: IAutocompleteOption) => (getTitle ? getTitle(option) : option.title)}
-          renderInput={(params: AutocompleteRenderInputParams): ReactElement => (
-            <TextField
-              {...params}
-              InputProps={{ ...params.InputProps, readOnly }}
-              label={localizedLabel}
-              placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}
-              error={!!error}
-              helperText={localizedHelperText}
-              variant={variant}
-              fullWidth
-            />
-          )}
-        />
-      </ProgressOverlay>
-    );
-  } else {
-    return (
-      <ProgressOverlay isLoading={isLoading}>
-        <Autocomplete
-          open={open}
-          onOpen={() => !readOnly && setOpen(true)}
-          onClose={() => setOpen(false)}
-          disableClearable={readOnly}
-          classes={classes}
-          multiple={false}
-          disabled={disabled}
-          options={options}
-          value={options.find((option: IAutocompleteOption) => value === option.id) || null}
-          onChange={
-            onChange ||
-            ((_event: ChangeEvent<unknown>, option: IAutocompleteOption | null): void => {
-              const value = option ? option.id : null;
-              formik.setFieldValue(name, value);
-            })
-          }
-          getOptionLabel={(option: IAutocompleteOption): string => (getTitle ? getTitle(option) : option.title)}
-          renderInput={(params: AutocompleteRenderInputParams): ReactElement => (
-            <TextField
-              {...params}
-              InputProps={{ ...params.InputProps, readOnly }}
-              label={localizedLabel}
-              placeholder={localizedPlaceholder}
-              error={error && touched}
-              helperText={localizedHelperText}
-              variant={variant}
-              fullWidth
-            />
-          )}
-        />
-      </ProgressOverlay>
-    );
-  }
+  return (
+    <Controller
+      name={name}
+      control={form.control}
+      render={({ field }) => {
+        if (multiple) {
+          return (
+            <ProgressOverlay isLoading={isLoading}>
+              <Autocomplete
+                open={open}
+                onOpen={() => !readOnly && setOpen(true)}
+                onClose={() => setOpen(false)}
+                disableClearable={readOnly}
+                classes={classes}
+                multiple={true}
+                disabled={disabled}
+                options={options}
+                // preserve order
+                value={value
+                  .map((v: string | number) => options.find(o => o.id === v))
+                  .filter((e: IAutocompleteOption | undefined) => e)}
+                // value={options.filter((option: IAutocompleteOption) => value.includes(option.id) as boolean)}
+                onChange={
+                  onChange ||
+                  ((_event: ChangeEvent<unknown>, options: Array<IAutocompleteOption> | null): void => {
+                    const value = options ? options.map((option: IAutocompleteOption) => option.id) : [];
+                    form.setValue(name, value, { shouldTouch: true });
+                  })
+                }
+                getOptionLabel={(option: IAutocompleteOption) => (getTitle ? getTitle(option) : option.title)}
+                renderInput={(params: AutocompleteRenderInputParams): ReactElement => (
+                  <TextField
+                    {...field}
+                    {...params}
+                    InputProps={{ ...params.InputProps, readOnly }}
+                    label={localizedLabel}
+                    placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}
+                    error={!!error}
+                    helperText={localizedHelperText}
+                    variant={variant}
+                    fullWidth
+                  />
+                )}
+              />
+            </ProgressOverlay>
+          );
+        } else {
+          return (
+            <ProgressOverlay isLoading={isLoading}>
+              <Autocomplete
+                open={open}
+                onOpen={() => !readOnly && setOpen(true)}
+                onClose={() => setOpen(false)}
+                disableClearable={readOnly}
+                classes={classes}
+                multiple={false}
+                disabled={disabled}
+                options={options}
+                value={options.find((option: IAutocompleteOption) => value === option.id) || null}
+                onChange={
+                  onChange ||
+                  ((_event: ChangeEvent<unknown>, option: IAutocompleteOption | null): void => {
+                    const value = option ? option.id : null;
+                    form.setValue(name, value, { shouldTouch: true });
+                  })
+                }
+                getOptionLabel={(option: IAutocompleteOption): string => (getTitle ? getTitle(option) : option.title)}
+                renderInput={(params: AutocompleteRenderInputParams): ReactElement => (
+                  <TextField
+                    {...field}
+                    {...params}
+                    InputProps={{ ...params.InputProps, readOnly }}
+                    label={localizedLabel}
+                    placeholder={localizedPlaceholder}
+                    error={error && touched}
+                    helperText={localizedHelperText}
+                    variant={variant}
+                    fullWidth
+                  />
+                )}
+              />
+            </ProgressOverlay>
+          );
+        }
+      }}
+    />
+  );
 };

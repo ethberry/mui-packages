@@ -13,11 +13,10 @@ const i18n = {
   "form.hints.prompt": "Prompt",
 };
 
-// https://github.com/jaredpalmer/formik/issues/1543
 describe.skip("<CommonSearchForm />", () => {
   it("renders component", () => {
-    const formikProps = {
-      onSubmit: jest.fn(),
+    const formProps = {
+      onSearch: jest.fn(),
       initialValues: {
         number: 50,
       },
@@ -27,7 +26,7 @@ describe.skip("<CommonSearchForm />", () => {
       <MemoryRouter>
         <ThemeProvider theme={createTheme()}>
           <IntlProvider locale="en" messages={i18n}>
-            <CommonSearchForm {...formikProps} />
+            <CommonSearchForm {...formProps} />
           </IntlProvider>
         </ThemeProvider>
       </MemoryRouter>,

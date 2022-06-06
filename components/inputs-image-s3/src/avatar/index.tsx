@@ -1,5 +1,5 @@
 import { FC, ReactElement } from "react";
-import { getIn, useFormikContext } from "formik";
+import { useFormContext, useWatch } from "react-hook-form";
 import { FormControl, FormHelperText, Grid, IconButton, InputLabel, Tooltip } from "@mui/material";
 import { Delete } from "@mui/icons-material";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -18,25 +18,25 @@ export interface IAvatarInputProps {
 export const AvatarInput: FC<IAvatarInputProps> = props => {
   const { name, label, bucket, accept } = props;
 
-  const formik = useFormikContext<any>();
-  const error = getIn(formik.errors, name);
-  const value = getIn(formik.values, name);
-  const touched = getIn(formik.touched, name);
+  const form = useFormContext<any>();
+  const error = form.formState.errors[name];
+  const touched = Boolean(form.formState.touchedFields[name]);
+  const value = useWatch({ name });
 
   const classes = useStyles();
   const { formatMessage } = useIntl();
   const deleteUrl = useDeleteUrl(bucket);
   const suffix = name.split(".").pop() as string;
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
-  const localizedHelperText = error ? formatMessage({ id: error }, { label: localizedLabel }) : "";
+  const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   const onChange = (url: string) => {
-    formik.setFieldValue(name, url);
+    form.setValue(name, url, { shouldTouch: true });
   };
 
   const onDelete = async () => {
     await deleteUrl(value);
-    formik.setFieldValue(name, "");
+    form.setValue(name, "", { shouldTouch: false });
   };
 
   if (value) {
