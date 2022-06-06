@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@7.1.20...@gemunion/common-pages@8.1.0) (2022-06-06)
+
+
+### Features
+
+* formik -> RHF ([057a4da](https://github.com/gemunion/mui-packages/commit/057a4dac641e4bfe3892b94a29a0ffb2ab5c9ff5))
+
+
+
+
+
 ## [7.1.20](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@7.1.19...@gemunion/common-pages@7.1.20) (2022-06-05)
 
 

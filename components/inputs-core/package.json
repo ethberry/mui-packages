@@ -14,7 +14,7 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@gemunion/mui-form": "5.0.0",
+    "@gemunion/mui-form": "5.1.0",
     "@mui/icons-material": "5.8.2",
     "@mui/material": "5.8.2",
     "@mui/styles": "5.8.0",
@@ -24,10 +24,10 @@
     "@types/jest": "28.1.1",
     "@types/react": "17.0.45",
     "jest": "28.1.0",
-    "react-hook-form": "7.31.3",
     "jest-environment-jsdom": "28.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-hook-form": "7.31.3",
     "react-intl": "6.0.4",
     "react-router-dom": "6.3.0",
     "ts-jest": "28.0.4"
@@ -68,5 +68,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "6.0.0"
+  "version": "6.1.0"
 }
