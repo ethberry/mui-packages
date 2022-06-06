@@ -37,7 +37,7 @@ exports[`<CommonSearchForm /> renders component 1`] = `
           </button>
           <div
             class="MuiInputBase-root MuiInputBase-colorPrimary SearchInput-input-2 css-1le28he-MuiInputBase-root"
-            data-testid="commonSearchInput"
+            data-testid="CommonSearchInput"
           >
             <input
               class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"

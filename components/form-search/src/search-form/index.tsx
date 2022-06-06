@@ -6,19 +6,19 @@ import { SearchInput } from "@gemunion/mui-inputs-core";
 
 interface ICommonSearchFormProps {
   autosave?: boolean;
-  onSearch: (values: any) => void;
+  onSubmit: (values: any) => void;
   initialValues: any;
   open?: boolean;
 }
 
 export const CommonSearchForm: FC<ICommonSearchFormProps> = props => {
-  const { autosave = true, onSearch, initialValues, open = false, children } = props;
+  const { autosave = true, onSubmit, initialValues, open = false, children } = props;
 
   const { query } = initialValues;
   const fixedValues = { query };
 
   return (
-    <FormWrapper initialValues={fixedValues} onSubmit={onSearch} showButtons={false} showPrompt={false}>
+    <FormWrapper initialValues={fixedValues} onSubmit={onSubmit} showButtons={false} showPrompt={false}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={12}>
           <SearchInput name="query" data-testid="CommonSearchInput" />
@@ -29,7 +29,7 @@ export const CommonSearchForm: FC<ICommonSearchFormProps> = props => {
           {children}
         </Grid>
       </Collapse>
-      {autosave ? <AutoSave onSearch={onSearch} /> : null}
+      {autosave ? <AutoSave onSubmit={onSubmit} /> : null}
     </FormWrapper>
   );
 };
