@@ -16,7 +16,7 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <FormWrapper onSubmit={() => {}} initialValues={{ static: "static" }}>
+        <FormWrapper onSubmit={async () => {}} initialValues={{ static: "static" }}>
           <Story />
         </FormWrapper>
       </IntlProvider>

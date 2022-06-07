@@ -9,24 +9,27 @@ export interface IStandardTextInputProps extends StandardTextFieldProps {
   name: string;
   readOnly?: boolean;
   maskedRef?: any;
+  formatValue?: (value: number | string) => number | string;
 }
 
 export interface IFilledTextInputProps extends FilledTextFieldProps {
   name: string;
   readOnly?: boolean;
   maskedRef?: any;
+  formatValue?: (value: number | string) => number | string;
 }
 
 export interface IOutlinedTextInputProps extends OutlinedTextFieldProps {
   name: string;
   readOnly?: boolean;
   maskedRef?: any;
+  formatValue?: (value: any) => number | string;
 }
 
 export type ITextInputProps = IStandardTextInputProps | IFilledTextInputProps | IOutlinedTextInputProps;
 
 export const TextInput: FC<ITextInputProps> = props => {
-  const { name, label, readOnly, InputProps, placeholder, variant = "standard", ...rest } = props;
+  const { name, label, readOnly, InputProps, placeholder, formatValue, variant = "standard", ...rest } = props;
   const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
@@ -61,6 +64,13 @@ export const TextInput: FC<ITextInputProps> = props => {
               readOnly,
             }}
             {...field}
+            onChange={(e: any) => {
+              if (formatValue) {
+                field.onChange({ target: { name, value: formatValue(e.target.value) } });
+              } else {
+                field.onChange(e);
+              }
+            }}
             {...rest}
           />
         );

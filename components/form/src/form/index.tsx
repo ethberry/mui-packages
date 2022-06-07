@@ -37,7 +37,7 @@ export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
     resolver: validationSchema ? yupResolver(validationSchema) : undefined,
   });
 
-  const handleSubmit = async (e: any): Promise<void> => {
+  const handleSubmit = async (data: any, e: any): Promise<void> => {
     e.preventDefault();
     e.stopPropagation();
     const values = form.getValues();
@@ -47,12 +47,17 @@ export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
 
   return (
     <FormProvider {...form}>
-      <form onSubmit={handleSubmit} className={className} ref={innerRef}>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className={className} ref={innerRef}>
         <PromptIfDirty visible={showPrompt} />
 
         {children}
 
-        <FormButtons ref={formSubmitButtonRef} visible={showButtons} submit={submit} handleSubmit={handleSubmit} />
+        <FormButtons
+          ref={formSubmitButtonRef}
+          visible={showButtons}
+          submit={submit}
+          handleSubmit={form.handleSubmit(handleSubmit)}
+        />
       </form>
     </FormProvider>
   );

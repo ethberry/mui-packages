@@ -16,7 +16,7 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <FormWrapper onSubmit={() => {}} initialValues={{ number: 50 }}>
+        <FormWrapper onSubmit={async () => {}} initialValues={{ number: 50 }}>
           <Story />
         </FormWrapper>
       </IntlProvider>
