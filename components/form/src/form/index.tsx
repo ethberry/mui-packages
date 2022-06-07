@@ -41,7 +41,11 @@ export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
     e.preventDefault();
     e.stopPropagation();
 
-    onSubmit(form.getValues(), form);
+    const values = form.getValues();
+
+    onSubmit(values, form);
+
+    form.reset(values);
 
     return false;
   };
