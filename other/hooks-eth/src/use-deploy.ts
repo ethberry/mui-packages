@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { useMetamask } from "./useMetamask";
+import { useMetamask } from "./use-metamask";
 
 export const useDeploy = (deploy: (values: any) => Promise<void>) => {
   const [isDeployDialogOpen, setIsDeployDialogOpen] = useState(false);

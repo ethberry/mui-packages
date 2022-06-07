@@ -1,4 +1,4 @@
-import { useMetamaskValue } from "./useMetamaskValue";
+import { useMetamaskValue } from "./use-metamask-value";
 
 export const useMetamask = (fn: (...args: Array<any>) => Promise<void>) => {
   const metaFn = useMetamaskValue(fn);

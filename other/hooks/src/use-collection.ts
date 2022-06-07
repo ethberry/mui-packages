@@ -221,11 +221,18 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     });
   };
 
+  const handleChangeRowsPerPage = (pageSize: number): void => {
+    setSearch({
+      ...search,
+      skip: 0,
+      take: pageSize,
+    });
+  };
+
   const handleSearch = (values: S): Promise<void> => {
     setSearch({
       ...values,
       skip: 0,
-      take: defaultItemsPerPage,
     });
 
     // to promisify searching for the form onSubmit function
@@ -268,6 +275,7 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     handleDeleteConfirm,
     handleSearch,
     handleChangePage,
+    handleChangeRowsPerPage,
     handleToggleFilters,
   };
 };
