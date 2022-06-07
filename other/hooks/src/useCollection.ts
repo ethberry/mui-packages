@@ -233,7 +233,6 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     setSearch({
       ...values,
       skip: 0,
-      take: defaultItemsPerPage,
     });
   };
 
