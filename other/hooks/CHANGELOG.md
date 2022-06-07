@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@0.9.0...@gemunion/react-hooks@0.10.0) (2022-06-07)
+
+
+### Bug Fixes
+
+* defaultItemsPerPage ([158e35a](https://github.com/gemunion/mui-packages/commit/158e35a79bbb8c3b4c3054aae4b06cd149384353))
+* promisify onSubmit and onSearch functions ([2dd0a81](https://github.com/gemunion/mui-packages/commit/2dd0a8124f2c53fe25294805a1cf681ea6a130aa))
+* typings ([02dbd73](https://github.com/gemunion/mui-packages/commit/02dbd733d74278751319d78d17284f7b80d99298))
+
+
+### Features
+
+* handleChangeRowsPerPage ([f09db4f](https://github.com/gemunion/mui-packages/commit/f09db4fdd202db6c43566bb318d9d2039fa9be21))
+
+
+
+
+
 # 0.9.0 (2022-06-07)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.4](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@8.1.3...@gemunion/common-pages@8.1.4) (2022-06-07)
+
+
+### Bug Fixes
+
+* fix typings ([2355c51](https://github.com/gemunion/mui-packages/commit/2355c51ce7f088a8cfd73c14042de461c3e349af))
+
+
+
+
+
 ## [8.1.3](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@8.1.2...@gemunion/common-pages@8.1.3) (2022-06-07)
 
 **Note:** Version bump only for package @gemunion/common-pages

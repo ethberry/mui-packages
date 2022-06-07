@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.4](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@6.1.3...@gemunion/mui-inputs-core@6.1.4) (2022-06-07)
+
+
+### Bug Fixes
+
+* fix typings ([2355c51](https://github.com/gemunion/mui-packages/commit/2355c51ce7f088a8cfd73c14042de461c3e349af))
+* number input by formatting value to number type; fix isSubmitting param of the form on handleSubmit ([8eb84a7](https://github.com/gemunion/mui-packages/commit/8eb84a76d718949134b61cdb78c8dcdcd031339f))
+
+
+
+
+
 ## [6.1.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@6.1.2...@gemunion/mui-inputs-core@6.1.3) (2022-06-07)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core

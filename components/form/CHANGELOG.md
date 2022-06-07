@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.4](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@5.1.3...@gemunion/mui-form@5.1.4) (2022-06-07)
+
+
+### Bug Fixes
+
+* fix typings ([2355c51](https://github.com/gemunion/mui-packages/commit/2355c51ce7f088a8cfd73c14042de461c3e349af))
+* make form prestine after successfully submitting ([aa7e9db](https://github.com/gemunion/mui-packages/commit/aa7e9dbce57ec701476a687a971218f17a4fddbb))
+* number input by formatting value to number type; fix isSubmitting param of the form on handleSubmit ([8eb84a7](https://github.com/gemunion/mui-packages/commit/8eb84a76d718949134b61cdb78c8dcdcd031339f))
+* promisify onSubmit and onSearch functions ([2dd0a81](https://github.com/gemunion/mui-packages/commit/2dd0a8124f2c53fe25294805a1cf681ea6a130aa))
+
+
+
+
+
 ## [5.1.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@5.1.2...@gemunion/mui-form@5.1.3) (2022-06-07)
 
 

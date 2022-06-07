@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.4](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@5.1.3...@gemunion/mui-form-search@5.1.4) (2022-06-07)
+
+
+### Bug Fixes
+
+* promisify onSubmit and onSearch functions ([2dd0a81](https://github.com/gemunion/mui-packages/commit/2dd0a8124f2c53fe25294805a1cf681ea6a130aa))
+
+
+
+
+
 ## [5.1.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@5.1.2...@gemunion/mui-form-search@5.1.3) (2022-06-07)
 
 **Note:** Version bump only for package @gemunion/mui-form-search
