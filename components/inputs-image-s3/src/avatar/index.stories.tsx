@@ -26,7 +26,7 @@ export default {
       <ApiProvider baseUrl={"http://localhost/"}>
         <IntlProvider locale="en" messages={i18n}>
           <SnackbarProvider>
-            <FormWrapper onSubmit={() => {}} initialValues={{ avatar: "" }}>
+            <FormWrapper onSubmit={Promise.resolve} initialValues={{ avatar: "" }}>
               <Story />
             </FormWrapper>
           </SnackbarProvider>

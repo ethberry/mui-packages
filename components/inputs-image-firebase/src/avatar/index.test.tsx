@@ -25,7 +25,7 @@ describe("<AvatarInput />", () => {
       <ThemeProvider theme={createTheme()}>
         <IntlProvider locale="en" messages={i18n}>
           <SnackbarProvider maxSnack={3}>
-            <FormWrapper onSubmit={() => {}} initialValues={{ avatar: "" }}>
+            <FormWrapper onSubmit={Promise.resolve} initialValues={{ avatar: "" }}>
               <AvatarInput {...props} />
             </FormWrapper>
           </SnackbarProvider>
@@ -46,7 +46,7 @@ describe("<AvatarInput />", () => {
         <IntlProvider locale="en" messages={i18n}>
           <SnackbarProvider maxSnack={3}>
             <FormWrapper
-              onSubmit={() => {}}
+              onSubmit={Promise.resolve}
               initialValues={{
                 avatar: "https://lms2-dev.s3-us-west-2.amazonaws.com/7f0f427f-eeba-4ffb-a1c8-f730721bfd46.jpeg",
               }}

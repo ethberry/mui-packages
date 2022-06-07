@@ -16,7 +16,7 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <FormWrapper onSubmit={async () => {}} initialValues={{ password: "" }}>
+        <FormWrapper onSubmit={Promise.resolve} initialValues={{ password: "" }}>
           <Story />
         </FormWrapper>
       </IntlProvider>

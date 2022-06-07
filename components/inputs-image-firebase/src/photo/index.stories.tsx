@@ -25,7 +25,7 @@ export default {
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
         <SnackbarProvider>
-          <FormWrapper onSubmit={() => {}} initialValues={{ photo: [] }}>
+          <FormWrapper onSubmit={Promise.resolve} initialValues={{ photo: [] }}>
             <Story />
           </FormWrapper>
         </SnackbarProvider>

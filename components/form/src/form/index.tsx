@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { FormProvider, useForm, UseFormReturn } from "react-hook-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import { PromptIfDirty } from "../prompt";
@@ -9,7 +9,7 @@ interface IFormWrapperProps<T> {
   showButtons?: boolean;
   showPrompt?: boolean;
   submit?: string;
-  onSubmit: (values: T, form?: UseFormReturn) => Promise<void>;
+  onSubmit: (values: T, form?: any) => Promise<void>;
   className?: string;
   initialValues: T;
   validationSchema?: any;

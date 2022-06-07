@@ -8,7 +8,7 @@ import { FormWrapper } from "@gemunion/mui-form";
 export interface IFormDialogProps<T> {
   showButtons?: boolean;
   showPrompt?: boolean;
-  onConfirm: (values: T, form: any) => Promise<void> | void;
+  onConfirm: (values: T, form?: any) => Promise<void>;
   onCancel: () => void;
   message: string;
   data?: any;

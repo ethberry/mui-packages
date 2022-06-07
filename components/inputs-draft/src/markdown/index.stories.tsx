@@ -28,7 +28,7 @@ export default {
 
 const MarkdownTemplate: Story<IMarkdownInputProps> = args => {
   return (
-    <FormWrapper onSubmit={() => {}} initialValues={{}}>
+    <FormWrapper onSubmit={Promise.resolve} initialValues={{}}>
       <MarkdownInput {...args} />
     </FormWrapper>
   );
@@ -41,7 +41,7 @@ Simple.args = {
 
 const MarkdownDefaultValueTemplate: Story<IMarkdownInputProps> = args => {
   return (
-    <FormWrapper onSubmit={() => {}} initialValues={{ markdown: markdownString }}>
+    <FormWrapper onSubmit={Promise.resolve} initialValues={{ markdown: markdownString }}>
       <MarkdownInput {...args} />
     </FormWrapper>
   );

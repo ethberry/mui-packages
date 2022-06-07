@@ -15,7 +15,7 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <FormWrapper onSubmit={async () => {}} initialValues={{ slider: 250 }}>
+        <FormWrapper onSubmit={Promise.resolve} initialValues={{ slider: 250 }}>
           <Story />
         </FormWrapper>
       </IntlProvider>

@@ -22,7 +22,7 @@ describe("<NumberInput />", () => {
     const { asFragment } = render(
       <ThemeProvider theme={createTheme()}>
         <IntlProvider locale="en" messages={i18n}>
-          <FormWrapper onSubmit={async () => {}} initialValues={{ number: 50 }}>
+          <FormWrapper onSubmit={Promise.resolve} initialValues={{ number: 50 }}>
             <NumberInput {...props} />
           </FormWrapper>
         </IntlProvider>
@@ -41,7 +41,7 @@ describe("<NumberInput />", () => {
     const { asFragment } = render(
       <ThemeProvider theme={createTheme()}>
         <IntlProvider locale="en" messages={i18n}>
-          <FormWrapper onSubmit={async () => {}} initialValues={{ number: -50 }}>
+          <FormWrapper onSubmit={Promise.resolve} initialValues={{ number: -50 }}>
             <NumberInput {...props} />
           </FormWrapper>
         </IntlProvider>
@@ -60,7 +60,7 @@ describe("<NumberInput />", () => {
     const { asFragment } = render(
       <ThemeProvider theme={createTheme()}>
         <IntlProvider locale="en" messages={i18n}>
-          <FormWrapper onSubmit={async () => {}} initialValues={{ number: 9.99 }}>
+          <FormWrapper onSubmit={Promise.resolve} initialValues={{ number: 9.99 }}>
             <NumberInput {...props} />
           </FormWrapper>
         </IntlProvider>

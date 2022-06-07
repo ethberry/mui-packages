@@ -14,7 +14,7 @@ export default {
       return (
         <IntlProvider locale="en" messages={{}}>
           <SnackbarProvider>
-            <FormWrapper onSubmit={() => {}} initialValues={{}}>
+            <FormWrapper onSubmit={Promise.resolve} initialValues={{}}>
               <Story />
             </FormWrapper>
           </SnackbarProvider>

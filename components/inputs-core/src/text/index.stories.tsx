@@ -45,7 +45,7 @@ export default {
 
 const SimpleTemplate: Story<ITextInputProps> = args => {
   return (
-    <FormWrapper onSubmit={async () => {}} initialValues={{ text: "qwerty" }}>
+    <FormWrapper onSubmit={Promise.resolve} initialValues={{ text: "qwerty" }}>
       <TextInput {...args} />
     </FormWrapper>
   );

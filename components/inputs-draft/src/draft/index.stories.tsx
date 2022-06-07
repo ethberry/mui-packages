@@ -28,7 +28,7 @@ export default {
 
 const DraftTemplate: Story<IRichTextFieldProps> = args => {
   return (
-    <FormWrapper onSubmit={() => {}} initialValues={{ switch: false }}>
+    <FormWrapper onSubmit={Promise.resolve} initialValues={{ switch: false }}>
       <RichTextEditor {...args} />
     </FormWrapper>
   );
@@ -41,7 +41,7 @@ Simple.args = {
 
 const DraftDefaultValueTemplate: Story<IRichTextFieldProps> = args => {
   return (
-    <FormWrapper onSubmit={() => {}} initialValues={{ draft: rawStateString }}>
+    <FormWrapper onSubmit={Promise.resolve} initialValues={{ draft: rawStateString }}>
       <RichTextEditor {...args} />
     </FormWrapper>
   );

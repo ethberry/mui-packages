@@ -23,7 +23,7 @@ export default {
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
         <SnackbarProvider>
-          <FormWrapper onSubmit={() => {}} initialValues={{ avatar: "" }}>
+          <FormWrapper onSubmit={Promise.resolve} initialValues={{ avatar: "" }}>
             <Story />
           </FormWrapper>
         </SnackbarProvider>

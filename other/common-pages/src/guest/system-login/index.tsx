@@ -26,8 +26,8 @@ export const SystemLogin: FC = () => {
   const baseUrl = process.env.BE_URL;
   /* javascript-obfuscator:enable */
 
-  const handleSubmit = (values: ILoginDto): Promise<IUser | void> => {
-    return user.logIn(values, "/").catch((e: ApiError) => {
+  const handleSubmit = async (values: ILoginDto): Promise<void> => {
+    await user.logIn(values, "/").catch((e: ApiError) => {
       if (e.status) {
         enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
       } else {
