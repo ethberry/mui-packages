@@ -221,6 +221,14 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     });
   };
 
+  const handleChangeRowsPerPage = (pageSize: number): void => {
+    setSearch({
+      ...search,
+      skip: 0,
+      take: pageSize,
+    });
+  };
+
   const handleSearch = (values: S): void => {
     setSearch({
       ...values,
@@ -265,6 +273,7 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     handleDeleteConfirm,
     handleSearch,
     handleChangePage,
+    handleChangeRowsPerPage,
     handleToggleFilters,
   };
 };
