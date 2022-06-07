@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
+import { UseFormReturn } from "react-hook-form";
 
 import { ApiError, IApiContext, useApi } from "@gemunion/provider-api";
 
@@ -14,7 +15,7 @@ export const useApiCall = <T = any>(
   const { formatMessage } = useIntl();
   const [isLoading, setIsLoading] = useState(false);
 
-  const wrapper = async (form: any = null, ...args: Array<any>) => {
+  const wrapper = async (form?: UseFormReturn, ...args: Array<any>) => {
     setIsLoading(true);
     return fn(api, ...args)
       .then((res: T) => {
@@ -28,7 +29,7 @@ export const useApiCall = <T = any>(
           if (e.status === 400) {
             const errors = e.getLocalizedValidationErrors();
             Object.keys(errors).forEach(key => {
-              form.setError(key, { type: "custom", message: errors[key] });
+              form?.setError(key, { type: "custom", message: errors[key] });
             });
           } else if (e.status) {
             enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
