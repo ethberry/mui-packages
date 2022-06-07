@@ -6,7 +6,7 @@ import { SearchInput } from "@gemunion/mui-inputs-core";
 
 interface ICommonSearchFormProps {
   autosave?: boolean;
-  onSubmit: (values: any) => void;
+  onSubmit: (values: any) => Promise<void>;
   initialValues: any;
   open?: boolean;
 }

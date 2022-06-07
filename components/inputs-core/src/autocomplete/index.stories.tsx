@@ -16,7 +16,7 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <FormWrapper onSubmit={() => {}} initialValues={{ autocomplete: "sw" }}>
+        <FormWrapper onSubmit={async () => {}} initialValues={{ autocomplete: "sw" }}>
           <Story />
         </FormWrapper>
       </IntlProvider>

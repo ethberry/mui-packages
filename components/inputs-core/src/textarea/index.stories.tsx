@@ -16,7 +16,7 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <FormWrapper onSubmit={() => {}} initialValues={{ textarea: "Lorem ipsum" }}>
+        <FormWrapper onSubmit={async () => {}} initialValues={{ textarea: "Lorem ipsum" }}>
           <Story />
         </FormWrapper>
       </IntlProvider>

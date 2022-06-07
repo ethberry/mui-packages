@@ -22,7 +22,7 @@ export default {
       <MemoryRouter>
         <IntlProvider locale="en" messages={i18n}>
           <FormWrapper
-            onSubmit={() => {}}
+            onSubmit={async () => {}}
             initialValues={{
               json: JSON.stringify({
                 a: 1,

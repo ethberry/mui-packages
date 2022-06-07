@@ -22,7 +22,7 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <FormWrapper onSubmit={() => {}} initialValues={{ select: SelectOptions.ONE }}>
+        <FormWrapper onSubmit={async () => {}} initialValues={{ select: SelectOptions.ONE }}>
           <Story />
         </FormWrapper>
       </IntlProvider>

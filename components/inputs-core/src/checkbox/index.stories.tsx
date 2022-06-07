@@ -15,7 +15,7 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <FormWrapper onSubmit={() => {}} initialValues={{ checkbox: false }}>
+        <FormWrapper onSubmit={async () => {}} initialValues={{ checkbox: false }}>
           <Story />
         </FormWrapper>
       </IntlProvider>

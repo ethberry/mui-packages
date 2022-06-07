@@ -229,11 +229,14 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     });
   };
 
-  const handleSearch = (values: S): void => {
+  const handleSearch = (values: S): Promise<void> => {
     setSearch({
       ...values,
       skip: 0,
     });
+
+    // to promisify searching for the form onSubmit function
+    return Promise.resolve();
   };
 
   const handleToggleFilters = () => {

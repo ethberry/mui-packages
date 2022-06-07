@@ -8,7 +8,7 @@ import { ButtonToolbar } from "@gemunion/mui-page-layout";
 interface IFormButtonsProps {
   visible?: boolean;
   submit?: string;
-  handleSubmit: (e: any) => any;
+  handleSubmit: (e: any) => Promise<void>;
   ref?: any;
 }
 
