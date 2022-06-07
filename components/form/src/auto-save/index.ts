@@ -3,7 +3,7 @@ import { useWatch } from "react-hook-form";
 import { useDebouncedCallback } from "use-debounce";
 
 interface IAutoSaveProps {
-  onSubmit: (values: any) => void;
+  onSubmit: (values: any) => Promise<void>;
 }
 
 export const AutoSave: FC<IAutoSaveProps> = props => {
@@ -11,10 +11,10 @@ export const AutoSave: FC<IAutoSaveProps> = props => {
 
   const watch = useWatch();
 
-  const debouncedOnSubmit = useDebouncedCallback(() => onSubmit(watch), 300);
+  const debouncedOnSubmit = useDebouncedCallback(async () => await onSubmit(watch), 300);
 
   useEffect(() => {
-    debouncedOnSubmit();
+    void debouncedOnSubmit();
   }, [watch]);
 
   return null;

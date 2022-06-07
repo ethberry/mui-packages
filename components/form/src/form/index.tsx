@@ -9,7 +9,7 @@ interface IFormWrapperProps<T> {
   showButtons?: boolean;
   showPrompt?: boolean;
   submit?: string;
-  onSubmit: (values: T, form?: UseFormReturn) => void;
+  onSubmit: (values: T, form?: UseFormReturn) => Promise<void>;
   className?: string;
   initialValues: T;
   validationSchema?: any;
@@ -37,17 +37,12 @@ export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
     resolver: validationSchema ? yupResolver(validationSchema) : undefined,
   });
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any): Promise<void> => {
     e.preventDefault();
     e.stopPropagation();
-
     const values = form.getValues();
-
-    onSubmit(values, form);
-
+    await onSubmit(values, form);
     form.reset(values);
-
-    return false;
   };
 
   return (
