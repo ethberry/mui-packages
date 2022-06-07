@@ -1,3 +1,3 @@
-export * from "./useDeploy";
-export * from "./useMetamask";
-export * from "./useMetamaskValue";
+export * from "./use-deploy";
+export * from "./use-metamask";
+export * from "./use-metamask-value";
