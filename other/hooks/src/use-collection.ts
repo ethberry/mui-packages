@@ -113,7 +113,7 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
       });
   };
 
-  const handleAdd = (): void => {
+  const handleCreate = (): void => {
     setSelected(empty as T);
     setIsEditDialogOpen(true);
   };
@@ -264,7 +264,7 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     fetchById,
     fetchByQuery,
 
-    handleAdd,
+    handleCreate,
     handleView,
     handleViewCancel,
     handleViewConfirm,
