@@ -37,13 +37,13 @@ export const Wallet: FC = () => {
     <Box mx={1}>
       {active ? (
         <Tooltip title={account!} enterDelay={300}>
-          <IconButton color="inherit" onClick={handleOpenWalletDialog} data-testid="openWalletOptionsDialog">
+          <IconButton color="inherit" onClick={handleOpenWalletDialog} data-testid="OpenWalletOptionsDialog">
             <WalletIcon />
           </IconButton>
         </Tooltip>
       ) : (
         <Tooltip title={formatMessage({ id: "components.header.wallet.connect" })} enterDelay={300}>
-          <IconButton color="inherit" onClick={handleOpenConnectDialog} data-testid="openWalletConnectDialog">
+          <IconButton color="inherit" onClick={handleOpenConnectDialog} data-testid="OpenWalletConnectDialog">
             <WalletIcon />
           </IconButton>
         </Tooltip>
