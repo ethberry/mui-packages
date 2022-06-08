@@ -233,6 +233,7 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     setSearch({
       ...values,
       skip: 0,
+      take: search.take,
     });
 
     // to promisify searching for the form onSubmit function
