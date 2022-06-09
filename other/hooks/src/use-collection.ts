@@ -101,7 +101,6 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     return (id ? fetchById(id) : fetchByQuery())
       .catch((e: ApiError) => {
         if (e.status) {
-          // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
         } else {
           console.error(e);
@@ -170,7 +169,6 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
             form.setError(key, { type: "custom", message: errors[key] }, { shouldFocus: true });
           });
         } else if (e.status) {
-          // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
         } else {
           console.error(e);
@@ -202,7 +200,6 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
       })
       .catch((e: ApiError) => {
         if (e.status) {
-          // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
         } else {
           console.error(e);
