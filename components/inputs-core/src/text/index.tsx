@@ -9,14 +9,14 @@ export interface IStandardTextInputProps extends StandardTextFieldProps {
   name: string;
   readOnly?: boolean;
   maskedRef?: any;
-  formatValue?: (value: number | string) => number | string;
+  formatValue?: (value: any) => number | string;
 }
 
 export interface IFilledTextInputProps extends FilledTextFieldProps {
   name: string;
   readOnly?: boolean;
   maskedRef?: any;
-  formatValue?: (value: number | string) => number | string;
+  formatValue?: (value: any) => number | string;
 }
 
 export interface IOutlinedTextInputProps extends OutlinedTextFieldProps {

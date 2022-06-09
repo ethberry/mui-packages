@@ -4,7 +4,8 @@ import { TConnectors } from "../connectors";
 import { INetwork } from "../interfaces";
 
 export interface IWalletContext {
-  openConnectWalletDialog: () => void;
+  openConnectWalletDialog: () => Promise<any>;
+  ensureWallet: (callback: any) => void;
   closeConnectWalletDialog: () => void;
   activeConnector: TConnectors | null;
   setActiveConnector: (value: TConnectors | null) => void;
