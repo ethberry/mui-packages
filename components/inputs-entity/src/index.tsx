@@ -18,6 +18,7 @@ export interface IAutocompleteOption {
 export interface IEntityInputProps {
   name: string;
   label?: string | number | ReactElement;
+  placeholder?: string;
   controller: string;
   disabled?: boolean;
   readOnly?: boolean;
@@ -38,6 +39,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
     variant = "standard",
     onChange,
     label,
+    placeholder,
     disabled,
     readOnly,
   } = props;
@@ -51,8 +53,8 @@ export const EntityInput: FC<IEntityInputProps> = props => {
   const value = useWatch({ name });
 
   const { formatMessage } = useIntl();
-  const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
-  const localizedPlaceholder = formatMessage({ id: `form.placeholders.${suffix}` });
+  const localizedLabel = label ?? formatMessage({ id: `form.labels.${suffix}` });
+  const localizedPlaceholder = placeholder ?? formatMessage({ id: `form.placeholders.${suffix}` });
   const localizedHelperText = error && touched ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   const [isLoading, setIsLoading] = useState(false);

@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { Story } from "@storybook/react";
-import { FormWrapper } from "@gemunion/mui-form";
+import { FormProvider, useForm } from "react-hook-form";
 
 import { AutocompleteInput, IAutocompleteInputProps } from "./index";
 
@@ -16,9 +16,9 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <FormWrapper onSubmit={Promise.resolve} initialValues={{ autocomplete: "sw" }}>
+        <FormProvider {...useForm({ defaultValues: { autocomplete: "sw" } })}>
           <Story />
-        </FormWrapper>
+        </FormProvider>
       </IntlProvider>
     ),
   ],

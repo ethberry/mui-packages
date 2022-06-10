@@ -1,9 +1,9 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { FormWrapper } from "@gemunion/mui-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 import { LicenseProvider } from "@gemunion/provider-license";
-import { rawStateString } from "@gemunion/draft-js-utils";
+import { emptyStateString } from "@gemunion/draft-js-utils";
 
 import { IRichTextFieldProps, RichTextEditor } from "./index";
 
@@ -19,7 +19,9 @@ export default {
     (Story: Story): ReactElement => (
       <LicenseProvider licenseKey={process.env.STORYBOOK_GEMUNION_LICENSE}>
         <IntlProvider locale="en" messages={i18n}>
-          <Story />
+          <FormProvider {...useForm({ defaultValues: { draft: emptyStateString } })}>
+            <Story />
+          </FormProvider>
         </IntlProvider>
       </LicenseProvider>
     ),
@@ -27,11 +29,7 @@ export default {
 };
 
 const DraftTemplate: Story<IRichTextFieldProps> = args => {
-  return (
-    <FormWrapper onSubmit={Promise.resolve} initialValues={{ switch: false }}>
-      <RichTextEditor {...args} />
-    </FormWrapper>
-  );
+  return <RichTextEditor {...args} />;
 };
 
 export const Simple = DraftTemplate.bind({});
@@ -40,11 +38,7 @@ Simple.args = {
 };
 
 const DraftDefaultValueTemplate: Story<IRichTextFieldProps> = args => {
-  return (
-    <FormWrapper onSubmit={Promise.resolve} initialValues={{ draft: rawStateString }}>
-      <RichTextEditor {...args} />
-    </FormWrapper>
-  );
+  return <RichTextEditor {...args} />;
 };
 
 export const DefaultValue = DraftDefaultValueTemplate.bind({});

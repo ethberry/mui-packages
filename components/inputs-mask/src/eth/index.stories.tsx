@@ -17,7 +17,7 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <FormProvider {...useForm({ defaultValues: { ethMask: constants.WeiPerEther } })}>
+        <FormProvider {...useForm({ defaultValues: { ethMask: constants.WeiPerEther.toString() } })}>
           <Story />
         </FormProvider>
       </IntlProvider>

@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { FormWrapper } from "@gemunion/mui-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 
 import { ISwitchInputProps, SwitchInput } from "./index";
@@ -15,9 +15,9 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <FormWrapper onSubmit={Promise.resolve} initialValues={{ switch: false }}>
+        <FormProvider {...useForm({ defaultValues: { switch: false } })}>
           <Story />
-        </FormWrapper>
+        </FormProvider>
       </IntlProvider>
     ),
   ],

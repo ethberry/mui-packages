@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { FormWrapper } from "@gemunion/mui-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 
 import { ISelectInputProps, SelectInput } from "./index";
@@ -22,9 +22,9 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <FormWrapper onSubmit={Promise.resolve} initialValues={{ select: SelectOptions.ONE }}>
+        <FormProvider {...useForm({ defaultValues: { select: SelectOptions.ONE } })}>
           <Story />
-        </FormWrapper>
+        </FormProvider>
       </IntlProvider>
     ),
   ],

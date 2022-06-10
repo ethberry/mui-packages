@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { FormWrapper } from "@gemunion/mui-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 
 import { ICheckboxInputProps, CheckboxInput } from "./index";
@@ -15,9 +15,9 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <FormWrapper onSubmit={Promise.resolve} initialValues={{ checkbox: false }}>
+        <FormProvider {...useForm({ defaultValues: { checkbox: false } })}>
           <Story />
-        </FormWrapper>
+        </FormProvider>
       </IntlProvider>
     ),
   ],
@@ -37,7 +37,7 @@ Disabled.args = {
 };
 
 export const Label = Template.bind({});
-Disabled.args = {
+Label.args = {
   name: "checkbox",
-  label: "label",
+  label: "My label",
 };

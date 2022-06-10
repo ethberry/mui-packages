@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
+import { InputAdornment } from "@mui/material";
 
 import { CurrencyInput, ICurrencyInputProps } from "./index";
 
@@ -35,4 +36,13 @@ export const YEN = Template.bind({});
 YEN.args = {
   name: "currencyMask",
   precision: 0,
+};
+
+export const PERCENT = Template.bind({});
+PERCENT.args = {
+  name: "currencyMask",
+  symbol: "",
+  InputProps: {
+    endAdornment: <InputAdornment position="start">%</InputAdornment>,
+  },
 };
