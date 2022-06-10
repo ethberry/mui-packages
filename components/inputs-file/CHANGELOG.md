@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@5.1.4...@gemunion/mui-inputs-file@5.2.0) (2022-06-10)
+
+
+### Features
+
+* pass additional props ([fb0c232](https://github.com/gemunion/mui-packages/commit/fb0c232edfeb5e5125ffa65c98900c10c6d857e9))
+
+
+
+
+
 ## [5.1.4](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@5.1.3...@gemunion/mui-inputs-file@5.1.4) (2022-06-07)
 
 

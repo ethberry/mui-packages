@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.2.0 (2022-06-10)
+
+
+### Features
+
+* pass additional props ([fb0c232](https://github.com/gemunion/mui-packages/commit/fb0c232edfeb5e5125ffa65c98900c10c6d857e9))
+
+
+
+
+
 # 6.1.0 (2022-06-06)
 
 

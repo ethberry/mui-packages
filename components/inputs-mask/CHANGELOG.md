@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.2.0 (2022-06-10)
+
+
+### Bug Fixes
+
+* bad merge ([c8d4be8](https://github.com/gemunion/mui-packages/commit/c8d4be84f664ae26959e0a2d90e6a42f2a4c0cc6))
+* implement TextInput into MaskedInput ([763674f](https://github.com/gemunion/mui-packages/commit/763674f278663df6e60541792b815759104b1649))
+* implement TextInput into MaskedInput ([a1467a3](https://github.com/gemunion/mui-packages/commit/a1467a3c7e70eacd3e8c5819ede87ce1152fb5fe))
+
+
+### Features
+
+* pass additional props ([fb0c232](https://github.com/gemunion/mui-packages/commit/fb0c232edfeb5e5125ffa65c98900c10c6d857e9))
+
+
+
+
+
 # 5.1.0 (2022-06-06)
 
 

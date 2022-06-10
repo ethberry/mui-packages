@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.2.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@6.1.4...@gemunion/mui-inputs-core@6.2.0) (2022-06-10)
+
+
+### Bug Fixes
+
+* implement TextInput into MaskedInput ([a1467a3](https://github.com/gemunion/mui-packages/commit/a1467a3c7e70eacd3e8c5819ede87ce1152fb5fe))
+
+
+### Features
+
+* pass additional props ([fb0c232](https://github.com/gemunion/mui-packages/commit/fb0c232edfeb5e5125ffa65c98900c10c6d857e9))
+
+
+
+
+
 ## [6.1.4](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@6.1.3...@gemunion/mui-inputs-core@6.1.4) (2022-06-07)
 
 
