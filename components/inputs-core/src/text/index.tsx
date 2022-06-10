@@ -9,14 +9,16 @@ export interface IStandardTextInputProps extends StandardTextFieldProps {
   name: string;
   readOnly?: boolean;
   maskedRef?: any;
-  formatValue?: (value: number | string) => number | string;
+  formatValue?: (value: any) => number | string;
+  onInputPropsValueChange?: (field: any) => (value: any) => void;
 }
 
 export interface IFilledTextInputProps extends FilledTextFieldProps {
   name: string;
   readOnly?: boolean;
   maskedRef?: any;
-  formatValue?: (value: number | string) => number | string;
+  formatValue?: (value: any) => number | string;
+  onInputPropsValueChange?: (field: any) => (value: any) => void;
 }
 
 export interface IOutlinedTextInputProps extends OutlinedTextFieldProps {
@@ -24,12 +26,23 @@ export interface IOutlinedTextInputProps extends OutlinedTextFieldProps {
   readOnly?: boolean;
   maskedRef?: any;
   formatValue?: (value: any) => number | string;
+  onInputPropsValueChange?: (field: any) => (value: any) => void;
 }
 
 export type ITextInputProps = IStandardTextInputProps | IFilledTextInputProps | IOutlinedTextInputProps;
 
 export const TextInput: FC<ITextInputProps> = props => {
-  const { name, label, readOnly, InputProps, placeholder, formatValue, variant = "standard", ...rest } = props;
+  const {
+    name,
+    label,
+    readOnly,
+    InputProps,
+    placeholder,
+    formatValue,
+    onInputPropsValueChange,
+    variant = "standard",
+    ...rest
+  } = props;
   const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
@@ -60,10 +73,15 @@ export const TextInput: FC<ITextInputProps> = props => {
             fullWidth
             InputProps={{
               ...InputProps,
+              ...(onInputPropsValueChange ? { onValueChange: onInputPropsValueChange(field) } : {}),
               readOnly,
             }}
             {...field}
             onChange={(e: any) => {
+              if (onInputPropsValueChange) {
+                return;
+              }
+
               if (formatValue) {
                 field.onChange({ target: { name, value: formatValue(e.target.value) } });
               } else {
