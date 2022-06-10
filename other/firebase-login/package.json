@@ -11,7 +11,6 @@
     "@gemunion/firebase": "1.1.19",
     "@gemunion/provider-api": "5.8.2",
     "@gemunion/provider-user": "3.3.11",
-    "firebase": "9.8.3",
     "firebaseui": "6.0.1"
   },
   "description": "react component",
