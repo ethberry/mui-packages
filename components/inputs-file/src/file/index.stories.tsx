@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { SnackbarProvider } from "notistack";
-import { FormWrapper } from "@gemunion/mui-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 
 import { IFileInputProps, FileInput } from "./index";
@@ -14,9 +14,9 @@ export default {
       return (
         <IntlProvider locale="en" messages={{}}>
           <SnackbarProvider>
-            <FormWrapper onSubmit={Promise.resolve} initialValues={{}}>
+            <FormProvider {...useForm({ defaultValues: {} })}>
               <Story />
-            </FormWrapper>
+            </FormProvider>
           </SnackbarProvider>
         </IntlProvider>
       );

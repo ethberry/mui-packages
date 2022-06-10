@@ -1,7 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { FormWrapper } from "@gemunion/mui-form";
-// import { FormProvider, useForm } from "react-hook-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 
 import { ITextInputProps, TextInput } from "./index";
@@ -18,7 +17,9 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <Story />
+        <FormProvider {...useForm({ defaultValues: { text: "qwerty" } })}>
+          <Story />
+        </FormProvider>
       </IntlProvider>
     ),
   ],
@@ -44,11 +45,7 @@ export default {
 };
 
 const SimpleTemplate: Story<ITextInputProps> = args => {
-  return (
-    <FormWrapper onSubmit={Promise.resolve} initialValues={{ text: "qwerty" }}>
-      <TextInput {...args} />
-    </FormWrapper>
-  );
+  return <TextInput {...args} />;
 };
 
 export const Simple = SimpleTemplate.bind({});
@@ -56,24 +53,9 @@ Simple.args = {
   name: "text",
 };
 
-// const ErroredTemplate: Story<ITextInputProps> = args => {
-//   const form = useForm({
-//     defaultValues: {
-//       text: "qwerty",
-//     },
-//   });
-//
-//   form.setValue("text", "qwerty", { shouldTouch: true });
-//   form.setError("text", { message: "form.validations.required" });
-//
-//   return (
-//     <FormProvider {...form}>
-//       <TextInput {...args} />
-//     </FormProvider>
-//   );
-// };
-//
-// export const Errored = ErroredTemplate.bind({});
-// Errored.args = {
-//   name: "text",
-// };
+export const CustomLabel = SimpleTemplate.bind({});
+CustomLabel.args = {
+  name: "text",
+  label: "My label",
+  placeholder: "My placeholder",
+};

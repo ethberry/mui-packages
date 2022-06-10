@@ -9,7 +9,7 @@ import { useStyles } from "./styles";
 export interface ISearchInputProps extends InputBaseProps {}
 
 export const SearchInput: FC<ISearchInputProps> = props => {
-  const { name = "search" } = props;
+  const { name = "search", ...rest } = props;
   const classes = useStyles();
 
   const form = useFormContext<any>();
@@ -26,7 +26,7 @@ export const SearchInput: FC<ISearchInputProps> = props => {
           <IconButton className={classes.iconButton} aria-label="search">
             <SearchOutlined />
           </IconButton>
-          <InputBase className={classes.input} placeholder={localizedPlaceholder} {...field} />
+          <InputBase className={classes.input} placeholder={localizedPlaceholder} {...rest} {...field} />
         </Paper>
       )}
     />

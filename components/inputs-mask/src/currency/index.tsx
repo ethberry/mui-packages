@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { InputProps } from "@mui/material";
 import { useFormContext } from "react-hook-form";
 
 import { MaskedInput } from "../mask";
@@ -12,6 +13,7 @@ export interface ICurrencyInputProps {
   precision?: number;
   symbol?: string;
   thousandsSeparator?: string;
+  InputProps?: Partial<InputProps>;
 }
 
 export const CurrencyInput: FC<ICurrencyInputProps> = props => {

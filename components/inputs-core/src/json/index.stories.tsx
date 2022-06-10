@@ -1,7 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { MemoryRouter } from "react-router-dom";
-import { FormWrapper } from "@gemunion/mui-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 
 import { JsonInput } from "./index";
@@ -19,20 +18,19 @@ export default {
   component: JsonInput,
   decorators: [
     (Story: Story): ReactElement => (
-      <MemoryRouter>
-        <IntlProvider locale="en" messages={i18n}>
-          <FormWrapper
-            onSubmit={Promise.resolve}
-            initialValues={{
+      <IntlProvider locale="en" messages={i18n}>
+        <FormProvider
+          {...useForm({
+            defaultValues: {
               json: JSON.stringify({
                 a: 1,
               }),
-            }}
-          >
-            <Story />
-          </FormWrapper>
-        </IntlProvider>
-      </MemoryRouter>
+            },
+          })}
+        >
+          <Story />
+        </FormProvider>
+      </IntlProvider>
     ),
   ],
 };

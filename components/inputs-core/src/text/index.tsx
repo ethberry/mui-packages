@@ -40,9 +40,8 @@ export const TextInput: FC<ITextInputProps> = props => {
   const touched = Boolean(form.formState.touchedFields[name]);
 
   const { formatMessage } = useIntl();
-  const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
-  const localizedPlaceholder =
-    placeholder === void 0 ? formatMessage({ id: `form.placeholders.${suffix}` }) : placeholder;
+  const localizedLabel = label ?? formatMessage({ id: `form.labels.${suffix}` });
+  const localizedPlaceholder = placeholder ?? formatMessage({ id: `form.placeholders.${suffix}` });
   const localizedHelperText = error && touched ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   return (

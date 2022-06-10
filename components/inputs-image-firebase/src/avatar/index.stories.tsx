@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { FormWrapper } from "@gemunion/mui-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { SnackbarProvider } from "notistack";
 import { Story } from "@storybook/react";
 
@@ -23,9 +23,9 @@ export default {
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
         <SnackbarProvider>
-          <FormWrapper onSubmit={Promise.resolve} initialValues={{ avatar: "" }}>
+          <FormProvider {...useForm({ defaultValues: { avatar: "" } })}>
             <Story />
-          </FormWrapper>
+          </FormProvider>
         </SnackbarProvider>
       </IntlProvider>
     ),

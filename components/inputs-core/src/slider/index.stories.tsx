@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { FormWrapper } from "@gemunion/mui-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 
 import { ISliderInputProps, SliderInput } from "./index";
@@ -15,9 +15,9 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <FormWrapper onSubmit={Promise.resolve} initialValues={{ slider: 250 }}>
+        <FormProvider {...useForm({ defaultValues: { slider: 250 } })}>
           <Story />
-        </FormWrapper>
+        </FormProvider>
       </IntlProvider>
     ),
   ],
