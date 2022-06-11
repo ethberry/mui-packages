@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.4.0 (2022-06-11)
+
+
+### Features
+
+* @mui/x-date-pickers ([c9371e7](https://github.com/gemunion/mui-packages/commit/c9371e7b7315015a2ed9a13b0aa9da9eb9bfe53b))
+
+
+
+
+
 ## 3.3.19 (2022-06-10)
 
 **Note:** Version bump only for package @gemunion/provider-picker

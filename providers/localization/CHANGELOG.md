@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2022-06-11)
+
+
+### Bug Fixes
+
+* names ([41c5ee8](https://github.com/gemunion/mui-packages/commit/41c5ee88a5483778ea3fd9c146c8d4769448b747))
+
+
+### Features
+
+* @mui/x-date-pickers ([c9371e7](https://github.com/gemunion/mui-packages/commit/c9371e7b7315015a2ed9a13b0aa9da9eb9bfe53b))
+
+
+
+
+
 ## [2.0.28](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@2.0.27...@gemunion/provider-localization@2.0.28) (2022-06-10)
 
 **Note:** Version bump only for package @gemunion/provider-localization
