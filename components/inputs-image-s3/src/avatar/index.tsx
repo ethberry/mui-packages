@@ -1,5 +1,5 @@
 import { FC, ReactElement } from "react";
-import { useFormContext, useWatch } from "react-hook-form";
+import { get, useFormContext, useWatch } from "react-hook-form";
 import { FormControl, FormHelperText, Grid, IconButton, InputLabel, Tooltip } from "@mui/material";
 import { Delete } from "@mui/icons-material";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -19,8 +19,8 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
   const { name, label, bucket, accept } = props;
 
   const form = useFormContext<any>();
-  const error = form.formState.errors[name];
-  const touched = Boolean(form.formState.touchedFields[name]);
+  const error = get(form.formState.errors, name);
+  const touched = get(form.formState.touchedFields, name);
   const value = useWatch({ name });
 
   const classes = useStyles();

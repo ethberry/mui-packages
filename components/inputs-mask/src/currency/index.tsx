@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { InputProps } from "@mui/material";
-import { useFormContext } from "react-hook-form";
+import { get, useFormContext } from "react-hook-form";
 
 import { MaskedInput } from "../mask";
 
@@ -32,7 +32,7 @@ export const CurrencyInput: FC<ICurrencyInputProps> = props => {
   const normalizeValue = (value: number): string => (value ? (value / 10 ** precision).toString() : "0");
 
   const form = useFormContext<any>();
-  const value = form.getValues(name);
+  const value = get(form.getValues(), name);
   const formattedValue = normalizeValue(value);
 
   return (
@@ -44,6 +44,7 @@ export const CurrencyInput: FC<ICurrencyInputProps> = props => {
       prefix={symbol}
       name={name}
       formatValue={formatValue}
+      normalizeValue={normalizeValue}
       defaultValue={formattedValue}
       {...rest}
     />

@@ -2,7 +2,7 @@ import { FC } from "react";
 // eslint-disable-next-line import/no-named-as-default
 import ReCAPTCHA from "react-google-recaptcha";
 import { FormattedMessage } from "react-intl";
-import { Controller, useFormContext } from "react-hook-form";
+import { Controller, get, useFormContext } from "react-hook-form";
 import { Grid, FormHelperText } from "@mui/material";
 
 import { useStyles } from "./styles";
@@ -15,7 +15,7 @@ export const Captcha: FC<ICaptchaProps> = props => {
   const { name = "captcha" } = props;
 
   const form = useFormContext<any>();
-  const error = form.formState.errors[name];
+  const error = get(form.formState.errors, name);
   const classes = useStyles();
 
   /* javascript-obfuscator:disable */

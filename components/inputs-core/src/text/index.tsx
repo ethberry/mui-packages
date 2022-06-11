@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { useIntl } from "react-intl";
-import { useFormContext, Controller } from "react-hook-form";
+import { useFormContext, Controller, get } from "react-hook-form";
 import { TextField, StandardTextFieldProps, FilledTextFieldProps, OutlinedTextFieldProps } from "@mui/material";
 
 import { useStyles } from "./styles";
@@ -10,7 +10,7 @@ export interface IStandardTextInputProps extends StandardTextFieldProps {
   readOnly?: boolean;
   maskedRef?: any;
   formatValue?: (value: any) => number | string;
-  onInputPropsValueChange?: (field: any) => (value: any) => void;
+  normalizeValue?: (value: any) => number | string;
 }
 
 export interface IFilledTextInputProps extends FilledTextFieldProps {
@@ -18,7 +18,7 @@ export interface IFilledTextInputProps extends FilledTextFieldProps {
   readOnly?: boolean;
   maskedRef?: any;
   formatValue?: (value: any) => number | string;
-  onInputPropsValueChange?: (field: any) => (value: any) => void;
+  normalizeValue?: (value: any) => number | string;
 }
 
 export interface IOutlinedTextInputProps extends OutlinedTextFieldProps {
@@ -26,7 +26,7 @@ export interface IOutlinedTextInputProps extends OutlinedTextFieldProps {
   readOnly?: boolean;
   maskedRef?: any;
   formatValue?: (value: any) => number | string;
-  onInputPropsValueChange?: (field: any) => (value: any) => void;
+  normalizeValue?: (value: any) => number | string;
 }
 
 export type ITextInputProps = IStandardTextInputProps | IFilledTextInputProps | IOutlinedTextInputProps;
@@ -39,7 +39,7 @@ export const TextInput: FC<ITextInputProps> = props => {
     InputProps,
     placeholder,
     formatValue,
-    onInputPropsValueChange,
+    normalizeValue,
     variant = "standard",
     ...rest
   } = props;
@@ -49,8 +49,8 @@ export const TextInput: FC<ITextInputProps> = props => {
 
   const form = useFormContext<any>();
 
-  const error = form.formState.errors[name];
-  const touched = Boolean(form.formState.touchedFields[name]);
+  const error = get(form.formState.errors, name);
+  const touched = get(form.formState.touchedFields, name);
 
   const { formatMessage } = useIntl();
   const localizedLabel = label ?? formatMessage({ id: `form.labels.${suffix}` });
@@ -73,15 +73,11 @@ export const TextInput: FC<ITextInputProps> = props => {
             fullWidth
             InputProps={{
               ...InputProps,
-              ...(onInputPropsValueChange ? { onValueChange: onInputPropsValueChange(field) } : {}),
               readOnly,
             }}
             {...field}
+            value={normalizeValue ? normalizeValue(field.value) : field.value}
             onChange={(e: any) => {
-              if (onInputPropsValueChange) {
-                return;
-              }
-
               if (formatValue) {
                 field.onChange({ target: { name, value: formatValue(e.target.value) } });
               } else {
