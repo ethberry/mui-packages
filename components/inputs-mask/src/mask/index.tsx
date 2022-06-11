@@ -29,13 +29,14 @@ export const MaskedInput: FC<IMaskedInputProps> = props => {
   return (
     <TextInput
       name={name}
-      formatValue={formatValue}
       normalizeValue={normalizeValue}
+      onChange={() => {}}
       InputProps={{
         ...InputProps,
         readOnly,
         inputComponent: MaskedInputWrapper as any,
         inputProps: {
+          formatValue,
           ...rest,
         },
       }}

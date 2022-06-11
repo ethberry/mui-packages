@@ -50,7 +50,6 @@ export const EntityInput: FC<IEntityInputProps> = props => {
   const form = useFormContext<any>();
   const error = get(form.formState.errors, name);
   const touched = get(form.formState.touchedFields, name);
-
   const value = useWatch({ name });
 
   const { formatMessage } = useIntl();

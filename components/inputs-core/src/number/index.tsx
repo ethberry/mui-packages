@@ -28,8 +28,7 @@ export const NumberInput: FC<INumberInputProps> = props => {
     }
   };
 
-  const formatValue = (e: any) =>
-    e?.target?.value === null && e?.target?.value === void 0 ? "" : Number(e?.target?.value);
+  const formatValue = (value: any) => (value === null && value === void 0 ? "" : Number(value));
 
   return (
     <TextInput

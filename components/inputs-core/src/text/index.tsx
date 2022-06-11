@@ -9,7 +9,7 @@ export interface IStandardTextInputProps extends StandardTextFieldProps {
   name: string;
   readOnly?: boolean;
   maskedRef?: any;
-  formatValue?: (values: any) => number | string;
+  formatValue?: (value: any) => number | string;
   normalizeValue?: (value: any) => number | string;
 }
 
@@ -17,7 +17,7 @@ export interface IFilledTextInputProps extends FilledTextFieldProps {
   name: string;
   readOnly?: boolean;
   maskedRef?: any;
-  formatValue?: (values: any) => number | string;
+  formatValue?: (value: any) => number | string;
   normalizeValue?: (value: any) => number | string;
 }
 
@@ -25,7 +25,7 @@ export interface IOutlinedTextInputProps extends OutlinedTextFieldProps {
   name: string;
   readOnly?: boolean;
   maskedRef?: any;
-  formatValue?: (values: any) => number | string;
+  formatValue?: (value: any) => number | string;
   normalizeValue?: (value: any) => number | string;
 }
 
@@ -79,7 +79,7 @@ export const TextInput: FC<ITextInputProps> = props => {
             value={normalizeValue ? normalizeValue(field.value) : field.value}
             onChange={(e: any) => {
               if (formatValue) {
-                field.onChange({ target: { name, value: formatValue(e) } });
+                field.onChange({ target: { name, value: formatValue(e.target.value) } });
               } else {
                 field.onChange(e);
               }

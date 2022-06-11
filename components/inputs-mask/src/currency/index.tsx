@@ -28,7 +28,7 @@ export const CurrencyInput: FC<ICurrencyInputProps> = props => {
     ...rest
   } = props;
 
-  const formatValue = (values: any): number => (values?.value ? Number.parseFloat(values?.value) * 10 ** precision : 0);
+  const formatValue = (value: string): number => Number.parseFloat(value) * 10 ** precision;
   const normalizeValue = (value: number): string => (value ? (value / 10 ** precision).toString() : "0");
 
   const form = useFormContext<any>();
