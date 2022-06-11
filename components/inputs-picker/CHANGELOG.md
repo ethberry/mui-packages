@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.2.0 (2022-06-11)
+
+
+### Features
+
+* @mui/x-date-pickers-pro ([cfecb97](https://github.com/gemunion/mui-packages/commit/cfecb97bf7cfca5cb0e5bf3db8a33ecf65b331f7))
+
+
+
+
+
 ## 5.1.2 (2022-06-11)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-picker
