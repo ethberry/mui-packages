@@ -2,7 +2,7 @@ import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { Controller, useFormContext } from "react-hook-form";
 import { TextField, TextFieldProps } from "@mui/material";
-import { DateTimePicker } from "@mui/lab";
+import { DateTimePicker } from "@mui/x-date-pickers";
 
 import { useStyles } from "./styles";
 

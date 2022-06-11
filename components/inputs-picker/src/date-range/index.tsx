@@ -2,7 +2,7 @@ import { FC, Fragment, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { Controller, useFormContext } from "react-hook-form";
 import { Box, TextField, TextFieldProps } from "@mui/material";
-import { DateRange, DateRangePicker } from "@mui/lab";
+import { DateRange, DateRangePicker } from "@mui/x-date-pickers-pro";
 
 import { useStyles } from "./styles";
 
