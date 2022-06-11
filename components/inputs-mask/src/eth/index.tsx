@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useFormContext } from "react-hook-form";
+import { get, useFormContext } from "react-hook-form";
 import { utils, constants } from "ethers";
 
 import { MaskedInput } from "../mask";
@@ -26,8 +26,8 @@ export const EthInput: FC<IEthInputProps> = props => {
     ...rest
   } = props;
 
-  const formatValue = (value: string): string => {
-    return value ? utils.parseEther(value).toString() : "0";
+  const formatValue = (values: any): string => {
+    return values?.value ? utils.parseEther(values?.value).toString() : "0";
   };
 
   const normalizeValue = (value: string): string => {
@@ -39,7 +39,7 @@ export const EthInput: FC<IEthInputProps> = props => {
   };
 
   const form = useFormContext<any>();
-  const value = form.getValues(name);
+  const value = get(form.getValues(), name);
 
   const formattedValue = normalizeValue(value);
 
@@ -52,6 +52,7 @@ export const EthInput: FC<IEthInputProps> = props => {
       prefix={`${symbol} `}
       name={name}
       formatValue={formatValue}
+      normalizeValue={normalizeValue}
       defaultValue={formattedValue}
       {...rest}
     />

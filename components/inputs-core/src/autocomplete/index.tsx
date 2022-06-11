@@ -1,7 +1,7 @@
 import { ChangeEvent, FC, ReactElement } from "react";
 import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/material";
 import { useIntl } from "react-intl";
-import { Controller, useFormContext, useWatch } from "react-hook-form";
+import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 
 import { useStyles } from "./styles";
 
@@ -26,7 +26,7 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
   const suffix = name.split(".").pop() as string;
 
   const form = useFormContext<any>();
-  const error = form.formState.errors[name];
+  const error = get(form.formState.errors, name);
   const value = useWatch({ name });
 
   const { formatMessage } = useIntl();

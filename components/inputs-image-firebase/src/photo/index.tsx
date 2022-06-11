@@ -10,7 +10,7 @@ import {
   Grid,
   InputLabel,
 } from "@mui/material";
-import { useFormContext, useWatch } from "react-hook-form";
+import { get, useFormContext, useWatch } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import path from "path";
@@ -34,8 +34,8 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
   const { name, label, accept, bucket } = props;
 
   const form = useFormContext<any>();
-  const error = form.formState.errors[name];
-  const touched = Boolean(form.formState.touchedFields[name]);
+  const error = get(form.formState.errors, name);
+  const touched = get(form.formState.touchedFields, name);
   const value = useWatch({ name });
 
   const classes = useStyles();
@@ -57,7 +57,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
   };
 
   const handleDeleteConfirm = async (): Promise<void> => {
-    const newValue = form.getValues(name);
+    const newValue = get(form.getValues(), name);
     const [deleted] = newValue.splice(selectedImageIndex, 1);
     const fileName = path.basename(new URL(deleted.imageUrl).pathname);
 
@@ -73,7 +73,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
 
   const handleFileChange = (urls: Array<string>): void => {
     setIsLoading(true);
-    const newValue = form.getValues(name);
+    const newValue = get(form.getValues(), name);
     urls.forEach(imageUrl => {
       newValue.push({
         imageUrl,
@@ -91,7 +91,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
     }
     setIsLoading(true);
 
-    const newValue = form.getValues(name);
+    const newValue = get(form.getValues(), name);
     const [removed] = newValue.splice(result.source.index, 1);
     newValue.splice(result.destination.index, 0, removed);
 

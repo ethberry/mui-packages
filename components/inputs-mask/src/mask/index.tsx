@@ -12,7 +12,8 @@ export interface IMaskedInputProps {
   allowNegative?: boolean;
   allowLeadingZeros?: boolean;
   readOnly?: boolean;
-  formatValue?: (value: string) => string | number;
+  formatValue?: (values: any) => string | number;
+  normalizeValue?: (value: any) => string | number;
   InputProps?: any;
   defaultValue?: any;
   value?: any;
@@ -20,26 +21,16 @@ export interface IMaskedInputProps {
   type?: "text" | "tel" | "password";
   format?: string;
   mask?: string;
-  onChange?: (event: { target: { name: string; value: string } }) => void;
 }
 
 export const MaskedInput: FC<IMaskedInputProps> = props => {
-  const { name, formatValue, value: _value, InputProps, readOnly, ...rest } = props;
-
-  const onValueChange = (field: any) => (values: any) => {
-    field.onChange({
-      target: {
-        name,
-        value: formatValue ? formatValue(values.value) : values.value,
-      },
-    });
-  };
+  const { name, formatValue, normalizeValue, value: _value, InputProps, readOnly, ...rest } = props;
 
   return (
     <TextInput
       name={name}
-      onChange={() => {}}
-      onInputPropsValueChange={onValueChange}
+      formatValue={formatValue}
+      normalizeValue={normalizeValue}
       InputProps={{
         ...InputProps,
         readOnly,

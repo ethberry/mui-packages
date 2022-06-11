@@ -1,7 +1,7 @@
 import { ChangeEvent, FC, ReactElement, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import { useSnackbar } from "notistack";
-import { Controller, useFormContext, useWatch } from "react-hook-form";
+import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/material";
 
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
@@ -48,8 +48,9 @@ export const EntityInput: FC<IEntityInputProps> = props => {
   const [open, setOpen] = useState(false);
 
   const form = useFormContext<any>();
-  const error = form.formState.errors[name];
-  const touched = Boolean(form.formState.touchedFields[name]);
+  const error = get(form.formState.errors, name);
+  const touched = get(form.formState.touchedFields, name);
+
   const value = useWatch({ name });
 
   const { formatMessage } = useIntl();
