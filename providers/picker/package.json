@@ -9,7 +9,7 @@
   },
   "description": "Material UI picker provider",
   "devDependencies": {
-    "@mui/lab": "5.0.0-alpha.85",
+    "@mui/x-date-pickers": "5.0.0-alpha.6",
     "@mui/material": "5.8.3",
     "react": "17.0.2"
   },
@@ -21,7 +21,7 @@
   "main": "./dist/index.js",
   "name": "@gemunion/provider-picker",
   "peerDependencies": {
-    "@mui/lab": "^5.0.0-alpha.0",
+    "@mui/x-date-pickers": "^5.0.0-alpha.6",
     "@mui/material": "^5.0.0",
     "react": "^17.0.0"
   },
