@@ -14,10 +14,10 @@
     "@gemunion/mui-inputs-core": "6.2.3",
     "@gemunion/mui-page-layout": "0.1.10",
     "@gemunion/popup": "0.0.32",
-    "@gemunion/provider-api": "5.8.2",
-    "@gemunion/provider-user": "3.3.11",
+    "@gemunion/provider-api": "5.8.3",
+    "@gemunion/provider-user": "3.3.12",
     "@gemunion/react-hooks": "0.10.3",
-    "@gemunion/yup-rules": "1.8.7",
+    "@gemunion/yup-rules": "1.8.8",
     "yup": "0.32.11"
   },
   "description": "react context provider",

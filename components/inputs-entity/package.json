@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/mui-page-layout": "0.1.10",
-    "@gemunion/provider-api": "5.8.2",
+    "@gemunion/provider-api": "5.8.3",
     "use-debounce": "8.0.1"
   },
   "description": "react widget",
