@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "@gemunion/mui-dialog-confirmation": "3.2.1",
-    "@gemunion/mui-inputs-core": "6.2.3",
-    "@gemunion/mui-inputs-file-s3": "6.1.7",
+    "@gemunion/mui-inputs-core": "6.2.4",
+    "@gemunion/mui-inputs-file-s3": "6.1.8",
     "@gemunion/mui-page-layout": "0.1.10",
     "@gemunion/popup": "0.0.32",
     "@gemunion/provider-api": "5.8.3",
@@ -72,5 +72,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "7.1.8"
+  "version": "7.1.9"
 }
