@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { FormControl, InputLabel, MenuItem, Select, SelectProps } from "@mui/material";
 import { FormattedMessage, useIntl } from "react-intl";
-import { Controller, useFormContext } from "react-hook-form";
+import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 
 import { useStyles } from "./styles";
 
@@ -18,7 +18,7 @@ export const SelectInput: FC<ISelectInputProps> = props => {
   const suffix = name.split(".").pop() as string;
 
   const form = useFormContext<any>();
-
+  const formValues = useWatch();
   const { formatMessage } = useIntl();
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
 
@@ -46,6 +46,10 @@ export const SelectInput: FC<ISelectInputProps> = props => {
                 : (value): string => formatMessage({ id: `enums.${suffix}.${value as string}` })
             }
             {...field}
+            value={get(formValues, name)}
+            onChange={(e: any) => {
+              form.setValue(name, e.target.value);
+            }}
             {...rest}
           >
             {Object.values(options).map((option, i) => (
