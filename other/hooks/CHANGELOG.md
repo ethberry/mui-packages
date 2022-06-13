@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.5](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@0.10.4...@gemunion/react-hooks@0.10.5) (2022-06-13)
+
+
+### Bug Fixes
+
+* useDeepCompareEffect and setting value to form from SelectInput ([0f2854c](https://github.com/gemunion/mui-packages/commit/0f2854c22b2cc1b95ee8d590576bb7f9bb4686b8))
+
+
+
+
+
 ## 0.10.4 (2022-06-12)
 
 **Note:** Version bump only for package @gemunion/react-hooks

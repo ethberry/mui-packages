@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.1.7 (2022-06-13)
+
+
+### Bug Fixes
+
+* useDeepCompareEffect and setting value to form from SelectInput ([0f2854c](https://github.com/gemunion/mui-packages/commit/0f2854c22b2cc1b95ee8d590576bb7f9bb4686b8))
+
+
+
+
+
 ## 5.1.6 (2022-06-11)
 
 **Note:** Version bump only for package @gemunion/mui-form
