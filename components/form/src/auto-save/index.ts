@@ -1,6 +1,7 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import { useWatch } from "react-hook-form";
 import { useDebouncedCallback } from "use-debounce";
+import { useDeepCompareEffect } from "@gemunion/react-hooks";
 
 interface IAutoSaveProps {
   onSubmit: (values: any) => Promise<void>;
@@ -9,13 +10,15 @@ interface IAutoSaveProps {
 export const AutoSave: FC<IAutoSaveProps> = props => {
   const { onSubmit } = props;
 
-  const watch = useWatch();
+  const values = useWatch();
 
-  const debouncedOnSubmit = useDebouncedCallback(async () => await onSubmit(watch), 300);
+  const debouncedOnSubmit = useDebouncedCallback(async () => {
+    await onSubmit(values);
+  }, 300);
 
-  useEffect(() => {
+  useDeepCompareEffect(() => {
     void debouncedOnSubmit();
-  }, [watch]);
+  }, [values]);
 
   return null;
 };
