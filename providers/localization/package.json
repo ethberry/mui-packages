@@ -12,9 +12,9 @@
   },
   "description": "react i18n provider",
   "devDependencies": {
-    "@mui/icons-material": "5.8.3",
-    "@mui/material": "5.8.3",
-    "@types/react": "17.0.45",
+    "@mui/icons-material": "5.8.4",
+    "@mui/material": "5.8.4",
+    "@types/react": "17.0.47",
     "react": "17.0.2",
     "react-intl": "6.0.4"
   },
