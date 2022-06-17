@@ -2,7 +2,7 @@ import { FC, useState, useEffect } from "react";
 import { useIntl } from "react-intl";
 import { useSnackbar } from "notistack";
 
-import { ICoinGeckoCoin } from "@gemunion/types-coin-gecko";
+import { ICoinGeckoCoin } from "./interfaces";
 
 import { CoinGeckoContext } from "./context";
 
