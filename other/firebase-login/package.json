@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "@gemunion/firebase": "1.1.19",
-    "@gemunion/provider-api": "5.8.3",
-    "@gemunion/provider-user": "3.3.12",
+    "@gemunion/provider-api": "5.8.4",
+    "@gemunion/provider-user": "3.3.13",
     "firebaseui": "6.0.1"
   },
   "description": "react component",

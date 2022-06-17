@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/mui-page-layout": "0.1.10",
-    "@gemunion/provider-api": "5.8.3",
+    "@gemunion/provider-api": "5.8.4",
     "use-debounce": "8.0.1"
   },
   "description": "react widget",
@@ -21,7 +21,7 @@
     "@types/react": "17.0.47",
     "notistack": "2.0.5",
     "react": "17.0.2",
-    "react-hook-form": "7.32.1",
+    "react-hook-form": "7.32.2",
     "react-intl": "6.0.4"
   },
   "engines": {

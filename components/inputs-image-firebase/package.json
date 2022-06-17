@@ -13,8 +13,8 @@
     "@gemunion/mui-inputs-core": "6.2.5",
     "@gemunion/mui-inputs-file-firebase": "5.1.8",
     "@gemunion/mui-page-layout": "0.1.10",
-    "@gemunion/popup": "0.0.32",
-    "@gemunion/provider-api": "5.8.3",
+    "@gemunion/popup": "0.0.33",
+    "@gemunion/provider-api": "5.8.4",
     "react-beautiful-dnd": "13.1.0"
   },
   "description": "react widget",
@@ -35,7 +35,7 @@
     "jest-environment-jsdom": "28.1.1",
     "notistack": "2.0.5",
     "react": "17.0.2",
-    "react-hook-form": "7.32.1",
+    "react-hook-form": "7.32.2",
     "react-intl": "6.0.4",
     "ts-jest": "28.0.5"
   },
