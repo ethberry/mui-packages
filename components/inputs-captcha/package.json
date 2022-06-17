@@ -12,12 +12,12 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.8.3",
-    "@mui/styles": "5.8.3",
-    "@types/react": "17.0.45",
+    "@mui/material": "5.8.4",
+    "@mui/styles": "5.8.4",
+    "@types/react": "17.0.47",
     "@types/react-google-recaptcha": "2.1.5",
     "react": "17.0.2",
-    "react-hook-form": "7.32.0",
+    "react-hook-form": "7.32.1",
     "react-intl": "6.0.4"
   },
   "engines": {
