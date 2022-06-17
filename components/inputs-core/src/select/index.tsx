@@ -18,7 +18,7 @@ export const SelectInput: FC<ISelectInputProps> = props => {
   const suffix = name.split(".").pop() as string;
 
   const form = useFormContext<any>();
-  const formValues = useWatch();
+  const formValues = useWatch({});
   const { formatMessage } = useIntl();
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
 

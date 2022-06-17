@@ -10,7 +10,7 @@ interface IAutoSaveProps {
 export const AutoSave: FC<IAutoSaveProps> = props => {
   const { onSubmit } = props;
 
-  const values = useWatch();
+  const values = useWatch({});
 
   const debouncedOnSubmit = useDebouncedCallback(async () => {
     await onSubmit(values);

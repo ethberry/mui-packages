@@ -26,7 +26,7 @@
     "@types/markdown-draft-js": "2.2.4",
     "@types/react": "17.0.45",
     "react": "17.0.2",
-    "react-hook-form": "7.32.0",
+    "react-hook-form": "8.0.0-alpha.4",
     "react-intl": "6.0.4"
   },
   "engines": {
@@ -42,7 +42,7 @@
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
     "react": "^17.0.0",
-    "react-hook-form": "^7.0.0",
+    "react-hook-form": "^8.0.0",
     "react-intl": "^5.0.0 || ^6.0.0"
   },
   "publishConfig": {
