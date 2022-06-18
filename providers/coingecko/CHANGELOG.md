@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.22 (2022-06-18)
+
+
+### Bug Fixes
+
+* name ([eaba2e4](https://github.com/gemunion/mui-packages/commit/eaba2e46936b4a964e0a5a7a772209d7573e2c82))
+
+
+
+
+
 ## 0.1.21 (2022-06-06)
 
 **Note:** Version bump only for package @gemunion/provider-coingecko
