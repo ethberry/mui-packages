@@ -3,7 +3,7 @@ import { ReactElement } from "react";
 import { Story } from "@storybook/react";
 
 import { FormWrapper } from "@gemunion/mui-form";
-import { ApiProvider } from "@gemunion/provider-api";
+import { FirebaseApiProvider } from "@gemunion/provider-api-firebase";
 
 import { IGeeTestCaptchaProps, GeeTestCaptcha } from ".";
 
@@ -12,11 +12,11 @@ export default {
   component: GeeTestCaptcha,
   decorators: [
     (Story: Story): ReactElement => (
-      <ApiProvider baseUrl={"http://localhost/"}>
+      <FirebaseApiProvider baseUrl={"http://localhost/"}>
         <FormWrapper onSubmit={Promise.resolve} initialValues={{ photo: [] }}>
           <Story />
         </FormWrapper>
-      </ApiProvider>
+      </FirebaseApiProvider>
     ),
   ],
 };
