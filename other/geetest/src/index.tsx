@@ -1,7 +1,7 @@
-import { FC, useContext, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { useFormContext, get } from "react-hook-form";
+import { FC, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { get, useFormContext } from "react-hook-form";
 
-import { ApiContext } from "@gemunion/provider-api";
+import { useApi } from "@gemunion/provider-api";
 
 interface IRegisterResult {
   challenge: string;
@@ -22,7 +22,7 @@ export const GeeTestCaptcha: FC<IGeeTestCaptchaProps> = props => {
 
   const [captchaObj, setCaptchaObj] = useState<any | null>(null);
   const ref = useRef<HTMLDivElement | null>(null);
-  const api = useContext(ApiContext);
+  const api = useApi();
   const form = useFormContext<any>();
 
   const error = get(form.formState.errors, name);
