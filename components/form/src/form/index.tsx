@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 
 import { PromptIfDirty } from "../prompt";
 import { FormButtons } from "../buttons";
+import { useYupValidationResolver } from "../hook";
 
 interface IFormWrapperProps<T> {
   showButtons?: boolean;
@@ -15,6 +16,7 @@ interface IFormWrapperProps<T> {
   validationSchema?: any;
   formSubmitButtonRef?: any;
   innerRef?: any;
+  validate?: (data: any) => Promise<any>;
 }
 
 export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
@@ -29,12 +31,19 @@ export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
     innerRef,
     className,
     validationSchema,
+    validate,
   } = props;
+
+  const resolver = validate
+    ? useYupValidationResolver(validate)
+    : validationSchema
+    ? yupResolver(validationSchema)
+    : undefined;
 
   const form = useForm({
     mode: "all",
     defaultValues: initialValues,
-    resolver: validationSchema ? yupResolver(validationSchema) : undefined,
+    resolver,
   });
 
   const handleSubmit = async (data: any, e: any): Promise<void> => {
