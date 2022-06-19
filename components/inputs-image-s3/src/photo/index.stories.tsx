@@ -4,7 +4,7 @@ import { FormWrapper } from "@gemunion/mui-form";
 import { SnackbarProvider } from "notistack";
 import { Story } from "@storybook/react";
 
-import { ApiProvider } from "@gemunion/provider-api";
+import { JwtApiProvider } from "@gemunion/provider-api-jwt";
 
 import { PhotoInput, IPhotoInputProps } from "./index";
 
@@ -25,7 +25,7 @@ export default {
   component: PhotoInput,
   decorators: [
     (Story: Story): ReactElement => (
-      <ApiProvider baseUrl={"http://localhost/"}>
+      <JwtApiProvider baseUrl={"http://localhost/"}>
         <IntlProvider locale="en" messages={i18n}>
           <SnackbarProvider>
             <FormWrapper onSubmit={Promise.resolve} initialValues={{ photo: [] }}>
@@ -33,7 +33,7 @@ export default {
             </FormWrapper>
           </SnackbarProvider>
         </IntlProvider>
-      </ApiProvider>
+      </JwtApiProvider>
     ),
   ],
 };

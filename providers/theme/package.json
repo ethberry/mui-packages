@@ -8,11 +8,11 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/constants": "0.8.4",
-    "@gemunion/provider-settings": "2.0.20"
+    "@gemunion/constants": "0.8.4"
   },
   "description": "Material UI theme provider",
   "devDependencies": {
+    "@gemunion/provider-settings": "3.0.1",
     "@mui/icons-material": "5.8.4",
     "@mui/material": "5.8.4",
     "react": "17.0.2",
@@ -26,6 +26,7 @@
   "main": "./dist/index.js",
   "name": "@gemunion/provider-theme",
   "peerDependencies": {
+    "@gemunion/provider-settings": "^3.0.0",
     "@mui/icons-material": "^5.0.0",
     "@mui/material": "^5.0.0",
     "react": "^17.0.0",
@@ -49,5 +50,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "4.2.2"
+  "version": "5.0.0"
 }

@@ -4,7 +4,7 @@ import { FormWrapper } from "@gemunion/mui-form";
 import { SnackbarProvider } from "notistack";
 import { Story } from "@storybook/react";
 
-import { ApiProvider } from "@gemunion/provider-api";
+import { JwtApiProvider } from "@gemunion/provider-api-jwt";
 
 import { AvatarInput, IAvatarInputProps } from "./index";
 
@@ -23,7 +23,7 @@ export default {
   component: AvatarInput,
   decorators: [
     (Story: Story): ReactElement => (
-      <ApiProvider baseUrl={"http://localhost/"}>
+      <JwtApiProvider baseUrl={"http://localhost/"}>
         <IntlProvider locale="en" messages={i18n}>
           <SnackbarProvider>
             <FormWrapper onSubmit={Promise.resolve} initialValues={{ avatar: "" }}>
@@ -31,7 +31,7 @@ export default {
             </FormWrapper>
           </SnackbarProvider>
         </IntlProvider>
-      </ApiProvider>
+      </JwtApiProvider>
     ),
   ],
 };
