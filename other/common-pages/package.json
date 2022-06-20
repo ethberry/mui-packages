@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.8.4",
-    "@gemunion/mui-form": "6.0.2",
+    "@gemunion/mui-form": "6.0.3",
     "@gemunion/mui-inputs-captcha": "4.1.4",
-    "@gemunion/mui-inputs-core": "7.0.2",
+    "@gemunion/mui-inputs-core": "7.0.3",
     "@gemunion/mui-page-layout": "0.1.11",
     "@gemunion/popup": "0.0.33",
     "@gemunion/react-hooks": "1.0.2",
@@ -75,5 +75,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "9.0.2"
+  "version": "9.0.3"
 }
