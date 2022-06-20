@@ -2,6 +2,8 @@ import { FC } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
+import { useDeepCompareEffect } from "@gemunion/react-hooks";
+
 import { PromptIfDirty } from "../prompt";
 import { FormButtons } from "../buttons";
 import { useYupValidationResolver } from "../hook";
@@ -13,6 +15,7 @@ interface IFormWrapperProps<T> {
   onSubmit: (values: T, form?: any) => Promise<void>;
   className?: string;
   initialValues: T;
+  enableReinitialize?: boolean;
   validationSchema?: any;
   formSubmitButtonRef?: any;
   innerRef?: any;
@@ -23,6 +26,7 @@ export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
   const {
     children,
     initialValues,
+    enableReinitialize = true,
     onSubmit,
     showButtons,
     showPrompt,
@@ -53,6 +57,12 @@ export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
     await onSubmit(values, form);
     form.reset(values);
   };
+
+  useDeepCompareEffect(() => {
+    if (enableReinitialize) {
+      form.reset(initialValues);
+    }
+  }, [enableReinitialize, initialValues]);
 
   return (
     <FormProvider {...form}>
