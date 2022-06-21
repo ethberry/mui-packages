@@ -3,12 +3,12 @@ import { useIntl } from "react-intl";
 import { ChangeEvent, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router";
 import { parse, stringify } from "qs";
+import useDeepCompareEffect from "use-deep-compare-effect";
 
 import { IIdBase, IPaginationResult, IPaginationDto } from "@gemunion/types-collection";
 import { ApiError, useApi } from "@gemunion/provider-api";
 import { defaultItemsPerPage } from "@gemunion/constants";
 
-import { useDeepCompareEffect } from "./use-deep-compare-effect";
 import { decoder } from "./utils";
 
 export interface ICollectionHook<T, S> {
