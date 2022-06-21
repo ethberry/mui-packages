@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.3 (2022-06-21)
+
+
+### Bug Fixes
+
+* import use deep compare effect from package ([bc61df8](https://github.com/gemunion/mui-packages/commit/bc61df803ffc69ce74d7a2b50add7f9ee53c5a0b))
+
+
+
+
+
 ## [1.0.2](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.0.1...@gemunion/react-hooks@1.0.2) (2022-06-19)
 
 **Note:** Version bump only for package @gemunion/react-hooks
