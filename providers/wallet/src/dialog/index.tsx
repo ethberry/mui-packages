@@ -29,14 +29,14 @@ export const WalletDialog: FC<IWalletConnectDialogProps> = props => {
         <CloseButton onClick={onClose} />
       </DialogTitle>
       <DialogContent>
-        <MetaMaskButton onClick={onClose} />
-        <WalletConnectButton onClick={onClose} />
-        {/* <TrezorButton onClick={onClose} /> */}
-        {/* <LedgerButton onClick={onClose} /> */}
-        {/* <TorusButton onClick={onClose} /> */}
-        {/* <FortmaticButton onClick={onClose} /> */}
-        {/* <AuthereumButton onClick={onClose} /> */}
-        {/* <PortisButton onClick={onClose} /> */}
+        <MetaMaskButton onClick={onClose} data-testid="ConnectMetamaskButton" />
+        <WalletConnectButton onClick={onClose} data-testid="ConnectWalletConnectButton" />
+        {/* <TrezorButton onClick={onClose} data-testid="ConnectTrezorButton" /> */}
+        {/* <LedgerButton onClick={onClose} data-testid="ConnectLedgerButton" /> */}
+        {/* <TorusButton onClick={onClose} data-testid="ConnectTorusButton" /> */}
+        {/* <FortmaticButton onClick={onClose} data-testid="ConnectFortmaticButton" /> */}
+        {/* <AuthereumButton onClick={onClose} data-testid="ConnectAuthereumButton" /> */}
+        {/* <PortisButton onClick={onClose} data-testid="ConnectPortisButton" /> */}
       </DialogContent>
     </Dialog>
   );
