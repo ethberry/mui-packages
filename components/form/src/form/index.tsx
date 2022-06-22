@@ -3,6 +3,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
+import { useLicense } from "@gemunion/provider-license";
 
 import { PromptIfDirty } from "../prompt";
 import { FormButtons } from "../buttons";
@@ -38,6 +39,8 @@ export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
     validate,
   } = props;
 
+  const license = useLicense();
+
   const resolver = validate
     ? useYupValidationResolver(validate)
     : validationSchema
@@ -63,6 +66,10 @@ export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
       form.reset(initialValues);
     }
   }, [enableReinitialize, initialValues]);
+
+  if (!license.isValid()) {
+    return null;
+  }
 
   return (
     <FormProvider {...form}>
