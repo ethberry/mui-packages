@@ -90,7 +90,7 @@ export const FileInput: FC<IFileInputProps> = props => {
       <Controller
         name="file"
         control={form.control}
-        render={({ field }) => <input {...getInputProps()} {...field} data-testid="FileInput" />}
+        render={({ field }) => <input {...field} {...getInputProps()} data-testid="FileInput" />}
       />
       {isDragActive ? (
         <CloudUploadOutlined className={clsx(classes.icon, props.classes?.active)} />
