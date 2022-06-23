@@ -25,7 +25,11 @@ export const CheckboxInput: FC<ICheckboxInputProps> = props => {
       name={name}
       control={form.control}
       render={({ field }) => (
-        <FormControlLabel classes={classes} control={<Checkbox {...field} {...rest} />} label={localizedLabel} />
+        <FormControlLabel
+          classes={classes}
+          control={<Checkbox {...field} checked={field.value} {...rest} />}
+          label={localizedLabel}
+        />
       )}
     />
   );
