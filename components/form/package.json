@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/mui-page-layout": "0.1.12",
-    "@gemunion/provider-license": "1.0.23",
+    "@gemunion/provider-license": "1.0.28",
     "@gemunion/react-hooks": "1.0.5",
     "@hookform/resolvers": "2.9.3",
     "use-debounce": "8.0.1",
