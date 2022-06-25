@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.3 (2022-06-25)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([8281c45](https://github.com/gemunion/mui-packages/commit/8281c450e0398ef04466802519f7727c25e9ff8f))
+
+
+
+
+
 ## [5.0.2](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@5.0.1...@gemunion/provider-theme@5.0.2) (2022-06-19)
 
 **Note:** Version bump only for package @gemunion/provider-theme

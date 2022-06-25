@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.7](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@6.0.6...@gemunion/mui-inputs-file@6.0.7) (2022-06-25)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([8281c45](https://github.com/gemunion/mui-packages/commit/8281c450e0398ef04466802519f7727c25e9ff8f))
+* inputs-file props ([fe8173a](https://github.com/gemunion/mui-packages/commit/fe8173a9e48f73603b1fd7f87cc46e79b9b3e66d))
+* reorder props ([294766b](https://github.com/gemunion/mui-packages/commit/294766bb5c0668cc0cf99e9d432f7a2831370dd8))
+
+
+
+
+
 ## [6.0.6](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@6.0.5...@gemunion/mui-inputs-file@6.0.6) (2022-06-21)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file

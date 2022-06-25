@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.12 (2022-06-25)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([8281c45](https://github.com/gemunion/mui-packages/commit/8281c450e0398ef04466802519f7727c25e9ff8f))
+* pass className to button ([6823a4c](https://github.com/gemunion/mui-packages/commit/6823a4c82635c20878ef51bf3a563241074fa065))
+* pass className to page header ([d489f2d](https://github.com/gemunion/mui-packages/commit/d489f2d906a06aedcad81478369ad0cca2345a85))
+
+
+
+
+
 ## 0.1.11 (2022-06-18)
 
 **Note:** Version bump only for package @gemunion/mui-page-layout

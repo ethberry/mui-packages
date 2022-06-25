@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.7](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.0.6...@gemunion/mui-inputs-core@7.0.7) (2022-06-25)
+
+
+### Bug Fixes
+
+* checkbox uses checked instead of value ([d98d184](https://github.com/gemunion/mui-packages/commit/d98d1842acf103fa404d1e9d5fd6b2ef43d7b869))
+* **deps:** update all non-major dependencies ([8281c45](https://github.com/gemunion/mui-packages/commit/8281c450e0398ef04466802519f7727c25e9ff8f))
+
+
+
+
+
 ## [7.0.6](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.0.5...@gemunion/mui-inputs-core@7.0.6) (2022-06-21)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core
