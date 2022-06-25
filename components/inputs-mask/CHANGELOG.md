@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.3.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.2.14...@gemunion/mui-inputs-mask@5.3.0) (2022-06-25)
+
+
+### Features
+
+* eth input accepts units ([d54b709](https://github.com/gemunion/mui-packages/commit/d54b70944b7fd2844a1ad51bfad62f8fb3d25e3f))
+
+
+
+
+
 ## [5.2.14](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.2.13...@gemunion/mui-inputs-mask@5.2.14) (2022-06-25)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
