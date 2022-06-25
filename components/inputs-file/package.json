@@ -15,13 +15,13 @@
   "description": "react widget",
   "devDependencies": {
     "@mui/icons-material": "5.8.4",
-    "@mui/material": "5.8.4",
+    "@mui/material": "5.8.5",
     "@mui/styles": "5.8.4",
     "@storybook/react": "6.5.9",
     "@types/react": "17.0.47",
     "notistack": "2.0.5",
     "react": "17.0.2",
-    "react-hook-form": "7.32.2",
+    "react-hook-form": "7.33.0",
     "react-intl": "6.0.4"
   },
   "engines": {
