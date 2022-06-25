@@ -1,3 +1,16 @@
-export const getFormattedCurrency = (value: string): number => Number.parseFloat(value) * 100;
+import { BigNumberish, utils } from "ethers";
 
-export const getNormalCurrency = (value: number): string => (value ? (value / 100).toString() : "0");
+export const formatValue =
+  (units?: BigNumberish) =>
+  (value: string): string =>
+    value ? utils.parseUnits(value, units).toString() : "0";
+
+export const normalizeValue =
+  (units?: BigNumberish) =>
+  (value: string): string => {
+    // values passed from query string are parsed to number by custom qs.decoder
+    const normalizedValue = value ? utils.formatUnits(value.toString(), units) : "0";
+    const [whole, decimals] = normalizedValue.split(".");
+
+    return decimals === "0" ? whole : normalizedValue;
+  };

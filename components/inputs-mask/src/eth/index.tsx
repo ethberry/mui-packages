@@ -1,8 +1,9 @@
 import { FC } from "react";
 import { get, useFormContext } from "react-hook-form";
-import { utils, constants } from "ethers";
+import { constants, BigNumberish } from "ethers";
 
 import { MaskedInput } from "../mask";
+import { formatValue, normalizeValue } from "./utils";
 
 export interface IEthInputProps {
   allowNegative?: boolean;
@@ -11,6 +12,7 @@ export interface IEthInputProps {
   name: string;
   readOnly?: boolean;
   precision?: number;
+  units?: BigNumberish;
   symbol?: string;
   thousandsSeparator?: string;
 }
@@ -23,23 +25,14 @@ export const EthInput: FC<IEthInputProps> = props => {
     name,
     symbol = constants.EtherSymbol,
     thousandsSeparator = " ",
+    units,
     ...rest
   } = props;
-
-  const formatValue = (value: string): string => (value ? utils.parseEther(value).toString() : "0");
-
-  const normalizeValue = (value: string): string => {
-    // values passed from query string are parsed to number by custom qs.decoder
-    const normalizedValue = value ? utils.formatEther(value.toString()) : "0";
-    const [whole, decimals] = normalizedValue.split(".");
-
-    return decimals === "0" ? whole : normalizedValue;
-  };
 
   const form = useFormContext<any>();
   const value = get(form.getValues(), name);
 
-  const formattedValue = normalizeValue(value);
+  const formattedValue = normalizeValue(units)(value);
 
   return (
     <MaskedInput
@@ -47,10 +40,10 @@ export const EthInput: FC<IEthInputProps> = props => {
       decimalSeparator={fractionalDelimiter}
       thousandSeparator={thousandsSeparator}
       allowLeadingZeros={fillByZeros}
-      prefix={`${symbol} `}
+      prefix={symbol}
       name={name}
-      formatValue={formatValue}
-      normalizeValue={normalizeValue}
+      formatValue={formatValue(units)}
+      normalizeValue={normalizeValue(units)}
       defaultValue={formattedValue}
       {...rest}
     />
