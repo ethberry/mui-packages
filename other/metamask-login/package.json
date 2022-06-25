@@ -16,10 +16,10 @@
   },
   "description": "react component",
   "devDependencies": {
-    "@gemunion/provider-api": "6.0.2",
-    "@gemunion/provider-user": "4.0.2",
+    "@gemunion/provider-api": "6.0.3",
+    "@gemunion/provider-user": "4.0.3",
     "@gemunion/provider-wallet": "1.0.2",
-    "@mui/material": "5.8.4",
+    "@mui/material": "5.8.5",
     "@mui/styles": "5.8.4",
     "@types/uuid": "8.3.4",
     "notistack": "2.0.5",
