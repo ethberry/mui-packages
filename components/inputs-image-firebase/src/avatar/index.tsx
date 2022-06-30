@@ -62,7 +62,7 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
   }
 
   return (
-    <FormControl fullWidth className={classes.root} onBlur={handleOnBlur}>
+    <FormControl fullWidth className={classes.root}>
       <InputLabel id={`${name}-select-label`} shrink className={classes.label}>
         <FormattedMessage id={`form.labels.${name}`} />
       </InputLabel>
