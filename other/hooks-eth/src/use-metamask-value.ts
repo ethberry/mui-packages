@@ -14,10 +14,17 @@ export const useMetamaskValue = <T = any>(fn: (...args: Array<any>) => Promise<T
   return async (...args: Array<any>) => {
     if (!active) {
       openConnectWalletDialog();
-      enqueueSnackbar(formatMessage({ id: "snackbar.walletIsNotConnected" }), { variant: "error" });
-      return Promise.reject(new Error("Wallet is not connected"));
+      const localizedErrorMessage = formatMessage({ id: "snackbar.walletIsNotConnected" });
+      enqueueSnackbar(localizedErrorMessage, { variant: "error" });
+      return Promise.reject(new Error(localizedErrorMessage));
     }
 
-    return fn(...args);
+    return fn(...args).catch((error: any) => {
+      if (error.code === 4001) {
+        enqueueSnackbar(formatMessage({ id: "snackbar.denied" }), { variant: "warning" });
+      } else {
+        throw error;
+      }
+    });
   };
 };

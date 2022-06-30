@@ -26,9 +26,7 @@ export const useDeploy = (deploy: (values: any) => Promise<void>) => {
         return result;
       })
       .catch((error: any) => {
-        if (error.code === 4001) {
-          enqueueSnackbar(formatMessage({ id: "snackbar.denied" }), { variant: "warning" });
-        } else if (error.status === 400) {
+        if (error.status === 400) {
           const errors = error.getLocalizedValidationErrors ? error.getLocalizedValidationErrors() : [];
 
           Object.keys(errors).forEach(key => {
