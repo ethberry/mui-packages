@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { FormControl, InputLabel, MenuItem, Select, SelectProps } from "@mui/material";
+import { FormControl, FormHelperText, InputLabel, MenuItem, Select, SelectProps } from "@mui/material";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 
@@ -19,8 +19,13 @@ export const SelectInput: FC<ISelectInputProps> = props => {
 
   const form = useFormContext<any>();
   const formValues = useWatch();
+
+  const error = get(form.formState.errors, name);
+  const touched = get(form.formState.touchedFields, name);
+
   const { formatMessage } = useIntl();
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
+  const localizedHelperText = error && touched ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   return (
     <Controller
@@ -48,7 +53,7 @@ export const SelectInput: FC<ISelectInputProps> = props => {
             {...field}
             value={get(formValues, name)}
             onChange={(e: any) => {
-              form.setValue(name, e.target.value);
+              form.setValue(name, e.target.value, { shouldTouch: true });
             }}
             {...rest}
           >
@@ -58,6 +63,12 @@ export const SelectInput: FC<ISelectInputProps> = props => {
               </MenuItem>
             ))}
           </Select>
+
+          {localizedHelperText && (
+            <FormHelperText id={`${name}-helper-text`} error>
+              {localizedHelperText}
+            </FormHelperText>
+          )}
         </FormControl>
       )}
     />

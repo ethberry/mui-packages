@@ -20,8 +20,8 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
 
   const form = useFormContext<any>();
   const error = get(form.formState.errors, name);
-  const touched = get(form.formState.touchedFields, name);
-  const value = useWatch({ name });
+
+  const value = get(useWatch(), name);
 
   const classes = useStyles();
   const { formatMessage } = useIntl();
@@ -32,11 +32,12 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
 
   const onChange = (urls: Array<string>) => {
     form.setValue(name, urls[0], { shouldTouch: true });
+    form.clearErrors(name);
   };
 
   const onDelete = async () => {
     await deleteUrl(value);
-    form.setValue(name, "", { shouldTouch: false });
+    form.setValue(name, "");
   };
 
   if (value) {
@@ -61,14 +62,14 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
   }
 
   return (
-    <FormControl fullWidth className={classes.root}>
+    <FormControl fullWidth className={classes.root} onBlur={handleOnBlur}>
       <InputLabel id={`${name}-select-label`} shrink className={classes.label}>
         <FormattedMessage id={`form.labels.${name}`} />
       </InputLabel>
       <Grid container className={classes.container}>
         <Grid item>
           <FirebaseFileInput onChange={onChange} bucket={bucket} accept={accept} maxFiles={1} />
-          {touched && error && (
+          {localizedHelperText && (
             <FormHelperText id={`${name}-helper-text`} error>
               {localizedHelperText}
             </FormHelperText>

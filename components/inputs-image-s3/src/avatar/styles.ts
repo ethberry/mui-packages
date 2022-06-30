@@ -7,6 +7,7 @@ export const useStyles = makeStyles<Theme>(
       height: 200,
       width: 200,
       position: "relative",
+      marginTop: theme.spacing(2),
     },
     container: {
       marginTop: theme.spacing(1),

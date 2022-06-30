@@ -34,8 +34,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
 
   const form = useFormContext<any>();
   const error = get(form.formState.errors, name);
-  const touched = get(form.formState.touchedFields, name);
-  const value = useWatch({ name });
+  const value = get(useWatch(), name);
 
   const classes = useStyles();
   const { formatMessage } = useIntl();
@@ -152,7 +151,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
         </Droppable>
       </DragDropContext>
 
-      {touched && error && (
+      {localizedHelperText && (
         <FormHelperText id={`${name}-helper-text`} error>
           {localizedHelperText}
         </FormHelperText>
