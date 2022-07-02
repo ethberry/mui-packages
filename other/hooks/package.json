@@ -9,15 +9,15 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.8.4",
-    "@gemunion/types-collection": "1.4.3",
-    "qs": "6.10.5"
+    "@gemunion/types-collection": "1.4.4",
+    "qs": "6.11.0"
   },
   "description": "react hooks",
   "devDependencies": {
-    "@gemunion/provider-api": "6.0.3",
+    "@gemunion/provider-api": "6.0.4",
     "notistack": "2.0.5",
     "react": "17.0.2",
-    "react-hook-form": "7.33.0",
+    "react-hook-form": "7.33.1",
     "react-intl": "6.0.4",
     "react-router": "6.3.0"
   },

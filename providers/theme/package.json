@@ -12,9 +12,9 @@
   },
   "description": "Material UI theme provider",
   "devDependencies": {
-    "@gemunion/provider-settings": "3.0.3",
+    "@gemunion/provider-settings": "3.0.4",
     "@mui/icons-material": "5.8.4",
-    "@mui/material": "5.8.5",
+    "@mui/material": "5.8.6",
     "react": "17.0.2",
     "react-intl": "6.0.4"
   },
