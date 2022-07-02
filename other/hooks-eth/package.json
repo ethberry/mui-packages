@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "qs": "6.10.5",
+    "qs": "6.11.0",
     "use-deep-compare-effect": "1.8.1"
   },
   "description": "react hooks",
