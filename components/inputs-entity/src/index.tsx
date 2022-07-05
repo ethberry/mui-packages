@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, ReactElement, useEffect, useState } from "react";
+import { ChangeEvent, FC, ReactElement, useState } from "react";
 import { useIntl } from "react-intl";
 import { useSnackbar } from "notistack";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
@@ -6,6 +6,7 @@ import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/mat
 
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useApi } from "@gemunion/provider-api";
+import { useDeepCompareEffect } from "@gemunion/react-hooks";
 import { useStyles } from "./styles";
 
 export interface IAutocompleteOption {
@@ -86,7 +87,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
       });
   };
 
-  useEffect(() => {
+  useDeepCompareEffect(() => {
     void fetchOptions();
 
     return () => abortController.abort();

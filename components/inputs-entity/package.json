@@ -9,11 +9,12 @@
   },
   "dependencies": {
     "@gemunion/mui-page-layout": "0.1.13",
+    "@gemunion/provider-api": "6.0.4",
+    "@gemunion/react-hooks": "1.0.6",
     "use-debounce": "8.0.1"
   },
   "description": "react widget",
   "devDependencies": {
-    "@gemunion/provider-api": "6.0.4",
     "@mui/icons-material": "5.8.4",
     "@mui/lab": "5.0.0-alpha.88",
     "@mui/material": "5.8.6",
