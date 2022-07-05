@@ -58,7 +58,6 @@ export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
     e.stopPropagation();
     const values = form.getValues();
     await onSubmit(values, form);
-    form.reset(values);
   };
 
   useDeepCompareEffect(() => {

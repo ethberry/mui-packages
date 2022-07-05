@@ -3,6 +3,9 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles<Theme>(
   theme => ({
+    root: {
+      marginTop: theme.spacing(2),
+    },
     container: {
       marginTop: theme.spacing(1),
     },

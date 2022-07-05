@@ -159,6 +159,7 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
       .then(() => {
         enqueueSnackbar(formatMessage({ id: id ? "snackbar.updated" : "snackbar.created" }), { variant: "success" });
         setIsEditDialogOpen(false);
+        form.reset(values);
         return fetch();
       })
       .catch((e: ApiError) => {
