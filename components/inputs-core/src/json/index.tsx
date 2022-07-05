@@ -9,6 +9,14 @@ export const JsonInput: FC<ITextAreaProps> = props => {
 
   const form = useFormContext<any>();
 
+  const normalizeValue = (value: string) => {
+    try {
+      return JSON.stringify(JSON.parse(value), null, "\t");
+    } catch (_e) {
+      return value;
+    }
+  };
+
   const inputProps = {
     onBlur: (event: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       const { value } = event.target;
@@ -18,7 +26,7 @@ export const JsonInput: FC<ITextAreaProps> = props => {
         form.setValue(name, value, { shouldTouch: true });
         jsonValidationSchema.validateSync(value);
 
-        const formattedValue = JSON.stringify(JSON.parse(value), null, "\t");
+        const formattedValue = normalizeValue(value);
         event.target.value = formattedValue;
 
         form.setValue(name, formattedValue);
@@ -30,5 +38,5 @@ export const JsonInput: FC<ITextAreaProps> = props => {
     onFocus: () => form.setFocus(name),
   };
 
-  return <TextArea name={name} {...inputProps} {...rest} />;
+  return <TextArea name={name} normalizeValue={normalizeValue} {...inputProps} {...rest} />;
 };
