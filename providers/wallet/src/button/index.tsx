@@ -8,14 +8,15 @@ import { useLicense } from "@gemunion/provider-license";
 
 import { WalletIcon } from "../icon";
 import { WalletMenuDialog } from "../menu-dialog";
-import { WALLET_CONNECT_POPUP_TYPE, WALLET_MENU_POPUP_TYPE } from "../provider";
+import { useWallet, WALLET_CONNECT_POPUP_TYPE, WALLET_MENU_POPUP_TYPE } from "../provider";
 import { WalletDialog } from "../dialog";
 
 export const Wallet: FC = () => {
   const { isOpenPopup, openPopup, closePopup } = usePopup();
-  const { active, account } = useWeb3React();
+  const { isActive, account } = useWeb3React();
   const { formatMessage } = useIntl();
   const license = useLicense();
+  const { closeConnectWalletDialog } = useWallet();
 
   const handleOpenWalletDialog = () => {
     openPopup(WALLET_MENU_POPUP_TYPE);
@@ -35,7 +36,7 @@ export const Wallet: FC = () => {
 
   return (
     <Box mx={1}>
-      {active ? (
+      {isActive ? (
         <Tooltip title={account!} enterDelay={300}>
           <IconButton color="inherit" onClick={handleOpenWalletDialog} data-testid="OpenWalletOptionsDialog">
             <WalletIcon />
@@ -48,7 +49,7 @@ export const Wallet: FC = () => {
           </IconButton>
         </Tooltip>
       )}
-      <WalletDialog onClose={closePopup} open={isOpenPopup(WALLET_CONNECT_POPUP_TYPE)} />
+      <WalletDialog onClose={closeConnectWalletDialog} open={isOpenPopup(WALLET_CONNECT_POPUP_TYPE)} />
       <WalletMenuDialog onClose={handleCloseWalletDialog} open={isOpenPopup(WALLET_MENU_POPUP_TYPE)} />
     </Box>
   );

@@ -1,6 +1,6 @@
 export interface INetwork {
   chainName: string;
-  chainId: any;
+  chainId: number;
   rpcUrls: any;
   blockExplorerUrls: string[];
   nativeCurrency: {

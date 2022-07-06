@@ -1,3 +1,4 @@
+import type { Networkish } from "@ethersproject/networks";
 import { INetwork } from "../interfaces";
 
 /* javascript-obfuscator:disable */
@@ -81,7 +82,7 @@ export const rpcUrls: Record<number, string[]> = {
 export const networks: Record<number, INetwork> = {
   [networkToChainId[Networks.ETHEREUM]]: {
     chainName: "Ethereum Mainnet",
-    chainId: `0x${networkToChainId[Networks.ETHEREUM].toString(16)}`,
+    chainId: networkToChainId[Networks.ETHEREUM],
     rpcUrls: rpcUrls[networkToChainId[Networks.ETHEREUM]],
     blockExplorerUrls: ["https://etherscan.io/"],
     nativeCurrency: {
@@ -92,7 +93,7 @@ export const networks: Record<number, INetwork> = {
   },
   [networkToChainId[Networks.ROPSTEN]]: {
     chainName: "Ropsten",
-    chainId: `0x${networkToChainId[Networks.ROPSTEN].toString(16)}`,
+    chainId: networkToChainId[Networks.ROPSTEN],
     rpcUrls: rpcUrls[networkToChainId[Networks.ROPSTEN]],
     blockExplorerUrls: ["https://ropsten.etherscan.io/"],
     nativeCurrency: {
@@ -103,7 +104,7 @@ export const networks: Record<number, INetwork> = {
   },
   [networkToChainId[Networks.RINKEBY]]: {
     chainName: "Rinkeby",
-    chainId: `0x${networkToChainId[Networks.RINKEBY].toString(16)}`,
+    chainId: networkToChainId[Networks.RINKEBY],
     rpcUrls: rpcUrls[networkToChainId[Networks.RINKEBY]],
     blockExplorerUrls: ["https://rinkeby.etherscan.io/"],
     nativeCurrency: {
@@ -114,7 +115,7 @@ export const networks: Record<number, INetwork> = {
   },
   [networkToChainId[Networks.GORLY]]: {
     chainName: "Gorly",
-    chainId: `0x${networkToChainId[Networks.GORLY].toString(16)}`,
+    chainId: networkToChainId[Networks.GORLY],
     rpcUrls: rpcUrls[networkToChainId[Networks.GORLY]],
     blockExplorerUrls: ["https://goerli.etherscan.io/"],
     nativeCurrency: {
@@ -125,7 +126,7 @@ export const networks: Record<number, INetwork> = {
   },
   [networkToChainId[Networks.BINANCE]]: {
     chainName: "Binance Smart Chain Mainnet",
-    chainId: `0x${networkToChainId[Networks.BINANCE].toString(16)}`,
+    chainId: networkToChainId[Networks.BINANCE],
     rpcUrls: rpcUrls[networkToChainId[Networks.BINANCE]],
     blockExplorerUrls: ["https://bscscan.com/"],
     nativeCurrency: {
@@ -136,7 +137,7 @@ export const networks: Record<number, INetwork> = {
   },
   [networkToChainId[Networks.BINANCE_TEST]]: {
     chainName: "Binance Smart Chain Testnet",
-    chainId: `0x${networkToChainId[Networks.BINANCE_TEST].toString(16)}`,
+    chainId: networkToChainId[Networks.BINANCE_TEST],
     rpcUrls: rpcUrls[networkToChainId[Networks.BINANCE_TEST]],
     blockExplorerUrls: ["https://testnet.bscscan.com/"],
     nativeCurrency: {
@@ -147,7 +148,7 @@ export const networks: Record<number, INetwork> = {
   },
   [networkToChainId[Networks.POLYGON]]: {
     chainName: "Polygon Mainnet",
-    chainId: `0x${networkToChainId[Networks.POLYGON].toString(16)}`,
+    chainId: networkToChainId[Networks.POLYGON],
     rpcUrls: rpcUrls[networkToChainId[Networks.POLYGON]],
     blockExplorerUrls: ["https://polygonscan.com/"],
     nativeCurrency: {
@@ -158,7 +159,7 @@ export const networks: Record<number, INetwork> = {
   },
   [networkToChainId[Networks.MUMBAI]]: {
     chainName: "Mumbai",
-    chainId: `0x${networkToChainId[Networks.MUMBAI].toString(16)}`,
+    chainId: networkToChainId[Networks.MUMBAI],
     rpcUrls: rpcUrls[networkToChainId[Networks.MUMBAI]],
     blockExplorerUrls: ["https://mumbai.polygonscan.com/"],
     nativeCurrency: {
@@ -169,7 +170,7 @@ export const networks: Record<number, INetwork> = {
   },
   [networkToChainId[Networks.BESU]]: {
     chainName: "Besu",
-    chainId: `0x${networkToChainId[Networks.BESU].toString(16)}`,
+    chainId: networkToChainId[Networks.BESU],
     rpcUrls: rpcUrls[networkToChainId[Networks.BESU]],
     blockExplorerUrls: ["http://localhost:8080/"],
     nativeCurrency: {
@@ -180,7 +181,7 @@ export const networks: Record<number, INetwork> = {
   },
   [networkToChainId[Networks.CUSTOM]]: {
     chainName: "Unidentified Custom Blockchain",
-    chainId: `0x${networkToChainId[Networks.CUSTOM].toString(16)}`,
+    chainId: networkToChainId[Networks.CUSTOM],
     rpcUrls: rpcUrls[networkToChainId[Networks.CUSTOM]],
     blockExplorerUrls: [],
     nativeCurrency: {
@@ -195,3 +196,19 @@ export const STORE_CONNECTOR = "CONNECTOR";
 
 export const WALLET_CONNECT_POPUP_TYPE = Symbol("WALLET_CONNECT_POPUP_TYPE");
 export const WALLET_MENU_POPUP_TYPE = Symbol("WALLET_MENU_POPUP_TYPE");
+
+export const getNetworkForWeb3Provider = (chainId: number): Networkish => {
+  const network = networks[chainId];
+
+  if (!network) {
+    return {
+      name: "Ethereum Mainnet",
+      chainId: 1,
+    };
+  }
+
+  return {
+    name: network.chainName,
+    chainId: network.chainId,
+  };
+};

@@ -20,7 +20,7 @@ export const MetamaskLogin: FC = () => {
   const { formatMessage } = useIntl();
   const [data, setData] = useState<IMetamaskDto>({ nonce: "", signature: "", wallet: "" });
 
-  const { account, library, active } = useWeb3React();
+  const { account, provider, isActive } = useWeb3React();
   const { openConnectWalletDialog } = useWallet();
 
   const user = useUser<IUser>();
@@ -52,10 +52,10 @@ export const MetamaskLogin: FC = () => {
     openConnectWalletDialog();
   };
 
-  const handleLogin = (): Promise<void> => {
+  const handleLogin = (): Promise<any> | undefined => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    return library
-      .getSigner()
+    return provider
+      ?.getSigner()
       .signMessage(`${phrase}${data.nonce}`)
       .then((signature: string) => {
         setData({ ...data, signature });
@@ -85,7 +85,7 @@ export const MetamaskLogin: FC = () => {
     <Grid container className={classes.section}>
       <Grid item sm={12}>
         <PageHeader message="pages.guest.login" />
-        {active ? (
+        {isActive ? (
           <Button onClick={handleLogin}>
             <FormattedMessage id="form.buttons.login" />
           </Button>

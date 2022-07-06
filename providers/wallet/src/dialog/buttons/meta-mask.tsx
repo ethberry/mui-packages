@@ -1,56 +1,70 @@
 import { FC } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { useSnackbar } from "notistack";
+import { useSnackbar, OptionsObject } from "notistack";
 import { Button, IconButton } from "@mui/material";
-import { InjectedConnector, NoEthereumProviderError, UserRejectedRequestError } from "@web3-react/injected-connector";
+import { NoMetaMaskError, MetaMask } from "@web3-react/metamask";
 import { useWeb3React } from "@web3-react/core";
 
 import { MetaMaskIcon } from "../wallet-icons";
 import { CustomBadge } from "../custom-badge";
-import { injectedConnector } from "../../connectors/meta-mask";
+import { metaMask } from "../../connectors/meta-mask";
 import { useWallet } from "../../provider";
+import { TConnectors } from "../../connectors";
 
 export interface IMetaMaskButtonProps {
   onClick: () => void;
   disabled?: boolean;
 }
 
-// https://github.com/NoahZinsmeister/web3-react/blob/v6/docs/connectors/injected.md
 export const MetaMaskButton: FC<IMetaMaskButtonProps> = props => {
   const { disabled, onClick } = props;
 
-  const { activate, active, error, connector } = useWeb3React();
+  const { isActive, connector } = useWeb3React();
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
-  const { setActiveConnector } = useWallet();
+  const { setActiveConnector, network } = useWallet();
 
-  if (error instanceof UserRejectedRequestError) {
-    enqueueSnackbar(error.message, { variant: "warning" });
-    setActiveConnector(null);
-  }
+  const notDetectedWeb3MessageConfig: OptionsObject = {
+    variant: "warning",
+    action: () => (
+      <Button
+        onClick={() => {
+          window.open("https://metamask.io/download.html", "_blank");
+        }}
+      >
+        <FormattedMessage id="buttons.download-metamask" />
+      </Button>
+    ),
+  };
 
   const handleClick = async () => {
-    if (error instanceof NoEthereumProviderError || !(window as any).ethereum) {
-      enqueueSnackbar(formatMessage({ id: "snackbar.web3-not-detected" }), {
-        variant: "warning",
-        action: () => (
-          <Button
-            onClick={() => {
-              window.open("https://metamask.io/download.html", "_blank");
-            }}
-          >
-            <FormattedMessage id="buttons.download-metamask" />
-          </Button>
-        ),
-      });
+    if (!(window as any).ethereum) {
+      enqueueSnackbar(formatMessage({ id: "snackbar.web3-not-detected" }), notDetectedWeb3MessageConfig);
     }
 
-    await activate(injectedConnector, console.error);
+    await metaMask
+      .activate(network.chainId)
+      .then(() => setActiveConnector(TConnectors.METAMASK))
+      .catch(e => {
+        // eslint-disable-next-line no-console
+        console.error("error", e);
+
+        setActiveConnector(null);
+
+        if (e && e.code === 4001) {
+          enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
+        } else if (e instanceof NoMetaMaskError) {
+          enqueueSnackbar(formatMessage({ id: "snackbar.web3-not-detected" }), notDetectedWeb3MessageConfig);
+        } else {
+          enqueueSnackbar((e && e.message) || formatMessage({ id: "snackbar.error" }), { variant: "error" });
+        }
+      });
+
     onClick();
   };
 
   return (
-    <CustomBadge invisible={!active || !(connector instanceof InjectedConnector)}>
+    <CustomBadge invisible={!isActive || !(connector instanceof MetaMask)}>
       <IconButton disabled={disabled} onClick={handleClick}>
         <MetaMaskIcon viewBox="0 0 60 60" sx={{ fontSize: 60 }} />
       </IconButton>

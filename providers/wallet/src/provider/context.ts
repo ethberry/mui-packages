@@ -6,6 +6,7 @@ import { INetwork } from "../interfaces";
 export interface IWalletContext {
   openConnectWalletDialog: () => void;
   closeConnectWalletDialog: () => void;
+  onWalletConnect: (fn: any) => void;
   activeConnector: TConnectors | null;
   setActiveConnector: (value: TConnectors | null) => void;
   setNetwork: (network: INetwork) => void;

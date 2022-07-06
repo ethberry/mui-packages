@@ -1,10 +1,4 @@
 export enum TConnectors {
-  // AUTHEREUM = "AUTHEREUM",
-  // FORMATIC = "FORMATIC",
-  // LEDGER = "LEDGER",
-  INJECTED = "INJECTED",
-  // PORTIS = "PORTIS",
-  // TORUS = "TORUS",
-  // TREZOR = "TREZOR",
+  METAMASK = "METAMASK",
   WALLETCONNECT = "WALLETCONNECT",
 }

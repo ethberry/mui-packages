@@ -1,57 +1,35 @@
-// import { authereumConnector, AuthereumConnector } from "./authereum";
-// import { fortmaticConnector, FortmaticConnector } from "./formatic";
-import { injectedConnector, InjectedConnector } from "./meta-mask";
-// import { ledgerConnector } from "./ledger";
-// import { portisConnector, PortisConnector } from "./portis";
-// import { torusConnector, TorusConnector } from "./torus";
-// import { trezorConnector } from "./trezor";
-import { walletConnectConnector, WalletConnectConnector } from "./wallet-connect";
+import { MetaMask } from "@web3-react/metamask";
+import { WalletConnect } from "@web3-react/walletconnect";
+import type { Connector } from "@web3-react/types";
+
+import { metaMask } from "./meta-mask";
+import { walletConnect } from "./wallet-connect";
 import { TConnectors } from "./types";
 
 export const Connectors: Record<TConnectors, any> = {
-  // [TConnectors.AUTHEREUM]: authereumConnector,
-  // [TConnectors.FORMATIC]: fortmaticConnector,
-  [TConnectors.INJECTED]: injectedConnector,
-  // [TConnectors.LEDGER]: ledgerConnector,
-  // [TConnectors.PORTIS]: portisConnector,
-  // [TConnectors.TORUS]: torusConnector,
-  // [TConnectors.TREZOR]: trezorConnector,
-  [TConnectors.WALLETCONNECT]: walletConnectConnector,
+  [TConnectors.METAMASK]: metaMask,
+  [TConnectors.WALLETCONNECT]: walletConnect,
 };
 
-export const getConnectorName = (connector: any) => {
+export const getConnectorName = (connector: Connector) => {
   switch (true) {
-    // case connector instanceof AuthereumConnector:
-    //   return TConnectors.AUTHEREUM;
-    // case connector instanceof FortmaticConnector:
-    //   return TConnectors.FORMATIC;
-    case connector instanceof InjectedConnector:
-      return TConnectors.INJECTED;
-    // case connector instanceof PortisConnector:
-    //   return TConnectors.PORTIS;
-    // case connector instanceof TorusConnector:
-    //   return TConnectors.TORUS;
-    case connector instanceof WalletConnectConnector:
+    case connector instanceof MetaMask:
+      return TConnectors.METAMASK;
+    case connector instanceof WalletConnect:
       return TConnectors.WALLETCONNECT;
     default:
       return null;
   }
 };
 
-export const getConnectorByName = (name: TConnectors) => {
+export type ConnectorsTypes = MetaMask | WalletConnect;
+
+export const getConnectorByName = (name: TConnectors): ConnectorsTypes | null => {
   switch (name) {
-    // case connector instanceof AuthereumConnector:
-    //   return TConnectors.AUTHEREUM;
-    // case connector instanceof FortmaticConnector:
-    //   return TConnectors.FORMATIC;
-    case TConnectors.INJECTED:
-      return injectedConnector;
-    // case connector instanceof PortisConnector:
-    //   return TConnectors.PORTIS;
-    // case connector instanceof TorusConnector:
-    //   return TConnectors.TORUS;
+    case TConnectors.METAMASK:
+      return metaMask;
     case TConnectors.WALLETCONNECT:
-      return walletConnectConnector;
+      return walletConnect;
     default:
       return null;
   }
