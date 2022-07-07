@@ -14,11 +14,16 @@ export interface IWalletDialogProps {
 export const WalletMenuDialog: FC<IWalletDialogProps> = props => {
   const { onClose, open } = props;
 
-  const { deactivate } = useWeb3React();
+  const { connector } = useWeb3React();
   const { setActiveConnector } = useWallet();
 
   const handleDisconnect = () => {
-    deactivate();
+    if (connector?.deactivate) {
+      void connector.deactivate();
+    } else {
+      void connector.resetState();
+    }
+
     setActiveConnector(null);
     onClose();
   };

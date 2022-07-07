@@ -4,30 +4,39 @@ import { useWeb3React } from "@web3-react/core";
 import { useWallet } from "../provider";
 
 export const CheckNetwork: FC = () => {
-  const { library, active, chainId, deactivate } = useWeb3React();
+  const { isActive, chainId, connector } = useWeb3React();
   const { network, setActiveConnector } = useWallet();
 
   const handleDisconnect = () => {
-    deactivate();
+    if (connector?.deactivate) {
+      void connector.deactivate();
+    } else {
+      void connector.resetState();
+    }
     setActiveConnector(null);
   };
 
   const checkChainId = async () => {
     try {
-      await library.provider.request({
+      await connector?.provider?.request({
         method: "wallet_switchEthereumChain",
-        params: [{ chainId: network.chainId }],
+        params: [{ chainId: `0x${network.chainId.toString(16)}` }],
       });
     } catch (error: any) {
       if (error.code === 4902) {
         try {
-          await library.provider.request({
+          await connector?.provider?.request({
             method: "wallet_addEthereumChain",
-            params: [network],
+            params: [
+              {
+                ...network,
+                chainId: `0x${network.chainId.toString(16)}`,
+              },
+            ],
           });
-          await library.provider.request({
+          await connector?.provider?.request({
             method: "wallet_switchEthereumChain",
-            params: [{ chainId: network.chainId }],
+            params: [{ chainId: `0x${network.chainId.toString(16)}` }],
           });
         } catch (addError: any) {
           handleDisconnect();
@@ -41,10 +50,10 @@ export const CheckNetwork: FC = () => {
   };
 
   useEffect(() => {
-    if (library && active && chainId) {
+    if (connector && isActive && chainId) {
       void checkChainId();
     }
-  }, [library, active, chainId]);
+  }, [connector, isActive, chainId]);
 
   return null;
 };

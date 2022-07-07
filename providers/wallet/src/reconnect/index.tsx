@@ -1,8 +1,9 @@
 import { FC, useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
+import { ProviderRpcError } from "@web3-react/types";
 
 import { TConnectors, getConnectorName, getConnectorByName } from "../connectors";
-import { STORE_CONNECTOR } from "../provider";
+import { STORE_CONNECTOR, useWallet } from "../provider";
 
 interface IReconnectProps {
   activeConnector: TConnectors | null;
@@ -11,11 +12,16 @@ interface IReconnectProps {
 export const Reconnect: FC<IReconnectProps> = props => {
   const { activeConnector } = props;
 
-  const { activate, active, connector } = useWeb3React();
+  const { isActive, connector } = useWeb3React();
+  const { network } = useWallet();
 
   const handleConnect = async () => {
-    if (activeConnector) {
-      await activate(getConnectorByName(activeConnector)!);
+    if (!isActive && activeConnector) {
+      await getConnectorByName(activeConnector)
+        ?.activate(network.chainId)
+        .catch((error: ProviderRpcError) => {
+          console.error("Reconnect error", error);
+        });
     }
   };
 
@@ -24,14 +30,14 @@ export const Reconnect: FC<IReconnectProps> = props => {
   }, []);
 
   useEffect(() => {
-    if (active) {
+    if (isActive) {
       const newConnector = getConnectorName(connector);
 
       if (newConnector) {
-        localStorage.setItem(STORE_CONNECTOR, newConnector);
+        localStorage.setItem(STORE_CONNECTOR, JSON.stringify(newConnector));
       }
     }
-  }, [active]);
+  }, [isActive]);
 
   return null;
 };

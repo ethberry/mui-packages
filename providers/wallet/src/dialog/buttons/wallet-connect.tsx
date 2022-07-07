@@ -1,14 +1,15 @@
 import { FC } from "react";
 import { IconButton } from "@mui/material";
-import { UserRejectedRequestError, WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import { useWeb3React } from "@web3-react/core";
+import { WalletConnect } from "@web3-react/walletconnect";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
 import { WalletConnectIcon } from "../wallet-icons";
 import { CustomBadge } from "../custom-badge";
 import { useWallet } from "../../provider";
-import { Connectors } from "../../connectors";
+import { walletConnect } from "../../connectors/wallet-connect";
+import { TConnectors } from "../../connectors";
 
 export interface IWalletConnectButtonProps {
   disabled?: boolean;
@@ -21,28 +22,30 @@ export const WalletConnectButton: FC<IWalletConnectButtonProps> = props => {
 
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
-  const { activate, active, error, connector } = useWeb3React();
-  const { setActiveConnector } = useWallet();
-
-  if (error instanceof UserRejectedRequestError) {
-    setActiveConnector(null);
-    enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
-  }
+  const { isActive, connector } = useWeb3React();
+  const { setActiveConnector, network } = useWallet();
 
   const handleClick = async () => {
-    await activate(Connectors.WALLETCONNECT, error => {
-      if (error instanceof UserRejectedRequestError) {
+    await walletConnect
+      .activate(network.chainId)
+      .then(() => setActiveConnector(TConnectors.WALLETCONNECT))
+      .catch(e => {
+        // eslint-disable-next-line no-console
+        console.error("error", e);
+
         setActiveConnector(null);
-        enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
-      } else {
-        enqueueSnackbar(error.message, { variant: "error" });
-      }
-    });
+
+        if (e && e.code === 4001) {
+          enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
+        } else {
+          enqueueSnackbar((e && e.message) || formatMessage({ id: "snackbar.error" }), { variant: "error" });
+        }
+      });
     onClick();
   };
 
   return (
-    <CustomBadge invisible={!active || !(connector instanceof WalletConnectConnector)}>
+    <CustomBadge invisible={!isActive || !(connector instanceof WalletConnect)}>
       <IconButton disabled={disabled} onClick={handleClick}>
         <WalletConnectIcon viewBox="0 0 60 60" sx={{ fontSize: 60 }} />
       </IconButton>

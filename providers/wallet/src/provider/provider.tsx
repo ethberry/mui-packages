@@ -1,20 +1,27 @@
 import { FC, useState } from "react";
-import { Web3ReactProvider } from "@web3-react/core";
-import { providers } from "ethers";
+import { Web3ReactProvider, Web3ReactHooks, Web3ContextType } from "@web3-react/core";
 
 import { usePopup } from "@gemunion/provider-popup";
 import { useLicense } from "@gemunion/provider-license";
 
-import { TConnectors } from "../connectors";
+import { ConnectorsTypes, TConnectors } from "../connectors";
+import { metaMask, hooks as metaMaskHooks } from "../connectors/meta-mask";
+import { walletConnect, hooks as walletConnectHooks } from "../connectors/wallet-connect";
 import { INetwork } from "../interfaces";
 import { WalletContext } from "./context";
-import { networks, STORE_CONNECTOR, WALLET_CONNECT_POPUP_TYPE } from "./constants";
+import { getNetworkForWeb3Provider, networks, STORE_CONNECTOR, WALLET_CONNECT_POPUP_TYPE } from "./constants";
 import { Reconnect } from "../reconnect";
 import { CheckNetwork } from "../check-network";
+import { OnWalletConnect } from "../on-wallet-connect";
 
 interface IWalletProviderProps {
   targetNetwork?: INetwork;
 }
+
+const connectors: [ConnectorsTypes, Web3ReactHooks][] = [
+  [metaMask, metaMaskHooks],
+  [walletConnect, walletConnectHooks],
+];
 
 /* javascript-obfuscator:disable */
 const targetNetworkId = ~~process.env.CHAIN_ID;
@@ -27,20 +34,25 @@ export const WalletProvider: FC<IWalletProviderProps> = props => {
   const license = useLicense();
 
   const [network, setNetwork] = useState<INetwork>(targetNetwork);
+
+  const storedConnector = localStorage.getItem(STORE_CONNECTOR);
   const [activeConnector, setActiveConnector] = useState<TConnectors | null>(
-    localStorage.getItem(STORE_CONNECTOR) as TConnectors | null,
+    storedConnector ? (JSON.parse(storedConnector) as TConnectors) : null,
   );
 
-  const getLibrary = (provider: any) => {
-    return new providers.Web3Provider(provider);
-  };
+  const [callback, setCallback] = useState<((web3Context: Web3ContextType) => Promise<any>) | null>(null);
 
   const openConnectWalletDialog = (): void => {
     openPopup(WALLET_CONNECT_POPUP_TYPE);
   };
 
+  const onWalletConnect = (fn: () => (web3Context: Web3ContextType) => Promise<any>): void => {
+    setCallback(fn);
+  };
+
   const closeConnectWalletDialog = (): void => {
     closePopup();
+    setCallback(null);
   };
 
   const setActiveConnectorHandle = (value: TConnectors | null) => {
@@ -53,12 +65,13 @@ export const WalletProvider: FC<IWalletProviderProps> = props => {
   }
 
   return (
-    <Web3ReactProvider getLibrary={getLibrary}>
+    <Web3ReactProvider connectors={connectors} network={getNetworkForWeb3Provider(network.chainId)}>
       <WalletContext.Provider
         value={{
           activeConnector,
           setActiveConnector: setActiveConnectorHandle,
           openConnectWalletDialog,
+          onWalletConnect,
           closeConnectWalletDialog,
           network,
           setNetwork,
@@ -68,6 +81,7 @@ export const WalletProvider: FC<IWalletProviderProps> = props => {
           {children}
           <Reconnect activeConnector={activeConnector} />
           <CheckNetwork />
+          <OnWalletConnect callback={callback} setCallback={setCallback} />
         </>
       </WalletContext.Provider>
     </Web3ReactProvider>
