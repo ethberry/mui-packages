@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.8.4",
+    "@walletconnect/ethereum-provider": "1.7.8",
     "@web3-react/core": "8.0.33-beta.0",
     "@web3-react/empty": "8.0.19-beta.0",
     "@web3-react/metamask": "8.0.26-beta.0",
@@ -16,7 +17,6 @@
     "@web3-react/types": "8.0.19-beta.0",
     "@web3-react/url": "8.0.24-beta.0",
     "@web3-react/walletconnect": "8.0.34-beta.0",
-    "@walletconnect/ethereum-provider": "1.7.8",
     "uuid": "8.3.2"
   },
   "description": "react wallet provider",
@@ -75,5 +75,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.0"
+  "version": "2.0.1"
 }

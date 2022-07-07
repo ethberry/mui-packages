@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.7](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.0.6...@gemunion/react-hooks@1.0.7) (2022-07-07)
+
+
+### Bug Fixes
+
+* use-deploy by setting errors to form and refactor; resetting form in use-collection and mui-form ([934a314](https://github.com/gemunion/mui-packages/commit/934a314e7ad695bc557e1941c59f0f3f96995250))
+
+
+
+
+
 ## 1.0.6 (2022-07-02)
 
 **Note:** Version bump only for package @gemunion/react-hooks

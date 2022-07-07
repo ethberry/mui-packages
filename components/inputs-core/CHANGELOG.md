@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.10](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.0.9...@gemunion/mui-inputs-core@7.0.10) (2022-07-07)
+
+
+### Bug Fixes
+
+* normalize initial value of json input ([24164f2](https://github.com/gemunion/mui-packages/commit/24164f2a80256e08bb6756da9222037a8c923772))
+* styles for image inputs; fix displaying validation errors from backend; fix slider and select to show validation errors ([1a84dba](https://github.com/gemunion/mui-packages/commit/1a84dba26d2ab515f477fd3c617bc6945da009d3))
+
+
+
+
+
 ## 7.0.9 (2022-07-02)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core

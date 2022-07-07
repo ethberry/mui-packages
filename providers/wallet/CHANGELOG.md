@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@1.0.5...@gemunion/provider-wallet@2.0.1) (2022-07-07)
+
+
+### Bug Fixes
+
+* pass web3Context to passed function for running on wallet connect; fix types for callback ([bdb1f0c](https://github.com/gemunion/mui-packages/commit/bdb1f0cf26d0f6ad48435c858ddb26c22d741f96))
+* upgrade web3-react from v6 to v8; implement possibility to run function on wallet connect for wallet-provider and make fixes for use-deploy hook; refactoring ([0f2650c](https://github.com/gemunion/mui-packages/commit/0f2650ccefb4224c94c94dbbe6089d0b2b2a6f8a))
+
+
+
+
+
 ## 1.0.5 (2022-07-02)
 
 **Note:** Version bump only for package @gemunion/provider-wallet

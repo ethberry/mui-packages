@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.10](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@8.0.9...@gemunion/mui-inputs-image-firebase@8.0.10) (2022-07-07)
+
+
+### Bug Fixes
+
+* fast fix remove unnecessary code ([f4f373d](https://github.com/gemunion/mui-packages/commit/f4f373d7b975e23a3154480c36c74f25a35819aa))
+* styles for image inputs; fix displaying validation errors from backend; fix slider and select to show validation errors ([1a84dba](https://github.com/gemunion/mui-packages/commit/1a84dba26d2ab515f477fd3c617bc6945da009d3))
+
+
+
+
+
 ## 8.0.9 (2022-07-02)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-image-firebase

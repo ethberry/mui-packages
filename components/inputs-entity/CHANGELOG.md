@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.5](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.0.4...@gemunion/mui-inputs-entity@7.0.5) (2022-07-07)
+
+
+### Bug Fixes
+
+* entity input refetching when there are no changes by using useDeepCompareEffect hook ([07e6418](https://github.com/gemunion/mui-packages/commit/07e6418bf2170f9c4ea0f541822858a9ecb3a12a))
+* revert changes for moving provider-api dependency ([04bdd1d](https://github.com/gemunion/mui-packages/commit/04bdd1d4fa3149aec51fce9fc3ec1f31c77ad199))
+
+
+
+
+
 ## 7.0.4 (2022-07-02)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-entity

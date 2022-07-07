@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@0.0.23...@gemunion/react-hooks-eth@1.0.1) (2022-07-07)
+
+
+### Bug Fixes
+
+* separate catching errors for metamask and deploy ([0c3bcba](https://github.com/gemunion/mui-packages/commit/0c3bcbaa493d6402f1b247565f52c1a862e7ed9b))
+* upgrade web3-react from v6 to v8; implement possibility to run function on wallet connect for wallet-provider and make fixes for use-deploy hook; refactoring ([0f2650c](https://github.com/gemunion/mui-packages/commit/0f2650ccefb4224c94c94dbbe6089d0b2b2a6f8a))
+* use-deploy by setting errors to form and refactor; resetting form in use-collection and mui-form ([934a314](https://github.com/gemunion/mui-packages/commit/934a314e7ad695bc557e1941c59f0f3f96995250))
+
+
+
+
+
 ## 0.0.23 (2022-07-02)
 
 **Note:** Version bump only for package @gemunion/react-hooks-eth

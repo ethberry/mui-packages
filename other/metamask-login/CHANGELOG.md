@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@2.0.5...@gemunion/metamask-login@3.0.1) (2022-07-07)
+
+
+### Bug Fixes
+
+* upgrade web3-react from v6 to v8; implement possibility to run function on wallet connect for wallet-provider and make fixes for use-deploy hook; refactoring ([0f2650c](https://github.com/gemunion/mui-packages/commit/0f2650ccefb4224c94c94dbbe6089d0b2b2a6f8a))
+
+
+
+
+
 ## 2.0.5 (2022-07-02)
 
 **Note:** Version bump only for package @gemunion/metamask-login
