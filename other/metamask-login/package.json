@@ -18,7 +18,7 @@
   "devDependencies": {
     "@gemunion/provider-api": "6.0.4",
     "@gemunion/provider-user": "4.0.4",
-    "@gemunion/provider-wallet": "1.0.5",
+    "@gemunion/provider-wallet": "2.0.0",
     "@mui/material": "5.8.6",
     "@mui/styles": "5.8.6",
     "@types/uuid": "8.3.4",
@@ -38,7 +38,7 @@
   "peerDependencies": {
     "@gemunion/provider-api": "^6.0.0",
     "@gemunion/provider-user": "^4.0.0",
-    "@gemunion/provider-wallet": "^1.0.0",
+    "@gemunion/provider-wallet": "^2.0.0",
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
     "notistack": "^2.0.0",
@@ -65,5 +65,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.5"
+  "version": "3.0.0"
 }
