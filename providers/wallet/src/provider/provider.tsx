@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { Web3ReactProvider, Web3ReactHooks } from "@web3-react/core";
+import { Web3ReactProvider, Web3ReactHooks, Web3ContextType } from "@web3-react/core";
 
 import { usePopup } from "@gemunion/provider-popup";
 import { useLicense } from "@gemunion/provider-license";
@@ -40,13 +40,13 @@ export const WalletProvider: FC<IWalletProviderProps> = props => {
     storedConnector ? (JSON.parse(storedConnector) as TConnectors) : null,
   );
 
-  const [callback, setCallback] = useState<any>(null);
+  const [callback, setCallback] = useState<((web3Context: Web3ContextType) => Promise<any>) | null>(null);
 
   const openConnectWalletDialog = (): void => {
     openPopup(WALLET_CONNECT_POPUP_TYPE);
   };
 
-  const onWalletConnect = (fn: any): void => {
+  const onWalletConnect = (fn: () => (web3Context: Web3ContextType) => Promise<any>): void => {
     setCallback(fn);
   };
 
