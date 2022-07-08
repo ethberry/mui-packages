@@ -11,10 +11,10 @@
   "devDependencies": {
     "@gemunion/provider-settings": "3.0.4",
     "@mui/icons-material": "5.8.4",
-    "@mui/material": "5.8.6",
+    "@mui/material": "5.8.7",
     "@types/react": "17.0.47",
     "react": "17.0.2",
-    "react-intl": "6.0.4"
+    "react-intl": "6.0.5"
   },
   "engines": {
     "node": ">=12.13"
