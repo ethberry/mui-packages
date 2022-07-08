@@ -91,8 +91,8 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
       .then((json: T) => {
         setRows([json]);
         setCount(1);
-        // eslint-disable-next-line @typescript-eslint/no-use-before-define
-        handleEdit(json)();
+        setSelected(json);
+        setIsEditDialogOpen(true);
       });
   };
 
@@ -117,9 +117,9 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     setIsEditDialogOpen(true);
   };
 
-  const handleView = (item: T): (() => void) => {
-    return (): void => {
-      setSelected(item);
+  const handleView = (item: T): (() => Promise<void>) => {
+    return async (): Promise<void> => {
+      await fetchById(item.id.toString());
       setIsViewDialogOpen(true);
       updateQS(item.id);
     };
@@ -134,10 +134,9 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     updateQS();
   };
 
-  const handleEdit = (item: T): (() => void) => {
-    return (): void => {
-      setSelected(item);
-      setIsEditDialogOpen(true);
+  const handleEdit = (item: T): (() => Promise<void>) => {
+    return async (): Promise<void> => {
+      await fetchById(item.id.toString());
       updateQS(item.id);
     };
   };
