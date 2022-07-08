@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.2 (2022-07-08)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([6028113](https://github.com/gemunion/mui-packages/commit/60281134ab1f13f629730ef9a80c567e9d7c996c))
+
+
+
+
+
 ## [2.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@1.0.5...@gemunion/provider-wallet@2.0.1) (2022-07-07)
 
 
