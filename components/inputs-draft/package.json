@@ -19,15 +19,15 @@
   "devDependencies": {
     "@gemunion/provider-license": "1.0.29",
     "@mui/icons-material": "5.8.4",
-    "@mui/material": "5.8.6",
-    "@mui/styles": "5.8.6",
+    "@mui/material": "5.8.7",
+    "@mui/styles": "5.8.7",
     "@storybook/react": "6.5.9",
     "@types/draft-js": "0.11.9",
     "@types/markdown-draft-js": "2.2.4",
     "@types/react": "17.0.47",
     "react": "17.0.2",
     "react-hook-form": "7.33.1",
-    "react-intl": "6.0.4"
+    "react-intl": "6.0.5"
   },
   "engines": {
     "node": ">=12.13"

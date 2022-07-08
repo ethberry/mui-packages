@@ -12,7 +12,7 @@
     "@types/react": "17.0.47",
     "notistack": "2.0.5",
     "react": "17.0.2",
-    "react-intl": "6.0.4"
+    "react-intl": "6.0.5"
   },
   "engines": {
     "node": ">=12.13"
