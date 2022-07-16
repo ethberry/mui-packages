@@ -10,15 +10,15 @@
   "dependencies": {
     "@gemunion/mui-page-layout": "0.1.14",
     "@gemunion/react-hooks": "1.0.9",
-    "use-debounce": "8.0.1"
+    "use-debounce": "8.0.2"
   },
   "description": "react widget",
   "devDependencies": {
     "@gemunion/provider-api": "6.0.4",
     "@mui/icons-material": "5.8.4",
-    "@mui/lab": "5.0.0-alpha.89",
-    "@mui/material": "5.8.7",
-    "@mui/styles": "5.8.7",
+    "@mui/lab": "5.0.0-alpha.90",
+    "@mui/material": "5.9.0",
+    "@mui/styles": "5.9.0",
     "@types/react": "17.0.47",
     "notistack": "2.0.5",
     "react": "17.0.2",
