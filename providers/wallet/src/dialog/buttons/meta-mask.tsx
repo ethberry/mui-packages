@@ -9,7 +9,7 @@ import { MetaMaskIcon } from "../wallet-icons";
 import { CustomBadge } from "../custom-badge";
 import { metaMask } from "../../connectors/meta-mask";
 import { useWallet } from "../../provider";
-import { TConnectors } from "../../connectors";
+import { TConnectors } from "../../connectors/types";
 
 export interface IMetaMaskButtonProps {
   onClick: () => void;

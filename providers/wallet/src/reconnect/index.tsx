@@ -2,8 +2,9 @@ import { FC, useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 import { ProviderRpcError } from "@web3-react/types";
 
-import { TConnectors, getConnectorName, getConnectorByName } from "../connectors";
+import { getConnectorName, getConnectorByName } from "../connectors";
 import { STORE_CONNECTOR, useWallet } from "../provider";
+import { TConnectors } from "../connectors/types";
 
 interface IReconnectProps {
   activeConnector: TConnectors | null;

@@ -6,11 +6,6 @@ import { metaMask } from "./meta-mask";
 import { walletConnect } from "./wallet-connect";
 import { TConnectors } from "./types";
 
-export const Connectors: Record<TConnectors, any> = {
-  [TConnectors.METAMASK]: metaMask,
-  [TConnectors.WALLETCONNECT]: walletConnect,
-};
-
 export const getConnectorName = (connector: Connector) => {
   switch (true) {
     case connector instanceof MetaMask:
@@ -34,5 +29,3 @@ export const getConnectorByName = (name: TConnectors): ConnectorsTypes | null =>
       return null;
   }
 };
-
-export { TConnectors };

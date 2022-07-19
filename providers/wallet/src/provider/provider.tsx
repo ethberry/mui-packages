@@ -4,7 +4,8 @@ import { Web3ReactProvider, Web3ReactHooks, Web3ContextType } from "@web3-react/
 import { usePopup } from "@gemunion/provider-popup";
 import { useLicense } from "@gemunion/provider-license";
 
-import { ConnectorsTypes, TConnectors } from "../connectors";
+import { ConnectorsTypes } from "../connectors";
+import { TConnectors } from "../connectors/types";
 import { metaMask, hooks as metaMaskHooks } from "../connectors/meta-mask";
 import { walletConnect, hooks as walletConnectHooks } from "../connectors/wallet-connect";
 import { INetwork } from "../interfaces";

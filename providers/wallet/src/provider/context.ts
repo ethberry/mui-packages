@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import { Web3ContextType } from "@web3-react/core";
 
-import { TConnectors } from "../connectors";
+import { TConnectors } from "../connectors/types";
 import { INetwork } from "../interfaces";
 
 export interface IWalletContext {

@@ -9,7 +9,7 @@ import { WalletConnectIcon } from "../wallet-icons";
 import { CustomBadge } from "../custom-badge";
 import { useWallet } from "../../provider";
 import { walletConnect } from "../../connectors/wallet-connect";
-import { TConnectors } from "../../connectors";
+import { TConnectors } from "../../connectors/types";
 
 export interface IWalletConnectButtonProps {
   disabled?: boolean;
