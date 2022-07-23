@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.8.4",
-    "@gemunion/types-collection": "1.4.4",
+    "@gemunion/types-collection": "1.4.5",
     "qs": "6.11.0"
   },
   "description": "react hooks",

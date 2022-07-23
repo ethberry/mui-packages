@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/firebase": "1.1.21",
+    "@gemunion/firebase": "1.1.22",
     "@gemunion/mui-dialog-confirmation": "3.2.6",
     "@gemunion/mui-inputs-core": "7.0.13",
     "@gemunion/mui-inputs-file-firebase": "6.0.13",
@@ -22,8 +22,8 @@
     "@gemunion/mui-form": "6.0.13",
     "@gemunion/provider-api": "6.0.4",
     "@mui/icons-material": "5.8.4",
-    "@mui/material": "5.9.0",
-    "@mui/styles": "5.9.0",
+    "@mui/material": "5.9.1",
+    "@mui/styles": "5.9.1",
     "@storybook/react": "6.5.9",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "12.1.5",
@@ -37,7 +37,7 @@
     "react": "17.0.2",
     "react-hook-form": "7.33.1",
     "react-intl": "6.0.5",
-    "ts-jest": "28.0.6"
+    "ts-jest": "28.0.7"
   },
   "engines": {
     "node": ">=12.13"
