@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/draft-js-utils": "0.3.14",
+    "@gemunion/draft-js-utils": "0.3.15",
     "@gemunion/mui-form": "6.0.13",
     "@gemunion/mui-inputs-core": "7.0.13",
     "@gemunion/mui-rte": "2.0.3",
@@ -19,8 +19,8 @@
   "devDependencies": {
     "@gemunion/provider-license": "1.0.29",
     "@mui/icons-material": "5.8.4",
-    "@mui/material": "5.9.0",
-    "@mui/styles": "5.9.0",
+    "@mui/material": "5.9.1",
+    "@mui/styles": "5.9.1",
     "@storybook/react": "6.5.9",
     "@types/draft-js": "0.11.9",
     "@types/markdown-draft-js": "2.2.4",
