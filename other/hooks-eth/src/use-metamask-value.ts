@@ -14,7 +14,8 @@ export const useMetamaskValue = <T = any>(fn: (...args: Array<any>) => Promise<T
       } else if (e.error?.data?.data) {
         const data = e.error?.data?.data as string;
         const decodedMessage = utils.toUtf8String(`0x${data.substr(138)}`);
-        enqueueSnackbar(decodedMessage || formatMessage({ id: "snackbar.error" }), { variant: "error" });
+        enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
+        console.error("blockchain error", decodedMessage);
         return null;
       } else {
         throw e;
