@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.4...@gemunion/react-hooks-eth@1.0.6) (2022-07-24)
+
+
+### Bug Fixes
+
+* fix provider-wallet, hooks-eth and metamask-login, minor version bump ([26b5fa1](https://github.com/gemunion/mui-packages/commit/26b5fa1f7316bd5170dd3136c0fd26a87d3fd3dc))
+
+
+
+
+
 ## [1.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.3...@gemunion/react-hooks-eth@1.0.4) (2022-07-23)
 
 **Note:** Version bump only for package @gemunion/react-hooks-eth
