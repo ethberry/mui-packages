@@ -69,9 +69,7 @@ export const WalletProvider: FC<IWalletProviderProps> = props => {
 
   const connectCallback = useCallback(
     async (fn: () => Promise<any>) => {
-      if (resolve) {
-        await fn();
-      }
+      await fn();
     },
     [resolve],
   );
