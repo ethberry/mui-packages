@@ -5,7 +5,7 @@ exports[`<ConfirmationDialog /> renders closed dialog 1`] = `<DocumentFragment /
 exports[`<ConfirmationDialog /> renders open dialog 1`] = `
 <DocumentFragment>
   <div
-    class="MuiModal-root MuiDialog-root css-zw3mfo-MuiModal-root-MuiDialog-root"
+    class="MuiDialog-root MuiModal-root css-zw3mfo-MuiModal-root-MuiDialog-root"
     data-testid="DialogConfirmation"
     role="presentation"
   >
