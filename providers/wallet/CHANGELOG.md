@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.7](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@2.0.6...@gemunion/provider-wallet@2.0.7) (2022-07-24)
+
+
+### Bug Fixes
+
+* fast fix for opening wallet dialog ([43a10bb](https://github.com/gemunion/mui-packages/commit/43a10bbade4c7ba450c714ed29847668eed529f7))
+
+
+
+
+
 ## [2.0.6](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@2.0.4...@gemunion/provider-wallet@2.0.6) (2022-07-24)
 
 
