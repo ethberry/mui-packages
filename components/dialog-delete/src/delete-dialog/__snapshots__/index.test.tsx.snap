@@ -3,7 +3,7 @@
 exports[`<DeleteDialog /> renders open component 1`] = `
 <DocumentFragment>
   <div
-    class="MuiModal-root MuiDialog-root css-zw3mfo-MuiModal-root-MuiDialog-root"
+    class="MuiDialog-root MuiModal-root css-zw3mfo-MuiModal-root-MuiDialog-root"
     data-testid="DialogDelete"
     role="presentation"
   >
