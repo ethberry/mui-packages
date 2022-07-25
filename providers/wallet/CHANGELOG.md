@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.8 (2022-07-25)
+
+
+### Bug Fixes
+
+* implement closing dialog for auto connected wallet ([5708b3b](https://github.com/gemunion/mui-packages/commit/5708b3b8bb32f6e692154d39d5253ffabc3765d6))
+
+
+
+
+
 ## [2.0.7](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@2.0.6...@gemunion/provider-wallet@2.0.7) (2022-07-24)
 
 
