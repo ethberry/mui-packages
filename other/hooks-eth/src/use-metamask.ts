@@ -7,7 +7,7 @@ import { useMetamaskValue } from "./use-metamask-value";
 export const useMetamask = (fn: (...args: Array<any>) => Promise<any>) => {
   const web3ContextGlobal = useWeb3React();
   const { isActive } = web3ContextGlobal;
-  const { openConnectWalletDialog } = useWallet();
+  const { openConnectWalletDialog, isDialogOpen, closeConnectWalletDialog } = useWallet();
 
   const metaFn = useMetamaskValue(fn);
 
@@ -15,6 +15,8 @@ export const useMetamask = (fn: (...args: Array<any>) => Promise<any>) => {
     let context = web3ContextGlobal;
     if (!isActive) {
       context = await openConnectWalletDialog();
+    } else if (isDialogOpen()) {
+      closeConnectWalletDialog();
     }
     return metaFn(...args, context);
   };
