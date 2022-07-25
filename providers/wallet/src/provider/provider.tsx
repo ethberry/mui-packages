@@ -31,7 +31,7 @@ const targetNetworkId = ~~process.env.CHAIN_ID;
 export const WalletProvider: FC<IWalletProviderProps> = props => {
   const { targetNetwork = networks[targetNetworkId], children } = props;
 
-  const { openPopup, closePopup } = usePopup();
+  const { openPopup, closePopup, isOpenPopup } = usePopup();
   const license = useLicense();
 
   const [network, setNetwork] = useState<INetwork>(targetNetwork);
@@ -55,6 +55,10 @@ export const WalletProvider: FC<IWalletProviderProps> = props => {
 
   const resetConnect = (): void => {
     setResolve(null);
+  };
+
+  const isDialogOpen = (): boolean => {
+    return isOpenPopup(WALLET_CONNECT_POPUP_TYPE);
   };
 
   const closeConnectWalletDialog = (): void => {
@@ -85,6 +89,7 @@ export const WalletProvider: FC<IWalletProviderProps> = props => {
           activeConnector,
           setActiveConnector: setActiveConnectorHandle,
           openConnectWalletDialog,
+          isDialogOpen,
           closeConnectWalletDialog,
           network,
           setNetwork,
