@@ -89,8 +89,10 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
         url: `${baseUrl}/${id}`,
       })
       .then((json: T) => {
-        setRows([json]);
-        setCount(1);
+        if (rows.length === 0) {
+          setRows([json]);
+          setCount(1);
+        }
         setSelected(json);
         setIsEditDialogOpen(true);
       });
