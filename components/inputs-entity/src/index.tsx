@@ -36,7 +36,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
     controller,
     getTitle,
     multiple,
-    data,
+    data = {},
     variant = "standard",
     onChange,
     label,
