@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { useIntl } from "react-intl";
-import { useSnackbar } from "notistack";
 import { Web3ContextType } from "@web3-react/core";
 
 import { IServerSignature } from "@gemunion/types-collection";
@@ -13,9 +11,6 @@ export const useDeploy = (
   deploy: (data: any, web3Context: Web3ContextType, sign: IServerSignature) => Promise<void>,
 ) => {
   const [isDeployDialogOpen, setIsDeployDialogOpen] = useState(false);
-
-  const { enqueueSnackbar } = useSnackbar();
-  const { formatMessage } = useIntl();
 
   const fnWithSignature = useServerSignature(deploy);
   const deployFn = useMetamask((params: IFetchProps, web3Context: Web3ContextType) => {
@@ -33,18 +28,14 @@ export const useDeploy = (
         if (result === null) {
           return;
         }
-
         form?.reset(form?.getValues());
         setIsDeployDialogOpen(false);
-        enqueueSnackbar(formatMessage({ id: "snackbar.success" }), { variant: "success" });
-
         // eslint-disable-next-line @typescript-eslint/no-unsafe-return
         return result;
       })
       .catch((e: any) => {
         if (e.status === 400) {
           const errors = e.getLocalizedValidationErrors ? e.getLocalizedValidationErrors() : [];
-
           Object.keys(errors).forEach(key => {
             form?.setError(key, { type: "custom", message: errors[key] }, { shouldFocus: true });
           });
