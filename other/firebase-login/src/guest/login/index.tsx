@@ -1,6 +1,6 @@
 import { FC, useEffect, useLayoutEffect, useState } from "react";
 import { Box, Button, Grid } from "@mui/material";
-import { NavigateBefore } from "@mui/icons-material";
+import { NavigateNext } from "@mui/icons-material";
 import { auth } from "firebaseui";
 import { EmailAuthProvider, getAuth, sendEmailVerification } from "firebase/auth";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -27,7 +27,7 @@ export const FirebaseLogin: FC = () => {
   const api = useApi();
   const navigate = useNavigate();
 
-  const handleBack = () => {
+  const handleMainPageClick = () => {
     navigate("/");
   };
 
@@ -93,13 +93,13 @@ export const FirebaseLogin: FC = () => {
 
             <Box mt={2}>
               <Button
-                onClick={handleBack}
+                onClick={handleMainPageClick}
                 variant="contained"
                 color="primary"
-                data-testid="BackButton"
-                startIcon={<NavigateBefore />}
+                data-testid="LoginMainPageButton"
+                endIcon={<NavigateNext />}
               >
-                <FormattedMessage id="form.buttons.back" />
+                <FormattedMessage id="form.buttons.mainPage" />
               </Button>
             </Box>
           </Box>
