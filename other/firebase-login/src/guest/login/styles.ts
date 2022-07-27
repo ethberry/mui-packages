@@ -10,6 +10,7 @@ export const useStyles = makeStyles<Theme>(
       height: "calc(100vh - 64px)",
       maxWidth: 500,
       margin: "0 auto",
+      textAlign: "center",
     },
   }),
   { name: "FirebaseLogin" },

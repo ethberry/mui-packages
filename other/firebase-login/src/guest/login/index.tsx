@@ -1,8 +1,10 @@
-import { FC, useLayoutEffect } from "react";
-import { Grid } from "@mui/material";
+import { FC, useEffect, useLayoutEffect, useState } from "react";
+import { Box, Button, Grid } from "@mui/material";
+import { NavigateNext } from "@mui/icons-material";
 import { auth } from "firebaseui";
 import { EmailAuthProvider, getAuth, sendEmailVerification } from "firebase/auth";
-import { useIntl } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
+import { useNavigate } from "react-router";
 import { useSnackbar } from "notistack";
 
 import "firebaseui/dist/firebaseui.css";
@@ -19,8 +21,15 @@ export const FirebaseLogin: FC = () => {
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
+  const [showMessage, setShowMessage] = useState<boolean>(false);
+
   const user = useUser();
   const api = useApi();
+  const navigate = useNavigate();
+
+  const handleMainPageClick = () => {
+    navigate("/");
+  };
 
   useLayoutEffect(() => {
     const authFb = getAuth(firebase);
@@ -29,8 +38,12 @@ export const FirebaseLogin: FC = () => {
       callbacks: {
         signInSuccessWithAuthResult: data => {
           if (data.additionalUserInfo.isNewUser) {
-            void sendEmailVerification(authFb.currentUser!).then(() => {
+            const actionCodeSettings = {
+              url: `${window.location.origin}/login`,
+            };
+            void sendEmailVerification(authFb.currentUser!, actionCodeSettings).then(() => {
               enqueueSnackbar(formatMessage({ id: `snackbar.registered` }), { variant: "info" });
+              setShowMessage(true);
             });
           } else {
             void authFb.currentUser
@@ -67,9 +80,30 @@ export const FirebaseLogin: FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    return () => setShowMessage(false);
+  }, []);
+
   return (
     <Grid container className={classes.section}>
       <Grid item sm={12}>
+        {showMessage && (
+          <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+            <FormattedMessage id="pages.guest.confirmation" />
+
+            <Box mt={2}>
+              <Button
+                onClick={handleMainPageClick}
+                variant="contained"
+                color="primary"
+                data-testid="LoginMainPageButton"
+                endIcon={<NavigateNext />}
+              >
+                <FormattedMessage id="form.buttons.mainPage" />
+              </Button>
+            </Box>
+          </Box>
+        )}
         <div id="firebaseui-auth-container" />
       </Grid>
     </Grid>
