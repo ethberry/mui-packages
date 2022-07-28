@@ -9,7 +9,7 @@ import { ApiError, useApi } from "@gemunion/provider-api";
 import { defaultItemsPerPage } from "@gemunion/constants";
 
 import { useDeepCompareEffect } from "./use-deep-compare-effect";
-import { decoder } from "./utils";
+import { decoder, deepEqual } from "./utils";
 
 export interface ICollectionHook<T, S> {
   baseUrl: string;
@@ -63,11 +63,22 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
   } as unknown as S);
 
   const updateQS = (id?: number) => {
-    if (embedded) {
+    const { skip: _skip, take: _take, ...rest } = search;
+    const searchParams = {
+      ...data,
+      ...parse(location.search.substring(1), { decoder }),
+    };
+    const sameSearch = !id && location.search && deepEqual(rest, searchParams);
+
+    if (embedded || sameSearch) {
       return;
     }
-    const { skip: _skip, take: _take, ...rest } = search;
-    navigate(redirect(baseUrl, rest, id));
+
+    const shouldReplace = !location.search || location.search === "?" || !id;
+
+    navigate(redirect(baseUrl, rest, id), {
+      replace: shouldReplace,
+    });
   };
 
   const fetchByQuery = async (): Promise<void> => {
@@ -89,12 +100,11 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
         url: `${baseUrl}/${id}`,
       })
       .then((json: T) => {
-        if (rows.length === 0) {
-          setRows([json]);
-          setCount(1);
-        }
+        setRows([json]);
+        setCount(1);
         setSelected(json);
         setIsEditDialogOpen(true);
+        setIsViewDialogOpen(true);
       });
   };
 
@@ -119,9 +129,10 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     setIsEditDialogOpen(true);
   };
 
-  const handleView = (item: T): (() => Promise<void>) => {
-    return async (): Promise<void> => {
-      await fetchById(item.id.toString());
+  const handleView = (item: T): (() => void) => {
+    return (): void => {
+      setSelected(item);
+      setCount(1);
       setIsViewDialogOpen(true);
       updateQS(item.id);
     };
@@ -133,18 +144,22 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
 
   const handleViewCancel = (): void => {
     setIsViewDialogOpen(false);
+    setSelected(empty as T);
     updateQS();
   };
 
-  const handleEdit = (item: T): (() => Promise<void>) => {
-    return async (): Promise<void> => {
-      await fetchById(item.id.toString());
+  const handleEdit = (item: T): (() => void) => {
+    return (): void => {
+      setSelected(item);
+      setCount(1);
+      setIsEditDialogOpen(true);
       updateQS(item.id);
     };
   };
 
   const handleEditCancel = (): void => {
     setIsEditDialogOpen(false);
+    setSelected(empty as T);
     updateQS();
   };
 
@@ -244,8 +259,19 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
   };
 
   useDeepCompareEffect(() => {
+    if (!id) {
+      setIsEditDialogOpen(false);
+      setIsViewDialogOpen(false);
+    }
     void fetch(id);
-  }, [search]);
+  }, [search, id]);
+
+  useDeepCompareEffect(() => {
+    setSearch({
+      ...search,
+      ...parse(location.search.substring(1), { decoder }),
+    });
+  }, [location]);
 
   return {
     rows,
