@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.0.15 (2022-07-28)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-file-s3
+
+
+
+
+
 ## [7.0.14](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@7.0.13...@gemunion/mui-inputs-file-s3@7.0.14) (2022-07-23)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-s3

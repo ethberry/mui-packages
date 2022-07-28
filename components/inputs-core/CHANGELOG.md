@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.0.15 (2022-07-28)
+
+
+### Bug Fixes
+
+* allow empty value for number input and remove touched param for text input to show error after validation when the field still not touched ([7b9bc76](https://github.com/gemunion/mui-packages/commit/7b9bc76a117e4442f6c14f2d74e40f93aa662472))
+
+
+
+
+
 ## [7.0.14](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.0.13...@gemunion/mui-inputs-core@7.0.14) (2022-07-23)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.8 (2022-07-28)
+
+
+### Bug Fixes
+
+* back button by changing it to Main page with next icon ([2c4bba4](https://github.com/gemunion/mui-packages/commit/2c4bba4cb53712d1bf550240869ac689569f0d0b))
+* sign up logic by showing confirmation message after successful sign up; implement dynamic redirecting url after confirmation from email ([b8057e5](https://github.com/gemunion/mui-packages/commit/b8057e5030353ff2147a0a6a6cfe824994ac603a))
+
+
+
+
+
 ## [2.0.7](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.0.6...@gemunion/firebase-login@2.0.7) (2022-07-23)
 
 **Note:** Version bump only for package @gemunion/firebase-login

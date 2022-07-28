@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.0.10 (2022-07-28)
+
+
+### Bug Fixes
+
+* pass default value to entity input to silent a warning from useDeepCompareEffect ([fdcaa1f](https://github.com/gemunion/mui-packages/commit/fdcaa1fe50ab971743947355fc77ff8318ac2e68))
+
+
+
+
+
 ## [7.0.9](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.0.8...@gemunion/mui-inputs-entity@7.0.9) (2022-07-23)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-entity

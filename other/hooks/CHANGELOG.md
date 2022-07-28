@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.11 (2022-07-28)
+
+
+### Bug Fixes
+
+* updateQS and cancel buttons for Edit and Show Dialog and make search state synchronized with query string; refactor use-deep-compare-effect; ([6c7fc51](https://github.com/gemunion/mui-packages/commit/6c7fc51a273f799cc313edab434adffbfd35fe34))
+* use-collection by preventing substitute multiple rows after fetching singular item ([53afb82](https://github.com/gemunion/mui-packages/commit/53afb8202bce174dbbf7aea10b81a0e03a24fd75))
+
+
+
+
+
 ## 1.0.10 (2022-07-23)
 
 **Note:** Version bump only for package @gemunion/react-hooks
