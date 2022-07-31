@@ -14,8 +14,8 @@
   },
   "description": "react component",
   "devDependencies": {
-    "@gemunion/provider-api": "6.0.4",
-    "@gemunion/provider-user": "4.0.5",
+    "@gemunion/provider-api": "6.0.5",
+    "@gemunion/provider-user": "4.0.6",
     "@mui/material": "5.9.2",
     "@mui/styles": "5.9.2",
     "notistack": "2.0.5",
