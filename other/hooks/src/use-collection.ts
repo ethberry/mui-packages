@@ -140,11 +140,11 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
 
   const handleViewConfirm = (): void => {
     setIsViewDialogOpen(false);
+    updateQS();
   };
 
   const handleViewCancel = (): void => {
     setIsViewDialogOpen(false);
-    setSelected(empty as T);
     updateQS();
   };
 
@@ -159,7 +159,6 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
 
   const handleEditCancel = (): void => {
     setIsEditDialogOpen(false);
-    setSelected(empty as T);
     updateQS();
   };
 
