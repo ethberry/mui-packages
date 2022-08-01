@@ -71,6 +71,7 @@ export const ForgotPassword: FC = () => {
             email: "",
             captcha: "",
           }}
+          testId="ForgotPassword"
         >
           <TextInput name="email" autoComplete="username" />
           <Captcha />

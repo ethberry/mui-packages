@@ -3,6 +3,8 @@ import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/mat
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 
+import { useTestId } from "@gemunion/mui-form";
+
 import { useStyles } from "./styles";
 
 export interface IAutocompleteOptions {
@@ -23,6 +25,8 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
   const { name, label, options, multiple, variant = "standard" } = props;
   const classes = useStyles();
 
+  const { testId } = useTestId();
+
   const suffix = name.split(".").pop() as string;
 
   const form = useFormContext<any>();
@@ -32,6 +36,8 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
   const { formatMessage } = useIntl();
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
   const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
+
+  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   return (
     <Controller
@@ -54,6 +60,10 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
                 <TextField
                   {...field}
                   {...params}
+                  inputProps={{
+                    ...params.inputProps,
+                    ...testIdProps,
+                  }}
                   label={localizedLabel}
                   placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}
                   error={!!error}
@@ -80,6 +90,10 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
                 <TextField
                   {...field}
                   {...params}
+                  inputProps={{
+                    ...params.inputProps,
+                    ...testIdProps,
+                  }}
                   label={localizedLabel}
                   placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}
                   error={!!error}

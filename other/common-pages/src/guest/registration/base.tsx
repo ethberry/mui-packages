@@ -59,7 +59,12 @@ export const RegistrationBase: FC<IRegistrationBaseProps> = props => {
     <Grid container className={classes.section}>
       <Grid item sm={12}>
         <PageHeader message="pages.guest.registration" />
-        <FormWrapper onSubmit={handleSubmit} validationSchema={validationSchema} initialValues={initialValues}>
+        <FormWrapper
+          onSubmit={handleSubmit}
+          validationSchema={validationSchema}
+          initialValues={initialValues}
+          testId="RegistrationBase"
+        >
           {children}
         </FormWrapper>
       </Grid>

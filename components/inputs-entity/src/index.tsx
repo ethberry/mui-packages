@@ -4,6 +4,7 @@ import { useSnackbar } from "notistack";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/material";
 
+import { useTestId } from "@gemunion/mui-form";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useApi } from "@gemunion/provider-api";
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
@@ -46,6 +47,10 @@ export const EntityInput: FC<IEntityInputProps> = props => {
   } = props;
   const suffix = name.split(".").pop() as string;
   const classes = useStyles();
+
+  const { testId } = useTestId();
+  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
+
   const [open, setOpen] = useState(false);
 
   const form = useFormContext<any>();
@@ -127,6 +132,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                   <TextField
                     {...field}
                     {...params}
+                    inputProps={{ ...params.inputProps, ...testIdProps }}
                     InputProps={{ ...params.InputProps, readOnly }}
                     label={localizedLabel}
                     placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}
@@ -164,6 +170,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                   <TextField
                     {...field}
                     {...params}
+                    inputProps={{ ...params.inputProps, ...testIdProps }}
                     InputProps={{ ...params.InputProps, readOnly }}
                     label={localizedLabel}
                     placeholder={localizedPlaceholder}

@@ -64,6 +64,7 @@ export const ResendVerificationEmail: FC = () => {
             email: "",
             captcha: "",
           }}
+          testId="ResendVerificationEmail"
         >
           <TextInput name="email" autoComplete="username" />
           <Captcha />

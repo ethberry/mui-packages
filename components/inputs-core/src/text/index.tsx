@@ -3,6 +3,8 @@ import { useIntl } from "react-intl";
 import { useFormContext, Controller, get } from "react-hook-form";
 import { TextField, StandardTextFieldProps, FilledTextFieldProps, OutlinedTextFieldProps } from "@mui/material";
 
+import { useTestId } from "@gemunion/mui-form";
+
 import { useStyles } from "./styles";
 
 export interface IStandardTextInputProps extends StandardTextFieldProps {
@@ -36,6 +38,7 @@ export const TextInput: FC<ITextInputProps> = props => {
     name,
     label,
     readOnly,
+    inputProps,
     InputProps,
     placeholder,
     formatValue,
@@ -44,6 +47,8 @@ export const TextInput: FC<ITextInputProps> = props => {
     ...rest
   } = props;
   const classes = useStyles();
+
+  const { testId } = useTestId();
 
   const suffix = name.split(".").pop() as string;
 
@@ -55,6 +60,8 @@ export const TextInput: FC<ITextInputProps> = props => {
   const localizedLabel = label ?? formatMessage({ id: `form.labels.${suffix}` });
   const localizedPlaceholder = placeholder ?? formatMessage({ id: `form.placeholders.${suffix}` });
   const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
+
+  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   return (
     <Controller
@@ -73,6 +80,10 @@ export const TextInput: FC<ITextInputProps> = props => {
             InputProps={{
               ...InputProps,
               readOnly,
+            }}
+            inputProps={{
+              ...inputProps,
+              ...testIdProps,
             }}
             {...field}
             value={normalizeValue ? normalizeValue(field.value) : field.value}

@@ -6,6 +6,8 @@ import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Controller, useFormContext } from "react-hook-form";
 
+import { useTestId } from "@gemunion/mui-form";
+
 import { ACCEPTED_FORMATS, MAX_FILE_SIZE, MIN_FILE_SIZE } from "./constants";
 import { humanFileSize } from "./utils";
 import { useStyles } from "./styles";
@@ -32,6 +34,9 @@ export const FileInput: FC<IFileInputProps> = props => {
   const classes = useStyles();
   const { formatMessage } = useIntl();
   const { enqueueSnackbar } = useSnackbar();
+
+  const { testId } = useTestId();
+  const testIdProps = testId ? { "data-testid": `${testId}-FileInput` } : {};
 
   const form = useFormContext<any>();
 
@@ -92,7 +97,7 @@ export const FileInput: FC<IFileInputProps> = props => {
         control={form.control}
         render={({ field }) => {
           // field should come before getInputProps
-          return <input {...field} {...getInputProps()} data-testid="FileInput" />;
+          return <input {...field} {...getInputProps()} {...testIdProps} />;
         }}
       />
       {isDragActive ? (

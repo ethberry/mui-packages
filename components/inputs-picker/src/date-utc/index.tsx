@@ -5,6 +5,8 @@ import { TextField, TextFieldProps } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers";
 import { addMinutes, subMinutes } from "date-fns";
 
+import { useTestId } from "@gemunion/mui-form";
+
 import { useStyles } from "./styles";
 
 interface IDateUtcInputProps {
@@ -19,6 +21,9 @@ interface IDateUtcInputProps {
 export const DateUtcInput: FC<IDateUtcInputProps> = props => {
   const { name, label, variant = "standard", ...rest } = props;
   const classes = useStyles();
+
+  const { testId } = useTestId();
+  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   const suffix = name.split(".").pop() as string;
 
@@ -58,6 +63,10 @@ export const DateUtcInput: FC<IDateUtcInputProps> = props => {
               fullWidth
               variant={variant}
               {...props}
+              inputProps={{
+                ...props.inputProps,
+                ...testIdProps,
+              }}
             />
           )}
           {...rest}

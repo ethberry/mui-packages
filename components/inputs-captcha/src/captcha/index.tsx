@@ -5,6 +5,8 @@ import { FormattedMessage } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";
 import { Grid, FormHelperText } from "@mui/material";
 
+import { useTestId } from "@gemunion/mui-form";
+
 import { useStyles } from "./styles";
 
 interface ICaptchaProps {
@@ -14,6 +16,8 @@ interface ICaptchaProps {
 export const Captcha: FC<ICaptchaProps> = props => {
   const { name = "captcha" } = props;
 
+  const { testId } = useTestId();
+
   const form = useFormContext<any>();
   const error = get(form.formState.errors, name);
   const classes = useStyles();
@@ -21,6 +25,8 @@ export const Captcha: FC<ICaptchaProps> = props => {
   /* javascript-obfuscator:disable */
   const siteKey = process.env.GOOGLE_RECAPTCHA_PUBLIC;
   /* javascript-obfuscator:enable */
+
+  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   return (
     <Controller
@@ -34,6 +40,7 @@ export const Captcha: FC<ICaptchaProps> = props => {
             onChange={(value: string | null): void => {
               form.setValue(name, value);
             }}
+            {...testIdProps}
           />
           {error ? (
             <FormHelperText error>

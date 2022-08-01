@@ -66,6 +66,7 @@ export const RestorePassword: FC = () => {
           confirm: "",
           token,
         }}
+        testId="RestorePassword"
       >
         <PasswordInput name="password" autoComplete="new-password" />
         <PasswordInput name="confirm" autoComplete="new-password" />

@@ -4,6 +4,8 @@ import { Controller, useFormContext } from "react-hook-form";
 import { Box, TextField, TextFieldProps } from "@mui/material";
 import { DateRange, DateRangePicker } from "@mui/x-date-pickers-pro";
 
+import { useTestId } from "@gemunion/mui-form";
+
 import { useStyles } from "./styles";
 
 interface IDateTimeInputProps {
@@ -17,6 +19,9 @@ interface IDateTimeInputProps {
 export const DateRangeInput: FC<IDateTimeInputProps> = props => {
   const { name, variant = "standard", ...rest } = props;
   const classes = useStyles();
+
+  const { testId } = useTestId();
+  const getTestIdProps = (suffix: string) => (testId ? { "data-testid": `${testId}-${name}-${suffix}` } : {});
 
   const suffix = name.split(".").pop() as string;
 
@@ -41,6 +46,10 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
                   className={classes.root}
                   {...form.register(`${name}Start`)}
                   {...startProps}
+                  inputProps={{
+                    ...startProps.inputProps,
+                    ...getTestIdProps("Start"),
+                  }}
                   variant={variant}
                   fullWidth
                 />
@@ -49,6 +58,10 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
                   className={classes.root}
                   {...form.register(`${name}End`)}
                   {...endProps}
+                  inputProps={{
+                    ...endProps.inputProps,
+                    ...getTestIdProps("End"),
+                  }}
                   name={`${name}End`}
                   variant={variant}
                   fullWidth

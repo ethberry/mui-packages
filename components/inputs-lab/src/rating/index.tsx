@@ -5,6 +5,9 @@ import { Controller, useFormContext } from "react-hook-form";
 import { InputLabel } from "@mui/material";
 import { Rating, RatingProps } from "@mui/lab";
 import { Star, SvgIconComponent } from "@mui/icons-material";
+
+import { useTestId } from "@gemunion/mui-form";
+
 import { useStyles } from "./styles";
 
 export interface IRatingInputProps extends RatingProps {
@@ -16,6 +19,9 @@ export interface IRatingInputProps extends RatingProps {
 export const RatingInput: FC<IRatingInputProps> = props => {
   const { name, icon = Star, color, ...rest } = props;
   const classes = useStyles();
+
+  const { testId } = useTestId();
+  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   const suffix = name.split(".").pop() as string;
 
@@ -37,6 +43,7 @@ export const RatingInput: FC<IRatingInputProps> = props => {
             onChange={(_event: ChangeEvent<unknown>, value): void => {
               form.setValue(name, value);
             }}
+            {...testIdProps}
             {...rest}
           />
         )}

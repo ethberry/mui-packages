@@ -3,6 +3,8 @@ import { useIntl } from "react-intl";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 import { FormControlLabel, FormHelperText, Slider, SliderProps } from "@mui/material";
 
+import { useTestId } from "@gemunion/mui-form";
+
 import { useStyles } from "./styles";
 
 export interface ISliderInputProps extends SliderProps {
@@ -13,6 +15,7 @@ export interface ISliderInputProps extends SliderProps {
 export const SliderInput: FC<ISliderInputProps> = props => {
   const { name, label, ...rest } = props;
   const classes = useStyles();
+  const { testId } = useTestId();
 
   const suffix = name.split(".").pop() as string;
 
@@ -44,6 +47,7 @@ export const SliderInput: FC<ISliderInputProps> = props => {
                 onChange={(_event, value): void => {
                   form.setValue(name, value, { shouldTouch: true });
                 }}
+                {...(testId ? { "data-testid": `${testId}-${name}` } : {})}
                 {...rest}
               />
             }
