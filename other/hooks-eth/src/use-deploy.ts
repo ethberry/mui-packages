@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Web3ContextType } from "@web3-react/core";
+import { useIntl } from "react-intl";
+import { useSnackbar } from "notistack";
 
 import { IServerSignature } from "@gemunion/types-collection";
 import { IFetchProps } from "@gemunion/provider-api";
@@ -10,6 +12,9 @@ import { useMetamask } from "./use-metamask";
 export const useDeploy = (
   deploy: (data: any, web3Context: Web3ContextType, sign: IServerSignature) => Promise<void>,
 ) => {
+  const { enqueueSnackbar } = useSnackbar();
+  const { formatMessage } = useIntl();
+
   const [isDeployDialogOpen, setIsDeployDialogOpen] = useState(false);
 
   const fnWithSignature = useServerSignature(deploy);
@@ -39,6 +44,9 @@ export const useDeploy = (
           Object.keys(errors).forEach(key => {
             form?.setError(key, { type: "custom", message: errors[key] }, { shouldFocus: true });
           });
+        } else {
+          console.error("unknown error", e);
+          enqueueSnackbar(e.message || formatMessage({ id: "snackbar.error" }), { variant: "error" });
         }
       });
   };
