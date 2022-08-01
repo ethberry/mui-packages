@@ -15,7 +15,7 @@ export const useMetamaskValue = <T = any>(fn: (...args: Array<any>) => Promise<T
       })
       .catch((e: any) => {
         if (e.code === 4001) {
-          enqueueSnackbar(formatMessage({ id: "snackbar.denied" }), { variant: "warning" });
+          enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
           return null;
         } else if (e.error?.data?.data) {
           const data = e.error?.data?.data as string;

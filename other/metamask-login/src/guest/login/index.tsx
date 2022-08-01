@@ -63,7 +63,7 @@ export const MetamaskLogin: FC = () => {
       })
       .catch((error: any) => {
         if (error.code === 4001) {
-          enqueueSnackbar(formatMessage({ id: "snackbar.denied" }), { variant: "warning" });
+          enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
         } else {
           console.error(error);
           enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
