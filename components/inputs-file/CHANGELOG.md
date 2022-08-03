@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.17](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@6.0.16...@gemunion/mui-inputs-file@6.0.17) (2022-08-03)
+
+
+### Bug Fixes
+
+* implement TestIdProvider and automatically generate data-test-id for all kind of inputs ([894f156](https://github.com/gemunion/mui-packages/commit/894f156d6da9167f34696dacb1385115c4c70bbb))
+* move TestIdProvider to providers; small fixes ([0baad43](https://github.com/gemunion/mui-packages/commit/0baad43b57c935866a38452bc7dc63cc929d3340))
+
+
+
+
+
 ## [6.0.16](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@6.0.15...@gemunion/mui-inputs-file@6.0.16) (2022-07-31)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file

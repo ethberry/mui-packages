@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.10](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.0.9...@gemunion/metamask-login@3.0.10) (2022-08-03)
+
+
+### Bug Fixes
+
+* unify erro messages ([4ca1da9](https://github.com/gemunion/mui-packages/commit/4ca1da9a64027cb56aa50ac18111f9cbd786e6b4))
+
+
+
+
+
 ## [3.0.9](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.0.8...@gemunion/metamask-login@3.0.9) (2022-07-31)
 
 

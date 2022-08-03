@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.12](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.11...@gemunion/react-hooks-eth@1.0.12) (2022-08-03)
+
+
+### Bug Fixes
+
+* catching error in useDeploy ([942242f](https://github.com/gemunion/mui-packages/commit/942242fcd7993ab11751b9f8ba10b982cbb559c2))
+* unify erro messages ([4ca1da9](https://github.com/gemunion/mui-packages/commit/4ca1da9a64027cb56aa50ac18111f9cbd786e6b4))
+
+
+
+
+
 ## [1.0.11](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.10...@gemunion/react-hooks-eth@1.0.11) (2022-07-31)
 
 

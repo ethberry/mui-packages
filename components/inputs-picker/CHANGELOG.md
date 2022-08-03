@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.2.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@5.2.7...@gemunion/mui-inputs-picker@5.2.8) (2022-08-03)
+
+
+### Bug Fixes
+
+* implement TestIdProvider and automatically generate data-test-id for all kind of inputs ([894f156](https://github.com/gemunion/mui-packages/commit/894f156d6da9167f34696dacb1385115c4c70bbb))
+* move TestIdProvider to providers; small fixes ([0baad43](https://github.com/gemunion/mui-packages/commit/0baad43b57c935866a38452bc7dc63cc929d3340))
+
+
+
+
+
 ## 5.2.7 (2022-07-31)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-picker
