@@ -3,6 +3,8 @@ import { FormControl, FormHelperText, InputLabel, MenuItem, Select, SelectProps 
 import { FormattedMessage, useIntl } from "react-intl";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 
+import { useTestId } from "@gemunion/provider-test-id";
+
 import { useStyles } from "./styles";
 
 export interface ISelectInputProps extends SelectProps {
@@ -16,6 +18,9 @@ export const SelectInput: FC<ISelectInputProps> = props => {
   const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
+
+  const { testId } = useTestId();
+  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   const form = useFormContext<any>();
   const formValues = useWatch();
@@ -55,6 +60,7 @@ export const SelectInput: FC<ISelectInputProps> = props => {
             onChange={(e: any) => {
               form.setValue(name, e.target.value, { shouldTouch: true });
             }}
+            {...testIdProps}
             {...rest}
           >
             {Object.values(options).map((option, i) => (

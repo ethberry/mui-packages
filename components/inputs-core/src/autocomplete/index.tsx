@@ -3,6 +3,8 @@ import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/mat
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 
+import { useTestId } from "@gemunion/provider-test-id";
+
 import { useStyles } from "./styles";
 
 export interface IAutocompleteOptions {
@@ -22,6 +24,9 @@ export interface IAutocompleteInputProps {
 export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
   const { name, label, options, multiple, variant = "standard" } = props;
   const classes = useStyles();
+
+  const { testId } = useTestId();
+  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   const suffix = name.split(".").pop() as string;
 
@@ -54,6 +59,10 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
                 <TextField
                   {...field}
                   {...params}
+                  inputProps={{
+                    ...params.inputProps,
+                    ...testIdProps,
+                  }}
                   label={localizedLabel}
                   placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}
                   error={!!error}
@@ -80,6 +89,10 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
                 <TextField
                   {...field}
                   {...params}
+                  inputProps={{
+                    ...params.inputProps,
+                    ...testIdProps,
+                  }}
                   label={localizedLabel}
                   placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}
                   error={!!error}

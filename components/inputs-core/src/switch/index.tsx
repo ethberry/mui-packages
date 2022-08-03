@@ -1,8 +1,10 @@
 import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { Controller, useFormContext } from "react-hook-form";
-
 import { FormControlLabel, Switch, SwitchProps } from "@mui/material";
+
+import { useTestId } from "@gemunion/provider-test-id";
+
 import { useStyles } from "./styles";
 
 export interface ISwitchInputProps extends SwitchProps {
@@ -13,6 +15,9 @@ export interface ISwitchInputProps extends SwitchProps {
 export const SwitchInput: FC<ISwitchInputProps & SwitchProps> = props => {
   const { name, label, ...rest } = props;
   const classes = useStyles();
+
+  const { testId } = useTestId();
+  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   const suffix = name.split(".").pop() as string;
 
@@ -35,6 +40,7 @@ export const SwitchInput: FC<ISwitchInputProps & SwitchProps> = props => {
               inputRef={field.ref}
               onChange={field.onChange}
               onBlur={field.onBlur}
+              {...testIdProps}
               {...rest}
             />
           }

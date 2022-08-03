@@ -9,16 +9,17 @@ interface ICommonSearchFormProps {
   onSubmit: (values: any) => Promise<void>;
   initialValues: any;
   open?: boolean;
+  testId?: string;
 }
 
 export const CommonSearchForm: FC<ICommonSearchFormProps> = props => {
-  const { autosave = true, onSubmit, initialValues, open = false, children } = props;
+  const { autosave = true, onSubmit, initialValues, open = false, testId, children } = props;
 
   const { query } = initialValues;
   const fixedValues = { query };
 
   return (
-    <FormWrapper initialValues={fixedValues} onSubmit={onSubmit} showButtons={false} showPrompt={false}>
+    <FormWrapper initialValues={fixedValues} onSubmit={onSubmit} showButtons={false} showPrompt={false} testId={testId}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={12}>
           <SearchInput name="query" data-testid="CommonSearchInput" />

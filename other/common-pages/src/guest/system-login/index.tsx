@@ -70,6 +70,7 @@ export const SystemLogin: FC = () => {
             password: "",
             email: "",
           }}
+          testId="SystemLogin"
         >
           <TextInput name="email" autoComplete="username" />
           <PasswordInput name="password" autoComplete="current-password" />

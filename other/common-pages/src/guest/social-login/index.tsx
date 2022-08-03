@@ -73,6 +73,7 @@ export const SocialLogin: FC = () => {
             password: "",
             email: "",
           }}
+          testId="SocialLogin"
         >
           <TextInput name="email" autoComplete="username" />
           <PasswordInput name="password" autoComplete="current-password" />

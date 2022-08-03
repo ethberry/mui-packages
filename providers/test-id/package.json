@@ -8,19 +8,13 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-inputs-core": "7.0.16",
-    "@gemunion/provider-test-id": "1.0.0",
-    "@mui/styles": "5.9.2",
-    "react-number-format": "4.9.3"
-  },
-  "description": "react widget",
-  "devDependencies": {
-    "@mui/material": "5.9.2",
-    "@storybook/react": "6.5.9",
-    "@types/react": "17.0.48",
-    "ethers": "5.6.9",
     "react": "17.0.2",
-    "react-hook-form": "7.34.0",
+    "react-intl": "6.0.5"
+  },
+  "description": "react test id provider",
+  "devDependencies": {
+    "@types/react": "17.0.48",
+    "react": "17.0.2",
     "react-intl": "6.0.5"
   },
   "engines": {
@@ -29,12 +23,9 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/mui-inputs-mask",
+  "name": "@gemunion/provider-test-id",
   "peerDependencies": {
-    "@mui/material": "^5.0.0",
-    "ethers": "^5.6.0",
     "react": "^17.0.0",
-    "react-hook-form": "^7.0.0",
     "react-intl": "^5.0.0 || ^6.0.0"
   },
   "publishConfig": {
@@ -55,5 +46,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "5.3.8"
+  "version": "1.0.0"
 }

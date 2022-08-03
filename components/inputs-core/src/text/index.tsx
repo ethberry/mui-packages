@@ -3,6 +3,8 @@ import { useIntl } from "react-intl";
 import { useFormContext, Controller, get } from "react-hook-form";
 import { TextField, StandardTextFieldProps, FilledTextFieldProps, OutlinedTextFieldProps } from "@mui/material";
 
+import { useTestId } from "@gemunion/provider-test-id";
+
 import { useStyles } from "./styles";
 
 export interface IStandardTextInputProps extends StandardTextFieldProps {
@@ -36,6 +38,7 @@ export const TextInput: FC<ITextInputProps> = props => {
     name,
     label,
     readOnly,
+    inputProps,
     InputProps,
     placeholder,
     formatValue,
@@ -44,6 +47,9 @@ export const TextInput: FC<ITextInputProps> = props => {
     ...rest
   } = props;
   const classes = useStyles();
+
+  const { testId } = useTestId();
+  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   const suffix = name.split(".").pop() as string;
 
@@ -73,6 +79,10 @@ export const TextInput: FC<ITextInputProps> = props => {
             InputProps={{
               ...InputProps,
               readOnly,
+            }}
+            inputProps={{
+              ...inputProps,
+              ...testIdProps,
             }}
             {...field}
             value={normalizeValue ? normalizeValue(field.value) : field.value}

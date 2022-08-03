@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
 import { useLicense } from "@gemunion/provider-license";
+import { TestIdProvider } from "@gemunion/provider-test-id";
 
 import { PromptIfDirty } from "../prompt";
 import { FormButtons } from "../buttons";
@@ -21,6 +22,7 @@ interface IFormWrapperProps<T> {
   formSubmitButtonRef?: any;
   innerRef?: any;
   validate?: (data: any) => Promise<any>;
+  testId?: string;
 }
 
 export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
@@ -37,6 +39,7 @@ export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
     className,
     validationSchema,
     validate,
+    testId,
   } = props;
 
   const license = useLicense();
@@ -70,20 +73,24 @@ export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
     return null;
   }
 
+  const testIdProps = testId ? { "data-testid": `${testId}-form` } : {};
+
   return (
-    <FormProvider {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className={className} ref={innerRef}>
-        <PromptIfDirty visible={showPrompt} />
+    <TestIdProvider testId={testId}>
+      <FormProvider {...form}>
+        <form onSubmit={form.handleSubmit(handleSubmit)} className={className} ref={innerRef} {...testIdProps}>
+          <PromptIfDirty visible={showPrompt} />
 
-        {children}
+          {children}
 
-        <FormButtons
-          ref={formSubmitButtonRef}
-          visible={showButtons}
-          submit={submit}
-          handleSubmit={form.handleSubmit(handleSubmit)}
-        />
-      </form>
-    </FormProvider>
+          <FormButtons
+            ref={formSubmitButtonRef}
+            visible={showButtons}
+            submit={submit}
+            handleSubmit={form.handleSubmit(handleSubmit)}
+          />
+        </form>
+      </FormProvider>
+    </TestIdProvider>
   );
 };

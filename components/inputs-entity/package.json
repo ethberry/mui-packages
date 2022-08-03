@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@gemunion/mui-page-layout": "0.1.17",
+    "@gemunion/provider-test-id": "1.0.0",
     "@gemunion/react-hooks": "1.0.12",
     "use-debounce": "8.0.3"
   },

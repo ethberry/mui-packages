@@ -4,6 +4,7 @@ import { useFormContext, useWatch } from "react-hook-form";
 import { useIntl } from "react-intl";
 import { draftToMarkdown, markdownToDraft } from "markdown-draft-js";
 
+import { useTestId } from "@gemunion/provider-test-id";
 import { TToolbarControl } from "@gemunion/mui-rte";
 import { TextInput } from "@gemunion/mui-inputs-core";
 import { useLicense } from "@gemunion/provider-license";
@@ -32,6 +33,9 @@ export const MarkdownInput: FC<IMarkdownInputProps & TextFieldProps> = props => 
 
   const suffix = name.split(".").pop() as string;
 
+  const { testId } = useTestId();
+  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
+
   const license = useLicense();
   const form = useFormContext<any>();
   const value = useWatch({ name });
@@ -50,6 +54,7 @@ export const MarkdownInput: FC<IMarkdownInputProps & TextFieldProps> = props => 
       form.setValue(name, markdownString, { shouldTouch: true });
     },
     controls: defaultControls.concat(customControls),
+    ...testIdProps,
   };
 
   if (!license.isValid()) {

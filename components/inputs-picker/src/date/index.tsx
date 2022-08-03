@@ -4,6 +4,8 @@ import { Controller, useFormContext } from "react-hook-form";
 import { TextField, TextFieldProps } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers";
 
+import { useTestId } from "@gemunion/provider-test-id";
+
 import { useStyles } from "./styles";
 
 interface IDateInputProps {
@@ -18,6 +20,9 @@ interface IDateInputProps {
 export const DateInput: FC<IDateInputProps> = props => {
   const { name, label, variant = "standard", ...rest } = props;
   const classes = useStyles();
+
+  const { testId } = useTestId();
+  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   const suffix = name.split(".").pop() as string;
 
@@ -36,7 +41,17 @@ export const DateInput: FC<IDateInputProps> = props => {
           label={localizedLabel}
           {...field}
           renderInput={(props: TextFieldProps): ReactElement => (
-            <TextField className={classes.root} inputRef={field.ref} fullWidth variant={variant} {...props} />
+            <TextField
+              className={classes.root}
+              inputRef={field.ref}
+              fullWidth
+              variant={variant}
+              {...props}
+              inputProps={{
+                ...props.inputProps,
+                ...testIdProps,
+              }}
+            />
           )}
           {...rest}
         />
