@@ -6,7 +6,7 @@ import { InputLabel } from "@mui/material";
 import { Rating, RatingProps } from "@mui/lab";
 import { Star, SvgIconComponent } from "@mui/icons-material";
 
-import { useTestId } from "@gemunion/mui-form";
+import { useTestId } from "@gemunion/provider-test-id";
 
 import { useStyles } from "./styles";
 

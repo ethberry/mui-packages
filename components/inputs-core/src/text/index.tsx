@@ -3,7 +3,7 @@ import { useIntl } from "react-intl";
 import { useFormContext, Controller, get } from "react-hook-form";
 import { TextField, StandardTextFieldProps, FilledTextFieldProps, OutlinedTextFieldProps } from "@mui/material";
 
-import { useTestId } from "@gemunion/mui-form";
+import { useTestId } from "@gemunion/provider-test-id";
 
 import { useStyles } from "./styles";
 
@@ -49,6 +49,7 @@ export const TextInput: FC<ITextInputProps> = props => {
   const classes = useStyles();
 
   const { testId } = useTestId();
+  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   const suffix = name.split(".").pop() as string;
 
@@ -60,8 +61,6 @@ export const TextInput: FC<ITextInputProps> = props => {
   const localizedLabel = label ?? formatMessage({ id: `form.labels.${suffix}` });
   const localizedPlaceholder = placeholder ?? formatMessage({ id: `form.placeholders.${suffix}` });
   const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
-
-  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   return (
     <Controller

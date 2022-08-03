@@ -16,11 +16,11 @@ export interface IFormDialogProps<T> {
   initialValues: T;
   validationSchema?: any | (() => any);
   maxWidth?: Breakpoint | false;
-  formTestId?: string;
+  testId?: string;
 }
 
 export const FormDialog: FC<IFormDialogProps<any>> = props => {
-  const { children, onConfirm, initialValues, validationSchema, maxWidth = "lg", formTestId, ...rest } = props;
+  const { children, onConfirm, initialValues, validationSchema, maxWidth = "lg", testId, ...rest } = props;
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -52,7 +52,7 @@ export const FormDialog: FC<IFormDialogProps<any>> = props => {
           initialValues={initialValues}
           innerRef={innerRef}
           showButtons={false}
-          testId={formTestId}
+          testId={testId}
         >
           {children}
         </FormWrapper>

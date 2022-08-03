@@ -6,7 +6,7 @@ import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Controller, useFormContext } from "react-hook-form";
 
-import { useTestId } from "@gemunion/mui-form";
+import { useTestId } from "@gemunion/provider-test-id";
 
 import { ACCEPTED_FORMATS, MAX_FILE_SIZE, MIN_FILE_SIZE } from "./constants";
 import { humanFileSize } from "./utils";

@@ -4,7 +4,7 @@ import { useFormContext, Controller } from "react-hook-form";
 import { IconButton, InputBase, InputBaseProps, Paper } from "@mui/material";
 import { SearchOutlined } from "@mui/icons-material";
 
-import { useTestId } from "@gemunion/mui-form";
+import { useTestId } from "@gemunion/provider-test-id";
 
 import { useStyles } from "./styles";
 
@@ -15,13 +15,12 @@ export const SearchInput: FC<ISearchInputProps> = props => {
   const classes = useStyles();
 
   const { testId } = useTestId();
+  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   const form = useFormContext<any>();
 
   const { formatMessage } = useIntl();
   const localizedPlaceholder = formatMessage({ id: `form.placeholders.${name}` });
-
-  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   return (
     <Controller

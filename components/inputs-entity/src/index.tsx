@@ -4,9 +4,9 @@ import { useSnackbar } from "notistack";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/material";
 
-import { useTestId } from "@gemunion/mui-form";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useApi } from "@gemunion/provider-api";
+import { useTestId } from "@gemunion/provider-test-id";
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
 import { useStyles } from "./styles";
 

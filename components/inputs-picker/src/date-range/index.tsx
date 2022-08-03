@@ -4,7 +4,7 @@ import { Controller, useFormContext } from "react-hook-form";
 import { Box, TextField, TextFieldProps } from "@mui/material";
 import { DateRange, DateRangePicker } from "@mui/x-date-pickers-pro";
 
-import { useTestId } from "@gemunion/mui-form";
+import { useTestId } from "@gemunion/provider-test-id";
 
 import { useStyles } from "./styles";
 

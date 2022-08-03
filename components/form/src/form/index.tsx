@@ -4,11 +4,11 @@ import { yupResolver } from "@hookform/resolvers/yup";
 
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
 import { useLicense } from "@gemunion/provider-license";
+import { TestIdProvider } from "@gemunion/provider-test-id";
 
 import { PromptIfDirty } from "../prompt";
 import { FormButtons } from "../buttons";
 import { useYupValidationResolver } from "../hook";
-import { TestIdProvider } from "../test-id-provider";
 
 interface IFormWrapperProps<T> {
   showButtons?: boolean;

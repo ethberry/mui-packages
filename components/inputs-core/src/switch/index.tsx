@@ -3,7 +3,7 @@ import { useIntl } from "react-intl";
 import { Controller, useFormContext } from "react-hook-form";
 import { FormControlLabel, Switch, SwitchProps } from "@mui/material";
 
-import { useTestId } from "@gemunion/mui-form";
+import { useTestId } from "@gemunion/provider-test-id";
 
 import { useStyles } from "./styles";
 
@@ -17,6 +17,7 @@ export const SwitchInput: FC<ISwitchInputProps & SwitchProps> = props => {
   const classes = useStyles();
 
   const { testId } = useTestId();
+  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   const suffix = name.split(".").pop() as string;
 
@@ -24,8 +25,6 @@ export const SwitchInput: FC<ISwitchInputProps & SwitchProps> = props => {
 
   const { formatMessage } = useIntl();
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
-
-  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   return (
     <Controller

@@ -3,7 +3,7 @@ import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/mat
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 
-import { useTestId } from "@gemunion/mui-form";
+import { useTestId } from "@gemunion/provider-test-id";
 
 import { useStyles } from "./styles";
 
@@ -26,6 +26,7 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
   const classes = useStyles();
 
   const { testId } = useTestId();
+  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   const suffix = name.split(".").pop() as string;
 
@@ -36,8 +37,6 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
   const { formatMessage } = useIntl();
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
   const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
-
-  const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   return (
     <Controller

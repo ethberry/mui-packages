@@ -5,7 +5,7 @@ import { TextField, TextFieldProps } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers";
 import { addMinutes, subMinutes } from "date-fns";
 
-import { useTestId } from "@gemunion/mui-form";
+import { useTestId } from "@gemunion/provider-test-id";
 
 import { useStyles } from "./styles";
 
