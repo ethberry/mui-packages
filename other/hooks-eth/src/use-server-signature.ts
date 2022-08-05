@@ -13,16 +13,16 @@ export const useServerSignature = (
   const { formatMessage } = useIntl();
 
   return async (params: IFetchProps, web3Context: Web3ContextType) => {
-    return api.fetchJson(params).then((sign: IServerSignature) =>
-      fn(params.data, web3Context, sign).catch((e: any) => {
-        if (e.status) {
+    return api
+      .fetchJson(params)
+      .then((sign: IServerSignature) => fn(params.data, web3Context, sign))
+      .catch((e: any) => {
+        if (e.status || e.code === 400) {
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message as string}` }), { variant: "error" });
           return null;
         } else {
-          console.error(e);
           throw e;
         }
-      }),
-    );
+      });
   };
 };
