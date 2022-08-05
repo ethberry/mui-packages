@@ -3,6 +3,8 @@ import { cleanup, render } from "@testing-library/react";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { MemoryRouter } from "react-router-dom";
 
+import { LicenseProvider } from "@gemunion/provider-license";
+
 import { FormDialog } from "./";
 
 afterEach(cleanup);
@@ -33,13 +35,15 @@ describe("<FormDialog />", () => {
     };
 
     const { asFragment } = render(
-      <MemoryRouter>
-        <ThemeProvider theme={createTheme()}>
-          <IntlProvider locale="en" messages={i18n}>
-            <FormDialog {...props} />
-          </IntlProvider>
-        </ThemeProvider>
-      </MemoryRouter>,
+      <LicenseProvider licenseKey={process.env.STORYBOOK_GEMUNION_LICENSE}>
+        <MemoryRouter>
+          <ThemeProvider theme={createTheme()}>
+            <IntlProvider locale="en" messages={i18n}>
+              <FormDialog {...props} />
+            </IntlProvider>
+          </ThemeProvider>
+        </MemoryRouter>
+      </LicenseProvider>,
       { container },
     );
 

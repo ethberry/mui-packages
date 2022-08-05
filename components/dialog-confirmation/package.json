@@ -48,7 +48,7 @@
     "prepare": "npm run build",
     "preversion": "npm run build && npm run test",
     "test": "jest --config jest.config.json --no-watch --verbose",
-    "test:coverage": "jest  --config jest.config.json --coverage",
+    "test:coverage": "jest --config jest.config.json --coverage",
     "test:watch": "jest --config jest.config.json"
   },
   "sideEffects": false,

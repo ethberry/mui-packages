@@ -70,7 +70,7 @@
     "prepare": "npm run build",
     "preversion": "npm run build && npm run test",
     "test": "exit 0",
-    "test:coverage": "jest  --config jest.config.json --coverage",
+    "test:coverage": "jest --config jest.config.json --coverage",
     "test:watch": "jest --config jest.config.json"
   },
   "sideEffects": false,
