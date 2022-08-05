@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.2.10 (2022-08-05)
+
+
+### Bug Fixes
+
+* tests ([2230ae3](https://github.com/gemunion/mui-packages/commit/2230ae30fd453c785c4a1aacaa3a7f6472599ae1))
+
+
+
+
+
 ## 3.2.9 (2022-07-31)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-confirmation

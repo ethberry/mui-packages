@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.18](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@9.0.17...@gemunion/common-pages@9.0.18) (2022-08-05)
+
+
+### Bug Fixes
+
+* tsconfig ([a32fbe3](https://github.com/gemunion/mui-packages/commit/a32fbe358ca15f7b428909776f55f25cccb0b043))
+
+
+
+
+
 ## [9.0.17](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@9.0.16...@gemunion/common-pages@9.0.17) (2022-08-03)
 
 
