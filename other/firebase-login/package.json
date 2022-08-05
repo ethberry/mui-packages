@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/firebase": "1.1.22",
+    "@gemunion/firebase": "1.1.23",
     "@mui/icons-material": "5.8.4",
     "firebaseui": "6.0.1"
   },
@@ -16,8 +16,8 @@
   "devDependencies": {
     "@gemunion/provider-api": "6.0.5",
     "@gemunion/provider-user": "4.0.6",
-    "@mui/material": "5.9.2",
-    "@mui/styles": "5.9.2",
+    "@mui/material": "5.9.3",
+    "@mui/styles": "5.9.3",
     "notistack": "2.0.5",
     "react": "17.0.2",
     "react-intl": "6.0.5",
