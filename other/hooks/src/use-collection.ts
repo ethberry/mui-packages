@@ -55,20 +55,25 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
   const [count, setCount] = useState<number>(0);
   const [selected, setSelected] = useState<T>(empty as T);
 
-  const [search, setSearch] = useState<S>({
-    skip: 0,
-    take: defaultItemsPerPage,
-    ...data,
-    ...parse(location.search.substring(1), { decoder }),
-  } as unknown as S);
+  const getSearchParams = (data: Partial<S>) => {
+    const search = parse(location.search.substring(1), { decoder });
+    return Object.entries(data).reduce(
+      (memo, [key, value]) => Object.assign(memo, { [key]: search[key] ?? value }),
+      {} as S,
+    );
+  };
+
+  const [search, setSearch] = useState<S>(
+    getSearchParams({
+      skip: 0,
+      take: defaultItemsPerPage,
+      ...data,
+    } as Partial<S>),
+  );
 
   const updateQS = (id?: number) => {
     const { skip: _skip, take: _take, ...rest } = search;
-    const searchParams = {
-      ...data,
-      ...parse(location.search.substring(1), { decoder }),
-    };
-    const sameSearch = !id && location.search && deepEqual(rest, searchParams);
+    const sameSearch = !id && location.search && deepEqual(rest, getSearchParams(data));
 
     if (embedded || sameSearch) {
       return;
@@ -266,10 +271,7 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
   }, [search, id]);
 
   useDeepCompareEffect(() => {
-    setSearch({
-      ...search,
-      ...parse(location.search.substring(1), { decoder }),
-    });
+    setSearch(getSearchParams(search));
   }, [location]);
 
   return {
