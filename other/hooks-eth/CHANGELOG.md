@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.15](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.14...@gemunion/react-hooks-eth@1.0.15) (2022-08-11)
+
+
+### Bug Fixes
+
+* reorder operators ([4815aea](https://github.com/gemunion/mui-packages/commit/4815aead03664111f3a0965d1b39bd3e7716190b))
+
+
+
+
+
 ## [1.0.14](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.13...@gemunion/react-hooks-eth@1.0.14) (2022-08-05)
 
 **Note:** Version bump only for package @gemunion/react-hooks-eth

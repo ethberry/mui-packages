@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.13 (2022-08-11)
+
+
+### Bug Fixes
+
+* filter search params ([e847cbe](https://github.com/gemunion/mui-packages/commit/e847cbeee49da1d5a3b74f6c40f191abf259618a))
+
+
+
+
+
 ## [1.0.12](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.0.11...@gemunion/react-hooks@1.0.12) (2022-07-31)
 
 
