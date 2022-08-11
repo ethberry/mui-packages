@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.22](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@7.0.21...@gemunion/mui-dialog-form@7.0.22) (2022-08-11)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([cc22caf](https://github.com/gemunion/mui-packages/commit/cc22caf9c4c6405d3730dff7aa78a13008bebd29))
+
+
+
+
+
 ## [7.0.21](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@7.0.20...@gemunion/mui-dialog-form@7.0.21) (2022-08-11)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
