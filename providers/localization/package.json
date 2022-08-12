@@ -9,7 +9,7 @@
   },
   "description": "react i18n provider",
   "devDependencies": {
-    "@gemunion/provider-settings": "3.1.0",
+    "@gemunion/provider-settings": "3.1.1",
     "@mui/icons-material": "5.8.4",
     "@mui/material": "5.10.0",
     "@types/react": "17.0.48",
