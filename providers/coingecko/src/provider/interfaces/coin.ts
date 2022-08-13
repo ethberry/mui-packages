@@ -261,3 +261,8 @@ export interface ICoinGeckoCoin {
   last_updated: string;
   tickers: Array<ICoinGeckoCoinTicker>;
 }
+
+export interface ICoinGeckoTickers {
+  name: string;
+  tickers: Array<ICoinGeckoCoinTicker>;
+}
