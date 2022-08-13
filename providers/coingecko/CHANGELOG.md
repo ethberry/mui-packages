@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2022-08-13)
+
+
+### Features
+
+* update coingecko ([25b3cf2](https://github.com/gemunion/mui-packages/commit/25b3cf228317c3f919cf465b472d4fb95514abbd))
+
+
+
+
+
 ## 0.1.24 (2022-07-31)
 
 **Note:** Version bump only for package @gemunion/provider-coingecko
