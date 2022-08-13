@@ -17,12 +17,15 @@ export const useServerSignature = (
       .fetchJson(params)
       .then((sign: IServerSignature) => fn(params.data, web3Context, sign))
       .catch((e: any) => {
-        if (e.status || e.code === 400) {
+        if (e.status === 400) {
+          console.error(e.getLocalizedValidationErrors());
+          enqueueSnackbar(formatMessage({ id: `snackbar.error` }), { variant: "error" });
+          return null;
+        } else if (e.status === 404) {
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message as string}` }), { variant: "error" });
           return null;
-        } else {
-          throw e;
         }
+        throw e;
       });
   };
 };
