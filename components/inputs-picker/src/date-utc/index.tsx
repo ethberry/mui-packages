@@ -1,6 +1,6 @@
 import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
-import { Controller, useFormContext } from "react-hook-form";
+import { Controller, get, useFormContext } from "react-hook-form";
 import { TextField, TextFieldProps } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers";
 import { addMinutes, subMinutes } from "date-fns";
@@ -28,9 +28,11 @@ export const DateUtcInput: FC<IDateUtcInputProps> = props => {
   const suffix = name.split(".").pop() as string;
 
   const form = useFormContext<any>();
+  const error = get(form.formState.errors, name);
 
   const { formatMessage } = useIntl();
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
+  const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   const setter = (date: Date | string): Date => {
     const d = new Date(date);
@@ -63,6 +65,8 @@ export const DateUtcInput: FC<IDateUtcInputProps> = props => {
               fullWidth
               variant={variant}
               {...props}
+              helperText={localizedHelperText}
+              error={!!error}
               inputProps={{
                 ...props.inputProps,
                 ...testIdProps,
