@@ -1,7 +1,6 @@
 import { FC, ReactElement } from "react";
 import { FormattedMessage } from "react-intl";
 import {
-  Box,
   Button,
   Dialog,
   DialogActions,
@@ -25,7 +24,7 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
     onConfirm,
     children,
     message = "dialogs.confirmation",
-    headActions,
+    headActions = null,
     data,
     maxWidth = "sm",
     ...rest
@@ -43,9 +42,7 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
     >
       <DialogTitle id="confirmation-dialog-title">
         <FormattedMessage id={message} values={data} />
-        {headActions ? (
-          <Box position="absolute" right={16} top={16} zIndex="1000">{headActions}</Box>
-        ) : null}
+        {headActions}
       </DialogTitle>
       <DialogContent id="confirmation-dialog-content">
         <DialogContentText component="div">{children}</DialogContentText>
