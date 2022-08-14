@@ -24,10 +24,10 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
     onCancel,
     onConfirm,
     children,
-    message = 'dialogs.confirmation',
+    message = "dialogs.confirmation",
     headActions,
     data,
-    maxWidth = 'sm',
+    maxWidth = "sm",
     ...rest
   } = props;
 
