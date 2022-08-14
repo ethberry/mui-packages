@@ -1,4 +1,4 @@
-import { FC, ReactElement } from 'react';
+import { FC, ReactElement } from "react";
 import { FormattedMessage } from "react-intl";
 import {
   Box,
@@ -41,7 +41,7 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
       data-testid="DialogConfirmation"
       {...rest}
     >
-      <DialogTitle id="g-title">
+      <DialogTitle id="confirmation-dialog-title">
         <FormattedMessage id={message} values={data} />
         {headActions ? (
           <Box position="absolute" right={16} top={16} zIndex="1000">{headActions}</Box>
