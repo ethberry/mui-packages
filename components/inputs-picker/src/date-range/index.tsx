@@ -1,6 +1,6 @@
 import { FC, Fragment, ReactElement } from "react";
 import { useIntl } from "react-intl";
-import { Controller, useFormContext } from "react-hook-form";
+import { Controller, get, useFormContext } from "react-hook-form";
 import { Box, TextField, TextFieldProps } from "@mui/material";
 import { DateRange, DateRangePicker } from "@mui/x-date-pickers-pro";
 
@@ -25,9 +25,17 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
 
   const suffix = name.split(".").pop() as string;
 
-  const form = useFormContext<any>();
-
   const { formatMessage } = useIntl();
+  const localizedLabelStart = formatMessage({ id: `form.labels.${suffix}Start` });
+  const localizedLabelEnd = formatMessage({ id: `form.labels.${suffix}End` });
+
+  const form = useFormContext<any>();
+  const errorStart = get(form.formState.errors, `${name}Start`);
+  const errorEnd = get(form.formState.errors, `${name}End`);
+  const localizedHelperTextStart = errorStart
+    ? formatMessage({ id: errorStart.message }, { label: localizedLabelStart })
+    : "";
+  const localizedHelperTextEnd = errorEnd ? formatMessage({ id: errorEnd.message }, { label: localizedLabelEnd }) : "";
 
   return (
     <Controller
@@ -46,6 +54,8 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
                   className={classes.root}
                   {...form.register(`${name}Start`)}
                   {...startProps}
+                  helperText={localizedHelperTextStart}
+                  error={!!errorStart}
                   inputProps={{
                     ...startProps.inputProps,
                     ...getTestIdProps("Start"),
@@ -58,6 +68,8 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
                   className={classes.root}
                   {...form.register(`${name}End`)}
                   {...endProps}
+                  helperText={localizedHelperTextEnd}
+                  error={!!errorEnd}
                   inputProps={{
                     ...endProps.inputProps,
                     ...getTestIdProps("End"),
