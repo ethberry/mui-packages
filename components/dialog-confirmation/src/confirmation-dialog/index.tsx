@@ -1,6 +1,7 @@
-import { FC } from "react";
+import { FC, ReactElement } from 'react';
 import { FormattedMessage } from "react-intl";
 import {
+  Box,
   Button,
   Dialog,
   DialogActions,
@@ -15,10 +16,21 @@ export interface IConfirmationDialogProps extends DialogProps {
   onConfirm: () => void;
   message?: string;
   data?: any;
+  headActions?: ReactElement;
 }
 
 export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
-  const { onCancel, onConfirm, children, message = "dialogs.confirmation", data, maxWidth = "sm", ...rest } = props;
+  const {
+    onCancel,
+    onConfirm,
+    children,
+    message = 'dialogs.confirmation',
+    headActions,
+    data,
+    maxWidth = 'sm',
+    ...rest
+  } = props;
+
   return (
     <Dialog
       fullWidth
@@ -29,8 +41,11 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
       data-testid="DialogConfirmation"
       {...rest}
     >
-      <DialogTitle id="confirmation-dialog-title">
+      <DialogTitle id="g-title">
         <FormattedMessage id={message} values={data} />
+        {headActions ? (
+          <Box position="absolute" right={16} top={16} zIndex="1000">{headActions}</Box>
+        ) : null}
       </DialogTitle>
       <DialogContent id="confirmation-dialog-content">
         <DialogContentText component="div">{children}</DialogContentText>

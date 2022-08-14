@@ -1,4 +1,4 @@
-import { FC, useRef, useState } from "react";
+import { FC, ReactElement, useRef, useState } from "react";
 import { Breakpoint } from "@mui/material";
 
 import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
@@ -17,6 +17,7 @@ export interface IFormDialogProps<T> {
   validationSchema?: any | (() => any);
   maxWidth?: Breakpoint | false;
   testId?: string;
+  headActions?: ReactElement;
 }
 
 export const FormDialog: FC<IFormDialogProps<any>> = props => {
