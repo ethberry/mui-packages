@@ -6,6 +6,6 @@ export interface INetwork {
   nativeCurrency: {
     name: string;
     symbol: string;
-    decimals: number;
+    decimals: 18;
   };
 }

@@ -44,7 +44,7 @@ export const MetaMaskButton: FC<IMetaMaskButtonProps> = props => {
       }
 
       return metaMask
-        .activate(network.chainId)
+        .activate(network)
         .then(() => {
           setActiveConnector(TConnectors.METAMASK);
           onClick();
