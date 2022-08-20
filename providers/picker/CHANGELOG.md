@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.5.11 (2022-08-20)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([74930da](https://github.com/gemunion/mui-packages/commit/74930da82a73218dc94100eb327cf443f74f76fd))
+
+
+
+
+
 ## [3.5.10](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-picker@3.5.9...@gemunion/provider-picker@3.5.10) (2022-08-12)
 
 **Note:** Version bump only for package @gemunion/provider-picker

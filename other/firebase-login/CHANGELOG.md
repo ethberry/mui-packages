@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.13 (2022-08-20)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([74930da](https://github.com/gemunion/mui-packages/commit/74930da82a73218dc94100eb327cf443f74f76fd))
+
+
+
+
+
 ## [2.0.12](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.0.11...@gemunion/firebase-login@2.0.12) (2022-08-12)
 
 **Note:** Version bump only for package @gemunion/firebase-login
