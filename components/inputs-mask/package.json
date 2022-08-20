@@ -15,12 +15,12 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.10.0",
+    "@mui/material": "5.10.1",
     "@storybook/react": "6.5.10",
     "@types/react": "17.0.48",
-    "ethers": "5.6.9",
+    "ethers": "5.7.0",
     "react": "17.0.2",
-    "react-hook-form": "7.34.1",
+    "react-hook-form": "7.34.2",
     "react-intl": "6.0.5"
   },
   "engines": {

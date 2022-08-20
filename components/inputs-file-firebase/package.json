@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/firebase": "1.1.24",
+    "@gemunion/firebase": "1.1.25",
     "@gemunion/mui-inputs-file": "6.0.21",
     "uuid": "8.3.2"
   },
