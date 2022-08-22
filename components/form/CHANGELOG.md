@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.25](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@6.0.24...@gemunion/mui-form@6.0.25) (2022-08-22)
+
+
+### Bug Fixes
+
+* file upload ([bb085ea](https://github.com/gemunion/mui-packages/commit/bb085ea40087469f77534119965126ad840443e6))
+
+
+
+
+
 ## 6.0.24 (2022-08-20)
 
 
