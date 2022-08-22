@@ -19,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* implement headActions for form dialog and confirmation dialog ([1891621](https://github.com/gemunion/mui-packages/commit/18916215cc040ecbc535e7ff2db62df50da9dcfd))
+* implement action for form dialog and confirmation dialog ([1891621](https://github.com/gemunion/mui-packages/commit/18916215cc040ecbc535e7ff2db62df50da9dcfd))
 * make it neat ([e86ff26](https://github.com/gemunion/mui-packages/commit/e86ff2666bf961e4a2d2d156ca61ffa24f1600eb))
 * typo ([f02e1ef](https://github.com/gemunion/mui-packages/commit/f02e1ef221660fa5d2c498d4e978abc4a8feaf0e))
 * typo ([2df0b78](https://github.com/gemunion/mui-packages/commit/2df0b7831de8d55b8abec78958f6c0f6eb6349aa))

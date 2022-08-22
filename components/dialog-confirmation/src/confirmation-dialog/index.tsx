@@ -15,7 +15,7 @@ export interface IConfirmationDialogProps extends DialogProps {
   onConfirm: () => void;
   message?: string;
   data?: any;
-  headActions?: ReactElement;
+  action?: ReactElement;
 }
 
 export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
@@ -24,7 +24,7 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
     onConfirm,
     children,
     message = "dialogs.confirmation",
-    headActions = null,
+    action = null,
     data,
     maxWidth = "sm",
     ...rest
@@ -42,7 +42,7 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
     >
       <DialogTitle id="confirmation-dialog-title">
         <FormattedMessage id={message} values={data} />
-        {headActions}
+        {action}
       </DialogTitle>
       <DialogContent id="confirmation-dialog-content">
         <DialogContentText component="div">{children}</DialogContentText>

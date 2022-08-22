@@ -17,7 +17,7 @@ export interface IFormDialogProps<T> {
   validationSchema?: any | (() => any);
   maxWidth?: Breakpoint | false;
   testId?: string;
-  headActions?: ReactElement;
+  action?: ReactElement;
 }
 
 export const FormDialog: FC<IFormDialogProps<any>> = props => {
