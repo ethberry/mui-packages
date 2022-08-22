@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.2.15 (2022-08-22)
+
+
+### Bug Fixes
+
+* headerAction -> action ([1a29a26](https://github.com/gemunion/mui-packages/commit/1a29a26a4df5f1cfac168b7a9e207892cb4e674e))
+
+
+
+
+
 ## 3.2.14 (2022-08-20)
 
 
