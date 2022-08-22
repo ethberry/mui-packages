@@ -12,7 +12,7 @@ export const MaskedInputWrapper = forwardRef<NumberFormat<any>>(function NumberF
   const testIdProps = testId ? { "data-testid": `${testId}-${props.name as string}` } : {};
 
   const onValueChange = (values: any) => {
-    form.setValue(props.name, formatValue(values.value));
+    form.setValue(props.name, formatValue(values.value), { shouldTouch: true });
   };
 
   return <NumberFormat onValueChange={onValueChange} {...rest} getInputRef={ref} {...testIdProps} />;

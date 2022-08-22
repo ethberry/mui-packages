@@ -1,7 +1,7 @@
 import { FC, useCallback } from "react";
 import clsx from "clsx";
-import { useDropzone, FileRejection, DropzoneOptions } from "react-dropzone";
-import { CloudUpload, CloudUploadOutlined, CloudOff } from "@mui/icons-material";
+import { DropzoneOptions, FileRejection, useDropzone } from "react-dropzone";
+import { CloudOff, CloudUpload, CloudUploadOutlined } from "@mui/icons-material";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Controller, useFormContext } from "react-hook-form";
@@ -13,19 +13,21 @@ import { humanFileSize } from "./utils";
 import { useStyles } from "./styles";
 
 export interface IFileInputProps extends DropzoneOptions {
+  name: string;
+  onChange: (files: Array<File>) => void;
   classes?: {
     root?: string;
     active?: string;
     inactive?: string;
     disabled?: string;
   };
-  onChange: (files: Array<File>) => void;
 }
 
 export const FileInput: FC<IFileInputProps> = props => {
   const {
-    disabled,
+    name,
     onChange,
+    disabled,
     accept = ACCEPTED_FORMATS,
     minSize = MIN_FILE_SIZE,
     maxSize = MAX_FILE_SIZE,
@@ -46,10 +48,7 @@ export const FileInput: FC<IFileInputProps> = props => {
 
     if (rejectedFiles.length) {
       rejectedFiles.forEach(rejectedFile => {
-        console.info("rejectedFile", rejectedFile);
         rejectedFile.errors.forEach(({ code }) => {
-          console.info("code", code);
-          console.info("accept", accept);
           enqueueSnackbar(
             formatMessage(
               { id: `components.dropzone.${code}` },
@@ -69,7 +68,6 @@ export const FileInput: FC<IFileInputProps> = props => {
     }
 
     if (acceptedFiles.length) {
-      console.info("acceptedFiles", acceptedFiles);
       onChange(acceptedFiles);
     }
   }, []);
@@ -93,9 +91,9 @@ export const FileInput: FC<IFileInputProps> = props => {
   return (
     <div {...getRootProps()} className={clsx(classes.placeholder, props.classes?.root)}>
       <Controller
-        name="file"
+        name={name}
         control={form.control}
-        render={({ field }) => {
+        render={({ field: { value: _value, ...field } }) => {
           // field should come before getInputProps
           return <input {...field} {...getInputProps()} {...testIdProps} />;
         }}

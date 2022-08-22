@@ -13,7 +13,7 @@ export const FirebaseFileInput: FC<IFirebaseFileInputProps> = props => {
 
   const uploadUrl = useUploadUrl(bucket);
 
-  const handleChange = async (files: File[]): Promise<void> => {
+  const handleChange = async (files: Array<File>): Promise<void> => {
     onChange(await uploadUrl(files));
   };
 
