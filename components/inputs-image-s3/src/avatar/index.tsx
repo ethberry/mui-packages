@@ -4,7 +4,7 @@ import { FormControl, FormHelperText, Grid, IconButton, InputLabel, Tooltip } fr
 import { Delete } from "@mui/icons-material";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { S3FileInput, useDeleteUrl, Accept } from "@gemunion/mui-inputs-file-s3";
+import { Accept, S3FileInput, useDeleteUrl } from "@gemunion/mui-inputs-file-s3";
 
 import { useStyles } from "./styles";
 
@@ -67,7 +67,7 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
       </InputLabel>
       <Grid container className={classes.container}>
         <Grid item>
-          <S3FileInput onChange={onChange} bucket={bucket} accept={accept} maxFiles={1} />
+          <S3FileInput name={name} onChange={onChange} bucket={bucket} accept={accept} maxFiles={1} />
           {localizedHelperText && (
             <FormHelperText id={`${name}-helper-text`} error>
               {localizedHelperText}

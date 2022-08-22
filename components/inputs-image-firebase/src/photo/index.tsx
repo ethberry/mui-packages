@@ -119,6 +119,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
               <Grid item>
                 <ProgressOverlay isLoading={isLoading}>
                   <FirebaseFileInput
+                    name={name}
                     onChange={handleFileChange}
                     classes={{ root: classes.media }}
                     bucket={bucket}
