@@ -67,12 +67,7 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
       </InputLabel>
       <Grid container className={classes.container}>
         <Grid item>
-          <S3FileInput name={name} onChange={onChange} bucket={bucket} accept={accept} maxFiles={1} />
-          {localizedHelperText && (
-            <FormHelperText id={`${name}-helper-text`} error>
-              {localizedHelperText}
-            </FormHelperText>
-          )}
+          <S3FileInput label={label} name={name} onChange={onChange} bucket={bucket} accept={accept} maxFiles={1} />
         </Grid>
       </Grid>
     </FormControl>

@@ -3,12 +3,17 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles<Theme>(
   () => ({
+    wrapper: {
+      display: "flex",
+      flexDirection: "column",
+    },
     placeholder: {
       width: 200,
       height: 150,
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
+      flexDirection: "column",
     },
     icon: {
       width: "100% !important",

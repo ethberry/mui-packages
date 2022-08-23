@@ -1,10 +1,11 @@
-import { FC, useCallback } from "react";
+import { FC, ReactElement, useCallback } from "react";
 import clsx from "clsx";
 import { DropzoneOptions, FileRejection, useDropzone } from "react-dropzone";
 import { CloudOff, CloudUpload, CloudUploadOutlined } from "@mui/icons-material";
+import { FormHelperText } from "@mui/material";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
-import { Controller, useFormContext } from "react-hook-form";
+import { Controller, get, useFormContext } from "react-hook-form";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
@@ -14,6 +15,7 @@ import { useStyles } from "./styles";
 
 export interface IFileInputProps extends DropzoneOptions {
   name: string;
+  label?: string | number | ReactElement;
   onChange: (files: Array<File>) => void;
   classes?: {
     root?: string;
@@ -26,6 +28,7 @@ export interface IFileInputProps extends DropzoneOptions {
 export const FileInput: FC<IFileInputProps> = props => {
   const {
     name,
+    label,
     onChange,
     disabled,
     accept = ACCEPTED_FORMATS,
@@ -41,6 +44,11 @@ export const FileInput: FC<IFileInputProps> = props => {
   const testIdProps = testId ? { "data-testid": `${testId}-FileInput` } : {};
 
   const form = useFormContext<any>();
+  const error = get(form.formState.errors, name);
+
+  const suffix = name.split(".").pop() as string;
+  const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
+  const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   const onDrop = useCallback((acceptedFiles: File[], rejectedFiles: FileRejection[]) => {
     console.info("acceptedFiles", acceptedFiles);
@@ -89,19 +97,26 @@ export const FileInput: FC<IFileInputProps> = props => {
   }
 
   return (
-    <div {...getRootProps()} className={clsx(classes.placeholder, props.classes?.root)}>
-      <Controller
-        name={name}
-        control={form.control}
-        render={({ field: { value: _value, ...field } }) => {
-          // field should come before getInputProps
-          return <input {...field} {...getInputProps()} {...testIdProps} />;
-        }}
-      />
-      {isDragActive ? (
-        <CloudUploadOutlined className={clsx(classes.icon, props.classes?.active)} />
-      ) : (
-        <CloudUpload className={clsx(classes.icon, props.classes?.inactive)} />
+    <div className={classes.wrapper}>
+      <div {...getRootProps()} className={clsx(classes.placeholder, props.classes?.root)}>
+        <Controller
+          name={name}
+          control={form.control}
+          render={({ field: { value: _value, ...field } }) => {
+            // field should come before getInputProps
+            return <input {...field} {...getInputProps()} {...testIdProps} />;
+          }}
+        />
+        {isDragActive ? (
+          <CloudUploadOutlined className={clsx(classes.icon, props.classes?.active)} />
+        ) : (
+          <CloudUpload className={clsx(classes.icon, props.classes?.inactive)} />
+        )}
+      </div>
+      {localizedHelperText && (
+        <FormHelperText id={`${name}-helper-text`} error>
+          {localizedHelperText}
+        </FormHelperText>
       )}
     </div>
   );

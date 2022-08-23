@@ -6,12 +6,11 @@ import {
   CardContent,
   CardMedia,
   FormControl,
-  FormHelperText,
   Grid,
   InputLabel,
 } from "@mui/material";
 import { get, useFormContext, useWatch } from "react-hook-form";
-import { FormattedMessage, useIntl } from "react-intl";
+import { FormattedMessage } from "react-intl";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import path from "path";
 
@@ -34,19 +33,13 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
   const { name, label, accept, bucket } = props;
 
   const form = useFormContext<any>();
-  const error = get(form.formState.errors, name);
   const value = get(useWatch(), name);
 
   const classes = useStyles();
-  const { formatMessage } = useIntl();
   const deleteUrl = useDeleteUrl(bucket);
   const [isLoading, setIsLoading] = useState(false);
   const [isDeleteImageDialogOpen, setIsDeleteImageDialogOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-
-  const suffix = name.split(".").pop() as string;
-  const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
-  const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   const handleOptionDelete = (index: number): (() => void) => {
     return (): void => {
@@ -120,6 +113,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
                 <ProgressOverlay isLoading={isLoading}>
                   <FirebaseFileInput
                     name={name}
+                    label={label}
                     onChange={handleFileChange}
                     classes={{ root: classes.media }}
                     bucket={bucket}
@@ -155,12 +149,6 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
           )}
         </Droppable>
       </DragDropContext>
-
-      {localizedHelperText && (
-        <FormHelperText id={`${name}-helper-text`} error>
-          {localizedHelperText}
-        </FormHelperText>
-      )}
 
       <ConfirmationDialog open={isDeleteImageDialogOpen} onCancel={handleDeleteCancel} onConfirm={handleDeleteConfirm}>
         <FormattedMessage id="dialogs.delete" values={value[selectedImageIndex]} />
