@@ -28,6 +28,7 @@
   "main": "./dist/index.js",
   "name": "@gemunion/mui-inputs-file-firebase",
   "peerDependencies": {
+    "firebase": "^9.0.0",
     "notistack": "^2.0.0",
     "react": "^17.0.0",
     "react-intl": "^5.0.0 || ^6.0.0"

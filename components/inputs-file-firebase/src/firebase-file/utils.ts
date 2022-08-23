@@ -38,7 +38,7 @@ export const useUploadUrl = (bucket?: string): ((files: File[]) => Promise<Array
       files.map(async file => {
         const storageRef = ref(storage, v4());
         const snapshot = await uploadBytes(storageRef, file);
-        return getDownloadURL(snapshot.ref) as Promise<string>;
+        return getDownloadURL(snapshot.ref);
       }),
     );
   };
