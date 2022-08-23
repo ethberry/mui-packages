@@ -68,12 +68,7 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
       </InputLabel>
       <Grid container className={classes.container}>
         <Grid item>
-          <FirebaseFileInput name={name} onChange={onChange} bucket={bucket} accept={accept} maxFiles={1} />
-          {localizedHelperText && (
-            <FormHelperText id={`${name}-helper-text`} error>
-              {localizedHelperText}
-            </FormHelperText>
-          )}
+          <FirebaseFileInput label={label} name={name} onChange={onChange} bucket={bucket} accept={accept} maxFiles={1} />
         </Grid>
       </Grid>
     </FormControl>
