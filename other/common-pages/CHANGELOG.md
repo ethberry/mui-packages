@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 9.0.26 (2022-08-23)
+
+
+### Bug Fixes
+
+* make NotFound message and error centered on the page ([c809d2d](https://github.com/gemunion/mui-packages/commit/c809d2d7ceea4426e3cb211ff0f1c660f4bb3a29))
+
+
+
+
+
 ## [9.0.25](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@9.0.24...@gemunion/common-pages@9.0.25) (2022-08-22)
 
 **Note:** Version bump only for package @gemunion/common-pages

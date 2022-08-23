@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.16](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-delete@3.2.15...@gemunion/mui-dialog-delete@3.2.16) (2022-08-23)
+
+
+### Bug Fixes
+
+* tests for dialog confirmation and delete dialog ([2ad16e5](https://github.com/gemunion/mui-packages/commit/2ad16e50081e1823d1b6657941a84c483e94d4db))
+
+
+
+
+
 ## 3.2.15 (2022-08-22)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-delete
