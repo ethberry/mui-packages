@@ -170,7 +170,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                 renderOption={(props: React.HTMLAttributes<HTMLLIElement>, option: IAutocompleteOption) => {
                   return (
                     <li {...props} key={option.id}>
-                      {option.name}
+                      {option.title}
                     </li>
                   );
                 }}
