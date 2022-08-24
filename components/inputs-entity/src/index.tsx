@@ -9,6 +9,7 @@ import { useApi } from "@gemunion/provider-api";
 import { useTestId } from "@gemunion/provider-test-id";
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
 import { useStyles } from "./styles";
+import * as React from "react";
 
 export interface IAutocompleteOption {
   id: string | number;
@@ -166,6 +167,13 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                   })
                 }
                 getOptionLabel={(option: IAutocompleteOption): string => (getTitle ? getTitle(option) : option.title)}
+                renderOption={(props: React.HTMLAttributes<HTMLLIElement>, option: IAutocompleteOption) => {
+                  return (
+                    <li {...props} key={option.id}>
+                      {option.name}
+                    </li>
+                  );
+                }}
                 renderInput={(params: AutocompleteRenderInputParams): ReactElement => (
                   <TextField
                     {...field}
