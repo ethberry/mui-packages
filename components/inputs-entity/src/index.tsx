@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, ReactElement, useState } from "react";
+import { ChangeEvent, FC, HTMLAttributes, ReactElement, useState } from "react";
 import { useIntl } from "react-intl";
 import { useSnackbar } from "notistack";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
@@ -9,7 +9,6 @@ import { useApi } from "@gemunion/provider-api";
 import { useTestId } from "@gemunion/provider-test-id";
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
 import { useStyles } from "./styles";
-import * as React from "react";
 
 export interface IAutocompleteOption {
   id: string | number;
@@ -167,7 +166,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                   })
                 }
                 getOptionLabel={(option: IAutocompleteOption): string => (getTitle ? getTitle(option) : option.title)}
-                renderOption={(props: React.HTMLAttributes<HTMLLIElement>, option: IAutocompleteOption) => {
+                renderOption={(props: HTMLAttributes<HTMLLIElement>, option: IAutocompleteOption) => {
                   return (
                     <li {...props} key={option.id}>
                       {option.title}

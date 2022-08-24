@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, ReactElement } from "react";
+import { ChangeEvent, FC, HTMLAttributes, ReactElement } from "react";
 import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/material";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
@@ -6,7 +6,6 @@ import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 import { useTestId } from "@gemunion/provider-test-id";
 
 import { useStyles } from "./styles";
-import * as React from "react";
 
 export interface IAutocompleteOptions {
   key: string | number;
@@ -56,7 +55,7 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
                 form.setValue(name, newValue, { shouldTouch: true });
               }}
               getOptionLabel={(option: IAutocompleteOptions) => option.value}
-              renderOption={(props: React.HTMLAttributes<HTMLLIElement>, option: IAutocompleteOptions) => {
+              renderOption={(props: HTMLAttributes<HTMLLIElement>, option: IAutocompleteOptions) => {
                 return (
                   <li {...props} key={option.key}>
                     {option.value}
