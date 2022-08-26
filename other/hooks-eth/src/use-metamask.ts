@@ -6,9 +6,9 @@ export type MetamaskOptionsParams = {
 };
 
 export const useMetamask = (fn: (...args: Array<any>) => Promise<any>, options: MetamaskOptionsParams = {}) => {
-  const metaFn = useMetamaskWallet(fn, options);
+  const metaFn = useMetamaskWallet?.(fn, options);
 
   return (...args: Array<any>) => {
-    return metaFn(...args) as Promise<void>;
+    return metaFn?.(...args) as Promise<void>;
   };
 };

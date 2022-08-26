@@ -5,9 +5,9 @@ export const useMetamaskValue = <T = any>(
   fn: (...args: Array<any>) => Promise<T>,
   options: MetamaskOptionsParams = {},
 ) => {
-  const metaFn = useMetamaskWallet(fn, options);
+  const metaFn = useMetamaskWallet?.(fn, options);
 
   return (...args: Array<any>): Promise<T> => {
-    return metaFn(...args);
+    return metaFn?.(...args) as Promise<T>;
   };
 };
