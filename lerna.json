@@ -15,5 +15,6 @@
     "providers/*",
     "forks/*"
   ],
+  "useNx": true,
   "version": "independent"
 }
