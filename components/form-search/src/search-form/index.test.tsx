@@ -2,9 +2,13 @@ import { IntlProvider } from "react-intl";
 import { cleanup, render } from "@testing-library/react";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { MemoryRouter } from "react-router-dom";
+import fetch from "node-fetch";
+
+import { LicenseProvider } from "@gemunion/provider-license";
 
 import { CommonSearchForm } from "./index";
 
+beforeAll(() => (window.fetch = window.fetch || fetch));
 afterEach(cleanup);
 
 const i18n = {
@@ -13,23 +17,29 @@ const i18n = {
   "form.hints.prompt": "Prompt",
 };
 
-describe.skip("<CommonSearchForm />", () => {
+describe("<CommonSearchForm />", () => {
   it("renders component", () => {
+    const container = document.createElement("div");
+    document.body.append(container);
+
     const formProps = {
-      onSubmit: jest.fn(),
+      onSubmit: () => Promise.resolve(),
       initialValues: {
         number: 50,
       },
     };
 
     const { asFragment } = render(
-      <MemoryRouter>
-        <ThemeProvider theme={createTheme()}>
-          <IntlProvider locale="en" messages={i18n}>
-            <CommonSearchForm {...formProps} />
-          </IntlProvider>
-        </ThemeProvider>
-      </MemoryRouter>,
+      <LicenseProvider licenseKey={process.env.STORYBOOK_GEMUNION_LICENSE}>
+        <MemoryRouter>
+          <ThemeProvider theme={createTheme()}>
+            <IntlProvider locale="en" messages={i18n}>
+              <CommonSearchForm {...formProps} />
+            </IntlProvider>
+          </ThemeProvider>
+        </MemoryRouter>
+      </LicenseProvider>,
+      { container },
     );
 
     expect(asFragment()).toMatchSnapshot();
