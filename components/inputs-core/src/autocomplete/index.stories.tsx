@@ -3,6 +3,8 @@ import { IntlProvider } from "react-intl";
 import { Story } from "@storybook/react";
 import { FormProvider, useForm } from "react-hook-form";
 
+import { TestIdProvider } from "@gemunion/provider-test-id";
+
 import { AutocompleteInput, IAutocompleteInputProps } from "./index";
 
 const i18n = {
@@ -15,11 +17,13 @@ export default {
   component: AutocompleteInput,
   decorators: [
     (Story: Story): ReactElement => (
-      <IntlProvider locale="en" messages={i18n}>
-        <FormProvider {...useForm({ defaultValues: { autocomplete: "sw" } })}>
-          <Story />
-        </FormProvider>
-      </IntlProvider>
+      <TestIdProvider testId="autocomplete">
+        <IntlProvider locale="en" messages={i18n}>
+          <FormProvider {...useForm({ defaultValues: { autocomplete: "sw" } })}>
+            <Story />
+          </FormProvider>
+        </IntlProvider>
+      </TestIdProvider>
     ),
   ],
 };

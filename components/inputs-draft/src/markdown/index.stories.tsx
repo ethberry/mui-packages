@@ -5,6 +5,8 @@ import { Story } from "@storybook/react";
 import { LicenseProvider } from "@gemunion/provider-license";
 import { markdownString } from "@gemunion/draft-js-utils";
 
+import { TestIdProvider } from "@gemunion/provider-test-id";
+
 import { IMarkdownInputProps, MarkdownInput } from "./index";
 
 const i18n = {
@@ -18,9 +20,11 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <LicenseProvider licenseKey={process.env.STORYBOOK_GEMUNION_LICENSE}>
-        <IntlProvider locale="en" messages={i18n}>
-          <Story />
-        </IntlProvider>
+        <TestIdProvider testId="markdown">
+          <IntlProvider locale="en" messages={i18n}>
+            <Story />
+          </IntlProvider>
+        </TestIdProvider>
       </LicenseProvider>
     ),
   ],
