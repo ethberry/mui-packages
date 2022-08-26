@@ -15,6 +15,7 @@
   },
   "description": "react widget",
   "devDependencies": {
+    "@gemunion/provider-test-id": "1.0.2",
     "@mui/material": "5.10.1",
     "@storybook/react": "6.5.10",
     "@types/react": "17.0.48",

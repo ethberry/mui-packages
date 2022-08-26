@@ -1,9 +1,7 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { Story } from "@storybook/react";
-import { BrowserRouter } from "react-router-dom";
 
-import { LicenseProvider } from "@gemunion/provider-license";
 import { TextInput } from "@gemunion/mui-inputs-core";
 
 import { FormDialog, IFormDialogProps } from "./index";
@@ -22,13 +20,9 @@ export default {
   component: FormDialog,
   decorators: [
     (Story: Story): ReactElement => (
-      <LicenseProvider licenseKey={process.env.STORYBOOK_GEMUNION_LICENSE}>
-        <BrowserRouter>
-          <IntlProvider locale="en" messages={i18n}>
-            <Story />
-          </IntlProvider>
-        </BrowserRouter>
-      </LicenseProvider>
+      <IntlProvider locale="en" messages={i18n}>
+        <Story />
+      </IntlProvider>
     ),
   ],
   argTypes: {

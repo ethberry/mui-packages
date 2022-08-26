@@ -3,8 +3,8 @@ import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 
-import { LicenseProvider } from "@gemunion/provider-license";
 import { emptyStateString } from "@gemunion/draft-js-utils";
+import { LicenseProvider } from "@gemunion/provider-license";
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
 import { IRichTextFieldProps, RichTextEditor } from "./index";
@@ -20,13 +20,13 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <LicenseProvider licenseKey={process.env.STORYBOOK_GEMUNION_LICENSE}>
-        <TestIdProvider testId="draft">
-          <IntlProvider locale="en" messages={i18n}>
+        <IntlProvider locale="en" messages={i18n}>
+          <TestIdProvider testId="draft">
             <FormProvider {...useForm({ defaultValues: { draft: emptyStateString } })}>
               <Story />
             </FormProvider>
-          </IntlProvider>
-        </TestIdProvider>
+          </TestIdProvider>
+        </IntlProvider>
       </LicenseProvider>
     ),
   ],

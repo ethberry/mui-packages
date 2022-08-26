@@ -1,7 +1,8 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { FormWrapper } from "@gemunion/mui-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
+
 import { LicenseProvider } from "@gemunion/provider-license";
 import { markdownString } from "@gemunion/draft-js-utils";
 
@@ -32,9 +33,9 @@ export default {
 
 const MarkdownTemplate: Story<IMarkdownInputProps> = args => {
   return (
-    <FormWrapper onSubmit={Promise.resolve} initialValues={{}}>
+    <FormProvider {...useForm({ defaultValues: {} })}>
       <MarkdownInput {...args} />
-    </FormWrapper>
+    </FormProvider>
   );
 };
 
@@ -45,9 +46,9 @@ Simple.args = {
 
 const MarkdownDefaultValueTemplate: Story<IMarkdownInputProps> = args => {
   return (
-    <FormWrapper onSubmit={Promise.resolve} initialValues={{ markdown: markdownString }}>
+    <FormProvider {...useForm({ defaultValues: { markdown: markdownString } })}>
       <MarkdownInput {...args} />
-    </FormWrapper>
+    </FormProvider>
   );
 };
 

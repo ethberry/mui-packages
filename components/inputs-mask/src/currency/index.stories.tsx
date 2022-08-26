@@ -4,6 +4,8 @@ import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 import { InputAdornment } from "@mui/material";
 
+import { TestIdProvider } from "@gemunion/provider-test-id";
+
 import { CurrencyInput, ICurrencyInputProps } from "./index";
 
 const i18n = {
@@ -17,9 +19,11 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <FormProvider {...useForm({ defaultValues: { currencyMask: 100 } })}>
-          <Story />
-        </FormProvider>
+        <TestIdProvider testId="currency">
+          <FormProvider {...useForm({ defaultValues: { currencyMask: 100 } })}>
+            <Story />
+          </FormProvider>
+        </TestIdProvider>
       </IntlProvider>
     ),
   ],
