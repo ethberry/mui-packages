@@ -8,6 +8,9 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "description": "react widget",
+  "dependencies": {
+    "@gemunion/provider-license": "1.0.31"
+  },
   "devDependencies": {
     "@mui/material": "5.10.1",
     "@storybook/react": "6.5.10",

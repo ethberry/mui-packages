@@ -11,6 +11,7 @@ import "firebaseui/dist/firebaseui.css";
 
 import firebase from "@gemunion/firebase";
 import { useApi } from "@gemunion/provider-api";
+import { useLicense } from "@gemunion/provider-license";
 import { useUser } from "@gemunion/provider-user";
 
 import { useStyles } from "./styles";
@@ -20,6 +21,8 @@ export const FirebaseLogin: FC = () => {
 
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
+
+  const license = useLicense();
 
   const [showMessage, setShowMessage] = useState<boolean>(false);
 
@@ -83,6 +86,10 @@ export const FirebaseLogin: FC = () => {
   useEffect(() => {
     return () => setShowMessage(false);
   }, []);
+
+  if (!license.isValid()) {
+    return null;
+  }
 
   return (
     <Grid container className={classes.section}>

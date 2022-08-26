@@ -4,9 +4,10 @@ import { ChangeEvent, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router";
 import { parse, stringify } from "qs";
 
-import { IIdBase, IPaginationResult, IPaginationDto } from "@gemunion/types-collection";
-import { ApiError, useApi } from "@gemunion/provider-api";
 import { defaultItemsPerPage } from "@gemunion/constants";
+import { ApiError, useApi } from "@gemunion/provider-api";
+import { useLicense } from "@gemunion/provider-license";
+import { IIdBase, IPaginationResult, IPaginationDto } from "@gemunion/types-collection";
 
 import { useDeepCompareEffect } from "./use-deep-compare-effect";
 import { decoder, deepEqual } from "./utils";
@@ -39,6 +40,8 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
   const { id } = embedded ? { id: "" } : useParams<{ id: string }>();
   const location = useLocation();
   const navigate = useNavigate();
+
+  const license = useLicense();
 
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
@@ -273,6 +276,10 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
   useDeepCompareEffect(() => {
     setSearch(getSearchParams(search));
   }, [location]);
+
+  if (!license.isValid()) {
+    return null;
+  }
 
   return {
     rows,

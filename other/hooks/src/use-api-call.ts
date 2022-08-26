@@ -4,12 +4,15 @@ import { useIntl } from "react-intl";
 import { UseFormReturn } from "react-hook-form";
 
 import { ApiError, IApiContext, useApi } from "@gemunion/provider-api";
+import { useLicense } from "@gemunion/provider-license";
 
 export const useApiCall = <T = any>(
   fn: (api: IApiContext, ...args: Array<any>) => Promise<T>,
   { success = true, error = true } = {},
 ) => {
   const api = useApi();
+
+  const license = useLicense();
 
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
@@ -45,6 +48,10 @@ export const useApiCall = <T = any>(
         setIsLoading(false);
       });
   };
+
+  if (!license.isValid()) {
+    return null;
+  }
 
   return { fn: wrapper, isLoading };
 };

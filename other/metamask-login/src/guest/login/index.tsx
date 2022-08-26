@@ -9,6 +9,7 @@ import { phrase } from "@gemunion/constants";
 import { IMetamaskDto } from "@gemunion/types-jwt";
 import { PageHeader } from "@gemunion/mui-page-layout";
 import { ApiError, IJwt, useApi } from "@gemunion/provider-api";
+import { useLicense } from "@gemunion/provider-license";
 import { IUser, useUser } from "@gemunion/provider-user";
 import { useWallet } from "@gemunion/provider-wallet";
 
@@ -16,6 +17,8 @@ import { useStyles } from "./styles";
 
 export const MetamaskLogin: FC = () => {
   const classes = useStyles();
+  const license = useLicense();
+
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
   const [data, setData] = useState<IMetamaskDto>({ nonce: "", signature: "", wallet: "" });
@@ -49,7 +52,7 @@ export const MetamaskLogin: FC = () => {
   };
 
   const handleConnect = (): void => {
-    openConnectWalletDialog();
+    void openConnectWalletDialog();
   };
 
   const handleLogin = (): Promise<any> | undefined => {
@@ -80,6 +83,10 @@ export const MetamaskLogin: FC = () => {
   useEffect(() => {
     setData({ nonce: v4(), signature: "", wallet: account || "" });
   }, [account]);
+
+  if (!license.isValid()) {
+    return null;
+  }
 
   return (
     <Grid container className={classes.section}>
