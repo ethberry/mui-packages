@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.24](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.23...@gemunion/react-hooks-eth@1.0.24) (2022-08-28)
+
+
+### Bug Fixes
+
+* add license validations ([f6c486b](https://github.com/gemunion/mui-packages/commit/f6c486b22ffae6a2cf5d28de2c8ac35dc104b665))
+* disable tests because of known bug and fix using metamask wallet ([de97544](https://github.com/gemunion/mui-packages/commit/de975442e11800eeab2b81b7b2e4ec58e1d495cf))
+* useApiCall, useCollection and hooks-eth in correct way ([24f149a](https://github.com/gemunion/mui-packages/commit/24f149a460e07c5f15a0154d11e3e46acf5ea7eb))
+* useApiCall, useCollection and hooks-eth in correct way ([eacb34e](https://github.com/gemunion/mui-packages/commit/eacb34ee9b138cd46719a8fba306b99c01270b18))
+* useApiCall, useCollection and hooks-eth in correct way ([1cae046](https://github.com/gemunion/mui-packages/commit/1cae046e2b21a74ddce9c214a9c43ca986f5ecfc))
+
+
+
+
+
 ## [1.0.23](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.22...@gemunion/react-hooks-eth@1.0.23) (2022-08-28)
 
 
