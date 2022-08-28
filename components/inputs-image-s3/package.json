@@ -19,6 +19,7 @@
   "devDependencies": {
     "@gemunion/mui-form": "6.0.25",
     "@gemunion/provider-api-jwt": "0.0.7",
+    "@gemunion/provider-test-id": "1.0.2",
     "@mui/icons-material": "5.8.4",
     "@mui/material": "5.10.1",
     "@mui/styles": "5.9.3",

@@ -1,10 +1,11 @@
 import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { FormWrapper } from "@gemunion/mui-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { SnackbarProvider } from "notistack";
 import { Story } from "@storybook/react";
 
 import { JwtApiProvider } from "@gemunion/provider-api-jwt";
+import { TestIdProvider } from "@gemunion/provider-test-id";
 
 import { AvatarInput, IAvatarInputProps } from "./index";
 
@@ -26,9 +27,11 @@ export default {
       <JwtApiProvider baseUrl={"http://localhost/"}>
         <IntlProvider locale="en" messages={i18n}>
           <SnackbarProvider>
-            <FormWrapper onSubmit={Promise.resolve} initialValues={{ avatar: "" }}>
-              <Story />
-            </FormWrapper>
+            <TestIdProvider testId="avatar">
+              <FormProvider {...useForm({ defaultValues: { avatar: "" } })}>
+                <Story />
+              </FormProvider>
+            </TestIdProvider>
           </SnackbarProvider>
         </IntlProvider>
       </JwtApiProvider>

@@ -1,12 +1,15 @@
+import { FC, ReactNode } from "react";
 import { IntlProvider } from "react-intl";
 import { cleanup, render } from "@testing-library/react";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { MemoryRouter } from "react-router-dom";
+import fetch from "node-fetch";
 
 import { LicenseProvider } from "@gemunion/provider-license";
 
 import { FormDialog } from "./";
 
+beforeAll(() => (window.fetch = window.fetch || fetch));
 afterEach(cleanup);
 
 const i18n = {
@@ -14,6 +17,20 @@ const i18n = {
   "form.buttons.cancel": "Cancel",
   "form.buttons.ok": "Ok",
   "form.hints.prompt": "Prompt",
+};
+
+const AllTheProviders: FC<{ children: ReactNode }> = ({ children }) => {
+  return (
+    <LicenseProvider licenseKey={process.env.STORYBOOK_GEMUNION_LICENSE}>
+      <MemoryRouter>
+        <ThemeProvider theme={createTheme()}>
+          <IntlProvider locale="en" messages={i18n}>
+            {children}
+          </IntlProvider>
+        </ThemeProvider>
+      </MemoryRouter>
+    </LicenseProvider>
+  );
 };
 
 describe("<FormDialog />", () => {
@@ -34,18 +51,7 @@ describe("<FormDialog />", () => {
       },
     };
 
-    const { asFragment } = render(
-      <LicenseProvider licenseKey={process.env.STORYBOOK_GEMUNION_LICENSE}>
-        <MemoryRouter>
-          <ThemeProvider theme={createTheme()}>
-            <IntlProvider locale="en" messages={i18n}>
-              <FormDialog {...props} />
-            </IntlProvider>
-          </ThemeProvider>
-        </MemoryRouter>
-      </LicenseProvider>,
-      { container },
-    );
+    const { asFragment } = render(<FormDialog {...props} />, { container, wrapper: AllTheProviders });
 
     expect(asFragment()).toMatchSnapshot();
   });
@@ -67,16 +73,7 @@ describe("<FormDialog />", () => {
       },
     };
 
-    const { asFragment } = render(
-      <MemoryRouter>
-        <ThemeProvider theme={createTheme()}>
-          <IntlProvider locale="en" messages={i18n}>
-            <FormDialog {...props} />
-          </IntlProvider>
-        </ThemeProvider>
-      </MemoryRouter>,
-      { container },
-    );
+    const { asFragment } = render(<FormDialog {...props} />, { container, wrapper: AllTheProviders });
 
     expect(asFragment()).toMatchSnapshot();
   });
