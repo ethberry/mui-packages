@@ -1,6 +1,7 @@
 import { PropsWithChildren, ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 
+import { useLicense } from "@gemunion/provider-license";
 import { useSettings } from "@gemunion/provider-settings";
 
 import { flattenMessages } from "./utils";
@@ -15,6 +16,11 @@ export const LocalizationProvider = <T extends string>(
 ): ReactElement | null => {
   const { children, i18n, defaultLanguage } = props;
   const settings = useSettings<T>();
+  const license = useLicense();
+
+  if (!license.isValid()) {
+    return null;
+  }
 
   return (
     <IntlProvider

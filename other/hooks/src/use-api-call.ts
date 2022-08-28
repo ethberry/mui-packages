@@ -3,7 +3,9 @@ import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { UseFormReturn } from "react-hook-form";
 
+import { downForMaintenance } from "@gemunion/license-messages";
 import { ApiError, IApiContext, useApi } from "@gemunion/provider-api";
+import { useLicense } from "@gemunion/provider-license";
 
 export const useApiCall = <T = any>(
   fn: (api: IApiContext, ...args: Array<any>) => Promise<T>,
@@ -11,11 +13,19 @@ export const useApiCall = <T = any>(
 ) => {
   const api = useApi();
 
+  const license = useLicense();
+
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
   const [isLoading, setIsLoading] = useState(false);
 
-  const wrapper = async (form?: UseFormReturn, ...args: Array<any>) => {
+  const wrapper = (form?: UseFormReturn, ...args: Array<any>) => {
+    if (!license.isValid()) {
+      enqueueSnackbar(downForMaintenance(), { variant: "error" });
+      // eslint-disable-next-line prefer-promise-reject-errors
+      return Promise.reject({ licensed: null });
+    }
+
     setIsLoading(true);
     return fn(api, ...args)
       .then((res: T) => {

@@ -10,6 +10,8 @@ import {
   DialogTitle,
 } from "@mui/material";
 
+import { useLicense } from "@gemunion/provider-license";
+
 export interface IConfirmationDialogProps extends DialogProps {
   onCancel: () => void;
   onConfirm: () => void;
@@ -29,6 +31,12 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
     maxWidth = "sm",
     ...rest
   } = props;
+
+  const license = useLicense();
+
+  if (!license.isValid()) {
+    return null;
+  }
 
   return (
     <Dialog

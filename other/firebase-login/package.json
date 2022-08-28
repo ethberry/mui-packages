@@ -10,6 +10,7 @@
   "dependencies": {
     "@gemunion/firebase": "1.1.25",
     "@mui/icons-material": "5.10.2",
+    "@gemunion/provider-license": "1.0.31",
     "firebaseui": "6.0.1"
   },
   "description": "react component",
@@ -37,6 +38,7 @@
     "@gemunion/provider-user": "^4.0.0",
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
+    "firebase": "^9.0.0",
     "notistack": "^2.0.0",
     "react": "^17.0.0",
     "react-intl": "^5.0.0 || ^6.0.0",

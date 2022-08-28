@@ -2,6 +2,8 @@ import { FC, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import { useSnackbar } from "notistack";
 
+import { useLicense } from "@gemunion/provider-license";
+
 import { ICoinGeckoCoinTicker, ICoinGeckoTickers } from "./interfaces";
 
 import { CoinGeckoContext } from "./context";
@@ -13,6 +15,7 @@ export interface ICoinGeckoProviderProps {
 
 export const CoinGeckoProvider: FC<ICoinGeckoProviderProps> = props => {
   const { children, defaultCurrency = "ethereum", defaultMarkets = ["binance"] } = props;
+  const license = useLicense();
   const { formatMessage } = useIntl();
   const { enqueueSnackbar } = useSnackbar();
 
@@ -54,6 +57,10 @@ export const CoinGeckoProvider: FC<ICoinGeckoProviderProps> = props => {
       clearInterval(interval);
     };
   }, []);
+
+  if (!license.isValid()) {
+    return null;
+  }
 
   return (
     <CoinGeckoContext.Provider

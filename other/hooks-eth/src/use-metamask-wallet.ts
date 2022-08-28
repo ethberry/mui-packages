@@ -3,6 +3,8 @@ import { useIntl } from "react-intl";
 import { utils } from "ethers";
 import { useWeb3React } from "@web3-react/core";
 
+import { downForMaintenance } from "@gemunion/license-messages";
+import { useLicense } from "@gemunion/provider-license";
 import { useWallet } from "@gemunion/provider-wallet";
 
 export type MetamaskOptionsParams = {
@@ -14,6 +16,8 @@ export const useMetamaskWallet = <T = any>(
   fn: (...args: Array<any>) => Promise<T>,
   options: MetamaskOptionsParams = {},
 ) => {
+  const license = useLicense();
+
   const web3ContextGlobal = useWeb3React();
   const { isActive } = web3ContextGlobal;
   const { openConnectWalletDialog, isDialogOpen, closeConnectWalletDialog } = useWallet();
@@ -23,6 +27,14 @@ export const useMetamaskWallet = <T = any>(
   const { success = true, error = true } = options;
 
   return async (...args: Array<any>): Promise<T> => {
+    if (!license.isValid()) {
+      // eslint-disable-next-line prefer-promise-reject-errors
+      return Promise.reject({ licensed: null }).catch(() => {
+        enqueueSnackbar(downForMaintenance(), { variant: "error" });
+        return null as unknown as T;
+      });
+    }
+
     let context = web3ContextGlobal;
     if (!isActive) {
       context = await openConnectWalletDialog();
