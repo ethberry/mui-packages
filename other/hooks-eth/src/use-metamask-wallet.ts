@@ -3,6 +3,7 @@ import { useIntl } from "react-intl";
 import { utils } from "ethers";
 import { useWeb3React } from "@web3-react/core";
 
+import { downForMaintenance } from "@gemunion/license-messages";
 import { useLicense } from "@gemunion/provider-license";
 import { useWallet } from "@gemunion/provider-wallet";
 
@@ -25,11 +26,11 @@ export const useMetamaskWallet = <T = any>(
   const { formatMessage } = useIntl();
   const { success = true, error = true } = options;
 
-  if (!license.isValid()) {
-    return null;
-  }
-
   return async (...args: Array<any>): Promise<T> => {
+    if (!license.isValid()) {
+      return Promise.reject(downForMaintenance());
+    }
+
     let context = web3ContextGlobal;
     if (!isActive) {
       context = await openConnectWalletDialog();

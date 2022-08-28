@@ -5,11 +5,13 @@ import { useLocation, useNavigate, useParams } from "react-router";
 import { parse, stringify } from "qs";
 
 import { defaultItemsPerPage } from "@gemunion/constants";
-import { ApiError, useApi } from "@gemunion/provider-api";
+import { downForMaintenance } from "@gemunion/license-messages";
+import { ApiError } from "@gemunion/provider-api";
 import { useLicense } from "@gemunion/provider-license";
 import { IIdBase, IPaginationResult, IPaginationDto } from "@gemunion/types-collection";
 
 import { useDeepCompareEffect } from "./use-deep-compare-effect";
+import { useApiCall } from "./use-api-call";
 import { decoder, deepEqual } from "./utils";
 
 export interface ICollectionHook<T, S> {
@@ -45,8 +47,6 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
 
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
-
-  const api = useApi();
 
   const [isLoading, setIsLoading] = useState(false);
   const [isFiltersOpen, setIsFilterOpen] = useState(false);
@@ -89,38 +89,44 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     });
   };
 
+  const { fn: fetchByQueryFn } = useApiCall(api => {
+    return api.fetchJson({
+      url: baseUrl,
+      data: search,
+    });
+  });
+
+  const { fn: fetchByIdFn } = useApiCall((api, id: string) => {
+    return api.fetchJson({
+      url: `${baseUrl}/${id}`,
+    });
+  });
+
   const fetchByQuery = async (): Promise<void> => {
-    return api
-      .fetchJson({
-        url: baseUrl,
-        data: search,
-      })
-      .then((json: IPaginationResult<T>) => {
-        setRows(json.rows);
-        setCount(json.count);
-        updateQS();
-      });
+    return fetchByQueryFn().then((json: IPaginationResult<T>) => {
+      setRows(json.rows);
+      setCount(json.count);
+      updateQS();
+    });
   };
 
   const fetchById = async (id: string): Promise<void> => {
-    return api
-      .fetchJson({
-        url: `${baseUrl}/${id}`,
-      })
-      .then((json: T) => {
-        setRows([json]);
-        setCount(1);
-        setSelected(json);
-        setIsEditDialogOpen(true);
-        setIsViewDialogOpen(true);
-      });
+    return fetchByIdFn(undefined, id).then((json: T) => {
+      setRows([json]);
+      setCount(1);
+      setSelected(json);
+      setIsEditDialogOpen(true);
+      setIsViewDialogOpen(true);
+    });
   };
 
   const fetch = async (id?: string): Promise<void> => {
     setIsLoading(true);
     return (id ? fetchById(id) : fetchByQuery())
       .catch((e: ApiError) => {
-        if (e.status) {
+        if (e.message === downForMaintenance()) {
+          enqueueSnackbar(downForMaintenance(), { variant: "error" });
+        } else if (e.status) {
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
         } else {
           console.error(e);
@@ -170,15 +176,18 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     updateQS();
   };
 
-  const handleEditConfirm = async (values: Partial<T>, form: any): Promise<void> => {
+  const { fn: handleEditConfirmFn } = useApiCall((api, values: Partial<T>) => {
     const { id } = values;
 
-    return api
-      .fetchJson({
-        url: id ? `${baseUrl}/${id}` : baseUrl,
-        method: id ? "PUT" : "POST",
-        data: filter(values),
-      })
+    return api.fetchJson({
+      url: id ? `${baseUrl}/${id}` : baseUrl,
+      method: id ? "PUT" : "POST",
+      data: filter(values),
+    });
+  });
+
+  const handleEditConfirm = async (values: Partial<T>, form: any): Promise<void> => {
+    return handleEditConfirmFn(form, values)
       .then(() => {
         enqueueSnackbar(formatMessage({ id: id ? "snackbar.updated" : "snackbar.created" }), { variant: "success" });
         setIsEditDialogOpen(false);
@@ -186,7 +195,9 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
         return fetch();
       })
       .catch((e: ApiError) => {
-        if (e.status === 400) {
+        if (e.message === downForMaintenance()) {
+          enqueueSnackbar(downForMaintenance(), { variant: "error" });
+        } else if (e.status === 400) {
           const errors = e.getLocalizedValidationErrors();
 
           Object.keys(errors).forEach(key => {
@@ -212,18 +223,23 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     setIsDeleteDialogOpen(false);
   };
 
+  const { fn: handleDeleteConfirmFn } = useApiCall((api, item: T) => {
+    return api.fetchJson({
+      url: `${baseUrl}/${item.id}`,
+      method: "DELETE",
+    });
+  });
+
   const handleDeleteConfirm = (item: T): Promise<void> => {
-    return api
-      .fetchJson({
-        url: `${baseUrl}/${item.id}`,
-        method: "DELETE",
-      })
+    return handleDeleteConfirmFn(undefined, item)
       .then(() => {
         enqueueSnackbar(formatMessage({ id: "snackbar.deleted" }), { variant: "success" });
         return fetch();
       })
       .catch((e: ApiError) => {
-        if (e.status) {
+        if (e.message === downForMaintenance()) {
+          enqueueSnackbar(downForMaintenance(), { variant: "error" });
+        } else if (e.status) {
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
         } else {
           console.error(e);
@@ -278,7 +294,8 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
   }, [location]);
 
   if (!license.isValid()) {
-    return null;
+    enqueueSnackbar(downForMaintenance(), { variant: "error" });
+    return {};
   }
 
   return {
