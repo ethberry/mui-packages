@@ -2,9 +2,7 @@
 
 exports[`<CommonSearchForm /> renders component 1`] = `
 <DocumentFragment>
-  <form
-    action="#"
-  >
+  <form>
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
     >
@@ -16,7 +14,7 @@ exports[`<CommonSearchForm /> renders component 1`] = `
         >
           <button
             aria-label="search"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium SearchInput-iconButton-3 css-1i8snpa-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium SearchInput-iconButton-3 css-78trlr-MuiButtonBase-root-MuiIconButton-root"
             tabindex="0"
             type="button"
           >

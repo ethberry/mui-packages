@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.30](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@7.0.29...@gemunion/mui-dialog-form@7.0.30) (2022-08-28)
+
+
+### Bug Fixes
+
+* tests and stories, still have some issues with passing form context to deep nested stories; and still have a issue with tests ([b20756f](https://github.com/gemunion/mui-packages/commit/b20756f7eeb0b3036b72a07778a858f67fd20a17))
+
+
+
+
+
 ## [7.0.29](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@7.0.28...@gemunion/mui-dialog-form@7.0.29) (2022-08-23)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form

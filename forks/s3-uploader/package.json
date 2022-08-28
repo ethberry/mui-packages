@@ -9,7 +9,7 @@
   "description": "AWS S3 uploader",
   "devDependencies": {
     "@babel/cli": "7.18.10",
-    "@babel/core": "7.18.10",
+    "@babel/core": "7.18.13",
     "@babel/eslint-parser": "7.18.9",
     "@babel/eslint-plugin": "7.18.10",
     "@babel/preset-env": "7.18.10",
@@ -46,5 +46,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "0.0.14"
+  "version": "0.0.15"
 }

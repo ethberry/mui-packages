@@ -3,6 +3,8 @@ import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 
+import { TestIdProvider } from "@gemunion/provider-test-id";
+
 import { ICheckboxInputProps, CheckboxInput } from "./index";
 
 const i18n = {
@@ -14,11 +16,13 @@ export default {
   component: CheckboxInput,
   decorators: [
     (Story: Story): ReactElement => (
-      <IntlProvider locale="en" messages={i18n}>
-        <FormProvider {...useForm({ defaultValues: { checkbox: false } })}>
-          <Story />
-        </FormProvider>
-      </IntlProvider>
+      <TestIdProvider testId="checkbox">
+        <IntlProvider locale="en" messages={i18n}>
+          <FormProvider {...useForm({ defaultValues: { checkbox: false } })}>
+            <Story />
+          </FormProvider>
+        </IntlProvider>
+      </TestIdProvider>
     ),
   ],
 };

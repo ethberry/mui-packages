@@ -4,6 +4,8 @@ import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 import { constants } from "ethers";
 
+import { TestIdProvider } from "@gemunion/provider-test-id";
+
 import { EthInput, IEthInputProps } from "./index";
 
 const i18n = {
@@ -17,9 +19,11 @@ export default {
   decorators: [
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
-        <FormProvider {...useForm({ defaultValues: { ethMask: constants.WeiPerEther.toString() } })}>
-          <Story />
-        </FormProvider>
+        <TestIdProvider testId="eth">
+          <FormProvider {...useForm({ defaultValues: { ethMask: constants.WeiPerEther.toString() } })}>
+            <Story />
+          </FormProvider>
+        </TestIdProvider>
       </IntlProvider>
     ),
   ],

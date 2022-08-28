@@ -2,9 +2,11 @@ import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
+import { TextFieldProps } from "@mui/material";
+
+import { TestIdProvider } from "@gemunion/provider-test-id";
 
 import { JsonInput } from "./index";
-import { TextFieldProps } from "@mui/material";
 
 const i18n = {
   "form.labels.json": "JSON",
@@ -18,19 +20,21 @@ export default {
   component: JsonInput,
   decorators: [
     (Story: Story): ReactElement => (
-      <IntlProvider locale="en" messages={i18n}>
-        <FormProvider
-          {...useForm({
-            defaultValues: {
-              json: JSON.stringify({
-                a: 1,
-              }),
-            },
-          })}
-        >
-          <Story />
-        </FormProvider>
-      </IntlProvider>
+      <TestIdProvider testId="json">
+        <IntlProvider locale="en" messages={i18n}>
+          <FormProvider
+            {...useForm({
+              defaultValues: {
+                json: JSON.stringify({
+                  a: 1,
+                }),
+              },
+            })}
+          >
+            <Story />
+          </FormProvider>
+        </IntlProvider>
+      </TestIdProvider>
     ),
   ],
 };

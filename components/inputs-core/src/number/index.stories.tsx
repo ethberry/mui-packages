@@ -3,6 +3,8 @@ import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 
+import { TestIdProvider } from "@gemunion/provider-test-id";
+
 import { INumberInputProps, NumberInput } from "./index";
 
 const i18n = {
@@ -15,11 +17,13 @@ export default {
   component: NumberInput,
   decorators: [
     (Story: Story): ReactElement => (
-      <IntlProvider locale="en" messages={i18n}>
-        <FormProvider {...useForm({ defaultValues: { number: 50 } })}>
-          <Story />
-        </FormProvider>
-      </IntlProvider>
+      <TestIdProvider testId="number">
+        <IntlProvider locale="en" messages={i18n}>
+          <FormProvider {...useForm({ defaultValues: { number: 50 } })}>
+            <Story />
+          </FormProvider>
+        </IntlProvider>
+      </TestIdProvider>
     ),
   ],
 };

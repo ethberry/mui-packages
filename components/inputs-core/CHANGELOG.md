@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.0.26 (2022-08-28)
+
+
+### Bug Fixes
+
+* autocomplete options by setting correct key value for multiple options with the same name ([d27b824](https://github.com/gemunion/mui-packages/commit/d27b8241425bdfca3ae7876dec44631c321dd8ba))
+* imports ([51f6bf7](https://github.com/gemunion/mui-packages/commit/51f6bf73022a78458b29a17876c7c88b561a80dc))
+* stories ([68d9eea](https://github.com/gemunion/mui-packages/commit/68d9eea0b3722264c9482558d996cbbacf85fb75))
+* tests ([7a1fcd0](https://github.com/gemunion/mui-packages/commit/7a1fcd008f9fc8788de846ddf3ffb8257e2a4540))
+
+
+
+
+
 ## [7.0.25](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.0.24...@gemunion/mui-inputs-core@7.0.25) (2022-08-22)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core

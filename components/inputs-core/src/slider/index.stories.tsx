@@ -3,6 +3,8 @@ import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
 import { Story } from "@storybook/react";
 
+import { TestIdProvider } from "@gemunion/provider-test-id";
+
 import { ISliderInputProps, SliderInput } from "./index";
 
 const i18n = {
@@ -14,11 +16,13 @@ export default {
   component: SliderInput,
   decorators: [
     (Story: Story): ReactElement => (
-      <IntlProvider locale="en" messages={i18n}>
-        <FormProvider {...useForm({ defaultValues: { slider: 250 } })}>
-          <Story />
-        </FormProvider>
-      </IntlProvider>
+      <TestIdProvider testId="slider">
+        <IntlProvider locale="en" messages={i18n}>
+          <FormProvider {...useForm({ defaultValues: { slider: 250 } })}>
+            <Story />
+          </FormProvider>
+        </IntlProvider>
+      </TestIdProvider>
     ),
   ],
 };

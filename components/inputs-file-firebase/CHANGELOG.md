@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.0.24 (2022-08-28)
+
+
+### Bug Fixes
+
+* implement error message for plain file input and fix other file and image inputs ([7cc4cf1](https://github.com/gemunion/mui-packages/commit/7cc4cf194c6e37749e05703d6e49ec15fdfbd7c2))
+* move firebase to dev dependencies ([ab07035](https://github.com/gemunion/mui-packages/commit/ab070351f114c6e67abde1571c6bcb4b8d0de21d))
+* move firebase to dev dependencies and remove unnecessary assertion ([9cf4ce2](https://github.com/gemunion/mui-packages/commit/9cf4ce26747bd031eee65a9908b934d207dda048))
+
+
+
+
+
 ## [6.0.23](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-firebase@6.0.22...@gemunion/mui-inputs-file-firebase@6.0.23) (2022-08-22)
 
 

@@ -4,6 +4,8 @@ import { FormProvider, useForm } from "react-hook-form";
 import { SnackbarProvider } from "notistack";
 import { Story } from "@storybook/react";
 
+import { TestIdProvider } from "@gemunion/provider-test-id";
+
 import { AvatarInput, IAvatarInputProps } from "./index";
 
 const i18n = {
@@ -23,9 +25,11 @@ export default {
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
         <SnackbarProvider>
-          <FormProvider {...useForm({ defaultValues: { avatar: "" } })}>
-            <Story />
-          </FormProvider>
+          <TestIdProvider testId="avatar">
+            <FormProvider {...useForm({ defaultValues: { avatar: "" } })}>
+              <Story />
+            </FormProvider>
+          </TestIdProvider>
         </SnackbarProvider>
       </IntlProvider>
     ),

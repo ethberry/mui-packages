@@ -4,6 +4,8 @@ import { FormProvider, useForm } from "react-hook-form";
 import { SnackbarProvider } from "notistack";
 import { Story } from "@storybook/react";
 
+import { TestIdProvider } from "@gemunion/provider-test-id";
+
 import { PhotoInput, IPhotoInputProps } from "./index";
 
 const i18n = {
@@ -25,9 +27,11 @@ export default {
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
         <SnackbarProvider>
-          <FormProvider {...useForm({ defaultValues: { photo: [] } })}>
-            <Story />
-          </FormProvider>
+          <TestIdProvider testId="photo">
+            <FormProvider {...useForm({ defaultValues: { photo: [] } })}>
+              <Story />
+            </FormProvider>
+          </TestIdProvider>
         </SnackbarProvider>
       </IntlProvider>
     ),
