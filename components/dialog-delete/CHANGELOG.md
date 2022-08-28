@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.18](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-delete@3.2.17...@gemunion/mui-dialog-delete@3.2.18) (2022-08-28)
+
+
+### Bug Fixes
+
+* disable tests because of known bug and fix using metamask wallet ([de97544](https://github.com/gemunion/mui-packages/commit/de975442e11800eeab2b81b7b2e4ec58e1d495cf))
+
+
+
+
+
 ## [3.2.17](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-delete@3.2.16...@gemunion/mui-dialog-delete@3.2.17) (2022-08-28)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-delete
