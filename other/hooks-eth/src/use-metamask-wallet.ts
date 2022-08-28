@@ -28,8 +28,7 @@ export const useMetamaskWallet = <T = any>(
 
   return async (...args: Array<any>): Promise<T> => {
     if (!license.isValid()) {
-      // eslint-disable-next-line prefer-promise-reject-errors
-      return Promise.reject({ licensed: null }).catch(() => {
+      return Promise.reject(downForMaintenance()).catch(() => {
         enqueueSnackbar(downForMaintenance(), { variant: "error" });
         return null as unknown as T;
       });

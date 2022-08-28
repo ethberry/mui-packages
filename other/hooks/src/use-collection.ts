@@ -8,8 +8,8 @@ import { defaultItemsPerPage } from "@gemunion/constants";
 import { ApiError } from "@gemunion/provider-api";
 import { IIdBase, IPaginationResult, IPaginationDto } from "@gemunion/types-collection";
 
-import { useDeepCompareEffect } from "./use-deep-compare-effect";
 import { useApiCall } from "./use-api-call";
+import { useDeepCompareEffect } from "./use-deep-compare-effect";
 import { decoder, deepEqual } from "./utils";
 
 export interface ICollectionHook<T, S> {
@@ -95,6 +95,14 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     { success: false, error: false },
   );
 
+  const fetchByQuery = async (): Promise<void> => {
+    return fetchByQueryFn().then((json: IPaginationResult<T>) => {
+      setRows(json.rows);
+      setCount(json.count);
+      updateQS();
+    });
+  };
+
   const { fn: fetchByIdFn } = useApiCall(
     (api, id: string) => {
       return api.fetchJson({
@@ -103,14 +111,6 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     },
     { success: false, error: false },
   );
-
-  const fetchByQuery = async (): Promise<void> => {
-    return fetchByQueryFn().then((json: IPaginationResult<T>) => {
-      setRows(json.rows);
-      setCount(json.count);
-      updateQS();
-    });
-  };
 
   const fetchById = async (id: string): Promise<void> => {
     return fetchByIdFn(undefined, id).then((json: T) => {
