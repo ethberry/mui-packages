@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.0.20 (2022-08-28)
+
+
+### Bug Fixes
+
+* autocomplete options by setting correct key value for multiple options with the same name ([d27b824](https://github.com/gemunion/mui-packages/commit/d27b8241425bdfca3ae7876dec44631c321dd8ba))
+* imports ([51f6bf7](https://github.com/gemunion/mui-packages/commit/51f6bf73022a78458b29a17876c7c88b561a80dc))
+* name to title ([7364d14](https://github.com/gemunion/mui-packages/commit/7364d14f1b503ceb1b97b8a84480a16ab889c967))
+
+
+
+
+
 ## 7.0.19 (2022-08-20)
 
 
