@@ -28,7 +28,11 @@ export const useMetamaskWallet = <T = any>(
 
   return async (...args: Array<any>): Promise<T> => {
     if (!license.isValid()) {
-      return Promise.reject(downForMaintenance());
+      // eslint-disable-next-line prefer-promise-reject-errors
+      return Promise.reject({ licensed: null }).catch(() => {
+        enqueueSnackbar(downForMaintenance(), { variant: "error" });
+        return null as unknown as T;
+      });
     }
 
     let context = web3ContextGlobal;

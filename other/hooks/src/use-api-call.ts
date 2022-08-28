@@ -22,7 +22,8 @@ export const useApiCall = <T = any>(
   const wrapper = (form?: UseFormReturn, ...args: Array<any>) => {
     if (!license.isValid()) {
       enqueueSnackbar(downForMaintenance(), { variant: "error" });
-      return Promise.reject(downForMaintenance());
+      // eslint-disable-next-line prefer-promise-reject-errors
+      return Promise.reject({ licensed: null });
     }
 
     setIsLoading(true);

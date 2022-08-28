@@ -5,9 +5,7 @@ import { useLocation, useNavigate, useParams } from "react-router";
 import { parse, stringify } from "qs";
 
 import { defaultItemsPerPage } from "@gemunion/constants";
-import { downForMaintenance } from "@gemunion/license-messages";
 import { ApiError } from "@gemunion/provider-api";
-import { useLicense } from "@gemunion/provider-license";
 import { IIdBase, IPaginationResult, IPaginationDto } from "@gemunion/types-collection";
 
 import { useDeepCompareEffect } from "./use-deep-compare-effect";
@@ -42,8 +40,6 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
   const { id } = embedded ? { id: "" } : useParams<{ id: string }>();
   const location = useLocation();
   const navigate = useNavigate();
-
-  const license = useLicense();
 
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
@@ -89,18 +85,24 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     });
   };
 
-  const { fn: fetchByQueryFn } = useApiCall(api => {
-    return api.fetchJson({
-      url: baseUrl,
-      data: search,
-    });
-  });
+  const { fn: fetchByQueryFn } = useApiCall(
+    api => {
+      return api.fetchJson({
+        url: baseUrl,
+        data: search,
+      });
+    },
+    { success: false, error: false },
+  );
 
-  const { fn: fetchByIdFn } = useApiCall((api, id: string) => {
-    return api.fetchJson({
-      url: `${baseUrl}/${id}`,
-    });
-  });
+  const { fn: fetchByIdFn } = useApiCall(
+    (api, id: string) => {
+      return api.fetchJson({
+        url: `${baseUrl}/${id}`,
+      });
+    },
+    { success: false, error: false },
+  );
 
   const fetchByQuery = async (): Promise<void> => {
     return fetchByQueryFn().then((json: IPaginationResult<T>) => {
@@ -124,9 +126,7 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     setIsLoading(true);
     return (id ? fetchById(id) : fetchByQuery())
       .catch((e: ApiError) => {
-        if (e.message === downForMaintenance()) {
-          enqueueSnackbar(downForMaintenance(), { variant: "error" });
-        } else if (e.status) {
+        if (e.status) {
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
         } else {
           console.error(e);
@@ -176,15 +176,18 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     updateQS();
   };
 
-  const { fn: handleEditConfirmFn } = useApiCall((api, values: Partial<T>) => {
-    const { id } = values;
+  const { fn: handleEditConfirmFn } = useApiCall(
+    (api, values: Partial<T>) => {
+      const { id } = values;
 
-    return api.fetchJson({
-      url: id ? `${baseUrl}/${id}` : baseUrl,
-      method: id ? "PUT" : "POST",
-      data: filter(values),
-    });
-  });
+      return api.fetchJson({
+        url: id ? `${baseUrl}/${id}` : baseUrl,
+        method: id ? "PUT" : "POST",
+        data: filter(values),
+      });
+    },
+    { success: false, error: false },
+  );
 
   const handleEditConfirm = async (values: Partial<T>, form: any): Promise<void> => {
     return handleEditConfirmFn(form, values)
@@ -195,9 +198,7 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
         return fetch();
       })
       .catch((e: ApiError) => {
-        if (e.message === downForMaintenance()) {
-          enqueueSnackbar(downForMaintenance(), { variant: "error" });
-        } else if (e.status === 400) {
+        if (e.status === 400) {
           const errors = e.getLocalizedValidationErrors();
 
           Object.keys(errors).forEach(key => {
@@ -223,12 +224,15 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     setIsDeleteDialogOpen(false);
   };
 
-  const { fn: handleDeleteConfirmFn } = useApiCall((api, item: T) => {
-    return api.fetchJson({
-      url: `${baseUrl}/${item.id}`,
-      method: "DELETE",
-    });
-  });
+  const { fn: handleDeleteConfirmFn } = useApiCall(
+    (api, item: T) => {
+      return api.fetchJson({
+        url: `${baseUrl}/${item.id}`,
+        method: "DELETE",
+      });
+    },
+    { success: false, error: false },
+  );
 
   const handleDeleteConfirm = (item: T): Promise<void> => {
     return handleDeleteConfirmFn(undefined, item)
@@ -237,9 +241,7 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
         return fetch();
       })
       .catch((e: ApiError) => {
-        if (e.message === downForMaintenance()) {
-          enqueueSnackbar(downForMaintenance(), { variant: "error" });
-        } else if (e.status) {
+        if (e.status) {
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
         } else {
           console.error(e);
@@ -292,11 +294,6 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
   useDeepCompareEffect(() => {
     setSearch(getSearchParams(search));
   }, [location]);
-
-  if (!license.isValid()) {
-    enqueueSnackbar(downForMaintenance(), { variant: "error" });
-    return {};
-  }
 
   return {
     rows,
