@@ -13,17 +13,18 @@ export const useApiCall = <T = any>(
 ) => {
   const api = useApi();
 
-  const license = useLicense();
+  const { isValid } = useLicense();
 
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
   const [isLoading, setIsLoading] = useState(false);
 
   const wrapper = (form?: UseFormReturn, ...args: Array<any>) => {
-    if (!license.isValid()) {
-      enqueueSnackbar(downForMaintenance(), { variant: "error" });
-      // eslint-disable-next-line prefer-promise-reject-errors
-      return Promise.reject({ licensed: null });
+    if (!isValid()) {
+      return Promise.reject(downForMaintenance()).catch(() => {
+        enqueueSnackbar(downForMaintenance(), { variant: "error" });
+        return null as unknown as T;
+      });
     }
 
     setIsLoading(true);
