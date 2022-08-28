@@ -13,14 +13,14 @@ export const useApiCall = <T = any>(
 ) => {
   const api = useApi();
 
-  const { isValid } = useLicense();
+  const license = useLicense();
 
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
   const [isLoading, setIsLoading] = useState(false);
 
   const wrapper = (form?: UseFormReturn, ...args: Array<any>) => {
-    if (!isValid()) {
+    if (!license.isValid()) {
       return Promise.reject(downForMaintenance()).catch(() => {
         enqueueSnackbar(downForMaintenance(), { variant: "error" });
         return null as unknown as T;
