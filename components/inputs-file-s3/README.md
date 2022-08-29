@@ -1,1 +1,1 @@
-# material-ui-inputs-file-s3
+# mui-inputs-file-s3

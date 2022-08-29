@@ -1,1 +1,1 @@
-# material-ui-inputs-file
+# mui-inputs-file

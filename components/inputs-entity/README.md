@@ -1,1 +1,1 @@
-# material-ui-inputs-entity
+# mui-inputs-entity

@@ -1,1 +1,1 @@
-# material-ui-dialog-confirmation
+# mui-dialog-confirmation
