@@ -39,7 +39,8 @@ export const CoinGeckoProvider: FC<ICoinGeckoProviderProps> = props => {
   };
 
   const getPriceByTickerName = (target: string) => {
-    return tickers.find(ticker => ticker.target === target)?.last.toFixed(2);
+    const { last = 0 } = Object(tickers.find(ticker => ticker.target === target));
+    return Math.trunc(last * 100) / 100;
   };
 
   useEffect(() => {
