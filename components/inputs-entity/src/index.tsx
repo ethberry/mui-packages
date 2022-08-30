@@ -128,6 +128,13 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                   })
                 }
                 getOptionLabel={(option: IAutocompleteOption) => (getTitle ? getTitle(option) : option.title)}
+                renderOption={(props: HTMLAttributes<HTMLLIElement>, option: IAutocompleteOption) => {
+                  return (
+                    <li {...props} key={option.id}>
+                      {option.title}
+                    </li>
+                  );
+                }}
                 renderInput={(params: AutocompleteRenderInputParams): ReactElement => (
                   <TextField
                     {...field}
@@ -166,13 +173,6 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                   })
                 }
                 getOptionLabel={(option: IAutocompleteOption): string => (getTitle ? getTitle(option) : option.title)}
-                renderOption={(props: HTMLAttributes<HTMLLIElement>, option: IAutocompleteOption) => {
-                  return (
-                    <li {...props} key={option.id}>
-                      {option.title}
-                    </li>
-                  );
-                }}
                 renderInput={(params: AutocompleteRenderInputParams): ReactElement => (
                   <TextField
                     {...field}
