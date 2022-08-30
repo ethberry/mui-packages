@@ -6,7 +6,7 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "jsx": "react-jsx",
-    "lib": ["dom", "es2020.Promise"],
+    "lib": ["dom", "es2021"],
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,

@@ -1,14 +1,5 @@
 import { FC, ReactElement, useState } from "react";
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  FormControl,
-  Grid,
-  InputLabel,
-} from "@mui/material";
+import { Button, Card, CardActions, CardContent, CardMedia, FormControl, Grid, InputLabel } from "@mui/material";
 import { get, useFormContext, useWatch } from "react-hook-form";
 import { FormattedMessage } from "react-intl";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
