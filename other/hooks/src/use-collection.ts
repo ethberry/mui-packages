@@ -127,7 +127,13 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     return (id ? fetchById(id) : fetchByQuery())
       .catch((e: ApiError) => {
         if (e.status) {
-          enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
+          const errors = e.getLocalizedValidationErrors();
+
+          Object.keys(errors).forEach((key: string) => {
+            const label = formatMessage({ id: `form.labels.${key.split(".").pop() as string}` });
+            const message = formatMessage({ id: errors[key] }, { label });
+            enqueueSnackbar(message, { variant: "error" });
+          });
         } else {
           console.error(e);
           enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });

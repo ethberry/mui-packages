@@ -21,8 +21,8 @@ export const useApiCall = <T = any>(
 
   const wrapper = (form?: UseFormReturn, ...args: Array<any>) => {
     if (!license.isValid()) {
-      return Promise.reject(downForMaintenance()).catch(() => {
-        enqueueSnackbar(downForMaintenance(), { variant: "error" });
+      return Promise.reject(downForMaintenance()).catch((e: string) => {
+        enqueueSnackbar(e, { variant: "error" });
         return null as unknown as T;
       });
     }

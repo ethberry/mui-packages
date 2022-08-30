@@ -56,7 +56,7 @@
     "url": "https://github.com/gemunion/mui-packages"
   },
   "scripts": {
-    "bootstrap": "npm run bootstrap:ignore && nx run-many --target=build",
+    "bootstrap": "npm run bootstrap:ignore && npm run build",
     "bootstrap:ignore": "lerna bootstrap --hoist --ignore-scripts",
     "build": "lerna run build --stream",
     "clean": "sh scripts/clean.sh",
