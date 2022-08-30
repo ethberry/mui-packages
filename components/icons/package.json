@@ -9,6 +9,7 @@
   },
   "description": "react icons",
   "devDependencies": {
+    "@storybook/react": "6.5.10",
     "@mui/material": "5.10.2",
     "@types/react": "17.0.48",
     "react": "17.0.2"
