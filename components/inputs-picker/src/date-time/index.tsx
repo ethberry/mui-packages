@@ -18,7 +18,7 @@ interface IDateTimeInputProps {
 }
 
 export const DateTimeInput: FC<IDateTimeInputProps> = props => {
-  const { name, label, variant = "standard", ...rest } = props;
+  const { name, label, variant = "standard", readOnly, ...rest } = props;
   const classes = useStyles();
 
   const { testId } = useTestId();
@@ -68,6 +68,7 @@ export const DateTimeInput: FC<IDateTimeInputProps> = props => {
               helperText={localizedHelperText}
               error={!!error}
               inputProps={{
+                readOnly,
                 ...props.inputProps,
                 ...testIdProps,
               }}

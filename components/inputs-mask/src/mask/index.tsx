@@ -33,10 +33,10 @@ export const MaskedInput: FC<IMaskedInputProps> = props => {
       onChange={() => {}}
       InputProps={{
         ...InputProps,
-        readOnly,
         inputComponent: MaskedInputWrapper as any,
         inputProps: {
           formatValue,
+          readOnly,
           ...rest,
         },
       }}

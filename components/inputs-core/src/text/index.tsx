@@ -78,9 +78,9 @@ export const TextInput: FC<ITextInputProps> = props => {
             fullWidth
             InputProps={{
               ...InputProps,
-              readOnly,
             }}
             inputProps={{
+              readOnly,
               ...inputProps,
               ...testIdProps,
             }}
