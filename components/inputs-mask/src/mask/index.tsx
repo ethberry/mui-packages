@@ -9,6 +9,7 @@ export interface IMaskedInputProps {
   isNumericString?: boolean;
   prefix?: string;
   decimalSeparator?: string;
+  decimalScale?: number;
   allowNegative?: boolean;
   allowLeadingZeros?: boolean;
   readOnly?: boolean;
