@@ -17,7 +17,7 @@ interface IDateTimeInputProps {
 }
 
 export const DateRangeInput: FC<IDateTimeInputProps> = props => {
-  const { name, variant = "standard", ...rest } = props;
+  const { name, variant = "standard", readOnly, ...rest } = props;
   const classes = useStyles();
 
   const { testId } = useTestId();
@@ -57,6 +57,7 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
                   helperText={localizedHelperTextStart}
                   error={!!errorStart}
                   inputProps={{
+                    readOnly,
                     ...startProps.inputProps,
                     ...getTestIdProps("Start"),
                   }}
@@ -71,6 +72,7 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
                   helperText={localizedHelperTextEnd}
                   error={!!errorEnd}
                   inputProps={{
+                    readOnly,
                     ...endProps.inputProps,
                     ...getTestIdProps("End"),
                   }}

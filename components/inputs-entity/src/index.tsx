@@ -55,13 +55,12 @@ export const EntityInput: FC<IEntityInputProps> = props => {
 
   const form = useFormContext<any>();
   const error = get(form.formState.errors, name);
-  const touched = get(form.formState.touchedFields, name);
   const value = useWatch({ name });
 
   const { formatMessage } = useIntl();
   const localizedLabel = label ?? formatMessage({ id: `form.labels.${suffix}` });
   const localizedPlaceholder = placeholder ?? formatMessage({ id: `form.placeholders.${suffix}` });
-  const localizedHelperText = error && touched ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
+  const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   const [isLoading, setIsLoading] = useState(false);
   const [options, setOptions] = useState<Array<IAutocompleteOption>>([]);
@@ -124,7 +123,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                   onChange ||
                   ((_event: ChangeEvent<unknown>, options: Array<IAutocompleteOption> | null): void => {
                     const value = options ? options.map((option: IAutocompleteOption) => option.id) : [];
-                    form.setValue(name, value, { shouldTouch: true });
+                    form.setValue(name, value);
                   })
                 }
                 getOptionLabel={(option: IAutocompleteOption) => (getTitle ? getTitle(option) : option.title)}
@@ -139,8 +138,8 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                   <TextField
                     {...field}
                     {...params}
-                    inputProps={{ ...params.inputProps, ...testIdProps }}
-                    InputProps={{ ...params.InputProps, readOnly }}
+                    inputProps={{ ...params.inputProps, readOnly, ...testIdProps }}
+                    InputProps={{ ...params.InputProps }}
                     label={localizedLabel}
                     placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}
                     error={!!error}
@@ -168,8 +167,8 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                 onChange={
                   onChange ||
                   ((_event: ChangeEvent<unknown>, option: IAutocompleteOption | null): void => {
-                    const value = option ? option.id : null;
-                    form.setValue(name, value, { shouldTouch: true });
+                    const value = option ? option.id : 0;
+                    form.setValue(name, value);
                   })
                 }
                 getOptionLabel={(option: IAutocompleteOption): string => (getTitle ? getTitle(option) : option.title)}
@@ -177,11 +176,11 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                   <TextField
                     {...field}
                     {...params}
-                    inputProps={{ ...params.inputProps, ...testIdProps }}
-                    InputProps={{ ...params.InputProps, readOnly }}
+                    inputProps={{ ...params.inputProps, readOnly, ...testIdProps }}
+                    InputProps={{ ...params.InputProps }}
                     label={localizedLabel}
                     placeholder={localizedPlaceholder}
-                    error={error && touched}
+                    error={!!error}
                     helperText={localizedHelperText}
                     variant={variant}
                     fullWidth

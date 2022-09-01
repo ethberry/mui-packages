@@ -19,7 +19,7 @@ interface IDateUtcInputProps {
 }
 
 export const DateUtcInput: FC<IDateUtcInputProps> = props => {
-  const { name, label, variant = "standard", ...rest } = props;
+  const { name, label, variant = "standard", readOnly, ...rest } = props;
   const classes = useStyles();
 
   const { testId } = useTestId();
@@ -68,6 +68,7 @@ export const DateUtcInput: FC<IDateUtcInputProps> = props => {
               helperText={localizedHelperText}
               error={!!error}
               inputProps={{
+                readOnly,
                 ...props.inputProps,
                 ...testIdProps,
               }}
