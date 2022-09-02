@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.20](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.0.19...@gemunion/react-hooks@1.0.20) (2022-09-02)
+
+
+### Bug Fixes
+
+* error logic for non-valid license in use-metamask-wallet and use-api-call; fix renderOption in multiple EntityInput; parsing errors in use-collection; nx run-many change to lerna build ([32b9f8c](https://github.com/gemunion/mui-packages/commit/32b9f8c29c89aa05a2511bf26a062746f74774fd))
+
+
+
+
+
 ## [1.0.19](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.0.18...@gemunion/react-hooks@1.0.19) (2022-08-28)
 
 

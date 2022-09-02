@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.2.17 (2022-09-02)
+
+
+### Bug Fixes
+
+* readOnly prop in inputProps; fix mask set value; fix showing error and set default value to 0 after clearing value ([2e2b6ec](https://github.com/gemunion/mui-packages/commit/2e2b6ecd27d3b5dd3c7633c5c1eca0a7f95440d4))
+
+
+
+
+
 ## 5.2.16 (2022-08-28)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-picker

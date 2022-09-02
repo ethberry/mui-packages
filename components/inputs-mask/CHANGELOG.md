@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.3.21](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.3.20...@gemunion/mui-inputs-mask@5.3.21) (2022-09-02)
+
+
+### Bug Fixes
+
+* currency input by calculating float numbers with mathjs ([f12122a](https://github.com/gemunion/mui-packages/commit/f12122a7417689eb236f71aeac0e3c08e5864940))
+* readOnly prop in inputProps; fix mask set value; fix showing error and set default value to 0 after clearing value ([2e2b6ec](https://github.com/gemunion/mui-packages/commit/2e2b6ecd27d3b5dd3c7633c5c1eca0a7f95440d4))
+
+
+
+
+
 ## [5.3.20](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.3.19...@gemunion/mui-inputs-mask@5.3.20) (2022-08-28)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask

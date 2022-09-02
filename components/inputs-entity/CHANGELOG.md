@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.0.22...@gemunion/mui-inputs-entity@7.1.0) (2022-09-02)
+
+
+### Bug Fixes
+
+* error logic for non-valid license in use-metamask-wallet and use-api-call; fix renderOption in multiple EntityInput; parsing errors in use-collection; nx run-many change to lerna build ([32b9f8c](https://github.com/gemunion/mui-packages/commit/32b9f8c29c89aa05a2511bf26a062746f74774fd))
+* readOnly prop in inputProps; fix mask set value; fix showing error and set default value to 0 after clearing value ([2e2b6ec](https://github.com/gemunion/mui-packages/commit/2e2b6ecd27d3b5dd3c7633c5c1eca0a7f95440d4))
+
+
+### Features
+
+* add autocomplete clear reason ([c18e5f3](https://github.com/gemunion/mui-packages/commit/c18e5f310da3f5f912d5c6a5c133d84dd707bf8e))
+
+
+
+
+
 ## [7.0.22](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.0.21...@gemunion/mui-inputs-entity@7.0.22) (2022-08-28)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-entity
