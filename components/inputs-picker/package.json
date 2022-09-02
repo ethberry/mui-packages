@@ -13,10 +13,10 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.10.2",
-    "@mui/styles": "5.10.2",
-    "@mui/x-date-pickers": "5.0.0-beta.7",
-    "@mui/x-date-pickers-pro": "5.0.0-beta.7",
+    "@mui/material": "5.10.3",
+    "@mui/styles": "5.10.3",
+    "@mui/x-date-pickers": "5.0.0",
+    "@mui/x-date-pickers-pro": "5.0.0",
     "@types/react": "17.0.48",
     "react": "17.0.2",
     "react-hook-form": "7.34.2",
@@ -32,8 +32,8 @@
   "peerDependencies": {
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
-    "@mui/x-date-pickers": "5.0.0-beta.7",
-    "@mui/x-date-pickers-pro": "5.0.0-beta.7",
+    "@mui/x-date-pickers": "5.0.0",
+    "@mui/x-date-pickers-pro": "5.0.0",
     "react": "^17.0.0",
     "react-hook-form": "^7.0.0",
     "react-intl": "^5.0.0 || ^6.0.0"
