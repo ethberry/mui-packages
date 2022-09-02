@@ -40,6 +40,9 @@ jobs:
       - name: Bootstrap Packages
         run: npm run bootstrap
 
+      - name: Bootstrap Packages
+        run: npm run build
+
       - name: Obfuscate
         run: npm run obfuscate
 
