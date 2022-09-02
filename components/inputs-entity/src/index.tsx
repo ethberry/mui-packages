@@ -28,7 +28,11 @@ export interface IEntityInputProps {
   getTitle?: (item: any) => string;
   data?: Record<string, any>;
   variant?: "standard" | "filled" | "outlined";
-  onChange?: (event: ChangeEvent<unknown>, options: Array<IAutocompleteOption> | IAutocompleteOption | null) => void;
+  onChange?: (
+    event: ChangeEvent<unknown>,
+    options: Array<IAutocompleteOption> | IAutocompleteOption | null,
+    reason: string,
+  ) => void;
 }
 
 export const EntityInput: FC<IEntityInputProps> = props => {
