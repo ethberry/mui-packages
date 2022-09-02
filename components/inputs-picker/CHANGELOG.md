@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.2.18](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@5.2.17...@gemunion/mui-inputs-picker@5.2.18) (2022-09-02)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-picker
+
+
+
+
+
 ## 5.2.17 (2022-09-02)
 
 
