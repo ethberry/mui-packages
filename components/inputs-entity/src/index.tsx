@@ -24,15 +24,12 @@ export interface IEntityInputProps {
   controller: string;
   disabled?: boolean;
   readOnly?: boolean;
+  disableClear?: boolean;
   multiple?: boolean;
   getTitle?: (item: any) => string;
   data?: Record<string, any>;
   variant?: "standard" | "filled" | "outlined";
-  onChange?: (
-    event: ChangeEvent<unknown>,
-    options: Array<IAutocompleteOption> | IAutocompleteOption | null,
-    reason: string,
-  ) => void;
+  onChange?: (event: ChangeEvent<unknown>, options: Array<IAutocompleteOption> | IAutocompleteOption | null) => void;
 }
 
 export const EntityInput: FC<IEntityInputProps> = props => {
@@ -48,6 +45,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
     placeholder,
     disabled,
     readOnly,
+    disableClear,
   } = props;
   const suffix = name.split(".").pop() as string;
   const classes = useStyles();
@@ -113,7 +111,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                 open={open}
                 onOpen={() => !readOnly && setOpen(true)}
                 onClose={() => setOpen(false)}
-                disableClearable={readOnly}
+                disableClearable={disableClear}
                 classes={classes}
                 multiple={true}
                 disabled={disabled}
@@ -162,7 +160,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                 open={open}
                 onOpen={() => !readOnly && setOpen(true)}
                 onClose={() => setOpen(false)}
-                disableClearable={readOnly}
+                disableClearable={disableClear}
                 classes={classes}
                 multiple={false}
                 disabled={disabled}
