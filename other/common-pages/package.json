@@ -27,7 +27,7 @@
     "@mui/material": "5.10.3",
     "@mui/styles": "5.10.3",
     "@types/node": "16.11.56",
-    "@types/react": "17.0.48",
+    "@types/react": "17.0.49",
     "@types/yup": "0.29.14",
     "notistack": "2.0.5",
     "react": "17.0.2",
