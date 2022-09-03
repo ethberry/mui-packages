@@ -9,14 +9,14 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.8.4",
-    "@gemunion/license-messages": "0.0.33",
-    "@gemunion/provider-license": "1.0.31",
+    "@gemunion/license-messages": "0.0.34",
+    "@gemunion/provider-license": "1.0.33",
     "@gemunion/types-collection": "1.5.0",
     "qs": "6.11.0"
   },
   "description": "react hooks",
   "devDependencies": {
-    "@gemunion/provider-api": "6.0.5",
+    "@gemunion/provider-api": "6.0.6",
     "notistack": "2.0.5",
     "react": "17.0.2",
     "react-hook-form": "7.34.2",
