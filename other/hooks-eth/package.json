@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/license-messages": "0.0.34",
-    "@gemunion/provider-api": "6.0.6",
+    "@gemunion/provider-api": "6.0.7",
     "@gemunion/provider-license": "1.0.33",
     "ethers": "5.7.0",
     "qs": "6.11.0",
