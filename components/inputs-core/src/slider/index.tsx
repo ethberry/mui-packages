@@ -25,11 +25,10 @@ export const SliderInput: FC<ISliderInputProps> = props => {
   const value = useWatch({ name });
 
   const error = get(form.formState.errors, name);
-  const touched = get(form.formState.touchedFields, name);
 
   const { formatMessage } = useIntl();
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
-  const localizedHelperText = error && touched ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
+  const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   return (
     <Controller
