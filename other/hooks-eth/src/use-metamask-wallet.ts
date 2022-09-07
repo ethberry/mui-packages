@@ -50,6 +50,10 @@ export const useMetamaskWallet = <T = any>(
           if (e.code === 4001) {
             enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
             return null;
+          } else if (e.code === -32603) {
+            enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
+            console.error("[blockchain error]", e.message);
+            return null;
           } else if (e.error?.data?.data) {
             enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
             const data = e.error?.data?.data as string;

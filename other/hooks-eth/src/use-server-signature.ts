@@ -19,7 +19,7 @@ export const useServerSignature = (
   return async (params: IFetchProps, values: Record<string, any> | null, web3Context: Web3ContextType) => {
     return api
       .fetchJson(params)
-      .then((sign: IServerSignature) => fn(values || params.data, web3Context, sign))
+      .then((sign: IServerSignature) => fn(values, web3Context, sign))
       .catch((e: any) => {
         if (error && e.status === 400) {
           console.error(e.getLocalizedValidationErrors());

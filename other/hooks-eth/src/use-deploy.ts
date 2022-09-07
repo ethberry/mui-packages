@@ -19,7 +19,7 @@ export const useDeploy = (
 
   const fnWithSignature = useServerSignature(deploy, { error: false });
   const deployFn = useMetamask((params: IFetchProps, web3Context: Web3ContextType) => {
-    return fnWithSignature(params, null, web3Context);
+    return fnWithSignature(params, params.data!, web3Context);
   });
 
   const handleDeploy = (): void => {
