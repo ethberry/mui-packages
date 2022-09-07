@@ -1,9 +1,9 @@
-import { MetamaskOptionsParams } from "./use-metamask";
+import { IHandlerOptionsParams } from "./interfaces";
 import { useMetamaskWallet } from "./use-metamask-wallet";
 
 export const useMetamaskValue = <T = any>(
   fn: (...args: Array<any>) => Promise<T>,
-  options: MetamaskOptionsParams = {},
+  options: IHandlerOptionsParams = {},
 ) => {
   const metaFn = useMetamaskWallet(fn, options);
 

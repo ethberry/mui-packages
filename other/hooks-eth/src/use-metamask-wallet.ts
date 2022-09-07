@@ -7,14 +7,11 @@ import { downForMaintenance } from "@gemunion/license-messages";
 import { useLicense } from "@gemunion/provider-license";
 import { useWallet } from "@gemunion/provider-wallet";
 
-export type MetamaskOptionsParams = {
-  success?: boolean;
-  error?: boolean;
-};
+import { IHandlerOptionsParams } from "./interfaces";
 
 export const useMetamaskWallet = <T = any>(
   fn: (...args: Array<any>) => Promise<T>,
-  options: MetamaskOptionsParams = {},
+  options: IHandlerOptionsParams = {},
 ) => {
   const license = useLicense();
 
@@ -52,13 +49,18 @@ export const useMetamaskWallet = <T = any>(
         if (error) {
           if (e.code === 4001) {
             enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
+            return null;
+          } else if (e.code === -32603) {
+            enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
+            console.error("[blockchain error]", e.message);
+            return null;
           } else if (e.error?.data?.data) {
             enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
             const data = e.error?.data?.data as string;
             const decodedMessage = utils.toUtf8String(`0x${data.substr(138)}`);
             console.error("[blockchain error]", decodedMessage);
+            return null;
           }
-          return null;
         }
 
         throw e;

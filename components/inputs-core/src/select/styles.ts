@@ -6,6 +6,10 @@ export const useStyles = makeStyles<Theme>(
     root: {
       marginTop: theme.spacing(1),
       marginBottom: theme.spacing(1),
+
+      "& .MuiFormHelperText-root": {
+        marginLeft: 0,
+      },
     },
   }),
   { name: "SelectInput" },
