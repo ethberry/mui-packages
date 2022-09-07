@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.28](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.27...@gemunion/react-hooks-eth@1.0.28) (2022-09-07)
+
+
+### Bug Fixes
+
+* catching error in signature and small refactoring; fix select-input styles; remove old test-id from devDeps ([47ae1ce](https://github.com/gemunion/mui-packages/commit/47ae1ce0658c8e7d837480fc96ead015a0b1fe38))
+* story and add error setter for select; fix use deploy passing values ([250a58c](https://github.com/gemunion/mui-packages/commit/250a58cd81c474607bc6c36ea8e67d86b8dc8240))
+
+
+
+
+
 ## [1.0.27](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.26...@gemunion/react-hooks-eth@1.0.27) (2022-09-03)
 
 

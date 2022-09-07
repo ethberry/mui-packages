@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.3.24](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.3.23...@gemunion/mui-inputs-mask@5.3.24) (2022-09-07)
+
+
+### Bug Fixes
+
+* catching error in signature and small refactoring; fix select-input styles; remove old test-id from devDeps ([47ae1ce](https://github.com/gemunion/mui-packages/commit/47ae1ce0658c8e7d837480fc96ead015a0b1fe38))
+
+
+
+
+
 ## [5.3.23](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.3.22...@gemunion/mui-inputs-mask@5.3.23) (2022-09-03)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
