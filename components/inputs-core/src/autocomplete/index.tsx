@@ -92,6 +92,13 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
                 form.setValue(name, newValue, { shouldTouch: true });
               }}
               getOptionLabel={(option: IAutocompleteOptions): string => option.value}
+              renderOption={(props: HTMLAttributes<HTMLLIElement>, option: IAutocompleteOptions) => {
+                return (
+                  <li {...props} key={option.key}>
+                    {option.value}
+                  </li>
+                );
+              }}
               renderInput={(params: AutocompleteRenderInputParams): ReactElement => (
                 <TextField
                   {...field}
