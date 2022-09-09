@@ -23,8 +23,8 @@
     "@types/react": "17.0.49",
     "notistack": "2.0.5",
     "react": "17.0.2",
-    "react-hook-form": "7.34.2",
-    "react-intl": "6.1.0"
+    "react-hook-form": "7.35.0",
+    "react-intl": "6.1.1"
   },
   "engines": {
     "node": ">=12.13"
