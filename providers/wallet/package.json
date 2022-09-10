@@ -17,7 +17,7 @@
     "@web3-react/types": "8.0.20-beta.0",
     "@web3-react/url": "8.0.25-beta.0",
     "@web3-react/walletconnect": "8.0.35-beta.0",
-    "uuid": "8.3.2"
+    "uuid": "9.0.0"
   },
   "description": "react wallet provider",
   "devDependencies": {
@@ -55,7 +55,7 @@
     "notistack": "^2.0.0",
     "react": "^17.0.0",
     "react-intl": "^5.0.0 || ^6.0.0",
-    "uuid": "8.3.2"
+    "uuid": "9.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
