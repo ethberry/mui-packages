@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.33](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.0.32...@gemunion/mui-inputs-core@7.0.33) (2022-09-10)
+
+
+### Bug Fixes
+
+* bugs with non unique keys in EntityInput and Autocomplete ([a575841](https://github.com/gemunion/mui-packages/commit/a5758414954e39b478eaa11918b1d972f9b6b1dc))
+
+
+
+
+
 ## [7.0.32](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.0.31...@gemunion/mui-inputs-core@7.0.32) (2022-09-07)
 
 
