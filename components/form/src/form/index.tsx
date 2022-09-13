@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { Box } from "@mui/material";
 
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
 import { useLicense } from "@gemunion/provider-license";
@@ -77,20 +78,22 @@ export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
 
   return (
     <TestIdProvider testId={testId}>
-      <FormProvider {...form}>
-        <form onSubmit={form.handleSubmit(handleSubmit)} className={className} ref={innerRef} {...testIdProps}>
-          <PromptIfDirty visible={showPrompt} />
+      <Box sx={{ mb: 2 }}>
+        <FormProvider {...form}>
+          <form onSubmit={form.handleSubmit(handleSubmit)} className={className} ref={innerRef} {...testIdProps}>
+            <PromptIfDirty visible={showPrompt} />
 
-          {children}
+            {children}
 
-          <FormButtons
-            ref={formSubmitButtonRef}
-            visible={showButtons}
-            submit={submit}
-            handleSubmit={form.handleSubmit(handleSubmit)}
-          />
-        </form>
-      </FormProvider>
+            <FormButtons
+              ref={formSubmitButtonRef}
+              visible={showButtons}
+              submit={submit}
+              handleSubmit={form.handleSubmit(handleSubmit)}
+            />
+          </form>
+        </FormProvider>
+      </Box>
     </TestIdProvider>
   );
 };
