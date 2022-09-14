@@ -16,10 +16,10 @@ export const FormButtons: FC<IFormButtonsProps> = forwardRef((props, ref: any) =
   const { visible = true, submit = "submit", handleSubmit } = props;
 
   const {
-    formState: { isSubmitting, isValid, isDirty },
+    formState: { isSubmitting, isValid },
   } = useFormContext();
 
-  const disabled = isSubmitting || (!isValid && isDirty);
+  const disabled = isSubmitting || !isValid;
 
   if (!visible) {
     return null;
