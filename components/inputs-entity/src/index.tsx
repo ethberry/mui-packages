@@ -134,9 +134,10 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                 }
                 getOptionLabel={(option: IAutocompleteOption) => (getTitle ? getTitle(option) : option.title)}
                 renderOption={(props: HTMLAttributes<HTMLLIElement>, option: IAutocompleteOption) => {
+                  const title = getTitle ? getTitle(option) : option.title;
                   return (
                     <li {...props} key={option.id}>
-                      {option.title}
+                      {title}
                     </li>
                   );
                 }}
@@ -179,9 +180,10 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                 }
                 getOptionLabel={(option: IAutocompleteOption): string => (getTitle ? getTitle(option) : option.title)}
                 renderOption={(props: HTMLAttributes<HTMLLIElement>, option: IAutocompleteOption) => {
+                  const title = getTitle ? getTitle(option) : option.title;
                   return (
                     <li {...props} key={option.id}>
-                      {option.title}
+                      {title}
                     </li>
                   );
                 }}
