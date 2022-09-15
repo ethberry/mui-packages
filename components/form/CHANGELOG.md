@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.34](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@6.0.33...@gemunion/mui-form@6.0.34) (2022-09-15)
+
+
+### Bug Fixes
+
+* entity-inputs and form submit button disabling ([7b04e13](https://github.com/gemunion/mui-packages/commit/7b04e131147ddb9b2efb9357e8ee5557f449fa9f))
+
+
+
+
+
 ## [6.0.33](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@6.0.32...@gemunion/mui-form@6.0.33) (2022-09-13)
 
 

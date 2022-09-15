@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.2.2 (2022-09-15)
+
+
+### Bug Fixes
+
+* entity-inputs and form submit button disabling ([7b04e13](https://github.com/gemunion/mui-packages/commit/7b04e131147ddb9b2efb9357e8ee5557f449fa9f))
+
+
+
+
+
 ## 7.2.1 (2022-09-10)
 
 

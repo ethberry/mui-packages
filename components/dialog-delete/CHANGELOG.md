@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.2.23 (2022-09-15)
+
+**Note:** Version bump only for package @gemunion/mui-dialog-delete
+
+
+
+
+
 ## 3.2.22 (2022-09-10)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-delete

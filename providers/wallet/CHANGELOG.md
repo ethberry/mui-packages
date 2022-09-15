@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.20 (2022-09-15)
+
+
+### Bug Fixes
+
+* typings ([276441c](https://github.com/gemunion/mui-packages/commit/276441c50fe9b3e9f1b06916bde2a1ffc48b6db1))
+
+
+
+
+
 ## 2.0.19 (2022-09-10)
 
 **Note:** Version bump only for package @gemunion/provider-wallet
