@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.31](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.30...@gemunion/react-hooks-eth@1.0.31) (2022-09-15)
+
+
+### Bug Fixes
+
+* blockchain errors thrown from metamask and [@ethersprojects](https://github.com/ethersprojects) ([ffdfeee](https://github.com/gemunion/mui-packages/commit/ffdfeeedcf31ef0e6f1e93284f84643c9ebda495))
+
+
+
+
+
 ## 1.0.30 (2022-09-15)
 
 **Note:** Version bump only for package @gemunion/react-hooks-eth

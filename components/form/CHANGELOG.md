@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.35](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@6.0.34...@gemunion/mui-form@6.0.35) (2022-09-15)
+
+
+### Bug Fixes
+
+* add showDebug to form ([f33ab95](https://github.com/gemunion/mui-packages/commit/f33ab957b8d8c70884fbec0a1abc460ae9b6f6bc))
+
+
+
+
+
 ## [6.0.34](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@6.0.33...@gemunion/mui-form@6.0.34) (2022-09-15)
 
 
