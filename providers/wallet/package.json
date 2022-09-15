@@ -24,7 +24,7 @@
     "@gemunion/provider-api": "6.0.7",
     "@gemunion/provider-license": "1.0.33",
     "@gemunion/provider-popup": "0.3.5",
-    "@gemunion/provider-user": "4.0.9",
+    "@gemunion/provider-user": "4.0.10",
     "@mui/icons-material": "5.10.3",
     "@mui/material": "5.10.4",
     "@mui/styles": "5.10.3",
