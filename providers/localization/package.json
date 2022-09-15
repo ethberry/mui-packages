@@ -12,7 +12,7 @@
     "@gemunion/provider-license": "1.0.33"
   },
   "devDependencies": {
-    "@gemunion/provider-settings": "3.1.4",
+    "@gemunion/provider-settings": "3.1.5",
     "@mui/icons-material": "5.10.3",
     "@mui/material": "5.10.4",
     "@types/react": "17.0.49",
