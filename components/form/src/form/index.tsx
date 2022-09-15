@@ -14,6 +14,7 @@ import { useYupValidationResolver } from "../hook";
 interface IFormWrapperProps<T> {
   showButtons?: boolean;
   showPrompt?: boolean;
+  showDebug?: boolean;
   submit?: string;
   onSubmit: (values: T, form?: any) => Promise<void>;
   className?: string;
@@ -33,6 +34,7 @@ export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
     enableReinitialize = true,
     onSubmit,
     showButtons,
+    showDebug,
     showPrompt,
     submit,
     formSubmitButtonRef,
@@ -88,6 +90,7 @@ export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
             <FormButtons
               ref={formSubmitButtonRef}
               visible={showButtons}
+              showDebug={showDebug}
               submit={submit}
               handleSubmit={form.handleSubmit(handleSubmit)}
             />

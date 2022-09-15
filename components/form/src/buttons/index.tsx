@@ -8,18 +8,25 @@ import { ButtonToolbar } from "@gemunion/mui-page-layout";
 interface IFormButtonsProps {
   visible?: boolean;
   submit?: string;
+  showDebug?: boolean;
   handleSubmit: (e: any) => Promise<void>;
   ref?: any;
 }
 
 export const FormButtons: FC<IFormButtonsProps> = forwardRef((props, ref: any) => {
-  const { visible = true, submit = "submit", handleSubmit } = props;
+  const { visible = true, submit = "submit", showDebug = false, handleSubmit } = props;
 
   const {
-    formState: { isSubmitting, isValid },
+    formState: { isSubmitting, isValid, errors },
   } = useFormContext();
 
   const disabled = isSubmitting || !isValid;
+
+  if (disabled && showDebug) {
+    if (Object.keys(errors).length) {
+      console.error("[validation errors]", errors);
+    }
+  }
 
   if (!visible) {
     return null;
