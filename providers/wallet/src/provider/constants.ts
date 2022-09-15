@@ -79,7 +79,7 @@ export const rpcUrls: Record<string, string[]> = {
   // [networkToChainId[Networks.CUSTOM]]: [jsonRpcUrl],
 };
 
-export const networks: Record<string, INetwork> = {
+export const networks: Record<number, INetwork> = {
   [networkToChainId[Networks.ETHEREUM]]: {
     chainName: "Ethereum Mainnet",
     chainId: networkToChainId[Networks.ETHEREUM],
