@@ -13,7 +13,7 @@
     "@gemunion/provider-api": "6.0.7",
     "@gemunion/provider-license": "1.0.33",
     "@json-rpc-tools/utils": "1.7.6",
-    "ethers": "5.7.0",
+    "ethers": "5.7.1",
     "qs": "6.11.0",
     "use-deep-compare-effect": "1.8.1"
   },
