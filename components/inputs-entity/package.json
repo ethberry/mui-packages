@@ -20,7 +20,7 @@
     "@mui/lab": "5.0.0-alpha.98",
     "@mui/material": "5.10.4",
     "@mui/styles": "5.10.3",
-    "@types/react": "17.0.49",
+    "@types/react": "17.0.50",
     "notistack": "2.0.5",
     "react": "17.0.2",
     "react-hook-form": "7.35.0",
