@@ -2,6 +2,8 @@ import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { utils } from "ethers";
 import { useWeb3React } from "@web3-react/core";
+import { ErrorCode } from "@ethersproject/logger";
+import { SERVER_ERROR_CODE_RANGE, RESERVED_ERROR_CODES, STANDARD_ERROR_MAP } from "@json-rpc-tools/utils";
 
 import { downForMaintenance } from "@gemunion/license-messages";
 import { useLicense } from "@gemunion/provider-license";
@@ -47,12 +49,13 @@ export const useMetamaskWallet = <T = any>(
       })
       .catch((e: any) => {
         if (error) {
-          if (e.code === 4001) {
+          if (e.code === 4001 || e.code === ErrorCode.ACTION_REJECTED) {
             enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
             return null;
-          } else if (e.code === -32603) {
+          } else if ([...SERVER_ERROR_CODE_RANGE, ...RESERVED_ERROR_CODES].includes(e.code)) {
             enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
-            console.error("[blockchain error]", e.message);
+            const errorType = Object.values(STANDARD_ERROR_MAP).find(({ code }) => code === e.code)?.message;
+            console.error(`[blockchain error]${errorType ? ` [${errorType}]` : ""}`, e.message);
             return null;
           } else if (e.error?.data?.data) {
             enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
