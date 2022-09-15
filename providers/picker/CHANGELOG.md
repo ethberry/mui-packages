@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.5.17 (2022-09-15)
+
+**Note:** Version bump only for package @gemunion/provider-picker
+
+
+
+
+
 ## 3.5.16 (2022-09-10)
 
 **Note:** Version bump only for package @gemunion/provider-picker
