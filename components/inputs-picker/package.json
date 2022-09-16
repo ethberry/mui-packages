@@ -15,8 +15,8 @@
   "devDependencies": {
     "@mui/material": "5.10.5",
     "@mui/styles": "5.10.3",
-    "@mui/x-date-pickers": "5.0.1",
-    "@mui/x-date-pickers-pro": "5.0.1",
+    "@mui/x-date-pickers": "5.0.2",
+    "@mui/x-date-pickers-pro": "5.0.2",
     "@types/react": "17.0.50",
     "react": "17.0.2",
     "react-hook-form": "7.35.0",
@@ -32,8 +32,8 @@
   "peerDependencies": {
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
-    "@mui/x-date-pickers": "5.0.1",
-    "@mui/x-date-pickers-pro": "5.0.1",
+    "@mui/x-date-pickers": "5.0.2",
+    "@mui/x-date-pickers-pro": "5.0.2",
     "react": "^17.0.0",
     "react-hook-form": "^7.0.0",
     "react-intl": "^5.0.0 || ^6.0.0"
