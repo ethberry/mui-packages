@@ -26,7 +26,7 @@
   "name": "@gemunion/provider-test-id",
   "peerDependencies": {
     "react": "^17.0.0",
-    "react-intl": "^5.0.0 || ^6.0.0"
+    "react-intl": "^6.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

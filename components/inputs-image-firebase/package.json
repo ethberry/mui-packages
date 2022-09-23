@@ -55,7 +55,7 @@
     "notistack": "^2.0.0",
     "react": "^17.0.0",
     "react-hook-form": "^7.0.0",
-    "react-intl": "^5.0.0 || ^6.0.0"
+    "react-intl": "^6.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

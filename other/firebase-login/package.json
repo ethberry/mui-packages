@@ -41,7 +41,7 @@
     "firebase": "^9.0.0",
     "notistack": "^2.0.0",
     "react": "^17.0.0",
-    "react-intl": "^5.0.0 || ^6.0.0",
+    "react-intl": "^6.0.0",
     "react-router": "^6.0.0",
     "react-router-dom": "^6.0.0"
   },
