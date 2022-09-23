@@ -33,7 +33,7 @@
     "jest-environment-jsdom": "29.0.3",
     "notistack": "2.0.5",
     "react": "17.0.2",
-    "react-hook-form": "7.35.0",
+    "react-hook-form": "7.36.1",
     "react-intl": "6.1.1",
     "ts-jest": "29.0.1"
   },
