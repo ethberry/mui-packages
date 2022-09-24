@@ -27,7 +27,7 @@
     "@mui/styles": "5.10.6",
     "@storybook/react": "6.5.12",
     "@testing-library/jest-dom": "5.16.5",
-    "@testing-library/react": "12.1.5",
+    "@testing-library/react": "13.4.0",
     "@types/jest": "29.0.3",
     "@types/react": "18.0.21",
     "@types/react-beautiful-dnd": "13.1.2",
