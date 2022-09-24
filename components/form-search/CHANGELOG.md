@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@6.0.39...@gemunion/mui-form-search@7.0.0) (2022-09-24)
+
+
+* chore!: add support of react 18 ([ef1a8fc](https://github.com/gemunion/mui-packages/commit/ef1a8fcbd8ab0452994bf6441aae6fcdc710c110))
+
+
+### BREAKING CHANGES
+
+* react 18
+
+
+
+
+
 ## [6.0.39](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@6.0.38...@gemunion/mui-form-search@6.0.39) (2022-09-24)
 
 **Note:** Version bump only for package @gemunion/mui-form-search

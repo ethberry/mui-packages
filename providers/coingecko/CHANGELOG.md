@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-coingecko@0.2.9...@gemunion/provider-coingecko@2.0.0) (2022-09-24)
+
+
+* chore!: add support of react 18 ([ef1a8fc](https://github.com/gemunion/mui-packages/commit/ef1a8fcbd8ab0452994bf6441aae6fcdc710c110))
+
+
+### BREAKING CHANGES
+
+* react 18
+
+
+
+
+
 ## [0.2.9](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-coingecko@0.2.8...@gemunion/provider-coingecko@0.2.9) (2022-09-24)
 
 **Note:** Version bump only for package @gemunion/provider-coingecko

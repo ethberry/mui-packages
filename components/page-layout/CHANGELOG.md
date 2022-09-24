@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-page-layout@0.1.29...@gemunion/mui-page-layout@2.0.0) (2022-09-24)
+
+
+* chore!: add support of react 18 ([ef1a8fc](https://github.com/gemunion/mui-packages/commit/ef1a8fcbd8ab0452994bf6441aae6fcdc710c110))
+
+
+### BREAKING CHANGES
+
+* react 18
+
+
+
+
+
 ## [0.1.29](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-page-layout@0.1.28...@gemunion/mui-page-layout@0.1.29) (2022-09-24)
 
 
