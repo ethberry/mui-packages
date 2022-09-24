@@ -1,5 +1,5 @@
-import { FC, createElement, ChangeEvent } from "react";
-import clsx from "clsx";
+import { ChangeEvent, createElement, FC, PropsWithChildren } from "react";
+import { clsx } from "clsx";
 import { FormattedMessage } from "react-intl";
 import { Controller, useFormContext } from "react-hook-form";
 import { InputLabel } from "@mui/material";
@@ -12,11 +12,10 @@ import { useStyles } from "./styles";
 
 export interface IRatingInputProps extends RatingProps {
   name: string;
-  icon?: SvgIconComponent;
   color?: "inherit" | "disabled" | "error" | "primary" | "secondary" | "action";
 }
 
-export const RatingInput: FC<IRatingInputProps> = props => {
+export const RatingInput: FC<PropsWithChildren<IRatingInputProps>> = props => {
   const { name, icon = Star, color, ...rest } = props;
   const classes = useStyles();
 
@@ -39,7 +38,7 @@ export const RatingInput: FC<IRatingInputProps> = props => {
           <Rating
             {...field}
             max={10}
-            icon={createElement(icon, { fontSize: "inherit", color })}
+            icon={createElement(icon as SvgIconComponent, { fontSize: "inherit", color })}
             onChange={(_event: ChangeEvent<unknown>, value): void => {
               form.setValue(name, value);
             }}

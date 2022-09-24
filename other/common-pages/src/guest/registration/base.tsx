@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react";
+import { FC, PropsWithChildren, useEffect } from "react";
 import { Grid } from "@mui/material";
 import { useNavigate } from "react-router";
 import { useSnackbar } from "notistack";
@@ -16,7 +16,7 @@ export interface IRegistrationBaseProps {
   validationSchema: any;
 }
 
-export const RegistrationBase: FC<IRegistrationBaseProps> = props => {
+export const RegistrationBase: FC<PropsWithChildren<IRegistrationBaseProps>> = props => {
   const { children, initialValues, validationSchema } = props;
 
   const navigate = useNavigate();

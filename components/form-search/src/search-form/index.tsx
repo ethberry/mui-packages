@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { Collapse, Grid } from "@mui/material";
 
 import { AutoSave, FormWrapper } from "@gemunion/mui-form";
@@ -12,7 +12,7 @@ interface ICommonSearchFormProps {
   testId?: string;
 }
 
-export const CommonSearchForm: FC<ICommonSearchFormProps> = props => {
+export const CommonSearchForm: FC<PropsWithChildren<ICommonSearchFormProps>> = props => {
   const { autosave = true, onSubmit, initialValues, open = false, testId, children } = props;
 
   const { query } = initialValues;

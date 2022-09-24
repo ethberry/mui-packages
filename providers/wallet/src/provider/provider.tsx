@@ -1,4 +1,4 @@
-import { FC, useCallback, useState } from "react";
+import { FC, PropsWithChildren, useCallback, useState } from "react";
 import { Web3ReactProvider, Web3ReactHooks, Web3ContextType } from "@web3-react/core";
 
 import { usePopup } from "@gemunion/provider-popup";
@@ -28,7 +28,7 @@ const connectors: [ConnectorsTypes, Web3ReactHooks][] = [
 const targetNetworkId = ~~process.env.CHAIN_ID;
 /* javascript-obfuscator:enable */
 
-export const WalletProvider: FC<IWalletProviderProps> = props => {
+export const WalletProvider: FC<PropsWithChildren<IWalletProviderProps>> = props => {
   const { targetNetwork = networks[targetNetworkId], children } = props;
 
   const { openPopup, closePopup, isOpenPopup } = usePopup();

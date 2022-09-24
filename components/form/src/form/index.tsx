@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Box } from "@mui/material";
@@ -27,7 +27,7 @@ interface IFormWrapperProps<T> {
   testId?: string;
 }
 
-export const FormWrapper: FC<IFormWrapperProps<any>> = props => {
+export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props => {
   const {
     children,
     initialValues,

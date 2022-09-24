@@ -1,4 +1,4 @@
-import { FC, ReactElement, useRef, useState } from "react";
+import { FC, PropsWithChildren, ReactElement, useRef, useState } from "react";
 import { Breakpoint } from "@mui/material";
 
 import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
@@ -20,7 +20,7 @@ export interface IFormDialogProps<T> {
   action?: ReactElement;
 }
 
-export const FormDialog: FC<IFormDialogProps<any>> = props => {
+export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props => {
   const { children, onConfirm, initialValues, validationSchema, maxWidth = "lg", testId, ...rest } = props;
 
   const [isLoading, setIsLoading] = useState(false);
