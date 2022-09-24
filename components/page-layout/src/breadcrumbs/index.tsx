@@ -27,7 +27,7 @@ export const Breadcrumbs: FC<IBreadcrumbsProps> = props => {
           );
         }
         return (
-          <Link color="inherit" component={RouterLink} to={`/${e}`} key={i}>
+          <Link color="inherit" component={RouterLink} to={`/${e.replace(".", "-")}`} key={i}>
             <FormattedMessage id={`pages.${e}.title`} values={data[i]} />
           </Link>
         );
