@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/provider-test-id": "1.0.7",
+    "@gemunion/provider-test-id": "1.0.8",
     "date-fns": "2.29.3"
   },
   "description": "react widget",
@@ -56,5 +56,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "5.2.22"
+  "version": "5.2.23"
 }
