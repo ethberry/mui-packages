@@ -10,15 +10,15 @@
   "dependencies": {
     "@gemunion/firebase": "1.1.28",
     "@gemunion/provider-license": "1.0.34",
-    "@mui/icons-material": "5.10.3",
+    "@mui/icons-material": "5.10.6",
     "firebaseui": "6.0.1"
   },
   "description": "react component",
   "devDependencies": {
     "@gemunion/provider-api": "6.0.8",
     "@gemunion/provider-user": "4.0.11",
-    "@mui/material": "5.10.5",
-    "@mui/styles": "5.10.3",
+    "@mui/material": "5.10.6",
+    "@mui/styles": "5.10.6",
     "firebase": "9.10.0",
     "notistack": "2.0.5",
     "react": "17.0.2",
