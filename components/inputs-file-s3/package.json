@@ -15,7 +15,7 @@
   "description": "react widget",
   "devDependencies": {
     "notistack": "2.0.5",
-    "react": "17.0.2",
+    "react": "18.2.0",
     "react-intl": "6.1.1"
   },
   "engines": {
@@ -27,7 +27,7 @@
   "name": "@gemunion/mui-inputs-file-s3",
   "peerDependencies": {
     "notistack": "^2.0.0",
-    "react": "^17.0.0",
+    "react": "^17.0.0 || ^18.0.0",
     "react-intl": "^6.0.0"
   },
   "publishConfig": {

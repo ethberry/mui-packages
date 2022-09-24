@@ -23,8 +23,8 @@
     "jest": "29.0.3",
     "jest-environment-jsdom": "29.0.3",
     "node-fetch": "2.6.7",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-intl": "6.1.1",
     "react-router-dom": "6.4.1",
     "ts-jest": "29.0.1"
@@ -38,7 +38,7 @@
   "name": "@gemunion/mui-form-search",
   "peerDependencies": {
     "@mui/material": "^5.0.0",
-    "react": "^17.0.0",
+    "react": "^17.0.0 || ^18.0.0",
     "react-router-dom": "^6.0.0"
   },
   "publishConfig": {
