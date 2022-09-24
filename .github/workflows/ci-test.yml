@@ -1,4 +1,4 @@
-name: CI Test on Push
+name: CI Test on PR
 
 on:
   pull_request:
