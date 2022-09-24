@@ -12,7 +12,7 @@
     "@gemunion/provider-license": "1.0.34"
   },
   "devDependencies": {
-    "@gemunion/provider-settings": "3.1.7",
+    "@gemunion/provider-settings": "4.0.1",
     "@mui/icons-material": "5.10.6",
     "@mui/material": "5.10.6",
     "@types/react": "17.0.50",
@@ -27,7 +27,7 @@
   "main": "./dist/index.js",
   "name": "@gemunion/provider-localization",
   "peerDependencies": {
-    "@gemunion/provider-settings": "^3.0.0",
+    "@gemunion/provider-settings": "^3.0.0 || ^4.0.0",
     "@mui/icons-material": "^5.0.0",
     "@mui/material": "^5.0.0",
     "react": "^17.0.0",

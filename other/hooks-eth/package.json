@@ -10,7 +10,7 @@
   "dependencies": {
     "@ethersproject/logger": "5.7.0",
     "@gemunion/license-messages": "0.0.34",
-    "@gemunion/provider-api": "6.0.8",
+    "@gemunion/provider-api": "7.0.1",
     "@gemunion/provider-license": "1.0.34",
     "@json-rpc-tools/utils": "1.7.6",
     "ethers": "5.7.1",
