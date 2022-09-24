@@ -27,7 +27,7 @@
   "name": "@gemunion/mui-inputs-file-s3",
   "peerDependencies": {
     "notistack": "^2.0.0",
-    "react": "^17.0.0 || ^18.0.0",
+    "react": "^18.0.0",
     "react-intl": "^6.0.0"
   },
   "publishConfig": {
