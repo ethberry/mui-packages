@@ -8,14 +8,14 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-inputs-file": "6.0.30",
-    "@gemunion/provider-api": "6.0.8",
-    "@gemunion/s3-uploader": "0.0.19"
+    "@gemunion/mui-inputs-file": "6.0.31",
+    "@gemunion/provider-api": "7.0.2",
+    "@gemunion/s3-uploader": "0.0.20"
   },
   "description": "react widget",
   "devDependencies": {
     "notistack": "2.0.5",
-    "react": "17.0.2",
+    "react": "18.2.0",
     "react-intl": "6.1.1"
   },
   "engines": {
@@ -27,7 +27,7 @@
   "name": "@gemunion/mui-inputs-file-s3",
   "peerDependencies": {
     "notistack": "^2.0.0",
-    "react": "^17.0.0",
+    "react": "^18.0.0",
     "react-intl": "^6.0.0"
   },
   "publishConfig": {
@@ -48,5 +48,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "7.0.31"
+  "version": "7.0.33"
 }

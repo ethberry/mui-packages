@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { Badge, BadgeProps } from "@mui/material";
 import { Check } from "@mui/icons-material";
 
@@ -7,7 +7,7 @@ export interface ICustomBadgeProps {
   BadgeProps?: BadgeProps;
 }
 
-export const CustomBadge: FC<ICustomBadgeProps> = props => {
+export const CustomBadge: FC<PropsWithChildren<ICustomBadgeProps>> = props => {
   const { invisible, BadgeProps, children } = props;
 
   return (

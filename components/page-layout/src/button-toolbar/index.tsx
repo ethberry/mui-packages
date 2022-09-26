@@ -1,4 +1,4 @@
-import { FC, Children, cloneElement, ReactElement } from "react";
+import { FC, Children, cloneElement, ReactElement, PropsWithChildren } from "react";
 import { Grid, ButtonProps } from "@mui/material";
 import { Property } from "csstype";
 import clsx from "clsx";
@@ -10,7 +10,7 @@ export interface IButtonToolbarProps {
   justifyContent?: Property.JustifyContent;
 }
 
-export const ButtonToolbar: FC<IButtonToolbarProps> = ({ children = [], ...props }) => {
+export const ButtonToolbar: FC<PropsWithChildren<IButtonToolbarProps>> = ({ children = [], ...props }) => {
   const classes = useStyles();
 
   const { className, justifyContent = "flex-end" } = props;

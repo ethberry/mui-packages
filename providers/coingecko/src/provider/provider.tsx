@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, PropsWithChildren, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import { useSnackbar } from "notistack";
 
@@ -13,7 +13,7 @@ export interface ICoinGeckoProviderProps {
   defaultMarkets?: Array<string>;
 }
 
-export const CoinGeckoProvider: FC<ICoinGeckoProviderProps> = props => {
+export const CoinGeckoProvider: FC<PropsWithChildren<ICoinGeckoProviderProps>> = props => {
   const { children, defaultCurrency = "ethereum", defaultMarkets = ["binance"] } = props;
   const license = useLicense();
   const { formatMessage } = useIntl();

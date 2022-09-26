@@ -11,8 +11,8 @@
   "devDependencies": {
     "@mui/material": "5.10.6",
     "@storybook/react": "6.5.12",
-    "@types/react": "17.0.50",
-    "react": "17.0.2"
+    "@types/react": "18.0.21",
+    "react": "18.2.0"
   },
   "engines": {
     "node": ">=12.13"
@@ -23,7 +23,7 @@
   "name": "@gemunion/mui-icons",
   "peerDependencies": {
     "@mui/material": "^5.0.0",
-    "react": "^17.0.0"
+    "react": "^18.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -43,5 +43,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "0.0.7"
+  "version": "1.0.1"
 }

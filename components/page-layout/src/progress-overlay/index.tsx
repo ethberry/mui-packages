@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 
 import { Spinner } from "../spinner";
 
@@ -8,7 +8,7 @@ export interface IProgressOverlayProps {
   isLoading: boolean;
 }
 
-export const ProgressOverlay: FC<IProgressOverlayProps> = props => {
+export const ProgressOverlay: FC<PropsWithChildren<IProgressOverlayProps>> = props => {
   const { isLoading, children } = props;
   const classes = useStyles();
   return (

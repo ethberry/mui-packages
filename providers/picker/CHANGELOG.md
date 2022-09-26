@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-picker@3.5.19...@gemunion/provider-picker@4.0.0) (2022-09-24)
+
+
+* chore!: add support of react 18 ([ef1a8fc](https://github.com/gemunion/mui-packages/commit/ef1a8fcbd8ab0452994bf6441aae6fcdc710c110))
+
+
+### BREAKING CHANGES
+
+* react 18
+
+
+
+
+
 ## [3.5.19](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-picker@3.5.18...@gemunion/provider-picker@3.5.19) (2022-09-24)
 
 **Note:** Version bump only for package @gemunion/provider-picker

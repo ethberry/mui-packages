@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.0...@gemunion/provider-theme@6.0.1) (2022-09-24)
+
+**Note:** Version bump only for package @gemunion/provider-theme
+
+
+
+
+
+# [6.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@5.0.20...@gemunion/provider-theme@6.0.0) (2022-09-24)
+
+
+### Bug Fixes
+
+* **deps:** update [@gemunion](https://github.com/gemunion) packages ([816e60d](https://github.com/gemunion/mui-packages/commit/816e60d67e2ef81dd0531e033f3ca5b5d6e17a77))
+* **deps:** update [@gemunion](https://github.com/gemunion) packages ([7b991d3](https://github.com/gemunion/mui-packages/commit/7b991d3eab697373d8b91e5ce33a5393069db9fa))
+
+
+* chore!: add support of react 18 ([ef1a8fc](https://github.com/gemunion/mui-packages/commit/ef1a8fcbd8ab0452994bf6441aae6fcdc710c110))
+
+
+### BREAKING CHANGES
+
+* react 18
+
+
+
+
+
 ## [5.0.20](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@5.0.19...@gemunion/provider-theme@5.0.20) (2022-09-24)
 
 **Note:** Version bump only for package @gemunion/provider-theme

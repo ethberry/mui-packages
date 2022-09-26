@@ -21,18 +21,18 @@
   },
   "description": "react wallet provider",
   "devDependencies": {
-    "@gemunion/provider-api": "6.0.8",
-    "@gemunion/provider-license": "1.0.34",
-    "@gemunion/provider-popup": "0.3.6",
-    "@gemunion/provider-user": "4.0.12",
+    "@gemunion/provider-api": "7.0.2",
+    "@gemunion/provider-license": "2.0.0",
+    "@gemunion/provider-popup": "1.0.3",
+    "@gemunion/provider-user": "5.0.2",
     "@mui/icons-material": "5.10.6",
     "@mui/material": "5.10.6",
     "@mui/styles": "5.10.6",
-    "@types/react": "17.0.50",
+    "@types/react": "18.0.21",
     "@types/uuid": "8.3.4",
     "ethers": "5.7.1",
     "notistack": "2.0.5",
-    "react": "17.0.2",
+    "react": "18.2.0",
     "react-intl": "6.1.1"
   },
   "engines": {
@@ -43,17 +43,17 @@
   "main": "./dist/index.js",
   "name": "@gemunion/provider-wallet",
   "peerDependencies": {
-    "@gemunion/provider-api": "^6.0.0",
-    "@gemunion/provider-license": "^1.0.0",
+    "@gemunion/provider-api": "^6.0.0 || ^7.0.0",
+    "@gemunion/provider-license": "^1.0.0 || ^2.0.0",
     "@gemunion/provider-popup": "^0.0.0",
-    "@gemunion/provider-user": "^4.0.0",
+    "@gemunion/provider-user": "^4.0.0 || ^5.0.0",
     "@mui/icons-material": "^5.0.0",
     "@mui/lab": "^5.0.0-alpha.0",
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
     "ethers": "^5.6.0",
     "notistack": "^2.0.0",
-    "react": "^17.0.0",
+    "react": "^18.0.0",
     "react-intl": "^6.0.0",
     "uuid": "9.0.0"
   },
@@ -75,5 +75,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.23"
+  "version": "3.0.1"
 }

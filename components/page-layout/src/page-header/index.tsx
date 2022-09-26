@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { FormattedMessage } from "react-intl";
 import clsx from "clsx";
 
@@ -13,7 +13,7 @@ export interface IPageHeader {
   className?: string;
 }
 
-export const PageHeader: FC<IPageHeader> = props => {
+export const PageHeader: FC<PropsWithChildren<IPageHeader>> = props => {
   const { children, message, data, className } = props;
   const classes = useStyles();
   return (

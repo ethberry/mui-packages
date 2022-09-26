@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 
 import { CssBaseline } from "@mui/material";
 import {
@@ -18,7 +18,7 @@ export interface IThemeProviderProps {
   options?: Omit<ThemeOptions, "palette">;
 }
 
-export const ThemeProvider: FC<IThemeProviderProps> = props => {
+export const ThemeProvider: FC<PropsWithChildren<IThemeProviderProps>> = props => {
   const { darkPalette = dark, lightPalette = light, options = {}, children } = props;
   const settings = useSettings();
 
