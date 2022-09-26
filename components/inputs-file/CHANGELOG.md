@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.34](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@6.0.33...@gemunion/mui-inputs-file@6.0.34) (2022-09-26)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-file
+
+
+
+
+
 ## [6.0.33](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@6.0.32...@gemunion/mui-inputs-file@6.0.33) (2022-09-26)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file
