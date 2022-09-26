@@ -9,10 +9,10 @@
   },
   "dependencies": {
     "@gemunion/draft-js-utils": "0.3.21",
-    "@gemunion/mui-form": "6.0.38",
-    "@gemunion/mui-inputs-core": "7.0.39",
+    "@gemunion/mui-form": "7.0.1",
+    "@gemunion/mui-inputs-core": "7.0.41",
     "@gemunion/mui-rte": "3.0.0",
-    "@gemunion/provider-test-id": "1.0.8",
+    "@gemunion/provider-test-id": "1.0.9",
     "draft-js": "0.11.7",
     "markdown-draft-js": "2.4.0"
   },
@@ -39,11 +39,11 @@
   "main": "./dist/index.js",
   "name": "@gemunion/mui-inputs-draft",
   "peerDependencies": {
-    "@gemunion/provider-license": "^1.0.0 || ^2.0.0",
+    "@gemunion/provider-license": "^2.0.0",
     "@mui/icons-material": "^5.0.0",
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
-    "react": "^17.0.0 || ^18.0.0",
+    "react": "^18.0.0",
     "react-hook-form": "^7.0.0",
     "react-intl": "^6.0.0",
     "react-router-dom": "^6.0.0"

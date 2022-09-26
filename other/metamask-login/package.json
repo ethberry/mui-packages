@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.8.6",
-    "@gemunion/mui-page-layout": "0.1.29",
+    "@gemunion/mui-page-layout": "2.0.0",
     "@gemunion/provider-license": "2.0.0",
     "@gemunion/types-jwt": "0.3.4",
     "@web3-react/core": "8.0.35-beta.0",
@@ -19,7 +19,7 @@
   "devDependencies": {
     "@gemunion/provider-api": "7.0.2",
     "@gemunion/provider-user": "5.0.2",
-    "@gemunion/provider-wallet": "2.0.23",
+    "@gemunion/provider-wallet": "3.0.1",
     "@mui/material": "5.10.6",
     "@mui/styles": "5.10.6",
     "@types/uuid": "8.3.4",
@@ -37,13 +37,13 @@
   "main": "./dist/index.js",
   "name": "@gemunion/metamask-login",
   "peerDependencies": {
-    "@gemunion/provider-api": "^6.0.0 || ^7.0.0",
-    "@gemunion/provider-user": "^4.0.0 || ^5.0.0",
-    "@gemunion/provider-wallet": "^2.0.0",
+    "@gemunion/provider-api": "^7.0.0",
+    "@gemunion/provider-user": "^5.0.0",
+    "@gemunion/provider-wallet": "^3.0.0",
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
     "notistack": "^2.0.0",
-    "react": "^17.0.0 || ^18.0.0",
+    "react": "^18.0.0",
     "react-intl": "^6.0.0",
     "react-router": "^6.0.0",
     "react-router-dom": "^6.0.0"

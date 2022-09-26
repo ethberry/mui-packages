@@ -31,9 +31,9 @@
   "main": "./dist/index.js",
   "name": "@gemunion/react-hooks",
   "peerDependencies": {
-    "@gemunion/provider-api": "^6.0.0 || ^7.0.0",
+    "@gemunion/provider-api": "^7.0.0",
     "notistack": "^2.0.0",
-    "react": "^17.0.0 || ^18.0.0",
+    "react": "^18.0.0",
     "react-hook-form": "^7.0.0",
     "react-intl": "^6.0.0",
     "react-router": "^6.0.0"
@@ -56,5 +56,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "1.0.26"
+  "version": "1.0.28"
 }

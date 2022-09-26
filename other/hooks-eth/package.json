@@ -33,7 +33,7 @@
   "main": "./dist/index.js",
   "name": "@gemunion/react-hooks-eth",
   "peerDependencies": {
-    "@gemunion/provider-wallet": "^2.0.0",
+    "@gemunion/provider-wallet": "^3.0.0",
     "@gemunion/types-collection": "^1.0.0",
     "@web3-react/core": "^8.0.0",
     "notistack": "^2.0.0",

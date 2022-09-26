@@ -27,7 +27,7 @@
   "main": "./dist/index.js",
   "name": "@gemunion/geetest",
   "peerDependencies": {
-    "@gemunion/provider-api": "^6.0.0 || ^7.0.0",
+    "@gemunion/provider-api": "^7.0.0",
     "react": "^18.0.0"
   },
   "publishConfig": {

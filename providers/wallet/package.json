@@ -43,10 +43,10 @@
   "main": "./dist/index.js",
   "name": "@gemunion/provider-wallet",
   "peerDependencies": {
-    "@gemunion/provider-api": "^6.0.0 || ^7.0.0",
-    "@gemunion/provider-license": "^1.0.0 || ^2.0.0",
+    "@gemunion/provider-api": "^7.0.0",
+    "@gemunion/provider-license": "^2.0.0",
     "@gemunion/provider-popup": "^0.0.0",
-    "@gemunion/provider-user": "^4.0.0 || ^5.0.0",
+    "@gemunion/provider-user": "^5.0.0",
     "@mui/icons-material": "^5.0.0",
     "@mui/lab": "^5.0.0-alpha.0",
     "@mui/material": "^5.0.0",
