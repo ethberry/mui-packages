@@ -1,7 +1,9 @@
 import { FC } from "react";
-import { TextInput } from "@gemunion/mui-inputs-core";
+import { useFormContext } from "react-hook-form";
+import { NumericFormat } from "react-number-format";
 
-import { MaskedInputWrapper } from "./wrapper";
+import { TextInput } from "@gemunion/mui-inputs-core";
+import { useTestId } from "@gemunion/provider-test-id";
 
 export interface IMaskedInputProps {
   name: string;
@@ -13,7 +15,7 @@ export interface IMaskedInputProps {
   allowNegative?: boolean;
   allowLeadingZeros?: boolean;
   readOnly?: boolean;
-  formatValue?: (values: any) => string | number;
+  formatValue: (values: any) => string | number;
   normalizeValue?: (value: any) => string | number;
   InputProps?: any;
   defaultValue?: any;
@@ -25,22 +27,28 @@ export interface IMaskedInputProps {
 }
 
 export const MaskedInput: FC<IMaskedInputProps> = props => {
-  const { name, formatValue, normalizeValue, value: _value, InputProps, readOnly, ...rest } = props;
+  const { name, formatValue, normalizeValue, value: _value, readOnly, ...rest } = props;
+
+  const form = useFormContext<any>();
+
+  const { testId } = useTestId();
+  const testIdProps = testId ? { "data-testid": `${testId}-${props.name}` } : {};
+
+  const onValueChange = (values: any) => {
+    form.setValue(props.name, formatValue(values.value));
+  };
 
   return (
-    <TextInput
+    <NumericFormat
+      customInput={TextInput}
+      onValueChange={onValueChange}
       name={name}
       normalizeValue={normalizeValue}
+      formatValue={formatValue}
+      readOnly={readOnly}
       onChange={() => {}}
-      InputProps={{
-        ...InputProps,
-        inputComponent: MaskedInputWrapper as any,
-        inputProps: {
-          formatValue,
-          readOnly,
-          ...rest,
-        },
-      }}
+      {...rest}
+      {...testIdProps}
     />
   );
 };
