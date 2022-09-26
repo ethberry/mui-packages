@@ -13,14 +13,14 @@
     "@gemunion/mui-inputs-core": "7.0.39",
     "@gemunion/mui-inputs-file-firebase": "6.0.31",
     "@gemunion/mui-page-layout": "0.1.29",
-    "@gemunion/popup": "0.0.37",
+    "@gemunion/popup": "1.0.2",
     "react-beautiful-dnd": "13.1.1"
   },
   "description": "react widget",
   "devDependencies": {
     "@gemunion/cross-env": "0.0.4",
     "@gemunion/mui-form": "6.0.38",
-    "@gemunion/provider-api": "6.0.8",
+    "@gemunion/provider-api": "7.0.2",
     "@gemunion/provider-test-id": "1.0.8",
     "@mui/icons-material": "5.10.6",
     "@mui/material": "5.10.6",
@@ -48,7 +48,7 @@
   "main": "./dist/index.js",
   "name": "@gemunion/mui-inputs-image-firebase",
   "peerDependencies": {
-    "@gemunion/provider-api": "^6.0.0",
+    "@gemunion/provider-api": "^6.0.0 || ^7.0.0",
     "@mui/icons-material": "^5.0.0",
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",

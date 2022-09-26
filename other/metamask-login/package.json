@@ -10,15 +10,15 @@
   "dependencies": {
     "@gemunion/constants": "0.8.6",
     "@gemunion/mui-page-layout": "0.1.29",
-    "@gemunion/provider-license": "1.0.34",
+    "@gemunion/provider-license": "2.0.0",
     "@gemunion/types-jwt": "0.3.4",
     "@web3-react/core": "8.0.35-beta.0",
     "uuid": "9.0.0"
   },
   "description": "react component",
   "devDependencies": {
-    "@gemunion/provider-api": "6.0.8",
-    "@gemunion/provider-user": "4.0.12",
+    "@gemunion/provider-api": "7.0.2",
+    "@gemunion/provider-user": "5.0.2",
     "@gemunion/provider-wallet": "2.0.23",
     "@mui/material": "5.10.6",
     "@mui/styles": "5.10.6",
@@ -37,8 +37,8 @@
   "main": "./dist/index.js",
   "name": "@gemunion/metamask-login",
   "peerDependencies": {
-    "@gemunion/provider-api": "^6.0.0",
-    "@gemunion/provider-user": "^4.0.0",
+    "@gemunion/provider-api": "^6.0.0 || ^7.0.0",
+    "@gemunion/provider-user": "^4.0.0 || ^5.0.0",
     "@gemunion/provider-wallet": "^2.0.0",
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
