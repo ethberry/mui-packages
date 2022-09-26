@@ -1,10 +1,10 @@
 import { forwardRef } from "react";
 import { useFormContext } from "react-hook-form";
-import NumberFormat from "react-number-format";
+import { NumericFormat } from "react-number-format";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
-export const MaskedInputWrapper = forwardRef<NumberFormat<any>>(function NumberFormatCustom(props: any, ref) {
+export const MaskedInputWrapper = forwardRef<any>(function NumberFormatCustom(props: any, ref) {
   const { formatValue, ...rest } = props;
   const form = useFormContext<any>();
 
@@ -15,5 +15,5 @@ export const MaskedInputWrapper = forwardRef<NumberFormat<any>>(function NumberF
     form.setValue(props.name, formatValue(values.value));
   };
 
-  return <NumberFormat onValueChange={onValueChange} {...rest} getInputRef={ref} {...testIdProps} />;
+  return <NumericFormat onValueChange={onValueChange} {...rest} getInputRef={ref} {...testIdProps} />;
 });

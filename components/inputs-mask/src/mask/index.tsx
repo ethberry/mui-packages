@@ -6,7 +6,7 @@ import { MaskedInputWrapper } from "./wrapper";
 export interface IMaskedInputProps {
   name: string;
   thousandSeparator?: string;
-  isNumericString?: boolean;
+  valueIsNumericString?: boolean;
   prefix?: string;
   decimalSeparator?: string;
   decimalScale?: number;
