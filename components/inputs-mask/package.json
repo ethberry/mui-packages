@@ -8,8 +8,8 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-inputs-core": "7.0.41",
-    "@gemunion/provider-test-id": "1.0.9",
+    "@gemunion/mui-inputs-core": "7.0.42",
+    "@gemunion/provider-test-id": "1.0.10",
     "@mui/styles": "5.10.6",
     "mathjs": "11.2.1",
     "react-number-format": "5.0.0"
@@ -57,5 +57,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "5.3.33"
+  "version": "5.4.0"
 }

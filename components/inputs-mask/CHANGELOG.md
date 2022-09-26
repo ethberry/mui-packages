@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.4.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.3.33...@gemunion/mui-inputs-mask@5.4.0) (2022-09-26)
+
+
+### Features
+
+* update react-number-format ([529cfea](https://github.com/gemunion/mui-packages/commit/529cfeaa70a77eefdc2ce8a5db390dc110350180))
+
+
+
+
+
 ## [5.3.33](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.3.32...@gemunion/mui-inputs-mask@5.3.33) (2022-09-24)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
