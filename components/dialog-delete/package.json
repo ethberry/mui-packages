@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/mui-dialog-confirmation": "3.2.32",
-    "@gemunion/mui-page-layout": "2.0.4"
+    "@gemunion/mui-page-layout": "2.0.5"
   },
   "description": "react widget",
   "devDependencies": {
@@ -58,5 +58,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.2.32"
+  "version": "3.2.33"
 }

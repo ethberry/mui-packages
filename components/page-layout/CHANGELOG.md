@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.5 (2022-09-27)
+
+
+### Bug Fixes
+
+* breadcrumbs path ([21e1dbd](https://github.com/gemunion/mui-packages/commit/21e1dbdd098ab5b5fec4156fc6f9402074918592))
+
+
+
+
+
 ## [2.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-page-layout@2.0.3...@gemunion/mui-page-layout@2.0.4) (2022-09-26)
 
 **Note:** Version bump only for package @gemunion/mui-page-layout
