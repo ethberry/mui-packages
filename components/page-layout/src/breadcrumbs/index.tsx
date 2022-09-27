@@ -1,10 +1,10 @@
-import { FC } from "react";
+import { FC, useMemo } from "react";
 import { FormattedMessage } from "react-intl";
 import { Breadcrumbs as MuiBreadcrumbs, Link, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 
 export interface IBreadcrumbsProps {
-  path: Array<string>;
+  path: Array<string> | Record<string, string>;
   isHidden?: boolean;
   data?: Array<any>;
 }
@@ -16,19 +16,30 @@ export const Breadcrumbs: FC<IBreadcrumbsProps> = props => {
     return null;
   }
 
+  const mappedPath = useMemo(
+    () =>
+      Array.isArray(path)
+        ? path.map(item => ({ path: item, title: item }))
+        : Object.keys(path).map(key => ({
+            path: path[key],
+            title: key,
+          })),
+    [path],
+  );
+
   return (
     <MuiBreadcrumbs aria-label="breadcrumbs">
-      {path.map((e, i) => {
-        if (i === path.length - 1) {
+      {mappedPath.map(({ path, title }, i) => {
+        if (i === mappedPath.length - 1) {
           return (
             <Typography color="textPrimary" key={i}>
-              <FormattedMessage id={`pages.${e}.title`} values={data[i]} />
+              <FormattedMessage id={`pages.${title}.title`} values={data[i]} />
             </Typography>
           );
         }
         return (
-          <Link color="inherit" component={RouterLink} to={`/${e.replace(".", "-")}`} key={i}>
-            <FormattedMessage id={`pages.${e}.title`} values={data[i]} />
+          <Link color="inherit" component={RouterLink} to={`/${path}`} key={i}>
+            <FormattedMessage id={`pages.${title}.title`} values={data[i]} />
           </Link>
         );
       })}
