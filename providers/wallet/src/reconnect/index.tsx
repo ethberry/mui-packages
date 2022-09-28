@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react";
+import { FC, useCallback, useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 import { ProviderRpcError } from "@web3-react/types";
 
@@ -16,19 +16,19 @@ export const Reconnect: FC<IReconnectProps> = props => {
   const { isActive, connector } = useWeb3React();
   const { network } = useWallet();
 
-  const handleConnect = async () => {
-    if (!isActive && activeConnector) {
+  const handleConnect = useCallback(async () => {
+    if (!isActive && activeConnector && network) {
       await getConnectorByName(activeConnector)
         ?.activate(network.chainId)
         .catch((error: ProviderRpcError) => {
           console.error("Reconnect error", error);
         });
     }
-  };
+  }, [network]);
 
   useEffect(() => {
     void handleConnect();
-  }, []);
+  }, [network]);
 
   useEffect(() => {
     if (isActive) {
@@ -38,7 +38,7 @@ export const Reconnect: FC<IReconnectProps> = props => {
         localStorage.setItem(STORE_CONNECTOR, JSON.stringify(newConnector));
       }
     }
-  }, [isActive]);
+  }, [isActive, network]);
 
   return null;
 };

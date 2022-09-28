@@ -3,7 +3,6 @@ import { INetwork } from "../interfaces";
 
 /* javascript-obfuscator:disable */
 const jsonRpcUrl = process.env.JSON_RPC_ADDR;
-// const chainId = ~~process.env.CHAIN_ID;
 /* javascript-obfuscator:enable */
 
 export enum Networks {
@@ -18,7 +17,6 @@ export enum Networks {
   OPTIMISM = "OPTIMISM",
   ARBITRUM = "ARBITRUM",
   BESU = "BESU",
-  // CUSTOM = "CUSTOM",
 }
 
 export const networkToChainId: Record<Networks, number> = {
@@ -33,7 +31,6 @@ export const networkToChainId: Record<Networks, number> = {
   [Networks.OPTIMISM]: 10,
   [Networks.ARBITRUM]: 42161,
   [Networks.BESU]: 1337,
-  // [Networks.CUSTOM]: chainId,
 };
 
 // information from https://chainlist.org/
@@ -76,7 +73,6 @@ export const rpcUrls: Record<string, string[]> = {
     "https://rpc-mumbai.maticvigil.com",
   ],
   [networkToChainId[Networks.BESU]]: [jsonRpcUrl, "http://127.0.0.1:8545"],
-  // [networkToChainId[Networks.CUSTOM]]: [jsonRpcUrl],
 };
 
 export const networks: Record<number, INetwork> = {
@@ -179,17 +175,6 @@ export const networks: Record<number, INetwork> = {
       decimals: 18,
     },
   },
-  // [networkToChainId[Networks.CUSTOM]]: {
-  //   chainName: "Unidentified Custom Blockchain",
-  //   chainId: networkToChainId[Networks.CUSTOM],
-  //   rpcUrls: rpcUrls[networkToChainId[Networks.CUSTOM]],
-  //   blockExplorerUrls: [],
-  //   nativeCurrency: {
-  //     name: "ETH",
-  //     symbol: "ETH",
-  //     decimals: 18,
-  //   },
-  // },
 };
 
 export const STORE_CONNECTOR = "CONNECTOR";

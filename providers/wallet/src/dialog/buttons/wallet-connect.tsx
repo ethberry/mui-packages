@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useCallback } from "react";
 import { IconButton } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 import { WalletConnect } from "@web3-react/walletconnect";
@@ -25,8 +25,12 @@ export const WalletConnectButton: FC<IWalletConnectButtonProps> = props => {
   const { isActive, connector } = useWeb3React();
   const { setActiveConnector, network, connectCallback } = useWallet();
 
-  const handleClick = () => {
-    void connectCallback(() => {
+  const handleClick = useCallback(() => {
+    void connectCallback(async () => {
+      if (!network) {
+        return;
+      }
+
       return walletConnect
         .activate(network.chainId)
         .then(() => {
@@ -46,7 +50,7 @@ export const WalletConnectButton: FC<IWalletConnectButtonProps> = props => {
           }
         });
     });
-  };
+  }, [network]);
 
   return (
     <CustomBadge invisible={!isActive || !(connector instanceof WalletConnect)}>

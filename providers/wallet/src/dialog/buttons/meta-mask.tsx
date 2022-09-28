@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useCallback } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { useSnackbar, OptionsObject } from "notistack";
 import { Button, IconButton } from "@mui/material";
@@ -37,8 +37,12 @@ export const MetaMaskButton: FC<IMetaMaskButtonProps> = props => {
     ),
   };
 
-  const handleClick = () => {
-    void connectCallback(() => {
+  const handleClick = useCallback(() => {
+    void connectCallback(async () => {
+      if (!network) {
+        return;
+      }
+
       if (!(window as any).ethereum) {
         enqueueSnackbar(formatMessage({ id: "snackbar.web3-not-detected" }), notDetectedWeb3MessageConfig);
       }
@@ -64,7 +68,7 @@ export const MetaMaskButton: FC<IMetaMaskButtonProps> = props => {
           }
         });
     });
-  };
+  }, [network]);
 
   return (
     <CustomBadge invisible={!isActive || !(connector instanceof MetaMask)}>
