@@ -7,10 +7,6 @@
   "bugs": {
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
-  "dependencies": {
-    "react": "18.2.0",
-    "react-intl": "6.1.1"
-  },
   "description": "react test id provider",
   "devDependencies": {
     "@types/react": "18.0.21",
