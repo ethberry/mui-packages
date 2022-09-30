@@ -3,13 +3,12 @@ import { IntlProvider } from "react-intl";
 import { cleanup, render } from "@testing-library/react";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { MemoryRouter } from "react-router-dom";
-import fetch from "node-fetch";
+import "whatwg-fetch";
 
 import { LicenseProvider } from "@gemunion/provider-license";
 
 import { FormDialog } from "./";
 
-beforeAll(() => (window.fetch = window.fetch || fetch));
 afterEach(cleanup);
 
 const i18n = {

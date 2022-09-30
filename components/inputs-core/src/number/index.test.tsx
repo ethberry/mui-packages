@@ -4,7 +4,7 @@ import { MemoryRouter } from "react-router-dom";
 import { cleanup, render } from "@testing-library/react";
 import { FormProvider, useForm } from "react-hook-form";
 import { createTheme, ThemeProvider } from "@mui/material";
-import fetch from "node-fetch";
+import "whatwg-fetch";
 
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
