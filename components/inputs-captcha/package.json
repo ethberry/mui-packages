@@ -8,18 +8,18 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/provider-test-id": "1.0.13",
+    "@gemunion/provider-test-id": "1.0.15",
     "react-google-recaptcha": "2.1.0"
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.10.6",
-    "@mui/styles": "5.10.6",
+    "@mui/material": "5.10.7",
+    "@mui/styles": "5.10.7",
     "@types/react": "18.0.21",
     "@types/react-google-recaptcha": "2.1.5",
     "react": "18.2.0",
     "react-hook-form": "7.36.1",
-    "react-intl": "6.1.1"
+    "react-intl": "6.1.2"
   },
   "engines": {
     "node": ">=12.13"
@@ -53,5 +53,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "4.1.28"
+  "version": "4.1.30"
 }

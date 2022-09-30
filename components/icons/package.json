@@ -9,7 +9,7 @@
   },
   "description": "react icons",
   "devDependencies": {
-    "@mui/material": "5.10.6",
+    "@mui/material": "5.10.7",
     "@storybook/react": "6.5.12",
     "@types/react": "18.0.21",
     "react": "18.2.0"
@@ -43,5 +43,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "1.0.5"
+  "version": "1.0.6"
 }
