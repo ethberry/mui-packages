@@ -1,6 +1,7 @@
 import { IntlProvider } from "react-intl";
 import { cleanup, render } from "@testing-library/react";
 import { createTheme, ThemeProvider } from "@mui/material";
+import "whatwg-fetch";
 
 import { ConfirmationDialog } from "./index";
 
