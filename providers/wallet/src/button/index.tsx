@@ -1,4 +1,4 @@
-import { FC, useMemo } from "react";
+import { FC, useCallback, useMemo } from "react";
 import { Badge, Box, IconButton, Tooltip } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 import { useIntl } from "react-intl";
@@ -20,16 +20,12 @@ export const Wallet: FC = () => {
   const { profile } = useUser<any>();
   const { closeConnectWalletDialog } = useWallet();
 
-  const handleOpenWalletDialog = () => {
-    openPopup(WALLET_MENU_POPUP_TYPE);
-  };
+  const handleOpenDialog = useCallback(() => {
+    openPopup(isActive ? WALLET_MENU_POPUP_TYPE : WALLET_CONNECT_POPUP_TYPE);
+  }, [isActive]);
 
   const handleCloseWalletDialog = () => {
     closePopup();
-  };
-
-  const handleOpenConnectDialog = () => {
-    openPopup(WALLET_CONNECT_POPUP_TYPE);
   };
 
   if (!license.isValid()) {
@@ -53,23 +49,13 @@ export const Wallet: FC = () => {
 
   return (
     <Box mx={1}>
-      {isActive ? (
-        <Tooltip title={tooltipTitle} enterDelay={300}>
-          <IconButton color="inherit" onClick={handleOpenWalletDialog} data-testid="OpenWalletOptionsDialog">
-            <Badge color="error" badgeContent="!" invisible={isChainValid}>
-              <WalletIcon />
-            </Badge>
-          </IconButton>
-        </Tooltip>
-      ) : (
-        <Tooltip title={tooltipTitle} enterDelay={300}>
-          <IconButton color="inherit" onClick={handleOpenConnectDialog} data-testid="OpenWalletConnectDialog">
-            <Badge color="error" badgeContent="!" invisible={isChainValid}>
-              <WalletIcon />
-            </Badge>
-          </IconButton>
-        </Tooltip>
-      )}
+      <Tooltip title={tooltipTitle} enterDelay={300}>
+        <IconButton color="inherit" onClick={handleOpenDialog} data-testid="OpenWalletOptionsDialog">
+          <Badge color="error" badgeContent="!" invisible={isChainValid}>
+            <WalletIcon />
+          </Badge>
+        </IconButton>
+      </Tooltip>
       <WalletDialog onClose={closeConnectWalletDialog} open={isOpenPopup(WALLET_CONNECT_POPUP_TYPE)} />
       <WalletMenuDialog onClose={handleCloseWalletDialog} open={isOpenPopup(WALLET_MENU_POPUP_TYPE)} />
     </Box>
