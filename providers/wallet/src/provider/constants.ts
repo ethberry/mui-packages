@@ -33,6 +33,14 @@ export const networkToChainId: Record<Networks, number> = {
   [Networks.BESU]: 1337,
 };
 
+export const chainIdToNetwork: Record<number, Networks> = (Object.keys(networkToChainId) as Networks[]).reduce(
+  (memo: Record<number, Networks>, current: Networks) => {
+    memo[networkToChainId[current]] = current;
+    return memo;
+  },
+  {},
+);
+
 // information from https://chainlist.org/
 export const rpcUrls: Record<string, string[]> = {
   [networkToChainId[Networks.ETHEREUM]]: [
