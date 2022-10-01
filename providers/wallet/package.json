@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/constants": "0.8.6",
+    "@gemunion/constants": "0.8.7",
     "@walletconnect/ethereum-provider": "1.8.0",
     "@web3-react/core": "8.0.35-beta.0",
     "@web3-react/empty": "8.0.20-beta.0",
@@ -21,10 +21,10 @@
   },
   "description": "react wallet provider",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.2",
+    "@gemunion/provider-api": "7.0.3",
     "@gemunion/provider-license": "2.0.0",
-    "@gemunion/provider-popup": "1.0.3",
-    "@gemunion/provider-user": "5.0.2",
+    "@gemunion/provider-popup": "1.0.4",
+    "@gemunion/provider-user": "5.0.3",
     "@mui/icons-material": "5.10.6",
     "@mui/material": "5.10.7",
     "@mui/styles": "5.10.7",
