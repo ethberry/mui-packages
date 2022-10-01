@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/firebase": "1.1.30",
-    "@gemunion/provider-license": "2.0.0",
+    "@gemunion/provider-license": "3.0.0",
     "@mui/icons-material": "5.10.6",
     "firebaseui": "6.0.1"
   },
