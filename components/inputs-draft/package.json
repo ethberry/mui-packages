@@ -18,7 +18,7 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@gemunion/provider-license": "2.0.0",
+    "@gemunion/provider-license": "3.0.0",
     "@mui/icons-material": "5.10.6",
     "@mui/material": "5.10.7",
     "@mui/styles": "5.10.7",
@@ -39,7 +39,7 @@
   "main": "./dist/index.js",
   "name": "@gemunion/mui-inputs-draft",
   "peerDependencies": {
-    "@gemunion/provider-license": "^2.0.0",
+    "@gemunion/provider-license": "^2.0.0 || ^3.0.0",
     "@mui/icons-material": "^5.0.0",
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",

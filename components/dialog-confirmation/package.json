@@ -9,7 +9,7 @@
   },
   "description": "react widget",
   "dependencies": {
-    "@gemunion/provider-license": "2.0.0"
+    "@gemunion/provider-license": "3.0.0"
   },
   "devDependencies": {
     "@mui/material": "5.10.7",
