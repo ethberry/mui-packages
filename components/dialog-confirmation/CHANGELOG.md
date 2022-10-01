@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.2.34 (2022-10-01)
+
+
+### Bug Fixes
+
+* replace fetch library for tests ([09c8b8b](https://github.com/gemunion/mui-packages/commit/09c8b8b7737d76db3bf43afd7d9f334a750b0418))
+
+
+
+
+
 ## 3.2.33 (2022-09-29)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-confirmation

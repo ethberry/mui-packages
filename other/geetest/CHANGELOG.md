@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.48 (2022-10-01)
+
+
+### Bug Fixes
+
+* **deps:** update [@gemunion](https://github.com/gemunion) packages ([cc8e9a2](https://github.com/gemunion/common-packages/commit/cc8e9a2102da030c96fff97b2aa9ffe876eb4234))
+
+
+
+
+
 ## [2.0.47](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.0.46...@gemunion/geetest@2.0.47) (2022-09-29)
 
 **Note:** Version bump only for package @gemunion/geetest

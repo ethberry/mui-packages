@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.0.49 (2022-10-01)
+
+
+### Bug Fixes
+
+* **deps:** update [@gemunion](https://github.com/gemunion) packages ([cc8e9a2](https://github.com/gemunion/mui-packages/commit/cc8e9a2102da030c96fff97b2aa9ffe876eb4234))
+* replace fetch library for tests ([09c8b8b](https://github.com/gemunion/mui-packages/commit/09c8b8b7737d76db3bf43afd7d9f334a750b0418))
+
+
+
+
+
 ## [7.0.48](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.0.47...@gemunion/mui-inputs-core@7.0.48) (2022-09-29)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core

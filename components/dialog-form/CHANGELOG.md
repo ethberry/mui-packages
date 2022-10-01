@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 8.0.9 (2022-10-01)
+
+
+### Bug Fixes
+
+* replace fetch library for tests ([09c8b8b](https://github.com/gemunion/mui-packages/commit/09c8b8b7737d76db3bf43afd7d9f334a750b0418))
+
+
+
+
+
 ## [8.0.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.0.7...@gemunion/mui-dialog-form@8.0.8) (2022-09-29)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
