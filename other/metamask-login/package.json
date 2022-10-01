@@ -8,17 +8,17 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/constants": "0.8.6",
+    "@gemunion/constants": "0.8.7",
     "@gemunion/mui-page-layout": "2.0.6",
     "@gemunion/provider-license": "2.0.0",
-    "@gemunion/types-jwt": "0.3.4",
+    "@gemunion/types-jwt": "0.3.5",
     "@web3-react/core": "8.0.35-beta.0",
     "uuid": "9.0.0"
   },
   "description": "react component",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.2",
-    "@gemunion/provider-user": "5.0.2",
+    "@gemunion/provider-api": "7.0.3",
+    "@gemunion/provider-user": "5.0.3",
     "@gemunion/provider-wallet": "3.0.6",
     "@mui/material": "5.10.7",
     "@mui/styles": "5.10.7",
