@@ -1,5 +1,4 @@
 import { FC, PropsWithChildren } from "react";
-
 import { CssBaseline } from "@mui/material";
 import {
   createTheme,
@@ -8,6 +7,7 @@ import {
   ThemeOptions,
   ThemeProvider as MuiThemeProvider,
 } from "@mui/material/styles";
+
 import { useSettings } from "@gemunion/provider-settings";
 
 import { dark, light } from "./palette";

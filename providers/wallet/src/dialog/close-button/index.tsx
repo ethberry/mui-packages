@@ -2,8 +2,6 @@ import { FC } from "react";
 import { IconButton } from "@mui/material";
 import { Close } from "@mui/icons-material";
 
-import { useStyles } from "./styles";
-
 export interface ICloseButtonProps {
   onClick: () => void;
 }
@@ -11,14 +9,21 @@ export interface ICloseButtonProps {
 export const CloseButton: FC<ICloseButtonProps> = props => {
   const { onClick } = props;
 
-  const classes = useStyles();
-
   const handleClick = () => {
     onClick();
   };
 
   return (
-    <IconButton aria-label="close" onClick={handleClick} className={classes.button}>
+    <IconButton
+      aria-label="close"
+      onClick={handleClick}
+      sx={{
+        position: "absolute",
+        right: theme => theme.spacing(1),
+        top: theme => theme.spacing(1),
+        color: theme => theme.palette.grey[500],
+      }}
+    >
       <Close />
     </IconButton>
   );

@@ -2,7 +2,6 @@ import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { useFormContext, Controller } from "react-hook-form";
 import { Checkbox, CheckboxProps, FormControlLabel } from "@mui/material";
-import { useStyles } from "./styles";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
@@ -13,7 +12,6 @@ export interface ICheckboxInputProps extends CheckboxProps {
 
 export const CheckboxInput: FC<ICheckboxInputProps> = props => {
   const { name, label, ...rest } = props;
-  const classes = useStyles();
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
@@ -31,7 +29,7 @@ export const CheckboxInput: FC<ICheckboxInputProps> = props => {
       control={form.control}
       render={({ field }) => (
         <FormControlLabel
-          classes={classes}
+          sx={{ my: 1 }}
           control={<Checkbox {...field} checked={field.value} {...testIdProps} {...rest} />}
           label={localizedLabel}
         />

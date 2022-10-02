@@ -13,10 +13,7 @@ import { useLicense } from "@gemunion/provider-license";
 import { IUser, useUser } from "@gemunion/provider-user";
 import { useWallet } from "@gemunion/provider-wallet";
 
-import { useStyles } from "./styles";
-
 export const MetamaskLogin: FC = () => {
-  const classes = useStyles();
   const license = useLicense();
 
   const { enqueueSnackbar } = useSnackbar();
@@ -89,7 +86,17 @@ export const MetamaskLogin: FC = () => {
   }
 
   return (
-    <Grid container className={classes.section}>
+    <Grid
+      container
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "calc(100vh - 64px)",
+        maxWidth: 500,
+        margin: "0 auto",
+      }}
+    >
       <Grid item sm={12}>
         <PageHeader message="pages.guest.login" />
         {isActive ? (

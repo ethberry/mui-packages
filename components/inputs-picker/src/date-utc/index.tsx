@@ -7,8 +7,6 @@ import { addMinutes, subMinutes } from "date-fns";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
-import { useStyles } from "./styles";
-
 interface IDateUtcInputProps {
   name: string;
   label?: string | number | ReactElement;
@@ -20,7 +18,6 @@ interface IDateUtcInputProps {
 
 export const DateUtcInput: FC<IDateUtcInputProps> = props => {
   const { name, label, variant = "standard", readOnly, ...rest } = props;
-  const classes = useStyles();
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
@@ -58,7 +55,7 @@ export const DateUtcInput: FC<IDateUtcInputProps> = props => {
           }}
           renderInput={(props: TextFieldProps): ReactElement => (
             <TextField
-              className={classes.root}
+              sx={{ my: 1 }}
               name={field.name}
               inputRef={field.ref}
               onBlur={field.onBlur}

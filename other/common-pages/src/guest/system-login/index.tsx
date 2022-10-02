@@ -11,11 +11,9 @@ import { ILoginDto, IUser, useUser } from "@gemunion/provider-user";
 import { useDidMountEffect } from "@gemunion/react-hooks";
 
 import { validationSchema } from "./validation";
-import { useStyles } from "./styles";
 import { LoginButtons } from "./buttons";
 
 export const SystemLogin: FC = () => {
-  const classes = useStyles();
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
@@ -57,7 +55,17 @@ export const SystemLogin: FC = () => {
   }, []);
 
   return (
-    <Grid container className={classes.section}>
+    <Grid
+      container
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "calc(100vh - 64px)",
+        maxWidth: 500,
+        margin: "0 auto",
+      }}
+    >
       <Grid item sm={12}>
         <PageHeader message="pages.guest.login" />
 

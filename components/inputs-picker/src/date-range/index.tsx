@@ -6,8 +6,6 @@ import { DateRange, DateRangePicker } from "@mui/x-date-pickers-pro";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
-import { useStyles } from "./styles";
-
 interface IDateTimeInputProps {
   name: string;
   readOnly?: boolean;
@@ -18,7 +16,6 @@ interface IDateTimeInputProps {
 
 export const DateRangeInput: FC<IDateTimeInputProps> = props => {
   const { name, variant = "standard", readOnly, ...rest } = props;
-  const classes = useStyles();
 
   const { testId } = useTestId();
   const getTestIdProps = (suffix: string) => (testId ? { "data-testid": `${testId}-${name}-${suffix}` } : {});
@@ -51,7 +48,7 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
             return (
               <Fragment>
                 <TextField
-                  className={classes.root}
+                  sx={{ my: 1 }}
                   {...form.register(`${name}Start`)}
                   {...startProps}
                   helperText={localizedHelperTextStart}
@@ -66,7 +63,7 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
                 />
                 <Box sx={{ mx: 1 }}> &raquo; </Box>
                 <TextField
-                  className={classes.root}
+                  sx={{ my: 1 }}
                   {...form.register(`${name}End`)}
                   {...endProps}
                   helperText={localizedHelperTextEnd}

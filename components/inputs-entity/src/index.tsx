@@ -8,7 +8,6 @@ import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useApi } from "@gemunion/provider-api";
 import { useTestId } from "@gemunion/provider-test-id";
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
-import { useStyles } from "./styles";
 
 export interface IAutocompleteOption {
   id: string | number;
@@ -52,7 +51,6 @@ export const EntityInput: FC<IEntityInputProps> = props => {
     disableClear,
   } = props;
   const suffix = name.split(".").pop() as string;
-  const classes = useStyles();
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
@@ -116,7 +114,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                 onOpen={() => !readOnly && setOpen(true)}
                 onClose={() => setOpen(false)}
                 disableClearable={disableClear}
-                classes={classes}
+                sx={{ my: 1 }}
                 multiple={true}
                 disabled={disabled}
                 options={options}
@@ -166,7 +164,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                 onOpen={() => !readOnly && setOpen(true)}
                 onClose={() => setOpen(false)}
                 disableClearable={disableClear}
-                classes={classes}
+                sx={{ my: 1 }}
                 multiple={false}
                 disabled={disabled}
                 options={options}

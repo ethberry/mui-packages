@@ -5,8 +5,6 @@ import { FormControlLabel, Switch, SwitchProps } from "@mui/material";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
-import { useStyles } from "./styles";
-
 export interface ISwitchInputProps extends SwitchProps {
   name: string;
   label?: string | number | ReactElement;
@@ -14,7 +12,6 @@ export interface ISwitchInputProps extends SwitchProps {
 
 export const SwitchInput: FC<ISwitchInputProps & SwitchProps> = props => {
   const { name, label, ...rest } = props;
-  const classes = useStyles();
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
@@ -32,7 +29,7 @@ export const SwitchInput: FC<ISwitchInputProps & SwitchProps> = props => {
       control={form.control}
       render={({ field }) => (
         <FormControlLabel
-          classes={classes}
+          sx={{ my: 1 }}
           control={
             <Switch
               name={field.name}

@@ -1,15 +1,11 @@
-import { FC, Fragment, ReactNode, useEffect, useState } from "react";
+import { FC, Fragment, PropsWithChildren, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 
 import { useUser } from "@gemunion/provider-user";
 
 import { MetamaskLogin } from "../../guest/login";
 
-export interface IMetamaskProtectedProps {
-  children?: ReactNode;
-}
-
-export const MetamaskProtected: FC<IMetamaskProtectedProps> = props => {
+export const MetamaskProtected: FC<PropsWithChildren> = props => {
   const { children } = props;
 
   const [isReady, setIsReady] = useState(false);

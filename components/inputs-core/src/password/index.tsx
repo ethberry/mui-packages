@@ -4,13 +4,11 @@ import { IconButton, InputAdornment } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 import { TextInput, ITextInputProps } from "../text";
-import { useStyles } from "./styles";
 
 export type IPasswordInputProps = ITextInputProps;
 
 export const PasswordInput: FC<IPasswordInputProps> = props => {
   const [show, setShow] = useState(false);
-  const classes = useStyles();
 
   const handleClick = (e: MouseEvent): void => {
     e.preventDefault();
@@ -19,7 +17,7 @@ export const PasswordInput: FC<IPasswordInputProps> = props => {
 
   return (
     <TextInput
-      classes={classes}
+      sx={{ my: 1 }}
       type={show ? "text" : "password"}
       InputProps={{
         endAdornment: (

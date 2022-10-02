@@ -10,6 +10,7 @@ export const LoginButtons: FC = () => {
   const {
     formState: { isSubmitting },
   } = useFormContext();
+
   return (
     <ButtonToolbar>
       <Button variant="text" type="button" to="/forgot-password" component={RouterLink} data-testid="ForgotEmailButton">

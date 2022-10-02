@@ -83,8 +83,8 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
   };
 
   return (
-    <FormControl fullWidth className={classes.root}>
-      <InputLabel id={`form.labels.${name}`} shrink className={classes.label}>
+    <FormControl fullWidth sx={{ mt: 2 }}>
+      <InputLabel id={`form.labels.${name}`} shrink>
         <FormattedMessage id={`form.labels.${name}`} />
       </InputLabel>
 
@@ -96,8 +96,8 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
               direction="row"
               justifyContent="flex-start"
               alignItems="flex-start"
-              className={classes.container}
               ref={provided.innerRef}
+              sx={{ mt: 1 }}
               {...provided.droppableProps}
             >
               <Grid item>
@@ -120,7 +120,10 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
                         <CardMedia
                           image={option.imageUrl}
                           onClick={openUrlOnClick(option.imageUrl)}
-                          className={classes.media}
+                          sx={{
+                            width: 200,
+                            height: 150,
+                          }}
                         />
                         <CardContent>
                           <TextInput name={`${name}[${i}].title`} value={option.title} />

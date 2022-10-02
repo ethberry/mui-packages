@@ -10,7 +10,6 @@ import { TextInput } from "@gemunion/mui-inputs-core";
 import { FormWrapper } from "@gemunion/mui-form";
 import { ApiError, useApi } from "@gemunion/provider-api";
 
-import { useStyles } from "./styles";
 import { validationSchema } from "./validation";
 
 interface IResendVerificationEmailDto {
@@ -19,7 +18,6 @@ interface IResendVerificationEmailDto {
 }
 
 export const ResendVerificationEmail: FC = () => {
-  const classes = useStyles();
   const navigate = useNavigate();
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
@@ -53,7 +51,14 @@ export const ResendVerificationEmail: FC = () => {
   };
 
   return (
-    <Grid container className={classes.section}>
+    <Grid
+      container
+      sx={{
+        alignItems: "center",
+        maxWidth: 500,
+        margin: "0 auto",
+      }}
+    >
       <Grid item sm={10}>
         <PageHeader message="pages.guest.resendVerificationEmail" />
 

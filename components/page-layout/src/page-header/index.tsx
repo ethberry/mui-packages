@@ -1,30 +1,55 @@
 import { FC, PropsWithChildren } from "react";
 import { FormattedMessage } from "react-intl";
-import clsx from "clsx";
-
 import { Grid, Typography } from "@mui/material";
+import { SxProps, Theme } from "@mui/material/styles";
 
 import { ButtonToolbar } from "../button-toolbar";
-import { useStyles } from "./styles";
 
 export interface IPageHeader {
   message: string;
   data?: any;
-  className?: string;
+  sx?: SxProps<Theme>;
 }
 
 export const PageHeader: FC<PropsWithChildren<IPageHeader>> = props => {
-  const { children, message, data, className } = props;
-  const classes = useStyles();
+  const { children, message, data, sx = [] } = props;
+
   return (
-    <Grid className={clsx(classes.header, className)} container justifyContent="space-between" alignItems="center">
-      <Grid item className={classes.wrapper}>
-        <Typography component="h2" className={classes.title}>
+    <Grid
+      container
+      justifyContent="space-between"
+      alignItems="center"
+      sx={[
+        {
+          alignItems: "center",
+          justifyContent: "space-between",
+          mb: 3,
+          mt: 2,
+        },
+        ...(Array.isArray(sx) ? sx : [sx]),
+      ]}
+    >
+      <Grid item sx={{ mr: 2 }}>
+        <Typography
+          component="h2"
+          sx={[
+            theme => ({
+              ...theme.typography.h4,
+              lineHeight: "52px",
+            }),
+          ]}
+        >
           <FormattedMessage id={message} values={data} />
         </Typography>
       </Grid>
 
-      <Grid item className={classes.buttons}>
+      <Grid
+        item
+        sx={{
+          display: "flex",
+          flexGrow: 1,
+        }}
+      >
         <ButtonToolbar>{children}</ButtonToolbar>
       </Grid>
     </Grid>

@@ -2,7 +2,7 @@ import { FC, ReactElement, useCallback } from "react";
 import clsx from "clsx";
 import { DropzoneOptions, FileRejection, useDropzone } from "react-dropzone";
 import { CloudOff, CloudUpload, CloudUploadOutlined } from "@mui/icons-material";
-import { FormHelperText } from "@mui/material";
+import { Box, FormHelperText } from "@mui/material";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";
@@ -90,15 +90,15 @@ export const FileInput: FC<IFileInputProps> = props => {
 
   if (disabled) {
     return (
-      <div className={clsx(classes.placeholder, props.classes?.root)}>
+      <Box className={clsx(classes.placeholder, props.classes?.root)}>
         <CloudOff className={clsx(classes.icon, props.classes?.disabled)} />
-      </div>
+      </Box>
     );
   }
 
   return (
-    <div className={classes.wrapper}>
-      <div {...getRootProps()} className={clsx(classes.placeholder, props.classes?.root)}>
+    <Box className={classes.wrapper}>
+      <Box {...getRootProps()} className={clsx(classes.placeholder, props.classes?.root)}>
         <Controller
           name={name}
           control={form.control}
@@ -112,12 +112,12 @@ export const FileInput: FC<IFileInputProps> = props => {
         ) : (
           <CloudUpload className={clsx(classes.icon, props.classes?.inactive)} />
         )}
-      </div>
+      </Box>
       {localizedHelperText && (
         <FormHelperText id={`${name}-helper-text`} error>
           {localizedHelperText}
         </FormHelperText>
       )}
-    </div>
+    </Box>
   );
 };
