@@ -2,10 +2,7 @@ import { initializeConnector, Web3ReactHooks } from "@web3-react/core";
 import { Web3ReactStore } from "@web3-react/types";
 import { WalletConnect } from "@web3-react/walletconnect";
 
-/* javascript-obfuscator:disable */
-const jsonRpcUrl = process.env.JSON_RPC_ADDR;
-const chainId = process.env.CHAIN_ID;
-/* javascript-obfuscator:enable */
+import { rpcUrls } from "../provider";
 
 export const [walletConnect, hooks, store]: [WalletConnect, Web3ReactHooks, Web3ReactStore] =
   initializeConnector<WalletConnect>(
@@ -13,9 +10,7 @@ export const [walletConnect, hooks, store]: [WalletConnect, Web3ReactHooks, Web3
       new WalletConnect({
         actions,
         options: {
-          rpc: {
-            [chainId]: jsonRpcUrl,
-          },
+          rpc: rpcUrls,
           qrcode: true,
         },
       }),

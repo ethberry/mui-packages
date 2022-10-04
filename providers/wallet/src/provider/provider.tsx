@@ -1,8 +1,9 @@
-import { FC, PropsWithChildren, useCallback, useState } from "react";
+import { FC, PropsWithChildren, useCallback, useEffect, useState } from "react";
 import { Web3ReactProvider, Web3ReactHooks, Web3ContextType } from "@web3-react/core";
 
-import { usePopup } from "@gemunion/provider-popup";
 import { useLicense } from "@gemunion/provider-license";
+import { usePopup } from "@gemunion/provider-popup";
+import { useUser } from "@gemunion/provider-user";
 
 import { ConnectorsTypes } from "../connectors";
 import { TConnectors } from "../connectors/types";
@@ -15,26 +16,19 @@ import { Reconnect } from "../reconnect";
 import { CheckNetwork } from "../check-network";
 import { OnWalletConnect } from "../on-wallet-connect";
 
-interface IWalletProviderProps {
-  targetNetwork?: INetwork;
-}
-
 const connectors: [ConnectorsTypes, Web3ReactHooks][] = [
   [metaMask, metaMaskHooks],
   [walletConnect, walletConnectHooks],
 ];
 
-/* javascript-obfuscator:disable */
-const targetNetworkId = ~~process.env.CHAIN_ID;
-/* javascript-obfuscator:enable */
+export const WalletProvider: FC<PropsWithChildren> = props => {
+  const { children } = props;
 
-export const WalletProvider: FC<PropsWithChildren<IWalletProviderProps>> = props => {
-  const { targetNetwork = networks[targetNetworkId], children } = props;
-
-  const { openPopup, closePopup, isOpenPopup } = usePopup();
   const license = useLicense();
+  const { openPopup, closePopup, isOpenPopup } = usePopup();
+  const { profile } = useUser<any>();
 
-  const [network, setNetwork] = useState<INetwork>(targetNetwork);
+  const [network, setNetwork] = useState<INetwork | null>(null);
 
   const storedConnector = localStorage.getItem(STORE_CONNECTOR);
   const [activeConnector, setActiveConnector] = useState<TConnectors | null>(
@@ -78,12 +72,21 @@ export const WalletProvider: FC<PropsWithChildren<IWalletProviderProps>> = props
     [resolve],
   );
 
+  useEffect(() => {
+    if (profile?.chainId) {
+      setNetwork(networks[profile.chainId]);
+    }
+  }, [profile]);
+
   if (!license.isValid()) {
     return null;
   }
 
   return (
-    <Web3ReactProvider connectors={connectors} network={getNetworkForWeb3Provider(network.chainId)}>
+    <Web3ReactProvider
+      connectors={connectors}
+      network={network ? getNetworkForWeb3Provider(network.chainId) : undefined}
+    >
       <WalletContext.Provider
         value={{
           activeConnector,

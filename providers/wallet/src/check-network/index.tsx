@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react";
+import { FC, useCallback, useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 
 import { useWallet } from "../provider";
@@ -16,7 +16,11 @@ export const CheckNetwork: FC = () => {
     setActiveConnector(null);
   };
 
-  const checkChainId = async () => {
+  const checkChainId = useCallback(async () => {
+    if (!network) {
+      return;
+    }
+
     try {
       await connector?.provider?.request({
         method: "wallet_switchEthereumChain",
@@ -47,13 +51,13 @@ export const CheckNetwork: FC = () => {
         console.error(error);
       }
     }
-  };
+  }, [network]);
 
   useEffect(() => {
     if (connector && isActive && chainId) {
       void checkChainId();
     }
-  }, [connector, isActive, chainId]);
+  }, [connector, isActive, chainId, network]);
 
   return null;
 };

@@ -12,7 +12,7 @@ export interface IWalletContext {
   activeConnector: TConnectors | null;
   setActiveConnector: (value: TConnectors | null) => void;
   setNetwork: (network: INetwork) => void;
-  network: INetwork;
+  network: INetwork | null;
 }
 
 export const WalletContext = createContext<IWalletContext>(undefined!);
