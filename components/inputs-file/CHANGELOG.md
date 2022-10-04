@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.0.38 (2022-10-04)
+
+
+### Bug Fixes
+
+* rewrite styles to sx (still need to fix button-toolbar and file-input with images) ([e5cdc9e](https://github.com/gemunion/mui-packages/commit/e5cdc9effa8fd339ce3749b549cf35303fda3ab2))
+
+
+
+
+
 ## [6.0.37](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@6.0.36...@gemunion/mui-inputs-file@6.0.37) (2022-09-29)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file

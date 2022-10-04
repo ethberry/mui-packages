@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.8](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.0.7...@gemunion/provider-wallet@3.0.8) (2022-10-04)
+
+
+### Bug Fixes
+
+* constants add chainIdToNetwork and fix Wallet button ([314fb86](https://github.com/gemunion/mui-packages/commit/314fb8688366752c4b200670eaa6a63bc0ab52ff))
+* get rid of CHAIN_ID env param and implement badge if chain is not valid according to profile ([f4cef78](https://github.com/gemunion/mui-packages/commit/f4cef789b7f0214509242e6dfd830281d4858bc1))
+* remove duplications and refactor openDialog on Wallet icon button ([8b12f83](https://github.com/gemunion/mui-packages/commit/8b12f83a86a13f5c3000d75fe13234a87147e98e))
+* rewrite styles to sx (still need to fix button-toolbar and file-input with images) ([e5cdc9e](https://github.com/gemunion/mui-packages/commit/e5cdc9effa8fd339ce3749b549cf35303fda3ab2))
+
+
+
+
+
 ## 3.0.7 (2022-10-01)
 
 

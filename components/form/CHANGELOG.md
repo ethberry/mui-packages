@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.10](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@7.0.9...@gemunion/mui-form@7.0.10) (2022-10-04)
+
+
+### Bug Fixes
+
+* onChange in TextField of EntityInput; isDirty in AutoSave ([0251e79](https://github.com/gemunion/mui-packages/commit/0251e7947bc5491e65e84b57f21afd3a6c05c97b))
+
+
+
+
+
 ## 7.0.9 (2022-10-01)
 
 **Note:** Version bump only for package @gemunion/mui-form

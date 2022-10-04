@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-page-layout@2.0.7...@gemunion/mui-page-layout@2.0.8) (2022-10-04)
+
+
+### Bug Fixes
+
+* rewrite styles to sx (still need to fix button-toolbar and file-input with images) ([e5cdc9e](https://github.com/gemunion/mui-packages/commit/e5cdc9effa8fd339ce3749b549cf35303fda3ab2))
+* update snapshots and remove styles ([4934cb6](https://github.com/gemunion/mui-packages/commit/4934cb6bd701dd8c09273a4a6b1900f3b90b5efc))
+
+
+
+
+
 ## 2.0.7 (2022-10-01)
 
 **Note:** Version bump only for package @gemunion/mui-page-layout

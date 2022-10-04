@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.50](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.0.49...@gemunion/mui-inputs-core@7.0.50) (2022-10-04)
+
+
+### Bug Fixes
+
+* onChange in TextField of EntityInput; isDirty in AutoSave ([0251e79](https://github.com/gemunion/mui-packages/commit/0251e7947bc5491e65e84b57f21afd3a6c05c97b))
+* rewrite styles to sx (still need to fix button-toolbar and file-input with images) ([e5cdc9e](https://github.com/gemunion/mui-packages/commit/e5cdc9effa8fd339ce3749b549cf35303fda3ab2))
+* update snapshots and remove styles ([4934cb6](https://github.com/gemunion/mui-packages/commit/4934cb6bd701dd8c09273a4a6b1900f3b90b5efc))
+
+
+
+
+
 ## 7.0.49 (2022-10-01)
 
 

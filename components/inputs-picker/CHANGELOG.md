@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.2.31 (2022-10-04)
+
+
+### Bug Fixes
+
+* rewrite styles to sx (still need to fix button-toolbar and file-input with images) ([e5cdc9e](https://github.com/gemunion/mui-packages/commit/e5cdc9effa8fd339ce3749b549cf35303fda3ab2))
+
+
+
+
+
 ## [5.2.30](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@5.2.29...@gemunion/mui-inputs-picker@5.2.30) (2022-09-29)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-picker

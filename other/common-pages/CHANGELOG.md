@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@10.0.3...@gemunion/common-pages@10.0.4) (2022-10-04)
+
+
+### Bug Fixes
+
+* rewrite styles to sx (still need to fix button-toolbar and file-input with images) ([e5cdc9e](https://github.com/gemunion/mui-packages/commit/e5cdc9effa8fd339ce3749b549cf35303fda3ab2))
+
+
+
+
+
 ## [10.0.3](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@10.0.2...@gemunion/common-pages@10.0.3) (2022-10-01)
 
 
