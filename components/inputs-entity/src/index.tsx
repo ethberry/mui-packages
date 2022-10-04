@@ -129,7 +129,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                   onChange ||
                   ((_event: ChangeEvent<unknown>, options: Array<IAutocompleteOption> | null): void => {
                     const value = options ? options.map((option: IAutocompleteOption) => option.id) : [];
-                    form.setValue(name, value);
+                    form.setValue(name, value, { shouldDirty: true });
                   })
                 }
                 getOptionLabel={(option: IAutocompleteOption) => (getTitle ? getTitle(option) : option.title)}
@@ -152,6 +152,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                     error={!!error}
                     helperText={localizedHelperText}
                     variant={variant}
+                    onChange={() => {}}
                     fullWidth
                   />
                 )}
@@ -175,7 +176,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                   onChange ||
                   ((_event: ChangeEvent<unknown>, option: IAutocompleteOption | null): void => {
                     const value = option ? option.id : 0;
-                    form.setValue(name, value);
+                    form.setValue(name, value, { shouldDirty: true });
                   })
                 }
                 getOptionLabel={(option: IAutocompleteOption): string => (getTitle ? getTitle(option) : option.title)}
@@ -198,6 +199,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                     error={!!error}
                     helperText={localizedHelperText}
                     variant={variant}
+                    onChange={() => {}}
                     fullWidth
                   />
                 )}
