@@ -6,8 +6,6 @@ import { DateTimePicker } from "@mui/x-date-pickers";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
-import { useStyles } from "./styles";
-
 interface IDateTimeInputProps {
   name: string;
   label?: string | number | ReactElement;
@@ -19,7 +17,6 @@ interface IDateTimeInputProps {
 
 export const DateTimeInput: FC<IDateTimeInputProps> = props => {
   const { name, label, variant = "standard", readOnly, ...rest } = props;
-  const classes = useStyles();
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
@@ -59,7 +56,7 @@ export const DateTimeInput: FC<IDateTimeInputProps> = props => {
           ref={field.ref}
           renderInput={(props: TextFieldProps): ReactElement => (
             <TextField
-              className={classes.root}
+              sx={{ my: 1 }}
               fullWidth
               variant={variant}
               name={field.name}

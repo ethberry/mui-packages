@@ -5,8 +5,6 @@ import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
-import { useStyles } from "./styles";
-
 export interface ISelectInputProps extends SelectProps {
   name: string;
   options: Record<string, string>; // enum
@@ -15,7 +13,6 @@ export interface ISelectInputProps extends SelectProps {
 
 export const SelectInput: FC<ISelectInputProps> = props => {
   const { options, label, name, multiple, variant = "standard", disabledOptions = [], ...rest } = props;
-  const classes = useStyles();
 
   const suffix = name.split(".").pop() as string;
 
@@ -36,7 +33,7 @@ export const SelectInput: FC<ISelectInputProps> = props => {
       name={name}
       control={form.control}
       render={({ field }) => (
-        <FormControl fullWidth className={classes.root}>
+        <FormControl fullWidth sx={{ my: 1 }}>
           <InputLabel id={`${name}-select-label`} variant={variant}>
             {localizedLabel}
           </InputLabel>
@@ -70,7 +67,7 @@ export const SelectInput: FC<ISelectInputProps> = props => {
           </Select>
 
           {localizedHelperText && (
-            <FormHelperText id={`${name}-helper-text`} error>
+            <FormHelperText id={`${name}-helper-text`} error sx={{ ml: 0 }}>
               {localizedHelperText}
             </FormHelperText>
           )}

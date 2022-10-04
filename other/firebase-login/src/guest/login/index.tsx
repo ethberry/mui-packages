@@ -14,11 +14,7 @@ import { useApi } from "@gemunion/provider-api";
 import { useLicense } from "@gemunion/provider-license";
 import { useUser } from "@gemunion/provider-user";
 
-import { useStyles } from "./styles";
-
 export const FirebaseLogin: FC = () => {
-  const classes = useStyles();
-
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
@@ -92,7 +88,18 @@ export const FirebaseLogin: FC = () => {
   }
 
   return (
-    <Grid container className={classes.section}>
+    <Grid
+      container
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "calc(100vh - 64px)",
+        maxWidth: 500,
+        margin: "0 auto",
+        textAlign: "center",
+      }}
+    >
       <Grid item sm={12}>
         {showMessage && (
           <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">

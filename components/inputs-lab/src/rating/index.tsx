@@ -1,14 +1,11 @@
 import { ChangeEvent, createElement, FC, PropsWithChildren } from "react";
-import { clsx } from "clsx";
 import { FormattedMessage } from "react-intl";
 import { Controller, useFormContext } from "react-hook-form";
-import { InputLabel } from "@mui/material";
+import { Box, InputLabel } from "@mui/material";
 import { Rating, RatingProps } from "@mui/lab";
 import { Star, SvgIconComponent } from "@mui/icons-material";
 
 import { useTestId } from "@gemunion/provider-test-id";
-
-import { useStyles } from "./styles";
 
 export interface IRatingInputProps extends RatingProps {
   name: string;
@@ -17,7 +14,6 @@ export interface IRatingInputProps extends RatingProps {
 
 export const RatingInput: FC<PropsWithChildren<IRatingInputProps>> = props => {
   const { name, icon = Star, color, ...rest } = props;
-  const classes = useStyles();
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
@@ -27,7 +23,7 @@ export const RatingInput: FC<PropsWithChildren<IRatingInputProps>> = props => {
   const form = useFormContext<any>();
 
   return (
-    <div className={clsx(classes.root)}>
+    <Box sx={{ my: 1 }}>
       <InputLabel filled shrink>
         <FormattedMessage id={`form.labels.${suffix}`} />
       </InputLabel>
@@ -47,6 +43,6 @@ export const RatingInput: FC<PropsWithChildren<IRatingInputProps>> = props => {
           />
         )}
       />
-    </div>
+    </Box>
   );
 };

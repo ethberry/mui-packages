@@ -5,8 +5,6 @@ import { FormControlLabel, FormHelperText, Slider, SliderProps } from "@mui/mate
 
 import { useTestId } from "@gemunion/provider-test-id";
 
-import { useStyles } from "./styles";
-
 export interface ISliderInputProps extends SliderProps {
   name: string;
   label?: string | number | ReactElement;
@@ -14,7 +12,6 @@ export interface ISliderInputProps extends SliderProps {
 
 export const SliderInput: FC<ISliderInputProps> = props => {
   const { name, label, ...rest } = props;
-  const classes = useStyles();
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
@@ -38,13 +35,13 @@ export const SliderInput: FC<ISliderInputProps> = props => {
         <>
           <FormControlLabel
             labelPlacement="start"
-            classes={{ root: classes.label }}
+            sx={{ width: "100%", mx: 0 }}
             control={
               <Slider
                 {...field}
                 name={name}
                 value={value}
-                classes={{ root: classes.slider }}
+                sx={{ ml: 2 }}
                 onChange={(_event, value): void => {
                   form.setValue(name, value, { shouldTouch: true });
                 }}

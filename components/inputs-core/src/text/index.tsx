@@ -5,8 +5,6 @@ import { TextField, StandardTextFieldProps, FilledTextFieldProps, OutlinedTextFi
 
 import { useTestId } from "@gemunion/provider-test-id";
 
-import { useStyles } from "./styles";
-
 export interface IStandardTextInputProps extends StandardTextFieldProps {
   name: string;
   readOnly?: boolean;
@@ -46,7 +44,6 @@ export const TextInput: FC<ITextInputProps> = props => {
     variant = "standard",
     ...rest
   } = props;
-  const classes = useStyles();
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
@@ -54,7 +51,6 @@ export const TextInput: FC<ITextInputProps> = props => {
   const suffix = name.split(".").pop() as string;
 
   const form = useFormContext<any>();
-
   const error = get(form.formState.errors, name);
 
   const { formatMessage } = useIntl();
@@ -69,7 +65,7 @@ export const TextInput: FC<ITextInputProps> = props => {
       render={({ field }) => {
         return (
           <TextField
-            classes={classes}
+            sx={{ my: 1 }}
             label={localizedLabel}
             placeholder={localizedPlaceholder}
             helperText={localizedHelperText}

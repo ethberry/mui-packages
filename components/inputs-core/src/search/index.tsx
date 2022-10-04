@@ -6,13 +6,10 @@ import { SearchOutlined } from "@mui/icons-material";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
-import { useStyles } from "./styles";
-
 export interface ISearchInputProps extends InputBaseProps {}
 
 export const SearchInput: FC<ISearchInputProps> = props => {
   const { name = "search", inputProps, ...rest } = props;
-  const classes = useStyles();
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
@@ -27,12 +24,21 @@ export const SearchInput: FC<ISearchInputProps> = props => {
       name={name}
       control={form.control}
       render={({ field }) => (
-        <Paper className={classes.root}>
-          <IconButton className={classes.iconButton} aria-label="search">
+        <Paper
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            my: 1,
+          }}
+        >
+          <IconButton aria-label="search" sx={{ p: "10px" }}>
             <SearchOutlined />
           </IconButton>
           <InputBase
-            className={classes.input}
+            sx={{
+              ml: 1,
+              flex: 1,
+            }}
             placeholder={localizedPlaceholder}
             inputProps={{
               ...inputProps,

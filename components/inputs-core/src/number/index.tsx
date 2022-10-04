@@ -2,7 +2,6 @@ import { FC, KeyboardEvent, FocusEvent } from "react";
 import { useFormContext } from "react-hook-form";
 
 import { IFilledTextInputProps, IOutlinedTextInputProps, IStandardTextInputProps, TextInput } from "../text";
-import { useStyles } from "./styles";
 
 export interface IStandardNumberInputProps extends IStandardTextInputProps {
   allowNegative?: boolean;
@@ -20,7 +19,6 @@ export type INumberInputProps = IStandardNumberInputProps | IFilledNumberInputPr
 
 export const NumberInput: FC<INumberInputProps> = props => {
   const { name, allowNegative = false, ...rest } = props;
-  const classes = useStyles();
 
   const form = useFormContext<any>();
 
@@ -46,7 +44,7 @@ export const NumberInput: FC<INumberInputProps> = props => {
 
   return (
     <TextInput
-      classes={classes}
+      sx={{ my: 1 }}
       type="number"
       onKeyDown={handleKeyDown}
       onBlur={handleOnBlur}

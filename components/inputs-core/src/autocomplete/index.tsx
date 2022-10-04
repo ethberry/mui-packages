@@ -5,8 +5,6 @@ import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
-import { useStyles } from "./styles";
-
 export interface IAutocompleteOptions {
   key: string | number;
   value: string;
@@ -23,7 +21,6 @@ export interface IAutocompleteInputProps {
 
 export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
   const { name, label, options, multiple, variant = "standard" } = props;
-  const classes = useStyles();
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
@@ -46,7 +43,7 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
         if (multiple) {
           return (
             <Autocomplete
-              classes={classes}
+              sx={{ my: 1 }}
               multiple={true}
               options={options}
               value={options.filter((option: IAutocompleteOptions) => value.includes(option.key) as boolean)}
@@ -83,7 +80,7 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
         } else {
           return (
             <Autocomplete
-              classes={classes}
+              sx={{ my: 1 }}
               multiple={false}
               options={options}
               value={options.find((option: IAutocompleteOptions) => value === option.key) || null}

@@ -7,8 +7,6 @@ import { Grid, FormHelperText } from "@mui/material";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
-import { useStyles } from "./styles";
-
 interface ICaptchaProps {
   name?: string;
 }
@@ -21,7 +19,6 @@ export const Captcha: FC<ICaptchaProps> = props => {
 
   const form = useFormContext<any>();
   const error = get(form.formState.errors, name);
-  const classes = useStyles();
 
   /* javascript-obfuscator:disable */
   const siteKey = process.env.GOOGLE_RECAPTCHA_PUBLIC;
@@ -32,7 +29,7 @@ export const Captcha: FC<ICaptchaProps> = props => {
       name={name}
       control={form.control}
       render={({ field }) => (
-        <Grid className={classes.root}>
+        <Grid sx={{ my: 1 }}>
           <ReCAPTCHA
             sitekey={siteKey}
             {...field}

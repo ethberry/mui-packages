@@ -9,8 +9,6 @@ import { PageHeader } from "@gemunion/mui-page-layout";
 import { FormWrapper } from "@gemunion/mui-form";
 import { ApiError } from "@gemunion/provider-api";
 
-import { useStyles } from "./styles";
-
 export interface IRegistrationBaseProps {
   initialValues: any;
   validationSchema: any;
@@ -20,7 +18,6 @@ export const RegistrationBase: FC<PropsWithChildren<IRegistrationBaseProps>> = p
   const { children, initialValues, validationSchema } = props;
 
   const navigate = useNavigate();
-  const classes = useStyles();
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
@@ -56,7 +53,17 @@ export const RegistrationBase: FC<PropsWithChildren<IRegistrationBaseProps>> = p
   }, [user.isAuthenticated()]);
 
   return (
-    <Grid container className={classes.section}>
+    <Grid
+      container
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "calc(100vh - 64px)",
+        maxWidth: 500,
+        margin: "0 auto",
+      }}
+    >
       <Grid item sm={12}>
         <PageHeader message="pages.guest.registration" />
         <FormWrapper

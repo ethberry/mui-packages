@@ -10,7 +10,6 @@ import { FormWrapper } from "@gemunion/mui-form";
 import { ApiError, useApi } from "@gemunion/provider-api";
 
 import { validationSchema } from "./validation";
-import { useStyles } from "./styles";
 
 interface IRestorePasswordDto {
   password: string;
@@ -19,7 +18,6 @@ interface IRestorePasswordDto {
 }
 
 export const RestorePassword: FC = () => {
-  const classes = useStyles();
   const navigate = useNavigate();
   const { token } = useParams<{ token: string }>();
   const { formatMessage } = useIntl();
@@ -56,7 +54,14 @@ export const RestorePassword: FC = () => {
   };
 
   return (
-    <Grid className={classes.section}>
+    <Grid
+      sx={{
+        alignItems: "center",
+        justifyContent: "center",
+        maxWidth: 500,
+        margin: "0 auto",
+      }}
+    >
       <PageHeader message="pages.guest.restorePassword" />
       <FormWrapper
         onSubmit={handleSubmit}

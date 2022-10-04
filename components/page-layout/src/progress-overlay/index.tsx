@@ -1,8 +1,7 @@
+import { Box } from "@mui/material";
 import { FC, PropsWithChildren } from "react";
 
 import { Spinner } from "../spinner";
-
-import { useStyles } from "./styles";
 
 export interface IProgressOverlayProps {
   isLoading: boolean;
@@ -10,15 +9,31 @@ export interface IProgressOverlayProps {
 
 export const ProgressOverlay: FC<PropsWithChildren<IProgressOverlayProps>> = props => {
   const { isLoading, children } = props;
-  const classes = useStyles();
+
   return (
-    <div className={classes.root}>
+    <Box
+      sx={{
+        position: "relative",
+        minHeight: 40,
+      }}
+    >
       {children}
       {isLoading ? (
-        <div className={classes.overlay}>
+        <Box
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            bottom: 0,
+            right: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <Spinner />
-        </div>
+        </Box>
       ) : null}
-    </div>
+    </Box>
   );
 };

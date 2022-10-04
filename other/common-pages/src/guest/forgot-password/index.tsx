@@ -12,7 +12,6 @@ import { useUser } from "@gemunion/provider-user";
 import { ApiError, useApi } from "@gemunion/provider-api";
 
 import { validationSchema } from "./validation";
-import { useStyles } from "./styles";
 
 interface IForgotPasswordDto {
   email: string;
@@ -20,7 +19,6 @@ interface IForgotPasswordDto {
 }
 
 export const ForgotPassword: FC = () => {
-  const classes = useStyles();
   const navigate = useNavigate();
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
@@ -61,7 +59,16 @@ export const ForgotPassword: FC = () => {
   }, [user.isAuthenticated()]);
 
   return (
-    <Grid container className={classes.section}>
+    <Grid
+      container
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        maxWidth: 500,
+        margin: "0 auto",
+      }}
+    >
       <Grid item sm={10}>
         <PageHeader message="pages.guest.forgotPassword" />
         <FormWrapper

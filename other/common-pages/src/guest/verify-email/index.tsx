@@ -8,10 +8,7 @@ import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useUser } from "@gemunion/provider-user";
 import { ApiError, useApi } from "@gemunion/provider-api";
 
-import { useStyles } from "./styles";
-
 export const VerifyEmail: FC = () => {
-  const classes = useStyles();
   const navigate = useNavigate();
   const params = useParams();
   const { formatMessage } = useIntl();
@@ -43,7 +40,12 @@ export const VerifyEmail: FC = () => {
   }, []);
 
   return (
-    <Grid className={classes.popup}>
+    <Grid
+      sx={{
+        width: 400,
+        margin: "auto",
+      }}
+    >
       <ProgressOverlay isLoading={true} />
     </Grid>
   );

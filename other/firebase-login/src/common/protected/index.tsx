@@ -1,15 +1,11 @@
-import { FC, Fragment, ReactNode, useEffect, useState } from "react";
+import { FC, Fragment, PropsWithChildren, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 
 import { useUser } from "@gemunion/provider-user";
 
 import { FirebaseLogin } from "../../guest/login";
 
-export interface IFirebaseProtectedProps {
-  children?: ReactNode;
-}
-
-export const FirebaseProtected: FC<IFirebaseProtectedProps> = props => {
+export const FirebaseProtected: FC<PropsWithChildren> = props => {
   const { children } = props;
 
   const [isReady, setIsReady] = useState(false);
