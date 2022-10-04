@@ -10,18 +10,20 @@ interface IAutoSaveProps {
 export const AutoSave: FC<IAutoSaveProps> = props => {
   const { onSubmit } = props;
 
+  const {
+    formState: { isDirty },
+  } = useFormContext();
   const values = useWatch();
-  const { formState } = useFormContext();
 
   const debouncedOnSubmit = useDebouncedCallback(async () => {
     await onSubmit(values);
   }, 300);
 
   useDeepCompareEffect(() => {
-    if (formState.isDirty) {
+    if (isDirty) {
       void debouncedOnSubmit();
     }
-  }, [values, formState.isDirty]);
+  }, [values, isDirty]);
 
   return null;
 };
