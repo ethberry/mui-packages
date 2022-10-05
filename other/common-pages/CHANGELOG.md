@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@10.0.4...@gemunion/common-pages@10.1.0) (2022-10-05)
+
+
+### Features
+
+* landing ([cfb4045](https://github.com/gemunion/mui-packages/commit/cfb4045f04d3736f1b2ef8217ead358e5b26337e))
+
+
+
+
+
 ## [10.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@10.0.3...@gemunion/common-pages@10.0.4) (2022-10-04)
 
 
