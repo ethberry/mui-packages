@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.1.1](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@10.1.0...@gemunion/common-pages@10.1.1) (2022-10-07)
+
+
+### Bug Fixes
+
+* redirect after login to dashboard ([15ee508](https://github.com/gemunion/mui-packages/commit/15ee508a0a8f6f727bb63e985a6de6e9b4123416))
+
+
+
+
+
 # [10.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@10.0.4...@gemunion/common-pages@10.1.0) (2022-10-05)
 
 
