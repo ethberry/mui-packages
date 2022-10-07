@@ -25,7 +25,7 @@ export const SystemLogin: FC = () => {
   /* javascript-obfuscator:enable */
 
   const handleSubmit = async (values: ILoginDto): Promise<void> => {
-    await user.logIn(values, "/").catch((e: ApiError) => {
+    await user.logIn(values, "/dashboard").catch((e: ApiError) => {
       if (e.status) {
         enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
       } else {
