@@ -8,9 +8,9 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-page-layout": "2.0.8",
+    "@gemunion/mui-page-layout": "2.0.9",
     "@gemunion/provider-test-id": "1.0.16",
-    "@gemunion/react-hooks": "1.0.34",
+    "@gemunion/react-hooks": "1.0.35",
     "use-debounce": "8.0.4"
   },
   "description": "react widget",
@@ -62,5 +62,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "7.2.16"
+  "version": "7.2.17"
 }
