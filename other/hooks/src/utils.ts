@@ -9,7 +9,8 @@ export const decoder = (str: string, _decoder: defaultDecoder, charset: string):
   }
 
   if (/^(\d+|\d*\.\d+)$/.test(str)) {
-    return parseFloat(str);
+    const parsed = parseFloat(str);
+    return parsed.toString() === str ? parsed : str;
   }
 
   const keywords: Record<string, any> = {

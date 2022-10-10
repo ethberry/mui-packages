@@ -35,7 +35,8 @@ export const MaskedInput: FC<IMaskedInputProps> = props => {
   const testIdProps = testId ? { "data-testid": `${testId}-${props.name}` } : {};
 
   const onValueChange = (values: any) => {
-    form.setValue(props.name, formatValue(values.value));
+    const formattedValue = formatValue(values.value);
+    form.setValue(props.name, formattedValue, { shouldDirty: true });
   };
 
   return (
