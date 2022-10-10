@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.36 (2022-10-10)
+
+### Bug Fixes
+
+- formatting big number value for EthInput; fix useCollection to decode big numbers correctly ([9472181](https://github.com/gemunion/mui-packages/commit/9472181a49df6e605a4dcc356dc094f6a865ede6))
+
 ## 1.0.35 (2022-10-08)
 
 **Note:** Version bump only for package @gemunion/react-hooks

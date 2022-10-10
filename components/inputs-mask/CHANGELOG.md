@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.4.11 (2022-10-10)
+
+### Bug Fixes
+
+- formatting big number value for EthInput; fix useCollection to decode big numbers correctly ([9472181](https://github.com/gemunion/mui-packages/commit/9472181a49df6e605a4dcc356dc094f6a865ede6))
+
 ## 5.4.10 (2022-10-08)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
