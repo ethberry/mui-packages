@@ -2,7 +2,13 @@ import { FC, useEffect, useLayoutEffect, useState } from "react";
 import { Box, Button, Grid } from "@mui/material";
 import { NavigateNext } from "@mui/icons-material";
 import { auth } from "firebaseui";
-import { EmailAuthProvider, getAuth, sendEmailVerification } from "firebase/auth";
+import {
+  EmailAuthProvider,
+  getAuth,
+  GoogleAuthProvider,
+  FacebookAuthProvider,
+  sendEmailVerification,
+} from "firebase/auth";
 import { FormattedMessage, useIntl } from "react-intl";
 import { useNavigate } from "react-router";
 import { useSnackbar } from "notistack";
@@ -14,7 +20,29 @@ import { useApi } from "@gemunion/provider-api";
 import { useLicense } from "@gemunion/provider-license";
 import { useUser } from "@gemunion/provider-user";
 
-export const FirebaseLogin: FC = () => {
+export enum PROVIDERS {
+  email = "email",
+  google = "google",
+  facebook = "facebook",
+  // metamask = "metamask",
+}
+
+export const providersStore = {
+  [PROVIDERS.email]: {
+    provider: EmailAuthProvider.PROVIDER_ID,
+    requireDisplayName: false,
+  },
+  [PROVIDERS.google]: GoogleAuthProvider.PROVIDER_ID,
+  [PROVIDERS.facebook]: FacebookAuthProvider.PROVIDER_ID,
+  // [PROVIDERS.metamask]: null,
+};
+
+export interface IFirebaseLogin {
+  providers?: PROVIDERS[];
+}
+
+export const FirebaseLogin: FC<IFirebaseLogin> = props => {
+  const { providers = [PROVIDERS.email] } = props;
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
@@ -25,6 +53,10 @@ export const FirebaseLogin: FC = () => {
   const user = useUser();
   const api = useApi();
   const navigate = useNavigate();
+
+  const signInOptions = providers.length
+    ? providers.map(name => providersStore[name])
+    : [providersStore[PROVIDERS.email]];
 
   const handleMainPageClick = () => {
     navigate("/");
@@ -66,13 +98,7 @@ export const FirebaseLogin: FC = () => {
         },
       },
       signInFlow: "popup",
-      signInOptions: [
-        {
-          // Leave the lines as is for the providers you want to offer your users.
-          provider: EmailAuthProvider.PROVIDER_ID,
-          requireDisplayName: false,
-        },
-      ],
+      signInOptions,
     });
     return () => {
       void ui.delete();
