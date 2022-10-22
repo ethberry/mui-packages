@@ -13,7 +13,7 @@
     "@gemunion/provider-api": "7.0.3",
     "@gemunion/provider-license": "3.0.0",
     "@json-rpc-tools/utils": "1.7.6",
-    "ethers": "5.7.1",
+    "ethers": "5.7.2",
     "qs": "6.11.0",
     "use-deep-compare-effect": "1.8.1"
   },
@@ -21,9 +21,9 @@
   "devDependencies": {
     "@gemunion/provider-wallet": "3.0.10",
     "@web3-react/core": "8.0.35-beta.0",
-    "notistack": "2.0.7",
+    "notistack": "2.0.8",
     "react": "18.2.0",
-    "react-intl": "6.2.0"
+    "react-intl": "6.2.1"
   },
   "engines": {
     "node": ">=12.13"
