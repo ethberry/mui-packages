@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/constants": "0.8.7",
     "@gemunion/license-messages": "0.0.34",
-    "@gemunion/provider-license": "3.0.0",
+    "@gemunion/provider-license": "3.0.1",
     "@gemunion/types-collection": "1.5.4",
     "qs": "6.11.0"
   },

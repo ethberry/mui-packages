@@ -13,9 +13,9 @@
     "@gemunion/mui-inputs-captcha": "4.1.33",
     "@gemunion/mui-inputs-core": "7.0.53",
     "@gemunion/mui-page-layout": "2.0.10",
-    "@gemunion/popup": "1.0.3",
+    "@gemunion/popup": "1.0.4",
     "@gemunion/react-hooks": "1.0.37",
-    "@gemunion/yup-rules": "3.0.5",
+    "@gemunion/yup-rules": "3.0.6",
     "yup": "0.32.11"
   },
   "description": "react context provider",

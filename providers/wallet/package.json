@@ -22,7 +22,7 @@
   "description": "react wallet provider",
   "devDependencies": {
     "@gemunion/provider-api": "7.0.3",
-    "@gemunion/provider-license": "3.0.0",
+    "@gemunion/provider-license": "3.0.1",
     "@gemunion/provider-popup": "1.0.4",
     "@gemunion/provider-user": "5.0.4",
     "@mui/icons-material": "5.10.9",
