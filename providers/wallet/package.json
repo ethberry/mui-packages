@@ -22,18 +22,18 @@
   "description": "react wallet provider",
   "devDependencies": {
     "@gemunion/provider-api": "7.0.3",
-    "@gemunion/provider-license": "3.0.0",
+    "@gemunion/provider-license": "3.0.1",
     "@gemunion/provider-popup": "1.0.4",
     "@gemunion/provider-user": "5.0.4",
     "@mui/icons-material": "5.10.9",
-    "@mui/material": "5.10.9",
-    "@mui/styles": "5.10.9",
+    "@mui/material": "5.10.10",
+    "@mui/styles": "5.10.10",
     "@types/react": "18.0.21",
     "@types/uuid": "8.3.4",
-    "ethers": "5.7.1",
-    "notistack": "2.0.7",
+    "ethers": "5.7.2",
+    "notistack": "2.0.8",
     "react": "18.2.0",
-    "react-intl": "6.2.0"
+    "react-intl": "6.2.1"
   },
   "engines": {
     "node": ">=12.13"
@@ -75,5 +75,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.0.10"
+  "version": "3.0.11"
 }

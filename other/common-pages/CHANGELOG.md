@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.1.5](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@10.1.4...@gemunion/common-pages@10.1.5) (2022-10-22)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([a5b6ae0](https://github.com/gemunion/mui-packages/commit/a5b6ae08c19c096d1fe50be711f20ab3171b7e65))
+
 ## [10.1.4](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@10.1.3...@gemunion/common-pages@10.1.4) (2022-10-16)
 
 ### Bug Fixes
