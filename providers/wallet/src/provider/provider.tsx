@@ -82,11 +82,10 @@ export const WalletProvider: FC<PropsWithChildren> = props => {
     return null;
   }
 
+  const providerNetwork = network ? getNetworkForWeb3Provider(network.chainId) : undefined;
+
   return (
-    <Web3ReactProvider
-      connectors={connectors}
-      network={network ? getNetworkForWeb3Provider(network.chainId) : undefined}
-    >
+    <Web3ReactProvider connectors={connectors} network={providerNetwork}>
       <WalletContext.Provider
         value={{
           activeConnector,

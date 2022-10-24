@@ -39,16 +39,12 @@ export const MetaMaskButton: FC<IMetaMaskButtonProps> = props => {
 
   const handleClick = useCallback(() => {
     void connectCallback(async () => {
-      if (!network) {
-        return;
-      }
-
       if (!(window as any).ethereum) {
-        enqueueSnackbar(formatMessage({ id: "snackbar.web3-not-detected" }), notDetectedWeb3MessageConfig);
+        enqueueSnackbar(formatMessage({ id: "snackbar.web3NotDetected" }), notDetectedWeb3MessageConfig);
       }
 
       return metaMask
-        .activate(network)
+        .activate(network || undefined)
         .then(() => {
           setActiveConnector(TConnectors.METAMASK);
           onClick();
@@ -62,7 +58,7 @@ export const MetaMaskButton: FC<IMetaMaskButtonProps> = props => {
           if (e && e.code === 4001) {
             enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
           } else if (e instanceof NoMetaMaskError) {
-            enqueueSnackbar(formatMessage({ id: "snackbar.web3-not-detected" }), notDetectedWeb3MessageConfig);
+            enqueueSnackbar(formatMessage({ id: "snackbar.web3NotDetected" }), notDetectedWeb3MessageConfig);
           } else {
             enqueueSnackbar((e && e.message) || formatMessage({ id: "snackbar.error" }), { variant: "error" });
           }

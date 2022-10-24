@@ -27,12 +27,8 @@ export const WalletConnectButton: FC<IWalletConnectButtonProps> = props => {
 
   const handleClick = useCallback(() => {
     void connectCallback(async () => {
-      if (!network) {
-        return;
-      }
-
       return walletConnect
-        .activate(network.chainId)
+        .activate(network ? network.chainId : undefined)
         .then(() => {
           setActiveConnector(TConnectors.WALLETCONNECT);
           onClick();
