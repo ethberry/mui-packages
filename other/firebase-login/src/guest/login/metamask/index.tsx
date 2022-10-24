@@ -40,13 +40,9 @@ export const MetamaskButton = () => {
 
       const signature = await provider.getSigner().signMessage(`${phrase}${data.nonce}`);
       setData({ ...data, wallet, signature });
+
       const token = await login(undefined, { wallet, nonce: data.nonce, signature });
-      console.info("token", token);
-
-      const userFb = await signInWithCustomToken(authFb, token?.token || "");
-
-      console.info("userFb", userFb);
-      console.info("userFb.user.refreshToken", userFb.user.refreshToken);
+      await signInWithCustomToken(authFb, token?.token || "");
 
       await authFb.currentUser
         ?.getIdToken(true)
