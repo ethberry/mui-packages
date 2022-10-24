@@ -1,9 +1,7 @@
 import { FC, Fragment, PropsWithChildren, useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Navigate } from "react-router-dom";
 
 import { useUser } from "@gemunion/provider-user";
-
-import { FirebaseLogin } from "../../guest/login";
 
 export const FirebaseProtected: FC<PropsWithChildren> = props => {
   const { children } = props;
@@ -21,7 +19,7 @@ export const FirebaseProtected: FC<PropsWithChildren> = props => {
   }
 
   if (!user.isAuthenticated()) {
-    return <FirebaseLogin />;
+    return <Navigate to="/login" />;
   }
 
   return children ? <Fragment>{children}</Fragment> : <Outlet />;

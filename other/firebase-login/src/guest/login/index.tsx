@@ -20,11 +20,12 @@ import { useApi } from "@gemunion/provider-api";
 import { useLicense } from "@gemunion/provider-license";
 import { useUser } from "@gemunion/provider-user";
 
+import { MetamaskButton } from "./metamask";
+
 export enum PROVIDERS {
   email = "email",
   google = "google",
   facebook = "facebook",
-  // metamask = "metamask",
 }
 
 export const providersStore = {
@@ -34,15 +35,15 @@ export const providersStore = {
   },
   [PROVIDERS.google]: GoogleAuthProvider.PROVIDER_ID,
   [PROVIDERS.facebook]: FacebookAuthProvider.PROVIDER_ID,
-  // [PROVIDERS.metamask]: null,
 };
 
 export interface IFirebaseLogin {
   providers?: PROVIDERS[];
+  withMetamask?: boolean;
 }
 
 export const FirebaseLogin: FC<IFirebaseLogin> = props => {
-  const { providers = [PROVIDERS.email] } = props;
+  const { providers = [PROVIDERS.email], withMetamask = false } = props;
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
@@ -93,6 +94,9 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
           }
           return false;
         },
+        signInFailure: error => {
+          console.error("error", error);
+        },
         uiShown: () => {
           // document.getElementById("loader").style.display = "none";
         },
@@ -124,6 +128,9 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
         maxWidth: 500,
         margin: "0 auto",
         textAlign: "center",
+        "& .firebaseui-id-page-sign-in": {
+          mb: 2,
+        },
       }}
     >
       <Grid item sm={12}>
@@ -145,6 +152,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
           </Box>
         )}
         <div id="firebaseui-auth-container" />
+        {withMetamask ? <MetamaskButton /> : null}
       </Grid>
     </Grid>
   );
