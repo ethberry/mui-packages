@@ -1,4 +1,4 @@
-import { FC, useEffect, useLayoutEffect, useState } from "react";
+import { FC, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { Box, Button, Grid } from "@mui/material";
 import { NavigateNext } from "@mui/icons-material";
 import { auth } from "firebaseui";
@@ -49,13 +49,12 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
   const license = useLicense();
 
   const [showMessage, setShowMessage] = useState<boolean>(false);
+  const [showMetamask, setShowMetamask] = useState<boolean>(withMetamask);
 
   const user = useUser();
   const navigate = useNavigate();
 
-  const signInOptions = providers.length
-    ? providers.map(name => providersStore[name])
-    : [providersStore[PROVIDERS.email]];
+  const signInOptions = useMemo(() => providers.map(name => providersStore[name]), [providers]);
 
   const handleMainPageClick = () => {
     navigate("/");
@@ -67,6 +66,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
     ui.start("#firebaseui-auth-container", {
       callbacks: {
         signInSuccessWithAuthResult: data => {
+          setShowMetamask(false);
           if (data.additionalUserInfo.isNewUser) {
             const actionCodeSettings = {
               url: `${window.location.origin}/login`,
@@ -114,7 +114,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
         maxWidth: 500,
         margin: "0 auto",
         textAlign: "center",
-        "& .firebaseui-id-page-sign-in": {
+        "& #firebaseui-auth-container": {
           mb: 2,
         },
       }}
@@ -138,7 +138,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
           </Box>
         )}
         <div id="firebaseui-auth-container" />
-        {withMetamask ? <MetamaskButton /> : null}
+        {withMetamask && showMetamask ? <MetamaskButton /> : null}
       </Grid>
     </Grid>
   );

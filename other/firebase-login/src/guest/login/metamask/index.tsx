@@ -21,6 +21,7 @@ export const MetamaskButton = () => {
   const { account } = useWeb3React();
   const user = useUser();
 
+  const [success, setSuccess] = useState<boolean>(false);
   const authFb = getAuth(firebase);
 
   const { fn: login, isLoading } = useApiCall((api, values: IMetamaskDto) => {
@@ -33,6 +34,11 @@ export const MetamaskButton = () => {
 
   const handleLogin = useMetamask(
     async (web3Context: Web3ContextType) => {
+      const fbContainer = document.getElementById("firebaseui-auth-container");
+      if (fbContainer) {
+        fbContainer.style.display = "none";
+      }
+
       const wallet = web3Context.account!;
       const provider = web3Context.provider!;
 
@@ -42,7 +48,11 @@ export const MetamaskButton = () => {
       const token = await login(undefined, { wallet, nonce: data.nonce, signature });
       await signInWithCustomToken(authFb, token?.token || "");
 
-      await user.logIn();
+      setSuccess(true);
+      await user.logIn().catch(e => {
+        console.error("login error", e);
+        setSuccess(false);
+      });
     },
     { success: false },
   );
@@ -51,11 +61,21 @@ export const MetamaskButton = () => {
     await handleLogin();
   };
 
+  const userIsAuthenticated = user.isAuthenticated();
+
+  useEffect(() => {
+    if (!userIsAuthenticated) {
+      setSuccess(false);
+    }
+  }, [userIsAuthenticated]);
+
   useEffect(() => {
     setData({ nonce: v4(), signature: "", wallet: account || "" });
   }, [account]);
 
-  return (
+  return success ? (
+    <CircularProgress size={30} />
+  ) : (
     <StyledButton
       disabled={isLoading}
       onClick={handleClick}
