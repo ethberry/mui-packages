@@ -7,7 +7,6 @@ import { v4 } from "uuid";
 
 import { phrase } from "@gemunion/constants";
 import firebase from "@gemunion/firebase";
-import { useApi } from "@gemunion/provider-api";
 import { useUser } from "@gemunion/provider-user";
 import { MetaMaskIcon } from "@gemunion/provider-wallet";
 import { useApiCall } from "@gemunion/react-hooks";
@@ -21,7 +20,6 @@ export const MetamaskButton = () => {
 
   const { account } = useWeb3React();
   const user = useUser();
-  const api = useApi();
 
   const authFb = getAuth(firebase);
 
@@ -44,19 +42,7 @@ export const MetamaskButton = () => {
       const token = await login(undefined, { wallet, nonce: data.nonce, signature });
       await signInWithCustomToken(authFb, token?.token || "");
 
-      await authFb.currentUser
-        ?.getIdToken(true)
-        .then(async accessToken => {
-          const now = Date.now();
-          api.setToken({
-            accessToken,
-            accessTokenExpiresAt: now + 1000 * 60 * 60,
-            refreshToken: "",
-            refreshTokenExpiresAt: now + 1000 * 60 * 60,
-          });
-          return user.getProfile("/dashboard");
-        })
-        .catch(console.error);
+      await user.logIn();
     },
     { success: false },
   );

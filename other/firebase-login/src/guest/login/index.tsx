@@ -16,7 +16,6 @@ import { useSnackbar } from "notistack";
 import "firebaseui/dist/firebaseui.css";
 
 import firebase from "@gemunion/firebase";
-import { useApi } from "@gemunion/provider-api";
 import { useLicense } from "@gemunion/provider-license";
 import { useUser } from "@gemunion/provider-user";
 
@@ -52,7 +51,6 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
   const [showMessage, setShowMessage] = useState<boolean>(false);
 
   const user = useUser();
-  const api = useApi();
   const navigate = useNavigate();
 
   const signInOptions = providers.length
@@ -78,19 +76,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
               setShowMessage(true);
             });
           } else {
-            void authFb.currentUser
-              ?.getIdToken(true)
-              .then(async accessToken => {
-                const now = Date.now();
-                api.setToken({
-                  accessToken,
-                  accessTokenExpiresAt: now + 1000 * 60 * 60,
-                  refreshToken: "",
-                  refreshTokenExpiresAt: now + 1000 * 60 * 60,
-                });
-                return user.getProfile("/dashboard");
-              })
-              .catch(console.error);
+            void user.logIn();
           }
           return false;
         },
