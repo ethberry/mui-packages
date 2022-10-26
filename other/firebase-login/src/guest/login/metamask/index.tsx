@@ -36,7 +36,7 @@ export const MetamaskButton = () => {
     async (web3Context: Web3ContextType) => {
       const fbContainer = document.getElementById("firebaseui-auth-container");
       if (fbContainer) {
-        fbContainer.style.display = "none";
+        fbContainer.style.opacity = "0";
       }
 
       const wallet = web3Context.account!;

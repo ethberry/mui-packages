@@ -115,6 +115,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
         margin: "0 auto",
         textAlign: "center",
         "& #firebaseui-auth-container": {
+          transition: "all 1s ease-out",
           mb: 2,
         },
       }}
