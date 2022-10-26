@@ -67,7 +67,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
       callbacks: {
         signInSuccessWithAuthResult: data => {
           setShowMetamask(false);
-          if (data.additionalUserInfo.isNewUser) {
+          if (data.additionalUserInfo.isNewUser && !data.additionalUserInfo.profile.verified_email) {
             const actionCodeSettings = {
               url: `${window.location.origin}/login`,
             };
