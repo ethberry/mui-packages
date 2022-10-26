@@ -23,7 +23,7 @@ export const ForgotPassword: FC = () => {
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
-  const user = useUser();
+  const user = useUser<any>();
   const api = useApi();
 
   const handleSubmit = (values: IForgotPasswordDto, form: any): Promise<void> => {

@@ -51,7 +51,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
   const [showMessage, setShowMessage] = useState<boolean>(false);
   const [showMetamask, setShowMetamask] = useState<boolean>(withMetamask);
 
-  const user = useUser();
+  const user = useUser<any>();
   const navigate = useNavigate();
 
   const signInOptions = useMemo(() => providers.map(name => providersStore[name]), [providers]);

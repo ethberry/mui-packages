@@ -7,7 +7,7 @@ export const FirebaseProtected: FC<PropsWithChildren> = props => {
   const { children } = props;
 
   const [isReady, setIsReady] = useState(false);
-  const user = useUser();
+  const user = useUser<any>();
 
   useEffect(() => {
     const id = setTimeout(() => setIsReady(true), 100);

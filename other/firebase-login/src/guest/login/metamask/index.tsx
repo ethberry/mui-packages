@@ -19,7 +19,7 @@ export const MetamaskButton = () => {
   const [data, setData] = useState<IMetamaskDto>({ nonce: "", signature: "", wallet: "" });
 
   const { account } = useWeb3React();
-  const user = useUser();
+  const user = useUser<any>();
 
   const [success, setSuccess] = useState<boolean>(false);
   const authFb = getAuth(firebase);
