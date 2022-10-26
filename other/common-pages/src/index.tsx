@@ -1,8 +1,7 @@
 export * from "./common/landing";
 export * from "./common/error";
 export * from "./common/message";
-export * from "./common/system-protected";
-export * from "./common/social-protected";
+export * from "./common/protected";
 
 export * from "./guest/social-login";
 export * from "./guest/system-login";
