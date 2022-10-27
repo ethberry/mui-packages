@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.0.32...@gemunion/firebase-login@2.1.0) (2022-10-27)
+
+### Bug Fixes
+
+- changes according to provider-user fixes ([3650250](https://github.com/gemunion/mui-packages/commit/3650250130d0f349817683b7f3af3e954a3bd603))
+- console ([7b8553a](https://github.com/gemunion/mui-packages/commit/7b8553a939393ddd09b1acc038b4729abd050d96))
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([5519cdd](https://github.com/gemunion/mui-packages/commit/5519cdda08153ee66efb03a8ded807324c279cfa))
+- firebase-login by adding providers for Google and Facebook ([be0f13a](https://github.com/gemunion/mui-packages/commit/be0f13a4a387afae112d7c8df958be8477b54c52))
+- hide firebaseui while logging in by metamask ([6307641](https://github.com/gemunion/mui-packages/commit/63076414adfa7fba1f6092ba2f4e34665d8d5154))
+- join all Protected components to one ([1d4a7d4](https://github.com/gemunion/mui-packages/commit/1d4a7d4be625aabb73c6a0261fd08528aacb9847))
+- login directly after social registration without sending verification email ([5a92587](https://github.com/gemunion/mui-packages/commit/5a92587c47a2f09680af1c50c9a65cd031f47d55))
+- Protected components and using useUser ([3829150](https://github.com/gemunion/mui-packages/commit/3829150bcb79c38298cec2913eb2b7b53fc491a2))
+- ui for firebase with metamask login ([e479e54](https://github.com/gemunion/mui-packages/commit/e479e548b24f0302dd30ac4c5190fa416ab5d5e3))
+
+### Features
+
+- implement metamask-login for firebase-login; fix protected redirect to login page ([641265e](https://github.com/gemunion/mui-packages/commit/641265e06ed2e68a0298dbea2617961ddee57540))
+
 ## [2.0.32](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.0.31...@gemunion/firebase-login@2.0.32) (2022-10-22)
 
 ### Bug Fixes
