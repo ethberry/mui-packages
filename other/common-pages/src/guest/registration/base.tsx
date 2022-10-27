@@ -4,9 +4,9 @@ import { useNavigate } from "react-router";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
-import { useUser } from "@gemunion/provider-user";
-import { PageHeader } from "@gemunion/mui-page-layout";
 import { FormWrapper } from "@gemunion/mui-form";
+import { PageHeader } from "@gemunion/mui-page-layout";
+import { useUser } from "@gemunion/provider-user";
 import { ApiError } from "@gemunion/provider-api";
 
 export interface IRegistrationBaseProps {
@@ -21,7 +21,7 @@ export const RegistrationBase: FC<PropsWithChildren<IRegistrationBaseProps>> = p
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
-  const user = useUser();
+  const user = useUser<any>();
 
   const handleSubmit = (values: any, form: any): Promise<void> => {
     return user

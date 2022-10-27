@@ -14,7 +14,7 @@ export const VerifyEmail: FC = () => {
   const { formatMessage } = useIntl();
   const { enqueueSnackbar } = useSnackbar();
 
-  const user = useUser();
+  const user = useUser<any>();
   const api = useApi();
 
   useEffect(() => {

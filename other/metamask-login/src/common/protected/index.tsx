@@ -1,15 +1,13 @@
 import { FC, Fragment, PropsWithChildren, useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
 import { useUser } from "@gemunion/provider-user";
-
-import { MetamaskLogin } from "../../guest/login";
 
 export const MetamaskProtected: FC<PropsWithChildren> = props => {
   const { children } = props;
 
   const [isReady, setIsReady] = useState(false);
-  const user = useUser();
+  const user = useUser<any>();
 
   useEffect(() => {
     const id = setTimeout(() => setIsReady(true), 100);
@@ -21,7 +19,7 @@ export const MetamaskProtected: FC<PropsWithChildren> = props => {
   }
 
   if (!user.isAuthenticated()) {
-    return <MetamaskLogin />;
+    return <Navigate to="/login" />;
   }
 
   return children ? <Fragment>{children}</Fragment> : <Outlet />;

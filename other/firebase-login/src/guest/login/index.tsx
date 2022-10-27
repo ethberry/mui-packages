@@ -1,8 +1,14 @@
-import { FC, useEffect, useLayoutEffect, useState } from "react";
+import { FC, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { Box, Button, Grid } from "@mui/material";
 import { NavigateNext } from "@mui/icons-material";
 import { auth } from "firebaseui";
-import { EmailAuthProvider, getAuth, sendEmailVerification } from "firebase/auth";
+import {
+  EmailAuthProvider,
+  getAuth,
+  GoogleAuthProvider,
+  FacebookAuthProvider,
+  sendEmailVerification,
+} from "firebase/auth";
 import { FormattedMessage, useIntl } from "react-intl";
 import { useNavigate } from "react-router";
 import { useSnackbar } from "notistack";
@@ -10,21 +16,45 @@ import { useSnackbar } from "notistack";
 import "firebaseui/dist/firebaseui.css";
 
 import firebase from "@gemunion/firebase";
-import { useApi } from "@gemunion/provider-api";
 import { useLicense } from "@gemunion/provider-license";
 import { useUser } from "@gemunion/provider-user";
 
-export const FirebaseLogin: FC = () => {
+import { MetamaskButton } from "./metamask";
+
+export enum PROVIDERS {
+  email = "email",
+  google = "google",
+  facebook = "facebook",
+}
+
+export const providersStore = {
+  [PROVIDERS.email]: {
+    provider: EmailAuthProvider.PROVIDER_ID,
+    requireDisplayName: false,
+  },
+  [PROVIDERS.google]: GoogleAuthProvider.PROVIDER_ID,
+  [PROVIDERS.facebook]: FacebookAuthProvider.PROVIDER_ID,
+};
+
+export interface IFirebaseLogin {
+  providers?: PROVIDERS[];
+  withMetamask?: boolean;
+}
+
+export const FirebaseLogin: FC<IFirebaseLogin> = props => {
+  const { providers = [PROVIDERS.email], withMetamask = false } = props;
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
   const license = useLicense();
 
   const [showMessage, setShowMessage] = useState<boolean>(false);
+  const [showMetamask, setShowMetamask] = useState<boolean>(withMetamask);
 
-  const user = useUser();
-  const api = useApi();
+  const user = useUser<any>();
   const navigate = useNavigate();
+
+  const signInOptions = useMemo(() => providers.map(name => providersStore[name]), [providers]);
 
   const handleMainPageClick = () => {
     navigate("/");
@@ -36,7 +66,8 @@ export const FirebaseLogin: FC = () => {
     ui.start("#firebaseui-auth-container", {
       callbacks: {
         signInSuccessWithAuthResult: data => {
-          if (data.additionalUserInfo.isNewUser) {
+          setShowMetamask(false);
+          if (data.additionalUserInfo.isNewUser && !data.additionalUserInfo.profile.verified_email) {
             const actionCodeSettings = {
               url: `${window.location.origin}/login`,
             };
@@ -45,34 +76,19 @@ export const FirebaseLogin: FC = () => {
               setShowMessage(true);
             });
           } else {
-            void authFb.currentUser
-              ?.getIdToken(true)
-              .then(async accessToken => {
-                const now = Date.now();
-                api.setToken({
-                  accessToken,
-                  accessTokenExpiresAt: now + 1000 * 60 * 60,
-                  refreshToken: "",
-                  refreshTokenExpiresAt: now + 1000 * 60 * 60,
-                });
-                return user.getProfile("/dashboard");
-              })
-              .catch(console.error);
+            void user.logIn();
           }
           return false;
+        },
+        signInFailure: error => {
+          console.error("error", error);
         },
         uiShown: () => {
           // document.getElementById("loader").style.display = "none";
         },
       },
       signInFlow: "popup",
-      signInOptions: [
-        {
-          // Leave the lines as is for the providers you want to offer your users.
-          provider: EmailAuthProvider.PROVIDER_ID,
-          requireDisplayName: false,
-        },
-      ],
+      signInOptions,
     });
     return () => {
       void ui.delete();
@@ -98,6 +114,10 @@ export const FirebaseLogin: FC = () => {
         maxWidth: 500,
         margin: "0 auto",
         textAlign: "center",
+        "& #firebaseui-auth-container": {
+          transition: "all 1s ease-out",
+          mb: 2,
+        },
       }}
     >
       <Grid item sm={12}>
@@ -119,6 +139,7 @@ export const FirebaseLogin: FC = () => {
           </Box>
         )}
         <div id="firebaseui-auth-container" />
+        {withMetamask && showMetamask ? <MetamaskButton /> : null}
       </Grid>
     </Grid>
   );
