@@ -13,14 +13,14 @@
     "@gemunion/mui-inputs-captcha": "4.1.34",
     "@gemunion/mui-inputs-core": "7.0.55",
     "@gemunion/mui-page-layout": "2.0.11",
-    "@gemunion/popup": "1.0.4",
+    "@gemunion/popup": "1.0.5",
     "@gemunion/react-hooks": "1.0.39",
-    "@gemunion/yup-rules": "3.0.7",
+    "@gemunion/yup-rules": "3.0.8",
     "yup": "0.32.11"
   },
   "description": "react context provider",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.4",
+    "@gemunion/provider-api": "7.0.5",
     "@gemunion/provider-user": "6.0.1",
     "@mui/icons-material": "5.10.9",
     "@mui/lab": "5.0.0-alpha.105",
