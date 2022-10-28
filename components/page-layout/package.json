@@ -13,7 +13,7 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.10.10",
+    "@mui/material": "5.10.11",
     "@mui/styles": "5.10.10",
     "@storybook/react": "6.5.13",
     "@testing-library/jest-dom": "5.16.5",
