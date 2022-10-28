@@ -21,7 +21,7 @@
   "description": "react context provider",
   "devDependencies": {
     "@gemunion/provider-api": "7.0.4",
-    "@gemunion/provider-user": "5.0.5",
+    "@gemunion/provider-user": "6.0.1",
     "@mui/icons-material": "5.10.9",
     "@mui/lab": "5.0.0-alpha.105",
     "@mui/material": "5.10.11",
@@ -45,7 +45,7 @@
   "name": "@gemunion/common-pages",
   "peerDependencies": {
     "@gemunion/provider-api": "^7.0.0",
-    "@gemunion/provider-user": "^5.0.0",
+    "@gemunion/provider-user": "^5.0.0 || ^6.0.0",
     "@mui/icons-material": "^5.0.0",
     "@mui/lab": "^5.0.0-alpha.0",
     "@mui/material": "^5.0.0",

@@ -24,7 +24,7 @@
   "description": "react component",
   "devDependencies": {
     "@gemunion/provider-api": "7.0.4",
-    "@gemunion/provider-user": "5.0.5",
+    "@gemunion/provider-user": "6.0.1",
     "@mui/material": "5.10.11",
     "@mui/styles": "5.10.10",
     "firebase": "9.10.0",
@@ -43,7 +43,7 @@
   "name": "@gemunion/firebase-login",
   "peerDependencies": {
     "@gemunion/provider-api": "^7.0.0",
-    "@gemunion/provider-user": "^5.0.0",
+    "@gemunion/provider-user": "^5.0.0 || ^6.0.0",
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
     "firebase": "^9.0.0",
