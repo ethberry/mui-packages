@@ -16,7 +16,7 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.10.10",
+    "@mui/material": "5.10.11",
     "@storybook/react": "6.5.13",
     "@types/mathjs": "9.4.2",
     "@types/react": "18.0.24",
