@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.10 (2022-10-29)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([69fe0cc](https://github.com/gemunion/mui-packages/commit/69fe0cca62d57de157d3751f6459368580fab417))
+
 ## [2.0.9](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-coingecko@2.0.8...@gemunion/provider-coingecko@2.0.9) (2022-10-22)
 
 ### Bug Fixes

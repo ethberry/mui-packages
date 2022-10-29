@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.55](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.0.54...@gemunion/geetest@2.0.55) (2022-10-29)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([69fe0cc](https://github.com/gemunion/common-packages/commit/69fe0cca62d57de157d3751f6459368580fab417))
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([3ce97a2](https://github.com/gemunion/common-packages/commit/3ce97a20ca75ad9f93e1c35d372899928420a78f))
+- rename JwtApiProvider to ApiProviderJwt ([e949921](https://github.com/gemunion/common-packages/commit/e9499216054a77ee34e8eb2f8405f718d2a045f9))
+
 ## [2.0.54](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.0.53...@gemunion/geetest@2.0.54) (2022-10-27)
 
 ### Bug Fixes
