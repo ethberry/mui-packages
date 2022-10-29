@@ -4,7 +4,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import { SnackbarProvider } from "notistack";
 import { Story } from "@storybook/react";
 
-import { JwtApiProvider } from "@gemunion/provider-api-jwt";
+import { ApiProviderJwt } from "@gemunion/provider-api-jwt";
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
 import { AvatarInput, IAvatarInputProps } from "./index";
@@ -24,7 +24,7 @@ export default {
   component: AvatarInput,
   decorators: [
     (Story: Story): ReactElement => (
-      <JwtApiProvider baseUrl={"http://localhost/"}>
+      <ApiProviderJwt baseUrl={"http://localhost/"}>
         <IntlProvider locale="en" messages={i18n}>
           <SnackbarProvider>
             <TestIdProvider testId="avatar">
@@ -34,7 +34,7 @@ export default {
             </TestIdProvider>
           </SnackbarProvider>
         </IntlProvider>
-      </JwtApiProvider>
+      </ApiProviderJwt>
     ),
   ],
 };
