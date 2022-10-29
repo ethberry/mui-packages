@@ -3,7 +3,7 @@ import { ReactElement } from "react";
 import { Story } from "@storybook/react";
 
 import { FormWrapper } from "@gemunion/mui-form";
-import { JwtApiProvider } from "@gemunion/provider-api-jwt";
+import { ApiProviderJwt } from "@gemunion/provider-api-jwt";
 
 import { IGeeTestCaptchaProps, GeeTestCaptcha } from ".";
 
@@ -12,11 +12,11 @@ export default {
   component: GeeTestCaptcha,
   decorators: [
     (Story: Story): ReactElement => (
-      <JwtApiProvider baseUrl={"http://localhost/"}>
+      <ApiProviderJwt baseUrl={"http://localhost/"}>
         <FormWrapper onSubmit={Promise.resolve} initialValues={{ photo: [] }}>
           <Story />
         </FormWrapper>
-      </JwtApiProvider>
+      </ApiProviderJwt>
     ),
   ],
 };
