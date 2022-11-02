@@ -11,8 +11,6 @@ import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
 import { FirebaseFileInput, useDeleteUrl, Accept } from "@gemunion/mui-inputs-file-firebase";
 import { openUrlOnClick } from "@gemunion/popup";
 
-import { useStyles } from "./styles";
-
 export interface IPhotoInputProps {
   name: string;
   label?: string | number | ReactElement;
@@ -26,7 +24,6 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
   const form = useFormContext<any>();
   const value = get(useWatch(), name);
 
-  const classes = useStyles();
   const deleteUrl = useDeleteUrl(bucket);
   const [isLoading, setIsLoading] = useState(false);
   const [isDeleteImageDialogOpen, setIsDeleteImageDialogOpen] = useState(false);
@@ -106,7 +103,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
                     name={name}
                     label={label}
                     onChange={handleFileChange}
-                    classes={{ root: classes.media }}
+                    rootSx={{ width: 200, height: 150 }}
                     bucket={bucket}
                     accept={accept}
                   />

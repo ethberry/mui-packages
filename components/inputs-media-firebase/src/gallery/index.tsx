@@ -3,22 +3,23 @@ import { Button, Card, CardActions, CardContent, CardMedia, FormControl, Grid, I
 import { get, useFormContext, useWatch } from "react-hook-form";
 import { FormattedMessage } from "react-intl";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+import path from "path";
 
 import { TextInput } from "@gemunion/mui-inputs-core";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
-import { S3FileInput, useDeleteUrl, Accept } from "@gemunion/mui-inputs-file-s3";
+import { FirebaseFileInput, useDeleteUrl, Accept } from "@gemunion/mui-inputs-file-firebase";
 import { openUrlOnClick } from "@gemunion/popup";
 
-export interface IPhotoInputProps {
+export interface IGalleryInputProps {
   name: string;
   label?: string | number | ReactElement;
   bucket?: string;
   accept?: Accept;
 }
 
-export const PhotoInput: FC<IPhotoInputProps> = props => {
-  const { name, label, bucket, accept } = props;
+export const GalleryInput: FC<IGalleryInputProps> = props => {
+  const { name, label, accept, bucket } = props;
 
   const form = useFormContext<any>();
   const value = get(useWatch(), name);
@@ -38,8 +39,9 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
   const handleDeleteConfirm = async (): Promise<void> => {
     const newValue = get(form.getValues(), name);
     const [deleted] = newValue.splice(selectedImageIndex, 1);
+    const fileName = path.basename(new URL(deleted.imageUrl).pathname);
 
-    await deleteUrl(deleted.imageUrl);
+    await deleteUrl(fileName);
 
     form.setValue(name, newValue, { shouldTouch: false });
     setIsDeleteImageDialogOpen(false);
@@ -49,12 +51,14 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
     setIsDeleteImageDialogOpen(false);
   };
 
-  const handleFileChange = (url: string): void => {
+  const handleFileChange = (urls: Array<string>): void => {
     setIsLoading(true);
     const newValue = get(form.getValues(), name);
-    newValue.push({
-      imageUrl: url,
-      title: "",
+    urls.forEach(imageUrl => {
+      newValue.push({
+        imageUrl,
+        title: "",
+      });
     });
     form.setValue(name, newValue, { shouldTouch: true });
     setIsLoading(false);
@@ -71,7 +75,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
     const [removed] = newValue.splice(result.source.index, 1);
     newValue.splice(result.destination.index, 0, removed);
 
-    form.setValue(name, newValue, { shouldTouch: true });
+    form.setValue(name, newValue);
     setIsLoading(false);
   };
 
@@ -95,7 +99,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
             >
               <Grid item>
                 <ProgressOverlay isLoading={isLoading}>
-                  <S3FileInput
+                  <FirebaseFileInput
                     name={name}
                     label={label}
                     onChange={handleFileChange}
@@ -113,10 +117,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
                         <CardMedia
                           image={option.imageUrl}
                           onClick={openUrlOnClick(option.imageUrl)}
-                          sx={{
-                            width: 200,
-                            height: 150,
-                          }}
+                          sx={{ width: 200, height: 150 }}
                         />
                         <CardContent>
                           <TextInput name={`${name}[${i}].title`} value={option.title} />

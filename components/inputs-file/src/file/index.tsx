@@ -1,8 +1,8 @@
 import { FC, ReactElement, useCallback } from "react";
-import clsx from "clsx";
 import { DropzoneOptions, FileRejection, useDropzone } from "react-dropzone";
 import { CloudOff, CloudUpload, CloudUploadOutlined } from "@mui/icons-material";
-import { Box, FormHelperText } from "@mui/material";
+import { FormHelperText } from "@mui/material";
+import { SxProps, Theme } from "@mui/material/styles";
 import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";
@@ -10,19 +10,17 @@ import { Controller, get, useFormContext } from "react-hook-form";
 import { useTestId } from "@gemunion/provider-test-id";
 
 import { ACCEPTED_FORMATS, MAX_FILE_SIZE, MIN_FILE_SIZE } from "./constants";
-import { humanFileSize } from "./utils";
-import { useStyles } from "./styles";
+import { getSxArray, humanFileSize } from "./utils";
+import { StyledWrapper, StyledPlaceholder, StyledIcon } from "./styled";
 
 export interface IFileInputProps extends DropzoneOptions {
   name: string;
   label?: string | number | ReactElement;
   onChange: (files: Array<File>) => void;
-  classes?: {
-    root?: string;
-    active?: string;
-    inactive?: string;
-    disabled?: string;
-  };
+  rootSx?: SxProps<Theme>;
+  activeSx?: SxProps<Theme>;
+  inactiveSx?: SxProps<Theme>;
+  disabledSx?: SxProps<Theme>;
 }
 
 export const FileInput: FC<IFileInputProps> = props => {
@@ -34,9 +32,12 @@ export const FileInput: FC<IFileInputProps> = props => {
     accept = ACCEPTED_FORMATS,
     minSize = MIN_FILE_SIZE,
     maxSize = MAX_FILE_SIZE,
+    rootSx = [],
+    activeSx = [],
+    inactiveSx = [],
+    disabledSx = [],
     ...rest
   } = props;
-  const classes = useStyles();
   const { formatMessage } = useIntl();
   const { enqueueSnackbar } = useSnackbar();
 
@@ -90,15 +91,15 @@ export const FileInput: FC<IFileInputProps> = props => {
 
   if (disabled) {
     return (
-      <Box className={clsx(classes.placeholder, props.classes?.root)}>
-        <CloudOff className={clsx(classes.icon, props.classes?.disabled)} />
-      </Box>
+      <StyledPlaceholder sx={getSxArray(rootSx)}>
+        <StyledIcon component={CloudOff} sx={getSxArray(disabledSx)} />
+      </StyledPlaceholder>
     );
   }
 
   return (
-    <Box className={classes.wrapper}>
-      <Box {...getRootProps()} className={clsx(classes.placeholder, props.classes?.root)}>
+    <StyledWrapper>
+      <StyledPlaceholder {...getRootProps()} sx={getSxArray(rootSx)}>
         <Controller
           name={name}
           control={form.control}
@@ -108,16 +109,16 @@ export const FileInput: FC<IFileInputProps> = props => {
           }}
         />
         {isDragActive ? (
-          <CloudUploadOutlined className={clsx(classes.icon, props.classes?.active)} />
+          <StyledIcon component={CloudUploadOutlined} sx={getSxArray(activeSx)} />
         ) : (
-          <CloudUpload className={clsx(classes.icon, props.classes?.inactive)} />
+          <StyledIcon component={CloudUpload} sx={getSxArray(inactiveSx)} />
         )}
-      </Box>
+      </StyledPlaceholder>
       {localizedHelperText && (
         <FormHelperText id={`${name}-helper-text`} error>
           {localizedHelperText}
         </FormHelperText>
       )}
-    </Box>
+    </StyledWrapper>
   );
 };
