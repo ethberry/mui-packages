@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.23](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.2.22...@gemunion/mui-inputs-entity@7.2.23) (2022-11-01)
+
+### Bug Fixes
+
+- disableClearable for EntityInput; add disabled, readOnly and disableClearable for AutocompleteInput ([c5fdeb2](https://github.com/gemunion/mui-packages/commit/c5fdeb27ee1055ba8d84d863c935370f1ff3e834))
+
 ## [7.2.22](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.2.21...@gemunion/mui-inputs-entity@7.2.22) (2022-10-29)
 
 ### Bug Fixes

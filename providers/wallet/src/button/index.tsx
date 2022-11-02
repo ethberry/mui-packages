@@ -32,7 +32,7 @@ export const Wallet: FC = () => {
     return null;
   }
 
-  const isChainValid = !chainId || profile?.chainId === chainId;
+  const isChainValid = !profile || !chainId || profile?.chainId === chainId;
 
   const tooltipTitle = useMemo(
     () => (

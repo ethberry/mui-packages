@@ -15,12 +15,14 @@ export interface IAutocompleteInputProps {
   label?: string | number | ReactElement;
   options: Array<IAutocompleteOptions>;
   multiple?: boolean;
-  disableClearable?: boolean;
+  disabled?: boolean;
+  disableClear?: boolean;
+  readOnly?: boolean;
   variant: "filled" | "outlined" | "standard";
 }
 
 export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
-  const { name, label, options, multiple, variant = "standard" } = props;
+  const { disableClear, disabled, name, label, options, multiple, readOnly, variant = "standard" } = props;
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
@@ -46,6 +48,8 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
               sx={{ my: 1 }}
               multiple={true}
               options={options}
+              disableClearable={disableClear || readOnly}
+              disabled={disabled}
               value={options.filter((option: IAutocompleteOptions) => value.includes(option.key) as boolean)}
               onChange={(_event: ChangeEvent<unknown>, values: Array<IAutocompleteOptions> | null): void => {
                 const newValue = values ? values.map((value: IAutocompleteOptions) => value.key) : [];
@@ -66,6 +70,7 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
                   inputProps={{
                     ...params.inputProps,
                     ...testIdProps,
+                    readOnly,
                   }}
                   label={localizedLabel}
                   placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}
@@ -83,6 +88,8 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
               sx={{ my: 1 }}
               multiple={false}
               options={options}
+              disableClearable={disableClear || readOnly}
+              disabled={disabled}
               value={options.find((option: IAutocompleteOptions) => value === option.key) || null}
               onChange={(_event: ChangeEvent<unknown>, value: IAutocompleteOptions | null): void => {
                 const newValue = value ? value.key : null;
@@ -103,6 +110,7 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
                   inputProps={{
                     ...params.inputProps,
                     ...testIdProps,
+                    readOnly,
                   }}
                   label={localizedLabel}
                   placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}

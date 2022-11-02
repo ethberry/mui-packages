@@ -113,7 +113,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                 open={open}
                 onOpen={() => !readOnly && setOpen(true)}
                 onClose={() => setOpen(false)}
-                disableClearable={disableClear}
+                disableClearable={disableClear || readOnly}
                 sx={{ my: 1 }}
                 multiple={true}
                 disabled={disabled}
@@ -164,7 +164,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                 open={open}
                 onOpen={() => !readOnly && setOpen(true)}
                 onClose={() => setOpen(false)}
-                disableClearable={disableClear}
+                disableClearable={disableClear || readOnly}
                 sx={{ my: 1 }}
                 multiple={false}
                 disabled={disabled}
