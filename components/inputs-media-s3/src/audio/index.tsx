@@ -5,7 +5,7 @@ import { DropzoneOptions } from "react-dropzone";
 import { get, useFormContext, useWatch } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { Accept, FirebaseFileInput, useDeleteUrl } from "@gemunion/mui-inputs-file-firebase";
+import { Accept, S3FileInput, useDeleteUrl } from "@gemunion/mui-inputs-file-s3";
 
 import { ACCEPTED_FORMATS, MAX_FILE_SIZE } from "./constants";
 
@@ -31,14 +31,14 @@ export const AudioInput: FC<IAudioInputProps> = props => {
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
   const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
-  const onChange = (urls: Array<string>) => {
-    form.setValue(name, urls[0], { shouldTouch: true });
+  const onChange = (url: string) => {
+    form.setValue(name, url, { shouldTouch: true });
     form.clearErrors(name);
   };
 
   const onDelete = async () => {
     await deleteUrl(value);
-    form.setValue(name, "");
+    form.setValue(name, "", { shouldTouch: false });
   };
 
   if (disabled) {
@@ -89,7 +89,7 @@ export const AudioInput: FC<IAudioInputProps> = props => {
         </InputLabel>
         <Grid container sx={{ mt: 1 }}>
           <Grid item>
-            <FirebaseFileInput
+            <S3FileInput
               label={label}
               name={name}
               onChange={onChange}

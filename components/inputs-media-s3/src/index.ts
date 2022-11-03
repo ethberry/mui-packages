@@ -3,4 +3,4 @@ export * from "./image";
 export * from "./gallery";
 export * from "./video";
 
-export { useDeleteUrl, useUploadUrl } from "@gemunion/mui-inputs-file-firebase";
+export { useDeleteUrl } from "@gemunion/mui-inputs-file-s3";

@@ -7,6 +7,7 @@ import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";
 
+import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useTestId } from "@gemunion/provider-test-id";
 
 import { ACCEPTED_FORMATS, MAX_FILE_SIZE, MIN_FILE_SIZE } from "./constants";
@@ -17,6 +18,7 @@ export interface IFileInputProps extends DropzoneOptions {
   name: string;
   label?: string | number | ReactElement;
   onChange: (files: Array<File>) => void;
+  isLoading?: boolean;
   rootSx?: SxProps<Theme>;
   activeSx?: SxProps<Theme>;
   inactiveSx?: SxProps<Theme>;
@@ -29,6 +31,7 @@ export const FileInput: FC<IFileInputProps> = props => {
     label,
     onChange,
     disabled,
+    isLoading = false,
     accept = ACCEPTED_FORMATS,
     minSize = MIN_FILE_SIZE,
     maxSize = MAX_FILE_SIZE,
@@ -99,26 +102,28 @@ export const FileInput: FC<IFileInputProps> = props => {
 
   return (
     <StyledWrapper>
-      <StyledPlaceholder {...getRootProps()} sx={getSxArray(rootSx)}>
-        <Controller
-          name={name}
-          control={form.control}
-          render={({ field: { value: _value, ...field } }) => {
-            // field should come before getInputProps
-            return <input {...field} {...getInputProps()} {...testIdProps} />;
-          }}
-        />
-        {isDragActive ? (
-          <StyledIcon component={CloudUploadOutlined} sx={getSxArray(activeSx)} />
-        ) : (
-          <StyledIcon component={CloudUpload} sx={getSxArray(inactiveSx)} />
+      <ProgressOverlay isLoading={isLoading}>
+        <StyledPlaceholder {...getRootProps()} sx={getSxArray(rootSx)}>
+          <Controller
+            name={name}
+            control={form.control}
+            render={({ field: { value: _value, ...field } }) => {
+              // field should come before getInputProps
+              return <input {...field} {...getInputProps()} {...testIdProps} />;
+            }}
+          />
+          {isDragActive ? (
+            <StyledIcon component={CloudUploadOutlined} sx={getSxArray(activeSx)} />
+          ) : (
+            <StyledIcon component={CloudUpload} sx={getSxArray(inactiveSx)} />
+          )}
+        </StyledPlaceholder>
+        {localizedHelperText && (
+          <FormHelperText id={`${name}-helper-text`} error>
+            {localizedHelperText}
+          </FormHelperText>
         )}
-      </StyledPlaceholder>
-      {localizedHelperText && (
-        <FormHelperText id={`${name}-helper-text`} error>
-          {localizedHelperText}
-        </FormHelperText>
-      )}
+      </ProgressOverlay>
     </StyledWrapper>
   );
 };

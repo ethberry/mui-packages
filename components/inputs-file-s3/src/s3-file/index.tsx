@@ -1,7 +1,7 @@
-import { FC, useCallback } from "react";
+import { FC, useCallback, useState } from "react";
+
 import { S3Upload, S3Response } from "@gemunion/s3-uploader";
 import { useApi } from "@gemunion/provider-api";
-
 import { FileInput, IFileInputProps } from "@gemunion/mui-inputs-file";
 
 interface IS3FileInputProps extends Omit<IFileInputProps, "onChange"> {
@@ -47,7 +47,10 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
 
   const api = useApi();
 
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
   const handleChange = useCallback(async (files: Array<File>): Promise<void> => {
+    setIsLoading(true);
     if (api.isAccessTokenExpired()) {
       await api.refreshToken();
     }
@@ -61,15 +64,21 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
       return;
     }
 
+    const onS3Error = (error: Error) => {
+      setIsLoading(false);
+      onError ? onError(error) : console.error(error);
+    };
+
     // eslint-disable-next-line no-new
     new S3Upload({
       files,
       signingUrl: "/s3/put",
       onFinishS3Put: (data: S3Response) => {
         onChange(`${bucketUrl}${new URL(data.signedUrl).pathname}`);
+        setIsLoading(false);
       },
       onProgress: onProgress || console.info,
-      onError: onError || console.error,
+      onError: onS3Error,
       signingUrlMethod: "GET",
       signingUrlWithCredentials: true,
       server: defaultBaseUrl,
@@ -82,5 +91,5 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
     });
   }, []);
 
-  return <FileInput onChange={handleChange} {...rest} />;
+  return <FileInput onChange={handleChange} isLoading={isLoading} {...rest} />;
 };

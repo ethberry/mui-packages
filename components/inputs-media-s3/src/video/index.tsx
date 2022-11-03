@@ -5,18 +5,18 @@ import { DropzoneOptions } from "react-dropzone";
 import { get, useFormContext, useWatch } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { Accept, FirebaseFileInput, useDeleteUrl } from "@gemunion/mui-inputs-file-firebase";
+import { Accept, S3FileInput, useDeleteUrl } from "@gemunion/mui-inputs-file-s3";
 
 import { ACCEPTED_FORMATS, MAX_FILE_SIZE } from "./constants";
 
-export interface IAudioInputProps extends DropzoneOptions {
+export interface IVideoInputProps extends DropzoneOptions {
   name: string;
   label?: string | number | ReactElement;
   bucket?: string;
   accept?: Accept;
 }
 
-export const AudioInput: FC<IAudioInputProps> = props => {
+export const VideoInput: FC<IVideoInputProps> = props => {
   const { accept = ACCEPTED_FORMATS, bucket, disabled, label, maxSize = MAX_FILE_SIZE, name } = props;
 
   const { formatMessage } = useIntl();
@@ -31,19 +31,19 @@ export const AudioInput: FC<IAudioInputProps> = props => {
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
   const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
-  const onChange = (urls: Array<string>) => {
-    form.setValue(name, urls[0], { shouldTouch: true });
+  const onChange = (url: string) => {
+    form.setValue(name, url, { shouldTouch: true });
     form.clearErrors(name);
   };
 
   const onDelete = async () => {
     await deleteUrl(value);
-    form.setValue(name, "");
+    form.setValue(name, "", { shouldTouch: false });
   };
 
   if (disabled) {
     return (
-      <Box sx={{ width: "100%" }}>
+      <Box>
         <IconButton>
           <VolumeOff />
         </IconButton>
@@ -54,7 +54,7 @@ export const AudioInput: FC<IAudioInputProps> = props => {
   if (value) {
     return (
       <Box sx={{ width: "100%" }}>
-        <FormControl fullWidth sx={{ mt: 2, width: 350, height: 100, position: "relative" }}>
+        <FormControl fullWidth sx={{ mt: 2, width: 350, height: 300, position: "relative" }}>
           <InputLabel id={`${name}-select-label`} shrink>
             {localizedLabel}
           </InputLabel>
@@ -68,8 +68,8 @@ export const AudioInput: FC<IAudioInputProps> = props => {
               <Delete fontSize="inherit" />
             </IconButton>
           </Tooltip>
-          <Box component="audio" controls sx={{ width: 300, height: 45, mt: 2 }}>
-            <Box component="source" src={value} type="audio/mpeg" />
+          <Box component="video" width="320px" height="240px" controls sx={{ mt: 2 }}>
+            <Box component="source" src={value} />
           </Box>
           {localizedHelperText && (
             <FormHelperText id={`${name}-helper-text`} error>
@@ -89,7 +89,7 @@ export const AudioInput: FC<IAudioInputProps> = props => {
         </InputLabel>
         <Grid container sx={{ mt: 1 }}>
           <Grid item>
-            <FirebaseFileInput
+            <S3FileInput
               label={label}
               name={name}
               onChange={onChange}
