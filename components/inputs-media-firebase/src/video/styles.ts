@@ -5,7 +5,7 @@ export const useStyles = makeStyles<Theme>(
   theme => ({
     root: {
       height: 200,
-      width: 200,
+      width: 300,
       position: "relative",
       marginTop: theme.spacing(2),
     },
@@ -19,7 +19,7 @@ export const useStyles = makeStyles<Theme>(
     },
     video: {
       height: 150,
-      width: 180,
+      width: 260,
       marginTop: theme.spacing(2),
     },
   }),

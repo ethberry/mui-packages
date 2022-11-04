@@ -18,8 +18,8 @@ export const useStyles = makeStyles<Theme>(
       right: 0,
     },
     image: {
-      height: 200,
-      width: 200,
+      height: 170,
+      width: 170,
       borderColor: "#fff",
       borderStyle: "solid",
       borderWidth: 0,
@@ -27,6 +27,7 @@ export const useStyles = makeStyles<Theme>(
       backgroundSize: "contain",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
+      marginTop: theme.spacing(2),
     },
   }),
   { name: "ImageInput" },
