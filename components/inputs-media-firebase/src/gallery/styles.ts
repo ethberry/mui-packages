@@ -8,5 +8,5 @@ export const useStyles = makeStyles<Theme>(
       height: 150,
     },
   },
-  { name: "PhotoInput" },
+  { name: "GalleryInput" },
 );

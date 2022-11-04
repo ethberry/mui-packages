@@ -4,20 +4,29 @@ import { Delete } from "@mui/icons-material";
 import { DropzoneOptions } from "react-dropzone";
 import { get, useFormContext, useWatch } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
+// eslint-disable-next-line import/no-named-as-default
+import clsx from "clsx";
 
 import { Accept, FirebaseFileInput, useDeleteUrl } from "@gemunion/mui-inputs-file-firebase";
 
 import { ACCEPTED_FORMATS, MAX_FILE_SIZE } from "./constants";
+import { useStyles } from "./styles";
 
 export interface IAudioInputProps extends DropzoneOptions {
   name: string;
   label?: string | number | ReactElement;
   bucket?: string;
   accept?: Accept;
+  classes?: {
+    root?: string;
+    audio?: string;
+  };
 }
 
 export const AudioInput: FC<IAudioInputProps> = props => {
   const { accept = ACCEPTED_FORMATS, bucket, label, maxSize = MAX_FILE_SIZE, name } = props;
+
+  const classes = useStyles();
 
   const { formatMessage } = useIntl();
 
@@ -38,59 +47,50 @@ export const AudioInput: FC<IAudioInputProps> = props => {
 
   const onDelete = async () => {
     await deleteUrl(value);
-    form.setValue(name, "");
+    form.setValue(name, "", { shouldTouch: false });
   };
 
   if (value) {
     return (
-      <Box sx={{ width: "100%" }}>
-        <FormControl fullWidth sx={{ mt: 2, width: 350, height: 100, position: "relative" }}>
-          <InputLabel id={`${name}-select-label`} shrink>
-            {localizedLabel}
-          </InputLabel>
-          <Tooltip title={formatMessage({ id: "form.tips.delete" })}>
-            <IconButton
-              aria-label="delete"
-              onClick={onDelete}
-              size="medium"
-              sx={{ position: "absolute", top: 0, right: 0 }}
-            >
-              <Delete fontSize="inherit" />
-            </IconButton>
-          </Tooltip>
-          <Box component="audio" controls sx={{ width: 300, height: 45, mt: 2 }}>
-            <Box component="source" src={value} type="audio/mpeg" />
-          </Box>
-          {localizedHelperText && (
-            <FormHelperText id={`${name}-helper-text`} error>
-              {localizedHelperText}
-            </FormHelperText>
-          )}
-        </FormControl>
-      </Box>
+      <FormControl fullWidth className={clsx(classes.root, props.classes?.root)}>
+        <InputLabel id={`${name}-select-label`} shrink>
+          {localizedLabel}
+        </InputLabel>
+        <Tooltip title={formatMessage({ id: "form.tips.delete" })}>
+          <IconButton aria-label="delete" onClick={onDelete} size="medium" className={classes.button}>
+            <Delete fontSize="inherit" />
+          </IconButton>
+        </Tooltip>
+        <Box component="audio" controls className={clsx(classes.audio, props.classes?.audio)}>
+          <Box component="source" src={value} type="audio/mpeg" />
+        </Box>
+        {localizedHelperText && (
+          <FormHelperText id={`${name}-helper-text`} error>
+            {localizedHelperText}
+          </FormHelperText>
+        )}
+      </FormControl>
     );
   }
 
   return (
-    <Box sx={{ width: "100%", mt: 2, mb: 2 }}>
-      <FormControl fullWidth sx={{ position: "relative" }}>
-        <InputLabel id={`${name}-select-label`} shrink>
-          <FormattedMessage id={`form.labels.${name}`} />
-        </InputLabel>
-        <Grid container sx={{ mt: 1 }}>
-          <Grid item>
-            <FirebaseFileInput
-              label={label}
-              name={name}
-              onChange={onChange}
-              bucket={bucket}
-              accept={accept}
-              maxSize={maxSize}
-              maxFiles={1}
-            />
-          </Grid>
+    <FormControl fullWidth className={clsx(classes.root, props.classes?.root)}>
+      <InputLabel id={`${name}-select-label`} shrink>
+        <FormattedMessage id={`form.labels.${name}`} />
+      </InputLabel>
+      <Grid container className={classes.container}>
+        <Grid item>
+          <FirebaseFileInput
+            label={label}
+            name={name}
+            onChange={onChange}
+            bucket={bucket}
+            accept={accept}
+            maxSize={maxSize}
+            maxFiles={1}
+          />
         </Grid>
-      </FormControl>
-    </Box>
+      </Grid>
+    </FormControl>
   );
 };

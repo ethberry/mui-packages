@@ -29,5 +29,5 @@ export const useStyles = makeStyles<Theme>(
       backgroundPosition: "center",
     },
   }),
-  { name: "AvatarInput" },
+  { name: "ImageInput" },
 );

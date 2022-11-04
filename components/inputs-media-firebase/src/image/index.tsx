@@ -44,7 +44,7 @@ export const ImageInput: FC<IImageInputProps> = props => {
 
   const onDelete = async () => {
     await deleteUrl(value);
-    form.setValue(name, "");
+    form.setValue(name, "", { shouldTouch: false });
   };
 
   if (value) {

@@ -3,6 +3,8 @@ import { Button, Card, CardActions, CardContent, CardMedia, FormControl, Grid, I
 import { get, useFormContext, useWatch } from "react-hook-form";
 import { FormattedMessage } from "react-intl";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+// eslint-disable-next-line import/no-named-as-default
+import clsx from "clsx";
 import path from "path";
 
 import { TextInput } from "@gemunion/mui-inputs-core";
@@ -18,6 +20,10 @@ export interface IGalleryInputProps {
   label?: string | number | ReactElement;
   bucket?: string;
   accept?: Accept;
+  classes?: {
+    root?: string;
+    media?: string;
+  };
 }
 
 export const GalleryInput: FC<IGalleryInputProps> = props => {
@@ -84,7 +90,7 @@ export const GalleryInput: FC<IGalleryInputProps> = props => {
   };
 
   return (
-    <FormControl fullWidth sx={{ mt: 2 }}>
+    <FormControl fullWidth className={clsx(classes.root, props.classes?.root)}>
       <InputLabel id={`form.labels.${name}`} shrink>
         <FormattedMessage id={`form.labels.${name}`} />
       </InputLabel>
@@ -98,7 +104,7 @@ export const GalleryInput: FC<IGalleryInputProps> = props => {
               justifyContent="flex-start"
               alignItems="flex-start"
               ref={provided.innerRef}
-              sx={{ mt: 1 }}
+              className={classes.container}
               {...provided.droppableProps}
             >
               <Grid item>
@@ -121,7 +127,7 @@ export const GalleryInput: FC<IGalleryInputProps> = props => {
                         <CardMedia
                           image={option.imageUrl}
                           onClick={openUrlOnClick(option.imageUrl)}
-                          sx={{ width: 200, height: 150 }}
+                          className={clsx(classes.media, props.classes?.media)}
                         />
                         <CardContent>
                           <TextInput name={`${name}[${i}].title`} value={option.title} />

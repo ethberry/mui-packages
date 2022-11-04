@@ -25,7 +25,7 @@ export default {
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
         <SnackbarProvider>
-          <TestIdProvider testId="image">
+          <TestIdProvider testId="video">
             <FormProvider {...useForm({ defaultValues: { video: "" } })}>
               <Story />
             </FormProvider>

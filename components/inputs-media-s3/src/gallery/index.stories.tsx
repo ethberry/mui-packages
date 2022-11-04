@@ -27,8 +27,8 @@ export default {
     (Story: Story): ReactElement => (
       <IntlProvider locale="en" messages={i18n}>
         <SnackbarProvider>
-          <TestIdProvider testId="photo">
-            <FormProvider {...useForm({ defaultValues: { photo: [] } })}>
+          <TestIdProvider testId="gallery">
+            <FormProvider {...useForm({ defaultValues: { gallery: [] } })}>
               <Story />
             </FormProvider>
           </TestIdProvider>

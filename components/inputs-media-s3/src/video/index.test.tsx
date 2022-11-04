@@ -15,10 +15,10 @@ const i18n = {
   "form.validations.whitelistValidation": "Property Video is not recognized",
 };
 
-describe("<ImageInput />", () => {
+describe("<VideoInput />", () => {
   it("renders the empty field", () => {
     const props = {
-      name: "audio",
+      name: "video",
     };
 
     const { asFragment } = render(
@@ -47,9 +47,7 @@ describe("<ImageInput />", () => {
           <SnackbarProvider maxSnack={3}>
             <FormWrapper
               onSubmit={Promise.resolve}
-              initialValues={{
-                video: "https://lms2-dev.s3-us-west-2.amazonaws.com/7f0f427f-eeba-4ffb-a1c8-f730721bfd46.jpeg",
-              }}
+              initialValues={{ video: "https://trejgun-test.s3.us-west-1.amazonaws.com/DO_NOT_REMOVE_video.mp4" }}
             >
               <VideoInput {...props} />
             </FormWrapper>
