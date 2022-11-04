@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.0.47 (2022-11-04)
+
+### Bug Fixes
+
+- inputs-file; implement isLoading ([d2d50ed](https://github.com/gemunion/mui-packages/commit/d2d50edddb78eeb974eadb75cbc97843f3d92c6b))
+
 ## [7.0.46](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@7.0.45...@gemunion/mui-inputs-file-s3@7.0.46) (2022-10-29)
 
 ### Bug Fixes

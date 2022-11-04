@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.15](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.0.14...@gemunion/provider-wallet@3.0.15) (2022-11-04)
+
+### Bug Fixes
+
+- showing wallet network error on login page when no profile provided yet ([6b4a8d3](https://github.com/gemunion/mui-packages/commit/6b4a8d3f6d98e1105c8b9ff4fc2d1a72396b0767))
+
 ## [3.0.14](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.0.13...@gemunion/provider-wallet@3.0.14) (2022-11-01)
 
 **Note:** Version bump only for package @gemunion/provider-wallet
