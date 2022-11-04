@@ -7,6 +7,7 @@ import { useSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";
 
+import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useTestId } from "@gemunion/provider-test-id";
 
 import { ACCEPTED_FORMATS, MAX_FILE_SIZE, MIN_FILE_SIZE } from "./constants";
@@ -16,6 +17,7 @@ import { useStyles } from "./styles";
 export interface IFileInputProps extends DropzoneOptions {
   name: string;
   label?: string | number | ReactElement;
+  isLoading?: boolean;
   onChange: (files: Array<File>) => void;
   classes?: {
     root?: string;
@@ -29,6 +31,7 @@ export const FileInput: FC<IFileInputProps> = props => {
   const {
     name,
     label,
+    isLoading = false,
     onChange,
     disabled,
     accept = ACCEPTED_FORMATS,
@@ -98,26 +101,28 @@ export const FileInput: FC<IFileInputProps> = props => {
 
   return (
     <Box className={classes.wrapper}>
-      <Box {...getRootProps()} className={clsx(classes.placeholder, props.classes?.root)}>
-        <Controller
-          name={name}
-          control={form.control}
-          render={({ field: { value: _value, ...field } }) => {
-            // field should come before getInputProps
-            return <input {...field} {...getInputProps()} {...testIdProps} />;
-          }}
-        />
-        {isDragActive ? (
-          <CloudUploadOutlined className={clsx(classes.icon, props.classes?.active)} />
-        ) : (
-          <CloudUpload className={clsx(classes.icon, props.classes?.inactive)} />
+      <ProgressOverlay isLoading={isLoading}>
+        <Box {...getRootProps()} className={clsx(classes.placeholder, props.classes?.root)}>
+          <Controller
+            name={name}
+            control={form.control}
+            render={({ field: { value: _value, ...field } }) => {
+              // field should come before getInputProps
+              return <input {...field} {...getInputProps()} {...testIdProps} />;
+            }}
+          />
+          {isDragActive ? (
+            <CloudUploadOutlined className={clsx(classes.icon, props.classes?.active)} />
+          ) : (
+            <CloudUpload className={clsx(classes.icon, props.classes?.inactive)} />
+          )}
+        </Box>
+        {localizedHelperText && (
+          <FormHelperText id={`${name}-helper-text`} error>
+            {localizedHelperText}
+          </FormHelperText>
         )}
-      </Box>
-      {localizedHelperText && (
-        <FormHelperText id={`${name}-helper-text`} error>
-          {localizedHelperText}
-        </FormHelperText>
-      )}
+      </ProgressOverlay>
     </Box>
   );
 };
