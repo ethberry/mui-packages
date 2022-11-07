@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.4.19](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.4.18...@gemunion/mui-inputs-mask@5.4.19) (2022-11-07)
+
+### Bug Fixes
+
+- add recalculation value for EthInput if units changed ([1d694c3](https://github.com/gemunion/mui-packages/commit/1d694c3239841fc3aeca55143e5502712809ad6f))
+
 ## [5.4.18](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.4.17...@gemunion/mui-inputs-mask@5.4.18) (2022-11-04)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask

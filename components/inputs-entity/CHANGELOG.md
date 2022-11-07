@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.26](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.2.25...@gemunion/mui-inputs-entity@7.2.26) (2022-11-07)
+
+### Bug Fixes
+
+- add isAutoselect for Entity Input ([0240453](https://github.com/gemunion/mui-packages/commit/024045399df63f3fe8d79ef4a5587df37f903684))
+
 ## [7.2.25](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.2.24...@gemunion/mui-inputs-entity@7.2.25) (2022-11-04)
 
 ### Bug Fixes
