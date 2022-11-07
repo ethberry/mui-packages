@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, HTMLAttributes, ReactElement, useState } from "react";
+import { ChangeEvent, FC, HTMLAttributes, ReactElement, useCallback, useState } from "react";
 import { useIntl } from "react-intl";
 import { useSnackbar } from "notistack";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
@@ -25,6 +25,7 @@ export interface IEntityInputProps {
   readOnly?: boolean;
   disableClear?: boolean;
   multiple?: boolean;
+  isAutoselect?: boolean;
   getTitle?: (item: any) => string;
   data?: Record<string, any>;
   variant?: "standard" | "filled" | "outlined";
@@ -41,6 +42,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
     controller,
     getTitle,
     multiple,
+    isAutoselect = false,
     data = {},
     variant = "standard",
     onChange,
@@ -73,7 +75,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
   const api = useApi();
   const abortController = new AbortController();
 
-  const fetchOptions = async (): Promise<void> => {
+  const fetchOptions = useCallback(async (): Promise<void> => {
     setIsLoading(true);
     return api
       .fetchJson({
@@ -83,6 +85,22 @@ export const EntityInput: FC<IEntityInputProps> = props => {
       })
       .then((json: Array<any>) => {
         setOptions(json);
+        if (isAutoselect) {
+          const newValue = multiple ? [json[0]] : json[0];
+          const isValueNotExistInOptions =
+            value &&
+            (multiple
+              ? value.some((v: number) => json.every((o: IAutocompleteOption) => o.id !== v))
+              : json.every((o: IAutocompleteOption) => o.id !== value));
+
+          if (!value || isValueNotExistInOptions) {
+            onChange
+              ? onChange({} as ChangeEvent<unknown>, newValue, "autoselect")
+              : form.setValue(name, multiple ? newValue.map((o: IAutocompleteOption) => o.id) : newValue.id, {
+                  shouldTouch: true,
+                });
+          }
+        }
       })
       .catch(e => {
         if (!e.message.includes("The user aborted a request")) {
@@ -93,7 +111,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
       .finally(() => {
         setIsLoading(false);
       });
-  };
+  }, [data, value, name, multiple, form]);
 
   useDeepCompareEffect(() => {
     void fetchOptions();

@@ -1,5 +1,5 @@
-import { FC } from "react";
-import { get, useFormContext } from "react-hook-form";
+import { FC, useEffect, useMemo } from "react";
+import { useFormContext, useWatch } from "react-hook-form";
 import { constants, BigNumberish } from "ethers";
 
 import { MaskedInput } from "../mask";
@@ -30,9 +30,15 @@ export const EthInput: FC<IEthInputProps> = props => {
   } = props;
 
   const form = useFormContext<any>();
-  const value = get(form.getValues(), name);
+  const value = useWatch({ name });
+  const normalizedValue = normalizeValue(units)(value);
 
-  const formattedValue = normalizeValue(units)(value);
+  // memoize value to handle changing units
+  // and setting correct value to the form according to the new units
+  const memoizedValue = useMemo(() => normalizeValue(units)(value), [value]);
+  useEffect(() => {
+    form.setValue(name, formatValue(units)(memoizedValue), { shouldTouch: true });
+  }, [units]);
 
   return (
     <MaskedInput
@@ -44,7 +50,7 @@ export const EthInput: FC<IEthInputProps> = props => {
       name={name}
       formatValue={formatValue(units)}
       normalizeValue={normalizeValue(units)}
-      defaultValue={formattedValue}
+      defaultValue={normalizedValue}
       {...rest}
     />
   );
