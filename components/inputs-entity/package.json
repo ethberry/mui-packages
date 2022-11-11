@@ -17,8 +17,8 @@
   "devDependencies": {
     "@gemunion/provider-api": "7.0.6",
     "@mui/icons-material": "5.10.9",
-    "@mui/lab": "5.0.0-alpha.106",
-    "@mui/material": "5.10.12",
+    "@mui/lab": "5.0.0-alpha.107",
+    "@mui/material": "5.10.13",
     "@mui/styles": "5.10.10",
     "@types/react": "18.0.25",
     "notistack": "2.0.8",
