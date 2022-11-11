@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/draft-js-utils": "1.1.4",
+    "@gemunion/draft-js-utils": "1.1.5",
     "@gemunion/mui-form": "7.0.18",
     "@gemunion/mui-inputs-core": "7.0.59",
     "@gemunion/mui-rte": "3.0.1",
