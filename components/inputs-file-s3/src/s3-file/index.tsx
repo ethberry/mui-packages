@@ -1,15 +1,15 @@
 import { FC, useCallback, useState } from "react";
 
-import { S3Upload, S3Response } from "@gemunion/s3-uploader";
+import { IS3Response, S3Upload } from "@gemunion/s3-uploader";
 import { useApi } from "@gemunion/provider-api";
 import { FileInput, IFileInputProps } from "@gemunion/mui-inputs-file";
 
-interface IS3FileInputProps extends Omit<IFileInputProps, "onChange"> {
+interface IS3FileInputProps extends Omit<IFileInputProps, "onChange" | "onError"> {
   bucketUrl?: string;
   bucket?: string;
   region?: string;
   onChange: (url: string) => void;
-  onError?: (err: Error) => void;
+  onError?: (status: string) => void;
   onProgress?: (percent: number, status: string, file: File) => void;
   validate?: (files: File[]) => Promise<boolean>;
 }
@@ -39,8 +39,8 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
     region = defaultRegion,
     bucketUrl = `https://${bucket}.s3.${region}.amazonaws.com`,
     onChange,
-    onError,
-    onProgress,
+    onError = console.error,
+    onProgress = console.info,
     validate,
     ...rest
   } = props;
@@ -65,21 +65,28 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
       return;
     }
 
-    // eslint-disable-next-line no-new
-    new S3Upload({
-      files,
-      signingUrl: "/s3/put",
-      onFinishS3Put: (data: S3Response) => {
+    class MyS3Upload extends S3Upload {
+      onFinishS3Put(data: IS3Response) {
         onChange(`${bucketUrl}${new URL(data.signedUrl).pathname}`);
         setIsLoading(false);
-      },
-      onProgress: onProgress || console.info,
-      onError: (error: Error) => {
+      }
+
+      onProgress(percent: number, status: string, file: File) {
+        onProgress(percent, status, file);
+      }
+
+      onError(error: string) {
         setIsLoading(false);
-        onError ? onError(error) : console.error(error);
-      },
+        onError(error);
+      }
+    }
+
+    // eslint-disable-next-line no-new
+    new MyS3Upload({
+      files,
+      signingUrl: "/s3/put",
       signingUrlMethod: "GET",
-      signingUrlWithCredentials: true,
+      withCredentials: true,
       server: defaultBaseUrl,
       signingUrlHeaders: {
         authorization: authToken ? `Bearer ${authToken.accessToken}` : "",
