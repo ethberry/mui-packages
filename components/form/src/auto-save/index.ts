@@ -1,22 +1,26 @@
 import { FC } from "react";
-import { useFormContext, useWatch } from "react-hook-form";
+import { FieldValues, useFormContext, UseFormReturn, useWatch } from "react-hook-form";
 import { useDebouncedCallback } from "use-debounce";
+
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
 
 interface IAutoSaveProps {
-  onSubmit: (values: any) => Promise<void>;
+  onSubmit: (values: any, form: UseFormReturn<FieldValues, any>) => Promise<void>;
 }
 
 export const AutoSave: FC<IAutoSaveProps> = props => {
   const { onSubmit } = props;
 
+  const form = useFormContext();
+
   const {
     formState: { isDirty },
-  } = useFormContext();
+  } = form;
+
   const values = useWatch();
 
   const debouncedOnSubmit = useDebouncedCallback(async () => {
-    await onSubmit(values);
+    await onSubmit(values, form);
   }, 300);
 
   useDeepCompareEffect(() => {
