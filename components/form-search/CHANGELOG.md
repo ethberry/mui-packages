@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.21](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@7.0.20...@gemunion/mui-form-search@7.0.21) (2022-11-15)
+
+### Bug Fixes
+
+- autosave by passing form to onSubmit ([b804d23](https://github.com/gemunion/mui-packages/commit/b804d23867486c8a684cfae434434b1362518369))
+
 ## 7.0.20 (2022-11-11)
 
 **Note:** Version bump only for package @gemunion/mui-form-search
