@@ -17,6 +17,7 @@ export enum Networks {
   OPTIMISM = "OPTIMISM",
   ARBITRUM = "ARBITRUM",
   BESU = "BESU",
+  BESU_GEM = "BESU_GEM",
 }
 
 export const networkToChainId: Record<Networks, number> = {
@@ -30,7 +31,8 @@ export const networkToChainId: Record<Networks, number> = {
   [Networks.MUMBAI]: 80001,
   [Networks.OPTIMISM]: 10,
   [Networks.ARBITRUM]: 42161,
-  [Networks.BESU]: 1337,
+  [Networks.BESU]: 13378,
+  [Networks.BESU_GEM]: 13377,
 };
 
 export const chainIdToNetwork: Record<number, Networks> = (Object.keys(networkToChainId) as Networks[]).reduce(
@@ -81,6 +83,7 @@ export const rpcUrls: Record<string, string[]> = {
     "https://rpc-mumbai.maticvigil.com",
   ],
   [networkToChainId[Networks.BESU]]: [jsonRpcUrl, "http://127.0.0.1:8545"],
+  [networkToChainId[Networks.BESU_GEM]]: [jsonRpcUrl, "https://besu.gemunion.io"],
 };
 
 export const networks: Record<number, INetwork> = {
@@ -177,6 +180,17 @@ export const networks: Record<number, INetwork> = {
     chainId: networkToChainId[Networks.BESU],
     rpcUrls: rpcUrls[networkToChainId[Networks.BESU]],
     blockExplorerUrls: ["http://localhost:8080"],
+    nativeCurrency: {
+      name: "BESU",
+      symbol: "BESU",
+      decimals: 18,
+    },
+  },
+  [networkToChainId[Networks.BESU_GEM]]: {
+    chainName: "Besu Gemunion",
+    chainId: networkToChainId[Networks.BESU],
+    rpcUrls: rpcUrls[networkToChainId[Networks.BESU]],
+    blockExplorerUrls: ["https://besu-explorer.gemunion.io"],
     nativeCurrency: {
       name: "BESU",
       symbol: "BESU",
