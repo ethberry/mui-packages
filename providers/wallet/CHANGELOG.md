@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2022-11-18)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([4a22e0e](https://github.com/gemunion/mui-packages/commit/4a22e0e7f855e55462fd27d030bf470155b0b31a))
+
+### Features
+
+- add besu gemunion 13377 ([e0148b6](https://github.com/gemunion/mui-packages/commit/e0148b6999ac7c346ce3c462ff1ba05a8e0eb23e))
+
 ## 3.0.17 (2022-11-11)
 
 **Note:** Version bump only for package @gemunion/provider-wallet
