@@ -9,7 +9,7 @@
   },
   "description": "react i18n provider",
   "dependencies": {
-    "@gemunion/provider-license": "3.0.3"
+    "@gemunion/provider-license": "3.0.4"
   },
   "devDependencies": {
     "@gemunion/provider-settings": "4.0.9",

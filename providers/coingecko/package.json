@@ -9,7 +9,7 @@
   },
   "description": "react coin gecko provider",
   "dependencies": {
-    "@gemunion/provider-license": "3.0.3"
+    "@gemunion/provider-license": "3.0.4"
   },
   "devDependencies": {
     "@types/react": "18.0.25",
