@@ -19,7 +19,7 @@
     "@mui/styles": "5.10.14",
     "@types/react": "18.0.25",
     "react": "18.2.0",
-    "react-hook-form": "7.39.3",
+    "react-hook-form": "7.39.4",
     "react-intl": "6.2.1"
   },
   "engines": {
