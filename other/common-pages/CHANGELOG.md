@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.1.14](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@10.1.13...@gemunion/common-pages@10.1.14) (2022-11-21)
+
+### Bug Fixes
+
+- landing mobile view ([c09c943](https://github.com/gemunion/mui-packages/commit/c09c9433dcc283edb0f9feb3adac12e3d88d9193))
+
 ## [10.1.13](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@10.1.12...@gemunion/common-pages@10.1.13) (2022-11-18)
 
 ### Bug Fixes
