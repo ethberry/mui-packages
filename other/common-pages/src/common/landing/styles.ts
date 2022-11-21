@@ -3,9 +3,15 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles<Theme>(
   () => ({
+    container: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
     logo: {
       display: "block",
-      height: "calc(100vh - 94px)",
+      maxHeight: "calc(100vh - 94px)",
+      maxWidth: "100vw",
       margin: "0 auto",
     },
   }),
