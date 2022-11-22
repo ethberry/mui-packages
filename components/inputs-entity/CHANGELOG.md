@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.2.29 (2022-11-22)
+
+### Bug Fixes
+
+- bug with EntityInput with empty autocomplete options from backend ([4ff9421](https://github.com/gemunion/mui-packages/commit/4ff94217ab67e860d0733bd02269b003e24a1320))
+
 ## 7.2.28 (2022-11-18)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-entity
