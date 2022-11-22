@@ -87,6 +87,11 @@ export const EntityInput: FC<IEntityInputProps> = props => {
         setOptions(json);
         if (isAutoselect) {
           const newValue = multiple ? [json[0]] : json[0];
+
+          if (!newValue) {
+            return;
+          }
+
           const isValueNotExistInOptions =
             value &&
             (multiple
