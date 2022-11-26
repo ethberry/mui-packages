@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/mui-form": "7.0.21",
-    "react-hook-form": "7.39.4"
+    "react-hook-form": "7.39.5"
   },
   "description": "react widget",
   "devDependencies": {
