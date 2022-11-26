@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.45 (2022-11-26)
+
+**Note:** Version bump only for package @gemunion/metamask-login
+
 ## 3.0.44 (2022-11-18)
 
 ### Bug Fixes
