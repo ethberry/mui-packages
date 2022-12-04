@@ -17,13 +17,13 @@
   "description": "react widget",
   "devDependencies": {
     "@mui/material": "5.10.16",
-    "@storybook/react": "6.5.13",
+    "@storybook/react": "6.5.14",
     "@types/mathjs": "9.4.2",
-    "@types/react": "18.0.25",
+    "@types/react": "18.0.26",
     "ethers": "5.7.2",
     "react": "18.2.0",
-    "react-hook-form": "7.39.5",
-    "react-intl": "6.2.1"
+    "react-hook-form": "7.40.0",
+    "react-intl": "6.2.5"
   },
   "engines": {
     "node": ">=12.13"
