@@ -12,10 +12,10 @@
     "@gemunion/provider-license": "3.0.4"
   },
   "devDependencies": {
-    "@types/react": "18.0.25",
+    "@types/react": "18.0.26",
     "notistack": "2.0.8",
     "react": "18.2.0",
-    "react-intl": "6.2.1"
+    "react-intl": "6.2.5"
   },
   "engines": {
     "node": ">=12.13"

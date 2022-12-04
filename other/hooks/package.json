@@ -19,8 +19,8 @@
     "@gemunion/provider-api": "7.0.6",
     "notistack": "2.0.8",
     "react": "18.2.0",
-    "react-hook-form": "7.39.5",
-    "react-intl": "6.2.1",
+    "react-hook-form": "7.40.0",
+    "react-intl": "6.2.5",
     "react-router": "6.4.2"
   },
   "engines": {

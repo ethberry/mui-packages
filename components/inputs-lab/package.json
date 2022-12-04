@@ -17,10 +17,10 @@
     "@mui/lab": "5.0.0-alpha.110",
     "@mui/material": "5.10.16",
     "@mui/styles": "5.10.16",
-    "@types/react": "18.0.25",
+    "@types/react": "18.0.26",
     "react": "18.2.0",
-    "react-hook-form": "7.39.5",
-    "react-intl": "6.2.1"
+    "react-hook-form": "7.40.0",
+    "react-intl": "6.2.5"
   },
   "engines": {
     "node": ">=12.13"
