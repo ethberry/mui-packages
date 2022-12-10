@@ -8,13 +8,13 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-dialog-confirmation": "3.2.45",
-    "@gemunion/mui-form": "7.0.23",
-    "@gemunion/mui-page-layout": "2.0.18"
+    "@gemunion/mui-dialog-confirmation": "3.2.46",
+    "@gemunion/mui-form": "7.0.24",
+    "@gemunion/mui-page-layout": "2.0.19"
   },
   "description": "react widget",
   "devDependencies": {
-    "@gemunion/mui-inputs-core": "7.0.64",
+    "@gemunion/mui-inputs-core": "7.0.65",
     "@gemunion/provider-license": "3.0.5",
     "@mui/material": "5.10.17",
     "@storybook/react": "6.5.14",
@@ -64,5 +64,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "8.0.24"
+  "version": "8.0.25"
 }

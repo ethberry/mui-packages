@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.24](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@7.0.23...@gemunion/mui-form@7.0.24) (2022-12-10)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([d012939](https://github.com/gemunion/mui-packages/commit/d012939457742656f2bb48a77dea1ffc8c5ac430))
+
 ## [7.0.23](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@7.0.22...@gemunion/mui-form@7.0.23) (2022-12-04)
 
 **Note:** Version bump only for package @gemunion/mui-form
