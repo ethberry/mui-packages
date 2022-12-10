@@ -25,7 +25,7 @@
   "devDependencies": {
     "@gemunion/provider-api": "7.0.6",
     "@gemunion/provider-user": "6.0.3",
-    "@mui/material": "5.10.16",
+    "@mui/material": "5.10.17",
     "@mui/styles": "5.10.16",
     "firebase": "9.10.0",
     "notistack": "2.0.8",
