@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.18](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-icons@1.0.17...@gemunion/mui-icons@1.0.18) (2022-12-17)
+
+**Note:** Version bump only for package @gemunion/mui-icons
+
 ## [1.0.17](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-icons@1.0.16...@gemunion/mui-icons@1.0.17) (2022-12-10)
 
 **Note:** Version bump only for package @gemunion/mui-icons
