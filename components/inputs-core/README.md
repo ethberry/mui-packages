@@ -1,1 +1,1 @@
-# mui-inputs-core
+# MUI inputs: core

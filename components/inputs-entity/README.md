@@ -1,1 +1,1 @@
-# mui-inputs-entity
+# MUI inputs: entity

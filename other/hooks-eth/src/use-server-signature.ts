@@ -3,7 +3,7 @@ import { useIntl } from "react-intl";
 import { useSnackbar } from "notistack";
 
 import { IFetchProps, useApi } from "@gemunion/provider-api";
-import { IServerSignature } from "@gemunion/types-collection";
+import { IServerSignature } from "@gemunion/types-blockchain";
 
 import { IHandlerOptionsParams } from "./interfaces";
 

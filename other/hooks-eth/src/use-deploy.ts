@@ -3,7 +3,7 @@ import { Web3ContextType } from "@web3-react/core";
 import { useIntl } from "react-intl";
 import { useSnackbar } from "notistack";
 
-import { IServerSignature } from "@gemunion/types-collection";
+import { IServerSignature } from "@gemunion/types-blockchain";
 import { IFetchProps } from "@gemunion/provider-api";
 
 import { useServerSignature } from "./use-server-signature";

@@ -1,1 +1,1 @@
-# mui-inputs
+# MUI inputs: image (s3)

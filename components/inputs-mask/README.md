@@ -1,1 +1,1 @@
-# mui-inputs-mask
+# MUI inputs: mask
