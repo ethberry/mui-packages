@@ -43,7 +43,7 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@framework/mui-inputs-asset",
+  "name": "@gemunion/mui-inputs-asset",
   "peerDependencies": {
     "notistack": "^2.0.0",
     "react": "^18.0.0",
