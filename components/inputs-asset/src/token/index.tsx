@@ -81,7 +81,7 @@ export const TokenAssetInput: FC<ITokenAssetProps> = props => {
             alignItems="center"
           >
             <Box flex={1}>
-              <Paper sx={{ p: 2 }}>
+              <Paper sx={{ p: 2, display: "flex", alignItems: "stretch", flex: 1, flexDirection: "column" }}>
                 <TokenTypeInput
                   prefix={`${nestedPrefix}[${i}]`}
                   disabledOptions={tokenType?.disabledOptions}
