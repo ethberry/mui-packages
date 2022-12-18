@@ -70,7 +70,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
         {values?.map((o: TAssetComponentParams, i: number) => (
           <Box key={o.id} mt={1} mb={1} display="flex" justifyContent="space-between" alignItems="center">
             <Box flex={1}>
-              <Paper sx={{ p: 2 }}>
+              <Paper sx={{ p: 2, display: "flex", alignItems: "stretch", flex: 1, flexDirection: "column" }}>
                 <TokenTypeInput
                   prefix={`${nestedPrefix}[${i}]`}
                   disabledOptions={tokenType?.disabledOptions}
