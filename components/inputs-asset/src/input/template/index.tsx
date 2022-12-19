@@ -38,7 +38,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
           placeholder={formatMessage({ id: "form.placeholders.templateIds" })}
           data={{
             contractIds: [contractId],
-            templateStatus: [CommonStatus.ACTIVE],
+            templateStatus: [CommonStatus.ACTIVE, CommonStatus.HIDDEN],
             ...data,
           }}
           readOnly={readOnly}

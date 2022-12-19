@@ -13,7 +13,6 @@ import { ITokenAssetComponent } from "./types";
 import { emptyToken } from "./empty";
 import { TokenTypeInput } from "../input/token-type";
 import { AmountInput } from "../input/amount";
-import { CommonStatus } from "../interfaces";
 
 export interface ITokenAssetProps {
   prefix: string;
@@ -87,14 +86,7 @@ export const TokenAssetInput: FC<ITokenAssetProps> = props => {
                   disabledOptions={tokenType?.disabledOptions}
                   readOnly={readOnly}
                 />
-                <ContractInput
-                  prefix={`${nestedPrefix}[${i}]`}
-                  readOnly={readOnly}
-                  data={{
-                    ...contract?.data,
-                    contractStatus: [CommonStatus.ACTIVE],
-                  }}
-                />
+                <ContractInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} data={contract?.data} />
                 <TokenInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} />
                 <AmountInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} />
               </Paper>

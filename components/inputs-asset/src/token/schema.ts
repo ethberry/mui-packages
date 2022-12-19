@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import { bigNumberValidationSchema } from "@gemunion/yup-rules-eth";
 import { TokenType } from "@gemunion/types-blockchain";
 
-export const tokenAssetComponentValidationSchema = Yup.object().shape({
+const tokenAssetComponentValidationSchema = Yup.object().shape({
   tokenType: Yup.mixed<TokenType>().oneOf(Object.values(TokenType)).required("form.validations.valueMissing"),
   contractId: Yup.number()
     .required("form.validations.valueMissing")
