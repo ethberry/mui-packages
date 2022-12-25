@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.32 (2022-12-25)
+
+**Note:** Version bump only for package @gemunion/s3-uploader
+
 ## [0.0.31](https://github.com/gemunion/mui-packages/compare/@gemunion/s3-uploader@0.0.30...@gemunion/s3-uploader@0.0.31) (2022-12-10)
 
 **Note:** Version bump only for package @gemunion/s3-uploader
