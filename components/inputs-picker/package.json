@@ -13,8 +13,8 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.11.1",
-    "@mui/styles": "5.11.1",
+    "@mui/material": "5.11.2",
+    "@mui/styles": "5.11.2",
     "@mui/x-date-pickers": "5.0.12",
     "@mui/x-date-pickers-pro": "5.0.12",
     "@types/react": "18.0.26",
