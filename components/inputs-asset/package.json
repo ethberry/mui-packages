@@ -26,10 +26,10 @@
     "ethers": "5.7.2",
     "mathjs": "11.5.0",
     "notistack": "2.0.8",
-    "react-hook-form": "7.41.3",
+    "react-hook-form": "7.41.5",
     "react-intl": "6.2.5",
     "react-window": "1.8.8",
-    "type-fest": "3.5.0",
+    "type-fest": "3.5.1",
     "yup": "0.32.11"
   },
   "description": "react 1inch",
