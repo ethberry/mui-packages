@@ -10,15 +10,11 @@ import { CustomBadge } from "../custom-badge";
 import { useWallet } from "../../provider";
 import { walletConnect } from "../../connectors/wallet-connect";
 import { TConnectors } from "../../connectors/types";
-
-export interface IWalletConnectButtonProps {
-  disabled?: boolean;
-  onClick: () => void;
-}
+import { IWalletButtonProps } from "./interfaces";
 
 // https://github.com/NoahZinsmeister/web3-react/blob/v6/docs/connectors/walletconnect.md
-export const WalletConnectButton: FC<IWalletConnectButtonProps> = props => {
-  const { disabled, onClick } = props;
+export const WalletConnectButton: FC<IWalletButtonProps> = props => {
+  const { disabled, onClick, badgeProps = {}, iconButtonProps = {}, iconProps = {}, customIcon } = props;
 
   const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
@@ -49,9 +45,9 @@ export const WalletConnectButton: FC<IWalletConnectButtonProps> = props => {
   }, [network]);
 
   return (
-    <CustomBadge invisible={!isActive || !(connector instanceof WalletConnect)}>
-      <IconButton disabled={disabled} onClick={handleClick}>
-        <WalletConnectIcon viewBox="0 0 60 60" sx={{ fontSize: 60 }} />
+    <CustomBadge invisible={!isActive || !(connector instanceof WalletConnect)} badgeProps={badgeProps}>
+      <IconButton disabled={disabled} onClick={handleClick} {...iconButtonProps}>
+        {customIcon || <WalletConnectIcon viewBox="0 0 60 60" sx={{ fontSize: 60 }} {...iconProps} />}
       </IconButton>
     </CustomBadge>
   );

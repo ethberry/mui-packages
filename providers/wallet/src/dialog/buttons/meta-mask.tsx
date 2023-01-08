@@ -10,14 +10,10 @@ import { CustomBadge } from "../custom-badge";
 import { metaMask } from "../../connectors/meta-mask";
 import { useWallet } from "../../provider";
 import { TConnectors } from "../../connectors/types";
+import { IWalletButtonProps } from "./interfaces";
 
-export interface IMetaMaskButtonProps {
-  onClick: () => void;
-  disabled?: boolean;
-}
-
-export const MetaMaskButton: FC<IMetaMaskButtonProps> = props => {
-  const { disabled, onClick } = props;
+export const MetaMaskButton: FC<IWalletButtonProps> = props => {
+  const { disabled, onClick, badgeProps = {}, iconButtonProps = {}, iconProps = {}, customIcon } = props;
 
   const { isActive, connector } = useWeb3React();
   const { enqueueSnackbar } = useSnackbar();
@@ -67,9 +63,9 @@ export const MetaMaskButton: FC<IMetaMaskButtonProps> = props => {
   }, [network]);
 
   return (
-    <CustomBadge invisible={!isActive || !(connector instanceof MetaMask)}>
-      <IconButton disabled={disabled} onClick={handleClick}>
-        <MetaMaskIcon viewBox="0 0 60 60" sx={{ fontSize: 60 }} />
+    <CustomBadge invisible={!isActive || !(connector instanceof MetaMask)} badgeProps={badgeProps}>
+      <IconButton disabled={disabled} onClick={handleClick} {...iconButtonProps}>
+        {customIcon || <MetaMaskIcon viewBox="0 0 60 60" sx={{ fontSize: 60 }} {...iconProps} />}
       </IconButton>
     </CustomBadge>
   );

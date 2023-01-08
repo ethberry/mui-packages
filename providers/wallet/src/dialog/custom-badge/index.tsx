@@ -4,11 +4,11 @@ import { Check } from "@mui/icons-material";
 
 export interface ICustomBadgeProps {
   invisible: boolean;
-  BadgeProps?: BadgeProps;
+  badgeProps?: BadgeProps;
 }
 
 export const CustomBadge: FC<PropsWithChildren<ICustomBadgeProps>> = props => {
-  const { invisible, BadgeProps, children } = props;
+  const { invisible, badgeProps, children } = props;
 
   return (
     <Badge
@@ -20,7 +20,7 @@ export const CustomBadge: FC<PropsWithChildren<ICustomBadgeProps>> = props => {
       overlap="circular"
       invisible={invisible}
       badgeContent={<Check sx={{ fontSize: 8 }} />}
-      {...BadgeProps}
+      {...badgeProps}
     >
       {children}
     </Badge>
