@@ -1,35 +1,17 @@
 import { FC } from "react";
 import { useIntl } from "react-intl";
 import { useFormContext, Controller, get } from "react-hook-form";
-import { TextField, StandardTextFieldProps, FilledTextFieldProps, OutlinedTextFieldProps } from "@mui/material";
+import { TextField, TextFieldProps } from "@mui/material";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
-export interface IStandardTextInputProps extends StandardTextFieldProps {
+export type ITextInputProps = {
   name: string;
   readOnly?: boolean;
   maskedRef?: any;
   formatValue?: (value: any) => number | string;
   normalizeValue?: (value: any) => number | string;
-}
-
-export interface IFilledTextInputProps extends FilledTextFieldProps {
-  name: string;
-  readOnly?: boolean;
-  maskedRef?: any;
-  formatValue?: (value: any) => number | string;
-  normalizeValue?: (value: any) => number | string;
-}
-
-export interface IOutlinedTextInputProps extends OutlinedTextFieldProps {
-  name: string;
-  readOnly?: boolean;
-  maskedRef?: any;
-  formatValue?: (value: any) => number | string;
-  normalizeValue?: (value: any) => number | string;
-}
-
-export type ITextInputProps = IStandardTextInputProps | IFilledTextInputProps | IOutlinedTextInputProps;
+} & TextFieldProps;
 
 export const TextInput: FC<ITextInputProps> = props => {
   const {

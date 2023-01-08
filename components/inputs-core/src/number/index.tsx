@@ -1,21 +1,11 @@
 import { FC, KeyboardEvent, FocusEvent } from "react";
 import { useFormContext } from "react-hook-form";
 
-import { IFilledTextInputProps, IOutlinedTextInputProps, IStandardTextInputProps, TextInput } from "../text";
+import { ITextInputProps, TextInput } from "../text";
 
-export interface IStandardNumberInputProps extends IStandardTextInputProps {
+export type INumberInputProps = {
   allowNegative?: boolean;
-}
-
-export interface IFilledNumberInputProps extends IFilledTextInputProps {
-  allowNegative?: boolean;
-}
-
-export interface IOutlinedNumberInputProps extends IOutlinedTextInputProps {
-  allowNegative?: boolean;
-}
-
-export type INumberInputProps = IStandardNumberInputProps | IFilledNumberInputProps | IOutlinedNumberInputProps;
+} & ITextInputProps;
 
 export const NumberInput: FC<INumberInputProps> = props => {
   const { name, allowNegative = false, ...rest } = props;

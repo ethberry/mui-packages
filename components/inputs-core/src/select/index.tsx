@@ -5,11 +5,11 @@ import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
-export interface ISelectInputProps extends SelectProps {
+export type ISelectInputProps = {
   name: string;
   options: Record<string, string>; // enum
   disabledOptions?: Array<string>;
-}
+} & SelectProps;
 
 export const SelectInput: FC<ISelectInputProps> = props => {
   const { options, label, name, multiple, variant = "standard", disabledOptions = [], ...rest } = props;
