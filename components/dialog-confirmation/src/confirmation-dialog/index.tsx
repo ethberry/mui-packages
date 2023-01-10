@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 
 import { useLicense } from "@gemunion/provider-license";
+import { useSettings } from "@gemunion/provider-settings";
 
 export interface IConfirmationDialogProps extends DialogProps {
   onCancel: () => void;
@@ -33,6 +34,7 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
   } = props;
 
   const license = useLicense();
+  const settings = useSettings();
 
   if (!license.isValid()) {
     return null;
@@ -46,6 +48,7 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
       aria-labelledby="confirmation-dialog-title"
       aria-describedby="confirmation-dialog-content"
       data-testid="DialogConfirmation"
+      dir={settings.getLayoutDirection().toLowerCase()}
       {...rest}
     >
       <DialogTitle id="confirmation-dialog-title">
