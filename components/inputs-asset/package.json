@@ -19,7 +19,7 @@
     "@gemunion/types-blockchain": "1.1.0",
     "@gemunion/yup-rules-eth": "1.0.21",
     "@mui/icons-material": "5.11.0",
-    "@mui/material": "5.11.3",
+    "@mui/material": "5.11.4",
     "@web3-react/core": "8.0.35-beta.0",
     "cross-fetch": "3.1.5",
     "ethers": "5.7.2",
