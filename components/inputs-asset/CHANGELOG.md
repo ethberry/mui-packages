@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@1.0.7...@gemunion/mui-inputs-asset@1.0.8) (2023-01-10)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([04b2abb](https://github.com/gemunion/mui-packages/commit/04b2abbe9e96a389d94a0b5f4efb4ce0e1a956bd))
+- move provider-license to dev and peer dependencies ([2bbcf8d](https://github.com/gemunion/mui-packages/commit/2bbcf8de688dfc1917466c6c9f56325224d5bd99))
+
 ## [1.0.7](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@1.0.6...@gemunion/mui-inputs-asset@1.0.7) (2023-01-08)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset

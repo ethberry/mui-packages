@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.50](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-confirmation@3.2.49...@gemunion/mui-dialog-confirmation@3.2.50) (2023-01-10)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([04b2abb](https://github.com/gemunion/mui-packages/commit/04b2abbe9e96a389d94a0b5f4efb4ce0e1a956bd))
+- set direction layout (ltr/rtl) ([fe4f749](https://github.com/gemunion/mui-packages/commit/fe4f749e6ae7f162845da678558669da07006616))
+
 ## [3.2.49](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-confirmation@3.2.48...@gemunion/mui-dialog-confirmation@3.2.49) (2023-01-08)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-confirmation
