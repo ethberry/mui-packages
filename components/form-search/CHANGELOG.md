@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.31](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@7.0.30...@gemunion/mui-form-search@7.0.31) (2023-01-10)
+
+### Bug Fixes
+
+- move provider-license to dev and peer dependencies ([2bbcf8d](https://github.com/gemunion/mui-packages/commit/2bbcf8de688dfc1917466c6c9f56325224d5bd99))
+
 ## [7.0.30](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@7.0.29...@gemunion/mui-form-search@7.0.30) (2023-01-08)
 
 **Note:** Version bump only for package @gemunion/mui-form-search

@@ -8,8 +8,8 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-inputs-file": "6.0.53",
-    "@gemunion/provider-api": "7.0.7",
+    "@gemunion/mui-inputs-file": "6.0.54",
+    "@gemunion/provider-api": "7.0.8",
     "@gemunion/s3-uploader": "0.0.33"
   },
   "description": "react widget",
@@ -48,5 +48,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "7.0.57"
+  "version": "7.0.58"
 }

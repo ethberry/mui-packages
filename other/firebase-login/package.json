@@ -8,12 +8,12 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/constants": "0.9.0",
+    "@gemunion/constants": "0.9.1",
     "@gemunion/firebase": "1.1.32",
-    "@gemunion/provider-api": "7.0.7",
-    "@gemunion/provider-wallet": "3.1.7",
-    "@gemunion/react-hooks": "1.0.51",
-    "@gemunion/react-hooks-eth": "1.0.60",
+    "@gemunion/provider-api": "7.0.8",
+    "@gemunion/provider-wallet": "3.1.8",
+    "@gemunion/react-hooks": "1.0.52",
+    "@gemunion/react-hooks-eth": "1.0.61",
     "@gemunion/types-collection": "1.5.5",
     "@mui/icons-material": "5.11.0",
     "@web3-react/core": "8.0.35-beta.0",
@@ -22,10 +22,10 @@
   },
   "description": "react component",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.7",
+    "@gemunion/provider-api": "7.0.8",
     "@gemunion/provider-license": "3.0.6",
-    "@gemunion/provider-user": "6.0.6",
-    "@mui/material": "5.11.3",
+    "@gemunion/provider-user": "6.0.7",
+    "@mui/material": "5.11.4",
     "@mui/styles": "5.11.2",
     "firebase": "9.10.0",
     "notistack": "2.0.8",
@@ -72,5 +72,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.1.13"
+  "version": "2.1.14"
 }

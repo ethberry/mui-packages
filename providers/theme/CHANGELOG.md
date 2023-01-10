@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.26](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.25...@gemunion/provider-theme@6.0.26) (2023-01-10)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([04b2abb](https://github.com/gemunion/mui-packages/commit/04b2abbe9e96a389d94a0b5f4efb4ce0e1a956bd))
+- set direction layout (ltr/rtl); implement emotion engine implicitly ([dc57a56](https://github.com/gemunion/mui-packages/commit/dc57a5648677cf7113fbacf550a925703003fa8f))
+
 ## [6.0.25](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.24...@gemunion/provider-theme@6.0.25) (2023-01-08)
 
 **Note:** Version bump only for package @gemunion/provider-theme

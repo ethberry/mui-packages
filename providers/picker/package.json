@@ -13,7 +13,7 @@
   },
   "description": "Material UI picker provider",
   "devDependencies": {
-    "@mui/material": "5.11.3",
+    "@mui/material": "5.11.4",
     "@mui/x-date-pickers": "5.0.13",
     "react": "18.2.0"
   },
@@ -47,5 +47,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "4.0.19"
+  "version": "4.0.20"
 }

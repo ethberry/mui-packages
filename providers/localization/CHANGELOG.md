@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.47](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.46...@gemunion/provider-localization@3.0.47) (2023-01-10)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([04b2abb](https://github.com/gemunion/mui-packages/commit/04b2abbe9e96a389d94a0b5f4efb4ce0e1a956bd))
+- move provider-license to dev and peer dependencies ([2bbcf8d](https://github.com/gemunion/mui-packages/commit/2bbcf8de688dfc1917466c6c9f56325224d5bd99))
+
 ## [3.0.46](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.45...@gemunion/provider-localization@3.0.46) (2023-01-08)
 
 **Note:** Version bump only for package @gemunion/provider-localization

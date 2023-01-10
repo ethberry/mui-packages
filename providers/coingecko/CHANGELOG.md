@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.16 (2023-01-10)
+
+### Bug Fixes
+
+- move provider-license to dev and peer dependencies ([2bbcf8d](https://github.com/gemunion/mui-packages/commit/2bbcf8de688dfc1917466c6c9f56325224d5bd99))
+
 ## 2.0.15 (2022-12-25)
 
 **Note:** Version bump only for package @gemunion/provider-coingecko
