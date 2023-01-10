@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren, useEffect, useMemo } from "react";
+import { FC, PropsWithChildren, useEffect } from "react";
 import { CssBaseline } from "@mui/material";
 import {
   createTheme,
@@ -11,6 +11,9 @@ import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 import { prefixer } from "stylis";
 import rtlPlugin from "stylis-plugin-rtl";
+import { create } from "jss";
+import rtl from "jss-rtl";
+import { StylesProvider, jssPreset } from "@mui/styles";
 
 import { useSettings } from "@gemunion/provider-settings";
 
@@ -39,18 +42,18 @@ export const ThemeProvider: FC<PropsWithChildren<IThemeProviderProps>> = props =
     stylisPlugins: [prefixer],
   });
 
-  const theme = useMemo(
-    () =>
-      createTheme({
-        palette: {
-          light: lightPalette,
-          dark: darkPalette,
-        }[settings.getTheme()],
-        direction,
-        ...options,
-      }),
-    [direction, lightPalette, darkPalette, options],
-  );
+  const jss = create({
+    plugins: [...jssPreset().plugins, rtl()],
+  });
+
+  const theme = createTheme({
+    palette: {
+      light: lightPalette,
+      dark: darkPalette,
+    }[settings.getTheme()],
+    direction,
+    ...options,
+  });
 
   useEffect(() => {
     document.dir = direction;
@@ -58,10 +61,12 @@ export const ThemeProvider: FC<PropsWithChildren<IThemeProviderProps>> = props =
 
   return (
     <CacheProvider value={direction === "rtl" ? cacheRtl : cacheLtr}>
-      <MuiThemeProvider theme={theme}>
-        <CssBaseline />
-        {children}
-      </MuiThemeProvider>
+      <StylesProvider jss={jss}>
+        <MuiThemeProvider theme={theme}>
+          <CssBaseline />
+          {children}
+        </MuiThemeProvider>
+      </StylesProvider>
     </CacheProvider>
   );
 };
