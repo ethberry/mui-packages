@@ -25,10 +25,10 @@
     "jest-environment-jsdom": "29.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "7.41.5",
+    "react-hook-form": "7.42.0",
     "react-intl": "6.2.5",
     "react-router-dom": "6.4.2",
-    "ts-jest": "29.0.3",
+    "ts-jest": "29.0.5",
     "whatwg-fetch": "3.6.2"
   },
   "engines": {
