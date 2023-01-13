@@ -54,7 +54,7 @@ export const SelectInput: FC<ISelectInputProps> = props => {
             {...field}
             value={get(formValues, name)}
             onChange={(e: any) => {
-              form.setValue(name, e.target.value, { shouldTouch: true });
+              form.setValue(name, e.target.value, { shouldTouch: true, shouldDirty: true });
             }}
             {...testIdProps}
             {...rest}

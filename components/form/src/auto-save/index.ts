@@ -27,7 +27,7 @@ export const AutoSave: FC<IAutoSaveProps> = props => {
     if (isDirty) {
       void debouncedOnSubmit();
     }
-  }, [values, isDirty]);
+  }, [values, { isDirty }]);
 
   return null;
 };
