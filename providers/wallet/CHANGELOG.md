@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.10](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.1.9...@gemunion/provider-wallet@3.1.10) (2023-01-14)
+
+### Bug Fixes
+
+- multiple jsonRpcUrl ([33b8bad](https://github.com/gemunion/mui-packages/commit/33b8baddb78f8ed732372c6f470b963d90206b48))
+
 ## [3.1.9](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.1.8...@gemunion/provider-wallet@3.1.9) (2023-01-10)
 
 **Note:** Version bump only for package @gemunion/provider-wallet
