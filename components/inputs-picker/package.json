@@ -19,7 +19,7 @@
     "@mui/x-date-pickers-pro": "5.0.13",
     "@types/react": "18.0.26",
     "react": "18.2.0",
-    "react-hook-form": "7.41.5",
+    "react-hook-form": "7.42.0",
     "react-intl": "6.2.5"
   },
   "engines": {
