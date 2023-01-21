@@ -19,7 +19,7 @@
   },
   "description": "Material UI theme provider",
   "devDependencies": {
-    "@gemunion/provider-settings": "4.0.13",
+    "@gemunion/provider-settings": "4.0.14",
     "@mui/icons-material": "5.11.0",
     "@mui/material": "5.11.5",
     "@types/stylis": "4.0.2",

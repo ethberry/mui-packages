@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/constants": "0.9.1",
     "@gemunion/firebase": "1.1.32",
-    "@gemunion/provider-api": "7.0.8",
+    "@gemunion/provider-api": "7.0.9",
     "@gemunion/provider-wallet": "3.1.10",
     "@gemunion/react-hooks": "1.0.54",
     "@gemunion/react-hooks-eth": "1.0.63",
@@ -22,9 +22,9 @@
   },
   "description": "react component",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.8",
-    "@gemunion/provider-license": "3.0.6",
-    "@gemunion/provider-user": "6.0.7",
+    "@gemunion/provider-api": "7.0.9",
+    "@gemunion/provider-license": "3.0.7",
+    "@gemunion/provider-user": "6.0.8",
     "@mui/material": "5.11.5",
     "@mui/styles": "5.11.2",
     "firebase": "9.10.0",
