@@ -17,9 +17,9 @@
     "@mui/styles": "5.11.2",
     "@mui/x-date-pickers": "5.0.13",
     "@mui/x-date-pickers-pro": "5.0.13",
-    "@types/react": "18.0.26",
+    "@types/react": "18.0.27",
     "react": "18.2.0",
-    "react-hook-form": "7.42.0",
+    "react-hook-form": "7.42.1",
     "react-intl": "6.2.5"
   },
   "engines": {
