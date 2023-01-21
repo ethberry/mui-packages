@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.17](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-media-firebase@1.0.16...@gemunion/mui-inputs-media-firebase@1.0.17) (2023-01-21)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([d172ba0](https://github.com/gemunion/mui-packages/commit/d172ba0071c83dba42923f702a47835761e8b7b0))
+
 ## [1.0.16](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-media-firebase@1.0.15...@gemunion/mui-inputs-media-firebase@1.0.16) (2023-01-14)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-media-firebase

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.0.28 (2023-01-21)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([d172ba0](https://github.com/gemunion/mui-packages/commit/d172ba0071c83dba42923f702a47835761e8b7b0))
+
 ## [6.0.27](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.26...@gemunion/provider-theme@6.0.27) (2023-01-10)
 
 ### Bug Fixes
