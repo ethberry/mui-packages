@@ -12,7 +12,7 @@
     "@gemunion/mui-inputs-core": "7.0.74",
     "@gemunion/mui-inputs-entity": "7.2.41",
     "@gemunion/mui-inputs-mask": "5.4.34",
-    "@gemunion/provider-user": "6.0.8",
+    "@gemunion/provider-user": "6.0.9",
     "@gemunion/provider-wallet": "3.1.11",
     "@gemunion/react-hooks": "1.0.55",
     "@gemunion/react-hooks-eth": "1.0.64",
