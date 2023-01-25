@@ -20,7 +20,7 @@
     "@gemunion/provider-license": "3.0.7",
     "@gemunion/provider-user": "6.0.9",
     "@gemunion/provider-wallet": "3.1.11",
-    "@mui/material": "5.11.5",
+    "@mui/material": "5.11.6",
     "@mui/styles": "5.11.2",
     "@types/uuid": "9.0.0",
     "notistack": "2.0.8",
