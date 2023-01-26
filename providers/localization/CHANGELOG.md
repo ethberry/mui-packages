@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.51](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.50...@gemunion/provider-localization@3.0.51) (2023-01-26)
+
+### Bug Fixes
+
+- localization and wallet provider to make it more customizable ([50d38c5](https://github.com/gemunion/mui-packages/commit/50d38c57802b1a959932a906879dcb2e49ec4514))
+
 ## [3.0.50](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.49...@gemunion/provider-localization@3.0.50) (2023-01-25)
 
 ### Bug Fixes
