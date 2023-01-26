@@ -5,4 +5,5 @@ export * from "./dialog/buttons";
 export * from "./dialog/chain-icons";
 export * from "./dialog/wallet-icons";
 export * from "./interfaces";
+export * from "./hooks";
 export * from "./provider";
