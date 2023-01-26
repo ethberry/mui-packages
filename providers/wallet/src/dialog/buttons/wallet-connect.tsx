@@ -1,48 +1,20 @@
-import { FC, useCallback } from "react";
+import { FC } from "react";
 import { IconButton } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 import { WalletConnect } from "@web3-react/walletconnect";
-import { useSnackbar } from "notistack";
-import { useIntl } from "react-intl";
 
 import { WalletConnectIcon } from "../wallet-icons";
 import { CustomBadge } from "../custom-badge";
-import { useWallet } from "../../provider";
-import { walletConnect } from "../../connectors/wallet-connect";
-import { TConnectors } from "../../connectors/types";
 import { IWalletButtonProps } from "./interfaces";
+import { useConnectWalletConnect } from "../../hooks";
 
 // https://github.com/NoahZinsmeister/web3-react/blob/v6/docs/connectors/walletconnect.md
 export const WalletConnectButton: FC<IWalletButtonProps> = props => {
   const { disabled, onClick, badgeProps = {}, iconButtonProps = {}, iconProps = {}, customIcon } = props;
 
-  const { enqueueSnackbar } = useSnackbar();
-  const { formatMessage } = useIntl();
   const { isActive, connector } = useWeb3React();
-  const { setActiveConnector, network, connectCallback } = useWallet();
 
-  const handleClick = useCallback(() => {
-    void connectCallback(async () => {
-      return walletConnect
-        .activate(network ? network.chainId : undefined)
-        .then(() => {
-          setActiveConnector(TConnectors.WALLETCONNECT);
-          onClick();
-        })
-        .catch(e => {
-          // eslint-disable-next-line no-console
-          console.error("error", e);
-
-          setActiveConnector(null);
-
-          if (e && e.code === 4001) {
-            enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
-          } else {
-            enqueueSnackbar((e && e.message) || formatMessage({ id: "snackbar.error" }), { variant: "error" });
-          }
-        });
-    });
-  }, [network]);
+  const handleClick = useConnectWalletConnect({ onClick });
 
   return (
     <CustomBadge invisible={!isActive || !(connector instanceof WalletConnect)} badgeProps={badgeProps}>
