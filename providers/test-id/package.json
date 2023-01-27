@@ -11,7 +11,7 @@
   "devDependencies": {
     "@types/react": "18.0.27",
     "react": "18.2.0",
-    "react-intl": "6.2.5"
+    "react-intl": "6.2.6"
   },
   "engines": {
     "node": ">=12.13"
