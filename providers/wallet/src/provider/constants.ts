@@ -185,8 +185,8 @@ export const networks: Record<number, INetwork> = {
     rpcUrls: rpcUrls[networkToChainId[Networks.GEMUNION]],
     blockExplorerUrls: ["https://besu-explorer.gemunion.io"],
     nativeCurrency: {
-      name: "GEM",
-      symbol: "GEM",
+      name: "BESU",
+      symbol: "BESU",
       decimals: 18,
     },
   },
