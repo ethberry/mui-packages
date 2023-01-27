@@ -181,12 +181,12 @@ export const networks: Record<number, INetwork> = {
   },
   [networkToChainId[Networks.GEMUNION]]: {
     chainName: "Gemunion",
-    chainId: networkToChainId[Networks.BESU],
-    rpcUrls: rpcUrls[networkToChainId[Networks.BESU]],
+    chainId: networkToChainId[Networks.GEMUNION],
+    rpcUrls: rpcUrls[networkToChainId[Networks.GEMUNION]],
     blockExplorerUrls: ["https://besu-explorer.gemunion.io"],
     nativeCurrency: {
-      name: "BESU",
-      symbol: "BESU",
+      name: "GEM",
+      symbol: "GEM",
       decimals: 18,
     },
   },
