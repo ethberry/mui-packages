@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.14](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.1.13...@gemunion/provider-wallet@3.1.14) (2023-01-27)
+
+### Bug Fixes
+
+- gem chainId ([af18c3d](https://github.com/gemunion/mui-packages/commit/af18c3d7aa2afe2fb58f07b40b31ffde57245896))
+
 ## [3.1.13](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.1.12...@gemunion/provider-wallet@3.1.13) (2023-01-26)
 
 ### Bug Fixes
