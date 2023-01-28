@@ -141,8 +141,8 @@ export const networks: Record<number, INetwork> = {
     rpcUrls: rpcUrls[networkToChainId[Networks.BINANCE_TEST]],
     blockExplorerUrls: ["https://testnet.bscscan.com"],
     nativeCurrency: {
-      name: "tBNB",
-      symbol: "tBNB",
+      name: "BNB",
+      symbol: "BNB",
       decimals: 18,
     },
   },
