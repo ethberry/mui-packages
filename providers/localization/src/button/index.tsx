@@ -8,7 +8,7 @@ import { useSettings } from "@gemunion/provider-settings";
 export interface ILocalizationProps {
   languages: Array<string>;
   icon?: ReactElement;
-  menuProps?: MenuProps;
+  menuProps?: Partial<MenuProps>;
   menuItemProps?: MenuItemProps;
 }
 
