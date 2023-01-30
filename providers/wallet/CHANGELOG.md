@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.16](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.1.15...@gemunion/provider-wallet@3.1.16) (2023-01-30)
+
+### Bug Fixes
+
+- bnb currency ([95d4cda](https://github.com/gemunion/mui-packages/commit/95d4cda36e5be67499aec61e167b32cc85b1664a))
+- gem currency ([8c63760](https://github.com/gemunion/mui-packages/commit/8c63760cfe30cda87e5465ef59ee73ed7fe1c934))
+
 ## [3.1.15](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.1.14...@gemunion/provider-wallet@3.1.15) (2023-01-27)
 
 ### Bug Fixes
