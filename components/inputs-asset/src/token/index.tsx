@@ -66,9 +66,18 @@ export const TokenAssetInput: FC<ITokenAssetProps> = props => {
   return useMemo(
     () => (
       <Box mt={2}>
-        <Typography>
-          <FormattedMessage id={`form.labels.${ancestorPrefix}`} />
-        </Typography>
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Typography sx={{ mr: 1 }}>
+            <FormattedMessage id={`form.labels.${ancestorPrefix}`} />
+          </Typography>
+          {multiple ? (
+            <Tooltip title={formatMessage({ id: "form.tips.create" })}>
+              <IconButton size="small" aria-label="add" onClick={handleOptionAdd()}>
+                <Add fontSize="large" color="primary" />
+              </IconButton>
+            </Tooltip>
+          ) : null}
+        </Box>
 
         {values?.map((o: ITokenAssetComponent, i: number) => (
           <Box
@@ -103,14 +112,6 @@ export const TokenAssetInput: FC<ITokenAssetProps> = props => {
             )}
           </Box>
         ))}
-
-        {multiple ? (
-          <Tooltip title={formatMessage({ id: "form.tips.create" })}>
-            <IconButton size="large" aria-label="add" onClick={handleOptionAdd()}>
-              <Add fontSize="large" color="primary" />
-            </IconButton>
-          </Tooltip>
-        ) : null}
       </Box>
     ),
     [tokenType?.disabledOptions, readOnly, values],

@@ -63,9 +63,18 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
   return useMemo(
     () => (
       <Box mt={2}>
-        <Typography>
-          <FormattedMessage id={`form.labels.${ancestorPrefix}`} />
-        </Typography>
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Typography sx={{ mr: 1 }}>
+            <FormattedMessage id={`form.labels.${ancestorPrefix}`} />
+          </Typography>
+          {multiple ? (
+            <Tooltip title={formatMessage({ id: "form.tips.create" })}>
+              <IconButton size="small" aria-label="add" onClick={handleOptionAdd()}>
+                <Add fontSize="large" color="primary" />
+              </IconButton>
+            </Tooltip>
+          ) : null}
+        </Box>
 
         {values?.map((o: TAssetComponentParams, i: number) => (
           <Box key={o.id} mt={1} mb={1} display="flex" justifyContent="space-between" alignItems="center">
@@ -95,14 +104,6 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
             )}
           </Box>
         ))}
-
-        {multiple ? (
-          <Tooltip title={formatMessage({ id: "form.tips.create" })}>
-            <IconButton size="large" aria-label="add" onClick={handleOptionAdd()}>
-              <Add fontSize="large" color="primary" />
-            </IconButton>
-          </Tooltip>
-        ) : null}
       </Box>
     ),
     [tokenType?.disabledOptions, readOnly, values],
