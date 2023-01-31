@@ -8,35 +8,25 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/draft-js-utils": "1.2.5",
     "@gemunion/mui-inputs-core": "7.0.77",
     "@gemunion/mui-inputs-entity": "7.2.44",
     "@gemunion/mui-inputs-mask": "5.4.37",
-    "@gemunion/provider-user": "6.0.10",
-    "@gemunion/provider-wallet": "3.1.16",
     "@gemunion/react-hooks": "1.0.58",
-    "@gemunion/react-hooks-eth": "1.0.69",
     "@gemunion/types-blockchain": "1.1.0",
-    "@gemunion/yup-rules-eth": "1.0.24",
-    "@mui/icons-material": "5.11.0",
-    "@mui/material": "5.11.6",
-    "@web3-react/core": "8.0.35-beta.0",
-    "cross-fetch": "3.1.5",
-    "ethers": "5.7.2",
-    "mathjs": "11.5.0",
-    "notistack": "2.0.8",
-    "react-hook-form": "7.43.0",
-    "react-intl": "6.2.7",
-    "react-window": "1.8.8",
-    "type-fest": "3.5.4",
-    "yup": "0.32.11"
+    "@gemunion/yup-rules-eth": "1.0.24"
   },
   "description": "react 1inch",
   "devDependencies": {
     "@gemunion/provider-license": "3.0.7",
+    "@mui/icons-material": "5.11.0",
+    "@mui/material": "5.11.6",
     "@types/react": "18.0.27",
     "@types/react-window": "1.8.5",
-    "react": "18.2.0"
+    "ethers": "5.7.2",
+    "react": "18.2.0",
+    "react-hook-form": "7.43.0",
+    "react-intl": "6.2.7",
+    "yup": "0.32.11"
   },
   "engines": {
     "node": ">=12.13"
@@ -47,9 +37,14 @@
   "name": "@gemunion/mui-inputs-asset",
   "peerDependencies": {
     "@gemunion/provider-license": "^3.0.0",
+    "@mui/icons-material": "^5.0.0",
+    "@mui/material": "^5.0.0",
+    "ethers": "^5.0.0",
     "notistack": "^2.0.0",
     "react": "^18.0.0",
-    "react-intl": "^6.0.0"
+    "react-hook-form": "^7.0.0",
+    "react-intl": "^6.0.0",
+    "yup": "^0.32.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
