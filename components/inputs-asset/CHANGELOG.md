@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.17](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@1.0.16...@gemunion/mui-inputs-asset@1.0.17) (2023-02-02)
+
+### Bug Fixes
+
+- export token asset components validation schema ([2195f7d](https://github.com/gemunion/mui-packages/commit/2195f7db0804d5b8fd8d2b5e15acbb9c1ad0125c))
+- move add button for inputs-asset to the heading ([ea482f2](https://github.com/gemunion/mui-packages/commit/ea482f209b02933dffc026746db2447882589f15))
+- update package.json for inputs-asset ([4a261e6](https://github.com/gemunion/mui-packages/commit/4a261e60642cfca3c9d7bd69a9398f9ae1e80113))
+
 ## [1.0.16](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@1.0.15...@gemunion/mui-inputs-asset@1.0.16) (2023-01-30)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset
