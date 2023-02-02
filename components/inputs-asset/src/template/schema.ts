@@ -3,16 +3,16 @@ import * as Yup from "yup";
 import { bigNumberValidationSchema } from "@gemunion/yup-rules-eth";
 import { TokenType } from "@gemunion/types-blockchain";
 
-const templateAssetComponentValidationSchema = Yup.object().shape({
+export const templateAssetComponentValidationSchema = Yup.object().shape({
   tokenType: Yup.mixed<TokenType>().oneOf(Object.values(TokenType)).required("form.validations.valueMissing"),
   contractId: Yup.number()
     .required("form.validations.valueMissing")
     .integer("form.validations.badInput")
     .min(1, "form.validations.rangeUnderflow"),
-  templateId: Yup.number() // optional, min 1
+  templateId: Yup.number()
     .required("form.validations.valueMissing")
     .integer("form.validations.badInput")
-    .min(0, "form.validations.rangeUnderflow"),
+    .min(1, "form.validations.rangeUnderflow"),
   amount: bigNumberValidationSchema,
 });
 
