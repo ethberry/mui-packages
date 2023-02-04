@@ -11,7 +11,7 @@
     "@gemunion/mui-inputs-core": "7.0.77",
     "@gemunion/provider-test-id": "1.0.24",
     "@mui/styles": "5.11.2",
-    "mathjs": "11.5.0",
+    "mathjs": "11.5.1",
     "react-number-format": "5.1.3"
   },
   "description": "react widget",
