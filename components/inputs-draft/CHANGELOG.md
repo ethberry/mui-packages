@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.1.0 (2023-02-07)
+
+### Features
+
+- manually update react-router ([db39595](https://github.com/gemunion/mui-packages/commit/db3959566ef7482373fd49c4485048ebf31595e4))
+
 ## 5.0.76 (2023-02-04)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-draft
