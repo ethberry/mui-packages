@@ -1,8 +1,7 @@
 import { FC } from "react";
 import { useIntl } from "react-intl";
+import { unstable_usePrompt as usePrompt } from "react-router-dom";
 import { useFormContext } from "react-hook-form";
-
-import { usePrompt } from "./workaround";
 
 interface IPromptIfDirtyProps {
   visible?: boolean;
@@ -15,7 +14,10 @@ export const PromptIfDirty: FC<IPromptIfDirtyProps> = props => {
   } = useFormContext();
   const { formatMessage } = useIntl();
 
-  usePrompt(formatMessage({ id: "form.hints.prompt" }), visible && isDirty && submitCount === 0);
+  usePrompt({
+    message: formatMessage({ id: "form.hints.prompt" }),
+    when: visible && isDirty && submitCount === 0,
+  });
 
   return null;
 };

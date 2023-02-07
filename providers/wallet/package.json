@@ -44,9 +44,9 @@
   "name": "@gemunion/provider-wallet",
   "peerDependencies": {
     "@gemunion/provider-api": "^7.0.0",
-    "@gemunion/provider-license": "^2.0.0 || ^3.0.0",
+    "@gemunion/provider-license": "^3.0.0",
     "@gemunion/provider-popup": "^0.0.0",
-    "@gemunion/provider-user": "^5.0.0 || ^6.0.0",
+    "@gemunion/provider-user": "^6.0.0",
     "@mui/icons-material": "^5.0.0",
     "@mui/lab": "^5.0.0-alpha.0",
     "@mui/material": "^5.0.0",
@@ -55,7 +55,7 @@
     "notistack": "^2.0.0",
     "react": "^18.0.0",
     "react-intl": "^6.0.0",
-    "uuid": "9.0.0"
+    "uuid": "^9.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
