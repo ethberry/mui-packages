@@ -51,7 +51,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
 
   const [showMessage, setShowMessage] = useState<boolean>(false);
   const [showMetamask, setShowMetamask] = useState<boolean>(withMetamask);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoggingIn, setIsLoggingIn] = useState<boolean>(false);
 
   const user = useUser<any>();
   const navigate = useNavigate();
@@ -69,7 +69,6 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
       callbacks: {
         signInSuccessWithAuthResult: data => {
           setShowMetamask(false);
-          setIsLoading(true);
           if (data.additionalUserInfo.isNewUser && !data.additionalUserInfo.profile.verified_email) {
             const actionCodeSettings = {
               url: `${window.location.origin}/login`,
@@ -79,12 +78,15 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
               setShowMessage(true);
             });
           } else {
-            void user.logIn();
+            setIsLoggingIn(true);
+            void user.logIn().catch(() => {
+              setIsLoggingIn(false);
+            });
           }
           return false;
         },
         signInFailure: error => {
-          setIsLoading(false);
+          setIsLoggingIn(false);
           console.error("error", error);
         },
         uiShown: () => {
@@ -110,7 +112,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
   }
 
   return (
-    <ProgressOverlay isLoading={isLoading}>
+    <ProgressOverlay isLoading={isLoggingIn}>
       <Grid
         container
         sx={{
