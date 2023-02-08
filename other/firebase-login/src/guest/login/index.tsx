@@ -16,6 +16,7 @@ import { useSnackbar } from "notistack";
 import "firebaseui/dist/firebaseui.css";
 
 import firebase from "@gemunion/firebase";
+import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useLicense } from "@gemunion/provider-license";
 import { useUser } from "@gemunion/provider-user";
 
@@ -50,6 +51,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
 
   const [showMessage, setShowMessage] = useState<boolean>(false);
   const [showMetamask, setShowMetamask] = useState<boolean>(withMetamask);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const user = useUser<any>();
   const navigate = useNavigate();
@@ -67,6 +69,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
       callbacks: {
         signInSuccessWithAuthResult: data => {
           setShowMetamask(false);
+          setIsLoading(true);
           if (data.additionalUserInfo.isNewUser && !data.additionalUserInfo.profile.verified_email) {
             const actionCodeSettings = {
               url: `${window.location.origin}/login`,
@@ -81,6 +84,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
           return false;
         },
         signInFailure: error => {
+          setIsLoading(false);
           console.error("error", error);
         },
         uiShown: () => {
@@ -91,7 +95,9 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
       signInOptions,
     });
     return () => {
-      void ui.delete();
+      if (auth.AuthUI.getInstance() && ui) {
+        void ui.delete();
+      }
     };
   }, []);
 
@@ -104,44 +110,46 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
   }
 
   return (
-    <Grid
-      container
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "calc(100vh - 64px)",
-        maxWidth: 500,
-        margin: "0 auto",
-        textAlign: "center",
-        "& #firebaseui-auth-container": {
-          transition: "all 1s ease-out",
-          mb: 2,
-        },
-      }}
-    >
-      <Grid item sm={12}>
-        {showMessage && (
-          <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-            <FormattedMessage id="pages.guest.confirmation" />
+    <ProgressOverlay isLoading={isLoading}>
+      <Grid
+        container
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "calc(100vh - 64px)",
+          maxWidth: 500,
+          margin: "0 auto",
+          textAlign: "center",
+          "& #firebaseui-auth-container": {
+            transition: "all 1s ease-out",
+            mb: 2,
+          },
+        }}
+      >
+        <Grid item sm={12}>
+          {showMessage && (
+            <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+              <FormattedMessage id="pages.guest.confirmation" />
 
-            <Box mt={2}>
-              <Button
-                onClick={handleMainPageClick}
-                variant="contained"
-                color="primary"
-                data-testid="LoginMainPageButton"
-                endIcon={<NavigateNext />}
-              >
-                <FormattedMessage id="form.buttons.mainPage" />
-              </Button>
+              <Box mt={2}>
+                <Button
+                  onClick={handleMainPageClick}
+                  variant="contained"
+                  color="primary"
+                  data-testid="LoginMainPageButton"
+                  endIcon={<NavigateNext />}
+                >
+                  <FormattedMessage id="form.buttons.mainPage" />
+                </Button>
+              </Box>
             </Box>
-          </Box>
-        )}
-        <div id="firebaseui-auth-container" />
-        {withMetamask && showMetamask ? <MetamaskButton /> : null}
+          )}
+          <div id="firebaseui-auth-container" />
+          {withMetamask && showMetamask ? <MetamaskButton /> : null}
+        </Grid>
       </Grid>
-    </Grid>
+    </ProgressOverlay>
   );
 };
 
