@@ -11,7 +11,7 @@
     "@gemunion/mui-page-layout": "2.1.0",
     "@gemunion/provider-test-id": "1.0.25",
     "@gemunion/react-hooks": "1.1.0",
-    "@hookform/resolvers": "2.9.10",
+    "@hookform/resolvers": "2.9.11",
     "use-debounce": "9.0.3",
     "yup": "0.32.11"
   },
@@ -21,7 +21,7 @@
     "@mui/material": "5.11.7",
     "@types/react": "18.0.27",
     "react": "18.2.0",
-    "react-hook-form": "7.43.0",
+    "react-hook-form": "7.43.1",
     "react-intl": "6.2.8",
     "react-router-dom": "6.8.1"
   },
