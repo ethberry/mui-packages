@@ -9,12 +9,12 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.12.0",
-    "@gemunion/mui-form": "7.1.0",
-    "@gemunion/mui-inputs-captcha": "4.1.55",
-    "@gemunion/mui-inputs-core": "7.1.0",
-    "@gemunion/mui-page-layout": "2.1.0",
+    "@gemunion/mui-form": "7.1.1",
+    "@gemunion/mui-inputs-captcha": "4.1.56",
+    "@gemunion/mui-inputs-core": "7.1.1",
+    "@gemunion/mui-page-layout": "2.1.1",
     "@gemunion/popup": "1.0.8",
-    "@gemunion/react-hooks": "1.1.0",
+    "@gemunion/react-hooks": "1.1.1",
     "@gemunion/yup-rules": "3.0.20",
     "yup": "0.32.11"
   },
@@ -75,5 +75,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "10.2.0"
+  "version": "10.2.1"
 }

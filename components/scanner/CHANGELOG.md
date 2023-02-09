@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.1.0...@gemunion/mui-scanner@1.1.1) (2023-02-09)
+
+**Note:** Version bump only for package @gemunion/mui-scanner
+
 # [1.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.0.1...@gemunion/mui-scanner@1.1.0) (2023-02-07)
 
 ### Features

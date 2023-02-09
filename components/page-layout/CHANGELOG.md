@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-page-layout@2.1.0...@gemunion/mui-page-layout@2.1.1) (2023-02-09)
+
+### Bug Fixes
+
+- customizing for ProgressOverlay ([5b6c2b2](https://github.com/gemunion/mui-packages/commit/5b6c2b2147205857b8cc8451a578794e4db395cc))
+- **deps:** update all non-major dependencies ([47eaa72](https://github.com/gemunion/mui-packages/commit/47eaa7282c52aa0f56ca108971dcdfb1f1b95084))
+
 # 2.1.0 (2023-02-07)
 
 ### Features

@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.0...@gemunion/firebase-login@2.2.1) (2023-02-09)
+
+### Bug Fixes
+
+- firebase login infinity loading; rename isLoggingIn ([5600f51](https://github.com/gemunion/mui-packages/commit/5600f51b4539829c8e260967aa0257ee4e1d2d44))
+- login firebase bug and add loading while signing in ([f7bdb27](https://github.com/gemunion/mui-packages/commit/f7bdb27206d799e45471ce51c0d9a8bd058d2d03))
+
 # 2.2.0 (2023-02-07)
 
 ### Features
