@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.1.2...@gemunion/mui-dialog-form@8.1.3) (2023-02-12)
+
+### Bug Fixes
+
+- proxy form props ([5b9a721](https://github.com/gemunion/mui-packages/commit/5b9a7215294cb3e5032b6b9d612a0d7f42057daa))
+
 ## [8.1.2](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.1.1...@gemunion/mui-dialog-form@8.1.2) (2023-02-11)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form

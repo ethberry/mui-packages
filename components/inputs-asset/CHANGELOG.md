@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.23](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@1.0.22...@gemunion/mui-inputs-asset@1.0.23) (2023-02-12)
+
+### Bug Fixes
+
+- validation for amount, templateId and tokenId in template and token asset ([2de31d2](https://github.com/gemunion/mui-packages/commit/2de31d2b32434c85f342cab00a2d6c0001727632))
+
 ## [1.0.22](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@1.0.21...@gemunion/mui-inputs-asset@1.0.22) (2023-02-11)
 
 ### Bug Fixes
