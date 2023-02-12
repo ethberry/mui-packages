@@ -8,6 +8,7 @@ import { FormWrapper } from "@gemunion/mui-form";
 export interface IFormDialogProps<T> {
   showButtons?: boolean;
   showPrompt?: boolean;
+  showDebug?: boolean;
   onConfirm: (values: T, form?: any) => Promise<void>;
   onCancel: () => void;
   message: string;
@@ -21,7 +22,17 @@ export interface IFormDialogProps<T> {
 }
 
 export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props => {
-  const { children, onConfirm, initialValues, validationSchema, maxWidth = "lg", testId, ...rest } = props;
+  const {
+    children,
+    onConfirm,
+    initialValues,
+    validationSchema,
+    maxWidth = "lg",
+    testId,
+    showPrompt,
+    showDebug,
+    ...rest
+  } = props;
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -53,6 +64,8 @@ export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props =>
           initialValues={initialValues}
           innerRef={innerRef}
           showButtons={false}
+          showPrompt={showPrompt}
+          showDebug={showDebug}
           testId={testId}
         >
           {children}
