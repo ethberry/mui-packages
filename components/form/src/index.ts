@@ -1,4 +1,5 @@
-export { AutoSave } from "./auto-save";
-export { FormButtons } from "./buttons";
-export { FormWrapper } from "./form";
-export { PromptIfDirty } from "./prompt";
+export * from "./auto-save";
+export * from "./buttons";
+export * from "./form";
+export * from "./prompt";
+export * from "./watch";
