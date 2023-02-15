@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@1.0.23...@gemunion/mui-inputs-asset@1.1.0) (2023-02-15)
+
+### Features
+
+- getEmptyToken/Template ([6120184](https://github.com/gemunion/mui-packages/commit/6120184b38560c698d5d924b71a90a3ae853deb9))
+
 ## [1.0.23](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@1.0.22...@gemunion/mui-inputs-asset@1.0.23) (2023-02-12)
 
 ### Bug Fixes
