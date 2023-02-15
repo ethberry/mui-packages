@@ -12,7 +12,7 @@ export function getEmptyTemplate(tokenType = TokenType.ERC20) {
         tokenType,
         contractId: 0,
         contract: {
-          decimals: 18,
+          decimals: tokenType === TokenType.NATIVE || tokenType === TokenType.ERC20 ? 18 : 0,
           address: constants.AddressZero,
         },
         templateId: 0,
