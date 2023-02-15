@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 7.2.0 (2023-02-15)
+
+### Features
+
+- form watcher ([b8546a4](https://github.com/gemunion/mui-packages/commit/b8546a4fd2ec6a59594139e489a2ad5002af1fc3))
+
 ## [7.1.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@7.1.0...@gemunion/mui-form@7.1.1) (2023-02-09)
 
 ### Bug Fixes

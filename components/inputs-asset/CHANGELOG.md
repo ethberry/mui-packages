@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@1.1.0...@gemunion/mui-inputs-asset@1.1.1) (2023-02-15)
+
+### Bug Fixes
+
+- contract decimals ([39f5494](https://github.com/gemunion/mui-packages/commit/39f54948fd202f7a3c10c8b6fa7e52a723414bc2))
+- token validations ([9cd05f9](https://github.com/gemunion/mui-packages/commit/9cd05f923866d1e6dff964b48655f7f106ce1b20))
+
 # [1.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@1.0.23...@gemunion/mui-inputs-asset@1.1.0) (2023-02-15)
 
 ### Features
