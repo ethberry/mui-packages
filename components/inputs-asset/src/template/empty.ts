@@ -5,6 +5,24 @@ import { TokenType } from "@gemunion/types-blockchain";
 import { ITemplateAsset, ITemplateAssetComponent } from "./types";
 import { ITokenAsset, ITokenAssetComponent } from "../token/types";
 
+export function getEmptyTemplate(tokenType = TokenType.ERC20) {
+  return {
+    components: [
+      {
+        tokenType,
+        contractId: 0,
+        contract: {
+          decimals: 18,
+          address: constants.AddressZero,
+        },
+        templateId: 0,
+        amount:
+          tokenType === TokenType.NATIVE || tokenType === TokenType.ERC20 ? constants.WeiPerEther.toString() : "1",
+      } as ITemplateAssetComponent,
+    ],
+  } as ITemplateAsset;
+}
+
 export const emptyPrice = {
   components: [
     {
@@ -15,7 +33,7 @@ export const emptyPrice = {
         address: constants.AddressZero,
       },
       templateId: 0,
-      amount: "0",
+      amount: constants.WeiPerEther.toString(),
     } as ITemplateAssetComponent,
   ],
 } as ITemplateAsset;

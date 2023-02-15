@@ -4,6 +4,27 @@ import { TokenType } from "@gemunion/types-blockchain";
 
 import { ITokenAsset, ITokenAssetComponent } from "./types";
 
+export function getEmptyToken(tokenType = TokenType.ERC20) {
+  return {
+    components: [
+      {
+        tokenType,
+        contractId: 0,
+        contract: {
+          decimals: 0,
+          address: constants.AddressZero,
+        },
+        templateId: 0,
+        token: {
+          tokenId: "0",
+        },
+        amount:
+          tokenType === TokenType.NATIVE || tokenType === TokenType.ERC20 ? constants.WeiPerEther.toString() : "1",
+      } as ITokenAssetComponent,
+    ],
+  } as ITokenAsset;
+}
+
 export const emptyToken = {
   components: [
     {
