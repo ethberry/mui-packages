@@ -9,10 +9,10 @@ export const tokenAssetComponentValidationSchema = Yup.object().shape({
     .required("form.validations.valueMissing")
     .integer("form.validations.badInput")
     .min(1, "form.validations.rangeUnderflow"),
-  token: Yup.object().shape({
-    tokenId: Yup.number().when("tokenType", {
-      is: (tokenType: TokenType) => tokenType !== TokenType.ERC20 && tokenType !== TokenType.NATIVE,
-      then: Yup.number()
+  token: Yup.object().when("tokenType", {
+    is: (tokenType: TokenType) => tokenType !== TokenType.ERC20 && tokenType !== TokenType.NATIVE,
+    then: Yup.object().shape({
+      tokenId: Yup.number()
         .min(1, "form.validations.valueMissing")
         .integer("form.validations.badInput")
         .required("form.validations.valueMissing"),
