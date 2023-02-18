@@ -10,7 +10,7 @@
   "dependencies": {
     "@ethersproject/logger": "5.7.0",
     "@gemunion/license-messages": "0.0.34",
-    "@gemunion/provider-api": "7.0.12",
+    "@gemunion/provider-api": "7.0.13",
     "@gemunion/types-blockchain": "1.1.0",
     "@json-rpc-tools/utils": "1.7.6",
     "ethers": "5.7.2",
@@ -19,7 +19,7 @@
   },
   "description": "react hooks",
   "devDependencies": {
-    "@gemunion/provider-license": "3.0.7",
+    "@gemunion/provider-license": "3.0.8",
     "@gemunion/provider-wallet": "3.2.2",
     "@web3-react/core": "8.0.35-beta.0",
     "notistack": "2.0.8",
