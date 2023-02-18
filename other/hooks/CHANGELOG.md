@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.2 (2023-02-18)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([224026e](https://github.com/gemunion/mui-packages/commit/224026ea259aa610b83cc9a04023fa3b627f40cc))
+
 ## [1.1.1](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.1.0...@gemunion/react-hooks@1.1.1) (2023-02-09)
 
 ### Bug Fixes

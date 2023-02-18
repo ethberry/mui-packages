@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.3 (2023-02-18)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([224026e](https://github.com/gemunion/mui-packages/commit/224026ea259aa610b83cc9a04023fa3b627f40cc))
+
 ## [2.2.2](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.1...@gemunion/firebase-login@2.2.2) (2023-02-11)
 
 ### Bug Fixes
