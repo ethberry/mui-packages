@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.1.5](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.1.4...@gemunion/mui-inputs-core@7.1.5) (2023-02-19)
+
+### Bug Fixes
+
+- customize label in TextInput ([16ddaef](https://github.com/gemunion/mui-packages/commit/16ddaeff7add28554176d8b04b2934116536b019))
+
 ## [7.1.4](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.1.3...@gemunion/mui-inputs-core@7.1.4) (2023-02-18)
 
 ### Bug Fixes
