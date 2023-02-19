@@ -19,6 +19,8 @@ export interface IConfirmationDialogProps extends DialogProps {
   message?: string;
   data?: any;
   action?: ReactElement;
+  CustomButtons?: FC<{ onCancel: () => void; onConfirm: any }>;
+  showButtons?: boolean;
 }
 
 export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
@@ -28,6 +30,8 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
     children,
     message = "dialogs.confirmation",
     action = null,
+    CustomButtons = null,
+    showButtons = true,
     data,
     maxWidth = "sm",
     ...rest
@@ -59,12 +63,18 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
         <DialogContentText component="div">{children}</DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button variant="text" onClick={onCancel} data-testid="DialogCancelButton">
-          <FormattedMessage id="form.buttons.cancel" />
-        </Button>
-        <Button variant="contained" color="primary" onClick={onConfirm} data-testid="DialogConfirmButton">
-          <FormattedMessage id="form.buttons.ok" />
-        </Button>
+        {showButtons ? (
+          <>
+            <Button variant="text" onClick={onCancel} data-testid="DialogCancelButton">
+              <FormattedMessage id="form.buttons.cancel" />
+            </Button>
+            <Button variant="contained" color="primary" onClick={onConfirm} data-testid="DialogConfirmButton">
+              <FormattedMessage id="form.buttons.ok" />
+            </Button>
+          </>
+        ) : (
+          CustomButtons && <CustomButtons onCancel={onCancel} onConfirm={onConfirm} />
+        )}
       </DialogActions>
     </Dialog>
   );

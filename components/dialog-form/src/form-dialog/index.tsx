@@ -19,6 +19,7 @@ export interface IFormDialogProps<T> {
   maxWidth?: Breakpoint | false;
   testId?: string;
   action?: ReactElement;
+  CustomButtons?: FC<{ onCancel: () => void; onConfirm: any }>;
 }
 
 export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props => {
