@@ -11,12 +11,14 @@ export type ITextInputProps = {
   maskedRef?: any;
   formatValue?: (value: any) => number | string;
   normalizeValue?: (value: any) => number | string;
+  showLabel?: boolean;
 } & TextFieldProps;
 
 export const TextInput: FC<ITextInputProps> = props => {
   const {
     name,
     label,
+    showLabel = true,
     readOnly,
     inputProps,
     InputProps,
@@ -48,7 +50,7 @@ export const TextInput: FC<ITextInputProps> = props => {
         return (
           <TextField
             sx={{ my: 1 }}
-            label={localizedLabel}
+            label={showLabel ? localizedLabel : ""}
             placeholder={localizedPlaceholder}
             helperText={localizedHelperText}
             error={Boolean(error)}
