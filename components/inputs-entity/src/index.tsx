@@ -1,6 +1,6 @@
 import { ChangeEvent, FC, HTMLAttributes, ReactElement, useCallback, useState } from "react";
 import { useIntl } from "react-intl";
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/material";
 
@@ -71,7 +71,6 @@ export const EntityInput: FC<IEntityInputProps> = props => {
   const [isLoading, setIsLoading] = useState(false);
   const [options, setOptions] = useState<Array<IAutocompleteOption>>([]);
 
-  const { enqueueSnackbar } = useSnackbar();
   const api = useApi();
   const abortController = new AbortController();
 

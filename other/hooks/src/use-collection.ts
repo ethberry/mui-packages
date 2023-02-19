@@ -1,4 +1,4 @@
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { ChangeEvent, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router";
@@ -41,7 +41,6 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
   const location = useLocation();
   const navigate = useNavigate();
 
-  const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
   const [isLoading, setIsLoading] = useState(false);

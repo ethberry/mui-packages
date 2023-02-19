@@ -1,4 +1,4 @@
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
 import { useApi } from "@gemunion/provider-api";
@@ -6,7 +6,6 @@ import { useApi } from "@gemunion/provider-api";
 export const useDeleteUrl = (bucket?: string): ((url: string) => Promise<void>) => {
   const api = useApi();
 
-  const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
   return async (url: string): Promise<void> => {

@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { OptionsObject, useSnackbar } from "notistack";
+import { OptionsObject, enqueueSnackbar } from "notistack";
 import { Button } from "@mui/material";
 import { NoMetaMaskError } from "@web3-react/metamask";
 
@@ -15,7 +15,6 @@ export interface IUseConnectMetamask {
 export const useConnectMetamask = (props: IUseConnectMetamask) => {
   const { onClick } = props;
 
-  const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
   const { setActiveConnector, network, connectCallback } = useWallet();
 

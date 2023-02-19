@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 
 import { useLicense } from "@gemunion/provider-license";
 
@@ -17,7 +17,6 @@ export const CoinGeckoProvider: FC<PropsWithChildren<ICoinGeckoProviderProps>> =
   const { children, defaultCurrency = "ethereum", defaultMarkets = ["binance"] } = props;
   const license = useLicense();
   const { formatMessage } = useIntl();
-  const { enqueueSnackbar } = useSnackbar();
 
   const [baseCoinId, setBaseCoinId] = useState<string>(defaultCurrency);
   const [tickers, setTickers] = useState<Array<ICoinGeckoCoinTicker>>([]);

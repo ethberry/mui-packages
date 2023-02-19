@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useNavigate, useParams } from "react-router";
 import { Grid } from "@mui/material";
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
 import { PasswordInput } from "@gemunion/mui-inputs-core";
@@ -21,7 +21,6 @@ export const RestorePassword: FC = () => {
   const navigate = useNavigate();
   const { token } = useParams<{ token: string }>();
   const { formatMessage } = useIntl();
-  const { enqueueSnackbar } = useSnackbar();
 
   const api = useApi();
 

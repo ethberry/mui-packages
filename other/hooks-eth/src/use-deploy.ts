@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Web3ContextType } from "@web3-react/core";
 import { useIntl } from "react-intl";
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 
 import { IServerSignature } from "@gemunion/types-blockchain";
 import { IFetchProps } from "@gemunion/provider-api";
@@ -12,7 +12,6 @@ import { useMetamask } from "./use-metamask";
 export const useDeploy = (
   deploy: (data: any, web3Context: Web3ContextType, sign: IServerSignature) => Promise<void>,
 ) => {
-  const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
   const [isDeployDialogOpen, setIsDeployDialogOpen] = useState(false);

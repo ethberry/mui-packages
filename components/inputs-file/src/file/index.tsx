@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { DropzoneOptions, FileRejection, useDropzone } from "react-dropzone";
 import { CloudOff, CloudUpload, CloudUploadOutlined } from "@mui/icons-material";
 import { Box, FormHelperText } from "@mui/material";
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";
 
@@ -41,7 +41,6 @@ export const FileInput: FC<IFileInputProps> = props => {
   } = props;
   const classes = useStyles();
   const { formatMessage } = useIntl();
-  const { enqueueSnackbar } = useSnackbar();
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-FileInput` } : {};
