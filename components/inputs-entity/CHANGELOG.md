@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.2.49 (2023-02-20)
+
+### Bug Fixes
+
+- migrate notistack to v3 ([6e76b86](https://github.com/gemunion/mui-packages/commit/6e76b8696f8049a5d3a5b137aee6ab4cb7b14bad))
+
 ## 7.2.48 (2023-02-18)
 
 ### Bug Fixes

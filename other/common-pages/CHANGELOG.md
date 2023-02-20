@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.2.6](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@10.2.5...@gemunion/common-pages@10.2.6) (2023-02-20)
+
+### Bug Fixes
+
+- migrate notistack to v3 ([6e76b86](https://github.com/gemunion/mui-packages/commit/6e76b8696f8049a5d3a5b137aee6ab4cb7b14bad))
+
 ## [10.2.5](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@10.2.4...@gemunion/common-pages@10.2.5) (2023-02-19)
 
 **Note:** Version bump only for package @gemunion/common-pages
