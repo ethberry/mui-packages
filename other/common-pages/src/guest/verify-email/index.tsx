@@ -1,6 +1,6 @@
 import { FC, useEffect } from "react";
 import { useNavigate, useParams } from "react-router";
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Grid } from "@mui/material";
 
@@ -12,7 +12,6 @@ export const VerifyEmail: FC = () => {
   const navigate = useNavigate();
   const params = useParams();
   const { formatMessage } = useIntl();
-  const { enqueueSnackbar } = useSnackbar();
 
   const user = useUser<any>();
   const api = useApi();

@@ -1,5 +1,5 @@
 import { FC, useEffect } from "react";
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Button, Grid } from "@mui/material";
 import { Facebook, Google } from "@mui/icons-material";
@@ -16,7 +16,6 @@ import { validationSchema } from "./validation";
 import { LoginButtons } from "./buttons";
 
 export const SocialLogin: FC = () => {
-  const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
   const user = useUser<IUser>();

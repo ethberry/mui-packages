@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren, useEffect } from "react";
 import { Grid } from "@mui/material";
 import { useNavigate } from "react-router";
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
 import { FormWrapper } from "@gemunion/mui-form";
@@ -18,7 +18,6 @@ export const RegistrationBase: FC<PropsWithChildren<IRegistrationBaseProps>> = p
   const { children, initialValues, validationSchema } = props;
 
   const navigate = useNavigate();
-  const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
   const user = useUser<any>();

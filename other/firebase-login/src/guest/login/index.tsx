@@ -11,7 +11,7 @@ import {
 } from "firebase/auth";
 import { FormattedMessage, useIntl } from "react-intl";
 import { useNavigate } from "react-router";
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 
 import "firebaseui/dist/firebaseui.css";
 
@@ -44,7 +44,6 @@ export interface IFirebaseLogin {
 
 export const FirebaseLogin: FC<IFirebaseLogin> = props => {
   const { providers = [PROVIDERS.email], withMetamask = false } = props;
-  const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
   const license = useLicense();

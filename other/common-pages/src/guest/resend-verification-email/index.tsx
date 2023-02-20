@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { useNavigate } from "react-router";
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 import { Grid } from "@mui/material";
 import { useIntl } from "react-intl";
 
@@ -19,7 +19,6 @@ interface IResendVerificationEmailDto {
 
 export const ResendVerificationEmail: FC = () => {
   const navigate = useNavigate();
-  const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
   const api = useApi();

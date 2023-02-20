@@ -22,7 +22,7 @@
     "@gemunion/provider-license": "3.0.8",
     "@gemunion/provider-wallet": "3.2.3",
     "@web3-react/core": "8.0.35-beta.0",
-    "notistack": "2.0.8",
+    "notistack": "3.0.0-alpha.11",
     "react": "18.2.0",
     "react-intl": "6.2.8"
   },
@@ -37,7 +37,7 @@
     "@gemunion/provider-license": "^3.0.0",
     "@gemunion/provider-wallet": "^3.0.0",
     "@web3-react/core": "^8.0.0",
-    "notistack": "^2.0.0",
+    "notistack": "^3.0.0",
     "react": "^18.0.0",
     "react-intl": "^6.0.0"
   },

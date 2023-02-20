@@ -1,6 +1,6 @@
 import { Web3ContextType } from "@web3-react/core";
 import { useIntl } from "react-intl";
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 
 import { IFetchProps, useApi } from "@gemunion/provider-api";
 import { IServerSignature } from "@gemunion/types-blockchain";
@@ -13,7 +13,6 @@ export const useServerSignature = (
 ): ((params: IFetchProps, values: Record<string, any> | null, web3Context: Web3ContextType) => Promise<any>) => {
   const { error = true } = options;
   const api = useApi();
-  const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
   return async (params: IFetchProps, values: Record<string, any> | null, web3Context: Web3ContextType) => {

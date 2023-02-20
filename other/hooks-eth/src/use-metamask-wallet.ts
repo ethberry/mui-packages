@@ -1,4 +1,4 @@
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { utils } from "ethers";
 import { useWeb3React } from "@web3-react/core";
@@ -21,7 +21,6 @@ export const useMetamaskWallet = <T = any>(
   const { isActive } = web3ContextGlobal;
   const { openConnectWalletDialog, isDialogOpen, closeConnectWalletDialog } = useWallet();
 
-  const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
   const { success = true, error = true } = options;
 

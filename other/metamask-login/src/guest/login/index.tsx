@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Button, Grid } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
@@ -16,7 +16,6 @@ import { useWallet } from "@gemunion/provider-wallet";
 export const MetamaskLogin: FC = () => {
   const license = useLicense();
 
-  const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
   const [data, setData] = useState<IMetamaskDto>({ nonce: "", signature: "", wallet: "" });
 

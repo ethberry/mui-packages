@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { UseFormReturn } from "react-hook-form";
 
@@ -15,7 +15,6 @@ export const useApiCall = <T = any>(
 
   const license = useLicense();
 
-  const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
   const [isLoading, setIsLoading] = useState(false);
 

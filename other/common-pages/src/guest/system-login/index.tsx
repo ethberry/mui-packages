@@ -1,5 +1,5 @@
 import { FC, useEffect } from "react";
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Grid } from "@mui/material";
 
@@ -14,7 +14,6 @@ import { validationSchema } from "./validation";
 import { LoginButtons } from "./buttons";
 
 export const SystemLogin: FC = () => {
-  const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
 
   const user = useUser<IUser>();

@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { useIntl } from "react-intl";
-import { useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 
 import { useWallet } from "../provider";
 import { TConnectors } from "../connectors/types";
@@ -13,7 +13,6 @@ export interface IUseConnectWalletConnect {
 export const useConnectWalletConnect = (props: IUseConnectWalletConnect) => {
   const { onClick } = props;
 
-  const { enqueueSnackbar } = useSnackbar();
   const { formatMessage } = useIntl();
   const { setActiveConnector, network, connectCallback } = useWallet();
 
