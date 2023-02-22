@@ -8,6 +8,7 @@ import { useTestId } from "@gemunion/provider-test-id";
 export interface ISwitchInputProps extends SwitchProps {
   name: string;
   label?: string | number | ReactElement;
+  showLabel?: boolean;
 }
 
 export const SwitchInput: FC<ISwitchInputProps & SwitchProps> = props => {

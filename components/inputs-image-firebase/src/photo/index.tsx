@@ -16,12 +16,13 @@ import { useStyles } from "./styles";
 export interface IPhotoInputProps {
   name: string;
   label?: string | number | ReactElement;
+  showLabel?: boolean;
   bucket?: string;
   accept?: Accept;
 }
 
 export const PhotoInput: FC<IPhotoInputProps> = props => {
-  const { name, label, accept, bucket } = props;
+  const { name, label, showLabel = true, accept, bucket } = props;
 
   const form = useFormContext<any>();
   const value = get(useWatch(), name);
@@ -84,9 +85,11 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
 
   return (
     <FormControl fullWidth sx={{ mt: 2 }}>
-      <InputLabel id={`form.labels.${name}`} shrink>
-        <FormattedMessage id={`form.labels.${name}`} />
-      </InputLabel>
+      {showLabel ? (
+        <InputLabel id={`form.labels.${name}`} shrink>
+          <FormattedMessage id={`form.labels.${name}`} />
+        </InputLabel>
+      ) : null}
 
       <DragDropContext onDragEnd={handleDragEnd}>
         <Droppable droppableId="droppable" direction="horizontal">

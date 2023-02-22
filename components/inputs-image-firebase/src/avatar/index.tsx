@@ -9,12 +9,13 @@ import { FirebaseFileInput, useDeleteUrl, Accept } from "@gemunion/mui-inputs-fi
 export interface IAvatarInputProps {
   name: string;
   label?: string | number | ReactElement;
+  showLabel?: boolean;
   bucket?: string;
   accept?: Accept;
 }
 
 export const AvatarInput: FC<IAvatarInputProps> = props => {
-  const { name, label, bucket, accept } = props;
+  const { name, label, showLabel = true, bucket, accept } = props;
 
   const form = useFormContext<any>();
   const error = get(form.formState.errors, name);
@@ -40,9 +41,11 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
   if (value) {
     return (
       <FormControl fullWidth sx={{ mt: 2, height: 200, width: 200, position: "relative" }}>
-        <InputLabel id={`${name}-select-label`} shrink>
-          {localizedLabel}
-        </InputLabel>
+        {showLabel ? (
+          <InputLabel id={`${name}-select-label`} shrink>
+            {localizedLabel}
+          </InputLabel>
+        ) : null}
         <Tooltip title={formatMessage({ id: "form.tips.delete" })}>
           <IconButton
             aria-label="delete"
@@ -85,9 +88,11 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
 
   return (
     <FormControl fullWidth sx={{ mt: 2, height: 200, width: 200, position: "relative" }}>
-      <InputLabel id={`${name}-select-label`} shrink>
-        <FormattedMessage id={`form.labels.${name}`} />
-      </InputLabel>
+      {showLabel ? (
+        <InputLabel id={`${name}-select-label`} shrink>
+          <FormattedMessage id={`form.labels.${name}`} />
+        </InputLabel>
+      ) : null}
       <Grid container sx={{ mt: 1 }}>
         <Grid item>
           <FirebaseFileInput

@@ -9,10 +9,20 @@ export type ISelectInputProps = {
   name: string;
   options: Record<string, string>; // enum
   disabledOptions?: Array<string>;
+  showLabel?: boolean;
 } & SelectProps;
 
 export const SelectInput: FC<ISelectInputProps> = props => {
-  const { options, label, name, multiple, variant = "standard", disabledOptions = [], ...rest } = props;
+  const {
+    options,
+    label,
+    name,
+    multiple,
+    variant = "standard",
+    disabledOptions = [],
+    showLabel = true,
+    ...rest
+  } = props;
 
   const suffix = name.split(".").pop() as string;
 
@@ -34,13 +44,15 @@ export const SelectInput: FC<ISelectInputProps> = props => {
       control={form.control}
       render={({ field }) => (
         <FormControl fullWidth sx={{ my: 1 }}>
-          <InputLabel id={`${name}-select-label`} variant={variant}>
-            {localizedLabel}
-          </InputLabel>
+          {showLabel ? (
+            <InputLabel id={`${name}-select-label`} variant={variant}>
+              {localizedLabel}
+            </InputLabel>
+          ) : null}
           <Select
             multiple={multiple}
             labelId={`${name}-select-label`}
-            label={localizedLabel}
+            label={showLabel ? localizedLabel : ""}
             id={`${name}-select`}
             variant={variant}
             renderValue={
