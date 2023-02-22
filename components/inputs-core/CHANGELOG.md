@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.1.7](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.1.6...@gemunion/mui-inputs-core@7.1.7) (2023-02-22)
+
+### Bug Fixes
+
+- add InputLabelProps for SelectInput ([33d040f](https://github.com/gemunion/mui-packages/commit/33d040f37ea672610d41674e3f2843318869d7a7))
+
 ## [7.1.6](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.1.5...@gemunion/mui-inputs-core@7.1.6) (2023-02-20)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core
