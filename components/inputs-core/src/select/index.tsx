@@ -1,5 +1,13 @@
 import { FC } from "react";
-import { FormControl, FormHelperText, InputLabel, MenuItem, Select, SelectProps } from "@mui/material";
+import {
+  FormControl,
+  FormHelperText,
+  InputLabel,
+  InputLabelProps as MuiInputLabelProps,
+  MenuItem,
+  Select,
+  SelectProps,
+} from "@mui/material";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 
@@ -9,10 +17,20 @@ export type ISelectInputProps = {
   name: string;
   options: Record<string, string>; // enum
   disabledOptions?: Array<string>;
+  InputLabelProps?: Partial<MuiInputLabelProps>;
 } & SelectProps;
 
 export const SelectInput: FC<ISelectInputProps> = props => {
-  const { options, label, name, multiple, variant = "standard", disabledOptions = [], ...rest } = props;
+  const {
+    options,
+    label,
+    name,
+    multiple,
+    variant = "standard",
+    disabledOptions = [],
+    InputLabelProps = {},
+    ...rest
+  } = props;
 
   const suffix = name.split(".").pop() as string;
 
@@ -34,7 +52,7 @@ export const SelectInput: FC<ISelectInputProps> = props => {
       control={form.control}
       render={({ field }) => (
         <FormControl fullWidth sx={{ my: 1 }}>
-          <InputLabel id={`${name}-select-label`} variant={variant}>
+          <InputLabel id={`${name}-select-label`} variant={variant} {...InputLabelProps}>
             {localizedLabel}
           </InputLabel>
           <Select
