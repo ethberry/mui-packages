@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.2.3 (2023-02-23)
+
+### Bug Fixes
+
+- add formSubmitButtonProps to FormWrapper and submit button ([54a9a94](https://github.com/gemunion/mui-packages/commit/54a9a94f7852c3af80ef75278f49115193481d8d))
+
 ## 7.2.2 (2023-02-20)
 
 **Note:** Version bump only for package @gemunion/mui-form
