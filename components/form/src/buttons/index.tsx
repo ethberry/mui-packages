@@ -1,11 +1,12 @@
 import { FC, forwardRef } from "react";
 import { useFormContext } from "react-hook-form";
-import { Button } from "@mui/material";
+import { Button, ButtonProps } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 
 import { ButtonToolbar } from "@gemunion/mui-page-layout";
 
 interface IFormButtonsProps {
+  formButtonProps?: Partial<ButtonProps>;
   visible?: boolean;
   submit?: string;
   showDebug?: boolean;
@@ -14,7 +15,7 @@ interface IFormButtonsProps {
 }
 
 export const FormButtons: FC<IFormButtonsProps> = forwardRef((props, ref: any) => {
-  const { visible = true, submit = "submit", showDebug = false, handleSubmit } = props;
+  const { formButtonProps = {}, visible = true, submit = "submit", showDebug = false, handleSubmit } = props;
 
   const {
     formState: { isSubmitting, isValid, errors },
@@ -41,6 +42,7 @@ export const FormButtons: FC<IFormButtonsProps> = forwardRef((props, ref: any) =
         color="primary"
         disabled={disabled}
         data-testid="FormSubmitButton"
+        {...formButtonProps}
       >
         <FormattedMessage id={`form.buttons.${submit}`} />
       </Button>

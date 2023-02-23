@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren } from "react";
+import { Box, ButtonProps } from "@mui/material";
 import { FormProvider, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Box } from "@mui/material";
 
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
 import { useLicense } from "@gemunion/provider-license";
@@ -21,6 +21,7 @@ interface IFormWrapperProps<T> {
   initialValues: T;
   enableReinitialize?: boolean;
   validationSchema?: any;
+  formSubmitButtonProps?: Partial<ButtonProps>;
   formSubmitButtonRef?: any;
   innerRef?: any;
   validate?: (data: any) => Promise<any>;
@@ -38,6 +39,7 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
     showPrompt,
     submit,
     formSubmitButtonRef,
+    formSubmitButtonProps = {},
     innerRef,
     className,
     validationSchema,
@@ -93,6 +95,7 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
               showDebug={showDebug}
               submit={submit}
               handleSubmit={form.handleSubmit(handleSubmit)}
+              formButtonProps={formSubmitButtonProps}
             />
           </form>
         </FormProvider>
