@@ -16,7 +16,7 @@
   "devDependencies": {
     "notistack": "3.0.0-alpha.11",
     "react": "18.2.0",
-    "react-intl": "6.2.8"
+    "react-intl": "6.2.10"
   },
   "engines": {
     "node": ">=12.13"

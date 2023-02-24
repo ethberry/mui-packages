@@ -19,8 +19,8 @@
     "@gemunion/provider-license": "3.0.8",
     "notistack": "3.0.0-alpha.11",
     "react": "18.2.0",
-    "react-hook-form": "7.43.1",
-    "react-intl": "6.2.8",
+    "react-hook-form": "7.43.2",
+    "react-intl": "6.2.10",
     "react-router": "6.8.1"
   },
   "engines": {
