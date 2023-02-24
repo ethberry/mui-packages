@@ -24,7 +24,7 @@
     "@gemunion/provider-user": "6.0.13",
     "@mui/icons-material": "5.11.9",
     "@mui/lab": "5.0.0-alpha.120",
-    "@mui/material": "5.11.9",
+    "@mui/material": "5.11.10",
     "@mui/styles": "5.11.9",
     "@types/node": "18.14.0",
     "@types/react": "18.0.28",
