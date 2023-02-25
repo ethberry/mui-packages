@@ -23,7 +23,7 @@
     "@gemunion/provider-api": "7.0.13",
     "@gemunion/provider-test-id": "1.0.26",
     "@mui/icons-material": "5.11.9",
-    "@mui/material": "5.11.9",
+    "@mui/material": "5.11.10",
     "@mui/styles": "5.11.9",
     "@storybook/react": "6.5.16",
     "@testing-library/jest-dom": "5.16.5",

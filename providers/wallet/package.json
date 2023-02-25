@@ -26,7 +26,7 @@
     "@gemunion/provider-popup": "1.0.9",
     "@gemunion/provider-user": "6.0.13",
     "@mui/icons-material": "5.11.9",
-    "@mui/material": "5.11.9",
+    "@mui/material": "5.11.10",
     "@mui/styles": "5.11.9",
     "@types/react": "18.0.28",
     "@types/uuid": "9.0.1",
