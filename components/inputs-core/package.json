@@ -29,9 +29,9 @@
     "jest-environment-jsdom": "29.4.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "7.43.2",
+    "react-hook-form": "7.43.4",
     "react-intl": "6.2.10",
-    "react-router-dom": "6.8.1",
+    "react-router-dom": "6.8.2",
     "ts-jest": "29.0.5",
     "whatwg-fetch": "3.6.2"
   },
