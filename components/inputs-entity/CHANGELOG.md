@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.51](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.2.50...@gemunion/mui-inputs-entity@7.2.51) (2023-03-03)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-entity
+
 ## 7.2.50 (2023-02-25)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-entity
