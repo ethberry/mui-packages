@@ -11,7 +11,7 @@
     "@ethersproject/logger": "5.7.0",
     "@gemunion/license-messages": "0.0.34",
     "@gemunion/provider-api": "7.0.13",
-    "@gemunion/types-blockchain": "1.1.0",
+    "@gemunion/types-blockchain": "1.2.0",
     "@json-rpc-tools/utils": "1.7.6",
     "ethers": "5.7.2",
     "qs": "6.11.0",

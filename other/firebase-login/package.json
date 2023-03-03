@@ -15,7 +15,7 @@
     "@gemunion/provider-wallet": "3.2.5",
     "@gemunion/react-hooks": "1.1.4",
     "@gemunion/react-hooks-eth": "1.0.76",
-    "@gemunion/types-collection": "1.5.5",
+    "@gemunion/types-collection": "1.5.6",
     "@mui/icons-material": "5.11.9",
     "@web3-react/core": "8.0.35-beta.0",
     "firebaseui": "6.0.2",
@@ -25,7 +25,7 @@
   "devDependencies": {
     "@gemunion/provider-api": "7.0.13",
     "@gemunion/provider-license": "3.0.8",
-    "@gemunion/provider-user": "6.0.13",
+    "@gemunion/provider-user": "6.0.14",
     "@mui/material": "5.11.10",
     "@mui/styles": "5.11.9",
     "firebase": "9.10.0",
