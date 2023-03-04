@@ -35,7 +35,7 @@ export const ContractInput: FC<IContractInputProps> = props => {
       }}
       onChange={handleChange}
       readOnly={readOnly}
-      isAutoselect
+      autoselect
     />
   );
 };

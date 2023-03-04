@@ -42,7 +42,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
             ...data,
           }}
           readOnly={readOnly}
-          isAutoselect
+          autoselect
         />
       );
     case TokenType.NATIVE:

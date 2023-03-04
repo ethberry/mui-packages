@@ -25,7 +25,7 @@ export interface IEntityInputProps {
   readOnly?: boolean;
   disableClear?: boolean;
   multiple?: boolean;
-  isAutoselect?: boolean;
+  autoselect?: boolean;
   getTitle?: (item: any) => string;
   data?: Record<string, any>;
   variant?: "standard" | "filled" | "outlined";
@@ -42,7 +42,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
     controller,
     getTitle,
     multiple,
-    isAutoselect = false,
+    autoselect = false,
     data = {},
     variant = "standard",
     onChange,
@@ -84,7 +84,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
       })
       .then((json: Array<any>) => {
         setOptions(json);
-        if (isAutoselect) {
+        if (autoselect) {
           const newValue = multiple ? [json[0]] : json[0];
 
           if (!newValue) {
