@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC, PropsWithChildren } from "react";
 import { IntlProvider } from "react-intl";
 import { MemoryRouter } from "react-router-dom";
 import { cleanup, render } from "@testing-library/react";
@@ -18,7 +18,7 @@ const i18n = {
   "form.placeholders.number": "50",
 };
 
-const AllTheProviders: FC<{ children: ReactNode }> = ({ children }) => {
+const AllTheProviders: FC<PropsWithChildren> = ({ children }) => {
   return (
     <MemoryRouter>
       <ThemeProvider theme={createTheme()}>

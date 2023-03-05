@@ -1,9 +1,8 @@
-import { FC, PropsWithChildren, ReactElement } from "react";
+import { FC, PropsWithChildren } from "react";
 
 import { TestIdContext } from "./context";
 
 export interface ITestIdProviderProps {
-  children: ReactElement;
   testId?: string;
 }
 

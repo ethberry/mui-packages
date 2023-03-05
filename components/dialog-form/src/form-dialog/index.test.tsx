@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC, PropsWithChildren } from "react";
 import { IntlProvider } from "react-intl";
 import { cleanup, render } from "@testing-library/react";
 import { createTheme, ThemeProvider } from "@mui/material";
@@ -18,7 +18,7 @@ const i18n = {
   "form.hints.prompt": "Prompt",
 };
 
-const AllTheProviders: FC<{ children: ReactNode }> = ({ children }) => {
+const AllTheProviders: FC<PropsWithChildren> = ({ children }) => {
   return (
     <LicenseProvider licenseKey={process.env.STORYBOOK_GEMUNION_LICENSE}>
       <MemoryRouter>
