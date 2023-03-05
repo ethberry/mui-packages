@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.9](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@1.1.8...@gemunion/mui-inputs-asset@1.1.9) (2023-03-05)
+
+### Bug Fixes
+
+- isAutoselect -> autoselect ([f52c631](https://github.com/gemunion/mui-packages/commit/f52c631bb6993ee87c59be5e4ea67964d4f50e90))
+
 ## [1.1.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@1.1.7...@gemunion/mui-inputs-asset@1.1.8) (2023-03-03)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset

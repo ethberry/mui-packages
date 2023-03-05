@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.60](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-captcha@4.1.59...@gemunion/mui-inputs-captcha@4.1.60) (2023-03-05)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-captcha
+
 ## [4.1.59](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-captcha@4.1.58...@gemunion/mui-inputs-captcha@4.1.59) (2023-03-03)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-captcha

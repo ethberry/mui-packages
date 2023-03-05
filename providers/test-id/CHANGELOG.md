@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.28 (2023-03-05)
+
+### Bug Fixes
+
+- children types ([ead03c1](https://github.com/gemunion/mui-packages/commit/ead03c1b59d1cc6ac6475c6aa5fd4a7406d8884b))
+
 ## 1.0.27 (2023-02-25)
 
 **Note:** Version bump only for package @gemunion/provider-test-id
