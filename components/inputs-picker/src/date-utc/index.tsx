@@ -1,7 +1,6 @@
 import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";
-import { TextField, TextFieldProps } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers";
 import { addMinutes, subMinutes } from "date-fns";
 
@@ -47,30 +46,28 @@ export const DateUtcInput: FC<IDateUtcInputProps> = props => {
       control={form.control}
       render={({ field }) => (
         <DatePicker
-          inputFormat="MM/dd/yyyy"
+          format="MM/dd/yyyy"
           label={localizedLabel}
           value={field.value ? setter(field.value) : field.value}
-          onChange={(date: Date | null): void => {
-            form.setValue(name, date ? getter(date) : date);
+          onAccept={(date: Date | null): void => {
+            form.setValue(name, date ? getter(date) : date, { shouldDirty: true, shouldTouch: true });
           }}
-          renderInput={(props: TextFieldProps): ReactElement => (
-            <TextField
-              sx={{ my: 1 }}
-              name={field.name}
-              inputRef={field.ref}
-              onBlur={field.onBlur}
-              fullWidth
-              variant={variant}
-              {...props}
-              helperText={localizedHelperText}
-              error={!!error}
-              inputProps={{
+          slotProps={{
+            textField: {
+              sx: { my: 1 },
+              fullWidth: true,
+              variant,
+              name: field.name,
+              onBlur: field.onBlur,
+              helperText: localizedHelperText,
+              inputRef: field.ref,
+              error: !!error,
+              inputProps: {
                 readOnly,
-                ...props.inputProps,
                 ...testIdProps,
-              }}
-            />
-          )}
+              },
+            },
+          }}
           {...rest}
         />
       )}

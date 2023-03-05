@@ -1,8 +1,7 @@
 import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
-import { TextField, TextFieldProps } from "@mui/material";
-import { DateTimePicker } from "@mui/x-date-pickers";
+import { DateTimePicker, renderTimeViewClock } from "@mui/x-date-pickers";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
@@ -31,9 +30,8 @@ export const DateTimeInput: FC<IDateTimeInputProps> = props => {
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
   const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
-  const setter = (date: Date | string): string => {
-    const isDateString = !isNaN(Date.parse(date as string));
-    return isDateString ? new Date(date).toISOString() : (date as string);
+  const setter = (date: Date | string): Date => {
+    return new Date(date);
   };
 
   const getter = (date: Date | string): string => {
@@ -47,30 +45,36 @@ export const DateTimeInput: FC<IDateTimeInputProps> = props => {
       control={form.control}
       render={({ field }) => (
         <DateTimePicker
-          inputFormat="MM/dd/yyyy hh:mm a"
+          format="MM/dd/yyyy hh:mm a"
           label={localizedLabel}
           value={value ? setter(value) : value}
-          onChange={(date: Date | null): void => {
-            form.setValue(name, date ? getter(date) : date);
+          viewRenderers={{
+            hours: renderTimeViewClock,
+            minutes: renderTimeViewClock,
+            seconds: renderTimeViewClock,
+          }}
+          onAccept={(date: Date | null): void => {
+            form.setValue(name, date ? getter(date) : date, { shouldDirty: true, shouldTouch: true });
           }}
           ref={field.ref}
-          renderInput={(props: TextFieldProps): ReactElement => (
-            <TextField
-              sx={{ my: 1 }}
-              fullWidth
-              variant={variant}
-              name={field.name}
-              onBlur={field.onBlur}
-              {...props}
-              helperText={localizedHelperText}
-              error={!!error}
-              inputProps={{
+          slotProps={{
+            tabs: {
+              hidden: false,
+            },
+            textField: {
+              sx: { my: 1 },
+              fullWidth: true,
+              variant,
+              name: field.name,
+              onBlur: field.onBlur,
+              helperText: localizedHelperText,
+              error: !!error,
+              inputProps: {
                 readOnly,
-                ...props.inputProps,
                 ...testIdProps,
-              }}
-            />
-          )}
+              },
+            },
+          }}
           {...rest}
         />
       )}
