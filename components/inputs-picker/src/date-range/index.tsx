@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";
+import { Typography } from "@mui/material";
 import { DateRange, DateRangePicker } from "@mui/x-date-pickers-pro";
 
 import { useTestId } from "@gemunion/provider-test-id";
-import { Typography } from "@mui/material";
 
 interface IDateTimeInputProps {
   fieldSeparator?: any;
