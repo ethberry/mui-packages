@@ -1,12 +1,13 @@
-import { FC, Fragment, ReactElement } from "react";
+import { FC } from "react";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";
-import { Box, TextField, TextFieldProps } from "@mui/material";
 import { DateRange, DateRangePicker } from "@mui/x-date-pickers-pro";
 
 import { useTestId } from "@gemunion/provider-test-id";
+import { Typography } from "@mui/material";
 
 interface IDateTimeInputProps {
+  fieldSeparator?: any;
   name: string;
   readOnly?: boolean;
   required?: boolean;
@@ -14,8 +15,10 @@ interface IDateTimeInputProps {
   onChange?: (dateRange: DateRange<Date> | null) => void;
 }
 
+const defaultFieldSeparator = <Typography>&raquo;</Typography>;
+
 export const DateRangeInput: FC<IDateTimeInputProps> = props => {
-  const { name, variant = "standard", readOnly, ...rest } = props;
+  const { fieldSeparator = defaultFieldSeparator, name, variant = "standard", readOnly, ...rest } = props;
 
   const { testId } = useTestId();
   const getTestIdProps = (suffix: string) => (testId ? { "data-testid": `${testId}-${name}-${suffix}` } : {});
@@ -40,45 +43,34 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
       control={form.control}
       render={({ field }) => (
         <DateRangePicker
-          inputFormat="MM/dd/yyyy"
-          startText={formatMessage({ id: `form.labels.${suffix}Start` })}
-          endText={formatMessage({ id: `form.labels.${suffix}End` })}
-          {...field}
-          renderInput={(startProps: TextFieldProps, endProps: TextFieldProps): ReactElement => {
-            return (
-              <Fragment>
-                <TextField
-                  sx={{ my: 1 }}
-                  {...form.register(`${name}Start`)}
-                  {...startProps}
-                  helperText={localizedHelperTextStart}
-                  error={!!errorStart}
-                  inputProps={{
-                    readOnly,
-                    ...startProps.inputProps,
-                    ...getTestIdProps("Start"),
-                  }}
-                  variant={variant}
-                  fullWidth
-                />
-                <Box sx={{ mx: 1 }}> &raquo; </Box>
-                <TextField
-                  sx={{ my: 1 }}
-                  {...form.register(`${name}End`)}
-                  {...endProps}
-                  helperText={localizedHelperTextEnd}
-                  error={!!errorEnd}
-                  inputProps={{
-                    readOnly,
-                    ...endProps.inputProps,
-                    ...getTestIdProps("End"),
-                  }}
-                  name={`${name}End`}
-                  variant={variant}
-                  fullWidth
-                />
-              </Fragment>
-            );
+          format="MM/dd/yyyy"
+          localeText={{
+            start: formatMessage({ id: `form.labels.${suffix}Start` }),
+            end: formatMessage({ id: `form.labels.${suffix}End` }),
+          }}
+          ref={field.ref}
+          value={field.value}
+          onAccept={value => {
+            form.setValue(name, value, { shouldDirty: true, shouldTouch: true });
+          }}
+          slotProps={{
+            textField: ({ position }: any) => {
+              const isStart = position === "start";
+
+              return {
+                sx: { my: 1 },
+                ...form.register(`${name}${isStart ? "Start" : "End"}`),
+                helperText: isStart ? localizedHelperTextStart : localizedHelperTextEnd,
+                error: isStart ? !!errorStart : !!errorEnd,
+                inputProps: {
+                  readOnly,
+                  ...getTestIdProps(isStart ? "Start" : "End"),
+                },
+                variant,
+                fullWidth: true,
+              };
+            },
+            fieldSeparator: { children: fieldSeparator },
           }}
           {...rest}
         />

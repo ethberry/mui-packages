@@ -1,7 +1,6 @@
 import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
-import { TextField, TextFieldProps } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers";
 
 import { useTestId } from "@gemunion/provider-test-id";
@@ -31,9 +30,8 @@ export const DateInput: FC<IDateInputProps> = props => {
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
   const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
-  const setter = (date: Date | string): string => {
-    const isDateString = !isNaN(Date.parse(date as string));
-    return isDateString ? new Date(date).toISOString() : (date as string);
+  const setter = (date: Date | string): Date => {
+    return new Date(date);
   };
 
   const getter = (date: Date | string): string => {
@@ -47,30 +45,28 @@ export const DateInput: FC<IDateInputProps> = props => {
       control={form.control}
       render={({ field }) => (
         <DatePicker
-          inputFormat="MM/dd/yyyy"
+          format="MM/dd/yyyy"
           label={localizedLabel}
           value={value ? setter(value) : value}
-          onChange={(date: Date | null): void => {
-            form.setValue(name, date ? getter(date) : date);
+          onAccept={(date: Date | null): void => {
+            form.setValue(name, date ? getter(date) : date, { shouldDirty: true, shouldTouch: true });
           }}
           ref={field.ref}
-          renderInput={(props: TextFieldProps): ReactElement => (
-            <TextField
-              sx={{ my: 1 }}
-              fullWidth
-              variant={variant}
-              name={field.name}
-              onBlur={field.onBlur}
-              {...props}
-              helperText={localizedHelperText}
-              error={!!error}
-              inputProps={{
+          slotProps={{
+            textField: {
+              sx: { my: 1 },
+              fullWidth: true,
+              variant,
+              name: field.name,
+              onBlur: field.onBlur,
+              helperText: localizedHelperText,
+              error: !!error,
+              inputProps: {
                 readOnly,
-                ...props.inputProps,
                 ...testIdProps,
-              }}
-            />
-          )}
+              },
+            },
+          }}
           {...rest}
         />
       )}
