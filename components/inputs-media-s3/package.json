@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "@gemunion/mui-dialog-confirmation": "3.2.63",
-    "@gemunion/mui-inputs-core": "7.1.11",
-    "@gemunion/mui-inputs-file-s3": "7.0.72",
+    "@gemunion/mui-inputs-core": "7.1.12",
+    "@gemunion/mui-inputs-file-s3": "7.0.73",
     "@gemunion/mui-page-layout": "2.1.4",
     "@gemunion/popup": "1.0.9",
     "clsx": "1.2.1",
@@ -19,7 +19,7 @@
   },
   "description": "react widget media s3",
   "devDependencies": {
-    "@gemunion/mui-form": "7.2.6",
+    "@gemunion/mui-form": "7.2.7",
     "@gemunion/provider-api-jwt": "2.0.9",
     "@gemunion/provider-test-id": "1.0.28",
     "@mui/icons-material": "5.11.11",
@@ -76,5 +76,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "1.0.33"
+  "version": "1.0.34"
 }

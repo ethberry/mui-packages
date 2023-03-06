@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.1.12](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.1.11...@gemunion/mui-inputs-core@7.1.12) (2023-03-06)
+
+### Bug Fixes
+
+- customize search-input ([02d8ac2](https://github.com/gemunion/mui-packages/commit/02d8ac2b58d069b245b4275d240eccba4394f801))
+
 ## [7.1.11](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.1.10...@gemunion/mui-inputs-core@7.1.11) (2023-03-05)
 
 ### Bug Fixes
