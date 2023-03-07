@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.7](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.1.6...@gemunion/react-hooks@1.1.7) (2023-03-07)
+
+### Bug Fixes
+
+- add handler for changing pagination model of data-grid ([4b39be5](https://github.com/gemunion/mui-packages/commit/4b39be525f40884489684f916a39829d0263076f))
+
 ## 1.1.6 (2023-03-06)
 
 **Note:** Version bump only for package @gemunion/react-hooks
