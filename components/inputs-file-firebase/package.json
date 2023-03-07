@@ -16,7 +16,7 @@
   "devDependencies": {
     "@types/uuid": "9.0.1",
     "firebase": "9.10.0",
-    "notistack": "3.0.0-alpha.13",
+    "notistack": "3.0.0",
     "react": "18.2.0",
     "react-intl": "6.2.10"
   },
