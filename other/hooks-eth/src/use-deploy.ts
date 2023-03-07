@@ -45,7 +45,7 @@ export const useDeploy = (
           });
         } else {
           console.error("unknown error", e);
-          enqueueSnackbar(e.message || formatMessage({ id: "snackbar.error" }), { variant: "error" });
+          enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
         }
       });
   };
