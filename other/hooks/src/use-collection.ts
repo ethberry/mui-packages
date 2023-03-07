@@ -12,6 +12,11 @@ import { useApiCall } from "./use-api-call";
 import { useDeepCompareEffect } from "./use-deep-compare-effect";
 import { decoder, deepEqual } from "./utils";
 
+export interface IHandleChangePaginationModelProps {
+  page: number;
+  pageSize: number;
+}
+
 export interface ICollectionHook<T, S> {
   baseUrl: string;
   embedded?: boolean;
@@ -273,6 +278,14 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     });
   };
 
+  const handleChangePaginationModel = ({ page, pageSize }: IHandleChangePaginationModelProps): void => {
+    setSearch({
+      ...search,
+      skip: page * pageSize,
+      take: pageSize,
+    });
+  };
+
   const handleSearch = (values: S): Promise<void> => {
     setSearch({
       ...values,
@@ -329,6 +342,7 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     handleSearch,
     handleChangePage,
     handleChangeRowsPerPage,
+    handleChangePaginationModel,
     handleToggleFilters,
   };
 };
