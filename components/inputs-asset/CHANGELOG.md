@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.12 (2023-03-08)
+
+### Bug Fixes
+
+- token asset to set right decimals and address; contract input to set default amount according to decimals ([3ebbca7](https://github.com/gemunion/mui-packages/commit/3ebbca7585a88d6613f4ae5b040cdd9486f4eaa0))
+
 ## [1.1.11](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@1.1.10...@gemunion/mui-inputs-asset@1.1.11) (2023-03-07)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset
