@@ -58,8 +58,8 @@ export const TokenAssetInput: FC<ITokenAssetProps> = props => {
       return;
     }
     values.forEach((value: ITokenAssetComponent, i: number) => {
-      form.setValue(`${nestedPrefix}[${i}].decimals`, value.contract?.decimals);
-      form.setValue(`${nestedPrefix}[${i}].address`, value.contract?.address);
+      form.setValue(`${nestedPrefix}[${i}].contract.decimals`, value.contract?.decimals);
+      form.setValue(`${nestedPrefix}[${i}].contract.address`, value.contract?.address);
     });
   }, [values]);
 
