@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.9 (2023-03-10)
+
+### Bug Fixes
+
+- scanner - add tooltip and custom substr length ([76feda0](https://github.com/gemunion/mui-packages/commit/76feda0eb8ec83d4598fac1e91419ededf167bc3))
+
 ## [1.1.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.1.7...@gemunion/mui-scanner@1.1.8) (2023-03-07)
 
 **Note:** Version bump only for package @gemunion/mui-scanner

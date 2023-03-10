@@ -10,8 +10,8 @@
   "dependencies": {
     "@gemunion/firebase": "1.2.0",
     "@gemunion/mui-dialog-confirmation": "3.2.64",
-    "@gemunion/mui-inputs-core": "7.1.13",
-    "@gemunion/mui-inputs-file-firebase": "6.0.72",
+    "@gemunion/mui-inputs-core": "7.1.14",
+    "@gemunion/mui-inputs-file-firebase": "6.0.73",
     "@gemunion/mui-page-layout": "2.1.5",
     "@gemunion/popup": "1.0.9",
     "react-beautiful-dnd": "13.1.1"
@@ -19,7 +19,7 @@
   "description": "react widget",
   "devDependencies": {
     "@gemunion/cross-env": "0.0.4",
-    "@gemunion/mui-form": "7.2.8",
+    "@gemunion/mui-form": "7.2.9",
     "@gemunion/provider-api": "7.0.13",
     "@gemunion/provider-test-id": "1.0.28",
     "@mui/icons-material": "5.11.11",
@@ -77,5 +77,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "8.0.95"
+  "version": "8.0.96"
 }
