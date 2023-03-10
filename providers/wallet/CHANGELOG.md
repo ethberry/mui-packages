@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.2.9...@gemunion/provider-wallet@3.3.0) (2023-03-10)
+
+### Features
+
+- add besu icon and getIconByChainId to wallet provider ([b859043](https://github.com/gemunion/mui-packages/commit/b8590435f365d9add30d455b5d67fdc9d156290d))
+
 ## 3.2.9 (2023-03-10)
 
 **Note:** Version bump only for package @gemunion/provider-wallet
