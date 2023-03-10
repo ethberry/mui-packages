@@ -1,4 +1,5 @@
 import type { Networkish } from "@ethersproject/networks";
+
 import { INetwork } from "../interfaces";
 
 export enum Networks {
