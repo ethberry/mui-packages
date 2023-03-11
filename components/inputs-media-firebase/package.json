@@ -23,7 +23,7 @@
     "@gemunion/cross-env": "0.0.4",
     "@gemunion/mui-form": "7.2.9",
     "@gemunion/mui-inputs-file": "6.0.71",
-    "@gemunion/provider-api": "7.0.13",
+    "@gemunion/provider-api": "7.0.14",
     "@gemunion/provider-test-id": "1.0.28",
     "@mui/icons-material": "5.11.11",
     "@mui/material": "5.11.12",
