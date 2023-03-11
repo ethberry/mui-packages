@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.11](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.1.10...@gemunion/metamask-login@3.1.11) (2023-03-11)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([7ad2d68](https://github.com/gemunion/mui-packages/commit/7ad2d6803a34586287051723db5d3a90f420c26c))
+
 ## [3.1.10](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.1.9...@gemunion/metamask-login@3.1.10) (2023-03-10)
 
 **Note:** Version bump only for package @gemunion/metamask-login
