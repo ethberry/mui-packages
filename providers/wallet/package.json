@@ -21,10 +21,10 @@
   },
   "description": "react wallet provider",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.13",
+    "@gemunion/provider-api": "7.0.14",
     "@gemunion/provider-license": "3.0.8",
     "@gemunion/provider-popup": "1.0.9",
-    "@gemunion/provider-user": "6.0.14",
+    "@gemunion/provider-user": "6.0.15",
     "@mui/icons-material": "5.11.11",
     "@mui/material": "5.11.12",
     "@mui/styles": "5.11.12",
