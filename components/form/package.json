@@ -13,7 +13,7 @@
     "@gemunion/react-hooks": "1.1.9",
     "@hookform/resolvers": "2.9.11",
     "use-debounce": "9.0.3",
-    "yup": "0.32.11"
+    "yup": "1.0.2"
   },
   "description": "react widget",
   "devDependencies": {

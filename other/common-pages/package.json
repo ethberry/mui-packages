@@ -16,7 +16,7 @@
     "@gemunion/popup": "1.0.9",
     "@gemunion/react-hooks": "1.1.9",
     "@gemunion/yup-rules": "4.1.0",
-    "yup": "0.32.11"
+    "yup": "1.0.2"
   },
   "description": "react context provider",
   "devDependencies": {
