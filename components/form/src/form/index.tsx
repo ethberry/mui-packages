@@ -1,15 +1,15 @@
 import { FC, PropsWithChildren } from "react";
 import { Box, ButtonProps } from "@mui/material";
 import { FormProvider, useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
 
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
 import { useLicense } from "@gemunion/provider-license";
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
-import { PromptIfDirty } from "../prompt";
 import { FormButtons } from "../buttons";
 import { useYupValidationResolver } from "../hook";
+import { PromptIfDirty } from "../prompt";
+import { yupResolver } from "../resolvers/yup";
 
 interface IFormWrapperProps<T> {
   showButtons?: boolean;

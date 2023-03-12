@@ -1,5 +1,5 @@
 import { Resolver } from "react-hook-form";
-import * as Yup from "yup";
+import { ValidationError } from "yup";
 
 export const useYupValidationResolver =
   (validate: (data: any) => Promise<any>): Resolver =>
@@ -16,7 +16,7 @@ export const useYupValidationResolver =
         values: {},
         errors: (errors?.inner || []).reduce(
           // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-          (allErrors: Yup.ValidationError | any, currentError: Yup.ValidationError) => ({
+          (allErrors: ValidationError | any, currentError: ValidationError) => ({
             ...allErrors,
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             [currentError.path!]: {
