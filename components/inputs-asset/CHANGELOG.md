@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@1.1.14...@gemunion/mui-inputs-asset@2.0.1) (2023-03-12)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([1b2fa6b](https://github.com/gemunion/mui-packages/commit/1b2fa6bf5a516a41a79b6b08c5a4dea1d2618b89))
+- **deps:** update dependency yup to v1 ([bd4ffab](https://github.com/gemunion/mui-packages/commit/bd4ffab62c75933a5e0ee0624154a573501f1bc1))
+
 ## 1.1.14 (2023-03-11)
 
 ### Bug Fixes
