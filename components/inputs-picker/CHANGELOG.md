@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.0.5 (2023-03-14)
+
+### Bug Fixes
+
+- date time and range pickers to prevent keyboard input and change onAccept to onChange setting value ([51c6d69](https://github.com/gemunion/mui-packages/commit/51c6d69a63277c5ad744f7e076844ca8f3b37333))
+
 ## 6.0.4 (2023-03-10)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-picker

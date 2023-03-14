@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.0.77 (2023-03-14)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-file-s3
+
 ## 7.0.76 (2023-03-11)
 
 ### Bug Fixes
