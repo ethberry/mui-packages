@@ -14,9 +14,9 @@
   "description": "react widget",
   "devDependencies": {
     "@mui/icons-material": "5.11.11",
-    "@mui/lab": "5.0.0-alpha.122",
-    "@mui/material": "5.11.12",
-    "@mui/styles": "5.11.12",
+    "@mui/lab": "5.0.0-alpha.123",
+    "@mui/material": "5.11.13",
+    "@mui/styles": "5.11.13",
     "@types/react": "18.0.28",
     "react": "18.2.0",
     "react-hook-form": "7.43.5",
