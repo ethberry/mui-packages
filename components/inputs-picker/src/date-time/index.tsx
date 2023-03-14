@@ -1,7 +1,7 @@
 import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
-import { DateTimePicker, renderTimeViewClock } from "@mui/x-date-pickers";
+import { MobileDateTimePicker } from "@mui/x-date-pickers";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
@@ -44,23 +44,15 @@ export const DateTimeInput: FC<IDateTimeInputProps> = props => {
       name={name}
       control={form.control}
       render={({ field }) => (
-        <DateTimePicker
+        <MobileDateTimePicker
           format="MM/dd/yyyy hh:mm a"
           label={localizedLabel}
           value={value ? setter(value) : value}
-          viewRenderers={{
-            hours: renderTimeViewClock,
-            minutes: renderTimeViewClock,
-            seconds: renderTimeViewClock,
-          }}
-          onAccept={(date: Date | null): void => {
+          onChange={(date: Date | null): void => {
             form.setValue(name, date ? getter(date) : date, { shouldDirty: true, shouldTouch: true });
           }}
           ref={field.ref}
           slotProps={{
-            tabs: {
-              hidden: false,
-            },
             textField: {
               sx: { my: 1 },
               fullWidth: true,

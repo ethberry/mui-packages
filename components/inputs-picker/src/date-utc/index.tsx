@@ -1,7 +1,7 @@
 import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";
-import { DatePicker } from "@mui/x-date-pickers";
+import { MobileDatePicker } from "@mui/x-date-pickers";
 import { addMinutes, subMinutes } from "date-fns";
 
 import { useTestId } from "@gemunion/provider-test-id";
@@ -16,7 +16,7 @@ interface IDateUtcInputProps {
 }
 
 export const DateUtcInput: FC<IDateUtcInputProps> = props => {
-  const { name, label, variant = "standard", readOnly, ...rest } = props;
+  const { name, label, variant = "standard", readOnly = true, ...rest } = props;
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
@@ -45,11 +45,11 @@ export const DateUtcInput: FC<IDateUtcInputProps> = props => {
       name={name}
       control={form.control}
       render={({ field }) => (
-        <DatePicker
+        <MobileDatePicker
           format="MM/dd/yyyy"
           label={localizedLabel}
           value={field.value ? setter(field.value) : field.value}
-          onAccept={(date: Date | null): void => {
+          onChange={(date: Date | null): void => {
             form.setValue(name, date ? getter(date) : date, { shouldDirty: true, shouldTouch: true });
           }}
           slotProps={{

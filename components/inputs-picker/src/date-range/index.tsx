@@ -2,7 +2,7 @@ import { FC } from "react";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";
 import { Typography } from "@mui/material";
-import { DateRange, DateRangePicker } from "@mui/x-date-pickers-pro";
+import { DateRange, MobileDateRangePicker } from "@mui/x-date-pickers-pro";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
@@ -42,7 +42,7 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
       name={name}
       control={form.control}
       render={({ field }) => (
-        <DateRangePicker
+        <MobileDateRangePicker
           format="MM/dd/yyyy"
           localeText={{
             start: formatMessage({ id: `form.labels.${suffix}Start` }),
@@ -50,7 +50,7 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
           }}
           ref={field.ref}
           value={field.value}
-          onAccept={value => {
+          onChange={(value: DateRange<Date> | null) => {
             form.setValue(name, value, { shouldDirty: true, shouldTouch: true });
           }}
           slotProps={{
