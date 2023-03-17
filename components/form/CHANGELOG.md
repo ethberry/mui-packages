@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@8.0.2...@gemunion/mui-form@8.0.3) (2023-03-17)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([7d70073](https://github.com/gemunion/mui-packages/commit/7d700738226ffba5d780a312eac43d0535372e50))
+
 ## [8.0.2](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@8.0.1...@gemunion/mui-form@8.0.2) (2023-03-14)
 
 **Note:** Version bump only for package @gemunion/mui-form

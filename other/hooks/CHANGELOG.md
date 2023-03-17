@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.10 (2023-03-17)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([7d70073](https://github.com/gemunion/mui-packages/commit/7d700738226ffba5d780a312eac43d0535372e50))
+- getting id from values to handle edit confirm in embedded collections; remove Typography from date range separator ([2e7108f](https://github.com/gemunion/mui-packages/commit/2e7108ff708fd629b64b4f3f133a3359eee27ef0))
+
 ## 1.1.9 (2023-03-11)
 
 ### Bug Fixes
