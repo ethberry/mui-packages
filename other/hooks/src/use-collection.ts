@@ -202,7 +202,9 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
   const handleEditConfirm = async (values: Partial<T>, form: any): Promise<void> => {
     return handleEditConfirmFn(form, values)
       .then(() => {
-        enqueueSnackbar(formatMessage({ id: id ? "snackbar.updated" : "snackbar.created" }), { variant: "success" });
+        enqueueSnackbar(formatMessage({ id: id || values.id ? "snackbar.updated" : "snackbar.created" }), {
+          variant: "success",
+        });
         setIsEditDialogOpen(false);
         form.reset(values);
         return fetch();

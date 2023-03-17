@@ -1,7 +1,6 @@
 import { FC } from "react";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";
-import { Typography } from "@mui/material";
 import { DateRange, MobileDateRangePicker } from "@mui/x-date-pickers-pro";
 
 import { useTestId } from "@gemunion/provider-test-id";
@@ -15,7 +14,7 @@ interface IDateTimeInputProps {
   onChange?: (dateRange: DateRange<Date> | null) => void;
 }
 
-const defaultFieldSeparator = <Typography>&raquo;</Typography>;
+const defaultFieldSeparator = <>&raquo;</>;
 
 export const DateRangeInput: FC<IDateTimeInputProps> = props => {
   const { fieldSeparator = defaultFieldSeparator, name, variant = "standard", readOnly, ...rest } = props;
