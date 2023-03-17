@@ -7,7 +7,7 @@
   "dependencies": {
     "lerna": "6.5.1",
     "react-scripts": "5.0.1",
-    "nx": "15.8.6"
+    "nx": "15.8.7"
   },
   "devDependencies": {
     "@emotion/react": "11.10.6",
