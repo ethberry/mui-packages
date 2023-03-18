@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.20](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.1.19...@gemunion/mui-dialog-form@8.1.20) (2023-03-18)
+
+### Bug Fixes
+
+- handling nested form dialogs to prevent bubbling of child form submit event ([3a0b9bb](https://github.com/gemunion/mui-packages/commit/3a0b9bb2e8cb41eb5ed4624fc186c8958bc7ea8e))
+
 ## [8.1.19](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.1.18...@gemunion/mui-dialog-form@8.1.19) (2023-03-17)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
