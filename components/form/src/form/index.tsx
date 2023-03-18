@@ -1,6 +1,6 @@
-import { FC, PropsWithChildren } from "react";
+import { FC, PropsWithChildren, useEffect } from "react";
 import { Box, ButtonProps } from "@mui/material";
-import { FormProvider, useForm } from "react-hook-form";
+import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
 import { useLicense } from "@gemunion/provider-license";
@@ -61,11 +61,17 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
     resolver,
   });
 
-  const handleSubmit = async (data: any, e: any): Promise<void> => {
-    e.preventDefault();
-    e.stopPropagation();
+  const handleSubmit: SubmitHandler<any> = async (data: any, e?: any): Promise<void> => {
+    e?.preventDefault();
+    e?.stopPropagation();
     const values = form.getValues();
     await onSubmit(values, form);
+  };
+
+  const listener = async (e: any) => {
+    e.preventDefault();
+    e.stopPropagation();
+    await form.handleSubmit(handleSubmit)(e);
   };
 
   useDeepCompareEffect(() => {
@@ -73,6 +79,14 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
       form.reset(initialValues);
     }
   }, [enableReinitialize, initialValues]);
+
+  useEffect(() => {
+    innerRef?.current?.addEventListener("submit", listener);
+
+    return () => {
+      innerRef?.current?.removeEventListener("submit", listener);
+    };
+  }, [innerRef?.current]);
 
   if (!license.isValid()) {
     return null;
