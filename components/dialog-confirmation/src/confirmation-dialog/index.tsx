@@ -1,4 +1,4 @@
-import { FC, ReactElement } from "react";
+import { FC, MouseEvent, ReactElement } from "react";
 import { FormattedMessage } from "react-intl";
 import {
   Button,
@@ -15,7 +15,7 @@ import { useSettings } from "@gemunion/provider-settings";
 
 export interface IConfirmationDialogProps extends DialogProps {
   onCancel: () => void;
-  onConfirm: () => void;
+  onConfirm: (e: MouseEvent<HTMLButtonElement>) => void;
   message?: string;
   data?: any;
   action?: ReactElement;
