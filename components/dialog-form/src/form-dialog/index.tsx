@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren, ReactElement, useRef, useState } from "react";
+import { FC, MouseEvent, PropsWithChildren, ReactElement, useRef, useState } from "react";
 import { Breakpoint } from "@mui/material";
 
 import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
@@ -36,23 +36,19 @@ export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props =>
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const innerRef = useRef(null) as any;
+  const innerRef = useRef<HTMLFormElement | null>(null) as any;
 
-  const handleSubmit = async (): Promise<void> => {
+  const handleSubmit = async (e: MouseEvent<HTMLButtonElement>): Promise<void> => {
+    e.preventDefault();
+    e.stopPropagation();
+
     if (innerRef && innerRef.current) {
       setIsLoading(true);
-
-      if (typeof innerRef.current.requestSubmit === "function") {
-        await new Promise(resolve => {
-          innerRef.current.requestSubmit();
-          resolve(true);
-        });
-      } else {
-        innerRef.current.dispatchEvent(new Event("submit", { cancelable: true }));
-      }
-
+      innerRef.current.dispatchEvent(new Event("submit", { bubbles: false, cancelable: true }));
       setIsLoading(false);
     }
+
+    return Promise.resolve();
   };
 
   return (
