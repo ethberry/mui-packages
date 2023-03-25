@@ -13,14 +13,14 @@
     "@gemunion/mui-inputs-core": "7.1.19",
     "@gemunion/mui-inputs-file-firebase": "6.0.76",
     "@gemunion/mui-page-layout": "2.1.8",
-    "@gemunion/popup": "1.0.9",
+    "@gemunion/popup": "1.0.10",
     "react-beautiful-dnd": "13.1.1"
   },
   "description": "react widget",
   "devDependencies": {
     "@gemunion/cross-env": "0.0.4",
     "@gemunion/mui-form": "8.0.4",
-    "@gemunion/provider-api": "7.0.14",
+    "@gemunion/provider-api": "7.0.15",
     "@gemunion/provider-test-id": "1.0.29",
     "@mui/icons-material": "5.11.11",
     "@mui/material": "5.11.14",
