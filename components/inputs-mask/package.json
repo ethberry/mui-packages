@@ -19,11 +19,11 @@
     "@mui/material": "5.11.13",
     "@storybook/react": "6.5.16",
     "@types/mathjs": "9.4.2",
-    "@types/react": "18.0.28",
+    "@types/react": "18.0.29",
     "ethers": "5.7.2",
     "react": "18.2.0",
-    "react-hook-form": "7.43.7",
-    "react-intl": "6.3.1"
+    "react-hook-form": "7.43.8",
+    "react-intl": "6.3.2"
   },
   "engines": {
     "node": ">=12.13"
