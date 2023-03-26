@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-inputs-file": "6.0.74",
+    "@gemunion/mui-inputs-file": "6.0.75",
     "@gemunion/provider-api": "7.0.15",
     "@gemunion/s3-uploader": "0.0.36"
   },
@@ -48,5 +48,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "7.0.78"
+  "version": "7.0.79"
 }

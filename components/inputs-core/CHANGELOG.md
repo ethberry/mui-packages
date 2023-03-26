@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.1.20](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.1.19...@gemunion/mui-inputs-core@7.1.20) (2023-03-26)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([4930bc2](https://github.com/gemunion/mui-packages/commit/4930bc2a46587134d956db4f1cae6eea23e2ffd7))
+
 ## [7.1.19](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.1.18...@gemunion/mui-inputs-core@7.1.19) (2023-03-18)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core

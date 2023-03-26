@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.0.79 (2023-03-26)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([4930bc2](https://github.com/gemunion/mui-packages/commit/4930bc2a46587134d956db4f1cae6eea23e2ffd7))
+
 ## [7.0.78](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@7.0.77...@gemunion/mui-inputs-file-s3@7.0.78) (2023-03-17)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-s3
