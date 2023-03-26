@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.6](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@8.0.5...@gemunion/mui-form@8.0.6) (2023-03-26)
+
+### Bug Fixes
+
+- use yup resolver from package; remove old and unnecessary functionality ([5f2b26e](https://github.com/gemunion/mui-packages/commit/5f2b26e951122ea0fbb16b7d78b8ab0b249c1f34))
+
 ## [8.0.5](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@8.0.4...@gemunion/mui-form@8.0.5) (2023-03-26)
 
 ### Bug Fixes
