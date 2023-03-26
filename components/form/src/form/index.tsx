@@ -1,15 +1,14 @@
 import { FC, PropsWithChildren, useEffect } from "react";
 import { Box, ButtonProps } from "@mui/material";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
 import { useLicense } from "@gemunion/provider-license";
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
 import { FormButtons } from "../buttons";
-import { useYupValidationResolver } from "../hook";
 import { PromptIfDirty } from "../prompt";
-import { yupResolver } from "../resolvers/yup";
 
 interface IFormWrapperProps<T> {
   showButtons?: boolean;
@@ -24,7 +23,6 @@ interface IFormWrapperProps<T> {
   formSubmitButtonProps?: Partial<ButtonProps>;
   formSubmitButtonRef?: any;
   innerRef?: any;
-  validate?: (data: any) => Promise<any>;
   testId?: string;
 }
 
@@ -43,17 +41,12 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
     innerRef,
     className,
     validationSchema,
-    validate,
     testId,
   } = props;
 
   const license = useLicense();
 
-  const resolver = validate
-    ? useYupValidationResolver(validate)
-    : validationSchema
-    ? yupResolver(validationSchema)
-    : undefined;
+  const resolver = validationSchema ? yupResolver(validationSchema) : undefined;
 
   const form = useForm({
     mode: "all",
