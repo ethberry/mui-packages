@@ -20,12 +20,13 @@ export const useServerSignature = (
       .fetchJson(params)
       .then((sign: IServerSignature) => fn(values, web3Context, sign))
       .catch((e: any) => {
-        if (error && e.status === 400) {
-          console.error(e.getLocalizedValidationErrors());
-          enqueueSnackbar(formatMessage({ id: `snackbar.error` }), { variant: "error" });
-          return null;
-        } else if (e.status === 404) {
-          enqueueSnackbar(formatMessage({ id: `snackbar.${e.message as string}` }), { variant: "error" });
+        if (error) {
+          enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
+          if (e.status === 400) {
+            console.error(e.getLocalizedValidationErrors());
+          } else if (e.status === 404) {
+            console.error("[server error]", e);
+          }
           return null;
         }
         throw e;
