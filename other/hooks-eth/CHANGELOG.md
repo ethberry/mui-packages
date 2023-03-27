@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.87 (2023-03-27)
+
+### Bug Fixes
+
+- change snackbar variant and label to inform user about sent transaction ([5e890f7](https://github.com/gemunion/mui-packages/commit/5e890f7731a3210e74be9ecf56ac98136639216a))
+- mask error in snackbar ([b1cd07a](https://github.com/gemunion/mui-packages/commit/b1cd07ae42a5d346b0bd47d07505b54502239615))
+- simplify catch return ([566b88c](https://github.com/gemunion/mui-packages/commit/566b88cce4161b9b55140d200b5bda2f76d1cd2a))
+
 ## 1.0.86 (2023-03-26)
 
 ### Bug Fixes
