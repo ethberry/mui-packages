@@ -42,7 +42,7 @@ export const useMetamaskWallet = <T = any>(
     return fn(...args, context)
       .then((result: any) => {
         if (success && result !== null) {
-          enqueueSnackbar(formatMessage({ id: "snackbar.success" }), { variant: "success" });
+          enqueueSnackbar(formatMessage({ id: "snackbar.transactionSent" }), { variant: "info" });
         }
         return result as T;
       })
@@ -50,19 +50,17 @@ export const useMetamaskWallet = <T = any>(
         if (error) {
           if (e.code === 4001 || e.code === ErrorCode.ACTION_REJECTED) {
             enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
-            return null;
           } else if ([...SERVER_ERROR_CODE_RANGE, ...RESERVED_ERROR_CODES].includes(e.code)) {
             enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
             const errorType = Object.values(STANDARD_ERROR_MAP).find(({ code }) => code === e.code)?.message;
             console.error(`[blockchain error]${errorType ? ` [${errorType}]` : ""}`, e.message);
-            return null;
           } else if (e.error?.data?.data) {
             enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
             const data = e.error?.data?.data as string;
             const decodedMessage = utils.toUtf8String(`0x${data.substr(138)}`);
             console.error("[blockchain error]", decodedMessage);
-            return null;
           }
+          return null;
         }
 
         throw e;
