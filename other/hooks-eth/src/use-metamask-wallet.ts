@@ -42,7 +42,7 @@ export const useMetamaskWallet = <T = any>(
     return fn(...args, context)
       .then((result: any) => {
         if (success && result !== null) {
-          enqueueSnackbar(formatMessage({ id: "snackbar.success" }), { variant: "success" });
+          enqueueSnackbar(formatMessage({ id: "snackbar.transactionSent" }), { variant: "info" });
         }
         return result as T;
       })
