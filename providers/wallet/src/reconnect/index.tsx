@@ -13,22 +13,22 @@ interface IReconnectProps {
 export const Reconnect: FC<IReconnectProps> = props => {
   const { activeConnector } = props;
 
-  const { isActive, connector } = useWeb3React();
+  const { isActive, chainId, connector } = useWeb3React();
   const { network } = useWallet();
 
   const handleConnect = useCallback(async () => {
-    if (!isActive && activeConnector && network) {
+    if ((!isActive || network?.chainId !== chainId) && activeConnector && network) {
       await getConnectorByName(activeConnector)
         ?.activate(network.chainId)
         .catch((error: ProviderRpcError) => {
           console.error("Reconnect error", error);
         });
     }
-  }, [network]);
+  }, [chainId, network]);
 
   useEffect(() => {
     void handleConnect();
-  }, [network]);
+  }, [chainId, network]);
 
   useEffect(() => {
     if (isActive) {
