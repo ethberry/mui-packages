@@ -14,18 +14,7 @@
   "tasksRunnerOptions": {
     "default": {
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "prebuild",
-          "prepare",
-          "preversion",
-          "test",
-          "test:coverage",
-          "test:watch",
-          "postbuild",
-          "storybook"
-        ]
+        "cacheableOperations": ["build"]
       },
       "runner": "nx/tasks-runners/default"
     }
