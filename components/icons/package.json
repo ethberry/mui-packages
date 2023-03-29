@@ -11,7 +11,7 @@
   "devDependencies": {
     "@mui/material": "5.11.15",
     "@storybook/react": "6.5.16",
-    "@types/react": "18.0.29",
+    "@types/react": "18.0.31",
     "react": "18.2.0"
   },
   "engines": {
