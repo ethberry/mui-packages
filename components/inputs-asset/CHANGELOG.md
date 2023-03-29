@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.7 (2023-03-29)
+
+### Bug Fixes
+
+- add contractId to getEmptyToken ([fd2be5c](https://github.com/gemunion/mui-packages/commit/fd2be5c1d54920a99ed1fa7711483d3504fe013d))
+
 ## [2.0.6](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.0.5...@gemunion/mui-inputs-asset@2.0.6) (2023-03-26)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset

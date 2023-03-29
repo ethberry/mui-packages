@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.67 (2023-03-29)
+
+**Note:** Version bump only for package @gemunion/provider-localization
+
 ## 3.0.66 (2023-03-26)
 
 ### Bug Fixes

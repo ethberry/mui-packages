@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.3.5 (2023-03-29)
+
+### Bug Fixes
+
+- correctly reconnect wallet after changing network and chainId ([a470478](https://github.com/gemunion/mui-packages/commit/a470478878f7eb52d592a45bbe101bea872220e5))
+
 ## 3.3.4 (2023-03-26)
 
 ### Bug Fixes
