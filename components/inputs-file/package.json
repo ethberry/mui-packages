@@ -16,7 +16,7 @@
   "description": "react widget",
   "devDependencies": {
     "@mui/icons-material": "5.11.11",
-    "@mui/material": "5.11.14",
+    "@mui/material": "5.11.15",
     "@mui/styles": "5.11.13",
     "@storybook/react": "6.5.16",
     "@types/react": "18.0.31",
