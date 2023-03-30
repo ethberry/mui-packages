@@ -4,13 +4,13 @@ import { useWatch } from "react-hook-form";
 import { EthInput } from "@gemunion/mui-inputs-mask";
 import { TokenType } from "@gemunion/types-blockchain";
 
-export interface ITokenInputProps {
+export interface IAmountInputProps {
   prefix: string;
   name?: string;
   readOnly?: boolean;
 }
 
-export const AmountInput: FC<ITokenInputProps> = props => {
+export const AmountInput: FC<IAmountInputProps> = props => {
   const { prefix, name = "amount", readOnly } = props;
 
   const tokenType = useWatch({ name: `${prefix}.tokenType` });

@@ -11,6 +11,7 @@ import { Polygon } from "./polygon";
 export const getIconByChainId = (chainId: number): FC<SvgIconProps> | null => {
   switch (chainId) {
     case 1:
+    case 5:
       return Ethereum;
     case 10:
       return Optimism;
@@ -18,6 +19,7 @@ export const getIconByChainId = (chainId: number): FC<SvgIconProps> | null => {
     case 97:
       return Binance;
     case 137:
+    case 80001:
       return Polygon;
     case 42161:
       return Arbitrum;

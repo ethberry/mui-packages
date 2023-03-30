@@ -54,11 +54,15 @@ export const useMetamaskWallet = <T = any>(
             enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
             const errorType = Object.values(STANDARD_ERROR_MAP).find(({ code }) => code === e.code)?.message;
             console.error(`[blockchain error]${errorType ? ` [${errorType}]` : ""}`, e.message);
-          } else if (e.error?.data?.data) {
+          } else {
             enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
-            const data = e.error?.data?.data as string;
-            const decodedMessage = utils.toUtf8String(`0x${data.substr(138)}`);
-            console.error("[blockchain error]", decodedMessage);
+            if (e.error?.data?.data) {
+              const data = e.error?.data?.data as string;
+              const decodedMessage = utils.toUtf8String(`0x${data.substr(138)}`);
+              console.error("[blockchain error]", decodedMessage);
+            } else {
+              console.error("[blockchain error]", e);
+            }
           }
           return null;
         }

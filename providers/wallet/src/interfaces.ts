@@ -3,6 +3,7 @@ export interface INetwork {
   chainId: number;
   rpcUrls: any;
   blockExplorerUrls: string[];
+  isSandbox?: boolean;
   nativeCurrency: {
     name: string;
     symbol: string;
