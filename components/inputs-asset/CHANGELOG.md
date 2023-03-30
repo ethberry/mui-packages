@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.0.7...@gemunion/mui-inputs-asset@2.1.0) (2023-03-30)
+
+### Features
+
+- allowEmpty TemplateAssetInput ([bf08b47](https://github.com/gemunion/mui-packages/commit/bf08b4782d0ee35a3bbac6e061146cd7d6cdd5d6))
+
 ## 2.0.7 (2023-03-29)
 
 ### Bug Fixes
