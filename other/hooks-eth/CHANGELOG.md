@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.89 (2023-03-30)
+
+### Bug Fixes
+
+- make inputs-asset inputs exportable; correct metamask catching; add exporting icons for chains ([a5be098](https://github.com/gemunion/mui-packages/commit/a5be098dd032b2b36c4b37f518feb1d68c09da8a))
+
 ## [1.0.88](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.87...@gemunion/react-hooks-eth@1.0.88) (2023-03-29)
 
 **Note:** Version bump only for package @gemunion/react-hooks-eth

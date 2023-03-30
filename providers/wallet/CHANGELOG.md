@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.3.6 (2023-03-30)
+
+### Bug Fixes
+
+- make inputs-asset inputs exportable; correct metamask catching; add exporting icons for chains ([a5be098](https://github.com/gemunion/mui-packages/commit/a5be098dd032b2b36c4b37f518feb1d68c09da8a))
+
 ## 3.3.5 (2023-03-29)
 
 ### Bug Fixes

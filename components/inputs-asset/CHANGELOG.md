@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.1.0...@gemunion/mui-inputs-asset@2.1.1) (2023-03-30)
+
+### Bug Fixes
+
+- make inputs-asset inputs exportable; correct metamask catching; add exporting icons for chains ([a5be098](https://github.com/gemunion/mui-packages/commit/a5be098dd032b2b36c4b37f518feb1d68c09da8a))
+
 # [2.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.0.7...@gemunion/mui-inputs-asset@2.1.0) (2023-03-30)
 
 ### Features
