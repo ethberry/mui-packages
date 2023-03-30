@@ -28,7 +28,37 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
 
   switch (tokenType) {
     case TokenType.ERC721:
+      return (
+        <EntityInput
+          name={`${prefix}.${name}`}
+          controller="templates"
+          label={formatMessage({ id: "form.labels.templateIds" })}
+          placeholder={formatMessage({ id: "form.placeholders.templateIds" })}
+          data={{
+            contractIds: [contractId],
+            templateStatus: [CommonStatus.ACTIVE, CommonStatus.HIDDEN],
+            ...data,
+          }}
+          readOnly={readOnly}
+          autoselect
+        />
+      );
     case TokenType.ERC998:
+      return (
+        <EntityInput
+          name={`${prefix}.${name}`}
+          controller="templates"
+          label={formatMessage({ id: "form.labels.templateIds" })}
+          placeholder={formatMessage({ id: "form.placeholders.templateIds" })}
+          data={{
+            contractIds: [contractId],
+            templateStatus: [CommonStatus.ACTIVE, CommonStatus.HIDDEN],
+            ...data,
+          }}
+          readOnly={readOnly}
+          autoselect
+        />
+      );
     case TokenType.ERC1155:
       return (
         <EntityInput
@@ -46,7 +76,37 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
         />
       );
     case TokenType.NATIVE:
+      return (
+        <EntityInput
+          name={`${prefix}.${name}`}
+          controller="templates"
+          label={formatMessage({ id: "form.labels.templateIds" })}
+          placeholder={formatMessage({ id: "form.placeholders.templateIds" })}
+          data={{
+            contractIds: [contractId],
+            templateStatus: [CommonStatus.ACTIVE, CommonStatus.HIDDEN],
+            ...data,
+          }}
+          readOnly={readOnly}
+          autoselect
+        />
+      );
     case TokenType.ERC20:
+      return (
+        <EntityInput
+          name={`${prefix}.${name}`}
+          controller="templates"
+          label={formatMessage({ id: "form.labels.templateIds" })}
+          placeholder={formatMessage({ id: "form.placeholders.templateIds" })}
+          data={{
+            contractIds: [contractId],
+            templateStatus: [CommonStatus.ACTIVE, CommonStatus.HIDDEN],
+            ...data,
+          }}
+          readOnly={readOnly}
+          autoselect
+        />
+      );
     default:
       return null;
   }

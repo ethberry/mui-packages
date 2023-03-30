@@ -20,6 +20,7 @@ type TAssetComponentParams = ITemplateAssetComponent & {
 export interface ITemplateAssetProps {
   prefix: string;
   multiple?: boolean;
+  allowEmpty?: boolean;
   readOnly?: boolean;
   tokenType?: {
     disabledOptions?: Array<TokenType>;
@@ -33,7 +34,7 @@ export interface ITemplateAssetProps {
 }
 
 export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
-  const { prefix = "price", multiple = false, tokenType, contract, readOnly } = props;
+  const { prefix = "price", multiple = false, tokenType, contract, readOnly, allowEmpty } = props;
 
   const { formatMessage } = useIntl();
   const form = useFormContext<any>();
@@ -95,7 +96,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
               <Box ml={2}>
                 <Tooltip title={formatMessage({ id: "form.tips.delete" })}>
                   <span>
-                    <IconButton aria-label="delete" onClick={handleOptionDelete(i)} disabled={!i}>
+                    <IconButton aria-label="delete" onClick={handleOptionDelete(i)} disabled={!allowEmpty}>
                       <Delete />
                     </IconButton>
                   </span>
