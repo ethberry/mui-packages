@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.8](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.3.7...@gemunion/provider-wallet@3.3.8) (2023-03-31)
+
+### Bug Fixes
+
+- sandbox chains and remove showing full stack error in snackbar ([ab33b0d](https://github.com/gemunion/mui-packages/commit/ab33b0d301682b5dd9ba52d89cb8bf8950747872))
+
 ## [3.3.7](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.3.6...@gemunion/provider-wallet@3.3.7) (2023-03-31)
 
 ### Bug Fixes
