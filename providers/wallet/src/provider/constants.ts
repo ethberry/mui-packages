@@ -117,7 +117,6 @@ export const networks: Record<number, INetwork> = {
   [networkToChainId[Networks.GOERLY]]: {
     chainName: "Goerly",
     chainId: networkToChainId[Networks.GOERLY],
-    isSandbox: true,
     rpcUrls: rpcUrls[networkToChainId[Networks.GOERLY]],
     blockExplorerUrls: ["https://goerli.etherscan.io"],
     nativeCurrency: {
@@ -140,7 +139,6 @@ export const networks: Record<number, INetwork> = {
   [networkToChainId[Networks.BINANCE_TEST]]: {
     chainName: "Binance Smart Chain Testnet",
     chainId: networkToChainId[Networks.BINANCE_TEST],
-    isSandbox: true,
     rpcUrls: rpcUrls[networkToChainId[Networks.BINANCE_TEST]],
     blockExplorerUrls: ["https://testnet.bscscan.com"],
     nativeCurrency: {
@@ -163,7 +161,6 @@ export const networks: Record<number, INetwork> = {
   [networkToChainId[Networks.MUMBAI]]: {
     chainName: "Mumbai",
     chainId: networkToChainId[Networks.MUMBAI],
-    isSandbox: true,
     rpcUrls: rpcUrls[networkToChainId[Networks.MUMBAI]],
     blockExplorerUrls: ["https://mumbai.polygonscan.com"],
     nativeCurrency: {
@@ -175,7 +172,6 @@ export const networks: Record<number, INetwork> = {
   [networkToChainId[Networks.BESU]]: {
     chainName: "Besu",
     chainId: networkToChainId[Networks.BESU],
-    isSandbox: true,
     rpcUrls: rpcUrls[networkToChainId[Networks.BESU]],
     blockExplorerUrls: ["http://localhost:8080"],
     nativeCurrency: {
@@ -187,7 +183,6 @@ export const networks: Record<number, INetwork> = {
   [networkToChainId[Networks.GEMUNION]]: {
     chainName: "Gemunion",
     chainId: networkToChainId[Networks.GEMUNION],
-    isSandbox: true,
     rpcUrls: rpcUrls[networkToChainId[Networks.GEMUNION]],
     blockExplorerUrls: ["https://besu-explorer.gemunion.io"],
     nativeCurrency: {
@@ -197,6 +192,8 @@ export const networks: Record<number, INetwork> = {
     },
   },
 };
+
+export const SANDBOX_CHAINS = [5, 97, 80001, 13378, 13377];
 
 export const STORE_CONNECTOR = "CONNECTOR";
 

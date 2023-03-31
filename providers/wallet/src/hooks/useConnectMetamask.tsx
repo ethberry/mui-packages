@@ -44,17 +44,14 @@ export const useConnectMetamask = (props: IUseConnectMetamask) => {
           onClick && onClick();
         })
         .catch(e => {
-          // eslint-disable-next-line no-console
           console.error("error", e);
-
           setActiveConnector(null);
-
           if (e && e.code === 4001) {
             enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
           } else if (e instanceof NoMetaMaskError) {
             enqueueSnackbar(formatMessage({ id: "snackbar.web3NotDetected" }), notDetectedWeb3MessageConfig);
           } else {
-            enqueueSnackbar((e && e.message) || formatMessage({ id: "snackbar.error" }), { variant: "error" });
+            enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
           }
         });
     });

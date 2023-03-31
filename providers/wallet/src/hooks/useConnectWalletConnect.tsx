@@ -25,15 +25,12 @@ export const useConnectWalletConnect = (props: IUseConnectWalletConnect) => {
           onClick && onClick();
         })
         .catch(e => {
-          // eslint-disable-next-line no-console
           console.error("error", e);
-
           setActiveConnector(null);
-
           if (e && e.code === 4001) {
             enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
           } else {
-            enqueueSnackbar((e && e.message) || formatMessage({ id: "snackbar.error" }), { variant: "error" });
+            enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
           }
         });
     });
