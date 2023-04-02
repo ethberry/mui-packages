@@ -1,6 +1,6 @@
 import { FC, useCallback, useState } from "react";
 
-import { S3Upload, S3Response } from "@gemunion/s3-uploader";
+import { useS3Uploader, IS3Response } from "@gemunion/s3-uploader";
 import { useApi } from "@gemunion/provider-api";
 import { FileInput, IFileInputProps } from "@gemunion/mui-inputs-file";
 
@@ -10,17 +10,11 @@ interface IS3FileInputProps extends Omit<IFileInputProps, "onChange"> {
   region?: string;
   onChange: (url: string) => void;
   onError?: (err: Error) => void;
-  onProgress?: (percent: number, status: string, file: File) => void;
   validate?: (files: File[]) => Promise<boolean>;
 }
 
 /* javascript-obfuscator:disable */
 // prettier-ignore
-const defaultBaseUrl =
-  process.env.BE_URL ||
-  process.env.STORYBOOK_BE_URL ||
-  process.env.REACT_APP_BE_URL ||
-  process.env.NEXT_PUBLIC_BE_URL;
 const defaultBucket =
   process.env.AWS_S3_BUCKET ||
   process.env.STORYBOOK_AWS_S3_BUCKET ||
@@ -40,13 +34,23 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
     bucketUrl = `https://${bucket}.s3.${region}.amazonaws.com`,
     onChange,
     onError,
-    onProgress,
     validate,
     ...rest
   } = props;
 
   const api = useApi();
   const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const uploadFilesToS3 = useS3Uploader({
+    onFinish: (data: IS3Response) => {
+      onChange(`${bucketUrl}${new URL(data.signedUrl).pathname}`);
+      setIsLoading(false);
+    },
+    onError: (error: Error) => {
+      setIsLoading(false);
+      onError ? onError(error) : console.error(error);
+    },
+  });
 
   const handleChange = useCallback(async (files: Array<File>): Promise<void> => {
     setIsLoading(true);
@@ -66,26 +70,10 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
     }
 
     // eslint-disable-next-line no-new
-    new S3Upload({
+    await uploadFilesToS3({
       files,
-      signingUrl: "/s3/put",
-      onFinishS3Put: (data: S3Response) => {
-        onChange(`${bucketUrl}${new URL(data.signedUrl).pathname}`);
-        setIsLoading(false);
-      },
-      onProgress: onProgress || console.info,
-      onError: (error: Error) => {
-        setIsLoading(false);
-        onError ? onError(error) : console.error(error);
-      },
-      signingUrlMethod: "GET",
-      signingUrlWithCredentials: true,
-      server: defaultBaseUrl,
       signingUrlHeaders: {
         authorization: authToken ? `Bearer ${authToken.accessToken}` : "",
-      },
-      signingUrlQueryParams: {
-        bucket,
       },
     });
   }, []);

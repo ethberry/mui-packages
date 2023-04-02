@@ -1,14 +1,9 @@
 {
   "extends": [
-    "@gemunion/eslint-config/presets/js"
+    "@gemunion/eslint-config/presets/tsx"
   ],
-  "env": {
-    "browser": true
-  },
   "parserOptions": {
-    "babelOptions": {
-      "configFile": "./.babelrc"
-    }
+    "project": "./tsconfig.test.json"
   },
   "root": true
 }
