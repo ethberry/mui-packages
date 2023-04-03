@@ -2,7 +2,7 @@ import { lookup } from "mime-types";
 
 import { useApiCall } from "@gemunion/react-hooks";
 
-import { IS3Response, IUseS3UploaderProps, IUseS3UploaderReturnProps } from "./interfaces";
+import { IS3Response, IS3SignDataRequest, IUseS3UploaderProps, IUseS3UploaderReturnProps } from "./interfaces";
 
 export const getFileMimeType = (file: File): string => {
   return file.type || (lookup(file.name) as string);
@@ -25,7 +25,7 @@ export const useS3Uploader = (props: IUseS3UploaderProps) => {
   const { onError = () => {}, onFinish = () => {}, signingUrl = "/s3/put", bucket = defaultBucket } = props;
 
   const { fn: getSignResultApi } = useApiCall(
-    (api, data: any) =>
+    (api, data: IS3SignDataRequest) =>
       api
         .fetchJson({
           url: signingUrl,
@@ -55,9 +55,9 @@ export const useS3Uploader = (props: IUseS3UploaderProps) => {
 
     async function getSignResult(file: File): Promise<string> {
       const fileName = scrubFilename(file.name);
-      const data: any = {
+      const data: IS3SignDataRequest = {
         objectName: fileName,
-        contentType: encodeURIComponent(getFileMimeType(file)),
+        contentType: getFileMimeType(file),
         bucket,
       };
 

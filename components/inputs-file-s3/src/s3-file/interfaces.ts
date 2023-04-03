@@ -13,3 +13,9 @@ export interface IUseS3UploaderReturnProps {
 export interface IS3Response {
   signedUrl: string;
 }
+
+export interface IS3SignDataRequest {
+  objectName: string;
+  contentType: string;
+  bucket: string;
+}
