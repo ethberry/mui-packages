@@ -102,6 +102,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
               ? onChange({} as ChangeEvent<unknown>, newValue, "autoselect")
               : form.setValue(name, multiple ? newValue.map((o: IAutocompleteOption) => o.id) : newValue.id, {
                   shouldTouch: true,
+                  shouldDirty: true,
                 });
           }
         }
