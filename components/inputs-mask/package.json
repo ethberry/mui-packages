@@ -19,7 +19,7 @@
     "@mui/material": "5.11.15",
     "@storybook/react": "6.5.16",
     "@types/mathjs": "9.4.2",
-    "@types/react": "18.0.31",
+    "@types/react": "18.0.32",
     "ethers": "5.7.2",
     "react": "18.2.0",
     "react-hook-form": "7.43.9",
