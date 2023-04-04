@@ -96,7 +96,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
               <Box ml={2}>
                 <Tooltip title={formatMessage({ id: "form.tips.delete" })}>
                   <span>
-                    <IconButton aria-label="delete" onClick={handleOptionDelete(i)} disabled={!allowEmpty}>
+                    <IconButton aria-label="delete" onClick={handleOptionDelete(i)} disabled={!i && !allowEmpty}>
                       <Delete />
                     </IconButton>
                   </span>
