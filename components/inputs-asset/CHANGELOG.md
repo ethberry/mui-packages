@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.5](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.1.4...@gemunion/mui-inputs-asset@2.1.5) (2023-04-04)
+
+### Bug Fixes
+
+- removing multiple TemplateAssetInput ([74a6567](https://github.com/gemunion/mui-packages/commit/74a6567538d79bbdf618921bce36ea900e5748b1))
+
 ## [2.1.4](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.1.3...@gemunion/mui-inputs-asset@2.1.4) (2023-04-03)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset
