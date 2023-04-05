@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 7.1.0 (2023-04-05)
+
+### Bug Fixes
+
+- pass correct mime type ([3645486](https://github.com/gemunion/mui-packages/commit/364548694440a316c17ef7ad276105b42047b801))
+
+### Features
+
+- move use-s3-uploader to inputs-file-s3 and remove forks ([484dfe7](https://github.com/gemunion/mui-packages/commit/484dfe7ade0b5983909bcf0e861a5dc90b6a62e1))
+- renovate s3-uploader to use fetch and make it a hook ([4e86a4d](https://github.com/gemunion/mui-packages/commit/4e86a4dc2215923a13df70d9319999a83ad23f2e))
+
 ## 7.0.83 (2023-04-03)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-s3
