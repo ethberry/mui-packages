@@ -12,8 +12,7 @@
   "packages": [
     "components/*",
     "other/*",
-    "providers/*",
-    "forks/*"
+    "providers/*"
   ],
   "useNx": true,
   "version": "independent"
