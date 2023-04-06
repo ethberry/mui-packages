@@ -22,7 +22,7 @@ export const AddressLink: FC<IAddressLinkProps> = props => {
   return (
     <Tooltip title={address}>
       <Link target={"_blank"} href={`${networks[chainId].blockExplorerUrls[0]}/address/${address}`} sx={sx}>
-        {address.substr(0, length).concat("...")}
+        {address.substr(0, length).concat(length < 42 ? "..." : "")}
       </Link>
     </Tooltip>
   );
