@@ -15,7 +15,7 @@
   "devDependencies": {
     "@mui/material": "5.11.15",
     "@mui/styles": "5.11.13",
-    "@types/react": "18.0.32",
+    "@types/react": "18.0.33",
     "react": "18.2.0"
   },
   "engines": {

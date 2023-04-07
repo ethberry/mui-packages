@@ -11,15 +11,15 @@
     "@gemunion/mui-page-layout": "2.1.12",
     "@gemunion/provider-test-id": "1.0.32",
     "@gemunion/react-hooks": "1.1.15",
-    "@hookform/resolvers": "3.0.0",
-    "use-debounce": "9.0.3",
+    "@hookform/resolvers": "3.0.1",
+    "use-debounce": "9.0.4",
     "yup": "1.0.2"
   },
   "description": "react widget",
   "devDependencies": {
     "@gemunion/provider-license": "3.0.10",
     "@mui/material": "5.11.15",
-    "@types/react": "18.0.32",
+    "@types/react": "18.0.33",
     "react": "18.2.0",
     "react-hook-form": "7.43.9",
     "react-intl": "6.3.2",
