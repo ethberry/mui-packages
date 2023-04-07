@@ -11,7 +11,7 @@
     "@gemunion/mui-page-layout": "2.1.12",
     "@gemunion/provider-test-id": "1.0.32",
     "@gemunion/react-hooks": "1.1.15",
-    "use-debounce": "9.0.3"
+    "use-debounce": "9.0.4"
   },
   "description": "react widget",
   "devDependencies": {
@@ -20,7 +20,7 @@
     "@mui/lab": "5.0.0-alpha.124",
     "@mui/material": "5.11.15",
     "@mui/styles": "5.11.13",
-    "@types/react": "18.0.32",
+    "@types/react": "18.0.33",
     "notistack": "3.0.1",
     "react": "18.2.0",
     "react-hook-form": "7.43.9",
