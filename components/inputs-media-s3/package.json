@@ -12,7 +12,7 @@
     "@gemunion/mui-inputs-core": "7.1.25",
     "@gemunion/mui-inputs-file-s3": "7.1.0",
     "@gemunion/mui-page-layout": "2.1.12",
-    "@gemunion/popup": "1.0.11",
+    "@gemunion/popup": "1.0.12",
     "clsx": "1.2.1",
     "react-beautiful-dnd": "13.1.1",
     "react-dropzone": "14.2.3"
@@ -20,7 +20,7 @@
   "description": "react widget media s3",
   "devDependencies": {
     "@gemunion/mui-form": "8.0.10",
-    "@gemunion/provider-api-jwt": "2.0.12",
+    "@gemunion/provider-api-jwt": "2.0.13",
     "@gemunion/provider-test-id": "1.0.32",
     "@mui/icons-material": "5.11.16",
     "@mui/material": "5.11.16",
