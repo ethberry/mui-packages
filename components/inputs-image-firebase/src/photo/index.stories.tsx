@@ -1,12 +1,11 @@
-import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
 import { SnackbarProvider } from "notistack";
-import { Story } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
-import { PhotoInput, IPhotoInputProps } from "./index";
+import { PhotoInput } from "./index";
 
 const i18n = {
   "form.labels.photo": "Photo",
@@ -24,7 +23,7 @@ export default {
   title: "FileInput/Firebase/Photo",
   component: PhotoInput,
   decorators: [
-    (Story: Story): ReactElement => (
+    Story => (
       <IntlProvider locale="en" messages={i18n}>
         <SnackbarProvider>
           <TestIdProvider testId="photo">
@@ -36,11 +35,17 @@ export default {
       </IntlProvider>
     ),
   ],
+} as Meta<typeof PhotoInput>;
+
+type Story = StoryObj<typeof PhotoInput>;
+
+const Template: Story = {
+  render: args => <PhotoInput {...args} />,
 };
 
-const Template: Story<IPhotoInputProps> = args => <PhotoInput {...args} />;
-
-export const Simple = Template.bind({});
-Simple.args = {
-  name: "photo",
+export const Simple = {
+  ...Template,
+  args: {
+    name: "photo",
+  },
 };

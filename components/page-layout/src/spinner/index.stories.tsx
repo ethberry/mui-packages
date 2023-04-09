@@ -1,14 +1,16 @@
-import { ReactElement } from "react";
-import { Story } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { Spinner } from ".";
 
 export default {
   title: "Progress/Spinner",
   component: Spinner,
-  decorators: [(Story: Story): ReactElement => <Story />],
+} as Meta<typeof Spinner>;
+
+type Story = StoryObj<typeof Spinner>;
+
+const Template: Story = {
+  render: args => <Spinner {...args} />,
 };
 
-const Template: Story = args => <Spinner {...args} />;
-
-export const Simple = Template.bind({});
+export const Simple = Template;

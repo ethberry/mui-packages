@@ -1,13 +1,12 @@
-import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
 import { SnackbarProvider } from "notistack";
-import { Story } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { ApiProviderJwt } from "@gemunion/provider-api-jwt";
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
-import { PhotoInput, IPhotoInputProps } from "./index";
+import { PhotoInput } from "./index";
 
 const i18n = {
   "form.labels.photo": "Photo",
@@ -25,7 +24,7 @@ export default {
   title: "FileInput/S3/Photo",
   component: PhotoInput,
   decorators: [
-    (Story: Story): ReactElement => (
+    Story => (
       <ApiProviderJwt baseUrl={"http://localhost/"}>
         <IntlProvider locale="en" messages={i18n}>
           <SnackbarProvider>
@@ -39,11 +38,17 @@ export default {
       </ApiProviderJwt>
     ),
   ],
+} as Meta<typeof PhotoInput>;
+
+type Story = StoryObj<typeof PhotoInput>;
+
+const Template: Story = {
+  render: args => <PhotoInput {...args} />,
 };
 
-const Template: Story<IPhotoInputProps> = args => <PhotoInput {...args} />;
-
-export const Simple = Template.bind({});
-Simple.args = {
-  name: "photo",
+export const Simple = {
+  ...Template,
+  args: {
+    name: "photo",
+  },
 };

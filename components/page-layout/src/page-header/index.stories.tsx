@@ -1,9 +1,8 @@
-import { ReactElement } from "react";
 import { IntlProvider, FormattedMessage } from "react-intl";
 import { Button } from "@mui/material";
-import { Story } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-import { PageHeader, IPageHeader } from "./index";
+import { PageHeader } from "./index";
 
 const i18n = {
   "pages.test.title": "Page header",
@@ -15,36 +14,48 @@ export default {
   title: "Component/PageHeader",
   component: PageHeader,
   decorators: [
-    (Story: Story): ReactElement => (
+    Story => (
       <IntlProvider locale="en" messages={i18n}>
         <Story />
       </IntlProvider>
     ),
   ],
+} as Meta<typeof PageHeader>;
+
+type Story = StoryObj<typeof PageHeader>;
+
+const Template: Story = {
+  render: args => <PageHeader {...args} />,
 };
 
-const Template: Story<IPageHeader> = args => <PageHeader {...args} />;
-
-export const Simple = Template.bind({});
-Simple.args = {
-  message: "pages.test.title",
+export const Simple = {
+  ...Template,
+  args: {
+    message: "pages.test.title",
+  },
 };
 
-export const WithVariable = Template.bind({});
-WithVariable.args = {
-  message: "pages.test.title-with-var",
-  data: { var: "VAR" },
+export const WithVariable = {
+  ...Template,
+  args: {
+    message: "pages.test.title-with-var",
+    data: { var: "VAR" },
+  },
 };
 
-const Template2: Story<IPageHeader> = args => (
-  <PageHeader {...args}>
-    <Button color="primary" variant="contained">
-      <FormattedMessage id="pages.test.button" />
-    </Button>
-  </PageHeader>
-);
+const TemplateWithButton: Story = {
+  render: args => (
+    <PageHeader {...args}>
+      <Button color="primary" variant="contained">
+        <FormattedMessage id="pages.test.button" />
+      </Button>
+    </PageHeader>
+  ),
+};
 
-export const WithButton = Template2.bind({});
-WithButton.args = {
-  message: "pages.test.title",
+export const WithButton = {
+  ...TemplateWithButton,
+  args: {
+    message: "pages.test.title",
+  },
 };

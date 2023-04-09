@@ -1,8 +1,6 @@
-import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
-import { Story } from "@storybook/react";
-import { TextFieldProps } from "@mui/material";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
@@ -19,7 +17,7 @@ export default {
   title: "Input/Json",
   component: JsonInput,
   decorators: [
-    (Story: Story): ReactElement => (
+    Story => (
       <TestIdProvider testId="json">
         <IntlProvider locale="en" messages={i18n}>
           <FormProvider
@@ -37,11 +35,17 @@ export default {
       </TestIdProvider>
     ),
   ],
+} as Meta<typeof JsonInput>;
+
+type Story = StoryObj<typeof JsonInput>;
+
+const Template: Story = {
+  render: args => <JsonInput {...args} />,
 };
 
-const Template: Story<TextFieldProps & { name: string }> = args => <JsonInput {...args} />;
-
-export const Simple = Template.bind({});
-Simple.args = {
-  name: "json",
+export const Simple = {
+  ...Template,
+  args: {
+    name: "json",
+  },
 };

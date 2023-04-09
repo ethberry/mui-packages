@@ -1,10 +1,9 @@
-import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Story } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { TextInput } from "@gemunion/mui-inputs-core";
 
-import { FormDialog, IFormDialogProps } from "./index";
+import { FormDialog } from "./index";
 
 const i18n = {
   "dialogs.edit": "Edit",
@@ -19,7 +18,7 @@ export default {
   title: "Dialog/Form",
   component: FormDialog,
   decorators: [
-    (Story: Story): ReactElement => (
+    Story => (
       <IntlProvider locale="en" messages={i18n}>
         <Story />
       </IntlProvider>
@@ -29,21 +28,27 @@ export default {
     onConfirm: { action: "confirmed" },
     onCancel: { action: "canceled" },
   },
+} as Meta<typeof FormDialog>;
+
+type Story = StoryObj<typeof FormDialog>;
+
+const Template: Story = {
+  render: args => (
+    <FormDialog {...args}>
+      <TextInput name="title" />
+    </FormDialog>
+  ),
 };
 
-const Template: Story<IFormDialogProps<any>> = args => (
-  <FormDialog {...args}>
-    <TextInput name="title" />
-  </FormDialog>
-);
-
-export const Simple = Template.bind({});
-Simple.args = {
-  open: true,
-  showButtons: true,
-  showPrompt: true,
-  message: "dialogs.edit",
-  initialValues: {
-    title: "Title",
+export const Simple = {
+  ...Template,
+  args: {
+    open: true,
+    showButtons: true,
+    showPrompt: false,
+    message: "dialogs.edit",
+    initialValues: {
+      title: "Title",
+    },
   },
 };

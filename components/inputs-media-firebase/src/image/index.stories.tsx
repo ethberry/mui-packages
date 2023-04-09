@@ -1,12 +1,11 @@
-import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
 import { SnackbarProvider } from "notistack";
-import { Story } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
-import { ImageInput, IImageInputProps } from "./index";
+import { ImageInput } from "./index";
 
 const i18n = {
   "components.dropzone.file-invalid-type": "You can't upload {type} only {accept} are allowed",
@@ -22,7 +21,7 @@ export default {
   title: "FileInput/Firebase/Image",
   component: ImageInput,
   decorators: [
-    (Story: Story): ReactElement => (
+    Story => (
       <IntlProvider locale="en" messages={i18n}>
         <SnackbarProvider>
           <TestIdProvider testId="image">
@@ -34,11 +33,17 @@ export default {
       </IntlProvider>
     ),
   ],
+} as Meta<typeof ImageInput>;
+
+type Story = StoryObj<typeof ImageInput>;
+
+const Template: Story = {
+  render: args => <ImageInput {...args} />,
 };
 
-const Template: Story<IImageInputProps> = args => <ImageInput {...args} />;
-
-export const Simple = Template.bind({});
-Simple.args = {
-  name: "image",
+export const Simple = {
+  ...Template,
+  args: {
+    name: "image",
+  },
 };
