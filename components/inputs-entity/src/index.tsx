@@ -88,6 +88,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
           const newValue = multiple ? [json[0]] : json[0];
 
           if (!newValue) {
+            form.setValue(name, null, { shouldDirty: true });
             return;
           }
 
