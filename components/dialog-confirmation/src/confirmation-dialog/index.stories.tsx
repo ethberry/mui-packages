@@ -1,8 +1,9 @@
-import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Story } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-import { ConfirmationDialog, IConfirmationDialogProps } from "./index";
+import { SettingsProvider } from "@gemunion/provider-settings";
+
+import { ConfirmationDialog } from "./index";
 
 const i18n = {
   "dialogs.confirmation": "Please confirm",
@@ -14,21 +15,30 @@ export default {
   title: "Dialog/Confirmation",
   component: ConfirmationDialog,
   decorators: [
-    (Story: Story): ReactElement => (
-      <IntlProvider locale="en" messages={i18n}>
-        <Story />
-      </IntlProvider>
+    Story => (
+      <SettingsProvider>
+        <IntlProvider locale="en" messages={i18n}>
+          <Story />
+        </IntlProvider>
+      </SettingsProvider>
     ),
   ],
   argTypes: {
     onConfirm: { action: "confirmed" },
     onCancel: { action: "canceled" },
   },
+} as Meta<typeof ConfirmationDialog>;
+
+type Story = StoryObj<typeof ConfirmationDialog>;
+
+const Template: Story = {
+  render: args => <ConfirmationDialog {...args}>some text</ConfirmationDialog>,
 };
 
-const Template: Story<IConfirmationDialogProps> = args => <ConfirmationDialog {...args}>some text</ConfirmationDialog>;
-
-export const Simple = Template.bind({});
-Simple.args = {
-  open: true,
+export const Simple = {
+  ...Template,
+  args: {
+    open: true,
+    disablePortal: true,
+  },
 };

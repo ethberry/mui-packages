@@ -1,11 +1,10 @@
-import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
-import { Story } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
-import { StaticInput, IStaticInputProps } from "./index";
+import { StaticInput } from "./index";
 
 const i18n = {
   "form.labels.static": "Static",
@@ -16,7 +15,7 @@ export default {
   title: "Input/Static",
   component: StaticInput,
   decorators: [
-    (Story: Story): ReactElement => (
+    Story => (
       <TestIdProvider testId="static">
         <IntlProvider locale="en" messages={i18n}>
           <FormProvider {...useForm({ defaultValues: { static: "static" } })}>
@@ -26,17 +25,25 @@ export default {
       </TestIdProvider>
     ),
   ],
+} as Meta<typeof StaticInput>;
+
+type Story = StoryObj<typeof StaticInput>;
+
+const Template: Story = {
+  render: args => <StaticInput {...args} />,
 };
 
-const Template: Story<IStaticInputProps> = args => <StaticInput {...args} />;
-
-export const Simple = Template.bind({});
-Simple.args = {
-  name: "static",
+export const Simple = {
+  ...Template,
+  args: {
+    name: "static",
+  },
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  name: "static",
-  disabled: true,
+export const Disabled = {
+  ...Template,
+  args: {
+    name: "static",
+    disabled: true,
+  },
 };

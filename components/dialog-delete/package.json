@@ -9,12 +9,13 @@
   },
   "dependencies": {
     "@gemunion/mui-dialog-confirmation": "3.2.73",
-    "@gemunion/mui-page-layout": "2.1.13"
+    "@gemunion/mui-page-layout": "2.1.13",
+    "@gemunion/provider-settings": "4.0.24"
   },
   "description": "react widget",
   "devDependencies": {
     "@mui/material": "5.11.16",
-    "@storybook/react": "6.5.16",
+    "@storybook/react": "7.0.2",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",
     "@types/jest": "29.5.0",

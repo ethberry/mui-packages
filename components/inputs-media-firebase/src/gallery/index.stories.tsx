@@ -1,12 +1,11 @@
-import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
 import { SnackbarProvider } from "notistack";
-import { Story } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
-import { GalleryInput, IGalleryInputProps } from "./index";
+import { GalleryInput } from "./index";
 
 const i18n = {
   "form.labels.gallery": "Gallery",
@@ -24,7 +23,7 @@ export default {
   title: "FileInput/Firebase/Gallery",
   component: GalleryInput,
   decorators: [
-    (Story: Story): ReactElement => (
+    Story => (
       <IntlProvider locale="en" messages={i18n}>
         <SnackbarProvider>
           <TestIdProvider testId="gallery">
@@ -36,11 +35,17 @@ export default {
       </IntlProvider>
     ),
   ],
+} as Meta<typeof GalleryInput>;
+
+type Story = StoryObj<typeof GalleryInput>;
+
+const Template: Story = {
+  render: args => <GalleryInput {...args} />,
 };
 
-const Template: Story<IGalleryInputProps> = args => <GalleryInput {...args} />;
-
-export const Simple = Template.bind({});
-Simple.args = {
-  name: "gallery",
+export const Simple = {
+  ...Template,
+  args: {
+    name: "gallery",
+  },
 };

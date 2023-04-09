@@ -1,12 +1,11 @@
-import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
-import { Story } from "@storybook/react";
 import { InputAdornment } from "@mui/material";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
-import { CurrencyInput, ICurrencyInputProps } from "./index";
+import { CurrencyInput } from "./index";
 
 const i18n = {
   "form.labels.currencyMask": "Currency",
@@ -17,7 +16,7 @@ export default {
   title: "MaskedInput/Currency",
   component: CurrencyInput,
   decorators: [
-    (Story: Story): ReactElement => (
+    Story => (
       <IntlProvider locale="en" messages={i18n}>
         <TestIdProvider testId="currency">
           <FormProvider {...useForm({ defaultValues: { currencyMask: 100 } })}>
@@ -27,26 +26,36 @@ export default {
       </IntlProvider>
     ),
   ],
+} as Meta<typeof CurrencyInput>;
+
+type Story = StoryObj<typeof CurrencyInput>;
+
+const Template: Story = {
+  render: args => <CurrencyInput {...args} />,
 };
 
-const Template: Story<ICurrencyInputProps> = args => <CurrencyInput {...args} />;
-
-export const USD = Template.bind({});
-USD.args = {
-  name: "currencyMask",
+export const USD = {
+  ...Template,
+  args: {
+    name: "currencyMask",
+  },
 };
 
-export const YEN = Template.bind({});
-YEN.args = {
-  name: "currencyMask",
-  precision: 0,
+export const YEN = {
+  ...Template,
+  args: {
+    name: "currencyMask",
+    precision: 0,
+  },
 };
 
-export const PERCENT = Template.bind({});
-PERCENT.args = {
-  name: "currencyMask",
-  symbol: "",
-  InputProps: {
-    endAdornment: <InputAdornment position="start">%</InputAdornment>,
+export const PERCENT = {
+  ...Template,
+  args: {
+    name: "currencyMask",
+    symbol: "",
+    InputProps: {
+      endAdornment: <InputAdornment position="start">%</InputAdornment>,
+    },
   },
 };

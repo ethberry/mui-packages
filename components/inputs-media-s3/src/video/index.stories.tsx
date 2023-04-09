@@ -1,12 +1,11 @@
-import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
 import { SnackbarProvider } from "notistack";
-import { Story } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
-import { VideoInput, IVideoInputProps } from "./index";
+import { VideoInput } from "./index";
 
 const i18n = {
   "components.dropzone.file-invalid-type": "You can't upload {type} only {accept} are allowed",
@@ -22,10 +21,10 @@ export default {
   title: "FileInput/S3/Video",
   component: VideoInput,
   decorators: [
-    (Story: Story): ReactElement => (
+    Story => (
       <IntlProvider locale="en" messages={i18n}>
         <SnackbarProvider>
-          <TestIdProvider testId="image">
+          <TestIdProvider testId="video">
             <FormProvider {...useForm({ defaultValues: { video: "" } })}>
               <Story />
             </FormProvider>
@@ -34,11 +33,17 @@ export default {
       </IntlProvider>
     ),
   ],
+} as Meta<typeof VideoInput>;
+
+type Story = StoryObj<typeof VideoInput>;
+
+const Template: Story = {
+  render: args => <VideoInput {...args} />,
 };
 
-const Template: Story<IVideoInputProps> = args => <VideoInput {...args} />;
-
-export const Simple = Template.bind({});
-Simple.args = {
-  name: "video",
+export const Simple = {
+  ...Template,
+  args: {
+    name: "video",
+  },
 };

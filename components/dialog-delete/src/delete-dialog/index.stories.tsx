@@ -1,8 +1,9 @@
-import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Story } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-import { IDeleteDialogProps, DeleteDialog } from "./index";
+import { SettingsProvider } from "@gemunion/provider-settings";
+
+import { DeleteDialog } from "./index";
 
 const i18n = {
   "dialogs.delete": "Delete `{title}`?",
@@ -15,25 +16,33 @@ export default {
   title: "Dialog/Delete",
   component: DeleteDialog,
   decorators: [
-    (Story: Story): ReactElement => (
-      <IntlProvider locale="en" messages={i18n}>
-        <Story />
-      </IntlProvider>
+    Story => (
+      <SettingsProvider>
+        <IntlProvider locale="en" messages={i18n}>
+          <Story />
+        </IntlProvider>
+      </SettingsProvider>
     ),
   ],
   argTypes: {
     onConfirm: { action: "confirmed" },
     onCancel: { action: "canceled" },
   },
+} as Meta<typeof DeleteDialog>;
+
+type Story = StoryObj<typeof DeleteDialog>;
+
+const Template: Story = {
+  render: args => <DeleteDialog {...args}>some text</DeleteDialog>,
 };
 
-const Template: Story<IDeleteDialogProps> = args => <DeleteDialog {...args}>some text</DeleteDialog>;
-
-export const Simple = Template.bind({});
-Simple.args = {
-  open: true,
-  initialValues: {
-    id: 1,
-    title: "Title",
+export const Simple = {
+  ...Template,
+  args: {
+    open: true,
+    initialValues: {
+      id: 1,
+      title: "Title",
+    },
   },
 };

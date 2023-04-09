@@ -1,11 +1,10 @@
-import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
-import { Story } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
-import { IPasswordInputProps, PasswordInput } from "./index";
+import { PasswordInput } from "./index";
 
 const i18n = {
   "form.labels.password": "Password",
@@ -16,7 +15,7 @@ export default {
   title: "Input/Password",
   component: PasswordInput,
   decorators: [
-    (Story: Story): ReactElement => (
+    Story => (
       <TestIdProvider testId="password">
         <IntlProvider locale="en" messages={i18n}>
           <FormProvider {...useForm({ defaultValues: { password: "" } })}>
@@ -26,17 +25,25 @@ export default {
       </TestIdProvider>
     ),
   ],
+} as Meta<typeof PasswordInput>;
+
+type Story = StoryObj<typeof PasswordInput>;
+
+const Template: Story = {
+  render: args => <PasswordInput {...args} />,
 };
 
-const Template: Story<IPasswordInputProps> = args => <PasswordInput {...args} />;
-
-export const Simple = Template.bind({});
-Simple.args = {
-  name: "password",
+export const Simple = {
+  ...Template,
+  args: {
+    name: "password",
+  },
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  name: "password",
-  disabled: true,
+export const Disabled = {
+  ...Template,
+  args: {
+    name: "password",
+    disabled: true,
+  },
 };

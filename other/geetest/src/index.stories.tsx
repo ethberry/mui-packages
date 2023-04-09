@@ -1,17 +1,15 @@
-import { ReactElement } from "react";
-
-import { Story } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { FormWrapper } from "@gemunion/mui-form";
 import { ApiProviderJwt } from "@gemunion/provider-api-jwt";
 
-import { IGeeTestCaptchaProps, GeeTestCaptcha } from ".";
+import { GeeTestCaptcha } from ".";
 
 export default {
   title: "Example/GeeTestCaptcha",
   component: GeeTestCaptcha,
   decorators: [
-    (Story: Story): ReactElement => (
+    Story => (
       <ApiProviderJwt baseUrl={"http://localhost/"}>
         <FormWrapper onSubmit={Promise.resolve} initialValues={{ photo: [] }}>
           <Story />
@@ -19,11 +17,17 @@ export default {
       </ApiProviderJwt>
     ),
   ],
+} as Meta<typeof GeeTestCaptcha>;
+
+type Story = StoryObj<typeof GeeTestCaptcha>;
+
+const Template: Story = {
+  render: args => <GeeTestCaptcha {...args} />,
 };
 
-const Template: Story<IGeeTestCaptchaProps> = args => <GeeTestCaptcha {...args} />;
-
-export const Simple = Template.bind({});
-Simple.args = {
-  name: "captcha",
+export const Simple = {
+  ...Template,
+  args: {
+    name: "captcha",
+  },
 };

@@ -15,7 +15,7 @@
   "devDependencies": {
     "@gemunion/provider-api": "7.0.17",
     "@gemunion/provider-api-jwt": "2.0.13",
-    "@storybook/react": "6.5.16",
+    "@storybook/react": "7.0.2",
     "@types/react": "18.0.33",
     "react": "18.2.0"
   },
@@ -43,7 +43,7 @@
     "prebuild": "rimraf dist/",
     "prepare": "npm run build",
     "preversion": "npm run build && npm run test",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "storybook dev -p 6006",
     "test": "exit 0"
   },
   "sideEffects": false,

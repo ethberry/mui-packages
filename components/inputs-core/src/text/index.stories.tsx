@@ -1,11 +1,10 @@
-import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
-import { Story } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
-import { ITextInputProps, TextInput } from "./index";
+import { TextInput } from "./index";
 
 const i18n = {
   "form.labels.text": "Text",
@@ -17,7 +16,7 @@ export default {
   title: "Input/Text",
   component: TextInput,
   decorators: [
-    (Story: Story): ReactElement => (
+    Story => (
       <TestIdProvider testId="text">
         <IntlProvider locale="en" messages={i18n}>
           <FormProvider {...useForm({ defaultValues: { text: "qwerty" } })}>
@@ -46,20 +45,26 @@ export default {
     disabled: false,
     readOnly: false,
   },
+} as Meta<typeof TextInput>;
+
+type Story = StoryObj<typeof TextInput>;
+
+const Template: Story = {
+  render: args => <TextInput {...args} />,
 };
 
-const SimpleTemplate: Story<ITextInputProps> = args => {
-  return <TextInput {...args} />;
+export const Simple = {
+  ...Template,
+  args: {
+    name: "text",
+  },
 };
 
-export const Simple = SimpleTemplate.bind({});
-Simple.args = {
-  name: "text",
-};
-
-export const CustomLabel = SimpleTemplate.bind({});
-CustomLabel.args = {
-  name: "text",
-  label: "My label",
-  placeholder: "My placeholder",
+export const CustomLabel = {
+  ...Template,
+  args: {
+    name: "text",
+    label: "My label",
+    placeholder: "My placeholder",
+  },
 };

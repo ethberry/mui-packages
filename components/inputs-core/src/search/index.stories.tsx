@@ -1,11 +1,10 @@
-import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
-import { Story } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
-import { ISearchInputProps, SearchInput } from "./index";
+import { SearchInput } from "./index";
 
 const i18n = {
   "form.labels.search": "Search",
@@ -16,7 +15,7 @@ export default {
   title: "Input/Search",
   component: SearchInput,
   decorators: [
-    (Story: Story): ReactElement => (
+    Story => (
       <TestIdProvider testId="search">
         <IntlProvider locale="en" messages={i18n}>
           <FormProvider {...useForm({ defaultValues: { search: "" } })}>
@@ -26,17 +25,25 @@ export default {
       </TestIdProvider>
     ),
   ],
+} as Meta<typeof SearchInput>;
+
+type Story = StoryObj<typeof SearchInput>;
+
+const Template: Story = {
+  render: args => <SearchInput {...args} />,
 };
 
-const Template: Story<ISearchInputProps> = args => <SearchInput {...args} />;
-
-export const Simple = Template.bind({});
-Simple.args = {
-  name: "search",
+export const Simple = {
+  ...Template,
+  args: {
+    name: "search",
+  },
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  name: "search",
-  disabled: true,
+export const Disabled = {
+  ...Template,
+  args: {
+    name: "search",
+    disabled: true,
+  },
 };

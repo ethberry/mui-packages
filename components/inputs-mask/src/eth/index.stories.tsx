@@ -1,12 +1,11 @@
-import { ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
-import { Story } from "@storybook/react";
 import { constants } from "ethers";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
-import { EthInput, IEthInputProps } from "./index";
+import { EthInput } from "./index";
 
 const i18n = {
   "form.labels.ethMask": "Eth",
@@ -17,7 +16,7 @@ export default {
   title: "MaskedInput/Eth",
   component: EthInput,
   decorators: [
-    (Story: Story): ReactElement => (
+    Story => (
       <IntlProvider locale="en" messages={i18n}>
         <TestIdProvider testId="eth">
           <FormProvider {...useForm({ defaultValues: { ethMask: constants.WeiPerEther.toString() } })}>
@@ -27,11 +26,17 @@ export default {
       </IntlProvider>
     ),
   ],
+} as Meta<typeof EthInput>;
+
+type Story = StoryObj<typeof EthInput>;
+
+const Template: Story = {
+  render: args => <EthInput {...args} />,
 };
 
-const Template: Story<IEthInputProps> = args => <EthInput {...args} />;
-
-export const Simple = Template.bind({});
-Simple.args = {
-  name: "ethMask",
+export const Simple = {
+  ...Template,
+  args: {
+    name: "ethMask",
+  },
 };
