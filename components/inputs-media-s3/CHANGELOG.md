@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-media-s3@1.0.49...@gemunion/mui-inputs-media-s3@1.1.0) (2023-04-11)
+
+### Features
+
+- update storybook to v7 and fix stories ([5288d32](https://github.com/gemunion/mui-packages/commit/5288d3260ad2a7b62ffc53865bcc244b0689ddff))
+
 ## [1.0.49](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-media-s3@1.0.48...@gemunion/mui-inputs-media-s3@1.0.49) (2023-04-08)
 
 ### Bug Fixes

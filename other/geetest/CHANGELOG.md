@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.0.100...@gemunion/geetest@2.1.0) (2023-04-11)
+
+### Features
+
+- update storybook to v7 and fix stories ([5288d32](https://github.com/gemunion/common-packages/commit/5288d3260ad2a7b62ffc53865bcc244b0689ddff))
+
 ## 2.0.100 (2023-04-08)
 
 ### Bug Fixes

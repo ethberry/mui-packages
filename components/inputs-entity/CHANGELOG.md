@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.66](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.2.65...@gemunion/mui-inputs-entity@7.2.66) (2023-04-11)
+
+### Bug Fixes
+
+- set null to the EntityInput field if fetched list is empty ([d686944](https://github.com/gemunion/mui-packages/commit/d686944081159e5cada42dbd52f1846adf83c655))
+
 ## 7.2.65 (2023-04-08)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@8.0.108...@gemunion/mui-inputs-image-firebase@8.1.0) (2023-04-11)
+
+### Features
+
+- update storybook to v7 and fix stories ([5288d32](https://github.com/gemunion/mui-packages/commit/5288d3260ad2a7b62ffc53865bcc244b0689ddff))
+
 ## 8.0.108 (2023-04-08)
 
 ### Bug Fixes
