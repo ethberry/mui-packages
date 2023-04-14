@@ -1,15 +1,16 @@
 import { FC } from "react";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";
-import { DateRange, MobileDateRangePicker } from "@mui/x-date-pickers-pro";
+import { DateRange, MobileDateRangePicker, MobileDateRangePickerProps } from "@mui/x-date-pickers-pro";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
-interface IDateTimeInputProps {
+interface IDateTimeInputProps extends MobileDateRangePickerProps<any> {
   fieldSeparator?: any;
   name: string;
   readOnly?: boolean;
   required?: boolean;
+  textFieldSlotProps?: any;
   variant?: "standard" | "filled" | "outlined";
   onChange?: (dateRange: DateRange<Date> | null) => void;
 }
@@ -17,7 +18,14 @@ interface IDateTimeInputProps {
 const defaultFieldSeparator = <>&raquo;</>;
 
 export const DateRangeInput: FC<IDateTimeInputProps> = props => {
-  const { fieldSeparator = defaultFieldSeparator, name, variant = "standard", readOnly, ...rest } = props;
+  const {
+    fieldSeparator = defaultFieldSeparator,
+    name,
+    variant = "standard",
+    readOnly,
+    textFieldSlotProps = {},
+    ...rest
+  } = props;
 
   const { testId } = useTestId();
   const getTestIdProps = (suffix: string) => (testId ? { "data-testid": `${testId}-${name}-${suffix}` } : {});
@@ -56,6 +64,7 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
             textField: ({ position }: any) => {
               const isStart = position === "start";
 
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-return
               return {
                 sx: { my: 1 },
                 ...form.register(`${name}${isStart ? "Start" : "End"}`),
@@ -67,6 +76,7 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
                 },
                 variant,
                 fullWidth: true,
+                ...textFieldSlotProps,
               };
             },
             fieldSeparator: { children: fieldSeparator },

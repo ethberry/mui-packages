@@ -1,21 +1,22 @@
 import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
-import { MobileDateTimePicker } from "@mui/x-date-pickers";
+import { MobileDateTimePicker, MobileDateTimePickerProps } from "@mui/x-date-pickers";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
-interface IDateTimeInputProps {
+interface IDateTimeInputProps extends MobileDateTimePickerProps<any> {
   name: string;
   label?: string | number | ReactElement;
   readOnly?: boolean;
   required?: boolean;
+  textFieldSlotProps?: any;
   variant?: "standard" | "filled" | "outlined";
   onChange?: (date: Date | null) => void;
 }
 
 export const DateTimeInput: FC<IDateTimeInputProps> = props => {
-  const { name, label, variant = "standard", readOnly, ...rest } = props;
+  const { name, label, variant = "standard", readOnly, textFieldSlotProps = {}, ...rest } = props;
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
@@ -65,6 +66,7 @@ export const DateTimeInput: FC<IDateTimeInputProps> = props => {
                 readOnly,
                 ...testIdProps,
               },
+              ...textFieldSlotProps,
             },
           }}
           {...rest}
