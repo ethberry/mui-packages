@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.0.84 (2023-04-15)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-file-firebase
+
 ## [6.0.83](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-firebase@6.0.82...@gemunion/mui-inputs-file-firebase@6.0.83) (2023-04-11)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-firebase

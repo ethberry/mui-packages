@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.14](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@6.0.13...@gemunion/mui-inputs-picker@6.0.14) (2023-04-15)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-picker
+
 ## [6.0.13](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@6.0.12...@gemunion/mui-inputs-picker@6.0.13) (2023-04-14)
 
 ### Bug Fixes
