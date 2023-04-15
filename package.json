@@ -45,7 +45,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "7.43.9",
     "react-router-dom": "6.10.0",
-    "rimraf": "4.4.1",
+    "rimraf": "5.0.0",
     "storybook": "7.0.4",
     "typescript": "5.0.4",
     "webpack": "5.79.0"
