@@ -11,7 +11,7 @@
     "@gemunion/mui-page-layout": "2.2.1",
     "@gemunion/provider-test-id": "1.0.34",
     "@gemunion/react-hooks": "1.1.17",
-    "@hookform/resolvers": "3.0.1",
+    "@hookform/resolvers": "3.1.0",
     "use-debounce": "9.0.4",
     "yup": "1.1.1"
   },
@@ -19,10 +19,10 @@
   "devDependencies": {
     "@gemunion/provider-license": "3.0.12",
     "@mui/material": "5.12.1",
-    "@types/react": "18.0.35",
+    "@types/react": "18.0.38",
     "react": "18.2.0",
     "react-hook-form": "7.43.9",
-    "react-intl": "6.3.2",
+    "react-intl": "6.4.1",
     "react-router-dom": "6.10.0"
   },
   "engines": {
