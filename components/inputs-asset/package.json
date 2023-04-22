@@ -20,12 +20,12 @@
     "@gemunion/provider-license": "3.0.12",
     "@mui/icons-material": "5.11.16",
     "@mui/material": "5.12.1",
-    "@types/react": "18.0.35",
+    "@types/react": "18.0.38",
     "@types/react-window": "1.8.5",
     "ethers": "5.7.2",
     "react": "18.2.0",
     "react-hook-form": "7.43.9",
-    "react-intl": "6.3.2",
+    "react-intl": "6.4.1",
     "yup": "1.1.1"
   },
   "engines": {
