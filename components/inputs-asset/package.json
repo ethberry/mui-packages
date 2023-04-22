@@ -19,7 +19,7 @@
   "devDependencies": {
     "@gemunion/provider-license": "3.0.12",
     "@mui/icons-material": "5.11.16",
-    "@mui/material": "5.12.0",
+    "@mui/material": "5.12.1",
     "@types/react": "18.0.35",
     "@types/react-window": "1.8.5",
     "ethers": "5.7.2",
