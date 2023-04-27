@@ -49,7 +49,7 @@ export const DateUtcInput: FC<IDateUtcInputProps> = props => {
         <MobileDatePicker
           format="MM/dd/yyyy"
           label={localizedLabel}
-          value={field.value ? setter(field.value) : field.value}
+          value={field.value ? setter(field.value) : null}
           onChange={(date: Date | null): void => {
             form.setValue(name, date ? getter(date) : date, { shouldDirty: true, shouldTouch: true });
           }}
