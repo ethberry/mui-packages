@@ -18,18 +18,18 @@ export const useServerSignature = (
   return async (params: IFetchProps, values: Record<string, any> | null, web3Context: Web3ContextType) => {
     return api
       .fetchJson(params)
-      .then((sign: IServerSignature) => fn(values, web3Context, sign))
       .catch((e: any) => {
         if (error) {
           enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
           if (e.status === 400) {
             console.error(e.getLocalizedValidationErrors());
-          } else if (e.status === 404) {
+          } else {
             console.error("[server error]", e);
           }
           return null;
         }
         throw e;
-      });
+      })
+      .then((sign: IServerSignature) => fn(values, web3Context, sign));
   };
 };
