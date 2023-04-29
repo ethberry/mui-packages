@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.16](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@6.0.15...@gemunion/mui-inputs-picker@6.0.16) (2023-04-29)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([2ce45e5](https://github.com/gemunion/mui-packages/commit/2ce45e502434a7e809ad6201067d07f88549fffe))
+- inputs-pickers to set null if not defined Date ([34b4fc7](https://github.com/gemunion/mui-packages/commit/34b4fc7176ec43a3f22582541a0ad9f07d7730a2))
+
 ## [6.0.15](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@6.0.14...@gemunion/mui-inputs-picker@6.0.15) (2023-04-22)
 
 ### Bug Fixes

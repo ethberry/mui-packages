@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.97](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.96...@gemunion/react-hooks-eth@1.0.97) (2023-04-29)
+
+### Bug Fixes
+
+- catch error in server signature ([f0ecf4b](https://github.com/gemunion/mui-packages/commit/f0ecf4bd7396b1c558a8f4bfc642fa8628d4f564))
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([e1ad11c](https://github.com/gemunion/mui-packages/commit/e1ad11c6a882e707727cb594879e0151f96af18f))
+- server error message for server signature catch ([dba9b6b](https://github.com/gemunion/mui-packages/commit/dba9b6b9fdd5fb2a9e90e0189c0253619aef032f))
+
 ## [1.0.96](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.95...@gemunion/react-hooks-eth@1.0.96) (2023-04-22)
 
 ### Bug Fixes
