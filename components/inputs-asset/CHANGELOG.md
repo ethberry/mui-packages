@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.11](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.1.10...@gemunion/mui-inputs-asset@2.1.11) (2023-05-01)
+
+### Bug Fixes
+
+- add filter by contract features ([a43fccd](https://github.com/gemunion/mui-packages/commit/a43fccde6ad34a658dc164e432e6652d934de89b))
+
 ## [2.1.10](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.1.9...@gemunion/mui-inputs-asset@2.1.10) (2023-04-29)
 
 ### Bug Fixes
