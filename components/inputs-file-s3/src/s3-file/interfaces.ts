@@ -3,7 +3,7 @@ export interface IUseS3UploaderProps {
   signingUrl?: string;
   bucket?: string;
   onError?: (error: Error) => void;
-  onFinish?: (result: any, file: File) => void;
+  onFinish?: (result: IS3Response, file: File) => void;
 }
 
 export interface IUseS3UploaderReturnProps {

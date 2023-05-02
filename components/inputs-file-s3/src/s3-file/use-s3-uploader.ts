@@ -40,11 +40,10 @@ export const useS3Uploader = (props: IUseS3UploaderProps) => {
   );
 
   async function uploadFile(file: File, signedUrl: string): Promise<any> {
-    const queryString = `&Content-Type=${encodeURIComponent(getFileMimeType(file))}`;
-
-    return fetch(`${signedUrl}${queryString}`, {
+    return fetch(signedUrl, {
       method: "PUT",
       body: file,
+      headers: { "Content-Type": getFileMimeType(file), "x-amz-acl": "public-read" },
       mode: "cors",
       credentials: "include",
     });
@@ -74,11 +73,18 @@ export const useS3Uploader = (props: IUseS3UploaderProps) => {
         const file = files[i];
         const signedUrl = await getSignResult(file);
 
-        if (signedUrl) {
-          const response = await uploadFile(file, signedUrl);
-          onFinish(response, file);
-          console.info("[successfully uploaded]", response);
+        if (!signedUrl) {
+          throw new Error("signedUrl is missing");
         }
+
+        const response = await uploadFile(file, signedUrl);
+
+        if (response.status !== 200) {
+          throw new Error(response);
+        }
+
+        onFinish({ signedUrl }, file);
+        console.info("[successfully uploaded]");
       }
     } catch (error: any) {
       console.error("[upload error]", error);
