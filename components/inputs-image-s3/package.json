@@ -34,7 +34,7 @@
     "notistack": "3.0.1",
     "react": "18.2.0",
     "react-hook-form": "7.43.9",
-    "react-intl": "6.4.1",
+    "react-intl": "6.4.2",
     "ts-jest": "29.1.0"
   },
   "engines": {
