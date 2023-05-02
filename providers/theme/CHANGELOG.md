@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.0.51 (2023-05-02)
+
+**Note:** Version bump only for package @gemunion/provider-theme
+
 ## [6.0.50](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.49...@gemunion/provider-theme@6.0.50) (2023-04-29)
 
 ### Bug Fixes

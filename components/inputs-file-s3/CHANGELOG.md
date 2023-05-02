@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.1.6 (2023-05-02)
+
+### Bug Fixes
+
+- s3 uploader signing headers and refactoring ([fb1f359](https://github.com/gemunion/mui-packages/commit/fb1f359d22979ea808bf70050daaea20d1326064))
+
 ## [7.1.5](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@7.1.4...@gemunion/mui-inputs-file-s3@7.1.5) (2023-04-29)
 
 ### Bug Fixes

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.36 (2023-05-02)
+
+**Note:** Version bump only for package @gemunion/provider-coingecko
+
 ## [2.0.35](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-coingecko@2.0.34...@gemunion/provider-coingecko@2.0.35) (2023-04-29)
 
 ### Bug Fixes
