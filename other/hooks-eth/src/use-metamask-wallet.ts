@@ -1,6 +1,6 @@
 import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
-import { utils } from "ethers";
+import { toUtf8String } from "ethers";
 import { useWeb3React } from "@web3-react/core";
 import { ErrorCode } from "@ethersproject/logger";
 import { SERVER_ERROR_CODE_RANGE, RESERVED_ERROR_CODES, STANDARD_ERROR_MAP } from "@json-rpc-tools/utils";
@@ -58,7 +58,7 @@ export const useMetamaskWallet = <T = any>(
             enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
             if (e.error?.data?.data) {
               const data = e.error?.data?.data as string;
-              const decodedMessage = utils.toUtf8String(`0x${data.substr(138)}`);
+              const decodedMessage = toUtf8String(`0x${data.substr(138)}`);
               console.error("[blockchain error]", decodedMessage);
             } else {
               console.error("[blockchain error]", e);

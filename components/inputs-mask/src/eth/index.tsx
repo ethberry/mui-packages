@@ -1,6 +1,6 @@
 import { FC, useEffect, useMemo } from "react";
 import { useFormContext, useWatch } from "react-hook-form";
-import { constants, BigNumberish } from "ethers";
+import { EtherSymbol } from "ethers";
 
 import { MaskedInput } from "../mask";
 import { formatValue, normalizeValue } from "./utils";
@@ -12,7 +12,7 @@ export interface IEthInputProps {
   name: string;
   readOnly?: boolean;
   precision?: number;
-  units?: BigNumberish;
+  units?: bigint | number | string;
   symbol?: string;
   thousandsSeparator?: string;
 }
@@ -23,7 +23,7 @@ export const EthInput: FC<IEthInputProps> = props => {
     fractionalDelimiter = ".",
     fillByZeros = false,
     name,
-    symbol = `${constants.EtherSymbol} `,
+    symbol = EtherSymbol,
     thousandsSeparator = " ",
     units,
     ...rest

@@ -1,6 +1,6 @@
 import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
-import { constants } from "ethers";
+import { WeiPerEther } from "ethers";
 import { Meta, StoryObj } from "@storybook/react";
 
 import { TestIdProvider } from "@gemunion/provider-test-id";
@@ -19,7 +19,7 @@ export default {
     Story => (
       <IntlProvider locale="en" messages={i18n}>
         <TestIdProvider testId="eth">
-          <FormProvider {...useForm({ defaultValues: { ethMask: constants.WeiPerEther.toString() } })}>
+          <FormProvider {...useForm({ defaultValues: { ethMask: WeiPerEther.toString() } })}>
             <Story />
           </FormProvider>
         </TestIdProvider>

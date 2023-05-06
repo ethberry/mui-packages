@@ -1,4 +1,4 @@
-import { constants } from "ethers";
+import { ZeroAddress, WeiPerEther } from "ethers";
 
 import { TokenType } from "@gemunion/types-blockchain";
 
@@ -12,11 +12,10 @@ export function getEmptyTemplate(tokenType = TokenType.ERC20): any {
         contractId: 0,
         contract: {
           decimals: tokenType === TokenType.NATIVE || tokenType === TokenType.ERC20 ? 18 : 0,
-          address: constants.AddressZero,
+          address: ZeroAddress,
         },
         templateId: 0,
-        amount:
-          tokenType === TokenType.NATIVE || tokenType === TokenType.ERC20 ? constants.WeiPerEther.toString() : "1",
+        amount: tokenType === TokenType.NATIVE || tokenType === TokenType.ERC20 ? WeiPerEther.toString() : "1",
       } as ITemplateAssetComponent,
     ],
   } as ITemplateAsset;

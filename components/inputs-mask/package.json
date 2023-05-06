@@ -20,7 +20,7 @@
     "@storybook/react": "7.0.9",
     "@types/mathjs": "9.4.2",
     "@types/react": "18.2.5",
-    "ethers": "5.7.2",
+    "ethers": "6.3.0",
     "react": "18.2.0",
     "react-hook-form": "7.43.9",
     "react-intl": "6.4.2"
@@ -34,7 +34,7 @@
   "name": "@gemunion/mui-inputs-mask",
   "peerDependencies": {
     "@mui/material": "^5.0.0",
-    "ethers": "^5.6.0",
+    "ethers": "^6.3.0",
     "react": "^18.0.0",
     "react-hook-form": "^7.0.0",
     "react-intl": "^6.0.0"
@@ -57,5 +57,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "5.5.5"
+  "version": "6.0.0"
 }
