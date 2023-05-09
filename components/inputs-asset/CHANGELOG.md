@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.1.14...@gemunion/mui-inputs-asset@2.2.0) (2023-05-09)
+
+### Features
+
+- add optional autoSelect for template input ([9dcf0e7](https://github.com/gemunion/mui-packages/commit/9dcf0e7e837c368ea5e7e4d2bcbd89a542c5678d))
+
 ## [2.1.14](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.1.13...@gemunion/mui-inputs-asset@2.1.14) (2023-05-06)
 
 ### Bug Fixes
