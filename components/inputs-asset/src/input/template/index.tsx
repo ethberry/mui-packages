@@ -10,13 +10,14 @@ export interface ITemplateInputProps {
   prefix: string;
   name?: string;
   readOnly?: boolean;
+  autoSelect?: boolean;
   data?: {
     templateStatus?: Array<any>;
   };
 }
 
 export const TemplateInput: FC<ITemplateInputProps> = props => {
-  const { prefix, name = "templateId", data, readOnly } = props;
+  const { prefix, name = "templateId", data, readOnly, autoSelect } = props;
 
   const { formatMessage } = useIntl();
   const tokenType = useWatch({ name: `${prefix}.tokenType` });
@@ -40,7 +41,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
             ...data,
           }}
           readOnly={readOnly}
-          autoselect
+          autoselect={autoSelect}
         />
       );
     case TokenType.ERC998:
@@ -56,7 +57,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
             ...data,
           }}
           readOnly={readOnly}
-          autoselect
+          autoselect={autoSelect}
         />
       );
     case TokenType.ERC1155:
@@ -72,7 +73,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
             ...data,
           }}
           readOnly={readOnly}
-          autoselect
+          autoselect={autoSelect}
         />
       );
     case TokenType.NATIVE:
@@ -88,7 +89,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
             ...data,
           }}
           readOnly={readOnly}
-          autoselect
+          autoselect={autoSelect}
         />
       );
     case TokenType.ERC20:
@@ -104,7 +105,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
             ...data,
           }}
           readOnly={readOnly}
-          autoselect
+          autoselect={autoSelect}
         />
       );
     default:

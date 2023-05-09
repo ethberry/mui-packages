@@ -21,6 +21,7 @@ export interface ITemplateAssetProps {
   prefix: string;
   multiple?: boolean;
   allowEmpty?: boolean;
+  autoSelect?: boolean;
   readOnly?: boolean;
   tokenType?: {
     disabledOptions?: Array<TokenType>;
@@ -34,7 +35,7 @@ export interface ITemplateAssetProps {
 }
 
 export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
-  const { prefix = "price", multiple = false, tokenType, contract, readOnly, allowEmpty } = props;
+  const { prefix = "price", multiple = false, tokenType, contract, readOnly, allowEmpty, autoSelect } = props;
 
   const { formatMessage } = useIntl();
   const form = useFormContext<any>();
@@ -87,7 +88,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
                   readOnly={readOnly}
                 />
                 <ContractInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} data={contract?.data} />
-                <TemplateInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} />
+                <TemplateInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} autoSelect={autoSelect} />
                 <AmountInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} />
               </Paper>
             </Box>
