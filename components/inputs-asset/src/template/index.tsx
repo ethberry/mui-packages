@@ -23,6 +23,7 @@ export interface ITemplateAssetProps {
   allowEmpty?: boolean;
   autoSelect?: boolean;
   readOnly?: boolean;
+  showLabel?: boolean;
   tokenType?: {
     disabledOptions?: Array<TokenType>;
   };
@@ -35,7 +36,16 @@ export interface ITemplateAssetProps {
 }
 
 export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
-  const { prefix = "price", multiple = false, tokenType, contract, readOnly, allowEmpty, autoSelect } = props;
+  const {
+    prefix = "price",
+    multiple = false,
+    tokenType,
+    contract,
+    readOnly,
+    allowEmpty,
+    autoSelect,
+    showLabel = true,
+  } = props;
 
   const { formatMessage } = useIntl();
   const form = useFormContext<any>();
@@ -66,9 +76,11 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
     () => (
       <Box mt={2}>
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Typography sx={{ mr: 1 }}>
-            <FormattedMessage id={`form.labels.${ancestorPrefix}`} />
-          </Typography>
+          {showLabel ? (
+            <Typography sx={{ mr: 1 }}>
+              <FormattedMessage id={`form.labels.${ancestorPrefix}`} />
+            </Typography>
+          ) : null}
           {multiple ? (
             <Tooltip title={formatMessage({ id: "form.tips.create" })}>
               <IconButton size="small" aria-label="add" onClick={handleOptionAdd()}>

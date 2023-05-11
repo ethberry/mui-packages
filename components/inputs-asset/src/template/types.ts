@@ -9,6 +9,9 @@ export interface ITemplateAssetComponent {
     contractType: TokenType;
   };
   templateId: number;
+  template: {
+    imgUrl: string;
+  };
   amount: string;
 }
 
