@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.2.0...@gemunion/mui-inputs-asset@2.3.0) (2023-05-11)
+
+### Features
+
+- showLabel option in template asset input ([0e2003f](https://github.com/gemunion/mui-packages/commit/0e2003f43e104a99c19e2d78782cf00f5c201878))
+
 # [2.2.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.1.14...@gemunion/mui-inputs-asset@2.2.0) (2023-05-09)
 
 ### Features
