@@ -21,7 +21,7 @@
   "devDependencies": {
     "@gemunion/provider-settings": "4.0.28",
     "@mui/icons-material": "5.11.16",
-    "@mui/material": "5.12.3",
+    "@mui/material": "5.13.0",
     "@types/stylis": "4.0.2",
     "react": "18.2.0",
     "react-intl": "6.4.2"
