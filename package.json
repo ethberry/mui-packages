@@ -51,7 +51,7 @@
     "webpack": "5.82.1"
   },
   "engines": {
-    "node": ">=12.13"
+    "node": ">=18"
   },
   "license": "UNLICENSED",
   "name": "@gemunion/mui-packages",
