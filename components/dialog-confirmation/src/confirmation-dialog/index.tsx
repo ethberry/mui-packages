@@ -51,7 +51,10 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
       dir={settings.getLayoutDirection().toLowerCase()}
       {...rest}
     >
-      <DialogTitle id="confirmation-dialog-title">
+      <DialogTitle
+        id="confirmation-dialog-title"
+        sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}
+      >
         <FormattedMessage id={message} values={data} />
         {action}
       </DialogTitle>
