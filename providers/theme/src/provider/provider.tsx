@@ -4,6 +4,7 @@ import {
   createTheme,
   Direction,
   PaletteOptions,
+  StyledEngineProvider,
   ThemeOptions,
   ThemeProvider as MuiThemeProvider,
 } from "@mui/material/styles";
@@ -62,10 +63,12 @@ export const ThemeProvider: FC<PropsWithChildren<IThemeProviderProps>> = props =
   return (
     <CacheProvider value={direction === "rtl" ? cacheRtl : cacheLtr}>
       <StylesProvider jss={jss}>
-        <MuiThemeProvider theme={theme}>
-          <CssBaseline />
-          {children}
-        </MuiThemeProvider>
+        <StyledEngineProvider injectFirst>
+          <MuiThemeProvider theme={theme}>
+            <CssBaseline />
+            {children}
+          </MuiThemeProvider>
+        </StyledEngineProvider>
       </StylesProvider>
     </CacheProvider>
   );
