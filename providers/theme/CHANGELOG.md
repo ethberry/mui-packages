@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.55](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.54...@gemunion/provider-theme@6.0.55) (2023-05-17)
+
+### Bug Fixes
+
+- add StyledEngineProvider injectFirst for theme-provider ([12da39b](https://github.com/gemunion/mui-packages/commit/12da39bab98e468306d62cf638134574f4344fc4))
+
 ## 6.0.54 (2023-05-13)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.8](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-confirmation@3.3.7...@gemunion/mui-dialog-confirmation@3.3.8) (2023-05-17)
+
+### Bug Fixes
+
+- confirmation-dialog title's action for rtl ([c2009c1](https://github.com/gemunion/mui-packages/commit/c2009c16c2c0866d24ffd59a99521b16c63c699b))
+
 ## 3.3.7 (2023-05-13)
 
 ### Bug Fixes

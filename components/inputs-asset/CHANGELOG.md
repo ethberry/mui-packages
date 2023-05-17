@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.3.2...@gemunion/mui-inputs-asset@2.3.3) (2023-05-17)
+
+### Bug Fixes
+
+- add disableCler for contract in asset-inputs ([de25cbf](https://github.com/gemunion/mui-packages/commit/de25cbf7338277caeca21dcb432eb5f8078a518b))
+
 ## [2.3.2](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.3.1...@gemunion/mui-inputs-asset@2.3.2) (2023-05-13)
 
 ### Bug Fixes

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.40 (2023-05-17)
+
+**Note:** Version bump only for package @gemunion/provider-test-id
+
 ## [1.0.39](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-test-id@1.0.38...@gemunion/provider-test-id@1.0.39) (2023-05-06)
 
 ### Bug Fixes
