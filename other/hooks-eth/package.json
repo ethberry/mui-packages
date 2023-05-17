@@ -14,7 +14,7 @@
     "@gemunion/types-blockchain": "1.2.0",
     "@json-rpc-tools/utils": "1.7.6",
     "ethers": "5.7.2",
-    "qs": "6.11.1",
+    "qs": "6.11.2",
     "use-deep-compare-effect": "1.8.1"
   },
   "description": "react hooks",

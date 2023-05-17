@@ -11,7 +11,7 @@
     "@gemunion/constants": "0.12.1",
     "@gemunion/license-messages": "0.0.34",
     "@gemunion/types-collection": "1.5.6",
-    "qs": "6.11.1"
+    "qs": "6.11.2"
   },
   "description": "react hooks",
   "devDependencies": {
