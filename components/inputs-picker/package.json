@@ -15,8 +15,8 @@
   "devDependencies": {
     "@mui/material": "5.13.1",
     "@mui/styles": "5.13.1",
-    "@mui/x-date-pickers": "6.4.0",
-    "@mui/x-date-pickers-pro": "6.4.0",
+    "@mui/x-date-pickers": "6.5.0",
+    "@mui/x-date-pickers-pro": "6.5.0",
     "@types/react": "18.2.6",
     "react": "18.2.0",
     "react-hook-form": "7.43.9",
