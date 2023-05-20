@@ -12,8 +12,8 @@
     "@gemunion/mui-inputs-entity": "7.2.74",
     "@gemunion/mui-inputs-mask": "5.5.8",
     "@gemunion/react-hooks": "1.1.24",
-    "@gemunion/types-blockchain": "1.2.0",
-    "@gemunion/yup-rules-eth": "2.1.4"
+    "@gemunion/types-blockchain": "1.2.1",
+    "@gemunion/yup-rules-eth": "2.1.5"
   },
   "description": "react 1inch",
   "devDependencies": {
