@@ -8,7 +8,7 @@ export function getEmptyTemplate(tokenType = TokenType.ERC20): any {
   return {
     components: [
       {
-        id: 0,
+        // id: 0, breaks validation
         tokenType,
         contractId: 0,
         contract: {
