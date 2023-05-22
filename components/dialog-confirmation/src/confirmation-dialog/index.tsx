@@ -18,7 +18,7 @@ export interface IConfirmationDialogProps extends DialogProps {
   onConfirm: (e: MouseEvent<HTMLButtonElement>) => void;
   message?: string;
   data?: any;
-  action?: ReactElement;
+  action?: ReactElement | null;
 }
 
 export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
