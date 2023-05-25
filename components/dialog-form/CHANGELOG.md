@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 8.2.10 (2023-05-25)
+
+### Bug Fixes
+
+- make action nullable ([a575626](https://github.com/gemunion/mui-packages/commit/a575626521048216330cf1a01109d3e806432bfa))
+
 ## [8.2.9](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.8...@gemunion/mui-dialog-form@8.2.9) (2023-05-20)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form

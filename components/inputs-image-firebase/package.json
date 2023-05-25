@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/firebase": "1.2.6",
-    "@gemunion/mui-dialog-confirmation": "3.3.9",
+    "@gemunion/mui-dialog-confirmation": "3.3.10",
     "@gemunion/mui-inputs-core": "7.2.9",
     "@gemunion/mui-inputs-file-firebase": "6.0.92",
     "@gemunion/mui-page-layout": "2.2.9",
@@ -77,5 +77,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "8.1.9"
+  "version": "8.1.10"
 }
