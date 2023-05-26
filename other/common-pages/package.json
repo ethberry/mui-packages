@@ -16,7 +16,7 @@
     "@gemunion/popup": "1.0.19",
     "@gemunion/react-hooks": "1.1.25",
     "@gemunion/yup-rules": "4.1.11",
-    "yup": "1.1.1"
+    "yup": "1.2.0"
   },
   "description": "react context provider",
   "devDependencies": {
@@ -26,8 +26,8 @@
     "@mui/lab": "5.0.0-alpha.131",
     "@mui/material": "5.13.2",
     "@mui/styles": "5.13.2",
-    "@types/node": "18.16.13",
-    "@types/react": "18.2.6",
+    "@types/node": "18.16.15",
+    "@types/react": "18.2.7",
     "notistack": "3.0.1",
     "react": "18.2.0",
     "react-hook-form": "7.43.9",

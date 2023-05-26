@@ -15,11 +15,11 @@
   "devDependencies": {
     "@mui/material": "5.13.2",
     "@mui/styles": "5.13.2",
-    "@storybook/react": "7.0.12",
+    "@storybook/react": "7.0.18",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "14.0.0",
     "@types/jest": "29.5.1",
-    "@types/react": "18.2.6",
+    "@types/react": "18.2.7",
     "jest": "29.5.0",
     "jest-environment-jsdom": "29.5.0",
     "react": "18.2.0",
