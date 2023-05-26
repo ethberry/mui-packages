@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/provider-wallet": "3.3.20",
+    "@gemunion/provider-wallet": "3.3.21",
     "@web3-react/core": "8.2.0"
   },
   "description": "react widget",
@@ -50,5 +50,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "1.2.10"
+  "version": "1.2.11"
 }

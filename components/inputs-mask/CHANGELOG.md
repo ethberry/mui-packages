@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.5.10 (2023-05-26)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-mask
+
 ## [5.5.9](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.8...@gemunion/mui-inputs-mask@5.5.9) (2023-05-20)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
