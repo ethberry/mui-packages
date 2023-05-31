@@ -47,7 +47,7 @@ export const useMetamaskWallet = <T = any>(
         return result as T;
       })
       .catch((e: any) => {
-        if (error) {
+        if (error && e.status !== 400) {
           if (e.code === 4001 || e.code === ErrorCode.ACTION_REJECTED) {
             enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
           } else if ([...SERVER_ERROR_CODE_RANGE, ...RESERVED_ERROR_CODES].includes(e.code)) {

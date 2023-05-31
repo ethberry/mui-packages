@@ -19,13 +19,9 @@ export const useServerSignature = (
     return api
       .fetchJson(params)
       .catch((e: any) => {
-        if (error) {
+        if (error && e.status !== 400) {
           enqueueSnackbar(formatMessage({ id: "snackbar.internalServerError" }), { variant: "error" });
-          if (e.status === 400) {
-            console.error(e.getLocalizedValidationErrors());
-          } else {
-            console.error("[server error]", e);
-          }
+          console.error("[server error]", e);
           return null;
         }
         throw e;
