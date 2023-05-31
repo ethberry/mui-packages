@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.19](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-picker@5.0.18...@gemunion/provider-picker@5.0.19) (2023-05-31)
+
+**Note:** Version bump only for package @gemunion/provider-picker
+
 ## 5.0.18 (2023-05-26)
 
 **Note:** Version bump only for package @gemunion/provider-picker

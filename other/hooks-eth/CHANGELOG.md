@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.105](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.104...@gemunion/react-hooks-eth@1.0.105) (2023-05-31)
+
+### Bug Fixes
+
+- throwing error if error status 400 for useMetamask and useServerSignature ([cffa062](https://github.com/gemunion/mui-packages/commit/cffa062c1bb1c54a319522c0a68d258224643974))
+
 ## 1.0.104 (2023-05-26)
 
 ### Bug Fixes
