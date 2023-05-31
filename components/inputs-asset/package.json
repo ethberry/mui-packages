@@ -24,7 +24,7 @@
     "@types/react-window": "1.8.5",
     "ethers": "5.7.2",
     "react": "18.2.0",
-    "react-hook-form": "7.43.9",
+    "react-hook-form": "7.44.2",
     "react-intl": "6.4.2",
     "yup": "1.2.0"
   },
