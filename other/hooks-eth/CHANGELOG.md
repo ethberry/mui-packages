@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.106](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.105...@gemunion/react-hooks-eth@1.0.106) (2023-06-01)
+
+### Bug Fixes
+
+- correct blockchain error handler to handle custom errors, panic codes and string codes ([abccaf5](https://github.com/gemunion/mui-packages/commit/abccaf57fb93779a54750fde985b7f172407605d))
+- show custom errors in snackbar ([2abf9cb](https://github.com/gemunion/mui-packages/commit/2abf9cb54df897f91bc9b7749e51db3f2b90b0b2))
+- show error reason in console ([f72f043](https://github.com/gemunion/mui-packages/commit/f72f0430ccf5b1de5225a833ebd2767e6cbb62df))
+
 ## [1.0.105](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.104...@gemunion/react-hooks-eth@1.0.105) (2023-05-31)
 
 ### Bug Fixes
