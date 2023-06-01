@@ -1,6 +1,5 @@
 import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
-import { utils } from "ethers";
 import { useWeb3React } from "@web3-react/core";
 import { ErrorCode } from "@ethersproject/logger";
 import { SERVER_ERROR_CODE_RANGE, RESERVED_ERROR_CODES, STANDARD_ERROR_MAP } from "@json-rpc-tools/utils";
@@ -10,6 +9,7 @@ import { useLicense } from "@gemunion/provider-license";
 import { useWallet } from "@gemunion/provider-wallet";
 
 import { IHandlerOptionsParams } from "./interfaces";
+import { getBlockchainErrorReason } from "./error-handler";
 
 export const useMetamaskWallet = <T = any>(
   fn: (...args: Array<any>) => Promise<T>,
@@ -57,9 +57,9 @@ export const useMetamaskWallet = <T = any>(
           } else {
             enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
             if (e.error?.data?.data) {
-              const data = e.error?.data?.data as string;
-              const decodedMessage = utils.toUtf8String(`0x${data.substr(138)}`);
-              console.error("[blockchain error]", decodedMessage);
+              const errorData = e.error?.data?.data as string;
+              const errorReason = getBlockchainErrorReason(errorData);
+              console.error("[blockchain error]", errorReason);
             } else {
               console.error("[blockchain error]", e);
             }
