@@ -58,12 +58,16 @@ export const useMetamaskWallet = <T = any>(
             if (e.error?.data?.data) {
               const errorData = e.error?.data?.data as string;
               const errorReason = parseBlockchainError(errorData);
-              if (errorReason.type === BlockchainErrorType.CUSTOM_ERROR) {
-                enqueueSnackbar(formatMessage({ id: `snackbar.${errorReason.reason}` }), { variant: "error" });
-              } else {
-                enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
-                console.error("[blockchain error]", errorReason);
-              }
+              enqueueSnackbar(
+                formatMessage({
+                  id:
+                    errorReason.type === BlockchainErrorType.CUSTOM_ERROR
+                      ? `enums.blockchainError.${errorReason.reason}`
+                      : "snackbar.blockchainError",
+                }),
+                { variant: "error" },
+              );
+              console.error("[blockchain error]", errorReason);
             } else {
               enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
               console.error("[blockchain error]", e);
