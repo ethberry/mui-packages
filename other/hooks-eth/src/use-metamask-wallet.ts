@@ -2,14 +2,14 @@ import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { useWeb3React } from "@web3-react/core";
 import { ErrorCode } from "@ethersproject/logger";
-import { SERVER_ERROR_CODE_RANGE, RESERVED_ERROR_CODES, STANDARD_ERROR_MAP } from "@json-rpc-tools/utils";
+import { RESERVED_ERROR_CODES, SERVER_ERROR_CODE_RANGE, STANDARD_ERROR_MAP } from "@json-rpc-tools/utils";
 
 import { downForMaintenance } from "@gemunion/license-messages";
 import { useLicense } from "@gemunion/provider-license";
 import { useWallet } from "@gemunion/provider-wallet";
 
 import { IHandlerOptionsParams } from "./interfaces";
-import { getBlockchainErrorReason } from "./error-handler";
+import { BlockchainErrorType, parseBlockchainError } from "./error-handler";
 
 export const useMetamaskWallet = <T = any>(
   fn: (...args: Array<any>) => Promise<T>,
@@ -55,12 +55,17 @@ export const useMetamaskWallet = <T = any>(
             const errorType = Object.values(STANDARD_ERROR_MAP).find(({ code }) => code === e.code)?.message;
             console.error(`[blockchain error]${errorType ? ` [${errorType}]` : ""}`, e.message);
           } else {
-            enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
             if (e.error?.data?.data) {
               const errorData = e.error?.data?.data as string;
-              const errorReason = getBlockchainErrorReason(errorData);
-              console.error("[blockchain error]", errorReason);
+              const errorReason = parseBlockchainError(errorData);
+              if (errorReason.type === BlockchainErrorType.CUSTOM_ERROR) {
+                enqueueSnackbar(formatMessage({ id: `snackbar.${errorReason.reason}` }), { variant: "error" });
+              } else {
+                enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
+                console.error("[blockchain error]", errorReason);
+              }
             } else {
+              enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
               console.error("[blockchain error]", e);
             }
           }

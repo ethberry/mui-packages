@@ -1,3 +1,16 @@
+export interface IBlockchainError {
+  type: BlockchainErrorType;
+  reason: string;
+}
+
+export enum BlockchainErrorType {
+  EMPTY = "EMPTY",
+  SYSTEM_STRING = "SYSTEM_STRING",
+  SYSTEM_PANIC_CODE = "SYSTEM_PANIC_CODE",
+  CUSTOM_ERROR = "CUSTOM_ERROR",
+  UNKNOWN_ERROR = "UNKNOWN_ERROR",
+}
+
 export enum SystemErrorPrefix {
   EMPTY = "0x",
   ERROR_STRING_PREFIX = "0x08c379a0",
@@ -24,28 +37,6 @@ export enum CustomErrorPrefix {
   "0x67f3734e" = "WrongStake",
   "0xa0f3feea" = "WrongToken",
   "0x669567ea" = "ZeroBalance",
-}
-
-export enum CustomErrorReasons {
-  BalanceExceed = "The balance exceeds the limit",
-  CountExceed = "The count exceeds the limit",
-  Expired = "The item has expired",
-  ExpiredSignature = "The signature has expired",
-  LimitExceed = "The limit has been exceeded",
-  MethodNotSupported = "The method is not supported",
-  NotActive = "The item is not active",
-  NotAnOwner = "The user is not an owner",
-  NotComplete = "The operation is not complete",
-  NotExist = "The item does not exist",
-  RefProgramSet = "The referral program is set",
-  SignerMissingRole = "The signer is missing a role",
-  TemplateZero = "The template is zero",
-  UnsupportedTokenType = "The token type is not supported",
-  WrongAmount = "The amount is wrong",
-  WrongRule = "The rule is wrong",
-  WrongStake = "The stake is wrong",
-  WrongToken = "The token is wrong",
-  ZeroBalance = "The balance is zero",
 }
 
 export enum PanicCodes {
