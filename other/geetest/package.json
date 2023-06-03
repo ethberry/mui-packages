@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/common-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-form": "8.0.23",
+    "@gemunion/mui-form": "8.0.24",
     "react-hook-form": "7.44.3"
   },
   "description": "react widget",
@@ -49,5 +49,5 @@
   "sideEffects": false,
   "title": "-=Encoder=-",
   "types": "./dist/index.d.ts",
-  "version": "2.1.11"
+  "version": "2.1.12"
 }

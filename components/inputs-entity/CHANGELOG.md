@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.2.78 (2023-06-03)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([f151fb4](https://github.com/gemunion/mui-packages/commit/f151fb4624a38c19f80f17b52a5b5d7d8d26968d))
+
 ## [7.2.77](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.2.76...@gemunion/mui-inputs-entity@7.2.77) (2023-05-31)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-entity
