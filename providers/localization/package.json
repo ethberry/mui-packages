@@ -13,7 +13,7 @@
     "@gemunion/provider-settings": "4.0.31",
     "@mui/icons-material": "5.11.16",
     "@mui/material": "5.13.3",
-    "@types/react": "18.2.7",
+    "@types/react": "18.2.8",
     "react": "18.2.0",
     "react-intl": "6.4.2"
   },
