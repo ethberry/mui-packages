@@ -9,10 +9,10 @@
   },
   "dependencies": {
     "@gemunion/firebase": "1.2.8",
-    "@gemunion/mui-dialog-confirmation": "3.3.13",
-    "@gemunion/mui-inputs-core": "7.2.12",
-    "@gemunion/mui-inputs-file-firebase": "6.0.95",
-    "@gemunion/mui-page-layout": "2.2.12",
+    "@gemunion/mui-dialog-confirmation": "3.3.14",
+    "@gemunion/mui-inputs-core": "7.2.13",
+    "@gemunion/mui-inputs-file-firebase": "6.0.96",
+    "@gemunion/mui-page-layout": "2.2.13",
     "@gemunion/popup": "1.0.21",
     "clsx": "1.2.1",
     "react-beautiful-dnd": "13.1.1",
@@ -21,10 +21,10 @@
   "description": "react widget media firebase",
   "devDependencies": {
     "@gemunion/cross-env": "0.0.4",
-    "@gemunion/mui-form": "8.0.24",
-    "@gemunion/mui-inputs-file": "6.1.12",
+    "@gemunion/mui-form": "8.0.25",
+    "@gemunion/mui-inputs-file": "6.1.13",
     "@gemunion/provider-api": "7.0.26",
-    "@gemunion/provider-test-id": "1.0.42",
+    "@gemunion/provider-test-id": "1.0.43",
     "@mui/icons-material": "5.11.16",
     "@mui/material": "5.13.4",
     "@mui/styles": "5.13.2",
@@ -81,5 +81,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "1.1.13"
+  "version": "1.1.14"
 }
