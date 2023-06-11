@@ -22,12 +22,12 @@
     "@gemunion/provider-wallet": "3.3.23",
     "@mui/material": "5.13.4",
     "@mui/styles": "5.13.2",
-    "@types/uuid": "9.0.1",
+    "@types/uuid": "9.0.2",
     "notistack": "3.0.1",
     "react": "18.2.0",
-    "react-intl": "6.4.2",
-    "react-router": "6.11.2",
-    "react-router-dom": "6.11.2"
+    "react-intl": "6.4.3",
+    "react-router": "6.12.1",
+    "react-router-dom": "6.12.1"
   },
   "engines": {
     "node": ">=18"
