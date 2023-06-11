@@ -12,13 +12,13 @@
     "@gemunion/mui-inputs-core": "7.2.12",
     "@gemunion/mui-inputs-file-s3": "7.1.14",
     "@gemunion/mui-page-layout": "2.2.12",
-    "@gemunion/popup": "1.0.20",
+    "@gemunion/popup": "1.0.21",
     "react-beautiful-dnd": "13.1.1"
   },
   "description": "react widget",
   "devDependencies": {
     "@gemunion/mui-form": "8.0.24",
-    "@gemunion/provider-api-jwt": "2.0.21",
+    "@gemunion/provider-api-jwt": "2.0.22",
     "@gemunion/provider-test-id": "1.0.42",
     "@mui/icons-material": "5.11.16",
     "@mui/material": "5.13.4",
