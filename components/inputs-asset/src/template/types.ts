@@ -18,6 +18,10 @@ export interface ITemplateAssetComponent {
     imageUrl: string;
     title: string;
     imgUrl: string;
+    tokens: Array<{
+      id: number;
+      tokenId: string;
+    }>;
   };
   amount: string;
 }

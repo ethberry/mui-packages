@@ -1,5 +1,5 @@
-import { FC } from "react";
-import { useWatch } from "react-hook-form";
+import { ChangeEvent, FC } from "react";
+import { useFormContext, useWatch } from "react-hook-form";
 import { useIntl } from "react-intl";
 
 import { EntityInput } from "@gemunion/mui-inputs-entity";
@@ -20,8 +20,14 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
   const { prefix, name = "templateId", data, readOnly, autoSelect } = props;
 
   const { formatMessage } = useIntl();
+  const form = useFormContext<any>();
   const tokenType = useWatch({ name: `${prefix}.tokenType` });
   const contractId = useWatch({ name: `${prefix}.contractId` });
+
+  const handleChange = (_event: ChangeEvent<unknown>, option: any | null): void => {
+    form.setValue(`${prefix}.${name}`, option?.id ?? 0);
+    form.setValue(`${prefix}.template.tokens`, option.tokens ?? []);
+  };
 
   if (!contractId) {
     return null;
@@ -40,6 +46,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
             templateStatus: [CommonStatus.ACTIVE, CommonStatus.HIDDEN],
             ...data,
           }}
+          onChange={handleChange}
           readOnly={readOnly}
           autoselect={autoSelect}
         />
@@ -56,6 +63,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
             templateStatus: [CommonStatus.ACTIVE, CommonStatus.HIDDEN],
             ...data,
           }}
+          onChange={handleChange}
           readOnly={readOnly}
           autoselect={autoSelect}
         />
@@ -72,6 +80,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
             templateStatus: [CommonStatus.ACTIVE, CommonStatus.HIDDEN],
             ...data,
           }}
+          onChange={handleChange}
           readOnly={readOnly}
           autoselect={autoSelect}
         />
@@ -88,6 +97,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
             templateStatus: [CommonStatus.ACTIVE, CommonStatus.HIDDEN],
             ...data,
           }}
+          onChange={handleChange}
           readOnly={readOnly}
           autoselect={autoSelect}
         />
@@ -104,6 +114,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
             templateStatus: [CommonStatus.ACTIVE, CommonStatus.HIDDEN],
             ...data,
           }}
+          onChange={handleChange}
           readOnly={readOnly}
           autoselect={autoSelect}
         />
