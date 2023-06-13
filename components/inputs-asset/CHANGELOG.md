@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.5](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.4...@gemunion/mui-inputs-asset@2.4.5) (2023-06-13)
+
+### Bug Fixes
+
+- template input ([9117e9a](https://github.com/gemunion/mui-packages/commit/9117e9a48a7c9176660ba34aff28641a80f25fa4))
+
 ## [2.4.4](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.3...@gemunion/mui-inputs-asset@2.4.4) (2023-06-11)
 
 ### Bug Fixes
