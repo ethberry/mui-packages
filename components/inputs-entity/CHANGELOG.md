@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 7.3.0 (2023-06-16)
+
+### Features
+
+- contract address input for entity input ([116e0e2](https://github.com/gemunion/mui-packages/commit/116e0e2f23eee7afb09327294a297c39f02551ca))
+
 ## [7.2.79](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.2.78...@gemunion/mui-inputs-entity@7.2.79) (2023-06-11)
 
 ### Bug Fixes
