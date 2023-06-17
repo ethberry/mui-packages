@@ -10,8 +10,8 @@
   "description": "react icons",
   "devDependencies": {
     "@mui/material": "5.13.4",
-    "@storybook/react": "7.0.20",
-    "@types/react": "18.2.11",
+    "@storybook/react": "7.0.21",
+    "@types/react": "18.2.12",
     "react": "18.2.0"
   },
   "engines": {
