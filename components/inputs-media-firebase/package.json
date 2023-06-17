@@ -26,7 +26,7 @@
     "@gemunion/provider-api": "7.0.26",
     "@gemunion/provider-test-id": "1.0.43",
     "@mui/icons-material": "5.11.16",
-    "@mui/material": "5.13.4",
+    "@mui/material": "5.13.5",
     "@mui/styles": "5.13.2",
     "@storybook/react": "7.0.21",
     "@testing-library/jest-dom": "5.16.5",
