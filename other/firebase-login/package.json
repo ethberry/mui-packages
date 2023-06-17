@@ -26,7 +26,7 @@
     "@gemunion/provider-api": "7.0.26",
     "@gemunion/provider-license": "3.0.20",
     "@gemunion/provider-user": "6.0.27",
-    "@mui/material": "5.13.4",
+    "@mui/material": "5.13.5",
     "@mui/styles": "5.13.2",
     "firebase": "9.22.2",
     "notistack": "3.0.1",
