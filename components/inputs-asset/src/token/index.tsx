@@ -18,6 +18,7 @@ export interface ITokenAssetProps {
   prefix: string;
   multiple?: boolean;
   readOnly?: boolean;
+  disableClear?: boolean;
   tokenType?: {
     disabledOptions?: Array<TokenType>;
   };
@@ -32,7 +33,7 @@ export interface ITokenAssetProps {
 }
 
 export const TokenAssetInput: FC<ITokenAssetProps> = props => {
-  const { prefix = "price", multiple = false, tokenType, contract, readOnly } = props;
+  const { prefix = "price", multiple = false, tokenType, contract, readOnly, disableClear = true } = props;
 
   const { formatMessage } = useIntl();
   const form = useFormContext<any>();
@@ -72,7 +73,7 @@ export const TokenAssetInput: FC<ITokenAssetProps> = props => {
           <Typography sx={{ mr: 1 }}>
             <FormattedMessage id={`form.labels.${ancestorPrefix}`} />
           </Typography>
-          {multiple ? (
+          {multiple && !readOnly ? (
             <Tooltip title={formatMessage({ id: "form.tips.create" })}>
               <IconButton size="small" aria-label="add" onClick={handleOptionAdd()}>
                 <Add fontSize="large" color="primary" />
@@ -98,12 +99,12 @@ export const TokenAssetInput: FC<ITokenAssetProps> = props => {
                   readOnly={readOnly}
                 />
                 <ContractInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} data={contract?.data} />
-                <TokenInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} />
+                <TokenInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} disableClear={disableClear} />
                 <AmountInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} />
               </Paper>
             </Box>
 
-            {multiple && (
+            {multiple && !readOnly && (
               <Box ml={2}>
                 <Tooltip title={formatMessage({ id: "form.tips.delete" })}>
                   <IconButton aria-label="delete" onClick={handleOptionDelete(i)} disabled={!i}>
