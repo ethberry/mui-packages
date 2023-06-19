@@ -9,10 +9,11 @@ export interface ITokenInputProps {
   prefix: string;
   name?: string;
   readOnly?: boolean;
+  disableClear?: boolean;
 }
 
 export const TokenInput: FC<ITokenInputProps> = props => {
-  const { prefix, name = "tokenId", readOnly } = props;
+  const { prefix, name = "tokenId", readOnly, disableClear = true } = props;
   const form = useFormContext<any>();
 
   const { formatMessage } = useIntl();
@@ -44,6 +45,7 @@ export const TokenInput: FC<ITokenInputProps> = props => {
           getTitle={(token: any) => `${token.template.title as string} #${token.tokenId as string}`}
           readOnly={readOnly}
           onChange={handleChange}
+          disableClear={readOnly || disableClear}
         />
       );
     case TokenType.NATIVE:

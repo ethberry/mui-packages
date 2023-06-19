@@ -11,13 +11,14 @@ export interface ITemplateInputProps {
   name?: string;
   readOnly?: boolean;
   autoSelect?: boolean;
+  disableClear?: boolean;
   data?: {
     templateStatus?: Array<any>;
   };
 }
 
 export const TemplateInput: FC<ITemplateInputProps> = props => {
-  const { prefix, name = "templateId", data, readOnly, autoSelect } = props;
+  const { prefix, name = "templateId", data, readOnly, autoSelect, disableClear = true } = props;
 
   const { formatMessage } = useIntl();
   const form = useFormContext<any>();
@@ -49,6 +50,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
           onChange={handleChange}
           readOnly={readOnly}
           autoselect={autoSelect}
+          disableClear={readOnly || disableClear}
         />
       );
     case TokenType.ERC998:
@@ -66,6 +68,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
           onChange={handleChange}
           readOnly={readOnly}
           autoselect={autoSelect}
+          disableClear={readOnly || disableClear}
         />
       );
     case TokenType.ERC1155:
@@ -83,6 +86,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
           onChange={handleChange}
           readOnly={readOnly}
           autoselect={autoSelect}
+          disableClear={readOnly || disableClear}
         />
       );
     case TokenType.NATIVE:
@@ -100,6 +104,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
           onChange={handleChange}
           readOnly={readOnly}
           autoselect={autoSelect}
+          disableClear={readOnly || disableClear}
         />
       );
     case TokenType.ERC20:
@@ -117,6 +122,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
           onChange={handleChange}
           readOnly={readOnly}
           autoselect={autoSelect}
+          disableClear={readOnly || disableClear}
         />
       );
     default:

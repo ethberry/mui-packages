@@ -22,6 +22,7 @@ export interface ITemplateAssetProps {
   multiple?: boolean;
   allowEmpty?: boolean;
   autoSelect?: boolean;
+  disableClear?: boolean;
   readOnly?: boolean;
   showLabel?: boolean;
   tokenType?: {
@@ -44,6 +45,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
     readOnly,
     allowEmpty,
     autoSelect,
+    disableClear = true,
     showLabel = true,
   } = props;
 
@@ -81,7 +83,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
               <FormattedMessage id={`form.labels.${ancestorPrefix}`} />
             </Typography>
           ) : null}
-          {multiple ? (
+          {multiple && !readOnly ? (
             <Tooltip title={formatMessage({ id: "form.tips.create" })}>
               <IconButton size="small" aria-label="add" onClick={handleOptionAdd()}>
                 <Add fontSize="large" color="primary" />
@@ -100,12 +102,17 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
                   readOnly={readOnly}
                 />
                 <ContractInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} data={contract?.data} />
-                <TemplateInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} autoSelect={autoSelect} />
+                <TemplateInput
+                  prefix={`${nestedPrefix}[${i}]`}
+                  readOnly={readOnly}
+                  autoSelect={autoSelect}
+                  disableClear={disableClear}
+                />
                 <AmountInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} />
               </Paper>
             </Box>
 
-            {multiple && (
+            {multiple && !readOnly && (
               <Box ml={2}>
                 <Tooltip title={formatMessage({ id: "form.tips.delete" })}>
                   <span>
