@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.27](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@8.0.26...@gemunion/mui-form@8.0.27) (2023-06-19)
+
+### Bug Fixes
+
+- sx styles for form wrapper and common pages ([d7bc083](https://github.com/gemunion/mui-packages/commit/d7bc0836b9e43e233e2fa625c3cf40b8a96593a4))
+
 ## 8.0.26 (2023-06-19)
 
 ### Bug Fixes
