@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.7](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.6...@gemunion/mui-inputs-asset@2.4.7) (2023-06-19)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([7077882](https://github.com/gemunion/mui-packages/commit/7077882c8bc564ee0e867566b317d1f34c8d5f87))
+- **deps:** update all non-major dependencies ([e915978](https://github.com/gemunion/mui-packages/commit/e915978be9b1744e6a90cfa67a1aa5abb1a81780))
+- truly read only asset inputs; rework disableClear prop ([ebd5f3d](https://github.com/gemunion/mui-packages/commit/ebd5f3deffeaca8d196128af751e3d3220b6557c))
+
 ## [2.4.6](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.5...@gemunion/mui-inputs-asset@2.4.6) (2023-06-16)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset
