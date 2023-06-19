@@ -1,16 +1,13 @@
 import { FC } from "react";
-import { Box } from "@mui/material";
 
-import { useStyles } from "./styles";
+import { StyledContainer, StyledLogo } from "./styled";
 
 export const Landing: FC = () => {
-  const classes = useStyles();
-
   return (
-    <Box className={classes.container}>
+    <StyledContainer>
       <a href="https://gemunion.io">
-        <img src="/logo.png" alt="GEMUNION" className={classes.logo} />
+        <StyledLogo component="img" src="/logo.png" alt="GEMUNION" />
       </a>
-    </Box>
+    </StyledContainer>
   );
 };

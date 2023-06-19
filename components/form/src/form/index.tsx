@@ -1,5 +1,6 @@
 import { FC, PropsWithChildren, useEffect } from "react";
 import { Box, ButtonProps } from "@mui/material";
+import { SxProps, Theme } from "@mui/material/styles";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
@@ -16,7 +17,7 @@ interface IFormWrapperProps<T> {
   showDebug?: boolean;
   submit?: string;
   onSubmit: (values: T, form?: any) => Promise<void>;
-  className?: string;
+  sx?: SxProps<Theme>;
   initialValues: T;
   enableReinitialize?: boolean;
   validationSchema?: any;
@@ -39,7 +40,7 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
     formSubmitButtonRef,
     formSubmitButtonProps = {},
     innerRef,
-    className,
+    sx = [],
     validationSchema,
     testId,
   } = props;
@@ -91,7 +92,7 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
     <TestIdProvider testId={testId}>
       <Box sx={{ mb: 2 }}>
         <FormProvider {...form}>
-          <form onSubmit={form.handleSubmit(handleSubmit)} className={className} ref={innerRef} {...testIdProps}>
+          <Box component="form" onSubmit={form.handleSubmit(handleSubmit)} sx={sx} ref={innerRef} {...testIdProps}>
             <PromptIfDirty visible={showPrompt} />
 
             {children}
@@ -104,7 +105,7 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
               handleSubmit={form.handleSubmit(handleSubmit)}
               formButtonProps={formSubmitButtonProps}
             />
-          </form>
+          </Box>
         </FormProvider>
       </Box>
     </TestIdProvider>
