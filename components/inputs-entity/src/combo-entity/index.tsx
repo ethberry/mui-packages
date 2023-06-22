@@ -7,9 +7,10 @@ import { Autocomplete, AutocompleteChangeReason, AutocompleteRenderInputParams, 
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useTestId } from "@gemunion/provider-test-id";
 import { useApiCall, useDeepCompareEffect } from "@gemunion/react-hooks";
+
 import { IAutocompleteOption } from "../interfaces";
 
-export interface IContractAddressInputProps {
+export interface IComboEntityInputProps {
   name: string;
   label?: string | number | ReactElement;
   placeholder?: string;
@@ -30,7 +31,7 @@ export interface IContractAddressInputProps {
   ) => void;
 }
 
-export const ContractAddressInput: FC<IContractAddressInputProps> = props => {
+export const ComboEntityInput: FC<IComboEntityInputProps> = props => {
   const {
     name,
     controller,

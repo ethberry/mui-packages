@@ -1,3 +1,3 @@
-export * from "./contract-address";
+export * from "./combo-entity";
 export * from "./entity";
 export * from "./interfaces";
