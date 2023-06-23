@@ -11,18 +11,18 @@
     "@gemunion/mui-inputs-core": "7.2.15",
     "@gemunion/provider-test-id": "1.0.44",
     "@mui/styles": "5.13.2",
-    "mathjs": "11.8.1",
+    "mathjs": "11.8.2",
     "react-number-format": "5.2.2"
   },
   "description": "react widget",
   "devDependencies": {
     "@mui/material": "5.13.5",
-    "@storybook/react": "7.0.21",
+    "@storybook/react": "7.0.23",
     "@types/mathjs": "9.4.2",
-    "@types/react": "18.2.12",
+    "@types/react": "18.2.14",
     "ethers": "5.7.2",
     "react": "18.2.0",
-    "react-hook-form": "7.44.3",
+    "react-hook-form": "7.45.0",
     "react-intl": "6.4.4"
   },
   "engines": {

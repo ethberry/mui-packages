@@ -15,10 +15,10 @@
   "devDependencies": {
     "@mui/material": "5.13.5",
     "@mui/styles": "5.13.2",
-    "@types/react": "18.2.12",
+    "@types/react": "18.2.14",
     "@types/react-google-recaptcha": "2.1.5",
     "react": "18.2.0",
-    "react-hook-form": "7.44.3",
+    "react-hook-form": "7.45.0",
     "react-intl": "6.4.4"
   },
   "engines": {
