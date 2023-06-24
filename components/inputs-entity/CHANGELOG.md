@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.3.2 (2023-06-24)
+
+### Bug Fixes
+
+- contract address renamed to combo entity input ([e881251](https://github.com/gemunion/mui-packages/commit/e8812519fdfb837d79b201769e5b64b3700c3151))
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([ecfae32](https://github.com/gemunion/mui-packages/commit/ecfae329baba0e259e6222535da1f66eb9c35a12))
+
 ## [7.3.1](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.3.0...@gemunion/mui-inputs-entity@7.3.1) (2023-06-19)
 
 ### Bug Fixes
