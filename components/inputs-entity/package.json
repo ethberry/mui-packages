@@ -18,7 +18,7 @@
     "@gemunion/provider-api": "7.0.28",
     "@mui/icons-material": "5.11.16",
     "@mui/lab": "5.0.0-alpha.134",
-    "@mui/material": "5.13.5",
+    "@mui/material": "5.13.6",
     "@mui/styles": "5.13.2",
     "@types/react": "18.2.14",
     "notistack": "3.0.1",
