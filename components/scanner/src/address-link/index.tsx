@@ -10,8 +10,10 @@ export interface IAddressLinkProps {
   sx?: SxProps<Theme>;
 }
 
+const addressLength = 42;
+
 export const AddressLink: FC<IAddressLinkProps> = props => {
-  const { address = "", length = 34, sx = [] } = props;
+  const { address = "", length = addressLength, sx = [] } = props;
 
   const { chainId = 1 } = useWeb3React();
 
@@ -22,7 +24,7 @@ export const AddressLink: FC<IAddressLinkProps> = props => {
   return (
     <Tooltip title={address}>
       <Link target={"_blank"} href={`${networks[chainId].blockExplorerUrls[0]}/address/${address}`} sx={sx}>
-        {address.substr(0, length).concat(length < 42 ? "..." : "")}
+        {address.substring(0, length).concat(length < addressLength ? "..." : "")}
       </Link>
     </Tooltip>
   );

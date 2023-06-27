@@ -22,7 +22,7 @@ export const TxHashLink: FC<ITxHashLinkProps> = props => {
   return (
     <Tooltip title={hash}>
       <Link target={"_blank"} href={`${networks[chainId].blockExplorerUrls[0]}/tx/${hash}`} sx={sx}>
-        {hash.substr(0, length).concat("...")}
+        {hash.substring(0, length).concat("...")}
       </Link>
     </Tooltip>
   );
