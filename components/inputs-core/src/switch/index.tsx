@@ -11,7 +11,7 @@ export interface ISwitchInputProps extends SwitchProps {
 }
 
 export const SwitchInput: FC<ISwitchInputProps & SwitchProps> = props => {
-  const { name, label, ...rest } = props;
+  const { name, label, disabled, readOnly, ...rest } = props;
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
@@ -37,6 +37,7 @@ export const SwitchInput: FC<ISwitchInputProps & SwitchProps> = props => {
               inputRef={field.ref}
               onChange={field.onChange}
               onBlur={field.onBlur}
+              disabled={disabled || readOnly}
               {...testIdProps}
               {...rest}
             />
