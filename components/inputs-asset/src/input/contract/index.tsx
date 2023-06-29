@@ -25,6 +25,7 @@ export const ContractInput: FC<IContractInputProps> = props => {
     form.setValue(`${prefix}.amount`, BigNumber.from(10).pow(option?.decimals).toString());
     form.setValue(`${prefix}.contract.address`, option?.address ?? "0x");
     form.setValue(`${prefix}.contract.decimals`, option?.decimals ?? 0);
+    form.setValue(`${prefix}.contract.symbol`, option?.symbol ?? "");
   };
 
   return (

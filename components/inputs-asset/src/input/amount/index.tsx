@@ -15,12 +15,15 @@ export const AmountInput: FC<IAmountInputProps> = props => {
 
   const tokenType = useWatch({ name: `${prefix}.tokenType` });
   const decimals = useWatch({ name: `${prefix}.contract.decimals` });
+  const symbol = useWatch({ name: `${prefix}.contract.symbol` });
 
   switch (tokenType) {
     case TokenType.NATIVE:
-    case TokenType.ERC20:
-    case TokenType.ERC1155:
       return <EthInput name={`${prefix}.${name}`} units={decimals} readOnly={readOnly} />;
+    case TokenType.ERC20:
+      return <EthInput name={`${prefix}.${name}`} units={decimals} readOnly={readOnly} symbol={symbol} />;
+    case TokenType.ERC1155:
+      return <EthInput name={`${prefix}.${name}`} units={decimals} readOnly={readOnly} symbol="" />;
     case TokenType.ERC721:
     case TokenType.ERC998:
     default:

@@ -23,7 +23,7 @@ export const EthInput: FC<IEthInputProps> = props => {
     fractionalDelimiter = ".",
     fillByZeros = false,
     name,
-    symbol = `${constants.EtherSymbol} `,
+    symbol = constants.EtherSymbol,
     thousandsSeparator = " ",
     units,
     ...rest
@@ -46,7 +46,7 @@ export const EthInput: FC<IEthInputProps> = props => {
       decimalSeparator={fractionalDelimiter}
       thousandSeparator={thousandsSeparator}
       allowLeadingZeros={fillByZeros}
-      prefix={symbol}
+      prefix={`${symbol} `}
       name={name}
       formatValue={formatValue(units)}
       normalizeValue={normalizeValue(units)}
