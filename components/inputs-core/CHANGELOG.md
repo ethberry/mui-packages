@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.17](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.2.16...@gemunion/mui-inputs-core@7.2.17) (2023-06-29)
+
+### Bug Fixes
+
+- add comment about switch readOnly prop ([193f22f](https://github.com/gemunion/mui-packages/commit/193f22f74bed4cc23517b820451884790fc74f4c))
+- readOnly for switch-input ([b81c634](https://github.com/gemunion/mui-packages/commit/b81c6346c005ecd472189fc317beb4740ed841d0))
+
 ## [7.2.16](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.2.15...@gemunion/mui-inputs-core@7.2.16) (2023-06-24)
 
 ### Bug Fixes

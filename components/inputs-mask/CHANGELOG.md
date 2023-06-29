@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.5.17](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.16...@gemunion/mui-inputs-mask@5.5.17) (2023-06-29)
+
+### Bug Fixes
+
+- currency input symbol space ([5e45f69](https://github.com/gemunion/mui-packages/commit/5e45f698230d02b0a0a8d8923397e688cfba0b77))
+- eth input symbol space ([f6b1a2c](https://github.com/gemunion/mui-packages/commit/f6b1a2cbe31ea3c3e062362d1d7f17efcdf89e17))
+- mask input to put symbol correctly with a space; asset amount input to set the correct symbols in specific tokenType ([d896f39](https://github.com/gemunion/mui-packages/commit/d896f39d0e91e6bf10e55a0bd2fb1158d1f53b61))
+
 ## [5.5.16](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.15...@gemunion/mui-inputs-mask@5.5.16) (2023-06-24)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask

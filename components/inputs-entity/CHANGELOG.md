@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.3.3](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.3.2...@gemunion/mui-inputs-entity@7.3.3) (2023-06-29)
+
+### Bug Fixes
+
+- add dirtyAutoselect prop to prevent dirtiness of the form when it's not expected ([bdb84bd](https://github.com/gemunion/mui-packages/commit/bdb84bd027ac40e504c27ec701e59555f3a7c28d))
+
 ## 7.3.2 (2023-06-24)
 
 ### Bug Fixes

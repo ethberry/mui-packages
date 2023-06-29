@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.10](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.9...@gemunion/mui-inputs-asset@2.4.10) (2023-06-29)
+
+### Bug Fixes
+
+- mask input to put symbol correctly with a space; asset amount input to set the correct symbols in specific tokenType ([d896f39](https://github.com/gemunion/mui-packages/commit/d896f39d0e91e6bf10e55a0bd2fb1158d1f53b61))
+- split token and template assets validation schema ([ec1a357](https://github.com/gemunion/mui-packages/commit/ec1a357391c0e3b6cbabc7d1320617c74545bed3))
+
 ## [2.4.9](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.8...@gemunion/mui-inputs-asset@2.4.9) (2023-06-24)
 
 ### Bug Fixes
