@@ -21,6 +21,7 @@ export interface IEntityInputProps {
   disableClear?: boolean;
   multiple?: boolean;
   autoselect?: boolean;
+  dirtyAutoselect?: boolean;
   getTitle?: (item: any) => string;
   data?: Record<string, any>;
   variant?: "standard" | "filled" | "outlined";
@@ -38,6 +39,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
     getTitle,
     multiple,
     autoselect = false,
+    dirtyAutoselect = true,
     data = {},
     variant = "standard",
     onChange,
@@ -83,7 +85,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
           const newValue = multiple ? [json[0]] : json[0];
 
           if (!newValue) {
-            form.setValue(name, null, { shouldDirty: true });
+            form.setValue(name, null, { shouldDirty: dirtyAutoselect });
             return;
           }
 
@@ -98,7 +100,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
               ? onChange({} as ChangeEvent<unknown>, newValue, "autoselect")
               : form.setValue(name, multiple ? newValue.map((o: IAutocompleteOption) => o.id) : newValue.id, {
                   shouldTouch: true,
-                  shouldDirty: true,
+                  shouldDirty: dirtyAutoselect,
                 });
           }
         }
