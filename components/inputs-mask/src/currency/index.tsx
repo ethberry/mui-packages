@@ -44,7 +44,7 @@ export const CurrencyInput: FC<ICurrencyInputProps> = props => {
       decimalScale={precision}
       thousandSeparator={thousandsSeparator}
       allowLeadingZeros={fillByZeros}
-      prefix={symbol}
+      prefix={symbol ? `${symbol} ` : ""}
       name={name}
       formatValue={formatValue}
       normalizeValue={normalizeValue}
