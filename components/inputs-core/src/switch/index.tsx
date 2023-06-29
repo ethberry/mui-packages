@@ -37,6 +37,7 @@ export const SwitchInput: FC<ISwitchInputProps & SwitchProps> = props => {
               inputRef={field.ref}
               onChange={field.onChange}
               onBlur={field.onBlur}
+              // https://github.com/mui/material-ui/issues/37753 readOnly prop still evaluate `onChange` event
               disabled={disabled || readOnly}
               {...testIdProps}
               {...rest}
