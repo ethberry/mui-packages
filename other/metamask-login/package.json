@@ -18,7 +18,7 @@
   "devDependencies": {
     "@gemunion/provider-api": "7.0.28",
     "@gemunion/provider-license": "3.0.22",
-    "@gemunion/provider-user": "6.0.29",
+    "@gemunion/provider-user": "6.0.30",
     "@gemunion/provider-wallet": "3.3.26",
     "@mui/material": "5.13.6",
     "@mui/styles": "5.13.2",
