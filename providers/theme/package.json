@@ -14,7 +14,7 @@
     "@mui/styles": "5.13.2",
     "jss": "10.10.0",
     "jss-rtl": "0.3.0",
-    "stylis": "4.2.0",
+    "stylis": "4.3.0",
     "stylis-plugin-rtl": "2.1.1"
   },
   "description": "Material UI theme provider",
