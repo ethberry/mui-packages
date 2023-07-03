@@ -1,7 +1,13 @@
+import { FC } from "react";
 import { useWatch } from "react-hook-form";
 
-export const FormWatcher = () => {
-  const form = useWatch();
+export interface IFormWatcherProps {
+  name?: string;
+}
+
+export const FormWatcher: FC<IFormWatcherProps> = props => {
+  const { name } = props;
+  const form = name ? useWatch({ name }) : useWatch();
 
   console.info(form);
 
