@@ -10,7 +10,10 @@ export const StaticInputComponent = forwardRef<any, InputBaseComponentProps>((pr
   const { value, placeholder, sx } = props;
 
   return (
-    <Box sx={[{ overflow: "auto" }, ...(Array.isArray(sx) ? sx : [sx])]} ref={ref}>
+    <Box
+      sx={[{ overflow: "auto", paddingTop: "4px", paddingBottom: "5px" }, ...(Array.isArray(sx) ? sx : [sx])]}
+      ref={ref}
+    >
       {value || placeholder}
     </Box>
   );
@@ -23,6 +26,7 @@ export const StaticInput: FC<IStaticInputProps> = props => {
 
   return (
     <TextInput
+      sx={{ my: 1 }}
       name={name}
       value={value}
       InputLabelProps={{
