@@ -10,13 +10,13 @@
   "dependencies": {
     "@gemunion/mui-inputs-core": "7.2.19",
     "@gemunion/provider-test-id": "1.0.45",
-    "@mui/styles": "5.13.7",
+    "@mui/styles": "5.14.0",
     "mathjs": "11.8.2",
     "react-number-format": "5.2.2"
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.13.7",
+    "@mui/material": "5.14.0",
     "@storybook/react": "7.0.26",
     "@types/mathjs": "9.4.2",
     "@types/react": "18.2.14",
