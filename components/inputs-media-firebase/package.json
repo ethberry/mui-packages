@@ -13,7 +13,7 @@
     "@gemunion/mui-inputs-core": "7.2.19",
     "@gemunion/mui-inputs-file-firebase": "6.0.100",
     "@gemunion/mui-page-layout": "2.2.17",
-    "@gemunion/popup": "1.0.23",
+    "@gemunion/popup": "1.0.24",
     "clsx": "1.2.1",
     "react-beautiful-dnd": "13.1.1",
     "react-dropzone": "14.2.3"
@@ -23,7 +23,7 @@
     "@gemunion/cross-env": "0.0.4",
     "@gemunion/mui-form": "8.0.30",
     "@gemunion/mui-inputs-file": "6.1.17",
-    "@gemunion/provider-api": "7.0.28",
+    "@gemunion/provider-api": "7.0.29",
     "@gemunion/provider-test-id": "1.0.45",
     "@mui/icons-material": "5.14.0",
     "@mui/material": "5.14.0",
