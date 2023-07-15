@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.2.21](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.20...@gemunion/mui-dialog-form@8.2.21) (2023-07-15)
+
+**Note:** Version bump only for package @gemunion/mui-dialog-form
+
 ## [8.2.20](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.19...@gemunion/mui-dialog-form@8.2.20) (2023-07-11)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
