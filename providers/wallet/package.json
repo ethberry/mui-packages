@@ -28,7 +28,7 @@
     "@mui/icons-material": "5.14.0",
     "@mui/material": "5.14.0",
     "@mui/styles": "5.14.0",
-    "@types/react": "18.2.14",
+    "@types/react": "18.2.15",
     "@types/uuid": "9.0.2",
     "ethers": "5.7.2",
     "notistack": "3.0.1",
