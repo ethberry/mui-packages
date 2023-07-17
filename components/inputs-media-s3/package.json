@@ -13,7 +13,7 @@
     "@gemunion/mui-inputs-file-s3": "7.1.20",
     "@gemunion/mui-page-layout": "2.2.18",
     "@gemunion/popup": "1.0.25",
-    "clsx": "1.2.1",
+    "clsx": "2.0.0",
     "react-beautiful-dnd": "13.1.1",
     "react-dropzone": "14.2.3"
   },

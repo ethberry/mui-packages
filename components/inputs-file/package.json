@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/mui-page-layout": "2.2.18",
     "@gemunion/provider-test-id": "1.0.46",
-    "clsx": "1.2.1",
+    "clsx": "2.0.0",
     "react-dropzone": "14.2.3"
   },
   "description": "react widget",
