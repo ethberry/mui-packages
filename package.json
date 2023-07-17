@@ -75,6 +75,8 @@
     "precommit": "lint-staged",
     "prettier": "prettier \"components/**/*.{ts,tsx}\" \"other/**/*.{ts,tsx}\" \"providers/**/*.{ts,tsx}\" --write",
     "registry": "lerna publish",
+    "release:publish": "lerna publish from-package --yes --exact --ignore-scripts",
+    "release:version": "lerna version",
     "storybook": "storybook dev -p 6006",
     "test": "sh scripts/test.sh"
   },
