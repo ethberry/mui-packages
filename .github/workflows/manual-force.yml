@@ -3,6 +3,7 @@ name: Manual release Publish --force
 on:
   workflow_dispatch:
 
+
 jobs:
   user-publish:
     if: github.event_name == 'workflow_dispatch'
@@ -17,16 +18,21 @@ jobs:
       # pulls all tags (needed for lerna to correctly version)
       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/* # see https://stackoverflow.com/a/60184319/9285308
 
-      - name: add npmrc token
+      - name: Authenticate Registry & Configure Git User
         run: |
           echo "@gemunion:registry=https://npm.pkg.github.com" >> .npmrc
           echo "//npm.pkg.github.com/:_authToken=$GITHUBTOKEN" >> .npmrc
           git update-index --assume-unchanged .npmrc
+          npx npm-cli-login -u $GITHUBUSER -p $GITHUBTOKEN -e $GITHUBEMAIL -r https://npm.pkg.github.com -s @gemunion --config-path="./"
+          git config --global user.name '@gemunion'
+          git config --global user.email $GITHUBEMAIL
         env:
           GITHUBTOKEN: ${{ secrets.GITHUBTOKEN }}
+          GITHUBUSER: ${{ secrets.GITHUBUSER }}
+          GITHUBEMAIL: ${{ secrets.GITHUBEMAIL }}
 
       - name: Authenticate check via npm pkg.github
-        run: npm whoami --registry=https://npm.pkg.github.com/
+        run: npm whoami --registry=https://npm.pkg.github.com
 
       - name: Install Packages npm i
         run: npm i
@@ -34,7 +40,7 @@ jobs:
       - name: Bootstrap Packages
         run: npm run bootstrap
 
-      - name: Bootstrap Packages
+      - name: Build Packages
         run: npm run build
 
       - name: Obfuscate
@@ -46,20 +52,13 @@ jobs:
       - name: Rename2
         run: find . -name '*obfuscated.*.js' -exec bash -c 'mv -v "$1" "${1/-obfuscated/}"' _ {} \;
 
-      - name: Authenticate Registry & Configure Git User
-        run: |
-          npx npm-cli-login -u $GITHUBUSER -p $GITHUBTOKEN -e $GITHUBEMAIL -r https://npm.pkg.github.com -s @gemunion --config-path="./"
-          git config --global user.name 'trejgun'
-          git config --global user.email $GITHUBEMAIL
-        env:
-          GITHUBTOKEN: ${{ secrets.GITHUBTOKEN }}
-          GITHUBUSER: ${{ secrets.GITHUBUSER }}
-          GITHUBEMAIL: ${{ secrets.GITHUBEMAIL }}
+      - name: What changed
+        run: npm run lerna:changed
+        id: lerna_changed
+        continue-on-error: true
 
-      - name: Authenticate check via npm pkg.github
-        run: npm whoami --registry=https://npm.pkg.github.com/
-
-      - name: Version & Publish by lerna
-        run: lerna version patch --force-publish --ignore-scripts && npm run release:publish -- --force-publish
+      - name: Version & Publish by lerna via npm
+        run: npm run lerna:publish -- --force-publish
+        if: steps.lerna_changed.outcome == 'success'
         env:
           GITHUBTOKEN: ${{ secrets.GITHUBTOKEN }}
