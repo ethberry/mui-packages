@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.66](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.65...@gemunion/provider-theme@6.0.66) (2023-07-17)
+
+
+### Bug Fixes
+
+* **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/mui-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
+
+
+
+
+
 ## [6.0.65](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.64...@gemunion/provider-theme@6.0.65) (2023-07-15)
 
 **Note:** Version bump only for package @gemunion/provider-theme

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.19](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@6.1.18...@gemunion/mui-inputs-file@6.1.19) (2023-07-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency clsx to v2 ([651369b](https://github.com/gemunion/mui-packages/commit/651369b73cd592ba7bd975b4b40dae112c21940b))
+
+
+
+
+
 ## [6.1.18](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@6.1.17...@gemunion/mui-inputs-file@6.1.18) (2023-07-15)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file
