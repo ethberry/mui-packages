@@ -3,7 +3,6 @@ name: Manual release Publish --force
 on:
   workflow_dispatch:
 
-
 jobs:
   user-publish:
     if: github.event_name == 'workflow_dispatch'
@@ -52,13 +51,10 @@ jobs:
       - name: Rename2
         run: find . -name '*obfuscated.*.js' -exec bash -c 'mv -v "$1" "${1/-obfuscated/}"' _ {} \;
 
-      - name: What changed
-        run: npm run lerna:changed
-        id: lerna_changed
-        continue-on-error: true
+      - name: Version
+        run: npm run lerna:version -- --force-publish
 
-      - name: Version & Publish by lerna via npm
-        run: npm run lerna:version && npm run lerna:publish -- --force-publish
-        if: steps.lerna_changed.outcome == 'success'
+      - name: Publish on npm
+        run: npm run lerna:publish
         env:
           GITHUBTOKEN: ${{ secrets.GITHUBTOKEN }}

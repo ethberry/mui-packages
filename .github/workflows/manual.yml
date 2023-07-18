@@ -3,7 +3,6 @@ name: Manual release Publish
 on:
   workflow_dispatch:
 
-
 jobs:
   user-publish:
     if: github.event_name == 'workflow_dispatch'
@@ -57,8 +56,12 @@ jobs:
         id: lerna_changed
         continue-on-error: true
 
-      - name: Version & Publish by lerna via npm
-        run: npm run lerna:version && npm run lerna:publish
+      - name: Version
+        run: npm run lerna:version
+        if: steps.lerna_changed.outcome == 'success'
+
+      - name: Publish on npm
+        run: npm run lerna:publish
         if: steps.lerna_changed.outcome == 'success'
         env:
           GITHUBTOKEN: ${{ secrets.GITHUBTOKEN }}

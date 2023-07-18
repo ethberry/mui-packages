@@ -72,7 +72,6 @@
     "lerna:version": "lerna version --ignore-scripts",
     "lint": "lerna run lint --stream",
     "obfuscate": "sh scripts/obfuscate.sh",
-    "precommit": "lint-staged",
     "prettier": "prettier \"components/**/*.{ts,tsx}\" \"other/**/*.{ts,tsx}\" \"providers/**/*.{ts,tsx}\" --write",
     "storybook": "storybook dev -p 6006",
     "test": "sh scripts/test.sh"
