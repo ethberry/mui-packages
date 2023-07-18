@@ -10,7 +10,7 @@
   "dependencies": {
     "@emotion/cache": "11.11.0",
     "@emotion/react": "11.11.1",
-    "@gemunion/constants": "0.12.3",
+    "@gemunion/constants": "0.12.6",
     "@mui/styles": "5.14.0",
     "jss": "10.10.0",
     "jss-rtl": "0.3.0",
@@ -19,7 +19,7 @@
   },
   "description": "Material UI theme provider",
   "devDependencies": {
-    "@gemunion/provider-settings": "4.0.39",
+    "@gemunion/provider-settings": "4.0.43",
     "@mui/icons-material": "5.14.0",
     "@mui/material": "5.14.0",
     "@types/stylis": "4.2.0",
