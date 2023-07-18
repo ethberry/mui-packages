@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.115](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.114...@gemunion/react-hooks-eth@1.0.115) (2023-07-18)
+
+
+### Bug Fixes
+
+* **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
+
+
+
+
+
 ## [1.0.114](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.113...@gemunion/react-hooks-eth@1.0.114) (2023-07-17)
 
 
