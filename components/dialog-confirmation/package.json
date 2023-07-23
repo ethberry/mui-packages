@@ -12,8 +12,8 @@
     "@gemunion/provider-license": "3.0.23",
     "@gemunion/provider-settings": "4.0.43",
     "@mui/material": "5.14.1",
-    "@storybook/react": "7.0.27",
-    "@testing-library/jest-dom": "5.16.5",
+    "@storybook/react": "7.1.0",
+    "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "14.0.0",
     "@types/jest": "29.5.3",
     "@types/react": "18.2.15",
@@ -24,7 +24,7 @@
     "react-dom": "18.2.0",
     "react-intl": "6.4.4",
     "ts-jest": "29.1.1",
-    "whatwg-fetch": "3.6.2"
+    "whatwg-fetch": "3.6.17"
   },
   "engines": {
     "node": ">=18"
