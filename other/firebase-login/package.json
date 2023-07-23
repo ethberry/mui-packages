@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.12.6",
-    "@gemunion/firebase": "1.2.13",
+    "@gemunion/firebase": "1.2.14",
     "@gemunion/mui-page-layout": "2.2.20",
     "@gemunion/provider-api": "7.0.34",
     "@gemunion/provider-wallet": "3.3.31",
