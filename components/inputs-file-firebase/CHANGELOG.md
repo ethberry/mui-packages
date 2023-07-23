@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.104](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-firebase@6.0.103...@gemunion/mui-inputs-file-firebase@6.0.104) (2023-07-23)
+
+
+### Bug Fixes
+
+* **deps:** update gemunion to v1.2.14 ([413968c](https://github.com/gemunion/mui-packages/commit/413968cb4acc4ea880077f862a708c513227e3c6))
+
+
+
+
+
 ## [6.0.103](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-firebase@6.0.102...@gemunion/mui-inputs-file-firebase@6.0.103) (2023-07-18)
 
 
