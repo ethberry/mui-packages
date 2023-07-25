@@ -11,15 +11,15 @@
     "@gemunion/mui-inputs-core": "7.2.23",
     "@gemunion/provider-test-id": "1.0.46",
     "@mui/styles": "5.14.1",
-    "mathjs": "11.9.0",
+    "mathjs": "11.9.1",
     "react-number-format": "5.2.2"
   },
   "description": "react widget",
   "devDependencies": {
     "@mui/material": "5.14.1",
-    "@storybook/react": "7.1.0",
+    "@storybook/react": "7.1.1",
     "@types/mathjs": "9.4.2",
-    "@types/react": "18.2.15",
+    "@types/react": "18.2.16",
     "ethers": "5.7.2",
     "react": "18.2.0",
     "react-hook-form": "7.45.2",

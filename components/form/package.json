@@ -19,7 +19,7 @@
   "devDependencies": {
     "@gemunion/provider-license": "3.0.23",
     "@mui/material": "5.14.1",
-    "@types/react": "18.2.15",
+    "@types/react": "18.2.16",
     "react": "18.2.0",
     "react-hook-form": "7.45.2",
     "react-intl": "6.4.4",
