@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.22](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-page-layout@2.2.21...@gemunion/mui-page-layout@2.2.22) (2023-07-25)
+
+**Note:** Version bump only for package @gemunion/mui-page-layout
+
+
+
+
+
 ## [2.2.21](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-page-layout@2.2.20...@gemunion/mui-page-layout@2.2.21) (2023-07-23)
 
 **Note:** Version bump only for package @gemunion/mui-page-layout
