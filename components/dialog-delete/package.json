@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/mui-dialog-confirmation": "3.3.24",
     "@gemunion/mui-page-layout": "2.2.23",
-    "@gemunion/provider-settings": "4.0.43"
+    "@gemunion/provider-settings": "4.0.44"
   },
   "description": "react widget",
   "devDependencies": {
