@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardContent, Grid, SvgIcon, Typography, TypographyProps } from "@mui/material";
+import { Box, Button, Card, CardContent, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const StyledCardsWrapper = styled(Grid)(({ theme }) => ({
@@ -51,44 +51,6 @@ export const TitleTypography = styled(Typography)(({ theme }) => ({
   },
 }));
 
-export const StyledDescription = styled(Typography)(({ theme }) => ({
-  ...theme.typography.h5,
-  fontWeight: 500,
-  margin: theme.spacing(-4, 0, 5),
-  [theme.breakpoints.down("md")]: {
-    margin: theme.spacing(0, 0, 5),
-    fontSize: 18,
-    fontWeight: 500,
-    textAlign: "center",
-  },
-}));
-
-export const PriceWrapper = styled(Box)({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-});
-
-export const PriceTypography = styled(Typography)(({ theme }) => ({
-  color: "#222529",
-  fontFamily: "'Roboto', sans-serif",
-  fontWeight: 500,
-  marginBottom: theme.spacing(2),
-  [theme.breakpoints.down("sm")]: {
-    marginBottom: 0,
-    fontSize: 31,
-  },
-}));
-
-export const MonthTypography = styled(Typography)(({ theme }) => ({
-  marginLeft: theme.spacing(1),
-  color: "#6E757C",
-  fontFamily: "'Roboto', sans-serif",
-  [theme.breakpoints.down("sm")]: {
-    fontSize: 16,
-  },
-}));
-
 export const Divider = styled(Box)(({ theme }) => ({
   margin: theme.spacing(1, "auto", 6),
   height: 4,
@@ -105,35 +67,6 @@ export const FeaturesWrapper = styled(Box)({
   textAlign: "left",
 });
 
-export const FeatureWrapper = styled(Box)(({ theme }) => ({
-  margin: theme.spacing(1),
-  display: "flex",
-  alignItems: "center",
-}));
-
-export const FeatureIconWrapper = styled(Box)(({ theme }) => ({
-  marginRight: theme.spacing(2),
-  [theme.breakpoints.down("sm")]: {
-    marginRight: theme.spacing(1),
-  },
-}));
-
-export const FeatureIconIncluded = styled(SvgIcon)({
-  color: "#3479F6",
-}) as any;
-
-export const FeatureIconExcluded = styled(SvgIcon)({
-  color: "#6E757C",
-}) as any;
-
-export const FeatureTypography = styled(Typography, {
-  shouldForwardProp: prop => prop !== "included",
-})<TypographyProps & { included: boolean }>(({ included }) => ({
-  color: "#222529",
-  fontFamily: "'Roboto', sans-serif",
-  textDecoration: included ? "none" : "line-through",
-}));
-
 export const SubscribeButton = styled(Button)(({ theme }) => ({
   marginTop: "auto",
   marginBottom: theme.spacing(1),
@@ -143,6 +76,7 @@ export const SubscribeButton = styled(Button)(({ theme }) => ({
   border: "1px solid #3479F6",
   borderRadius: "32px",
   boxShadow: "none",
+  padding: theme.spacing(1, 3),
   "&:hover": {
     color: "#FFF",
     backgroundColor: "#3479F6",
