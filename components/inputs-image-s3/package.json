@@ -21,7 +21,7 @@
     "@gemunion/provider-api-jwt": "2.0.30",
     "@gemunion/provider-test-id": "1.0.47",
     "@mui/icons-material": "5.14.1",
-    "@mui/material": "5.14.1",
+    "@mui/material": "5.14.2",
     "@mui/styles": "5.14.1",
     "@storybook/react": "7.1.1",
     "@testing-library/jest-dom": "5.17.0",
