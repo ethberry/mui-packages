@@ -40,7 +40,7 @@ export const useRatePlans = () => {
     },
     {
       title: formatMessage({ id: "pages.ratePlan.gold" }),
-      price: "$7000",
+      price: "$9000",
       features: [
         { name: "5 ERC20 contract", included: true },
         { name: "25 ERC721 contracts", included: true },
