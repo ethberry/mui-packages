@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.2.26](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@5.2.25...@gemunion/mui-inputs-draft@5.2.26) (2023-07-29)
+
+
+### Bug Fixes
+
+* **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
+
+
+
+
+
 ## 5.2.25 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-draft
