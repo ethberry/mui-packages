@@ -16,10 +16,10 @@ export const useProductTypes = (props: IUseProductTypesProps) => {
       linkTitle: formatMessage({ id: "components.productTypes.saas.linkTitle" }),
     },
     {
-      title: formatMessage({ id: "components.productTypes.standalone.title" }),
-      text: formatMessage({ id: "components.productTypes.standalone.text" }),
+      title: formatMessage({ id: "components.productTypes.selfHosted.title" }),
+      text: formatMessage({ id: "components.productTypes.selfHosted.text" }),
       link: internal ? "/calculator" : `${process.env.GEMUNION_URL}/calculator`,
-      linkTitle: formatMessage({ id: "components.productTypes.standalone.linkTitle" }),
+      linkTitle: formatMessage({ id: "components.productTypes.selfHosted.linkTitle" }),
     },
     {
       title: formatMessage({ id: "components.productTypes.enterprise.title" }),
