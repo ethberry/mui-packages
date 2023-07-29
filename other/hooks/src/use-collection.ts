@@ -265,6 +265,10 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
       });
   };
 
+  const handleRefreshPage = async () => {
+    await fetch(id);
+  };
+
   const handleChangePage = (_e: ChangeEvent<unknown>, page: number) => {
     setSearch({
       ...search,
@@ -342,6 +346,7 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     handleDeleteCancel,
     handleDeleteConfirm,
     handleSearch,
+    handleRefreshPage,
     handleChangePage,
     handleChangeRowsPerPage,
     handleChangePaginationModel,
