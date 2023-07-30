@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.38](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.1.37...@gemunion/react-hooks@1.1.38) (2023-07-30)
+
+
+### Bug Fixes
+
+* add refresh page to use collection ([eb4389c](https://github.com/gemunion/mui-packages/commit/eb4389c5dff72ff16318d3f21367663f98c6f5c1))
+
+
+
+
+
 ## 1.1.37 (2023-07-29)
 
 

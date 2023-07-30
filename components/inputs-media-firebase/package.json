@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/firebase": "1.2.14",
     "@gemunion/mui-dialog-confirmation": "3.3.25",
-    "@gemunion/mui-inputs-core": "7.2.26",
+    "@gemunion/mui-inputs-core": "7.2.27",
     "@gemunion/mui-inputs-file-firebase": "6.0.106",
     "@gemunion/mui-page-layout": "2.2.23",
     "@gemunion/popup": "1.0.29",
@@ -21,7 +21,7 @@
   "description": "react widget media firebase",
   "devDependencies": {
     "@gemunion/cross-env": "0.0.4",
-    "@gemunion/mui-form": "8.0.37",
+    "@gemunion/mui-form": "8.0.38",
     "@gemunion/mui-inputs-file": "6.1.23",
     "@gemunion/provider-api": "7.0.35",
     "@gemunion/provider-test-id": "1.0.48",
@@ -81,5 +81,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "1.1.27"
+  "version": "1.1.28"
 }

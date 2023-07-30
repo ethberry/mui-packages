@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.2 (2023-07-30)
+
+
+### Bug Fixes
+
+* price ([2bbd844](https://github.com/gemunion/mui-packages/commit/2bbd8449f511279209aa1b171181e6583cfd5acd))
+* standalone -> selfhosted ([bc7f329](https://github.com/gemunion/mui-packages/commit/bc7f3299731049f0bb50c338233e32e4f262ad27))
+
+
+
+
+
 ## [1.1.1](https://github.com/gemunion/mui-packages/compare/@gemunion/license-pages@1.1.0...@gemunion/license-pages@1.1.1) (2023-07-28)
 
 
