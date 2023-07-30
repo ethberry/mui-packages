@@ -32,6 +32,8 @@ export interface ITemplateAssetProps {
     data?: {
       contractModule?: Array<string>;
       contractStatus?: Array<string>;
+      // BUSINESS_TYPE=B2B
+      includeExternalContracts?: boolean;
     };
   };
 }
@@ -61,7 +63,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
       ({
         ...field,
         ...watchFields[index],
-      } as TAssetComponentParams),
+      }) as TAssetComponentParams,
   );
 
   const handleOptionAdd = (): (() => void) => (): void => {
