@@ -1,4 +1,4 @@
-import { FC, useMemo } from "react";
+import { FC } from "react";
 import { useFieldArray, useFormContext, useWatch } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Box, IconButton, Paper, Tooltip, Typography } from "@mui/material";
@@ -63,7 +63,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
       ({
         ...field,
         ...watchFields[index],
-      }) as TAssetComponentParams,
+      } as TAssetComponentParams),
   );
 
   const handleOptionAdd = (): (() => void) => (): void => {
@@ -76,59 +76,56 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
       remove(i);
     };
 
-  return useMemo(
-    () => (
-      <Box mt={2}>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          {showLabel ? (
-            <Typography sx={{ mr: 1 }}>
-              <FormattedMessage id={`form.labels.${ancestorPrefix}`} />
-            </Typography>
-          ) : null}
-          {multiple && !readOnly ? (
-            <Tooltip title={formatMessage({ id: "form.tips.create" })}>
-              <IconButton size="small" aria-label="add" onClick={handleOptionAdd()}>
-                <Add fontSize="large" color="primary" />
-              </IconButton>
-            </Tooltip>
-          ) : null}
-        </Box>
-
-        {values?.map((o: TAssetComponentParams, i: number) => (
-          <Box key={o.id} mt={1} mb={1} display="flex" justifyContent="space-between" alignItems="center">
-            <Box flex={1}>
-              <Paper sx={{ p: 2, display: "flex", alignItems: "stretch", flex: 1, flexDirection: "column" }}>
-                <TokenTypeInput
-                  prefix={`${nestedPrefix}[${i}]`}
-                  disabledOptions={tokenType?.disabledOptions}
-                  readOnly={readOnly}
-                />
-                <ContractInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} data={contract?.data} />
-                <TemplateInput
-                  prefix={`${nestedPrefix}[${i}]`}
-                  readOnly={readOnly}
-                  autoSelect={autoSelect}
-                  disableClear={disableClear}
-                />
-                <AmountInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} />
-              </Paper>
-            </Box>
-
-            {multiple && !readOnly && (
-              <Box ml={2}>
-                <Tooltip title={formatMessage({ id: "form.tips.delete" })}>
-                  <span>
-                    <IconButton aria-label="delete" onClick={handleOptionDelete(i)} disabled={!i && !allowEmpty}>
-                      <Delete />
-                    </IconButton>
-                  </span>
-                </Tooltip>
-              </Box>
-            )}
-          </Box>
-        ))}
+  return (
+    <Box mt={2}>
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        {showLabel ? (
+          <Typography sx={{ mr: 1 }}>
+            <FormattedMessage id={`form.labels.${ancestorPrefix}`} />
+          </Typography>
+        ) : null}
+        {multiple && !readOnly ? (
+          <Tooltip title={formatMessage({ id: "form.tips.create" })}>
+            <IconButton size="small" aria-label="add" onClick={handleOptionAdd()}>
+              <Add fontSize="large" color="primary" />
+            </IconButton>
+          </Tooltip>
+        ) : null}
       </Box>
-    ),
-    [tokenType?.disabledOptions, readOnly, values],
+
+      {values?.map((o: TAssetComponentParams, i: number) => (
+        <Box key={o.id} mt={1} mb={1} display="flex" justifyContent="space-between" alignItems="center">
+          <Box flex={1}>
+            <Paper sx={{ p: 2, display: "flex", alignItems: "stretch", flex: 1, flexDirection: "column" }}>
+              <TokenTypeInput
+                prefix={`${nestedPrefix}[${i}]`}
+                disabledOptions={tokenType?.disabledOptions}
+                readOnly={readOnly}
+              />
+              <ContractInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} data={contract?.data} />
+              <TemplateInput
+                prefix={`${nestedPrefix}[${i}]`}
+                readOnly={readOnly}
+                autoSelect={autoSelect}
+                disableClear={disableClear}
+              />
+              <AmountInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} />
+            </Paper>
+          </Box>
+
+          {multiple && !readOnly && (
+            <Box ml={2}>
+              <Tooltip title={formatMessage({ id: "form.tips.delete" })}>
+                <span>
+                  <IconButton aria-label="delete" onClick={handleOptionDelete(i)} disabled={!i && !allowEmpty}>
+                    <Delete />
+                  </IconButton>
+                </span>
+              </Tooltip>
+            </Box>
+          )}
+        </Box>
+      ))}
+    </Box>
   );
 };
