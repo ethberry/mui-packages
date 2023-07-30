@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/mui-inputs-core": "7.2.27",
     "@gemunion/mui-inputs-entity": "7.3.13",
-    "@gemunion/mui-inputs-mask": "5.5.27",
+    "@gemunion/mui-inputs-mask": "5.5.28",
     "@gemunion/react-hooks": "1.1.38",
     "@gemunion/types-blockchain": "1.2.4",
     "@gemunion/yup-rules-eth": "2.1.13"
@@ -64,5 +64,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.4.21"
+  "version": "2.4.22"
 }
