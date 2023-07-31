@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.3 (2023-07-31)
+
+
+### Bug Fixes
+
+* add details to rate plans ([bdd83f1](https://github.com/gemunion/mui-packages/commit/bdd83f1cb7b12b76f1f1d30b8c327cd54cb17428))
+
+
+
+
+
 ## 1.1.2 (2023-07-30)
 
 
