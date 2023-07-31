@@ -119,4 +119,5 @@ export const FeatureTypography = styled(Typography, {
   color: "#222529",
   fontFamily: "'Roboto', sans-serif",
   textDecoration: included ? "none" : "line-through",
+  whiteSpace: "pre-line",
 }));

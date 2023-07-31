@@ -83,8 +83,7 @@ export const RatePlansSelection: FC = () => {
           <StyledCard>
             <StyledCardContent>
               <TitleTypography variant="h6">
-                <FormattedMessage id={plan.title} />
-                <FormattedMessage id={`pages.ratePlan.${plan.title}`} />
+                <FormattedMessage id={`pages.ratePlan.${plan.title}.title`} />
               </TitleTypography>
               <PriceWrapper>
                 <PriceTypography variant="h3">${plan.price}</PriceTypography>
