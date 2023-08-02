@@ -16,12 +16,10 @@ export const StyledCardWrapper = styled(Grid)(({ theme }) => ({
 }));
 
 export const StyledCard = styled(Card)(({ theme }) => ({
-  margin: theme.spacing(2),
   backgroundColor: "#fff",
   borderRadius: "15px",
   boxShadow: "0px 1px 5px rgba(0, 0, 0, 0.1)",
   padding: theme.spacing(2),
-  width: 300,
   display: "flex",
   height: "100%",
   [theme.breakpoints.down("sm")]: {
@@ -61,11 +59,11 @@ export const Divider = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const FeaturesWrapper = styled(Box)({
+export const FeaturesWrapper = styled(Box)(({ theme }) => ({
   maxWidth: "fit-content",
-  margin: "0 auto",
+  margin: theme.spacing(0, "auto", 3, "auto"),
   textAlign: "left",
-});
+}));
 
 export const SubscribeButton = styled(Button)(({ theme }) => ({
   marginTop: "auto",

@@ -23,7 +23,7 @@ export const ProductTypeSelection: FC<IProductTypeSelectionProps> = props => {
   const productTypes = useProductTypes({ internal });
 
   return (
-    <StyledCardsWrapper container justifyContent="center" spacing={2}>
+    <StyledCardsWrapper container justifyContent="center" spacing={4}>
       {productTypes.map((type, index) => (
         <StyledCardWrapper item xs={12} sm={6} md={4} key={index}>
           <StyledCard>
