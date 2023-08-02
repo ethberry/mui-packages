@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.4](https://github.com/gemunion/mui-packages/compare/@gemunion/license-pages@1.1.3...@gemunion/license-pages@1.1.4) (2023-08-02)
+
+
+### Bug Fixes
+
+* rate plan add break lines and localization ([42e5d1b](https://github.com/gemunion/mui-packages/commit/42e5d1b2719206bd9b3eca3b0e44c26f4bfbb08d))
+* styles for product type selection ([16db05b](https://github.com/gemunion/mui-packages/commit/16db05be418711ffaf612b3c0d0226d20a64ef4f))
+
+
+
+
+
 ## 1.1.3 (2023-07-31)
 
 
