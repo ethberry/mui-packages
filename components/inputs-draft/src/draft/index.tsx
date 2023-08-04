@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { TextFieldProps } from "@mui/material";
 import { useFormContext, useWatch } from "react-hook-form";
 import { useIntl } from "react-intl";
@@ -41,9 +41,6 @@ export const RichTextEditor: FC<IRichTextFieldProps & TextFieldProps> = props =>
   const form = useFormContext<any>();
   const value = useWatch({ name });
 
-  // Manually handle the TextField's focused state based on the editor's focused state
-  const [isFocused, setIsFocused] = useState(false);
-
   const { formatMessage } = useIntl();
   const localizedPlaceholder = formatMessage({ id: `form.placeholders.${suffix}` });
 
@@ -64,8 +61,6 @@ export const RichTextEditor: FC<IRichTextFieldProps & TextFieldProps> = props =>
   return (
     <TextInput
       name={name}
-      focused={isFocused}
-      onClick={() => setIsFocused(true)}
       InputLabelProps={{
         ...InputLabelProps,
         shrink: true,
@@ -75,8 +70,6 @@ export const RichTextEditor: FC<IRichTextFieldProps & TextFieldProps> = props =>
         inputProps,
       }}
       onChange={() => {}}
-      onFocus={() => setIsFocused(true)}
-      onBlur={() => setIsFocused(false)}
       {...rest}
     />
   );
