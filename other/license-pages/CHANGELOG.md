@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/gemunion/mui-packages/compare/@gemunion/license-pages@1.1.5...@gemunion/license-pages@1.1.6) (2023-08-04)
+
+
+### Bug Fixes
+
+* obfuscate GEMUNION_URL for product types ([bbe7ec1](https://github.com/gemunion/mui-packages/commit/bbe7ec1a9496adf487f6812386a281e08ba78fdd))
+* portal url ([0076bf3](https://github.com/gemunion/mui-packages/commit/0076bf3a246878ef94c103f9183d88c27ebc1381))
+
+
+
+
+
 ## [1.1.5](https://github.com/gemunion/mui-packages/compare/@gemunion/license-pages@1.1.4...@gemunion/license-pages@1.1.5) (2023-08-03)
 
 **Note:** Version bump only for package @gemunion/license-pages

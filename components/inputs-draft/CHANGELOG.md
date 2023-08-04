@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.2.30](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@5.2.29...@gemunion/mui-inputs-draft@5.2.30) (2023-08-04)
+
+
+### Bug Fixes
+
+* validation issue on draft input ([c04d077](https://github.com/gemunion/mui-packages/commit/c04d077c622556154db27b87421069d90868e9bf))
+
+
+
+
+
 ## 5.2.29 (2023-08-03)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-draft
