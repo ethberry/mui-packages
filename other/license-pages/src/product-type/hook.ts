@@ -5,7 +5,7 @@ export interface IUseProductTypesProps {
 }
 
 /* javascript-obfuscator:disable */
-const gemunionUrl = process.env.GEMUNION_URL;
+const portalUrl = process.env.PORTAL_URL;
 /* javascript-obfuscator:enable */
 
 export const useProductTypes = (props: IUseProductTypesProps) => {
@@ -16,19 +16,19 @@ export const useProductTypes = (props: IUseProductTypesProps) => {
     {
       title: formatMessage({ id: "components.productTypes.saas.title" }),
       text: formatMessage({ id: "components.productTypes.saas.text" }),
-      link: internal ? "/calculator-saas" : `${gemunionUrl}/calculator-saas`,
+      link: internal ? "/calculator-saas" : `${portalUrl}/calculator-saas`,
       linkTitle: formatMessage({ id: "components.productTypes.saas.linkTitle" }),
     },
     {
       title: formatMessage({ id: "components.productTypes.selfHosted.title" }),
       text: formatMessage({ id: "components.productTypes.selfHosted.text" }),
-      link: internal ? "/calculator" : `${gemunionUrl}/calculator`,
+      link: internal ? "/calculator" : `${portalUrl}/calculator`,
       linkTitle: formatMessage({ id: "components.productTypes.selfHosted.linkTitle" }),
     },
     {
       title: formatMessage({ id: "components.productTypes.enterprise.title" }),
       text: formatMessage({ id: "components.productTypes.enterprise.text" }),
-      link: internal ? "/contact-enterprise" : `${gemunionUrl}/contact-enterprise`,
+      link: internal ? "/contact-enterprise" : `${portalUrl}/contact-enterprise`,
       linkTitle: formatMessage({ id: "components.productTypes.enterprise.linkTitle" }),
     },
   ];
