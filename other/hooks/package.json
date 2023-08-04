@@ -8,15 +8,15 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/constants": "0.12.6",
+    "@gemunion/constants": "0.12.7",
     "@gemunion/license-messages": "0.0.36",
-    "@gemunion/types-collection": "1.5.10",
+    "@gemunion/types-collection": "1.5.11",
     "qs": "6.11.2"
   },
   "description": "react hooks",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.37",
-    "@gemunion/provider-license": "3.0.25",
+    "@gemunion/provider-api": "7.0.38",
+    "@gemunion/provider-license": "3.0.27",
     "notistack": "3.0.1",
     "react": "18.2.0",
     "react-hook-form": "7.45.2",
