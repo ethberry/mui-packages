@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.38](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.3.37...@gemunion/provider-wallet@3.3.38) (2023-08-05)
+
+
+### Bug Fixes
+
+* **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
+
+
+
+
+
 ## [3.3.37](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.3.36...@gemunion/provider-wallet@3.3.37) (2023-08-04)
 
 **Note:** Version bump only for package @gemunion/provider-wallet
