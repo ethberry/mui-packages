@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.122...@gemunion/react-hooks-eth@1.1.0) (2023-08-05)
+
+
+### Features
+
+* useDeploy without form ([bb579fc](https://github.com/gemunion/mui-packages/commit/bb579fca56e6283122b32408f5d9ce2d4ee5d9e4))
+
+
+
+
+
 ## [1.0.122](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.0.121...@gemunion/react-hooks-eth@1.0.122) (2023-08-05)
 
 
