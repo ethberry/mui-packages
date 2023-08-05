@@ -32,7 +32,10 @@ export const useDeploy = (
         if (result === null) {
           return;
         }
-        form?.reset(form?.getValues());
+        // @ts-ignore
+        if (Object.hasOwn(form, "getValues")) {
+          form?.reset(form?.getValues());
+        }
         setIsDeployDialogOpen(false);
         // eslint-disable-next-line @typescript-eslint/no-unsafe-return
         return result;
