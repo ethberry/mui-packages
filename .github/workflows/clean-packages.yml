@@ -1,0 +1,79 @@
+name: Clean Packages
+# short list packages names
+# gh api --jq '.[].name' -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" -H "page: 2" -H "Per_page: 100" "/orgs/GemunIon/packages?package_type=npm" > pkglist.txt
+
+
+# gh api --method DELETE -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "/orgs/GemunIon/packages/npm/nest-js-module-firebase/versions/102391991"
+# gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "/orgs/GemunIon/packages/npm/nest-js-module-firebase/versions"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  clean:
+    continue-on-error: true
+    strategy:
+      max-parallel: 1
+      matrix:
+        package: [
+          'mui-inputs-core',
+          'mui-form',
+          'common-pages',
+          'mui-dialog-confirmation',
+          'mui-dialog-form',
+          'mui-inputs-captcha',
+          'mui-form-search',
+          'mui-inputs-entity',
+          'mui-inputs-draft',
+          'mui-dialog-delete',
+          'mui-inputs-file',
+          'mui-inputs-picker',
+          'mui-inputs-mask',
+          'provider-localization',
+          'provider-theme',
+          'mui-inputs-image-firebase',
+          'provider-wallet',
+          'mui-inputs-file-firebase',
+          'mui-toolbar',
+          'mui-page-layout',
+          'react-hooks',
+          'mui-page-header',
+          'provider-picker',
+          'mui-progress',
+          'mui-icons-social-networks',
+          'mui-inputs-lab',
+          'provider-coingecko',
+          'mui-inputs-file-s3',
+          'mui-inputs-image-s3',
+          'firebase-login',
+          'metamask-login',
+          'react-hooks-eth',
+          'provider-test-id',
+          'mui-provider-picker',
+          'mui-provider-theme',
+          'mui-breadcrumbs',
+          's3-uploader',
+          'mui-inputs-asset',
+          'mui-scanner',
+          'connect-wallet',
+          'mui-inputs-markdown',
+          'license-pages',
+          'mui-inputs-media-s3',
+          'provider-theme-ssr',
+          'mui-icons-google',
+          'mui-provider-theme-ssr',
+          'mui-icons',
+          'mui-inputs-media-firebase'
+        ]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: clean package
+        uses: actions/delete-package-versions@v4
+        with:
+          package-name: ${{ matrix.package }}
+          package-type: 'npm'
+          min-versions-to-keep: 10
+      - name: Sleep for 3 sec
+        run: sleep 3s
+        shell: bash
