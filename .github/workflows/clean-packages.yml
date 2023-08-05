@@ -8,6 +8,10 @@ name: Clean Packages
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Manual release Publish", "Manual release Publish --force"]
+    types:
+      - completed
 
 jobs:
   clean:
@@ -16,6 +20,7 @@ jobs:
       max-parallel: 1
       matrix:
         package: [
+          'react-hooks-eth',
           'mui-inputs-core',
           'mui-form',
           'common-pages',
@@ -47,7 +52,6 @@ jobs:
           'mui-inputs-image-s3',
           'firebase-login',
           'metamask-login',
-          'react-hooks-eth',
           'provider-test-id',
           'mui-provider-picker',
           'mui-provider-theme',
