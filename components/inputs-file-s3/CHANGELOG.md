@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.1.30 (2023-08-08)
+
+
+### Bug Fixes
+
+* version of react-hooks and KeplrIcon ([30d865f](https://github.com/gemunion/mui-packages/commit/30d865f1f85be73fe70256d263be359f6dcc4c87))
+
+
+
+
+
 ## [7.1.29](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@7.1.28...@gemunion/mui-inputs-file-s3@7.1.29) (2023-08-05)
 
 

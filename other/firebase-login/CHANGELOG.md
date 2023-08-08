@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.54](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.53...@gemunion/firebase-login@2.2.54) (2023-08-08)
+
+
+### Bug Fixes
+
+* add keplr login button ([aeb95cc](https://github.com/gemunion/mui-packages/commit/aeb95cc1a6a21a468a5d768a99b2e31f31edc902))
+* update types-jwt to replace IKeplrDto ([64aa685](https://github.com/gemunion/mui-packages/commit/64aa68569b66af72d09df64b8a8e7648390de6c8))
+* version of react-hooks and KeplrIcon ([30d865f](https://github.com/gemunion/mui-packages/commit/30d865f1f85be73fe70256d263be359f6dcc4c87))
+
+
+
+
+
 ## [2.2.53](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.52...@gemunion/firebase-login@2.2.53) (2023-08-05)
 
 **Note:** Version bump only for package @gemunion/firebase-login

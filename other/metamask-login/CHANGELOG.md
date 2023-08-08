@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.1.49 (2023-08-08)
+
+
+### Bug Fixes
+
+* update types-jwt to replace IKeplrDto ([64aa685](https://github.com/gemunion/mui-packages/commit/64aa68569b66af72d09df64b8a8e7648390de6c8))
+
+
+
+
+
 ## [3.1.48](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.1.47...@gemunion/metamask-login@3.1.48) (2023-08-05)
 
 

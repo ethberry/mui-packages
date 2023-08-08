@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.3.39 (2023-08-08)
+
+
+### Bug Fixes
+
+* add keplr icon to provider-wallet ([cd4c37a](https://github.com/gemunion/mui-packages/commit/cd4c37a2618bbc4288b63a66eda4af5d131a85be))
+
+
+
+
+
 ## [3.3.38](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.3.37...@gemunion/provider-wallet@3.3.38) (2023-08-05)
 
 
