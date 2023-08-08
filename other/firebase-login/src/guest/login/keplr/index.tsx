@@ -8,11 +8,11 @@ import { v4 } from "uuid";
 import { phrase } from "@gemunion/constants";
 import firebase from "@gemunion/firebase";
 import { useUser } from "@gemunion/provider-user";
+import { KeplrIcon } from "@gemunion/provider-wallet";
 import { useApiCall } from "@gemunion/react-hooks";
 import type { IKeplrDto } from "@gemunion/types-jwt";
 
 import { StyledButton } from "./styled";
-import { KeplrIcon } from "./icon";
 
 const emptySignature: StdSignature = {
   pub_key: {

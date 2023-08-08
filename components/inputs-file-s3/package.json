@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/mui-inputs-file": "6.1.25",
     "@gemunion/provider-api": "7.0.38",
-    "@gemunion/react-hooks": "1.1.14",
+    "@gemunion/react-hooks": "1.1.41",
     "mime-types": "2.1.35"
   },
   "description": "react widget",
