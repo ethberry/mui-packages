@@ -5,6 +5,7 @@ export * from "./bitski";
 export * from "./coin-base";
 export * from "./fortmatic";
 export * from "./fun-fair";
+export * from "./keplr";
 export * from "./keep-key";
 export * from "./ledger";
 export * from "./meta-mask";
