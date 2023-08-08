@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/constants": "0.12.7",
     "@gemunion/mui-page-layout": "2.2.25",
-    "@gemunion/types-jwt": "0.3.10",
+    "@gemunion/types-jwt": "0.3.11",
     "@web3-react/core": "8.2.0",
     "uuid": "9.0.0"
   },

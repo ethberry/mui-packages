@@ -9,16 +9,10 @@ import { phrase } from "@gemunion/constants";
 import firebase from "@gemunion/firebase";
 import { useUser } from "@gemunion/provider-user";
 import { useApiCall } from "@gemunion/react-hooks";
+import type { IKeplrDto } from "@gemunion/types-jwt";
 
 import { StyledButton } from "./styled";
 import { KeplrIcon } from "./icon";
-
-export interface IKeplrDto {
-  nonce: string;
-  signature: StdSignature;
-  wallet: string;
-  chainPrefix: string;
-}
 
 const emptySignature: StdSignature = {
   pub_key: {
