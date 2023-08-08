@@ -15,8 +15,6 @@ export const StyledButton = styled(Button)`
   max-width: 220px;
   min-height: 40px;
   padding: 8px;
-  margin-top: 16px;
-  margin-bottom: 16px;
   text-transform: none;
   & .MuiButton-startIcon {
     margin-right: 8px;

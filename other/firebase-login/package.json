@@ -8,6 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
+    "@cosmjs/stargate": "0.31.0",
     "@gemunion/constants": "0.12.7",
     "@gemunion/firebase": "1.2.15",
     "@gemunion/mui-page-layout": "2.2.25",
@@ -16,6 +17,7 @@
     "@gemunion/react-hooks": "1.1.41",
     "@gemunion/react-hooks-eth": "1.1.0",
     "@gemunion/types-collection": "1.5.11",
+    "@keplr-wallet/types": "0.12.19",
     "@mui/icons-material": "5.14.3",
     "@web3-react/core": "8.2.0",
     "firebaseui": "6.1.0",

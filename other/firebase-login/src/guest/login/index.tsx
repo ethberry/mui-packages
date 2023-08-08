@@ -21,6 +21,7 @@ import { useLicense } from "@gemunion/provider-license";
 import { useUser } from "@gemunion/provider-user";
 
 import { MetamaskButton } from "./metamask";
+import { KeplrButton } from "./keplr";
 
 export enum PROVIDERS {
   email = "email",
@@ -40,16 +41,18 @@ export const providersStore = {
 export interface IFirebaseLogin {
   providers?: PROVIDERS[];
   withMetamask?: boolean;
+  withKeplr?: boolean;
 }
 
 export const FirebaseLogin: FC<IFirebaseLogin> = props => {
-  const { providers = [PROVIDERS.email], withMetamask = false } = props;
+  const { providers = [PROVIDERS.email], withMetamask = false, withKeplr = false } = props;
   const { formatMessage } = useIntl();
 
   const license = useLicense();
 
   const [showMessage, setShowMessage] = useState<boolean>(false);
   const [showMetamask, setShowMetamask] = useState<boolean>(withMetamask);
+  const [showKeplr, setShowKeplr] = useState<boolean>(withKeplr);
   const [isLoggingIn, setIsLoggingIn] = useState<boolean>(false);
 
   const user = useUser<any>();
@@ -68,6 +71,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
       callbacks: {
         signInSuccessWithAuthResult: data => {
           setShowMetamask(false);
+          setShowKeplr(false);
           if (data.additionalUserInfo.isNewUser && !data.additionalUserInfo.profile.verified_email) {
             const actionCodeSettings = {
               url: `${window.location.origin}/login`,
@@ -110,16 +114,19 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
     return null;
   }
 
+  const hasWalletLogin = withMetamask || withKeplr;
+
   return (
     <ProgressOverlay isLoading={isLoggingIn}>
       <Grid
         container
+        spacing={4}
         sx={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           height: "calc(100vh - 64px)",
-          maxWidth: 500,
+          maxWidth: hasWalletLogin ? 900 : 500,
           margin: "0 auto",
           textAlign: "center",
           "& #firebaseui-auth-container": {
@@ -128,7 +135,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
           },
         }}
       >
-        <Grid item sm={12}>
+        <Grid item xs={12} sm={hasWalletLogin ? 6 : 12}>
           {showMessage && (
             <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
               <FormattedMessage id="pages.guest.confirmation" />
@@ -147,8 +154,13 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
             </Box>
           )}
           <div id="firebaseui-auth-container" />
-          {withMetamask && showMetamask ? <MetamaskButton /> : null}
         </Grid>
+        {hasWalletLogin ? (
+          <Grid item xs={12} sm={6}>
+            {withMetamask && showMetamask ? <MetamaskButton /> : null}
+            {withKeplr && showKeplr ? <KeplrButton /> : null}
+          </Grid>
+        ) : null}
       </Grid>
     </ProgressOverlay>
   );
