@@ -16,9 +16,9 @@
   },
   "description": "react component",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.38",
+    "@gemunion/provider-api": "7.0.39",
     "@gemunion/provider-license": "3.0.27",
-    "@gemunion/provider-user": "6.0.41",
+    "@gemunion/provider-user": "6.0.42",
     "@gemunion/provider-wallet": "3.3.38",
     "@mui/material": "5.14.3",
     "@mui/styles": "5.14.3",
