@@ -3,109 +3,66 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.32](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.2.31...@gemunion/mui-inputs-core@7.2.32) (2023-08-11)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([cc4cca4](https://github.com/gemunion/mui-packages/commit/cc4cca485794f9ff1de28328676a82d2f1ed117c))
+
 ## 7.2.31 (2023-08-08)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core
 
-
-
-
-
 ## [7.2.30](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.2.29...@gemunion/mui-inputs-core@7.2.30) (2023-08-05)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
 
 ## [7.2.29](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.2.28...@gemunion/mui-inputs-core@7.2.29) (2023-08-04)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core
 
-
-
-
-
 ## 7.2.28 (2023-08-03)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/mui-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/mui-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
 
 ## [7.2.27](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.2.26...@gemunion/mui-inputs-core@7.2.27) (2023-07-30)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core
 
-
-
-
-
 ## [7.2.26](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.2.25...@gemunion/mui-inputs-core@7.2.26) (2023-07-29)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
 
 ## 7.2.25 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core
 
-
-
-
-
 ## [7.2.24](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.2.23...@gemunion/mui-inputs-core@7.2.24) (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core
-
-
-
-
 
 ## [7.2.23](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.2.22...@gemunion/mui-inputs-core@7.2.23) (2023-07-23)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core
 
-
-
-
-
 ## [7.2.22](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.2.21...@gemunion/mui-inputs-core@7.2.22) (2023-07-18)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
 
 ## [7.2.21](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.2.20...@gemunion/mui-inputs-core@7.2.21) (2023-07-17)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/mui-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
-* **deps:** update dependency clsx to v2 ([651369b](https://github.com/gemunion/mui-packages/commit/651369b73cd592ba7bd975b4b40dae112c21940b))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/mui-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
+- **deps:** update dependency clsx to v2 ([651369b](https://github.com/gemunion/mui-packages/commit/651369b73cd592ba7bd975b4b40dae112c21940b))
 
 ## [7.2.20](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.2.19...@gemunion/mui-inputs-core@7.2.20) (2023-07-15)
 

@@ -3,104 +3,61 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.5.33](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.32...@gemunion/mui-inputs-mask@5.5.33) (2023-08-11)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([cc4cca4](https://github.com/gemunion/mui-packages/commit/cc4cca485794f9ff1de28328676a82d2f1ed117c))
+
 ## 5.5.32 (2023-08-08)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
-
-
-
-
 
 ## [5.5.31](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.30...@gemunion/mui-inputs-mask@5.5.31) (2023-08-05)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
 
-
-
-
-
 ## [5.5.30](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.29...@gemunion/mui-inputs-mask@5.5.30) (2023-08-04)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
-
-
-
-
 
 ## 5.5.29 (2023-08-03)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
 
-
-
-
-
 ## 5.5.28 (2023-07-30)
-
 
 ### Bug Fixes
 
-* input memo ([0ab4eb3](https://github.com/gemunion/mui-packages/commit/0ab4eb365cf635c246f3241a7a8486f82ab5b0dd))
-
-
-
-
+- input memo ([0ab4eb3](https://github.com/gemunion/mui-packages/commit/0ab4eb365cf635c246f3241a7a8486f82ab5b0dd))
 
 ## [5.5.27](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.26...@gemunion/mui-inputs-mask@5.5.27) (2023-07-30)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
 
-
-
-
-
 ## [5.5.26](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.25...@gemunion/mui-inputs-mask@5.5.26) (2023-07-29)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
-
-
-
-
 
 ## 5.5.25 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
 
-
-
-
-
 ## [5.5.24](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.23...@gemunion/mui-inputs-mask@5.5.24) (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
-
-
-
-
 
 ## [5.5.23](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.22...@gemunion/mui-inputs-mask@5.5.23) (2023-07-23)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
 
-
-
-
-
 ## [5.5.22](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.21...@gemunion/mui-inputs-mask@5.5.22) (2023-07-18)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
 
-
-
-
-
 ## [5.5.21](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.20...@gemunion/mui-inputs-mask@5.5.21) (2023-07-17)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
-
-
-
-
 
 ## [5.5.20](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.19...@gemunion/mui-inputs-mask@5.5.20) (2023-07-15)
 

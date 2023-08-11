@@ -3,95 +3,59 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.43](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.1.42...@gemunion/react-hooks@1.1.43) (2023-08-11)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([cc4cca4](https://github.com/gemunion/mui-packages/commit/cc4cca485794f9ff1de28328676a82d2f1ed117c))
+
 ## 1.1.42 (2023-08-08)
 
 **Note:** Version bump only for package @gemunion/react-hooks
 
-
-
-
-
 ## [1.1.41](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.1.40...@gemunion/react-hooks@1.1.41) (2023-08-05)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
 
 ## [1.1.40](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.1.39...@gemunion/react-hooks@1.1.40) (2023-08-04)
 
 **Note:** Version bump only for package @gemunion/react-hooks
 
-
-
-
-
 ## 1.1.39 (2023-08-03)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/mui-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/mui-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
 
 ## [1.1.38](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.1.37...@gemunion/react-hooks@1.1.38) (2023-07-30)
 
-
 ### Bug Fixes
 
-* add refresh page to use collection ([eb4389c](https://github.com/gemunion/mui-packages/commit/eb4389c5dff72ff16318d3f21367663f98c6f5c1))
-
-
-
-
+- add refresh page to use collection ([eb4389c](https://github.com/gemunion/mui-packages/commit/eb4389c5dff72ff16318d3f21367663f98c6f5c1))
 
 ## 1.1.37 (2023-07-29)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
 
 ## 1.1.36 (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/react-hooks
 
-
-
-
-
 ## [1.1.35](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.1.34...@gemunion/react-hooks@1.1.35) (2023-07-18)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
 
 ## [1.1.34](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.1.33...@gemunion/react-hooks@1.1.34) (2023-07-17)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/mui-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/mui-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
 
 ## 1.1.33 (2023-07-15)
 

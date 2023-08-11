@@ -3,108 +3,65 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.31](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.1.30...@gemunion/geetest@2.1.31) (2023-08-11)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([cc4cca4](https://github.com/gemunion/common-packages/commit/cc4cca485794f9ff1de28328676a82d2f1ed117c))
+
 ## 2.1.30 (2023-08-08)
 
 **Note:** Version bump only for package @gemunion/geetest
 
-
-
-
-
 ## [2.1.29](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.1.28...@gemunion/geetest@2.1.29) (2023-08-05)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/common-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/common-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
 
 ## [2.1.28](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.1.27...@gemunion/geetest@2.1.28) (2023-08-04)
 
 **Note:** Version bump only for package @gemunion/geetest
 
-
-
-
-
 ## 2.1.27 (2023-08-03)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/common-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/common-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
 
 ## [2.1.26](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.1.25...@gemunion/geetest@2.1.26) (2023-07-30)
 
 **Note:** Version bump only for package @gemunion/geetest
 
-
-
-
-
 ## [2.1.25](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.1.24...@gemunion/geetest@2.1.25) (2023-07-29)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/common-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/common-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
 
 ## 2.1.24 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/geetest
 
-
-
-
-
 ## [2.1.23](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.1.22...@gemunion/geetest@2.1.23) (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/geetest
-
-
-
-
 
 ## [2.1.22](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.1.21...@gemunion/geetest@2.1.22) (2023-07-23)
 
 **Note:** Version bump only for package @gemunion/geetest
 
-
-
-
-
 ## [2.1.21](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.1.20...@gemunion/geetest@2.1.21) (2023-07-18)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/common-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/common-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
 
 ## [2.1.20](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.1.19...@gemunion/geetest@2.1.20) (2023-07-17)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/common-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/common-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
 
 ## [2.1.19](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.1.18...@gemunion/geetest@2.1.19) (2023-07-15)
 

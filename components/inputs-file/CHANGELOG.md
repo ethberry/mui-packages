@@ -3,64 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.1.26 (2023-08-11)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([cc4cca4](https://github.com/gemunion/mui-packages/commit/cc4cca485794f9ff1de28328676a82d2f1ed117c))
+
 ## 6.1.25 (2023-08-05)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file
-
-
-
-
 
 ## 6.1.24 (2023-08-03)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file
 
-
-
-
-
 ## 6.1.23 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file
-
-
-
-
 
 ## [6.1.22](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@6.1.21...@gemunion/mui-inputs-file@6.1.22) (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file
 
-
-
-
-
 ## [6.1.21](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@6.1.20...@gemunion/mui-inputs-file@6.1.21) (2023-07-23)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file
-
-
-
-
 
 ## [6.1.20](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@6.1.19...@gemunion/mui-inputs-file@6.1.20) (2023-07-18)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file
 
-
-
-
-
 ## [6.1.19](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@6.1.18...@gemunion/mui-inputs-file@6.1.19) (2023-07-17)
-
 
 ### Bug Fixes
 
-* **deps:** update dependency clsx to v2 ([651369b](https://github.com/gemunion/mui-packages/commit/651369b73cd592ba7bd975b4b40dae112c21940b))
-
-
-
-
+- **deps:** update dependency clsx to v2 ([651369b](https://github.com/gemunion/mui-packages/commit/651369b73cd592ba7bd975b4b40dae112c21940b))
 
 ## [6.1.18](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@6.1.17...@gemunion/mui-inputs-file@6.1.18) (2023-07-15)
 

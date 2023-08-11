@@ -3,100 +3,61 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.100](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.99...@gemunion/provider-localization@3.0.100) (2023-08-11)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([cc4cca4](https://github.com/gemunion/mui-packages/commit/cc4cca485794f9ff1de28328676a82d2f1ed117c))
+
 ## 3.0.99 (2023-08-08)
 
 **Note:** Version bump only for package @gemunion/provider-localization
 
-
-
-
-
 ## [3.0.98](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.97...@gemunion/provider-localization@3.0.98) (2023-08-05)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
 
 ## [3.0.97](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.96...@gemunion/provider-localization@3.0.97) (2023-08-04)
 
 **Note:** Version bump only for package @gemunion/provider-localization
 
-
-
-
-
 ## 3.0.96 (2023-08-03)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/mui-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/mui-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
 
 ## [3.0.95](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.94...@gemunion/provider-localization@3.0.95) (2023-07-29)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
 
 ## 3.0.94 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/provider-localization
 
-
-
-
-
 ## [3.0.93](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.92...@gemunion/provider-localization@3.0.93) (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/provider-localization
-
-
-
-
 
 ## [3.0.92](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.91...@gemunion/provider-localization@3.0.92) (2023-07-23)
 
 **Note:** Version bump only for package @gemunion/provider-localization
 
-
-
-
-
 ## [3.0.91](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.90...@gemunion/provider-localization@3.0.91) (2023-07-18)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
 
 ## [3.0.90](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.89...@gemunion/provider-localization@3.0.90) (2023-07-17)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/mui-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/mui-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
 
 ## [3.0.89](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.88...@gemunion/provider-localization@3.0.89) (2023-07-15)
 

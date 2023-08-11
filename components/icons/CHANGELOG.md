@@ -3,45 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.22 (2023-08-11)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([cc4cca4](https://github.com/gemunion/mui-packages/commit/cc4cca485794f9ff1de28328676a82d2f1ed117c))
+
 ## 1.1.21 (2023-08-05)
 
 **Note:** Version bump only for package @gemunion/mui-icons
-
-
-
-
 
 ## 1.1.20 (2023-08-03)
 
 **Note:** Version bump only for package @gemunion/mui-icons
 
-
-
-
-
 ## 1.1.19 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/mui-icons
-
-
-
-
 
 ## [1.1.18](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-icons@1.1.17...@gemunion/mui-icons@1.1.18) (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/mui-icons
 
-
-
-
-
 ## 1.1.17 (2023-07-23)
 
 **Note:** Version bump only for package @gemunion/mui-icons
-
-
-
-
 
 ## [1.1.16](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-icons@1.1.15...@gemunion/mui-icons@1.1.16) (2023-07-15)
 

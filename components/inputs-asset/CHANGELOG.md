@@ -3,124 +3,73 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.27](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.26...@gemunion/mui-inputs-asset@2.4.27) (2023-08-11)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([cc4cca4](https://github.com/gemunion/mui-packages/commit/cc4cca485794f9ff1de28328676a82d2f1ed117c))
+
 ## 2.4.26 (2023-08-08)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset
 
-
-
-
-
 ## [2.4.25](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.24...@gemunion/mui-inputs-asset@2.4.25) (2023-08-05)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
 
 ## [2.4.24](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.23...@gemunion/mui-inputs-asset@2.4.24) (2023-08-04)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset
 
-
-
-
-
 ## 2.4.23 (2023-08-03)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset
 
-
-
-
-
 ## [2.4.22](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.21...@gemunion/mui-inputs-asset@2.4.22) (2023-07-30)
-
 
 ### Bug Fixes
 
-* input memo ([0ab4eb3](https://github.com/gemunion/mui-packages/commit/0ab4eb365cf635c246f3241a7a8486f82ab5b0dd))
-
-
-
-
+- input memo ([0ab4eb3](https://github.com/gemunion/mui-packages/commit/0ab4eb365cf635c246f3241a7a8486f82ab5b0dd))
 
 ## [2.4.21](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.20...@gemunion/mui-inputs-asset@2.4.21) (2023-07-30)
 
-
 ### Bug Fixes
 
-* includeExternalContracts ([89f4207](https://github.com/gemunion/mui-packages/commit/89f42077d8df63b417dfc02926e510375eaa8d18))
-
-
-
-
+- includeExternalContracts ([89f4207](https://github.com/gemunion/mui-packages/commit/89f42077d8df63b417dfc02926e510375eaa8d18))
 
 ## [2.4.20](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.19...@gemunion/mui-inputs-asset@2.4.20) (2023-07-30)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset
 
-
-
-
-
 ## [2.4.19](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.18...@gemunion/mui-inputs-asset@2.4.19) (2023-07-29)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
 
 ## 2.4.18 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset
 
-
-
-
-
 ## [2.4.17](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.16...@gemunion/mui-inputs-asset@2.4.17) (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset
-
-
-
-
 
 ## [2.4.16](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.15...@gemunion/mui-inputs-asset@2.4.16) (2023-07-23)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset
 
-
-
-
-
 ## [2.4.15](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.14...@gemunion/mui-inputs-asset@2.4.15) (2023-07-18)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
 
 ## [2.4.14](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.13...@gemunion/mui-inputs-asset@2.4.14) (2023-07-17)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset
-
-
-
-
 
 ## [2.4.13](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.12...@gemunion/mui-inputs-asset@2.4.13) (2023-07-15)
 

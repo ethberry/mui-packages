@@ -3,53 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.0.38 (2023-08-11)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([cc4cca4](https://github.com/gemunion/mui-packages/commit/cc4cca485794f9ff1de28328676a82d2f1ed117c))
+
 ## 6.0.37 (2023-08-05)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-picker
-
-
-
-
 
 ## 6.0.36 (2023-08-03)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-picker
 
-
-
-
-
 ## 6.0.35 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-picker
-
-
-
-
 
 ## [6.0.34](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@6.0.33...@gemunion/mui-inputs-picker@6.0.34) (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-picker
 
-
-
-
-
 ## [6.0.33](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@6.0.32...@gemunion/mui-inputs-picker@6.0.33) (2023-07-23)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-picker
 
-
-
-
-
 ## 6.0.32 (2023-07-18)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-picker
-
-
-
-
 
 ## [6.0.31](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@6.0.30...@gemunion/mui-inputs-picker@6.0.31) (2023-07-15)
 

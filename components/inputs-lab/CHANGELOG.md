@@ -3,64 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.71 (2023-08-11)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([cc4cca4](https://github.com/gemunion/mui-packages/commit/cc4cca485794f9ff1de28328676a82d2f1ed117c))
+
 ## 5.0.70 (2023-08-05)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-lab
-
-
-
-
 
 ## 5.0.69 (2023-08-03)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-lab
 
-
-
-
-
 ## 5.0.68 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-lab
-
-
-
-
 
 ## [5.0.67](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-lab@5.0.66...@gemunion/mui-inputs-lab@5.0.67) (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-lab
 
-
-
-
-
 ## [5.0.66](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-lab@5.0.65...@gemunion/mui-inputs-lab@5.0.66) (2023-07-23)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-lab
-
-
-
-
 
 ## [5.0.65](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-lab@5.0.64...@gemunion/mui-inputs-lab@5.0.65) (2023-07-18)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-lab
 
-
-
-
-
 ## [5.0.64](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-lab@5.0.63...@gemunion/mui-inputs-lab@5.0.64) (2023-07-17)
-
 
 ### Bug Fixes
 
-* **deps:** update dependency clsx to v2 ([651369b](https://github.com/gemunion/mui-packages/commit/651369b73cd592ba7bd975b4b40dae112c21940b))
-
-
-
-
+- **deps:** update dependency clsx to v2 ([651369b](https://github.com/gemunion/mui-packages/commit/651369b73cd592ba7bd975b4b40dae112c21940b))
 
 ## [5.0.63](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-lab@5.0.62...@gemunion/mui-inputs-lab@5.0.63) (2023-07-15)
 

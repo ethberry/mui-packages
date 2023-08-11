@@ -3,103 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## 3.3.39 (2023-08-08)
-
+## [3.3.40](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.3.39...@gemunion/provider-wallet@3.3.40) (2023-08-11)
 
 ### Bug Fixes
 
-* add keplr icon to provider-wallet ([cd4c37a](https://github.com/gemunion/mui-packages/commit/cd4c37a2618bbc4288b63a66eda4af5d131a85be))
+- **deps:** update all non-major dependencies ([cc4cca4](https://github.com/gemunion/mui-packages/commit/cc4cca485794f9ff1de28328676a82d2f1ed117c))
 
+## 3.3.39 (2023-08-08)
 
+### Bug Fixes
 
-
+- add keplr icon to provider-wallet ([cd4c37a](https://github.com/gemunion/mui-packages/commit/cd4c37a2618bbc4288b63a66eda4af5d131a85be))
 
 ## [3.3.38](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.3.37...@gemunion/provider-wallet@3.3.38) (2023-08-05)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
 
 ## [3.3.37](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.3.36...@gemunion/provider-wallet@3.3.37) (2023-08-04)
 
 **Note:** Version bump only for package @gemunion/provider-wallet
 
-
-
-
-
 ## 3.3.36 (2023-08-03)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/mui-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/mui-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
 
 ## [3.3.35](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.3.34...@gemunion/provider-wallet@3.3.35) (2023-07-29)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
 
 ## 3.3.34 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/provider-wallet
 
-
-
-
-
 ## [3.3.33](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.3.32...@gemunion/provider-wallet@3.3.33) (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/provider-wallet
-
-
-
-
 
 ## [3.3.32](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.3.31...@gemunion/provider-wallet@3.3.32) (2023-07-23)
 
 **Note:** Version bump only for package @gemunion/provider-wallet
 
-
-
-
-
 ## [3.3.31](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.3.30...@gemunion/provider-wallet@3.3.31) (2023-07-18)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
 
 ## [3.3.30](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.3.29...@gemunion/provider-wallet@3.3.30) (2023-07-17)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/mui-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/mui-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
 
 ## [3.3.29](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.3.28...@gemunion/provider-wallet@3.3.29) (2023-07-15)
 

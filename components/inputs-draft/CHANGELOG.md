@@ -3,116 +3,69 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.2.33](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@5.2.32...@gemunion/mui-inputs-draft@5.2.33) (2023-08-11)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([cc4cca4](https://github.com/gemunion/mui-packages/commit/cc4cca485794f9ff1de28328676a82d2f1ed117c))
+
 ## 5.2.32 (2023-08-08)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-draft
 
-
-
-
-
 ## [5.2.31](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@5.2.30...@gemunion/mui-inputs-draft@5.2.31) (2023-08-05)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
 
 ## [5.2.30](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@5.2.29...@gemunion/mui-inputs-draft@5.2.30) (2023-08-04)
 
-
 ### Bug Fixes
 
-* validation issue on draft input ([c04d077](https://github.com/gemunion/mui-packages/commit/c04d077c622556154db27b87421069d90868e9bf))
-
-
-
-
+- validation issue on draft input ([c04d077](https://github.com/gemunion/mui-packages/commit/c04d077c622556154db27b87421069d90868e9bf))
 
 ## 5.2.29 (2023-08-03)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-draft
 
-
-
-
-
 ## [5.2.28](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@5.2.27...@gemunion/mui-inputs-draft@5.2.28) (2023-07-30)
-
 
 ### Bug Fixes
 
-* **deps:** update gemunion to v3.0.2 ([a461979](https://github.com/gemunion/mui-packages/commit/a4619797965cefb6ff60eb89aa774bbf943b6d61))
-
-
-
-
+- **deps:** update gemunion to v3.0.2 ([a461979](https://github.com/gemunion/mui-packages/commit/a4619797965cefb6ff60eb89aa774bbf943b6d61))
 
 ## [5.2.27](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@5.2.26...@gemunion/mui-inputs-draft@5.2.27) (2023-07-30)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-draft
 
-
-
-
-
 ## [5.2.26](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@5.2.25...@gemunion/mui-inputs-draft@5.2.26) (2023-07-29)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
 
 ## 5.2.25 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-draft
 
-
-
-
-
 ## [5.2.24](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@5.2.23...@gemunion/mui-inputs-draft@5.2.24) (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-draft
-
-
-
-
 
 ## [5.2.23](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@5.2.22...@gemunion/mui-inputs-draft@5.2.23) (2023-07-23)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-draft
 
-
-
-
-
 ## [5.2.22](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@5.2.21...@gemunion/mui-inputs-draft@5.2.22) (2023-07-18)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
 
 ## [5.2.21](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@5.2.20...@gemunion/mui-inputs-draft@5.2.21) (2023-07-17)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-draft
-
-
-
-
 
 ## [5.2.20](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@5.2.19...@gemunion/mui-inputs-draft@5.2.20) (2023-07-15)
 

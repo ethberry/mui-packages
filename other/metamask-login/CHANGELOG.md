@@ -3,103 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## 3.1.49 (2023-08-08)
-
+## [3.1.50](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.1.49...@gemunion/metamask-login@3.1.50) (2023-08-11)
 
 ### Bug Fixes
 
-* update types-jwt to replace IKeplrDto ([64aa685](https://github.com/gemunion/mui-packages/commit/64aa68569b66af72d09df64b8a8e7648390de6c8))
+- **deps:** update all non-major dependencies ([cc4cca4](https://github.com/gemunion/mui-packages/commit/cc4cca485794f9ff1de28328676a82d2f1ed117c))
 
+## 3.1.49 (2023-08-08)
 
+### Bug Fixes
 
-
+- update types-jwt to replace IKeplrDto ([64aa685](https://github.com/gemunion/mui-packages/commit/64aa68569b66af72d09df64b8a8e7648390de6c8))
 
 ## [3.1.48](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.1.47...@gemunion/metamask-login@3.1.48) (2023-08-05)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
 
 ## [3.1.47](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.1.46...@gemunion/metamask-login@3.1.47) (2023-08-04)
 
 **Note:** Version bump only for package @gemunion/metamask-login
 
-
-
-
-
 ## 3.1.46 (2023-08-03)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/mui-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/mui-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
 
 ## [3.1.45](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.1.44...@gemunion/metamask-login@3.1.45) (2023-07-29)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
 
 ## 3.1.44 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/metamask-login
 
-
-
-
-
 ## [3.1.43](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.1.42...@gemunion/metamask-login@3.1.43) (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/metamask-login
-
-
-
-
 
 ## [3.1.42](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.1.41...@gemunion/metamask-login@3.1.42) (2023-07-23)
 
 **Note:** Version bump only for package @gemunion/metamask-login
 
-
-
-
-
 ## [3.1.41](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.1.40...@gemunion/metamask-login@3.1.41) (2023-07-18)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
 
 ## [3.1.40](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.1.39...@gemunion/metamask-login@3.1.40) (2023-07-17)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/mui-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/mui-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
 
 ## [3.1.39](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.1.38...@gemunion/metamask-login@3.1.39) (2023-07-15)
 

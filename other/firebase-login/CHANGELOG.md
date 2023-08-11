@@ -3,124 +3,75 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [2.2.54](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.53...@gemunion/firebase-login@2.2.54) (2023-08-08)
-
+## [2.2.55](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.54...@gemunion/firebase-login@2.2.55) (2023-08-11)
 
 ### Bug Fixes
 
-* add keplr login button ([aeb95cc](https://github.com/gemunion/mui-packages/commit/aeb95cc1a6a21a468a5d768a99b2e31f31edc902))
-* update types-jwt to replace IKeplrDto ([64aa685](https://github.com/gemunion/mui-packages/commit/64aa68569b66af72d09df64b8a8e7648390de6c8))
-* version of react-hooks and KeplrIcon ([30d865f](https://github.com/gemunion/mui-packages/commit/30d865f1f85be73fe70256d263be359f6dcc4c87))
+- **deps:** update all non-major dependencies ([cc4cca4](https://github.com/gemunion/mui-packages/commit/cc4cca485794f9ff1de28328676a82d2f1ed117c))
 
+## [2.2.54](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.53...@gemunion/firebase-login@2.2.54) (2023-08-08)
 
+### Bug Fixes
 
-
+- add keplr login button ([aeb95cc](https://github.com/gemunion/mui-packages/commit/aeb95cc1a6a21a468a5d768a99b2e31f31edc902))
+- update types-jwt to replace IKeplrDto ([64aa685](https://github.com/gemunion/mui-packages/commit/64aa68569b66af72d09df64b8a8e7648390de6c8))
+- version of react-hooks and KeplrIcon ([30d865f](https://github.com/gemunion/mui-packages/commit/30d865f1f85be73fe70256d263be359f6dcc4c87))
 
 ## [2.2.53](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.52...@gemunion/firebase-login@2.2.53) (2023-08-05)
 
 **Note:** Version bump only for package @gemunion/firebase-login
 
-
-
-
-
 ## [2.2.52](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.51...@gemunion/firebase-login@2.2.52) (2023-08-05)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
 
 ## [2.2.51](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.50...@gemunion/firebase-login@2.2.51) (2023-08-04)
 
 **Note:** Version bump only for package @gemunion/firebase-login
 
-
-
-
-
 ## 2.2.50 (2023-08-03)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/mui-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/mui-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
 
 ## [2.2.49](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.48...@gemunion/firebase-login@2.2.49) (2023-07-30)
 
 **Note:** Version bump only for package @gemunion/firebase-login
 
-
-
-
-
 ## [2.2.48](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.47...@gemunion/firebase-login@2.2.48) (2023-07-29)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
 
 ## 2.2.47 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/firebase-login
 
-
-
-
-
 ## [2.2.46](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.45...@gemunion/firebase-login@2.2.46) (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/firebase-login
 
-
-
-
-
 ## [2.2.45](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.44...@gemunion/firebase-login@2.2.45) (2023-07-23)
-
 
 ### Bug Fixes
 
-* **deps:** update gemunion to v1.2.14 ([413968c](https://github.com/gemunion/mui-packages/commit/413968cb4acc4ea880077f862a708c513227e3c6))
-
-
-
-
+- **deps:** update gemunion to v1.2.14 ([413968c](https://github.com/gemunion/mui-packages/commit/413968cb4acc4ea880077f862a708c513227e3c6))
 
 ## [2.2.44](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.43...@gemunion/firebase-login@2.2.44) (2023-07-18)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
 
 ## [2.2.43](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.42...@gemunion/firebase-login@2.2.43) (2023-07-17)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/mui-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/mui-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
 
 ## [2.2.42](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.41...@gemunion/firebase-login@2.2.42) (2023-07-15)
 

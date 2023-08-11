@@ -3,70 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## 6.0.108 (2023-08-05)
+## 6.0.109 (2023-08-11)
 
+**Note:** Version bump only for package @gemunion/mui-inputs-file-firebase
+
+## 6.0.108 (2023-08-05)
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
 
 ## 6.0.107 (2023-08-03)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-firebase
 
-
-
-
-
 ## 6.0.106 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-firebase
-
-
-
-
 
 ## [6.0.105](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-firebase@6.0.104...@gemunion/mui-inputs-file-firebase@6.0.105) (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-firebase
 
-
-
-
-
 ## [6.0.104](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-firebase@6.0.103...@gemunion/mui-inputs-file-firebase@6.0.104) (2023-07-23)
-
 
 ### Bug Fixes
 
-* **deps:** update gemunion to v1.2.14 ([413968c](https://github.com/gemunion/mui-packages/commit/413968cb4acc4ea880077f862a708c513227e3c6))
-
-
-
-
+- **deps:** update gemunion to v1.2.14 ([413968c](https://github.com/gemunion/mui-packages/commit/413968cb4acc4ea880077f862a708c513227e3c6))
 
 ## [6.0.103](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-firebase@6.0.102...@gemunion/mui-inputs-file-firebase@6.0.103) (2023-07-18)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
 
 ## [6.0.102](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-firebase@6.0.101...@gemunion/mui-inputs-file-firebase@6.0.102) (2023-07-17)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-firebase
-
-
-
-
 
 ## [6.0.101](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-firebase@6.0.100...@gemunion/mui-inputs-file-firebase@6.0.101) (2023-07-15)
 

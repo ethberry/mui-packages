@@ -3,85 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.31](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.2.30...@gemunion/mui-scanner@1.2.31) (2023-08-11)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([cc4cca4](https://github.com/gemunion/mui-packages/commit/cc4cca485794f9ff1de28328676a82d2f1ed117c))
+
 ## 1.2.30 (2023-08-08)
 
 **Note:** Version bump only for package @gemunion/mui-scanner
-
-
-
-
 
 ## [1.2.29](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.2.28...@gemunion/mui-scanner@1.2.29) (2023-08-05)
 
 **Note:** Version bump only for package @gemunion/mui-scanner
 
-
-
-
-
 ## [1.2.28](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.2.27...@gemunion/mui-scanner@1.2.28) (2023-08-04)
 
 **Note:** Version bump only for package @gemunion/mui-scanner
-
-
-
-
 
 ## 1.2.27 (2023-08-03)
 
 **Note:** Version bump only for package @gemunion/mui-scanner
 
-
-
-
-
 ## [1.2.26](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.2.25...@gemunion/mui-scanner@1.2.26) (2023-07-29)
 
 **Note:** Version bump only for package @gemunion/mui-scanner
-
-
-
-
 
 ## 1.2.25 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/mui-scanner
 
-
-
-
-
 ## [1.2.24](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.2.23...@gemunion/mui-scanner@1.2.24) (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/mui-scanner
-
-
-
-
 
 ## [1.2.23](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.2.22...@gemunion/mui-scanner@1.2.23) (2023-07-23)
 
 **Note:** Version bump only for package @gemunion/mui-scanner
 
-
-
-
-
 ## [1.2.22](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.2.21...@gemunion/mui-scanner@1.2.22) (2023-07-18)
 
 **Note:** Version bump only for package @gemunion/mui-scanner
 
-
-
-
-
 ## [1.2.21](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.2.20...@gemunion/mui-scanner@1.2.21) (2023-07-17)
 
 **Note:** Version bump only for package @gemunion/mui-scanner
-
-
-
-
 
 ## [1.2.20](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.2.19...@gemunion/mui-scanner@1.2.20) (2023-07-15)
 

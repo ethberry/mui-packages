@@ -3,99 +3,59 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.2.33](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.32...@gemunion/mui-dialog-form@8.2.33) (2023-08-11)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([cc4cca4](https://github.com/gemunion/mui-packages/commit/cc4cca485794f9ff1de28328676a82d2f1ed117c))
+
 ## 8.2.32 (2023-08-08)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
 
-
-
-
-
 ## [8.2.31](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.30...@gemunion/mui-dialog-form@8.2.31) (2023-08-05)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
 
 ## [8.2.30](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.29...@gemunion/mui-dialog-form@8.2.30) (2023-08-04)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
 
-
-
-
-
 ## 8.2.29 (2023-08-03)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
-
-
-
-
 
 ## [8.2.28](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.27...@gemunion/mui-dialog-form@8.2.28) (2023-07-30)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
 
-
-
-
-
 ## [8.2.27](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.26...@gemunion/mui-dialog-form@8.2.27) (2023-07-29)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
 
 ## 8.2.26 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
 
-
-
-
-
 ## [8.2.25](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.24...@gemunion/mui-dialog-form@8.2.25) (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
-
-
-
-
 
 ## [8.2.24](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.23...@gemunion/mui-dialog-form@8.2.24) (2023-07-23)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
 
-
-
-
-
 ## [8.2.23](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.22...@gemunion/mui-dialog-form@8.2.23) (2023-07-18)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
 
-
-
-
-
 ## [8.2.22](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.21...@gemunion/mui-dialog-form@8.2.22) (2023-07-17)
 
 **Note:** Version bump only for package @gemunion/mui-dialog-form
-
-
-
-
 
 ## [8.2.21](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.20...@gemunion/mui-dialog-form@8.2.21) (2023-07-15)
 

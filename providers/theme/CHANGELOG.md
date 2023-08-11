@@ -3,92 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.75](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.74...@gemunion/provider-theme@6.0.75) (2023-08-11)
+
+**Note:** Version bump only for package @gemunion/provider-theme
+
 ## 6.0.74 (2023-08-08)
 
 **Note:** Version bump only for package @gemunion/provider-theme
 
-
-
-
-
 ## [6.0.73](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.72...@gemunion/provider-theme@6.0.73) (2023-08-05)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
 
 ## [6.0.72](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.71...@gemunion/provider-theme@6.0.72) (2023-08-04)
 
 **Note:** Version bump only for package @gemunion/provider-theme
 
-
-
-
-
 ## 6.0.71 (2023-08-03)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/mui-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/mui-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
 
 ## [6.0.70](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.69...@gemunion/provider-theme@6.0.70) (2023-07-29)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
 
 ## 6.0.69 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/provider-theme
 
-
-
-
-
 ## [6.0.68](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.67...@gemunion/provider-theme@6.0.68) (2023-07-23)
 
 **Note:** Version bump only for package @gemunion/provider-theme
 
-
-
-
-
 ## [6.0.67](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.66...@gemunion/provider-theme@6.0.67) (2023-07-18)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
 
 ## [6.0.66](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.65...@gemunion/provider-theme@6.0.66) (2023-07-17)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/mui-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/mui-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
 
 ## [6.0.65](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.64...@gemunion/provider-theme@6.0.65) (2023-07-15)
 

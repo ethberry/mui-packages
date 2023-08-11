@@ -3,103 +3,61 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## 7.1.30 (2023-08-08)
+## [7.1.31](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@7.1.30...@gemunion/mui-inputs-file-s3@7.1.31) (2023-08-11)
 
+**Note:** Version bump only for package @gemunion/mui-inputs-file-s3
+
+## 7.1.30 (2023-08-08)
 
 ### Bug Fixes
 
-* version of react-hooks and KeplrIcon ([30d865f](https://github.com/gemunion/mui-packages/commit/30d865f1f85be73fe70256d263be359f6dcc4c87))
-
-
-
-
+- version of react-hooks and KeplrIcon ([30d865f](https://github.com/gemunion/mui-packages/commit/30d865f1f85be73fe70256d263be359f6dcc4c87))
 
 ## [7.1.29](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@7.1.28...@gemunion/mui-inputs-file-s3@7.1.29) (2023-08-05)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([15352eb](https://github.com/gemunion/mui-packages/commit/15352ebff3f8d29ca68cafdaf3579052e069e69f))
 
 ## [7.1.28](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@7.1.27...@gemunion/mui-inputs-file-s3@7.1.28) (2023-08-04)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-s3
 
-
-
-
-
 ## 7.1.27 (2023-08-03)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/mui-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([01599f8](https://github.com/gemunion/mui-packages/commit/01599f850d6cc2e1869f848de1be6f32332a6049))
 
 ## [7.1.26](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@7.1.25...@gemunion/mui-inputs-file-s3@7.1.26) (2023-07-29)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([db8bf1a](https://github.com/gemunion/mui-packages/commit/db8bf1a479c71e5442d790eb3117fc3158e17e8e))
 
 ## 7.1.25 (2023-07-28)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-s3
 
-
-
-
-
 ## [7.1.24](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@7.1.23...@gemunion/mui-inputs-file-s3@7.1.24) (2023-07-25)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-s3
-
-
-
-
 
 ## [7.1.23](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@7.1.22...@gemunion/mui-inputs-file-s3@7.1.23) (2023-07-23)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-file-s3
 
-
-
-
-
 ## [7.1.22](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@7.1.21...@gemunion/mui-inputs-file-s3@7.1.22) (2023-07-18)
-
 
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([9d05c5f](https://github.com/gemunion/mui-packages/commit/9d05c5f19614995c6b6a573345ae185a116b440e))
 
 ## [7.1.21](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@7.1.20...@gemunion/mui-inputs-file-s3@7.1.21) (2023-07-17)
 
-
 ### Bug Fixes
 
-* **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/mui-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
-
-
-
-
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([d9ce350](https://github.com/gemunion/mui-packages/commit/d9ce3500ccf07646d1844dc3acf25af9a7d9ca77))
 
 ## [7.1.20](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file-s3@7.1.19...@gemunion/mui-inputs-file-s3@7.1.20) (2023-07-15)
 
