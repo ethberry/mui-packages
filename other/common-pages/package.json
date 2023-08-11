@@ -26,7 +26,7 @@
     "@mui/lab": "5.0.0-alpha.139",
     "@mui/material": "5.14.4",
     "@mui/styles": "5.14.4",
-    "@types/node": "18.17.4",
+    "@types/node": "18.17.5",
     "@types/react": "18.2.20",
     "notistack": "3.0.1",
     "react": "18.2.0",
