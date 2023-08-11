@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.32](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.1.31...@gemunion/geetest@2.1.32) (2023-08-11)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([1f9cb76](https://github.com/gemunion/common-packages/commit/1f9cb767683be9e041e50702fbc98bdf2d1fd21e))
+
 ## [2.1.31](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.1.30...@gemunion/geetest@2.1.31) (2023-08-11)
 
 ### Bug Fixes
