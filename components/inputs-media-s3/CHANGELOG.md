@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.35](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-media-s3@1.1.34...@gemunion/mui-inputs-media-s3@1.1.35) (2023-08-12)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-media-s3
+
 ## [1.1.34](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-media-s3@1.1.33...@gemunion/mui-inputs-media-s3@1.1.34) (2023-08-11)
 
 ### Bug Fixes
