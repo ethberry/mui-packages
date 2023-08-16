@@ -8,26 +8,17 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/constants": "0.12.7",
-    "@gemunion/mui-page-layout": "2.2.27",
-    "@gemunion/types-jwt": "0.3.12",
-    "@web3-react/core": "8.2.0",
-    "uuid": "9.0.0"
-  },
-  "description": "react component",
-  "devDependencies": {
+    "@gemunion/license-messages": "0.0.36",
     "@gemunion/provider-api": "7.0.40",
+    "@gemunion/provider-cosmos": "1.0.0",
+    "@keplr-wallet/types": "0.12.20"
+  },
+  "description": "react hooks cosmos",
+  "devDependencies": {
     "@gemunion/provider-license": "3.0.28",
-    "@gemunion/provider-user": "6.0.43",
-    "@gemunion/provider-wallet": "3.3.42",
-    "@mui/material": "5.14.4",
-    "@mui/styles": "5.14.4",
-    "@types/uuid": "9.0.2",
     "notistack": "3.0.1",
     "react": "18.2.0",
-    "react-intl": "6.4.4",
-    "react-router": "6.15.0",
-    "react-router-dom": "6.15.0"
+    "react-intl": "6.4.4"
   },
   "engines": {
     "node": ">=18"
@@ -35,19 +26,14 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/metamask-login",
+  "name": "@gemunion/react-hooks-cosmos",
   "peerDependencies": {
-    "@gemunion/provider-api": "^7.0.0",
+    "@gemunion/provider-cosmos": "^1.0.0",
     "@gemunion/provider-license": "^3.0.0",
-    "@gemunion/provider-user": "^6.0.0",
-    "@gemunion/provider-wallet": "^3.0.0",
-    "@mui/material": "^5.0.0",
-    "@mui/styles": "^5.0.0",
+    "@keplr-wallet/types": "^0.12.20",
     "notistack": "^3.0.0",
     "react": "^18.0.0",
-    "react-intl": "^6.0.0",
-    "react-router": "^6.0.0",
-    "react-router-dom": "^6.0.0"
+    "react-intl": "^6.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -58,7 +44,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "lint": "eslint . --fix",
+    "lint": "eslint  --fix",
     "prebuild": "rimraf dist/",
     "prepare": "npm run build",
     "preversion": "npm run build && npm run test",
@@ -67,5 +53,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.1.52"
+  "version": "1.0.0"
 }
