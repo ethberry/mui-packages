@@ -13,7 +13,7 @@ import type { IMetamaskDto, IWalletLoginButtonProps } from "@gemunion/types-jwt"
 
 import { StyledButton } from "./styled";
 
-export const MetamaskButton: FC<IWalletLoginButtonProps> = props => {
+export const MetamaskLoginButton: FC<IWalletLoginButtonProps> = props => {
   const { onWalletVerified } = props;
   const [data, setData] = useState<IMetamaskDto>({ nonce: "", signature: "", wallet: "" });
 
