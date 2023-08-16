@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.57...@gemunion/firebase-login@2.3.0) (2023-08-16)
+
+### Bug Fixes
+
+- README for cosmos provider and firebase-login ([178d2e0](https://github.com/gemunion/mui-packages/commit/178d2e072ef5a7e472e526d8bb1125fcaaf3058c))
+- spinner zIndex for firebase login ([2da4cd4](https://github.com/gemunion/mui-packages/commit/2da4cd42ef19230de9a1cc5dc8056ff71327b8cf))
+
+### Features
+
+- add cosmos-provider and hooks-cosmos; separate logic of firebase login to wallet login buttons and firebase ([633844b](https://github.com/gemunion/mui-packages/commit/633844b071c8fdf650c3dce6c63ae8d0c1263ca9))
+
 ## [2.2.57](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.2.56...@gemunion/firebase-login@2.2.57) (2023-08-12)
 
 **Note:** Version bump only for package @gemunion/firebase-login

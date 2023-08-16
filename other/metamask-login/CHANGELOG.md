@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.1.52...@gemunion/metamask-login@3.2.0) (2023-08-16)
+
+### Features
+
+- add cosmos-provider and hooks-cosmos; separate logic of firebase login to wallet login buttons and firebase ([633844b](https://github.com/gemunion/mui-packages/commit/633844b071c8fdf650c3dce6c63ae8d0c1263ca9))
+
 ## [3.1.52](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.1.51...@gemunion/metamask-login@3.1.52) (2023-08-12)
 
 **Note:** Version bump only for package @gemunion/metamask-login
