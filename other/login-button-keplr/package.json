@@ -10,18 +10,18 @@
   "dependencies": {
     "@cosmjs/stargate": "0.31.0",
     "@gemunion/constants": "0.12.7",
-    "@gemunion/mui-page-layout": "2.2.26",
+    "@gemunion/mui-page-layout": "2.2.27",
     "@gemunion/provider-cosmos": "1.0.0",
-    "@gemunion/react-hooks": "1.1.44",
+    "@gemunion/react-hooks": "1.1.45",
     "@gemunion/react-hooks-cosmos": "1.0.0",
     "@keplr-wallet/types": "0.12.20",
     "uuid": "9.0.0"
   },
   "description": "react keplr login button component",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.40",
+    "@gemunion/provider-api": "7.0.41",
     "@gemunion/provider-license": "3.0.28",
-    "@gemunion/provider-user": "6.0.43",
+    "@gemunion/provider-user": "6.0.44",
     "@mui/material": "5.14.4",
     "@mui/styles": "5.14.4",
     "notistack": "3.0.1",
