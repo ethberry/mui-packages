@@ -8,21 +8,22 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
+    "@cosmjs/stargate": "0.31.0",
     "@gemunion/constants": "0.12.7",
-    "@gemunion/mui-page-layout": "2.2.27",
-    "@gemunion/types-jwt": "0.3.12",
-    "@web3-react/core": "8.2.0",
+    "@gemunion/mui-page-layout": "2.2.26",
+    "@gemunion/provider-cosmos": "1.0.0",
+    "@gemunion/react-hooks": "1.1.44",
+    "@gemunion/react-hooks-cosmos": "1.0.0",
+    "@keplr-wallet/types": "0.12.20",
     "uuid": "9.0.0"
   },
-  "description": "react component",
+  "description": "react keplr login button component",
   "devDependencies": {
     "@gemunion/provider-api": "7.0.40",
     "@gemunion/provider-license": "3.0.28",
     "@gemunion/provider-user": "6.0.43",
-    "@gemunion/provider-wallet": "3.3.42",
     "@mui/material": "5.14.4",
     "@mui/styles": "5.14.4",
-    "@types/uuid": "9.0.2",
     "notistack": "3.0.1",
     "react": "18.2.0",
     "react-intl": "6.4.4",
@@ -35,12 +36,12 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/metamask-login",
+  "name": "@gemunion/login-button-keplr",
   "peerDependencies": {
     "@gemunion/provider-api": "^7.0.0",
     "@gemunion/provider-license": "^3.0.0",
     "@gemunion/provider-user": "^6.0.0",
-    "@gemunion/provider-wallet": "^3.0.0",
+    "@gemunion/types-jwt": "^0.3.12",
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
     "notistack": "^3.0.0",
@@ -67,5 +68,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.1.52"
+  "version": "1.0.0"
 }
