@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.37](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-media-firebase@1.1.36...@gemunion/mui-inputs-media-firebase@1.1.37) (2023-08-16)
+
+### Bug Fixes
+
+- add form.trigger(name) implicitly where the field does not trigger validation after change/delete ([e7986d9](https://github.com/gemunion/mui-packages/commit/e7986d9d82e60166056449237fe82661286c18ee))
+
 ## [1.1.36](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-media-firebase@1.1.35...@gemunion/mui-inputs-media-firebase@1.1.36) (2023-08-16)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-media-firebase
