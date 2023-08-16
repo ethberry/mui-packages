@@ -1,4 +1,4 @@
-# Wallet provider and widget
+# Wallet cosmos provider and widget
 
 ## Provider
 
