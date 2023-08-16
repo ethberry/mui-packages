@@ -38,13 +38,15 @@ export const ImageInput: FC<IImageInputProps> = props => {
   const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   const onChange = (urls: Array<string>) => {
-    form.setValue(name, urls[0], { shouldTouch: true });
+    form.setValue(name, urls[0], { shouldTouch: true, shouldDirty: true });
     form.clearErrors(name);
+    void form.trigger(name);
   };
 
   const onDelete = async () => {
     await deleteUrl(value);
-    form.setValue(name, "", { shouldTouch: false });
+    form.setValue(name, "", { shouldTouch: false, shouldDirty: true });
+    await form.trigger(name);
   };
 
   if (value) {

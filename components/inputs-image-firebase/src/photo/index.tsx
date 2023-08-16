@@ -46,7 +46,8 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
 
     await deleteUrl(fileName);
 
-    form.setValue(name, newValue, { shouldTouch: false });
+    form.setValue(name, newValue, { shouldTouch: false, shouldDirty: true });
+    void form.trigger(name);
     setIsDeleteImageDialogOpen(false);
   };
 
@@ -63,7 +64,8 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
         title: "",
       });
     });
-    form.setValue(name, newValue, { shouldTouch: true });
+    form.setValue(name, newValue, { shouldTouch: true, shouldDirty: true });
+    void form.trigger(name);
     setIsLoading(false);
   };
 

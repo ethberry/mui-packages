@@ -41,13 +41,15 @@ export const AudioInput: FC<IAudioInputProps> = props => {
   const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   const onChange = (url: string) => {
-    form.setValue(name, url, { shouldTouch: true });
+    form.setValue(name, url, { shouldTouch: true, shouldDirty: true });
     form.clearErrors(name);
+    void form.trigger(name);
   };
 
   const onDelete = async () => {
     await deleteUrl(value);
-    form.setValue(name, "", { shouldTouch: false });
+    form.setValue(name, "", { shouldTouch: false, shouldDirty: true });
+    await form.trigger(name);
   };
 
   if (value) {

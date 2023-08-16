@@ -28,13 +28,15 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
   const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
   const onChange = (urls: Array<string>) => {
-    form.setValue(name, urls[0], { shouldTouch: true });
+    form.setValue(name, urls[0], { shouldTouch: true, shouldDirty: true });
     form.clearErrors(name);
+    void form.trigger(name);
   };
 
   const onDelete = async () => {
     await deleteUrl(value);
-    form.setValue(name, "");
+    form.setValue(name, "", { shouldTouch: true, shouldDirty: true });
+    void form.trigger(name);
   };
 
   if (value) {
