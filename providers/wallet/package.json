@@ -10,7 +10,6 @@
   "dependencies": {
     "@gemunion/constants": "0.12.7",
     "@walletconnect/ethereum-provider": "1.8.0",
-    "@web3-react/core": "8.2.0",
     "@web3-react/empty": "8.2.0",
     "@web3-react/metamask": "8.2.1",
     "@web3-react/network": "8.2.0",
@@ -30,6 +29,7 @@
     "@mui/styles": "5.14.4",
     "@types/react": "18.2.20",
     "@types/uuid": "9.0.2",
+    "@web3-react/core": "8.2.0",
     "ethers": "5.7.2",
     "notistack": "3.0.1",
     "react": "18.2.0",
@@ -51,6 +51,7 @@
     "@mui/lab": "^5.0.0-alpha.0",
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
+    "@web3-react/core": "^8.0.0",
     "ethers": "^5.6.0",
     "notistack": "^3.0.0",
     "react": "^18.0.0",

@@ -15,7 +15,6 @@
     "@gemunion/react-hooks-eth": "1.1.5",
     "@gemunion/types-collection": "1.5.11",
     "@mui/icons-material": "5.14.3",
-    "@web3-react/core": "8.2.0",
     "uuid": "9.0.0"
   },
   "description": "react metamask login button component",
@@ -25,6 +24,7 @@
     "@gemunion/provider-user": "6.0.44",
     "@mui/material": "5.14.4",
     "@mui/styles": "5.14.4",
+    "@web3-react/core": "8.2.0",
     "notistack": "3.0.1",
     "react": "18.2.0",
     "react-intl": "6.4.4",
@@ -45,6 +45,7 @@
     "@gemunion/types-jwt": "^0.3.12",
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
+    "@web3-react/core": "^8.0.0",
     "notistack": "^3.0.0",
     "react": "^18.0.0",
     "react-intl": "^6.0.0",

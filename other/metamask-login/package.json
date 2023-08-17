@@ -11,7 +11,6 @@
     "@gemunion/constants": "0.12.7",
     "@gemunion/mui-page-layout": "2.2.27",
     "@gemunion/types-jwt": "0.3.12",
-    "@web3-react/core": "8.2.0",
     "uuid": "9.0.0"
   },
   "description": "react component",
@@ -23,6 +22,7 @@
     "@mui/material": "5.14.4",
     "@mui/styles": "5.14.4",
     "@types/uuid": "9.0.2",
+    "@web3-react/core": "8.2.0",
     "notistack": "3.0.1",
     "react": "18.2.0",
     "react-intl": "6.4.4",
@@ -43,6 +43,7 @@
     "@gemunion/provider-wallet": "^3.0.0",
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
+    "@web3-react/core": "^8.0.0",
     "notistack": "^3.0.0",
     "react": "^18.0.0",
     "react-intl": "^6.0.0",
