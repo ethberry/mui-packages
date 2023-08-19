@@ -5,12 +5,16 @@ import { usePopup } from "@gemunion/provider-popup";
 import { useUser } from "@gemunion/provider-user";
 
 import { useRegisteredChains } from "../hooks";
-import { ICosmosChain } from "../interfaces";
+import { ICosmosChain, IUserAccount } from "../interfaces";
 import { CosmosContext } from "./context";
 import { COSMOS_CONNECT_POPUP_TYPE } from "./constants";
 
-export const CosmosProvider: FC<PropsWithChildren> = props => {
-  const { children } = props;
+export interface ICosmosProviderProps {
+  enabledChains: string[];
+}
+
+export const CosmosProvider: FC<PropsWithChildren<ICosmosProviderProps>> = props => {
+  const { children, enabledChains } = props;
 
   const license = useLicense();
   const { openPopup, closePopup, isOpenPopup } = usePopup();
@@ -18,6 +22,7 @@ export const CosmosProvider: FC<PropsWithChildren> = props => {
   const { registeredChains } = useRegisteredChains();
 
   const [account, setAccount] = useState<string | null>(null);
+  const [accounts, setAccounts] = useState<IUserAccount[]>([]);
   const [chain, setChain] = useState<ICosmosChain | null>(null);
   const [isKeplrConnected, setIsKeplrConnected] = useState<boolean>(false);
 
@@ -50,7 +55,10 @@ export const CosmosProvider: FC<PropsWithChildren> = props => {
     <CosmosContext.Provider
       value={{
         account,
+        accounts,
+        setAccounts,
         chain,
+        enabledChains,
         closeConnectCosmosDialog,
         isDialogOpen,
         isKeplrConnected,

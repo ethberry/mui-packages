@@ -3,6 +3,7 @@ import { useIntl } from "react-intl";
 
 import { downForMaintenance } from "@gemunion/license-messages";
 import { useLicense } from "@gemunion/provider-license";
+import { useCosmos, chainInfoByChainId } from "@gemunion/provider-cosmos";
 
 import { ICosmosParams, IHandlerOptionsParams } from "./interfaces";
 
@@ -13,6 +14,7 @@ export const useKeplr = <T = any>(
   const license = useLicense();
 
   const { formatMessage } = useIntl();
+  const { enabledChains } = useCosmos();
   const { success = true, error = true } = options;
 
   return async (...args: Array<any>): Promise<T> => {
@@ -24,13 +26,16 @@ export const useKeplr = <T = any>(
     }
 
     let keplr;
-    let offlineSigner;
+    let getOfflineSigner;
 
     if (window.keplr && window.getOfflineSigner) {
-      const chainId = "haqq_11235-1";
       keplr = window.keplr;
-      offlineSigner = window.getOfflineSigner(chainId);
-      await window.keplr.enable(chainId);
+      getOfflineSigner = window.getOfflineSigner;
+
+      for (const chainId of enabledChains) {
+        await window.keplr.experimentalSuggestChain(chainInfoByChainId[chainId]);
+      }
+      await window.keplr.enable(enabledChains);
     } else {
       window.open("https://www.keplr.app/download", "_blank", "noopener noreferrer");
       return Promise.reject(new Error("Keplr not found")).catch((e: string) => {
@@ -39,7 +44,7 @@ export const useKeplr = <T = any>(
       });
     }
 
-    return fn({ keplr, offlineSigner }, ...args)
+    return fn({ keplr, getOfflineSigner }, ...args)
       .then((result: any) => {
         if (success && result !== null) {
           enqueueSnackbar(formatMessage({ id: "snackbar.transactionSent" }), { variant: "info" });

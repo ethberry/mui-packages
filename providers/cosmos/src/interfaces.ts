@@ -380,3 +380,8 @@ export interface INonIbcTransition {
    */
   provider: string;
 }
+
+export interface IUserAccount {
+  chainId: string;
+  address: string;
+}

@@ -7,5 +7,5 @@ export interface IHandlerOptionsParams {
 
 export interface ICosmosParams {
   keplr: Keplr;
-  offlineSigner: OfflineAminoSigner & OfflineDirectSigner;
+  getOfflineSigner: (chainId: string) => OfflineAminoSigner & OfflineDirectSigner;
 }

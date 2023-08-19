@@ -6,7 +6,7 @@ import { v4 } from "uuid";
 import { phrase } from "@gemunion/constants";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useUser } from "@gemunion/provider-user";
-import { KeplrIcon } from "@gemunion/provider-cosmos";
+import { KeplrIcon, useCosmos } from "@gemunion/provider-cosmos";
 import { useApiCall } from "@gemunion/react-hooks";
 import { useKeplr } from "@gemunion/react-hooks-cosmos";
 import type { IKeplrDto, IWalletLoginButtonProps } from "@gemunion/types-jwt";
@@ -32,7 +32,8 @@ export const KeplrLoginButton: FC<IWalletLoginButtonProps> = props => {
 
   const user = useUser<any>();
   const [account, setAccount] = useState("");
-  const chainId = "haqq_11235-1";
+  const { enabledChains } = useCosmos();
+  const chainId = enabledChains[1];
 
   const [isVerifying, setIsVerifying] = useState<boolean>(false);
 
@@ -54,12 +55,13 @@ export const KeplrLoginButton: FC<IWalletLoginButtonProps> = props => {
 
   const handleLogin = useKeplr(
     async cosmosParams => {
-      const { keplr, offlineSigner } = cosmosParams;
+      const { keplr, getOfflineSigner } = cosmosParams;
 
       try {
         setIsVerifying(true);
 
         const chainInfo = await keplr.getChainInfosWithoutEndpoints();
+        const offlineSigner = getOfflineSigner(chainId);
         const chainPrefix = chainInfo.find(chain => chain.chainId === chainId)!.bech32Config.bech32PrefixAccAddr;
         const keplrAccounts = await offlineSigner.getAccounts();
         const wallet = keplrAccounts[0].address;

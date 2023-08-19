@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-import { ICosmosParams, ICosmosChain } from "../interfaces";
+import { ICosmosParams, ICosmosChain, IUserAccount } from "../interfaces";
 
 export interface ICosmosContext {
   chain: ICosmosChain | null;
@@ -13,6 +13,9 @@ export interface ICosmosContext {
   setIsKeplrConnected: (value: boolean) => void;
   account: string | null;
   setAccount: (account: string | null) => void;
+  accounts: IUserAccount[];
+  setAccounts: (accounts: IUserAccount[]) => void;
+  enabledChains: string[];
 }
 
 export const CosmosContext = createContext<ICosmosContext>(undefined!);
