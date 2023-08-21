@@ -7,7 +7,7 @@ export const StyledContainer = styled(Grid)(({ theme }) => ({
   justifyContent: "center",
   height: "calc(100vh - 64px)",
   maxWidth: 900,
-  margin: `${theme.spacing(2)} auto`,
+  margin: "0 auto",
   textAlign: "center",
   "& #firebaseui-auth-container": {
     transition: "all 1s ease-out",

@@ -5,6 +5,7 @@ export const StyledContainer = styled(Box)({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  height: "100%",
 });
 
 export const StyledLogo = styled(Box)({

@@ -126,7 +126,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
 
   return (
     <ProgressOverlay isLoading={isLoggingIn} spinnerSx={{ zIndex: 1000 }}>
-      <StyledContainer container spacing={4}>
+      <StyledContainer container>
         <Grid item xs={12}>
           {showMessage && (
             <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
