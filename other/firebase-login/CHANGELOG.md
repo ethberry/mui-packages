@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.3.2 (2023-08-21)
+
+### Bug Fixes
+
+- styling for firebase-login and landing ([4422615](https://github.com/gemunion/mui-packages/commit/4422615afdf766ba4bbb45b40b1c35f841253ac2))
+
 ## 2.3.1 (2023-08-17)
 
 **Note:** Version bump only for package @gemunion/firebase-login
