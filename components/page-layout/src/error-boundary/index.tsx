@@ -48,9 +48,7 @@ export class ErrorBoundary extends Component<IProps, IState> {
               </IconButton>
             }
           >
-            <FormattedMessage
-              id={`messages.${process.env.NODE_ENV !== "production" ? "uncaughtError" : "knownError"}`}
-            />
+            <FormattedMessage id={`alert.${process.env.NODE_ENV !== "production" ? "uncaughtError" : "knownError"}`} />
           </Alert>
           {process.env.NODE_ENV !== "production" ? (
             <Box>
