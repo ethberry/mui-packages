@@ -28,7 +28,7 @@
     "@gemunion/provider-user": "6.0.45",
     "@mui/material": "5.14.5",
     "@mui/styles": "5.14.5",
-    "firebase": "10.2.0",
+    "firebase": "10.3.0",
     "notistack": "3.0.1",
     "react": "18.2.0",
     "react-intl": "6.4.4",
