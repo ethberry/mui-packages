@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.73](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-lab@5.0.72...@gemunion/mui-inputs-lab@5.0.73) (2023-08-23)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([1605db6](https://github.com/gemunion/mui-packages/commit/1605db64d1d0353387e98815dab7b8d2e7922279))
+
 ## 5.0.72 (2023-08-17)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-lab

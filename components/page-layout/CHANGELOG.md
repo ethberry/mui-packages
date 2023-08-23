@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-page-layout@2.2.28...@gemunion/mui-page-layout@2.3.0) (2023-08-23)
+
+### Bug Fixes
+
+- alert i18n ([b9f4a30](https://github.com/gemunion/mui-packages/commit/b9f4a30236fb8bbd1cd21c90e82252b3cdeaf8ab))
+- **deps:** update all non-major dependencies ([1605db6](https://github.com/gemunion/mui-packages/commit/1605db64d1d0353387e98815dab7b8d2e7922279))
+- **deps:** update all non-major dependencies ([d1a48e4](https://github.com/gemunion/mui-packages/commit/d1a48e4b43165526b1fb1c03ecf7f5719cf7181f))
+
+### Features
+
+- error-boundary ([4bb9646](https://github.com/gemunion/mui-packages/commit/4bb96462b162d633d3b595651479916e97228ff7))
+
 ## 2.2.28 (2023-08-17)
 
 **Note:** Version bump only for package @gemunion/mui-page-layout
