@@ -1,29 +1,32 @@
 import { FC, PropsWithChildren } from "react";
 import { Collapse, Grid } from "@mui/material";
-import { FieldValues, UseFormReturn } from "react-hook-form";
+import { UseFormReturn } from "react-hook-form";
 
 import { AutoSave, FormWrapper } from "@gemunion/mui-form";
 import { SearchInput } from "@gemunion/mui-inputs-core";
 
 interface ICommonSearchFormProps {
-  autosave?: boolean;
-  onSubmit: (values: any, form: UseFormReturn<FieldValues, any>) => Promise<void>;
+  onSubmit: (values: any, form: UseFormReturn) => Promise<void>;
   initialValues: any;
+  autosave?: boolean;
   open?: boolean;
-  testId?: string;
+  name?: string;
 }
 
 export const CommonSearchForm: FC<PropsWithChildren<ICommonSearchFormProps>> = props => {
-  const { autosave = true, onSubmit, initialValues, open = false, testId, children } = props;
-
-  const { query } = initialValues;
-  const fixedValues = { query };
+  const { onSubmit, initialValues, name = "query", autosave = true, open = false, children } = props;
 
   return (
-    <FormWrapper initialValues={fixedValues} onSubmit={onSubmit} showButtons={false} showPrompt={false} testId={testId}>
+    <FormWrapper
+      initialValues={initialValues}
+      onSubmit={onSubmit}
+      showButtons={false}
+      showPrompt={false}
+      testId="CommonSearchForm"
+    >
       <Grid container spacing={2}>
         <Grid item xs={12} md={12}>
-          <SearchInput name="query" data-testid="CommonSearchInput" />
+          <SearchInput name={name} data-testid="CommonSearchInput" />
         </Grid>
       </Grid>
       <Collapse in={open}>
