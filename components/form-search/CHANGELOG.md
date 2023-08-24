@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.39](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@7.2.38...@gemunion/mui-form-search@7.2.39) (2023-08-24)
+
+### Bug Fixes
+
+- collapse layout ([db5fb11](https://github.com/gemunion/mui-packages/commit/db5fb11117756838d7562ad83914bbaa9f817107))
+
 ## [7.2.38](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@7.2.37...@gemunion/mui-form-search@7.2.38) (2023-08-24)
 
 ### Bug Fixes
