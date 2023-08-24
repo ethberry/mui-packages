@@ -29,11 +29,7 @@ export const CommonSearchForm: FC<PropsWithChildren<ICommonSearchFormProps>> = p
           <SearchInput name={name} data-testid="CommonSearchInput" />
         </Grid>
       </Grid>
-      <Collapse in={open}>
-        <Grid container spacing={2}>
-          {children}
-        </Grid>
-      </Collapse>
+      <Collapse in={open}>{children}</Collapse>
       {autosave ? <AutoSave onSubmit={onSubmit} /> : null}
     </FormWrapper>
   );
