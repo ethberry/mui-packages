@@ -13,7 +13,7 @@
   },
   "description": "Material UI picker provider",
   "devDependencies": {
-    "@mui/material": "5.14.5",
+    "@mui/material": "5.14.6",
     "@mui/x-date-pickers": "6.11.2",
     "react": "18.2.0"
   },
