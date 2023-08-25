@@ -15,7 +15,7 @@
     "@gemunion/mui-page-layout": "2.3.0",
     "@gemunion/popup": "1.0.33",
     "@gemunion/react-hooks": "1.1.47",
-    "@gemunion/yup-rules": "4.2.16",
+    "@gemunion/yup-rules": "4.2.17",
     "yup": "1.2.0"
   },
   "description": "react context provider",
