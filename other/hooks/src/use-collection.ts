@@ -6,7 +6,7 @@ import { parse, stringify } from "qs";
 
 import { defaultItemsPerPage } from "@gemunion/constants";
 import { ApiError } from "@gemunion/provider-api";
-import { IIdBase, IPaginationResult, IPaginationDto } from "@gemunion/types-collection";
+import { IIdBase, IPaginationResult, IPaginationDto, ISortDto, IMuiSortDto } from "@gemunion/types-collection";
 
 import { useApiCall } from "./use-api-call";
 import { useDeepCompareEffect } from "./use-deep-compare-effect";
@@ -22,15 +22,22 @@ export interface ICollectionHook<T, S> {
   embedded?: boolean;
   empty?: Partial<T>;
   search?: Partial<S>;
+  order?: ISortDto<T>[];
   filter?: (data: Partial<T>) => any;
-  redirect?: (baseUrl: string, search: Omit<S, "skip" | "take">, id?: number) => string;
+  redirect?: (baseUrl: string, search: Omit<S, "skip" | "take" | "order">, id?: number) => string;
 }
 
 const defaultFilter = <T extends IIdBase>({ id: _id, ...rest }: Partial<T>) => rest;
-const defaultRedirect = <S extends IPaginationDto>(baseUrl: string, search: Omit<S, "skip" | "take">, id?: number) =>
-  id ? `${baseUrl}/${id}` : `${baseUrl}?${stringify(search)}`;
+const defaultRedirect = <S extends IPaginationDto>(
+  baseUrl: string,
+  search: Omit<S, "skip" | "take" | "order">,
+  id?: number,
+) => (id ? `${baseUrl}/${id}` : `${baseUrl}?${stringify(search)}`);
 
-export const useCollection = <T extends IIdBase = IIdBase, S extends IPaginationDto = IPaginationDto>(
+export const useCollection = <
+  T extends IIdBase = IIdBase,
+  S extends IPaginationDto & Partial<IMuiSortDto<T>> = IPaginationDto & Partial<IMuiSortDto<T>>,
+>(
   options: ICollectionHook<T, S>,
 ) => {
   const {
@@ -75,7 +82,7 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
   );
 
   const updateQS = (id?: number) => {
-    const { skip: _skip, take: _take, ...rest } = search;
+    const { skip: _skip, take: _take, order: _order, ...rest } = search;
     const sameSearch = !id && location.search && deepEqual(rest, getSearchParams(data));
 
     if (embedded || sameSearch) {
@@ -303,6 +310,13 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     return Promise.resolve();
   };
 
+  const handleChangeSortModel = (sortModel: ISortDto<T>[]): void => {
+    setSearch({
+      ...search,
+      order: sortModel,
+    });
+  };
+
   const handleToggleFilters = () => {
     setIsFilterOpen(!isFiltersOpen);
   };
@@ -350,6 +364,7 @@ export const useCollection = <T extends IIdBase = IIdBase, S extends IPagination
     handleChangePage,
     handleChangeRowsPerPage,
     handleChangePaginationModel,
+    handleChangeSortModel,
     handleToggleFilters,
   };
 };
