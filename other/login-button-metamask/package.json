@@ -13,7 +13,7 @@
     "@gemunion/provider-wallet": "3.3.45",
     "@gemunion/react-hooks": "1.1.47",
     "@gemunion/react-hooks-eth": "1.1.7",
-    "@gemunion/types-collection": "1.5.12",
+    "@gemunion/types-collection": "1.5.13",
     "@mui/icons-material": "5.14.6",
     "uuid": "9.0.0"
   },
@@ -21,7 +21,7 @@
   "devDependencies": {
     "@gemunion/provider-api": "7.0.43",
     "@gemunion/provider-license": "3.0.28",
-    "@gemunion/provider-user": "6.0.47",
+    "@gemunion/provider-user": "6.0.48",
     "@mui/material": "5.14.6",
     "@mui/styles": "5.14.6",
     "@web3-react/core": "8.2.2",
