@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/constants": "0.12.7",
     "@gemunion/license-messages": "0.0.36",
-    "@gemunion/types-collection": "1.5.11",
+    "@gemunion/types-collection": "1.5.12",
     "qs": "6.11.2"
   },
   "description": "react hooks",
