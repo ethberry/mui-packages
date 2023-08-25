@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.35 (2023-08-25)
+
+### Bug Fixes
+
+- **deps:** update materialui to v6.12.0 ([25010f9](https://github.com/gemunion/mui-packages/commit/25010f9a4bcf99e441afea0927d36987a2c072e5))
+
 ## [5.0.34](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-picker@5.0.33...@gemunion/provider-picker@5.0.34) (2023-08-23)
 
 **Note:** Version bump only for package @gemunion/provider-picker

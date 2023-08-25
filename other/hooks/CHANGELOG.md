@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.48 (2023-08-25)
+
+### Bug Fixes
+
+- add sort order to use-collection ([a24f30e](https://github.com/gemunion/mui-packages/commit/a24f30e037bf4a0c02dd25592ca01f72f65bf6d2))
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([dba00ba](https://github.com/gemunion/mui-packages/commit/dba00ba92800f5a8b81389ee8eac2e1e11974273))
+
 ## 1.1.47 (2023-08-23)
 
 ### Bug Fixes

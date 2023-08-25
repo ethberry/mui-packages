@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.0.42 (2023-08-25)
+
+### Bug Fixes
+
+- **deps:** update materialui to v6.12.0 ([25010f9](https://github.com/gemunion/mui-packages/commit/25010f9a4bcf99e441afea0927d36987a2c072e5))
+
 ## [6.0.41](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@6.0.40...@gemunion/mui-inputs-picker@6.0.41) (2023-08-23)
 
 ### Bug Fixes
