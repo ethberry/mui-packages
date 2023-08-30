@@ -10,6 +10,7 @@ export interface ITemplateAssetComponent {
     address: string;
     decimals: number;
     contractType: TokenType;
+    contractFeatures: Array<any>;
   };
   templateId: number;
   template: {

@@ -25,7 +25,7 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
   const tokenType = useWatch({ name: `${prefix}.tokenType` });
   const contractId = useWatch({ name: `${prefix}.contractId` });
 
-  const handleChange = (_event: ChangeEvent<unknown>, option: any | null): void => {
+  const handleChange = (_event: ChangeEvent<unknown>, option: any): void => {
     form.setValue(`${prefix}.${name}`, option?.id ?? 0);
     form.setValue(`${prefix}.template.tokens`, option.tokens ?? []);
   };

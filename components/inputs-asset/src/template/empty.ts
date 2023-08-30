@@ -15,6 +15,7 @@ export function getEmptyTemplate(tokenType = TokenType.ERC20): any {
           id: 0,
           title: "",
           contractType: tokenType,
+          contractFeatures: [] as Array<any>,
           decimals: tokenType === TokenType.NATIVE || tokenType === TokenType.ERC20 ? 18 : 0,
           address: constants.AddressZero,
         },
