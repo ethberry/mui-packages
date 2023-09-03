@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.3.5 (2023-09-03)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([786d597](https://github.com/gemunion/mui-packages/commit/786d597900b36b8c1a82031b7d1f92cb32c9bd7c))
+
 ## 2.3.4 (2023-08-25)
 
 ### Bug Fixes

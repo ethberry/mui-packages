@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.2.41 (2023-09-03)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([786d597](https://github.com/gemunion/mui-packages/commit/786d597900b36b8c1a82031b7d1f92cb32c9bd7c))
+- pass testId to CommonSearchForm ([cda3cca](https://github.com/gemunion/mui-packages/commit/cda3cca760e9894182340fea7469461a463d4e04))
+
 ## [7.2.40](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@7.2.39...@gemunion/mui-form-search@7.2.40) (2023-08-25)
 
 **Note:** Version bump only for package @gemunion/mui-form-search
