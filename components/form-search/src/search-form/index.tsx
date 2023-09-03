@@ -11,10 +11,11 @@ interface ICommonSearchFormProps {
   autosave?: boolean;
   open?: boolean;
   name?: string;
+  testId?: string;
 }
 
 export const CommonSearchForm: FC<PropsWithChildren<ICommonSearchFormProps>> = props => {
-  const { onSubmit, initialValues, name = "query", autosave = true, open = false, children } = props;
+  const { onSubmit, initialValues, name = "query", autosave = true, open = false, testId, children } = props;
 
   return (
     <FormWrapper
@@ -22,7 +23,7 @@ export const CommonSearchForm: FC<PropsWithChildren<ICommonSearchFormProps>> = p
       onSubmit={onSubmit}
       showButtons={false}
       showPrompt={false}
-      testId="CommonSearchForm"
+      testId={testId || "CommonSearchForm"}
     >
       <Grid container spacing={2}>
         <Grid item xs={12} md={12}>
