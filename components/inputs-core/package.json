@@ -19,7 +19,7 @@
     "@mui/icons-material": "5.14.7",
     "@mui/material": "5.14.7",
     "@mui/styles": "5.14.7",
-    "@storybook/react": "7.3.2",
+    "@storybook/react": "7.4.0",
     "@testing-library/jest-dom": "6.1.2",
     "@testing-library/react": "14.0.0",
     "@types/jest": "29.5.4",
@@ -33,7 +33,7 @@
     "react-intl": "6.4.4",
     "react-router-dom": "6.15.0",
     "ts-jest": "29.1.1",
-    "whatwg-fetch": "3.6.17"
+    "whatwg-fetch": "3.6.18"
   },
   "engines": {
     "node": ">=18"
