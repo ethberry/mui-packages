@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.51](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@8.0.50...@gemunion/mui-form@8.0.51) (2023-09-04)
+
+### Bug Fixes
+
+- form dialog buttons and set draft isDirty after editing ([1724865](https://github.com/gemunion/mui-packages/commit/1724865fe99e3d7251b6b9126feabd573fe6ab59))
+
 ## 8.0.50 (2023-09-03)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-cosmos@1.1.5...@gemunion/react-hooks-cosmos@1.1.6) (2023-09-04)
+
+### Bug Fixes
+
+- cosmos hooks and provider constants ([300b1ce](https://github.com/gemunion/mui-packages/commit/300b1ce57b843cd620862ff9bd29b106472c37a4))
+
 ## 1.1.5 (2023-09-03)
 
 ### Bug Fixes

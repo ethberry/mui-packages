@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.42](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-firebase@8.1.41...@gemunion/mui-inputs-image-firebase@8.1.42) (2023-09-04)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-image-firebase
+
 ## 8.1.41 (2023-09-03)
 
 ### Bug Fixes
