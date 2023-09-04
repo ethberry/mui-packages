@@ -16,6 +16,7 @@ import { useSettings } from "@gemunion/provider-settings";
 export interface IConfirmationDialogProps extends DialogProps {
   onCancel: () => void;
   onConfirm: (e: MouseEvent<HTMLButtonElement>) => void;
+  disabled?: boolean;
   message?: string;
   data?: any;
   action?: ReactElement | null;
@@ -26,6 +27,7 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
     onCancel,
     onConfirm,
     children,
+    disabled = false,
     message = "dialogs.confirmation",
     action = null,
     data,
@@ -65,7 +67,13 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
         <Button variant="text" onClick={onCancel} data-testid="DialogCancelButton">
           <FormattedMessage id="form.buttons.cancel" />
         </Button>
-        <Button variant="contained" color="primary" onClick={onConfirm} data-testid="DialogConfirmButton">
+        <Button
+          variant="contained"
+          color="primary"
+          disabled={disabled}
+          onClick={onConfirm}
+          data-testid="DialogConfirmButton"
+        >
           <FormattedMessage id="form.buttons.ok" />
         </Button>
       </DialogActions>
