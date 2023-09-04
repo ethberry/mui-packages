@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren, useEffect } from "react";
 import { Box, ButtonProps } from "@mui/material";
 import { SxProps, Theme } from "@mui/material/styles";
-import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
+import { FieldValues, FormProvider, SubmitHandler, useForm, UseFormReturn } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
@@ -10,6 +10,7 @@ import { TestIdProvider } from "@gemunion/provider-test-id";
 
 import { FormButtons } from "../buttons";
 import { PromptIfDirty } from "../prompt";
+import { OnFormStateChange } from "../on-form-state-change";
 
 interface IFormWrapperProps<T> {
   showButtons?: boolean;
@@ -17,6 +18,7 @@ interface IFormWrapperProps<T> {
   showDebug?: boolean;
   submit?: string;
   onSubmit: (values: T, form?: any) => Promise<void>;
+  onFormStateChange?: (form: UseFormReturn<FieldValues, any>) => Promise<void>;
   sx?: SxProps<Theme>;
   initialValues: T;
   enableReinitialize?: boolean;
@@ -33,6 +35,7 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
     initialValues,
     enableReinitialize = true,
     onSubmit,
+    onFormStateChange,
     showButtons,
     showDebug,
     showPrompt,
@@ -105,6 +108,7 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
               handleSubmit={form.handleSubmit(handleSubmit)}
               formButtonProps={formSubmitButtonProps}
             />
+            {onFormStateChange ? <OnFormStateChange onFormStateChange={onFormStateChange} /> : null}
           </Box>
         </FormProvider>
       </Box>

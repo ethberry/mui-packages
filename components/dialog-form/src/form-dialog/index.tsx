@@ -1,5 +1,6 @@
 import { FC, MouseEvent, PropsWithChildren, ReactElement, useRef, useState } from "react";
 import { Breakpoint } from "@mui/material";
+import { FieldValues, UseFormReturn } from "react-hook-form";
 
 import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
@@ -35,8 +36,21 @@ export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props =>
   } = props;
 
   const [isLoading, setIsLoading] = useState(false);
+  const [isDirty, setIsDirty] = useState(false);
+  const [isValid, setIsValid] = useState(false);
 
   const innerRef = useRef<HTMLFormElement | null>(null) as any;
+
+  const onFormStateChange = async (form: UseFormReturn<FieldValues, any>) => {
+    const {
+      formState: { isDirty, isValid },
+    } = form;
+
+    setIsDirty(isDirty);
+    setIsValid(isValid);
+
+    return Promise.resolve();
+  };
 
   const handleSubmit = async (e: MouseEvent<HTMLButtonElement>): Promise<void> => {
     e.preventDefault();
@@ -52,10 +66,17 @@ export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props =>
   };
 
   return (
-    <ConfirmationDialog onConfirm={handleSubmit} maxWidth={maxWidth} data-testid="DialogForm" {...rest}>
+    <ConfirmationDialog
+      onConfirm={handleSubmit}
+      maxWidth={maxWidth}
+      disabled={!isDirty || !isValid}
+      data-testid="DialogForm"
+      {...rest}
+    >
       <ProgressOverlay isLoading={isLoading}>
         <FormWrapper
           onSubmit={onConfirm}
+          onFormStateChange={onFormStateChange}
           validationSchema={validationSchema}
           initialValues={initialValues}
           innerRef={innerRef}

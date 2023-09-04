@@ -48,7 +48,7 @@ export const RichTextEditor: FC<IRichTextFieldProps & TextFieldProps> = props =>
     defaultValue: value,
     label: localizedPlaceholder,
     onSave: (data: string) => {
-      form.setValue(name, data, { shouldTouch: true });
+      form.setValue(name, data, { shouldTouch: true, shouldDirty: true });
     },
     controls: defaultControls.concat(customControls),
     ...testIdProps,

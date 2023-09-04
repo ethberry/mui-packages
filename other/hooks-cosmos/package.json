@@ -8,6 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
+    "@cosmjs/encoding": "0.31.1",
     "@gemunion/license-messages": "0.0.36",
     "@gemunion/provider-api": "7.0.43",
     "@gemunion/provider-cosmos": "1.1.5",

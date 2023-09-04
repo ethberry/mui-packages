@@ -51,7 +51,7 @@ export const MarkdownInput: FC<IMarkdownInputProps & TextFieldProps> = props => 
     label: localizedPlaceholder,
     onSave: (data: string) => {
       const markdownString = draftToMarkdown(JSON.parse(data));
-      form.setValue(name, markdownString, { shouldTouch: true });
+      form.setValue(name, markdownString, { shouldTouch: true, shouldDirty: true });
     },
     controls: defaultControls.concat(customControls),
     ...testIdProps,
