@@ -12,7 +12,7 @@
     "@gemunion/provider-test-id": "1.0.51",
     "@mui/styles": "5.14.7",
     "mathjs": "11.10.1",
-    "react-number-format": "5.3.0"
+    "react-number-format": "5.3.1"
   },
   "description": "react widget",
   "devDependencies": {
@@ -22,7 +22,7 @@
     "@types/react": "18.2.21",
     "ethers": "5.7.2",
     "react": "18.2.0",
-    "react-hook-form": "7.45.4",
+    "react-hook-form": "7.46.0",
     "react-intl": "6.4.4"
   },
   "engines": {
