@@ -16,13 +16,13 @@ export const useProductTypes = (props: IUseProductTypesProps) => {
     {
       title: formatMessage({ id: "components.productTypes.saas.title" }),
       text: formatMessage({ id: "components.productTypes.saas.text" }),
-      link: `${internal ? "" : portalUrl}/calculator/saas`,
+      link: `${internal ? "" : portalUrl}/pricing/saas`,
       linkTitle: formatMessage({ id: "components.productTypes.saas.linkTitle" }),
     },
     {
       title: formatMessage({ id: "components.productTypes.selfHosted.title" }),
       text: formatMessage({ id: "components.productTypes.selfHosted.text" }),
-      link: `${internal ? "" : portalUrl}/calculator/self-hosted`,
+      link: `${internal ? "" : portalUrl}/pricing/self-hosted`,
       linkTitle: formatMessage({ id: "components.productTypes.selfHosted.linkTitle" }),
     },
     {
