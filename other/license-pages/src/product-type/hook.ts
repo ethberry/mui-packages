@@ -16,19 +16,19 @@ export const useProductTypes = (props: IUseProductTypesProps) => {
     {
       title: formatMessage({ id: "components.productTypes.saas.title" }),
       text: formatMessage({ id: "components.productTypes.saas.text" }),
-      link: internal ? "/calculator-saas" : `${portalUrl}/calculator-saas`,
+      link: `${internal ? "" : portalUrl}/calculator/saas`,
       linkTitle: formatMessage({ id: "components.productTypes.saas.linkTitle" }),
     },
     {
       title: formatMessage({ id: "components.productTypes.selfHosted.title" }),
       text: formatMessage({ id: "components.productTypes.selfHosted.text" }),
-      link: internal ? "/calculator" : `${portalUrl}/calculator`,
+      link: `${internal ? "" : portalUrl}/calculator/self-hosted`,
       linkTitle: formatMessage({ id: "components.productTypes.selfHosted.linkTitle" }),
     },
     {
       title: formatMessage({ id: "components.productTypes.enterprise.title" }),
       text: formatMessage({ id: "components.productTypes.enterprise.text" }),
-      link: internal ? "/contact-enterprise" : `${portalUrl}/contact-enterprise`,
+      link: `${internal ? "" : portalUrl}/contact/enterprise`,
       linkTitle: formatMessage({ id: "components.productTypes.enterprise.linkTitle" }),
     },
   ];
