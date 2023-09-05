@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.14 (2023-09-05)
+
+### Bug Fixes
+
+- links ([e5f275b](https://github.com/gemunion/mui-packages/commit/e5f275bf6c6c500f364effad093307f0b6b6b623))
+- links ([ce238b8](https://github.com/gemunion/mui-packages/commit/ce238b87b7d0a14eff8e3a9d10df190b37bfcdbf))
+
 ## 1.1.13 (2023-09-03)
 
 ### Bug Fixes
