@@ -10,6 +10,7 @@ export interface IFormDialogProps<T> {
   showButtons?: boolean;
   showPrompt?: boolean;
   showDebug?: boolean;
+  disabled?: boolean;
   onConfirm: (values: T, form?: any) => Promise<void>;
   onCancel: () => void;
   message: string;
@@ -25,6 +26,7 @@ export interface IFormDialogProps<T> {
 export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props => {
   const {
     children,
+    disabled,
     onConfirm,
     initialValues,
     validationSchema,
@@ -69,7 +71,7 @@ export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props =>
     <ConfirmationDialog
       onConfirm={handleSubmit}
       maxWidth={maxWidth}
-      disabled={!isDirty || !isValid}
+      disabled={disabled ?? (!isDirty || !isValid)}
       data-testid="DialogForm"
       {...rest}
     >

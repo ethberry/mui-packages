@@ -65,12 +65,12 @@ export const chainInfoByChainId: Record<string, ChainInfo> = {
     rest: "https://rest.cosmos.haqq.network/",
     chainId: "haqq_11235-1",
     chainName: "Haqq Network",
-    chainSymbolImageUrl: "https://github.com/cosmos/chain-registry/blob/master/haqq/images/islm.svg",
+    chainSymbolImageUrl: "https://github.com/cosmos/chain-registry/blob/master/haqq/images/haqq.png",
     stakeCurrency: {
       coinDecimals: 18,
       coinDenom: "ISLM",
       coinMinimalDenom: "aISLM",
-      coinImageUrl: "https://github.com/cosmos/chain-registry/blob/master/haqq/images/islm.svg",
+      coinImageUrl: "https://github.com/cosmos/chain-registry/blob/master/haqq/images/islm.png",
     },
     bip44: {
       coinType: 60,
@@ -93,7 +93,7 @@ export const chainInfoByChainId: Record<string, ChainInfo> = {
         coinDecimals: 18,
         coinDenom: "ISLM",
         coinMinimalDenom: "aISLM",
-        coinImageUrl: "https://github.com/cosmos/chain-registry/blob/master/haqq/images/islm.svg",
+        coinImageUrl: "https://github.com/cosmos/chain-registry/blob/master/haqq/images/islm.png",
       },
     ],
     feeCurrencies: [
@@ -106,7 +106,7 @@ export const chainInfoByChainId: Record<string, ChainInfo> = {
           high: 40000000000,
           low: 20000000000,
         },
-        coinImageUrl: "https://github.com/cosmos/chain-registry/blob/master/haqq/images/islm.svg",
+        coinImageUrl: "https://github.com/cosmos/chain-registry/blob/master/haqq/images/islm.png",
       },
     ],
     features: ["ibc-transfer", "ibc-go", "eth-address-gen", "eth-key-sign"],
