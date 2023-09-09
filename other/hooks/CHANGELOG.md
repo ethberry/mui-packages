@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.50 (2023-09-09)
+
+### Bug Fixes
+
+- add awaitingFieldsNames for use-collection and form autosave ([3748a04](https://github.com/gemunion/mui-packages/commit/3748a046d191d21e11c00054371f45d95ead22bd))
+- **deps:** update all non-major dependencies ([7c5b8e1](https://github.com/gemunion/mui-packages/commit/7c5b8e1d67ac92a15ecee9f442dc2e16b7b0984b))
+
 ## 1.1.49 (2023-09-04)
 
 **Note:** Version bump only for package @gemunion/react-hooks

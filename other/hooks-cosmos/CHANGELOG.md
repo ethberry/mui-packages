@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.7 (2023-09-09)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([7c5b8e1](https://github.com/gemunion/mui-packages/commit/7c5b8e1d67ac92a15ecee9f442dc2e16b7b0984b))
+
 ## [1.1.6](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-cosmos@1.1.5...@gemunion/react-hooks-cosmos@1.1.6) (2023-09-04)
 
 ### Bug Fixes

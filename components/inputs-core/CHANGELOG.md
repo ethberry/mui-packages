@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.2.41 (2023-09-09)
+
+### Bug Fixes
+
+- change autocomplete options to ReadonlyArray ([edb1fb0](https://github.com/gemunion/mui-packages/commit/edb1fb0652612c7bbe41f8ff8af28dbbf7ee62d9))
+- **deps:** update all non-major dependencies ([7c5b8e1](https://github.com/gemunion/mui-packages/commit/7c5b8e1d67ac92a15ecee9f442dc2e16b7b0984b))
+
 ## [7.2.40](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.2.39...@gemunion/mui-inputs-core@7.2.40) (2023-09-04)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core

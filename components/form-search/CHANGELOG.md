@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.2.43 (2023-09-09)
+
+### Bug Fixes
+
+- add awaitingFieldsNames for use-collection and form autosave ([6272b66](https://github.com/gemunion/mui-packages/commit/6272b665993c8f94420f2d837be0b8375385b27c))
+- **deps:** update all non-major dependencies ([7c5b8e1](https://github.com/gemunion/mui-packages/commit/7c5b8e1d67ac92a15ecee9f442dc2e16b7b0984b))
+
 ## [7.2.42](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@7.2.41...@gemunion/mui-form-search@7.2.42) (2023-09-04)
 
 **Note:** Version bump only for package @gemunion/mui-form-search

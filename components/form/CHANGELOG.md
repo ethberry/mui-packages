@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 8.0.52 (2023-09-09)
+
+### Bug Fixes
+
+- add awaitingFieldsNames for use-collection and form autosave ([3748a04](https://github.com/gemunion/mui-packages/commit/3748a046d191d21e11c00054371f45d95ead22bd))
+- **deps:** update all non-major dependencies ([7c5b8e1](https://github.com/gemunion/mui-packages/commit/7c5b8e1d67ac92a15ecee9f442dc2e16b7b0984b))
+
 ## [8.0.51](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@8.0.50...@gemunion/mui-form@8.0.51) (2023-09-04)
 
 ### Bug Fixes
