@@ -27,7 +27,7 @@ export interface IEntityInputProps {
   variant?: "standard" | "filled" | "outlined";
   onChange?: (
     event: ChangeEvent<unknown>,
-    options: Array<IAutocompleteOption> | IAutocompleteOption | null,
+    options: ReadonlyArray<IAutocompleteOption> | IAutocompleteOption | null,
     reason: string,
   ) => void;
 }
@@ -146,7 +146,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                 // value={options.filter((option: IAutocompleteOption) => value.includes(option.id) as boolean)}
                 onChange={
                   onChange ||
-                  ((_event: ChangeEvent<unknown>, options: Array<IAutocompleteOption> | null): void => {
+                  ((_event: ChangeEvent<unknown>, options: ReadonlyArray<IAutocompleteOption> | null): void => {
                     const value = options ? options.map((option: IAutocompleteOption) => option.id) : [];
                     form.setValue(name, value, { shouldDirty: true });
                   })

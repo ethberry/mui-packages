@@ -13,7 +13,7 @@ export interface IAutocompleteOptions {
 export interface IAutocompleteInputProps {
   name: string;
   label?: string | number | ReactElement;
-  options: Array<IAutocompleteOptions>;
+  options: ReadonlyArray<IAutocompleteOptions>;
   multiple?: boolean;
   disabled?: boolean;
   disableClear?: boolean;
@@ -51,7 +51,7 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
               disableClearable={disableClear || readOnly}
               disabled={disabled}
               value={options.filter((option: IAutocompleteOptions) => value.includes(option.key) as boolean)}
-              onChange={(_event: ChangeEvent<unknown>, values: Array<IAutocompleteOptions> | null): void => {
+              onChange={(_event: ChangeEvent<unknown>, values: ReadonlyArray<IAutocompleteOptions> | null): void => {
                 const newValue = values ? values.map((value: IAutocompleteOptions) => value.key) : [];
                 form.setValue(name, newValue, { shouldDirty: true });
               }}
