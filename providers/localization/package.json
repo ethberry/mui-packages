@@ -11,11 +11,11 @@
   "devDependencies": {
     "@gemunion/provider-license": "3.0.28",
     "@gemunion/provider-settings": "4.0.54",
-    "@mui/icons-material": "5.14.7",
-    "@mui/material": "5.14.7",
+    "@mui/icons-material": "5.14.8",
+    "@mui/material": "5.14.8",
     "@types/react": "18.2.21",
     "react": "18.2.0",
-    "react-intl": "6.4.4"
+    "react-intl": "6.4.5"
   },
   "engines": {
     "node": ">=18"

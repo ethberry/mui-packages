@@ -9,12 +9,12 @@
   },
   "description": "license-pages",
   "devDependencies": {
-    "@mui/icons-material": "5.14.7",
-    "@mui/material": "5.14.7",
-    "@types/node": "18.17.14",
+    "@mui/icons-material": "5.14.8",
+    "@mui/material": "5.14.8",
+    "@types/node": "18.17.15",
     "@types/react": "18.2.21",
     "react": "18.2.0",
-    "react-intl": "6.4.4",
+    "react-intl": "6.4.5",
     "react-router-dom": "6.15.0"
   },
   "engines": {
