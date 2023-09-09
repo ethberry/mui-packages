@@ -2,6 +2,7 @@ import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { ChangeEvent, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router";
+import { get } from "react-hook-form";
 import { parse, stringify } from "qs";
 
 import { defaultItemsPerPage } from "@gemunion/constants";
@@ -25,6 +26,7 @@ export interface ICollectionHook<T, S> {
   order?: ISortDto<T>[];
   filter?: (data: Partial<T>) => any;
   redirect?: (baseUrl: string, search: Omit<S, "skip" | "take" | "order">, id?: number) => string;
+  awaitingFieldsNames?: string[];
 }
 
 const defaultFilter = <T extends IIdBase>({ id: _id, ...rest }: Partial<T>) => rest;
@@ -47,6 +49,7 @@ export const useCollection = <
     embedded,
     filter = defaultFilter,
     redirect = defaultRedirect,
+    awaitingFieldsNames,
   } = options;
 
   const { id } = embedded ? { id: "" } : useParams<{ id: string }>();
@@ -326,8 +329,13 @@ export const useCollection = <
       setIsEditDialogOpen(false);
       setIsViewDialogOpen(false);
     }
+
+    if (awaitingFieldsNames && awaitingFieldsNames.some(fieldName => get(search, fieldName) === 0)) {
+      return;
+    }
+
     void fetch(id);
-  }, [search, id]);
+  }, [search, id, awaitingFieldsNames]);
 
   useDeepCompareEffect(() => {
     setSearch(getSearchParams(search));
