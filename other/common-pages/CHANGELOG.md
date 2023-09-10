@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.55](https://github.com/gemunion/mui-packages/compare/@gemunion/common-pages@11.0.54...@gemunion/common-pages@11.0.55) (2023-09-10)
+
+**Note:** Version bump only for package @gemunion/common-pages
+
 ## 11.0.54 (2023-09-09)
 
 ### Bug Fixes

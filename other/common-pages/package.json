@@ -11,7 +11,7 @@
     "@gemunion/constants": "0.12.7",
     "@gemunion/mui-form": "8.0.52",
     "@gemunion/mui-inputs-captcha": "4.1.100",
-    "@gemunion/mui-inputs-core": "7.2.41",
+    "@gemunion/mui-inputs-core": "7.2.42",
     "@gemunion/mui-page-layout": "2.3.3",
     "@gemunion/popup": "1.0.33",
     "@gemunion/react-hooks": "1.1.50",
@@ -74,5 +74,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "11.0.54"
+  "version": "11.0.55"
 }

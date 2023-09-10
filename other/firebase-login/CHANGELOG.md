@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.8](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.3.7...@gemunion/firebase-login@2.3.8) (2023-09-10)
+
+### Bug Fixes
+
+- add twitter provider to firebase login ([7569ad8](https://github.com/gemunion/mui-packages/commit/7569ad8d8e00dbdfa38aec8117f32fa315cdcf64))
+
 ## 2.3.7 (2023-09-09)
 
 ### Bug Fixes

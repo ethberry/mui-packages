@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.42](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.2.41...@gemunion/mui-inputs-core@7.2.42) (2023-09-10)
+
+### Bug Fixes
+
+- bug with uncontrolled select input when initial value is undefined - by making this value as empty string ([6fccd6e](https://github.com/gemunion/mui-packages/commit/6fccd6e0fb10514a952e138c42dbf1961df411e5))
+
 ## 7.2.41 (2023-09-09)
 
 ### Bug Fixes
