@@ -70,7 +70,7 @@ export const SelectInput: FC<ISelectInputProps> = props => {
                 : (value): string => formatMessage({ id: `enums.${suffix}.${value as string}` })
             }
             {...field}
-            value={get(formValues, name)}
+            value={get(formValues, name) ?? ""}
             onChange={(e: any) => {
               form.setValue(name, e.target.value, { shouldTouch: true, shouldDirty: true });
             }}
