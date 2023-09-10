@@ -13,7 +13,7 @@ export interface ITemplateInputProps {
   autoSelect?: boolean;
   disableClear?: boolean;
   data?: {
-    templateStatus?: Array<any>;
+    templateStatus?: Array<string>;
   };
 }
 

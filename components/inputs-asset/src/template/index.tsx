@@ -32,8 +32,13 @@ export interface ITemplateAssetProps {
     data?: {
       contractModule?: Array<string>;
       contractStatus?: Array<string>;
-      // BUSINESS_TYPE=B2B
-      includeExternalContracts?: boolean;
+      [k: string]: any;
+    };
+  };
+  template?: {
+    data?: {
+      templateStatus?: Array<string>;
+      [k: string]: any;
     };
   };
 }
@@ -44,6 +49,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
     multiple = false,
     tokenType,
     contract,
+    template,
     readOnly,
     allowEmpty,
     autoSelect,
@@ -63,7 +69,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
       ({
         ...field,
         ...watchFields[index],
-      } as TAssetComponentParams),
+      }) as TAssetComponentParams,
   );
 
   const handleOptionAdd = (): (() => void) => (): void => {
@@ -108,6 +114,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
                 readOnly={readOnly}
                 autoSelect={autoSelect}
                 disableClear={disableClear}
+                data={template?.data}
               />
               <AmountInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} />
             </Paper>

@@ -28,6 +28,7 @@ export interface ITokenAssetProps {
       contractStatus?: Array<string>;
       contractFeatures?: Array<string>;
       excludeFeatures?: Array<string>;
+      [k: string]: any;
     };
   };
 }
