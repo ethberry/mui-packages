@@ -7,6 +7,7 @@ import {
   getAuth,
   GoogleAuthProvider,
   FacebookAuthProvider,
+  TwitterAuthProvider,
   sendEmailVerification,
   signInWithCustomToken,
 } from "firebase/auth";
@@ -28,6 +29,7 @@ export enum PROVIDERS {
   email = "email",
   google = "google",
   facebook = "facebook",
+  twitter = "twitter",
 }
 
 export const providersStore = {
@@ -37,6 +39,7 @@ export const providersStore = {
   },
   [PROVIDERS.google]: GoogleAuthProvider.PROVIDER_ID,
   [PROVIDERS.facebook]: FacebookAuthProvider.PROVIDER_ID,
+  [PROVIDERS.twitter]: TwitterAuthProvider.PROVIDER_ID,
 };
 
 export interface IFirebaseLogin {
