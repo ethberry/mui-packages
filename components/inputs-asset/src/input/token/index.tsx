@@ -10,10 +10,14 @@ export interface ITokenInputProps {
   name?: string;
   readOnly?: boolean;
   disableClear?: boolean;
+  data?: {
+    tokenStatus?: Array<string>;
+    [k: string]: any;
+  };
 }
 
 export const TokenInput: FC<ITokenInputProps> = props => {
-  const { prefix, name = "tokenId", readOnly, disableClear = true } = props;
+  const { prefix, name = "tokenId", data, readOnly, disableClear = true } = props;
   const form = useFormContext<any>();
 
   const { formatMessage } = useIntl();
@@ -37,11 +41,12 @@ export const TokenInput: FC<ITokenInputProps> = props => {
         <EntityInput
           name={`${prefix}.${name}`}
           controller="tokens"
-          label={formatMessage({ id: "form.labels.tokenIds" })}
-          placeholder={formatMessage({ id: "form.placeholders.tokenIds" })}
           data={{
             contractIds: [contractId],
+            ...data,
           }}
+          label={formatMessage({ id: "form.labels.tokenIds" })}
+          placeholder={formatMessage({ id: "form.placeholders.tokenIds" })}
           getTitle={(token: any) => `${token.template.title as string} #${token.tokenId as string}`}
           readOnly={readOnly}
           onChange={handleChange}
