@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.39](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.38...@gemunion/mui-inputs-asset@2.4.39) (2023-09-12)
+
+### Bug Fixes
+
+- more configurable token asset input ([6171d7e](https://github.com/gemunion/mui-packages/commit/6171d7e3539156d21e12a042ef86b7379c872462))
+
 ## [2.4.38](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.37...@gemunion/mui-inputs-asset@2.4.38) (2023-09-10)
 
 ### Bug Fixes
