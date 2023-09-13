@@ -96,7 +96,7 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
       <Box sx={{ mb: 2 }}>
         <FormProvider {...form}>
           <Box component="form" onSubmit={form.handleSubmit(handleSubmit)} sx={sx} ref={innerRef} {...testIdProps}>
-            <PromptIfDirty visible={showPrompt} />
+            {showPrompt ? <PromptIfDirty /> : null}
 
             {children}
 

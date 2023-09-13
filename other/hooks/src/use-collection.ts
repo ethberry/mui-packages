@@ -85,9 +85,10 @@ export const useCollection = <
     } as Partial<S>),
   );
 
-  const updateQS = (id?: number) => {
+  const updateQS = async (id?: number) => {
     const { skip: _skip, take: _take, order: _order, ...rest } = search;
     const sameSearch = !id && location.search && deepEqual(rest, getSearchParams(data));
+    const previousPathname = location.pathname;
 
     if (embedded || sameSearch) {
       return;
@@ -97,6 +98,13 @@ export const useCollection = <
 
     navigate(redirect(baseUrl, rest, id), {
       replace: shouldReplace,
+    });
+
+    return new Promise(resolve => {
+      // eslint-disable-next-line prefer-promise-reject-errors
+      if (location.pathname !== previousPathname) {
+        resolve(true);
+      }
     });
   };
 
@@ -114,7 +122,7 @@ export const useCollection = <
     return fetchByQueryFn().then((json: IPaginationResult<T>) => {
       setRows(json.rows);
       setCount(json.count);
-      updateQS();
+      void updateQS();
     });
   };
 
@@ -170,18 +178,21 @@ export const useCollection = <
       setSelected(item);
       setCount(1);
       setIsViewDialogOpen(true);
-      updateQS(item.id);
+      void updateQS(item.id);
     };
   };
 
   const handleViewConfirm = (): void => {
     setIsViewDialogOpen(false);
-    updateQS();
+    void updateQS();
   };
 
   const handleViewCancel = (): void => {
-    setIsViewDialogOpen(false);
-    updateQS();
+    void updateQS().then(value => {
+      if (value) {
+        setIsViewDialogOpen(false);
+      }
+    });
   };
 
   const handleEdit = (item: T): (() => void) => {
@@ -189,13 +200,16 @@ export const useCollection = <
       setSelected(item);
       setCount(1);
       setIsEditDialogOpen(true);
-      updateQS(item.id);
+      void updateQS(item.id);
     };
   };
 
   const handleEditCancel = (): void => {
-    setIsEditDialogOpen(false);
-    updateQS();
+    void updateQS().then(value => {
+      if (value) {
+        setIsEditDialogOpen(false);
+      }
+    });
   };
 
   const { fn: handleEditConfirmFn } = useApiCall(
