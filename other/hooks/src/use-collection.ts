@@ -63,6 +63,7 @@ export const useCollection = <
   const [isViewDialogOpen, setIsViewDialogOpen] = useState(false);
   const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
+  const [didMount, setDidMount] = useState(false);
 
   const [rows, setRows] = useState<Array<T>>([]);
   const [count, setCount] = useState<number>(0);
@@ -155,6 +156,7 @@ export const useCollection = <
       })
       .finally(() => {
         setIsLoading(false);
+        setDidMount(true);
       });
   };
 
@@ -276,7 +278,9 @@ export const useCollection = <
   };
 
   const handleRefreshPage = async () => {
-    await fetch(id);
+    if (didMount) {
+      await fetch(id);
+    }
   };
 
   const handleChangePage = (_e: ChangeEvent<unknown>, page: number) => {
