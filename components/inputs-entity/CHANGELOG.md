@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.3.28 (2023-09-13)
+
+### Bug Fixes
+
+- sen undefined on clear ([49d85d5](https://github.com/gemunion/mui-packages/commit/49d85d50f14efa89e4b7f5038733c02b530e4512))
+
 ## 7.3.27 (2023-09-09)
 
 ### Bug Fixes

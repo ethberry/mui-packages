@@ -9,13 +9,13 @@
   },
   "dependencies": {
     "@gemunion/mui-dialog-confirmation": "3.3.39",
-    "@gemunion/mui-form": "8.0.52",
+    "@gemunion/mui-form": "8.0.53",
     "@gemunion/mui-page-layout": "2.3.3",
     "react-router": "6.15.0"
   },
   "description": "react widget",
   "devDependencies": {
-    "@gemunion/mui-inputs-core": "7.2.42",
+    "@gemunion/mui-inputs-core": "7.2.43",
     "@gemunion/provider-license": "3.0.28",
     "@mui/material": "5.14.8",
     "@storybook/react": "7.4.0",
@@ -67,5 +67,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "8.2.43"
+  "version": "8.2.44"
 }

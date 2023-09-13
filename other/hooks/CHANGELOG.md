@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.51 (2023-09-13)
+
+### Bug Fixes
+
+- double fetching on first render ([f186e5e](https://github.com/gemunion/mui-packages/commit/f186e5ece0a5b7abb594fea8d7a4405cd3718518))
+
 ## 1.1.50 (2023-09-09)
 
 ### Bug Fixes
