@@ -194,7 +194,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                 onChange={
                   onChange ||
                   ((_event: ChangeEvent<unknown>, option: IAutocompleteOption | null): void => {
-                    const value = option ? option.id : 0;
+                    const value = option ? option.id : void 0;
                     form.setValue(name, value, { shouldDirty: true });
                   })
                 }
