@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/mui-inputs-file": "6.1.33",
-    "@gemunion/provider-api": "7.0.43",
+    "@gemunion/provider-api": "7.0.44",
     "@gemunion/react-hooks": "1.1.51",
     "mime-types": "2.1.35"
   },
