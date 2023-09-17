@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.54](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@8.0.53...@gemunion/mui-form@8.0.54) (2023-09-17)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([30db7be](https://github.com/gemunion/mui-packages/commit/30db7be95aa5ff87530cd32f7228d60b6bdd9bee))
+- **deps:** update all non-major dependencies ([80fd842](https://github.com/gemunion/mui-packages/commit/80fd842c293253d991904973a3071d9cc3c1b81d))
+- split form watcher and state ([8e41bd7](https://github.com/gemunion/mui-packages/commit/8e41bd73ca9f5fba2673b5f1cbe565b48212a36b))
+- update form watcher ([4c9da0f](https://github.com/gemunion/mui-packages/commit/4c9da0f8dd39f682684be85445d819ac2a3f2e98))
+- updateQS to return a promise indicating a successful redirect ([d19b9e8](https://github.com/gemunion/mui-packages/commit/d19b9e8c45601bfce509547b34a4e346d2c85f20))
+
 ## 8.0.53 (2023-09-13)
 
 **Note:** Version bump only for package @gemunion/mui-form
