@@ -91,7 +91,7 @@ export const useCollection = <
     const previousPathname = location.pathname;
 
     if (embedded || sameSearch) {
-      return;
+      return Promise.resolve(true);
     }
 
     const shouldReplace = !location.search || location.search === "?" || !id;
@@ -100,9 +100,7 @@ export const useCollection = <
       replace: shouldReplace,
     });
 
-    return new Promise(resolve => {
-      resolve(location.pathname !== previousPathname);
-    });
+    return Promise.resolve(location.pathname !== previousPathname);
   };
 
   const { fn: fetchByQueryFn } = useApiCall(
