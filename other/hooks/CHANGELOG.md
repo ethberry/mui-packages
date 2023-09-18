@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.53](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.1.52...@gemunion/react-hooks@1.1.53) (2023-09-18)
+
+### Bug Fixes
+
+- updateQS to always return a promise indicating a successful redirect of staying on the same page ([a87c664](https://github.com/gemunion/mui-packages/commit/a87c6643ee0f7dca30ea7d0b4396abd4029884a7))
+
 ## [1.1.52](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.1.51...@gemunion/react-hooks@1.1.52) (2023-09-17)
 
 ### Bug Fixes
