@@ -4,10 +4,10 @@ import { enqueueSnackbar } from "notistack";
 
 import { useApi } from "@gemunion/provider-api";
 
-import { IHandlerOptionsParams } from "./interfaces";
+import type { IHandlerOptionsParams } from "./interfaces";
 
 export const useSystemContract = <T = any, M = any>(
-  fn: (...args: Array<any>) => Promise<void>,
+  fn: (...args: Array<any>) => Promise<any>,
   options: IHandlerOptionsParams = {},
 ): ((contractModule: M, values: Record<string, any> | null, web3Context: Web3ContextType) => Promise<any>) => {
   const { error = true } = options;
