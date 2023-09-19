@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/mui-inputs-file": "6.1.34",
     "@gemunion/provider-api": "7.0.44",
-    "@gemunion/react-hooks": "1.1.53",
+    "@gemunion/react-hooks": "1.1.54",
     "mime-types": "2.1.35"
   },
   "description": "react widget",
@@ -50,5 +50,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "7.1.43"
+  "version": "7.1.44"
 }

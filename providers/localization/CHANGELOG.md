@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.110](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.109...@gemunion/provider-localization@3.0.110) (2023-09-19)
+
+**Note:** Version bump only for package @gemunion/provider-localization
+
 ## 3.0.109 (2023-09-17)
 
 ### Bug Fixes
