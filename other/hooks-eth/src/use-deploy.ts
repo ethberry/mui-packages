@@ -8,7 +8,6 @@ import type { IFetchProps } from "@gemunion/provider-api";
 
 import { useServerSignature } from "./use-server-signature";
 import { useMetamask } from "./use-metamask";
-import { SystemModuleType } from "./interfaces";
 
 export const useDeploy = (
   deploy: (data: any, web3Context: Web3ContextType, sign: IServerSignature, systemContract?: any) => Promise<void>,
@@ -19,7 +18,7 @@ export const useDeploy = (
 
   const fnWithSignature = useServerSignature(deploy, { error: false });
   const deployFn = useMetamask((params: IFetchProps, web3Context: Web3ContextType) => {
-    return fnWithSignature(params, params.data!, web3Context, SystemModuleType.CONTRACT_MANAGER);
+    return fnWithSignature(params, params.data!, web3Context, "CONTRACT_MANAGER");
   });
 
   const handleDeploy = (): void => {

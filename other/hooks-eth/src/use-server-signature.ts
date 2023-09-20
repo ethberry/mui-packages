@@ -8,7 +8,6 @@ import type { IServerSignature } from "@gemunion/types-blockchain";
 
 import type { IHandlerOptionsParams } from "./interfaces";
 import { useSystemContract } from "./use-system-contract";
-import { SystemModuleType } from "./interfaces";
 
 export const useServerSignature = (
   fn: (...args: Array<any>) => Promise<any>,
@@ -29,7 +28,7 @@ export const useServerSignature = (
     params: IFetchProps,
     values: Record<string, any> | null,
     web3Context: Web3ContextType,
-    contractModule: any = SystemModuleType.EXCHANGE,
+    contractModule: any = "EXCHANGE",
   ) => {
     return api
       .fetchJson(params)
