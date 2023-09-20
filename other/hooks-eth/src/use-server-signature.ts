@@ -4,9 +4,11 @@ import { enqueueSnackbar } from "notistack";
 
 import type { IFetchProps } from "@gemunion/provider-api";
 import { useApi } from "@gemunion/provider-api";
-import type { IDeployable, IServerSignature } from "@gemunion/types-blockchain";
+import type { IServerSignature } from "@gemunion/types-blockchain";
 
 import type { IHandlerOptionsParams } from "./interfaces";
+import { useSystemContract } from "./use-system-contract";
+import { SystemModuleType } from "./interfaces";
 
 export const useServerSignature = (
   fn: (...args: Array<any>) => Promise<any>,
@@ -15,17 +17,19 @@ export const useServerSignature = (
   params: IFetchProps,
   values: Record<string, any> | null,
   web3Context: Web3ContextType,
-  systemContract?: IDeployable,
+  contractModule?: any,
 ) => Promise<any>) => {
   const { error = true } = options;
   const api = useApi();
   const { formatMessage } = useIntl();
 
+  const metaFnWithContract = useSystemContract(fn);
+
   return async (
     params: IFetchProps,
     values: Record<string, any> | null,
     web3Context: Web3ContextType,
-    systemContract?: IDeployable,
+    contractModule: any = SystemModuleType.EXCHANGE,
   ) => {
     return api
       .fetchJson(params)
@@ -37,6 +41,8 @@ export const useServerSignature = (
         }
         throw e;
       })
-      .then((sign: IServerSignature) => fn(values, web3Context, sign, systemContract));
+      .then(async (sign: IServerSignature) => {
+        return metaFnWithContract(contractModule, values, web3Context, sign);
+      });
   };
 };

@@ -3,18 +3,29 @@ import { useIntl } from "react-intl";
 import { enqueueSnackbar } from "notistack";
 
 import { useApi } from "@gemunion/provider-api";
+import type { IServerSignature } from "@gemunion/types-blockchain";
 
 import type { IHandlerOptionsParams } from "./interfaces";
 
 export const useSystemContract = <T = any, M = any>(
   fn: (...args: Array<any>) => Promise<any>,
   options: IHandlerOptionsParams = {},
-): ((contractModule: M, values: Record<string, any> | null, web3Context: Web3ContextType) => Promise<any>) => {
+): ((
+  contractModule: M,
+  values: Record<string, any> | null,
+  web3Context: Web3ContextType,
+  sign?: IServerSignature,
+) => Promise<any>) => {
   const { error = true } = options;
   const api = useApi();
   const { formatMessage } = useIntl();
 
-  return async (contractModule: M, values: Record<string, any> | null, web3Context: Web3ContextType) => {
+  return async (
+    contractModule: M,
+    values: Record<string, any> | null,
+    web3Context: Web3ContextType,
+    sign?: IServerSignature,
+  ) => {
     return api
       .fetchJson({
         url: "/contracts/system",
@@ -31,6 +42,6 @@ export const useSystemContract = <T = any, M = any>(
         }
         throw e;
       })
-      .then((contract: T) => fn(values, web3Context, contract));
+      .then((contract: T) => (sign ? fn(values, web3Context, sign, contract) : fn(values, web3Context, contract)));
   };
 };
