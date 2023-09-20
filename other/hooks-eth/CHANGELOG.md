@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.2.1...@gemunion/react-hooks-eth@1.2.2) (2023-09-20)
+
+### Bug Fixes
+
+- combine useSystemContract and useServerSignature and useDeploy ([e3357fa](https://github.com/gemunion/mui-packages/commit/e3357fa8ed5252aa3191cdd1578f4e487bdf945e))
+- remove enum ([fe51392](https://github.com/gemunion/mui-packages/commit/fe513925db77374fe60aa75cd47b47e3a67a0b3c))
+
 ## [1.2.1](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.2.0...@gemunion/react-hooks-eth@1.2.1) (2023-09-19)
 
 ### Bug Fixes
