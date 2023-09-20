@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.2.2...@gemunion/react-hooks-eth@1.2.3) (2023-09-20)
+
+### Bug Fixes
+
+- add chainId to useUseSystemContract ([d0c3893](https://github.com/gemunion/mui-packages/commit/d0c389321ee64579abc7cb72542cee5c05e9613f))
+
 ## [1.2.2](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.2.1...@gemunion/react-hooks-eth@1.2.2) (2023-09-20)
 
 ### Bug Fixes
