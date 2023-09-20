@@ -32,6 +32,7 @@ export const useSystemContract = <T = any, M = any>(
         method: "POST",
         data: {
           contractModule,
+          chainId: web3Context.chainId,
         },
       })
       .catch((e: any) => {
