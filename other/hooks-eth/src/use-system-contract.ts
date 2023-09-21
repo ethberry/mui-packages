@@ -3,11 +3,11 @@ import { useIntl } from "react-intl";
 import { enqueueSnackbar } from "notistack";
 
 import { useApi } from "@gemunion/provider-api";
-import type { IServerSignature } from "@gemunion/types-blockchain";
+import type { IDeployable, IServerSignature } from "@gemunion/types-blockchain";
 
 import type { IHandlerOptionsParams } from "./interfaces";
 
-export const useSystemContract = <T = any, M = any>(
+export const useSystemContract = <T extends IDeployable, M = any>(
   fn: (...args: Array<any>) => Promise<any>,
   options: IHandlerOptionsParams = {},
 ): ((

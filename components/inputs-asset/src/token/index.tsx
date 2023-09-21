@@ -9,7 +9,7 @@ import { useDeepCompareEffect } from "@gemunion/react-hooks";
 
 import { ContractInput } from "../input/contract";
 import { TokenInput } from "../input/token";
-import { ITokenAssetComponent } from "./types";
+import type { ITokenAssetComponent } from "./types";
 import { emptyToken } from "./empty";
 import { TokenTypeInput } from "../input/token-type";
 import { AmountInput } from "../input/amount";

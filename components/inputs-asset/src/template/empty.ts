@@ -1,8 +1,9 @@
 import { constants } from "ethers";
 
 import { TokenType } from "@gemunion/types-blockchain";
+import { imageUrl } from "@gemunion/constants";
 
-import { ITemplateAsset, ITemplateAssetComponent } from "./types";
+import type { ITemplateAsset, ITemplateAssetComponent } from "./types";
 
 export function getEmptyTemplate(tokenType = TokenType.ERC20): any {
   return {
@@ -37,8 +38,7 @@ export function getEmptyTemplate(tokenType = TokenType.ERC20): any {
             ],
             entityMap: {},
           }),
-          imageUrl:
-            "https://firebasestorage.googleapis.com/v0/b/gemunion-firebase.appspot.com/o/DO_NOT_REMOVE_LOGO.png?alt=media&token=85c376a8-33a0-4b6b-9285-2b9022287289",
+          imageUrl,
         },
         amount:
           tokenType === TokenType.NATIVE || tokenType === TokenType.ERC20 ? constants.WeiPerEther.toString() : "1",

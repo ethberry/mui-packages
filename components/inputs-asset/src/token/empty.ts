@@ -2,7 +2,7 @@ import { constants } from "ethers";
 
 import { TokenType } from "@gemunion/types-blockchain";
 
-import { ITokenAsset, ITokenAssetComponent } from "./types";
+import type { ITokenAsset, ITokenAssetComponent } from "./types";
 
 export function getEmptyToken(tokenType = TokenType.ERC20, contractId = 0): any {
   return {

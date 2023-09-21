@@ -11,7 +11,7 @@ import { TokenTypeInput } from "../input/token-type";
 import { ContractInput } from "../input/contract";
 import { TemplateInput } from "../input/template";
 import { AmountInput } from "../input/amount";
-import { ITemplateAssetComponent } from "./types";
+import type { ITemplateAssetComponent } from "./types";
 
 type TAssetComponentParams = ITemplateAssetComponent & {
   id: string;
