@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.4.44 (2023-09-22)
+
+### Bug Fixes
+
+- broken image ([f91d9df](https://github.com/gemunion/mui-packages/commit/f91d9df03d8c0e0c9f3df78872614b5711770946))
+
 ## [2.4.43](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.42...@gemunion/mui-inputs-asset@2.4.43) (2023-09-19)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset

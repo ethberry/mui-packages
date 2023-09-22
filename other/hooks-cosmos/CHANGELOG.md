@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.9 (2023-09-22)
+
+### Bug Fixes
+
+- restore license check ([1387976](https://github.com/gemunion/mui-packages/commit/1387976e4a9722b4e43f52fe62f0ea9a274c37b0))
+
 ## 1.1.8 (2023-09-17)
 
 ### Bug Fixes
