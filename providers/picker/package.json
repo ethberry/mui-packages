@@ -8,13 +8,13 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@mui/x-date-pickers": "6.14.0",
-    "@mui/x-date-pickers-pro": "6.14.0"
+    "@mui/x-date-pickers": "6.15.0",
+    "@mui/x-date-pickers-pro": "6.15.0"
   },
   "description": "Material UI picker provider",
   "devDependencies": {
-    "@mui/material": "5.14.9",
-    "@mui/x-date-pickers": "6.14.0",
+    "@mui/material": "5.14.10",
+    "@mui/x-date-pickers": "6.15.0",
     "react": "18.2.0"
   },
   "engines": {
