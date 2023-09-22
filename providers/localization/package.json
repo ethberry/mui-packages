@@ -13,9 +13,9 @@
     "@gemunion/provider-settings": "4.0.56",
     "@mui/icons-material": "5.14.9",
     "@mui/material": "5.14.9",
-    "@types/react": "18.2.21",
+    "@types/react": "18.2.22",
     "react": "18.2.0",
-    "react-intl": "6.4.6"
+    "react-intl": "6.4.7"
   },
   "engines": {
     "node": ">=18"

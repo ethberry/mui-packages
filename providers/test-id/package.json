@@ -9,9 +9,9 @@
   },
   "description": "react test id provider",
   "devDependencies": {
-    "@types/react": "18.2.21",
+    "@types/react": "18.2.22",
     "react": "18.2.0",
-    "react-intl": "6.4.6"
+    "react-intl": "6.4.7"
   },
   "engines": {
     "node": ">=18"
