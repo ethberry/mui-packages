@@ -15,11 +15,11 @@
   "devDependencies": {
     "@mui/material": "5.14.9",
     "@mui/styles": "5.14.9",
-    "@types/react": "18.2.21",
+    "@types/react": "18.2.22",
     "@types/react-google-recaptcha": "2.1.5",
     "react": "18.2.0",
-    "react-hook-form": "7.46.1",
-    "react-intl": "6.4.6"
+    "react-hook-form": "7.46.2",
+    "react-intl": "6.4.7"
   },
   "engines": {
     "node": ">=18"
