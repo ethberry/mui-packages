@@ -37,6 +37,13 @@ export enum CustomErrorPrefix {
   "0x67f3734e" = "WrongStake",
   "0xa0f3feea" = "WrongToken",
   "0x669567ea" = "ZeroBalance",
+  "0xcfa51274" = "AlreadyExist",
+  "0xc7486273" = "NotInList",
+  "0xab36f391" = "ProtectedAttribute",
+  "0x2a00e5c6" = "WrongArrayLength",
+  "0xf7760f25" = "WrongPrice",
+  "0x76699990" = "WrongRole",
+  "0xc3fa7054" = "WrongRound",
   // VRF
   "0xa09709f0" = "BalanceInvariantViolated",
   "0x1d4d7a67" = "BlockhashNotInStore",
