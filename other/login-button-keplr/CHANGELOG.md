@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.13](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-keplr@1.1.12...@gemunion/login-button-keplr@1.1.13) (2023-09-26)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([ed1bfc2](https://github.com/gemunion/mui-packages/commit/ed1bfc26f9107253398b1013b24af1a4eb523d8b))
+
 ## 1.1.12 (2023-09-22)
 
 **Note:** Version bump only for package @gemunion/login-button-keplr
