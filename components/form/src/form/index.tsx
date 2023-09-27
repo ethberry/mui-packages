@@ -1,7 +1,7 @@
-import { FC, PropsWithChildren, useEffect } from "react";
+import { Children, cloneElement, FC, PropsWithChildren, ReactElement, useEffect, useState } from "react";
 import { Box, ButtonProps } from "@mui/material";
 import { SxProps, Theme } from "@mui/material/styles";
-import { FieldValues, FormProvider, SubmitHandler, useForm, UseFormReturn } from "react-hook-form";
+import { FieldValues, FormProvider, get, SubmitHandler, useForm, UseFormReturn } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
@@ -11,6 +11,16 @@ import { TestIdProvider } from "@gemunion/provider-test-id";
 import { FormButtons } from "../buttons";
 import { PromptIfDirty } from "../prompt";
 import { OnFormStateChange } from "../on-form-state-change";
+
+export enum InputType {
+  async = "async",
+  sync = "sync",
+}
+
+export interface IRegisteredInput {
+  name: string;
+  type: InputType;
+}
 
 interface IFormWrapperProps<T> {
   showButtons?: boolean;
@@ -51,6 +61,7 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
   const license = useLicense();
 
   const resolver = validationSchema ? yupResolver(validationSchema) : undefined;
+  const [registeredInputs, setRegisteredInputs] = useState<IRegisteredInput[]>([]);
 
   const form = useForm({
     mode: "all",
@@ -62,6 +73,17 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
     e?.preventDefault();
     e?.stopPropagation();
     const values = form.getValues();
+    const { dirtyFields } = form.formState;
+
+    for (const input of registeredInputs) {
+      if (input.type === InputType.async) {
+        const isInputDirty = get(dirtyFields, input.name);
+        if (!isInputDirty) {
+          return;
+        }
+      }
+    }
+
     await onSubmit(values, form);
   };
 
@@ -98,7 +120,15 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
           <Box component="form" onSubmit={form.handleSubmit(handleSubmit)} sx={sx} ref={innerRef} {...testIdProps}>
             <PromptIfDirty visible={showPrompt} />
 
-            {children}
+            {Children.map(children, child => {
+              return child
+                ? cloneElement(child as ReactElement<any>, {
+                    registerInput: (name: string, type: InputType) => {
+                      setRegisteredInputs(inputs => [...inputs, { name, type }]);
+                    },
+                  })
+                : child;
+            })}
 
             <FormButtons
               ref={formSubmitButtonRef}

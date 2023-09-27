@@ -10,13 +10,13 @@ interface IPromptIfDirtyProps {
 export const PromptIfDirty: FC<IPromptIfDirtyProps> = props => {
   const { visible = true } = props;
   const {
-    formState: { isDirty, submitCount },
+    formState: { isDirty },
   } = useFormContext();
   const { formatMessage } = useIntl();
 
   usePrompt({
     message: formatMessage({ id: "form.hints.prompt" }),
-    when: visible && isDirty && submitCount === 0,
+    when: visible && isDirty,
   });
 
   return null;
