@@ -87,10 +87,10 @@ export const useCollection = <
 
   const updateQS = async (id?: number) => {
     const { skip: _skip, take: _take, order: _order, ...rest } = search;
-    const sameSearch = !id && location.search && deepEqual(rest, getSearchParams(data));
+    const sameSearch = !id && deepEqual(rest, getSearchParams(data));
     const previousPathname = location.pathname;
 
-    if (embedded || sameSearch) {
+    if (embedded) {
       return Promise.resolve(true);
     }
 
@@ -100,7 +100,7 @@ export const useCollection = <
       replace: shouldReplace,
     });
 
-    return Promise.resolve(location.pathname !== previousPathname);
+    return Promise.resolve(sameSearch || location.pathname !== previousPathname);
   };
 
   const { fn: fetchByQueryFn } = useApiCall(
