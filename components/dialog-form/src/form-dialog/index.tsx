@@ -1,6 +1,7 @@
-import { FC, MouseEvent, PropsWithChildren, ReactElement, useRef, useState } from "react";
+import { FC, MouseEvent, PropsWithChildren, ReactElement, useCallback, useRef, useState } from "react";
 import { Breakpoint } from "@mui/material";
 import { FieldValues, UseFormReturn } from "react-hook-form";
+import { useIntl } from "react-intl";
 
 import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
@@ -27,15 +28,18 @@ export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props =>
   const {
     children,
     disabled,
+    onCancel,
     onConfirm,
     initialValues,
     validationSchema,
     maxWidth = "lg",
     testId,
-    showPrompt,
+    showPrompt = true,
     showDebug,
     ...rest
   } = props;
+
+  const { formatMessage } = useIntl();
 
   const [isLoading, setIsLoading] = useState(false);
   const [isDirty, setIsDirty] = useState(false);
@@ -67,12 +71,23 @@ export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props =>
     return Promise.resolve();
   };
 
+  const handleCancel = useCallback(() => {
+    if (showPrompt && isDirty) {
+      if (window.confirm(formatMessage({ id: "form.hints.prompt" }))) {
+        onCancel();
+      }
+    } else {
+      onCancel();
+    }
+  }, [isDirty, showPrompt]);
+
   return (
     <ConfirmationDialog
       onConfirm={handleSubmit}
       maxWidth={maxWidth}
       disabled={disabled ?? (!isDirty || !isValid)}
       data-testid="DialogForm"
+      onCancel={handleCancel}
       {...rest}
     >
       <ProgressOverlay isLoading={isLoading}>
@@ -83,7 +98,7 @@ export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props =>
           initialValues={initialValues}
           innerRef={innerRef}
           showButtons={false}
-          showPrompt={showPrompt}
+          showPrompt={false}
           showDebug={showDebug}
           testId={testId}
         >
