@@ -27,7 +27,7 @@
     "@mui/icons-material": "5.14.9",
     "@mui/material": "5.14.10",
     "@mui/styles": "5.14.10",
-    "@types/react": "18.2.22",
+    "@types/react": "18.2.23",
     "@types/uuid": "9.0.4",
     "@web3-react/core": "8.2.2",
     "ethers": "5.7.2",
