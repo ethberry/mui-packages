@@ -12,7 +12,7 @@
     "@gemunion/license-messages": "0.0.36",
     "@gemunion/provider-api": "7.0.44",
     "@gemunion/provider-cosmos": "1.1.9",
-    "@keplr-wallet/types": "0.12.27"
+    "@keplr-wallet/types": "0.12.28"
   },
   "description": "react hooks cosmos",
   "devDependencies": {

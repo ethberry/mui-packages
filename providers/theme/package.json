@@ -22,7 +22,7 @@
     "@gemunion/provider-settings": "4.0.56",
     "@mui/icons-material": "5.14.9",
     "@mui/material": "5.14.10",
-    "@types/stylis": "4.2.0",
+    "@types/stylis": "4.2.1",
     "react": "18.2.0",
     "react-intl": "6.4.7"
   },
