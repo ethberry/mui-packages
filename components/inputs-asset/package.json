@@ -19,8 +19,8 @@
   "description": "react 1inch",
   "devDependencies": {
     "@gemunion/provider-license": "3.0.29",
-    "@mui/icons-material": "5.14.9",
-    "@mui/material": "5.14.10",
+    "@mui/icons-material": "5.14.11",
+    "@mui/material": "5.14.11",
     "@types/react": "18.2.23",
     "@types/react-window": "1.8.6",
     "ethers": "5.7.2",
