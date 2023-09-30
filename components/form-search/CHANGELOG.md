@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.50](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@7.2.49...@gemunion/mui-form-search@7.2.50) (2023-09-30)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([ed27d08](https://github.com/gemunion/mui-packages/commit/ed27d08019e4fc9552ae8d0d7f449c7a7dcf95b6))
+- remove awaitingFieldsNames and add delay of submit search if some of the search props is undefined; add input registry provider for form wrapper to register async inputs and delay autosave if some of async inputs is not dirty ([db58c3e](https://github.com/gemunion/mui-packages/commit/db58c3e0b6b656a86735da9e61db00737ef16249))
+
 ## 7.2.49 (2023-09-26)
 
 ### Bug Fixes

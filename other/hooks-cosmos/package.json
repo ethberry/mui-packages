@@ -11,7 +11,7 @@
     "@cosmjs/encoding": "0.31.1",
     "@gemunion/license-messages": "0.0.36",
     "@gemunion/provider-api": "7.0.45",
-    "@gemunion/provider-cosmos": "1.1.9",
+    "@gemunion/provider-cosmos": "1.1.10",
     "@keplr-wallet/types": "0.12.28"
   },
   "description": "react hooks cosmos",
@@ -54,5 +54,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "1.1.10"
+  "version": "1.1.11"
 }

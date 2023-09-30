@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.2.49](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.48...@gemunion/mui-dialog-form@8.2.49) (2023-09-30)
+
+### Bug Fixes
+
+- blocking onCancel by confirm prompt if form is dirty (working only if onCancel triggered and not yet working with changing route by browser back button) ([d820cee](https://github.com/gemunion/mui-packages/commit/d820ceec661e3189478b259e2718c97045a8f736))
+- **deps:** update all non-major dependencies ([ed27d08](https://github.com/gemunion/mui-packages/commit/ed27d08019e4fc9552ae8d0d7f449c7a7dcf95b6))
+
 ## 8.2.48 (2023-09-26)
 
 ### Bug Fixes

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.56](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.1.55...@gemunion/react-hooks@1.1.56) (2023-09-30)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([edd0e73](https://github.com/gemunion/mui-packages/commit/edd0e73854be78997da3b98bb6f7c665f7876bbb))
+- logic for sameSearch of updateQS ([716bbb5](https://github.com/gemunion/mui-packages/commit/716bbb512850388e4f00c21738a65c1294b479fb))
+- remove awaitingFieldsNames and add delay of submit search if some of the search props is undefined; add input registry provider for form wrapper to register async inputs and delay autosave if some of async inputs is not dirty ([db58c3e](https://github.com/gemunion/mui-packages/commit/db58c3e0b6b656a86735da9e61db00737ef16249))
+
 ## 1.1.55 (2023-09-26)
 
 ### Bug Fixes

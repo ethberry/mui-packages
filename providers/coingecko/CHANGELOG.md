@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.58](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-coingecko@2.0.57...@gemunion/provider-coingecko@2.0.58) (2023-09-30)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([ed27d08](https://github.com/gemunion/mui-packages/commit/ed27d08019e4fc9552ae8d0d7f449c7a7dcf95b6))
+- set correct type for interval in CoinGeckoProvider ([29f8a51](https://github.com/gemunion/mui-packages/commit/29f8a51b5bf6bf59e3d36d8c36e71479ca3d5c4a))
+
 ## 2.0.57 (2023-09-26)
 
 ### Bug Fixes

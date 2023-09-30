@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.58](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@8.0.57...@gemunion/mui-form@8.0.58) (2023-09-30)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([ed27d08](https://github.com/gemunion/mui-packages/commit/ed27d08019e4fc9552ae8d0d7f449c7a7dcf95b6))
+- remove awaitingFieldsNames and add delay of submit search if some of the search props is undefined; add input registry provider for form wrapper to register async inputs and delay autosave if some of async inputs is not dirty ([db58c3e](https://github.com/gemunion/mui-packages/commit/db58c3e0b6b656a86735da9e61db00737ef16249))
+- start to add a function to all children of the form to register input types to prevent submitting if async types of inputs not yet fetched all required data on the first render ([f859a7d](https://github.com/gemunion/mui-packages/commit/f859a7d783e27fdf61c1ea7ceed5bc1994ad6fee))
+
 ## 8.0.57 (2023-09-26)
 
 ### Bug Fixes
