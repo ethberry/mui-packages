@@ -13,10 +13,10 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.14.10",
-    "@mui/styles": "5.14.10",
-    "@types/react": "18.2.22",
-    "@types/react-google-recaptcha": "2.1.5",
+    "@mui/material": "5.14.11",
+    "@mui/styles": "5.14.11",
+    "@types/react": "18.2.23",
+    "@types/react-google-recaptcha": "2.1.6",
     "react": "18.2.0",
     "react-hook-form": "7.46.2",
     "react-intl": "6.4.7"

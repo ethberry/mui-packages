@@ -9,10 +9,10 @@
   },
   "description": "license-pages",
   "devDependencies": {
-    "@mui/icons-material": "5.14.9",
-    "@mui/material": "5.14.10",
-    "@types/node": "18.17.18",
-    "@types/react": "18.2.22",
+    "@mui/icons-material": "5.14.11",
+    "@mui/material": "5.14.11",
+    "@types/node": "18.18.1",
+    "@types/react": "18.2.23",
     "react": "18.2.0",
     "react-intl": "6.4.7",
     "react-router-dom": "6.16.0"
