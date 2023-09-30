@@ -53,3 +53,6 @@ export const deepEqual = (obj1: any, obj2: any): boolean => {
 
   return false;
 };
+
+export const hasUndefined = (obj: Record<string, any>): boolean =>
+  Object.values(obj).some(val => val === undefined || (typeof val === "object" && hasUndefined(val)));

@@ -1,7 +1,7 @@
-import { FC, PropsWithChildren, useEffect } from "react";
+import { FC, PropsWithChildren, useEffect, useState } from "react";
 import { Box, ButtonProps } from "@mui/material";
 import { SxProps, Theme } from "@mui/material/styles";
-import { FieldValues, FormProvider, SubmitHandler, useForm, UseFormReturn } from "react-hook-form";
+import { FieldValues, FormProvider, get, SubmitHandler, useForm, UseFormReturn } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
@@ -11,6 +11,12 @@ import { TestIdProvider } from "@gemunion/provider-test-id";
 import { FormButtons } from "../buttons";
 import { PromptIfDirty } from "../prompt";
 import { OnFormStateChange } from "../on-form-state-change";
+import { InputRegistryProvider } from "../input-registry-provider";
+
+export interface IRegisteredInput {
+  name: string;
+  isAsync: boolean;
+}
 
 interface IFormWrapperProps<T> {
   showButtons?: boolean;
@@ -51,6 +57,7 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
   const license = useLicense();
 
   const resolver = validationSchema ? yupResolver(validationSchema) : undefined;
+  const [registeredInputs, setRegisteredInputs] = useState<IRegisteredInput[]>([]);
 
   const form = useForm({
     mode: "all",
@@ -62,6 +69,14 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
     e?.preventDefault();
     e?.stopPropagation();
     const values = form.getValues();
+    const {
+      formState: { dirtyFields },
+    } = form;
+
+    if (registeredInputs.filter(input => input.isAsync).some(input => !get(dirtyFields, input.name))) {
+      return;
+    }
+
     await onSubmit(values, form);
   };
 
@@ -73,7 +88,7 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
 
   useDeepCompareEffect(() => {
     if (enableReinitialize) {
-      form.reset(initialValues);
+      form.reset(initialValues, { keepDirtyValues: true });
     }
   }, [enableReinitialize, initialValues]);
 
@@ -93,25 +108,27 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
 
   return (
     <TestIdProvider testId={testId}>
-      <Box sx={{ mb: 2 }}>
-        <FormProvider {...form}>
-          <Box component="form" onSubmit={form.handleSubmit(handleSubmit)} sx={sx} ref={innerRef} {...testIdProps}>
-            <PromptIfDirty visible={showPrompt} />
+      <InputRegistryProvider registeredInputs={registeredInputs} setRegisteredInputs={setRegisteredInputs}>
+        <Box sx={{ mb: 2 }}>
+          <FormProvider {...form}>
+            <Box component="form" onSubmit={form.handleSubmit(handleSubmit)} sx={sx} ref={innerRef} {...testIdProps}>
+              <PromptIfDirty visible={showPrompt} />
 
-            {children}
+              {children}
 
-            <FormButtons
-              ref={formSubmitButtonRef}
-              visible={showButtons}
-              showDebug={showDebug}
-              submit={submit}
-              handleSubmit={form.handleSubmit(handleSubmit)}
-              formButtonProps={formSubmitButtonProps}
-            />
-            {onFormStateChange ? <OnFormStateChange onFormStateChange={onFormStateChange} /> : null}
-          </Box>
-        </FormProvider>
-      </Box>
+              <FormButtons
+                ref={formSubmitButtonRef}
+                visible={showButtons}
+                showDebug={showDebug}
+                submit={submit}
+                handleSubmit={form.handleSubmit(handleSubmit)}
+                formButtonProps={formSubmitButtonProps}
+              />
+              {onFormStateChange ? <OnFormStateChange onFormStateChange={onFormStateChange} /> : null}
+            </Box>
+          </FormProvider>
+        </Box>
+      </InputRegistryProvider>
     </TestIdProvider>
   );
 };

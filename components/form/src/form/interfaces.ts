@@ -1,0 +1,15 @@
+export enum AsyncInput {
+  AddressSelectInput = "AddressSelectInput",
+  ComboEntityInput = "ComboEntityInput",
+  CommonContractInput = "CommonContractInput",
+  ContractInput = "ContractInput",
+  EntityInput = "EntityInput",
+  MysteryboxInput = "MysteryboxInput",
+  PayeeInput = "PayeeInput",
+  SearchContractInput = "SearchContractInput",
+  TemplateAssetInput = "TemplateAssetInput",
+  TemplateInput = "TemplateInput",
+  TokenAssetInput = "TokenAssetInput",
+  TokenDepositInput = "TokenDepositInput",
+  TokenInput = "TokenInput",
+}

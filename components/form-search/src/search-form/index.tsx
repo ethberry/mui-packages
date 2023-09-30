@@ -9,23 +9,13 @@ interface ICommonSearchFormProps {
   onSubmit: (values: any, form: UseFormReturn) => Promise<void>;
   initialValues: any;
   autosave?: boolean;
-  awaitingFieldsNames?: string[];
   open?: boolean;
   name?: string;
   testId?: string;
 }
 
 export const CommonSearchForm: FC<PropsWithChildren<ICommonSearchFormProps>> = props => {
-  const {
-    onSubmit,
-    awaitingFieldsNames,
-    initialValues,
-    name = "query",
-    autosave = true,
-    open = false,
-    testId,
-    children,
-  } = props;
+  const { onSubmit, initialValues, name = "query", autosave = true, open = false, testId, children } = props;
 
   return (
     <FormWrapper
@@ -41,7 +31,7 @@ export const CommonSearchForm: FC<PropsWithChildren<ICommonSearchFormProps>> = p
         </Grid>
       </Grid>
       <Collapse in={open}>{children}</Collapse>
-      {autosave ? <AutoSave onSubmit={onSubmit} awaitingFieldsNames={awaitingFieldsNames} /> : null}
+      {autosave ? <AutoSave onSubmit={onSubmit} /> : null}
     </FormWrapper>
   );
 };

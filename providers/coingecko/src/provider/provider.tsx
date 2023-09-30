@@ -21,7 +21,7 @@ export const CoinGeckoProvider: FC<PropsWithChildren<ICoinGeckoProviderProps>> =
   const [baseCoinId, setBaseCoinId] = useState<string>(defaultCurrency);
   const [tickers, setTickers] = useState<Array<ICoinGeckoCoinTicker>>([]);
 
-  let interval: NodeJS.Timer;
+  let interval: NodeJS.Timeout;
 
   const fetchCoinTickers = async () => {
     return fetch(
