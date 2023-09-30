@@ -4,18 +4,20 @@ import { useDebouncedCallback } from "use-debounce";
 
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
 
+import { useInputRegistry } from "../input-registry-provider";
+
 interface IAutoSaveProps {
   onSubmit: (values: any, form: UseFormReturn<FieldValues, any>) => Promise<void>;
-  awaitingFieldsNames?: string[];
 }
 
 export const AutoSave: FC<IAutoSaveProps> = props => {
-  const { onSubmit, awaitingFieldsNames } = props;
+  const { onSubmit } = props;
 
   const form = useFormContext();
+  const { registeredInputs } = useInputRegistry();
 
   const {
-    formState: { isDirty },
+    formState: { isDirty, dirtyFields },
   } = form;
 
   const values = useWatch();
@@ -26,13 +28,13 @@ export const AutoSave: FC<IAutoSaveProps> = props => {
 
   useDeepCompareEffect(() => {
     if (isDirty) {
-      if (awaitingFieldsNames && awaitingFieldsNames.some(fieldName => get(values, fieldName) === 0)) {
+      if (registeredInputs.filter(input => input.isAsync).some(input => !get(dirtyFields, input.name))) {
         return;
       }
 
       void debouncedOnSubmit();
     }
-  }, [values, { isDirty }, awaitingFieldsNames]);
+  }, [values, { isDirty }, registeredInputs]);
 
   return null;
 };

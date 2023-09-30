@@ -1,9 +1,10 @@
-import { ChangeEvent, FC, HTMLAttributes, ReactElement, useCallback, useState } from "react";
+import { ChangeEvent, FC, HTMLAttributes, ReactElement, useCallback, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import { enqueueSnackbar } from "notistack";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/material";
 
+import { useInputRegistry } from "@gemunion/mui-form";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useApi } from "@gemunion/provider-api";
 import { useTestId } from "@gemunion/provider-test-id";
@@ -51,6 +52,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
   } = props;
   const suffix = name.split(".").pop() as string;
 
+  const { registerInput, unregisterInput } = useInputRegistry();
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
@@ -121,6 +123,13 @@ export const EntityInput: FC<IEntityInputProps> = props => {
 
     return () => abortController.abort();
   }, [data]);
+
+  useEffect(() => {
+    registerInput(name, true);
+    return () => {
+      unregisterInput(name);
+    };
+  }, [name]);
 
   return (
     <Controller

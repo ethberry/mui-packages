@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, HTMLAttributes, ReactElement, useCallback, useState } from "react";
+import { ChangeEvent, FC, HTMLAttributes, ReactElement, useCallback, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import { enqueueSnackbar } from "notistack";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
@@ -24,6 +24,7 @@ export interface IComboEntityInputProps {
   targetId?: string;
   data?: Record<string, any>;
   variant?: "standard" | "filled" | "outlined";
+  registerInput?: (name: string, isAsync: boolean) => () => void;
   onChange?: (
     event: ChangeEvent<unknown>,
     options: Array<IAutocompleteOption | string> | string | IAutocompleteOption | null,
@@ -41,6 +42,7 @@ export const ComboEntityInput: FC<IComboEntityInputProps> = props => {
     data = {},
     variant = "standard",
     onChange,
+    registerInput,
     label,
     placeholder,
     disabled,
@@ -116,6 +118,14 @@ export const ComboEntityInput: FC<IComboEntityInputProps> = props => {
 
     return () => abortController.abort();
   }, [data]);
+
+  useEffect(() => {
+    const unregisterInput = registerInput && registerInput(name, true);
+
+    return () => {
+      unregisterInput && unregisterInput();
+    };
+  }, [name, registerInput]);
 
   return (
     <Controller

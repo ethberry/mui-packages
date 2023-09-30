@@ -1,4 +1,4 @@
-import { Children, cloneElement, FC, PropsWithChildren, ReactElement, useEffect, useState } from "react";
+import { FC, PropsWithChildren, useEffect, useState } from "react";
 import { Box, ButtonProps } from "@mui/material";
 import { SxProps, Theme } from "@mui/material/styles";
 import { FieldValues, FormProvider, get, SubmitHandler, useForm, UseFormReturn } from "react-hook-form";
@@ -11,15 +11,11 @@ import { TestIdProvider } from "@gemunion/provider-test-id";
 import { FormButtons } from "../buttons";
 import { PromptIfDirty } from "../prompt";
 import { OnFormStateChange } from "../on-form-state-change";
-
-export enum InputType {
-  async = "async",
-  sync = "sync",
-}
+import { InputRegistryProvider } from "../input-registry-provider";
 
 export interface IRegisteredInput {
   name: string;
-  type: InputType;
+  isAsync: boolean;
 }
 
 interface IFormWrapperProps<T> {
@@ -73,15 +69,12 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
     e?.preventDefault();
     e?.stopPropagation();
     const values = form.getValues();
-    const { dirtyFields } = form.formState;
+    const {
+      formState: { dirtyFields },
+    } = form;
 
-    for (const input of registeredInputs) {
-      if (input.type === InputType.async) {
-        const isInputDirty = get(dirtyFields, input.name);
-        if (!isInputDirty) {
-          return;
-        }
-      }
+    if (registeredInputs.filter(input => input.isAsync).some(input => !get(dirtyFields, input.name))) {
+      return;
     }
 
     await onSubmit(values, form);
@@ -95,7 +88,7 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
 
   useDeepCompareEffect(() => {
     if (enableReinitialize) {
-      form.reset(initialValues);
+      form.reset(initialValues, { keepDirtyValues: true });
     }
   }, [enableReinitialize, initialValues]);
 
@@ -115,33 +108,27 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
 
   return (
     <TestIdProvider testId={testId}>
-      <Box sx={{ mb: 2 }}>
-        <FormProvider {...form}>
-          <Box component="form" onSubmit={form.handleSubmit(handleSubmit)} sx={sx} ref={innerRef} {...testIdProps}>
-            <PromptIfDirty visible={showPrompt} />
+      <InputRegistryProvider registeredInputs={registeredInputs} setRegisteredInputs={setRegisteredInputs}>
+        <Box sx={{ mb: 2 }}>
+          <FormProvider {...form}>
+            <Box component="form" onSubmit={form.handleSubmit(handleSubmit)} sx={sx} ref={innerRef} {...testIdProps}>
+              <PromptIfDirty visible={showPrompt} />
 
-            {Children.map(children, child => {
-              return child
-                ? cloneElement(child as ReactElement<any>, {
-                    registerInput: (name: string, type: InputType) => {
-                      setRegisteredInputs(inputs => [...inputs, { name, type }]);
-                    },
-                  })
-                : child;
-            })}
+              {children}
 
-            <FormButtons
-              ref={formSubmitButtonRef}
-              visible={showButtons}
-              showDebug={showDebug}
-              submit={submit}
-              handleSubmit={form.handleSubmit(handleSubmit)}
-              formButtonProps={formSubmitButtonProps}
-            />
-            {onFormStateChange ? <OnFormStateChange onFormStateChange={onFormStateChange} /> : null}
-          </Box>
-        </FormProvider>
-      </Box>
+              <FormButtons
+                ref={formSubmitButtonRef}
+                visible={showButtons}
+                showDebug={showDebug}
+                submit={submit}
+                handleSubmit={form.handleSubmit(handleSubmit)}
+                formButtonProps={formSubmitButtonProps}
+              />
+              {onFormStateChange ? <OnFormStateChange onFormStateChange={onFormStateChange} /> : null}
+            </Box>
+          </FormProvider>
+        </Box>
+      </InputRegistryProvider>
     </TestIdProvider>
   );
 };

@@ -2,7 +2,6 @@ import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { ChangeEvent, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router";
-import { get } from "react-hook-form";
 import { parse, stringify } from "qs";
 
 import { defaultItemsPerPage } from "@gemunion/constants";
@@ -11,7 +10,7 @@ import { IIdBase, IPaginationResult, IPaginationDto, ISortDto, IMuiSortDto } fro
 
 import { useApiCall } from "./use-api-call";
 import { useDeepCompareEffect } from "./use-deep-compare-effect";
-import { decoder, deepEqual } from "./utils";
+import { decoder, deepEqual, hasUndefined } from "./utils";
 
 export interface IHandleChangePaginationModelProps {
   page: number;
@@ -26,7 +25,6 @@ export interface ICollectionHook<T, S> {
   order?: ISortDto<T>[];
   filter?: (data: Partial<T>) => any;
   redirect?: (baseUrl: string, search: Omit<S, "skip" | "take" | "order">, id?: number) => string;
-  awaitingFieldsNames?: string[];
 }
 
 const defaultFilter = <T extends IIdBase>({ id: _id, ...rest }: Partial<T>) => rest;
@@ -49,7 +47,6 @@ export const useCollection = <
     embedded,
     filter = defaultFilter,
     redirect = defaultRedirect,
-    awaitingFieldsNames,
   } = options;
 
   const { id } = embedded ? { id: "" } : useParams<{ id: string }>();
@@ -343,12 +340,12 @@ export const useCollection = <
       setIsViewDialogOpen(false);
     }
 
-    if (awaitingFieldsNames && awaitingFieldsNames.some(fieldName => get(search, fieldName) === 0)) {
+    if (hasUndefined(search)) {
       return;
     }
 
     void fetch(id);
-  }, [search, id, awaitingFieldsNames]);
+  }, [search, id]);
 
   useDeepCompareEffect(() => {
     setSearch(getSearchParams(search));
