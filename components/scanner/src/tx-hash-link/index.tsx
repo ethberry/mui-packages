@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Link, SxProps, Theme, Tooltip } from "@mui/material";
+import { Link, SxProps, Theme, Tooltip, useMediaQuery } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 
 import { networks } from "@gemunion/provider-wallet";
@@ -19,10 +19,12 @@ export const TxHashLink: FC<ITxHashLinkProps> = props => {
     return null;
   }
 
+  const isSmallScreen = useMediaQuery<Theme>(theme => theme.breakpoints.down("sm"));
+
   return (
     <Tooltip title={hash}>
       <Link target={"_blank"} href={`${networks[chainId].blockExplorerUrls[0]}/tx/${hash}`} sx={sx}>
-        {hash.substring(0, length).concat("...")}
+        {isSmallScreen ? `${hash.slice(0, 5)}...${hash.slice(-4)}` : hash.substring(0, length).concat("...")}
       </Link>
     </Tooltip>
   );
