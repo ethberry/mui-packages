@@ -13,10 +13,20 @@ interface IDateTimeInputProps extends MobileDateTimePickerProps<any> {
   textFieldSlotProps?: any;
   variant?: "standard" | "filled" | "outlined";
   onChange?: (date: Date | null) => void;
+  format?: string;
 }
 
+// "dd/LL/yyyy hh:mm:ss a" 01/12/2023 04:47 PM
 export const DateTimeInput: FC<IDateTimeInputProps> = props => {
-  const { name, label, variant = "standard", readOnly, textFieldSlotProps = {}, ...rest } = props;
+  const {
+    name,
+    label,
+    format = "dd/LL/yyyy hh:mm:ss",
+    variant = "standard",
+    readOnly,
+    textFieldSlotProps = {},
+    ...rest
+  } = props;
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
@@ -46,7 +56,7 @@ export const DateTimeInput: FC<IDateTimeInputProps> = props => {
       control={form.control}
       render={({ field }) => (
         <MobileDateTimePicker
-          format="MM/dd/yyyy hh:mm a"
+          format={format}
           label={localizedLabel}
           value={value ? setter(value) : null}
           onChange={(date: Date | null): void => {
