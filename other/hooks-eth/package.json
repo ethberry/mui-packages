@@ -21,7 +21,7 @@
   "devDependencies": {
     "@gemunion/provider-license": "3.0.29",
     "@gemunion/provider-wallet": "3.3.51",
-    "@web3-react/core": "8.2.2",
+    "@web3-react/core": "8.2.3",
     "notistack": "3.0.1",
     "react": "18.2.0",
     "react-intl": "6.4.7"
