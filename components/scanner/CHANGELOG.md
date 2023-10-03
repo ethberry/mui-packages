@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.43](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.2.42...@gemunion/mui-scanner@1.2.43) (2023-10-03)
+
+### Bug Fixes
+
+- shorten mui scanner address and hash on small screen ([fc0455e](https://github.com/gemunion/mui-packages/commit/fc0455e30f9f2dc3747ca8d5c9db72f352a941c5))
+
 ## [1.2.42](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.2.41...@gemunion/mui-scanner@1.2.42) (2023-09-30)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.2.50](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.49...@gemunion/mui-dialog-form@8.2.50) (2023-10-03)
+
+### Bug Fixes
+
+- use-collection - add form to handleEditCancel and fix same search; pass form from form-dialog; asset input to set shouldDirty ([00d9fdf](https://github.com/gemunion/mui-packages/commit/00d9fdfdacccd8bc10fa6c4e43618631dc8f2479))
+
 ## [8.2.49](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.48...@gemunion/mui-dialog-form@8.2.49) (2023-09-30)
 
 ### Bug Fixes

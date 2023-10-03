@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@6.0.48...@gemunion/mui-inputs-picker@6.1.0) (2023-10-03)
+
+### Features
+
+- change daf date-time fns format ([e9229bf](https://github.com/gemunion/mui-packages/commit/e9229bf7ea48c8a9d33ad8def4c1f7486f69a48f))
+
 ## [6.0.48](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@6.0.47...@gemunion/mui-inputs-picker@6.0.48) (2023-09-30)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.47](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.46...@gemunion/mui-inputs-asset@2.4.47) (2023-10-03)
+
+### Bug Fixes
+
+- use-collection - add form to handleEditCancel and fix same search; pass form from form-dialog; asset input to set shouldDirty ([00d9fdf](https://github.com/gemunion/mui-packages/commit/00d9fdfdacccd8bc10fa6c4e43618631dc8f2479))
+
 ## [2.4.46](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.45...@gemunion/mui-inputs-asset@2.4.46) (2023-09-30)
 
 ### Bug Fixes

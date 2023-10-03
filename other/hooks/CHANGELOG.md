@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.57](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.1.56...@gemunion/react-hooks@1.1.57) (2023-10-03)
+
+### Bug Fixes
+
+- use-collection - add form to handleEditCancel and fix same search; pass form from form-dialog; asset input to set shouldDirty ([00d9fdf](https://github.com/gemunion/mui-packages/commit/00d9fdfdacccd8bc10fa6c4e43618631dc8f2479))
+
 ## [1.1.56](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.1.55...@gemunion/react-hooks@1.1.56) (2023-09-30)
 
 ### Bug Fixes
