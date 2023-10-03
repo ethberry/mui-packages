@@ -12,13 +12,13 @@ export interface IFormDialogProps<T> {
   showPrompt?: boolean;
   showDebug?: boolean;
   disabled?: boolean;
-  onConfirm: (values: T, form?: any) => Promise<void>;
-  onCancel: () => void;
+  onConfirm: (values: T, form?: UseFormReturn<FieldValues, any>) => Promise<void>;
+  onCancel: (form?: UseFormReturn<FieldValues, any> | null) => void;
   message: string;
   data?: any;
   open: boolean;
   initialValues: T;
-  validationSchema?: any | (() => any);
+  validationSchema?: any;
   maxWidth?: Breakpoint | false;
   testId?: string;
   action?: ReactElement | null;
@@ -42,6 +42,7 @@ export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props =>
   const { formatMessage } = useIntl();
 
   const [isLoading, setIsLoading] = useState(false);
+  const [form, setForm] = useState<UseFormReturn<FieldValues, any> | null>(null);
   const [isDirty, setIsDirty] = useState(false);
   const [isValid, setIsValid] = useState(false);
 
@@ -52,6 +53,7 @@ export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props =>
       formState: { isDirty, isValid },
     } = form;
 
+    setForm(form);
     setIsDirty(isDirty);
     setIsValid(isValid);
 
@@ -74,12 +76,12 @@ export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props =>
   const handleCancel = useCallback(() => {
     if (showPrompt && isDirty) {
       if (window.confirm(formatMessage({ id: "form.hints.prompt" }))) {
-        onCancel();
+        onCancel(form);
       }
     } else {
-      onCancel();
+      onCancel(form);
     }
-  }, [isDirty, showPrompt]);
+  }, [form, isDirty, showPrompt]);
 
   return (
     <ConfirmationDialog

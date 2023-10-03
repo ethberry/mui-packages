@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren, useEffect, useState } from "react";
 import { Box, ButtonProps } from "@mui/material";
 import { SxProps, Theme } from "@mui/material/styles";
-import { FieldValues, FormProvider, get, SubmitHandler, useForm, UseFormReturn } from "react-hook-form";
+import { FieldValues, FormProvider, SubmitHandler, useForm, UseFormReturn } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
@@ -69,14 +69,6 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
     e?.preventDefault();
     e?.stopPropagation();
     const values = form.getValues();
-    const {
-      formState: { dirtyFields },
-    } = form;
-
-    if (registeredInputs.filter(input => input.isAsync).some(input => !get(dirtyFields, input.name))) {
-      return;
-    }
-
     await onSubmit(values, form);
   };
 

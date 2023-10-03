@@ -2,6 +2,7 @@ import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { ChangeEvent, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router";
+import { FieldValues, UseFormReturn } from "react-hook-form";
 import { parse, stringify } from "qs";
 
 import { defaultItemsPerPage } from "@gemunion/constants";
@@ -84,10 +85,10 @@ export const useCollection = <
 
   const updateQS = async (id?: number) => {
     const { skip: _skip, take: _take, order: _order, ...rest } = search;
-    const sameSearch = !id && deepEqual(rest, getSearchParams(data));
+    const sameSearch = !id && location.search && deepEqual(rest, getSearchParams(data));
     const previousPathname = location.pathname;
 
-    if (embedded) {
+    if (embedded || sameSearch) {
       return Promise.resolve(true);
     }
 
@@ -97,7 +98,7 @@ export const useCollection = <
       replace: shouldReplace,
     });
 
-    return Promise.resolve(sameSearch || location.pathname !== previousPathname);
+    return Promise.resolve(location.pathname !== previousPathname);
   };
 
   const { fn: fetchByQueryFn } = useApiCall(
@@ -180,11 +181,8 @@ export const useCollection = <
   };
 
   const handleViewCancel = (): void => {
-    void updateQS().then(success => {
-      if (success) {
-        setIsViewDialogOpen(false);
-      }
-    });
+    setIsViewDialogOpen(false);
+    void updateQS();
   };
 
   const handleEdit = (item: T): (() => void) => {
@@ -196,7 +194,19 @@ export const useCollection = <
     };
   };
 
-  const handleEditCancel = (): void => {
+  const handleEditCancel = (form: UseFormReturn<FieldValues, any> | null): void => {
+    if (form) {
+      const {
+        formState: { isDirty, isValid },
+      } = form;
+
+      if (isDirty && isValid && window.confirm(formatMessage({ id: "form.hints.prompt" }))) {
+        setIsEditDialogOpen(false);
+        void updateQS();
+        return;
+      }
+    }
+
     void updateQS().then(success => {
       if (success) {
         setIsEditDialogOpen(false);
