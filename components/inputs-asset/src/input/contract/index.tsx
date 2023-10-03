@@ -21,7 +21,7 @@ export const ContractInput: FC<IContractInputProps> = props => {
   const form = useFormContext<any>();
 
   const handleChange = (_event: ChangeEvent<unknown>, option: any): void => {
-    form.setValue(`${prefix}.${name}`, option?.id ?? 0);
+    form.setValue(`${prefix}.${name}`, option?.id ?? 0, { shouldDirty: true });
     form.setValue(
       `${prefix}.amount`,
       BigNumber.from(10)
