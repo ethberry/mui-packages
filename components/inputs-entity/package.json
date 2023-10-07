@@ -16,7 +16,7 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.45",
+    "@gemunion/provider-api": "7.0.46",
     "@mui/icons-material": "5.14.12",
     "@mui/lab": "5.0.0-alpha.147",
     "@mui/material": "5.14.12",
