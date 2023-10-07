@@ -28,7 +28,7 @@
     "@mui/material": "5.14.12",
     "@mui/styles": "5.14.12",
     "@types/react": "18.2.25",
-    "@types/uuid": "9.0.4",
+    "@types/uuid": "9.0.5",
     "@web3-react/core": "8.2.3",
     "ethers": "5.7.2",
     "notistack": "3.0.1",
