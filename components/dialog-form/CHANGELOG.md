@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.2.52](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.51...@gemunion/mui-dialog-form@8.2.52) (2023-10-08)
+
+### Bug Fixes
+
+- use-collection and dialog form to handle touched fields and block closing dialog only if any field is touched by user; handle submit button ([d698bf4](https://github.com/gemunion/mui-packages/commit/d698bf4e4159c7744d86b11920414b63ba597ac0))
+
 ## [8.2.51](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.50...@gemunion/mui-dialog-form@8.2.51) (2023-10-07)
 
 ### Bug Fixes

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.49](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.1.48...@gemunion/geetest@2.1.49) (2023-10-08)
+
+**Note:** Version bump only for package @gemunion/geetest
+
 ## [2.1.48](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.1.47...@gemunion/geetest@2.1.48) (2023-10-07)
 
 ### Bug Fixes
