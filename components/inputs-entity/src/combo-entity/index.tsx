@@ -98,10 +98,7 @@ export const ComboEntityInput: FC<IComboEntityInputProps> = props => {
           if (!value || isValueNotExistInOptions) {
             onChange
               ? onChange({} as ChangeEvent<unknown>, newValue, "autoselect")
-              : form.setValue(name, newValue[targetId], {
-                  shouldTouch: true,
-                  shouldDirty: true,
-                });
+              : form.setValue(name, newValue[targetId], { shouldDirty: true });
           }
         }
       })
@@ -158,7 +155,7 @@ export const ComboEntityInput: FC<IComboEntityInputProps> = props => {
                     const foundOption = options.find(({ title, address }) => option === title || option === address);
                     value = foundOption?.address || option;
                   }
-                  form.setValue(name, value, { shouldDirty: true });
+                  form.setValue(name, value, { shouldDirty: true, shouldTouch: true });
                 })
               }
               getOptionLabel={(option: IAutocompleteOption | string) =>

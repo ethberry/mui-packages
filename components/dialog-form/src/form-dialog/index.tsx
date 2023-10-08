@@ -2,10 +2,12 @@ import { FC, MouseEvent, PropsWithChildren, ReactElement, useCallback, useRef, u
 import { Breakpoint } from "@mui/material";
 import { FieldValues, UseFormReturn } from "react-hook-form";
 import { useIntl } from "react-intl";
+import { useParams } from "react-router";
 
 import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { FormWrapper } from "@gemunion/mui-form";
+import { useDeepCompareEffect } from "@gemunion/react-hooks";
 
 export interface IFormDialogProps<T> {
   showButtons?: boolean;
@@ -13,7 +15,7 @@ export interface IFormDialogProps<T> {
   showDebug?: boolean;
   disabled?: boolean;
   onConfirm: (values: T, form?: UseFormReturn<FieldValues, any>) => Promise<void>;
-  onCancel: (form?: UseFormReturn<FieldValues, any> | null) => void;
+  onCancel: () => void;
   message: string;
   data?: any;
   open: boolean;
@@ -40,22 +42,22 @@ export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props =>
   } = props;
 
   const { formatMessage } = useIntl();
+  const { id } = useParams<{ id: string }>();
 
   const [isLoading, setIsLoading] = useState(false);
-  const [form, setForm] = useState<UseFormReturn<FieldValues, any> | null>(null);
-  const [isDirty, setIsDirty] = useState(false);
   const [isValid, setIsValid] = useState(false);
+  const [touchedFields, setTouchedFields] = useState({});
+  const [isSubmitDisabled, setIsSubmitDisabled] = useState(disabled);
 
   const innerRef = useRef<HTMLFormElement | null>(null) as any;
 
   const onFormStateChange = async (form: UseFormReturn<FieldValues, any>) => {
     const {
-      formState: { isDirty, isValid },
+      formState: { isValid, touchedFields: formTouchedFields },
     } = form;
 
-    setForm(form);
-    setIsDirty(isDirty);
     setIsValid(isValid);
+    setTouchedFields(formTouchedFields);
 
     return Promise.resolve();
   };
@@ -74,20 +76,30 @@ export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props =>
   };
 
   const handleCancel = useCallback(() => {
-    if (showPrompt && isDirty) {
+    if (showPrompt && Object.keys(touchedFields).length) {
       if (window.confirm(formatMessage({ id: "form.hints.prompt" }))) {
-        onCancel(form);
+        onCancel();
       }
     } else {
-      onCancel(form);
+      onCancel();
     }
-  }, [form, isDirty, showPrompt]);
+  }, [showPrompt, touchedFields]);
+
+  useDeepCompareEffect(() => {
+    if (disabled ?? ((id && Object.keys(touchedFields).length === 0) || !isValid)) {
+      setIsSubmitDisabled(true);
+    }
+
+    return () => {
+      setIsSubmitDisabled(false);
+    };
+  }, [disabled, id, isValid, touchedFields]);
 
   return (
     <ConfirmationDialog
       onConfirm={handleSubmit}
       maxWidth={maxWidth}
-      disabled={disabled ?? (!isDirty || !isValid)}
+      disabled={isSubmitDisabled}
       data-testid="DialogForm"
       onCancel={handleCancel}
       {...rest}

@@ -101,7 +101,6 @@ export const EntityInput: FC<IEntityInputProps> = props => {
             onChange
               ? onChange({} as ChangeEvent<unknown>, newValue, "autoselect")
               : form.setValue(name, multiple ? newValue.map((o: IAutocompleteOption) => o.id) : newValue.id, {
-                  shouldTouch: true,
                   shouldDirty: dirtyAutoselect,
                 });
           }
@@ -157,7 +156,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                   onChange ||
                   ((_event: ChangeEvent<unknown>, options: ReadonlyArray<IAutocompleteOption> | null): void => {
                     const value = options ? options.map((option: IAutocompleteOption) => option.id) : [];
-                    form.setValue(name, value, { shouldDirty: true });
+                    form.setValue(name, value, { shouldDirty: true, shouldTouch: true });
                   })
                 }
                 getOptionLabel={(option: IAutocompleteOption) => (getTitle ? getTitle(option) : option.title)}
@@ -204,7 +203,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                   onChange ||
                   ((_event: ChangeEvent<unknown>, option: IAutocompleteOption | null): void => {
                     const value = option ? option.id : void 0;
-                    form.setValue(name, value, { shouldDirty: true });
+                    form.setValue(name, value, { shouldDirty: true, shouldTouch: true });
                   })
                 }
                 getOptionLabel={(option: IAutocompleteOption): string => (getTitle ? getTitle(option) : option.title)}

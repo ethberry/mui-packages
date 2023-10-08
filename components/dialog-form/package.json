@@ -11,6 +11,7 @@
     "@gemunion/mui-dialog-confirmation": "3.3.45",
     "@gemunion/mui-form": "8.0.60",
     "@gemunion/mui-page-layout": "2.3.8",
+    "@gemunion/react-hooks": "1.1.58",
     "react-router": "6.16.0"
   },
   "description": "react widget",

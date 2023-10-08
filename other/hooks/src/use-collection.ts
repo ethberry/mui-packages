@@ -2,7 +2,6 @@ import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { ChangeEvent, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router";
-import { FieldValues, UseFormReturn } from "react-hook-form";
 import { parse, stringify } from "qs";
 
 import { defaultItemsPerPage } from "@gemunion/constants";
@@ -83,13 +82,12 @@ export const useCollection = <
     } as Partial<S>),
   );
 
-  const updateQS = async (id?: number) => {
+  const updateQS = (id?: number) => {
     const { skip: _skip, take: _take, order: _order, ...rest } = search;
     const sameSearch = !id && location.search && deepEqual(rest, getSearchParams(data));
-    const previousPathname = location.pathname;
 
     if (embedded || sameSearch) {
-      return Promise.resolve(true);
+      return;
     }
 
     const shouldReplace = !location.search || location.search === "?" || !id;
@@ -97,8 +95,6 @@ export const useCollection = <
     navigate(redirect(baseUrl, rest, id), {
       replace: shouldReplace,
     });
-
-    return Promise.resolve(location.pathname !== previousPathname);
   };
 
   const { fn: fetchByQueryFn } = useApiCall(
@@ -115,7 +111,7 @@ export const useCollection = <
     return fetchByQueryFn().then((json: IPaginationResult<T>) => {
       setRows(json.rows);
       setCount(json.count);
-      void updateQS();
+      updateQS();
     });
   };
 
@@ -171,18 +167,18 @@ export const useCollection = <
       setSelected(item);
       setCount(1);
       setIsViewDialogOpen(true);
-      void updateQS(item.id);
+      updateQS(item.id);
     };
   };
 
   const handleViewConfirm = (): void => {
     setIsViewDialogOpen(false);
-    void updateQS();
+    updateQS();
   };
 
   const handleViewCancel = (): void => {
     setIsViewDialogOpen(false);
-    void updateQS();
+    updateQS();
   };
 
   const handleEdit = (item: T): (() => void) => {
@@ -190,28 +186,13 @@ export const useCollection = <
       setSelected(item);
       setCount(1);
       setIsEditDialogOpen(true);
-      void updateQS(item.id);
+      updateQS(item.id);
     };
   };
 
-  const handleEditCancel = (form: UseFormReturn<FieldValues, any> | null): void => {
-    if (form) {
-      const {
-        formState: { isDirty, isValid },
-      } = form;
-
-      if (isDirty && isValid && window.confirm(formatMessage({ id: "form.hints.prompt" }))) {
-        setIsEditDialogOpen(false);
-        void updateQS();
-        return;
-      }
-    }
-
-    void updateQS().then(success => {
-      if (success) {
-        setIsEditDialogOpen(false);
-      }
-    });
+  const handleEditCancel = (): void => {
+    setIsEditDialogOpen(false);
+    updateQS();
   };
 
   const { fn: handleEditConfirmFn } = useApiCall(
