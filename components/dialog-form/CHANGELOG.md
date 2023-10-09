@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.2.53](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.52...@gemunion/mui-dialog-form@8.2.53) (2023-10-09)
+
+### Bug Fixes
+
+- form and components to disable and enable submit buttons consistently by using touch fields; update on-form-state-change hook ([34eb378](https://github.com/gemunion/mui-packages/commit/34eb378284294dfaa7e1c67cfa0505a079addd3b))
+
 ## [8.2.52](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-form@8.2.51...@gemunion/mui-dialog-form@8.2.52) (2023-10-08)
 
 ### Bug Fixes

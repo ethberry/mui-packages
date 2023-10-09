@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.50](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.49...@gemunion/mui-inputs-asset@2.4.50) (2023-10-09)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-asset
+
 ## [2.4.49](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.48...@gemunion/mui-inputs-asset@2.4.49) (2023-10-08)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset

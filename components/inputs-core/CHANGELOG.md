@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.52](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.2.51...@gemunion/mui-inputs-core@7.2.52) (2023-10-09)
+
+### Bug Fixes
+
+- form and components to disable and enable submit buttons consistently by using touch fields; update on-form-state-change hook ([34eb378](https://github.com/gemunion/mui-packages/commit/34eb378284294dfaa7e1c67cfa0505a079addd3b))
+
 ## [7.2.51](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.2.50...@gemunion/mui-inputs-core@7.2.51) (2023-10-08)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-core

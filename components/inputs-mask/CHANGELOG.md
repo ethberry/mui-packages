@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.5.53](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.52...@gemunion/mui-inputs-mask@5.5.53) (2023-10-09)
+
+### Bug Fixes
+
+- form and components to disable and enable submit buttons consistently by using touch fields; update on-form-state-change hook ([34eb378](https://github.com/gemunion/mui-packages/commit/34eb378284294dfaa7e1c67cfa0505a079addd3b))
+
 ## [5.5.52](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.51...@gemunion/mui-inputs-mask@5.5.52) (2023-10-08)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-mask
