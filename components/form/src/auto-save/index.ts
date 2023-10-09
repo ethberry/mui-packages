@@ -28,7 +28,11 @@ export const AutoSave: FC<IAutoSaveProps> = props => {
 
   useDeepCompareEffect(() => {
     if (isDirty) {
-      if (registeredInputs.filter(input => input.isAsync).some(input => !get(dirtyFields, input.name))) {
+      if (
+        registeredInputs
+          .filter(input => input.isAsync)
+          .some(input => !Array.isArray(get(values, input.name)) && !get(dirtyFields, input.name))
+      ) {
         return;
       }
 

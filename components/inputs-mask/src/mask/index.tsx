@@ -36,7 +36,7 @@ export const MaskedInput: FC<IMaskedInputProps> = props => {
 
   const onValueChange = (values: any) => {
     const formattedValue = formatValue(values.value);
-    form.setValue(props.name, formattedValue, { shouldDirty: true });
+    form.setValue(props.name, formattedValue, { shouldTouch: true, shouldDirty: true });
   };
 
   return (

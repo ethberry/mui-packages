@@ -11,7 +11,7 @@ export interface ICheckboxInputProps extends CheckboxProps {
 }
 
 export const CheckboxInput: FC<ICheckboxInputProps> = props => {
-  const { name, label, ...rest } = props;
+  const { name, label, disabled, readOnly, ...rest } = props;
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
@@ -30,7 +30,9 @@ export const CheckboxInput: FC<ICheckboxInputProps> = props => {
       render={({ field }) => (
         <FormControlLabel
           sx={{ my: 1 }}
-          control={<Checkbox {...field} checked={field.value} {...testIdProps} {...rest} />}
+          control={
+            <Checkbox {...field} checked={field.value} disabled={disabled || readOnly} {...testIdProps} {...rest} />
+          }
           label={localizedLabel}
         />
       )}

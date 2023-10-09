@@ -72,6 +72,11 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
                     ...testIdProps,
                     readOnly,
                   }}
+                  onBlur={() => {
+                    if (!readOnly) {
+                      field.onBlur();
+                    }
+                  }}
                   label={localizedLabel}
                   placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}
                   error={!!error}
@@ -111,6 +116,11 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
                     ...params.inputProps,
                     ...testIdProps,
                     readOnly,
+                  }}
+                  onBlur={() => {
+                    if (!readOnly) {
+                      field.onBlur();
+                    }
                   }}
                   label={localizedLabel}
                   placeholder={formatMessage({ id: `form.placeholders.${suffix}` })}

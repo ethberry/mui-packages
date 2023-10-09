@@ -5,7 +5,7 @@ import { jsonValidationSchema } from "@gemunion/yup-rules";
 import { TextArea, ITextAreaProps } from "../textarea";
 
 export const JsonInput: FC<ITextAreaProps> = props => {
-  const { name, ...rest } = props;
+  const { name, readOnly, ...rest } = props;
 
   const form = useFormContext<any>();
 
@@ -20,6 +20,9 @@ export const JsonInput: FC<ITextAreaProps> = props => {
   const inputProps = {
     onBlur: (event: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       const { value } = event.target;
+      if (readOnly) {
+        return;
+      }
 
       try {
         // needs to set touched for this field to true
@@ -38,5 +41,5 @@ export const JsonInput: FC<ITextAreaProps> = props => {
     onFocus: () => form.setFocus(name),
   };
 
-  return <TextArea name={name} normalizeValue={normalizeValue} {...inputProps} {...rest} />;
+  return <TextArea name={name} normalizeValue={normalizeValue} {...inputProps} readOnly={readOnly} {...rest} />;
 };

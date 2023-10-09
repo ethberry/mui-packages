@@ -47,6 +47,7 @@ export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props =>
   const [isLoading, setIsLoading] = useState(false);
   const [isValid, setIsValid] = useState(false);
   const [touchedFields, setTouchedFields] = useState({});
+  const [values, setValues] = useState({});
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(disabled);
 
   const innerRef = useRef<HTMLFormElement | null>(null) as any;
@@ -54,8 +55,11 @@ export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props =>
   const onFormStateChange = async (form: UseFormReturn<FieldValues, any>) => {
     const {
       formState: { isValid, touchedFields: formTouchedFields },
+      getValues,
     } = form;
+    const values = getValues();
 
+    setValues(values);
     setIsValid(isValid);
     setTouchedFields(formTouchedFields);
 
@@ -93,7 +97,7 @@ export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props =>
     return () => {
       setIsSubmitDisabled(false);
     };
-  }, [disabled, id, isValid, touchedFields]);
+  }, [{ disabled, id, isValid }, touchedFields, values]);
 
   return (
     <ConfirmationDialog

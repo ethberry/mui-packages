@@ -180,6 +180,11 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                     helperText={localizedHelperText}
                     variant={variant}
                     onChange={() => {}}
+                    onBlur={() => {
+                      if (!readOnly) {
+                        field.onBlur();
+                      }
+                    }}
                     fullWidth
                   />
                 )}
@@ -227,6 +232,11 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                     helperText={localizedHelperText}
                     variant={variant}
                     onChange={() => {}}
+                    onBlur={() => {
+                      if (!readOnly) {
+                        field.onBlur();
+                      }
+                    }}
                     fullWidth
                   />
                 )}

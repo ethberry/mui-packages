@@ -8,7 +8,7 @@ export type INumberInputProps = {
 } & ITextInputProps;
 
 export const NumberInput: FC<INumberInputProps> = props => {
-  const { name, allowNegative = false, ...rest } = props;
+  const { name, allowNegative = false, readOnly, ...rest } = props;
 
   const form = useFormContext<any>();
 
@@ -24,11 +24,14 @@ export const NumberInput: FC<INumberInputProps> = props => {
   };
 
   const handleOnBlur = (e: FocusEvent<HTMLInputElement>): void => {
+    if (readOnly) {
+      return;
+    }
     const value = e.target.value;
     if (!value) {
-      form.setValue(name, 0);
+      form.setValue(name, 0, { shouldTouch: true });
     } else {
-      form.setValue(name, Number(value));
+      form.setValue(name, Number(value), { shouldTouch: true });
     }
   };
 
@@ -40,6 +43,7 @@ export const NumberInput: FC<INumberInputProps> = props => {
       onBlur={handleOnBlur}
       formatValue={formatValue}
       name={name}
+      readOnly={readOnly}
       {...rest}
     />
   );

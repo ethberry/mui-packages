@@ -29,6 +29,7 @@ export const SelectInput: FC<ISelectInputProps> = props => {
     variant = "standard",
     disabledOptions = [],
     InputLabelProps = {},
+    readOnly,
     ...rest
   } = props;
 
@@ -73,6 +74,12 @@ export const SelectInput: FC<ISelectInputProps> = props => {
             value={get(formValues, name) ?? ""}
             onChange={(e: any) => {
               form.setValue(name, e.target.value, { shouldTouch: true, shouldDirty: true });
+            }}
+            readOnly={readOnly}
+            onBlur={() => {
+              if (!readOnly) {
+                field.onBlur();
+              }
             }}
             {...testIdProps}
             {...rest}

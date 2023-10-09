@@ -67,11 +67,10 @@ export const TextInput: FC<ITextInputProps> = props => {
             {...field}
             value={normalizeValue ? normalizeValue(field.value) : field.value}
             onChange={(e: any) => {
-              if (formatValue) {
-                field.onChange({ target: { name, value: formatValue(e.target.value) } });
-              } else {
-                field.onChange(e);
-              }
+              form.setValue(name, formatValue ? formatValue(e.target.value) : e.target.value, {
+                shouldTouch: true,
+                shouldDirty: true,
+              });
             }}
             {...rest}
           />

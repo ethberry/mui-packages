@@ -13,13 +13,19 @@ export const OnFormStateChange: FC<IOnFormStateChangeProps> = props => {
 
   const form = useFormContext();
 
+  const {
+    formState: { isDirty, isValid, errors, touchedFields, dirtyFields },
+    getValues,
+  } = form;
+  const values = getValues();
+
   const debouncedOnFormStateChange = useDebouncedCallback(async () => {
     await onFormStateChange(form);
   }, 300);
 
   useDeepCompareEffect(() => {
     void debouncedOnFormStateChange();
-  }, [form]);
+  }, [form, { isDirty, isValid }, errors, touchedFields, dirtyFields, values]);
 
   return null;
 };

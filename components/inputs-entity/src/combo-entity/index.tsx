@@ -181,6 +181,11 @@ export const ComboEntityInput: FC<IComboEntityInputProps> = props => {
                   helperText={localizedHelperText}
                   variant={variant}
                   onChange={() => {}}
+                  onBlur={() => {
+                    if (!readOnly) {
+                      field.onBlur();
+                    }
+                  }}
                   fullWidth
                 />
               )}
