@@ -156,6 +156,7 @@ export const ComboEntityInput: FC<IComboEntityInputProps> = props => {
                     value = foundOption?.address || option;
                   }
                   form.setValue(name, value, { shouldDirty: true, shouldTouch: true });
+                  void form.trigger(name);
                 })
               }
               getOptionLabel={(option: IAutocompleteOption | string) =>
