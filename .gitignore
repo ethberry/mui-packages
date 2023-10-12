@@ -1,7 +1,6 @@
 # Project
 dist/
 coverage/
-/.storybook
 
 # IDE
 .idea
