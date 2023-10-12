@@ -21,7 +21,7 @@
   "description": "react context provider",
   "devDependencies": {
     "@gemunion/provider-api": "7.0.46",
-    "@gemunion/provider-user": "6.0.51",
+    "@gemunion/provider-user": "6.0.52",
     "@mui/icons-material": "5.14.12",
     "@mui/lab": "5.0.0-alpha.147",
     "@mui/material": "5.14.12",
