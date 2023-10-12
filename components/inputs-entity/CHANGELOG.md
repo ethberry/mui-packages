@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.3.38](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.3.37...@gemunion/mui-inputs-entity@7.3.38) (2023-10-12)
+
+### Bug Fixes
+
+- trigger validation on change value in combo entity input ([8d43d65](https://github.com/gemunion/mui-packages/commit/8d43d655043b5a50cc848ace500e1732ac01e21f))
+
 ## [7.3.37](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.3.36...@gemunion/mui-inputs-entity@7.3.37) (2023-10-09)
 
 ### Bug Fixes

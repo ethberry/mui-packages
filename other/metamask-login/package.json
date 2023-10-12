@@ -18,7 +18,7 @@
     "@gemunion/provider-api": "7.0.46",
     "@gemunion/provider-license": "3.0.30",
     "@gemunion/provider-user": "6.0.52",
-    "@gemunion/provider-wallet": "3.3.53",
+    "@gemunion/provider-wallet": "3.3.54",
     "@mui/material": "5.14.12",
     "@mui/styles": "5.14.12",
     "@types/uuid": "9.0.5",
@@ -68,5 +68,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.2.10"
+  "version": "3.2.11"
 }

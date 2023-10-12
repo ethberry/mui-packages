@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.60 (2023-10-12)
+
+### Bug Fixes
+
+- use collection to prevent fetch if there is awaited inputs in the form ([c894d61](https://github.com/gemunion/mui-packages/commit/c894d61a82e094b5c463e981a8c616eca7b906f2))
+
 ## [1.1.59](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@1.1.58...@gemunion/react-hooks@1.1.59) (2023-10-08)
 
 ### Bug Fixes
