@@ -10,7 +10,7 @@ import { IIdBase, IPaginationResult, IPaginationDto, ISortDto, IMuiSortDto } fro
 
 import { useApiCall } from "./use-api-call";
 import { useDeepCompareEffect } from "./use-deep-compare-effect";
-import { decoder, deepEqual, hasUndefined } from "./utils";
+import { decoder, deepEqual, hasAwaited } from "./utils";
 
 export interface IHandleChangePaginationModelProps {
   page: number;
@@ -331,7 +331,7 @@ export const useCollection = <
       setIsViewDialogOpen(false);
     }
 
-    if (hasUndefined(search)) {
+    if (hasAwaited(search)) {
       return;
     }
 

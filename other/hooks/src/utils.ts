@@ -1,5 +1,7 @@
 import { defaultDecoder } from "qs";
 
+import { InputType } from "@gemunion/types-collection";
+
 // https://github.com/ljharb/qs/issues/91#issuecomment-522289267
 export const decoder = (str: string, _decoder: defaultDecoder, charset: string): any => {
   const strWithoutPlus = str.replace(/\+/g, " ");
@@ -54,5 +56,5 @@ export const deepEqual = (obj1: any, obj2: any): boolean => {
   return false;
 };
 
-export const hasUndefined = (obj: Record<string, any>): boolean =>
-  Object.values(obj).some(val => val === undefined || (typeof val === "object" && hasUndefined(val)));
+export const hasAwaited = (obj: Record<string, any>): boolean =>
+  Object.values(obj).some(val => val === InputType.awaited || (typeof val === "object" && hasAwaited(val)));
