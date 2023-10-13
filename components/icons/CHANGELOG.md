@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.34 (2023-10-13)
+
+**Note:** Version bump only for package @gemunion/mui-icons
+
 ## [1.1.33](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-icons@1.1.32...@gemunion/mui-icons@1.1.33) (2023-10-07)
 
 ### Bug Fixes

@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.2.55](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@5.2.54...@gemunion/mui-inputs-draft@5.2.55) (2023-10-13)
+
+### Bug Fixes
+
+- **deps:** update gemunion to v3.0.3 ([fc7b469](https://github.com/gemunion/mui-packages/commit/fc7b4690b92a65d195c93c2788e039d335179168))
+- rollback storybook ([3221d2d](https://github.com/gemunion/mui-packages/commit/3221d2d62b18e48719db437d892154e3fd9d50be))
+
 ## [5.2.54](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@5.2.53...@gemunion/mui-inputs-draft@5.2.54) (2023-10-12)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-draft
