@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.2.56](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@5.2.55...@gemunion/mui-inputs-draft@5.2.56) (2023-10-14)
+
+### Bug Fixes
+
+- **deps:** update gemunion to v3.0.4 ([387e6ee](https://github.com/gemunion/mui-packages/commit/387e6ee9eeee728bfb50da7d477fe5438905a3d9))
+
 ## [5.2.55](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-draft@5.2.54...@gemunion/mui-inputs-draft@5.2.55) (2023-10-13)
 
 ### Bug Fixes
