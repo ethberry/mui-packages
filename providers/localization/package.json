@@ -11,8 +11,8 @@
   "devDependencies": {
     "@gemunion/provider-license": "3.0.30",
     "@gemunion/provider-settings": "4.0.59",
-    "@mui/icons-material": "5.14.13",
-    "@mui/material": "5.14.13",
+    "@mui/icons-material": "5.14.14",
+    "@mui/material": "5.14.14",
     "@types/react": "18.2.28",
     "react": "18.2.0",
     "react-intl": "6.5.0"
