@@ -21,11 +21,11 @@
     "@mui/lab": "5.0.0-alpha.148",
     "@mui/material": "5.14.13",
     "@mui/styles": "5.14.13",
-    "@types/react": "18.2.25",
+    "@types/react": "18.2.28",
     "notistack": "3.0.1",
     "react": "18.2.0",
     "react-hook-form": "7.47.0",
-    "react-intl": "6.4.7"
+    "react-intl": "6.5.0"
   },
   "engines": {
     "node": ">=18"
