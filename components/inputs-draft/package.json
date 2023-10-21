@@ -9,10 +9,10 @@
   },
   "dependencies": {
     "@gemunion/draft-js-utils": "1.2.29",
-    "@gemunion/mui-form": "8.0.65",
-    "@gemunion/mui-inputs-core": "7.2.55",
+    "@gemunion/mui-form": "8.0.66",
+    "@gemunion/mui-inputs-core": "7.2.56",
     "@gemunion/mui-rte": "3.0.4",
-    "@gemunion/provider-test-id": "1.0.58",
+    "@gemunion/provider-test-id": "1.0.59",
     "draft-js": "0.11.7",
     "markdown-draft-js": "2.4.0"
   },
@@ -66,5 +66,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "5.2.57"
+  "version": "5.2.58"
 }
