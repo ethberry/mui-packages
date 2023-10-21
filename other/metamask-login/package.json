@@ -21,7 +21,7 @@
     "@gemunion/provider-wallet": "3.3.56",
     "@mui/material": "5.14.14",
     "@mui/styles": "5.14.14",
-    "@types/uuid": "9.0.5",
+    "@types/uuid": "9.0.6",
     "@web3-react/core": "8.2.3",
     "notistack": "3.0.1",
     "react": "18.2.0",

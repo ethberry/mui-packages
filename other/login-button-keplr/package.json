@@ -14,7 +14,7 @@
     "@gemunion/provider-cosmos": "1.1.15",
     "@gemunion/react-hooks": "1.1.61",
     "@gemunion/react-hooks-cosmos": "1.1.16",
-    "@keplr-wallet/types": "0.12.35",
+    "@keplr-wallet/types": "0.12.36",
     "uuid": "9.0.1"
   },
   "description": "react keplr login button component",
