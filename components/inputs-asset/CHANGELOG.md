@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.55](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.54...@gemunion/mui-inputs-asset@2.4.55) (2023-10-22)
+
+### Bug Fixes
+
+- add forceAmount for erc721 and erc998 in TemplateAssetInput ([e74ecf0](https://github.com/gemunion/mui-packages/commit/e74ecf076473b7c4223167410d2a3e909e359e05))
+
 ## [2.4.54](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.53...@gemunion/mui-inputs-asset@2.4.54) (2023-10-21)
 
 ### Bug Fixes
