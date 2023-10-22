@@ -25,6 +25,7 @@ export interface ITemplateAssetProps {
   disableClear?: boolean;
   readOnly?: boolean;
   showLabel?: boolean;
+  forceAmount?: boolean;
   tokenType?: {
     disabledOptions?: Array<TokenType>;
   };
@@ -55,6 +56,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
     autoSelect,
     disableClear = true,
     showLabel = true,
+    forceAmount = false,
   } = props;
 
   const { formatMessage } = useIntl();
@@ -116,7 +118,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
                 disableClear={disableClear}
                 data={template?.data}
               />
-              <AmountInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} />
+              <AmountInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} forceAmount={forceAmount} />
             </Paper>
           </Box>
 

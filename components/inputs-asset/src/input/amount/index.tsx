@@ -8,10 +8,11 @@ export interface IAmountInputProps {
   prefix: string;
   name?: string;
   readOnly?: boolean;
+  forceAmount?: boolean;
 }
 
 export const AmountInput: FC<IAmountInputProps> = props => {
-  const { prefix, name = "amount", readOnly } = props;
+  const { prefix, name = "amount", readOnly, forceAmount = false } = props;
 
   const tokenType = useWatch({ name: `${prefix}.tokenType` });
   const decimals = useWatch({ name: `${prefix}.contract.decimals` });
@@ -23,9 +24,9 @@ export const AmountInput: FC<IAmountInputProps> = props => {
     case TokenType.ERC20:
       return <EthInput name={`${prefix}.${name}`} units={decimals} readOnly={readOnly} symbol={symbol} />;
     case TokenType.ERC1155:
+    case TokenType.ERC721 && forceAmount:
+    case TokenType.ERC998 && forceAmount:
       return <EthInput name={`${prefix}.${name}`} units={decimals} readOnly={readOnly} symbol="" />;
-    case TokenType.ERC721:
-    case TokenType.ERC998:
     default:
       return null;
   }
