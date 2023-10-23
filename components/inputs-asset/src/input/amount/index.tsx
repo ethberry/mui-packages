@@ -24,9 +24,13 @@ export const AmountInput: FC<IAmountInputProps> = props => {
     case TokenType.ERC20:
       return <EthInput name={`${prefix}.${name}`} units={decimals} readOnly={readOnly} symbol={symbol} />;
     case TokenType.ERC1155:
-    case TokenType.ERC721 && forceAmount:
-    case TokenType.ERC998 && forceAmount:
       return <EthInput name={`${prefix}.${name}`} units={decimals} readOnly={readOnly} symbol="" />;
+    case TokenType.ERC721:
+    case TokenType.ERC998:
+      if (forceAmount) {
+        return <EthInput name={`${prefix}.${name}`} units={decimals} readOnly={readOnly} symbol="" />;
+      }
+      return null;
     default:
       return null;
   }
