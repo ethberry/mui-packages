@@ -46,7 +46,7 @@ export const DateInput: FC<IDateInputProps> = props => {
       control={form.control}
       render={({ field }) => (
         <MobileDatePicker
-          format="MM/dd/yyyy"
+          format="dd/MM/yyyy"
           label={localizedLabel}
           value={value ? setter(value) : null}
           onChange={(date: Date | null): void => {
