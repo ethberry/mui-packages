@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.2.0 (2023-10-24)
+
+### Features
+
+- change date format to dd\MM\yyy ([15f6070](https://github.com/gemunion/mui-packages/commit/15f60702f50a5a53ce16a792c1c2ea93e6f94a41))
+
 ## [6.1.4](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@6.1.3...@gemunion/mui-inputs-picker@6.1.4) (2023-10-21)
 
 ### Bug Fixes
