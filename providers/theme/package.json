@@ -11,7 +11,7 @@
     "@emotion/cache": "11.11.0",
     "@emotion/react": "11.11.1",
     "@gemunion/constants": "0.12.8",
-    "@mui/styles": "5.14.14",
+    "@mui/styles": "5.14.15",
     "jss": "10.10.0",
     "jss-rtl": "0.3.0",
     "stylis": "4.3.0",
@@ -20,8 +20,8 @@
   "description": "Material UI theme provider",
   "devDependencies": {
     "@gemunion/provider-settings": "4.0.61",
-    "@mui/icons-material": "5.14.14",
-    "@mui/material": "5.14.14",
+    "@mui/icons-material": "5.14.15",
+    "@mui/material": "5.14.15",
     "@types/stylis": "4.2.2",
     "react": "18.2.0",
     "react-intl": "6.5.1"
