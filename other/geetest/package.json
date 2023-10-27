@@ -16,7 +16,7 @@
     "@gemunion/provider-api": "7.0.48",
     "@gemunion/provider-api-jwt": "2.0.44",
     "@storybook/react": "7.5.1",
-    "@types/react": "18.2.31",
+    "@types/react": "18.2.33",
     "react": "18.2.0"
   },
   "engines": {
