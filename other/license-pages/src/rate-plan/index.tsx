@@ -165,7 +165,7 @@ export const RatePlansSelection: FC = () => {
             </TitleTypography>
             <Divider />
             <Grid container spacing={{ sm: 0, md: 4 }} justifyContent="center">
-              <Grid item xs={12} sm={6} md={4} justifyContent="center">
+              <Grid item xs={12} sm={6} md={6} justifyContent="center">
                 <FeatureWrapper sx={{ justifyContent: "center" }}>
                   <FeatureIconWrapper>
                     <FeatureIconIncluded component={Done} />
@@ -175,7 +175,7 @@ export const RatePlansSelection: FC = () => {
                   </FeatureTypography>
                 </FeatureWrapper>
               </Grid>
-              <Grid item xs={12} sm={6} md={4} justifyContent="center">
+              <Grid item xs={12} sm={6} md={6} justifyContent="center">
                 <FeatureWrapper sx={{ justifyContent: "center" }}>
                   <FeatureIconWrapper>
                     <FeatureIconIncluded component={Done} />
@@ -185,13 +185,23 @@ export const RatePlansSelection: FC = () => {
                   </FeatureTypography>
                 </FeatureWrapper>
               </Grid>
-              <Grid item xs={12} sm={6} md={4} justifyContent="center">
+              <Grid item xs={12} sm={6} md={6} justifyContent="center">
                 <FeatureWrapper sx={{ justifyContent: "center" }}>
                   <FeatureIconWrapper>
                     <FeatureIconIncluded component={Done} />
                   </FeatureIconWrapper>
                   <FeatureTypography included>
                     <FormattedMessage id="pages.ratePlan.alwaysIncluded.insights" />
+                  </FeatureTypography>
+                </FeatureWrapper>
+              </Grid>
+              <Grid item xs={12} sm={6} md={6} justifyContent="center">
+                <FeatureWrapper sx={{ justifyContent: "center" }}>
+                  <FeatureIconWrapper>
+                    <FeatureIconIncluded component={Done} />
+                  </FeatureIconWrapper>
+                  <FeatureTypography included>
+                    <FormattedMessage id="pages.ratePlan.alwaysIncluded.dispenser" />
                   </FeatureTypography>
                 </FeatureWrapper>
               </Grid>
