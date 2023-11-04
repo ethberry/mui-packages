@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.26](https://github.com/gemunion/mui-packages/compare/@gemunion/license-pages@1.1.25...@gemunion/license-pages@1.1.26) (2023-11-04)
+
+### Bug Fixes
+
+- add dispenser to rate plans ([d6f5e36](https://github.com/gemunion/mui-packages/commit/d6f5e36bae3647e604faa70697043c8c9b999abb))
+- add dispenser to rate plans, part 2 ([a99ea3b](https://github.com/gemunion/mui-packages/commit/a99ea3b4d681181b09d7adeec03a6a9e087112a1))
+- **deps:** update all non-major dependencies ([781f923](https://github.com/gemunion/mui-packages/commit/781f92386125eaf68ff36aa4c988a044ae059c6b))
+
 ## [1.1.25](https://github.com/gemunion/mui-packages/compare/@gemunion/license-pages@1.1.24...@gemunion/license-pages@1.1.25) (2023-10-27)
 
 ### Bug Fixes

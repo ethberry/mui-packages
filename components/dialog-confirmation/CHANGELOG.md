@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.52](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-confirmation@3.3.51...@gemunion/mui-dialog-confirmation@3.3.52) (2023-11-04)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([e44f011](https://github.com/gemunion/mui-packages/commit/e44f011cbacb60130753dda0a9bef999cb0bcaf7))
+- **deps:** update all non-major dependencies ([781f923](https://github.com/gemunion/mui-packages/commit/781f92386125eaf68ff36aa4c988a044ae059c6b))
+
 ## [3.3.51](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-confirmation@3.3.50...@gemunion/mui-dialog-confirmation@3.3.51) (2023-10-27)
 
 ### Bug Fixes
