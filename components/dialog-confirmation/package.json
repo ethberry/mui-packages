@@ -11,7 +11,7 @@
   "devDependencies": {
     "@gemunion/provider-license": "3.0.33",
     "@gemunion/provider-settings": "4.0.62",
-    "@mui/material": "5.14.15",
+    "@mui/material": "5.14.16",
     "@storybook/react": "7.5.2",
     "@testing-library/jest-dom": "6.1.4",
     "@testing-library/react": "14.0.0",
