@@ -19,11 +19,11 @@
   "devDependencies": {
     "@gemunion/provider-license": "3.0.33",
     "@mui/material": "5.14.15",
-    "@types/react": "18.2.33",
+    "@types/react": "18.2.34",
     "react": "18.2.0",
     "react-hook-form": "7.47.0",
     "react-intl": "6.5.1",
-    "react-router-dom": "6.17.0"
+    "react-router-dom": "6.18.0"
   },
   "engines": {
     "node": ">=18"
