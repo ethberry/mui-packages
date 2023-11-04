@@ -9,8 +9,8 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@gemunion/provider-license": "3.0.33",
-    "@gemunion/provider-settings": "4.0.62",
+    "@gemunion/provider-license": "3.0.34",
+    "@gemunion/provider-settings": "4.0.63",
     "@mui/material": "5.14.16",
     "@storybook/react": "7.5.2",
     "@testing-library/jest-dom": "6.1.4",

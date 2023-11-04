@@ -9,8 +9,8 @@
   },
   "description": "react i18n provider",
   "devDependencies": {
-    "@gemunion/provider-license": "3.0.33",
-    "@gemunion/provider-settings": "4.0.62",
+    "@gemunion/provider-license": "3.0.34",
+    "@gemunion/provider-settings": "4.0.63",
     "@mui/icons-material": "5.14.16",
     "@mui/material": "5.14.16",
     "@types/react": "18.2.34",
