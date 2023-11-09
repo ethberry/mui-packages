@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useFieldArray, useFormContext, useWatch } from "react-hook-form";
+import { get, useFieldArray, useFormContext, useWatch } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Box, IconButton, Paper, Tooltip, Typography } from "@mui/material";
 import { Add, Delete } from "@mui/icons-material";
@@ -73,6 +73,17 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
         ...watchFields[index],
       }) as TAssetComponentParams,
   );
+
+  if (allowEmpty === true) {
+    values.map((val, indx) => {
+      const comp = get(form.getValues(), `${nestedPrefix}[${indx}]`);
+      if (allowEmpty && !comp.allowEmpty) {
+        Object.assign(comp, { allowEmpty });
+        form.setValue(`${nestedPrefix}[${indx}]`, comp);
+      }
+      return val;
+    });
+  }
 
   const handleOptionAdd = (): (() => void) => (): void => {
     append((ancestorPrefix === "price" ? emptyPrice : emptyItem).components[0]);
