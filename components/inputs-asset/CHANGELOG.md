@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.59...@gemunion/mui-inputs-asset@2.5.0) (2023-11-12)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([2710c13](https://github.com/gemunion/mui-packages/commit/2710c135fb1a216ed9d303e6fb08c8b4feb1bfba))
+- **deps:** update all non-major dependencies ([527c26b](https://github.com/gemunion/mui-packages/commit/527c26b451e05321ef277dc688aac8ed7a9eafde))
+
+### Features
+
+- allow empty template in template asset input ([9a514e7](https://github.com/gemunion/mui-packages/commit/9a514e76da18459fbddfbd6a54f6acda6c7300cd))
+
 ## [2.4.59](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.58...@gemunion/mui-inputs-asset@2.4.59) (2023-11-04)
 
 ### Bug Fixes
