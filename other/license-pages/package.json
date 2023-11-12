@@ -10,7 +10,7 @@
   "description": "license-pages",
   "devDependencies": {
     "@mui/icons-material": "5.14.16",
-    "@mui/material": "5.14.16",
+    "@mui/material": "5.14.17",
     "@types/node": "20.9.0",
     "@types/react": "18.2.37",
     "react": "18.2.0",
