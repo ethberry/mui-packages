@@ -28,10 +28,10 @@
     "@gemunion/provider-user": "6.0.56",
     "@mui/material": "5.14.16",
     "@mui/styles": "5.14.16",
-    "firebase": "10.5.2",
+    "firebase": "10.6.0",
     "notistack": "3.0.1",
     "react": "18.2.0",
-    "react-intl": "6.5.1",
+    "react-intl": "6.5.4",
     "react-router": "6.18.0",
     "react-router-dom": "6.18.0"
   },
