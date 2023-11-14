@@ -19,6 +19,7 @@ export interface ITokenAssetProps {
   multiple?: boolean;
   readOnly?: boolean;
   disableClear?: boolean;
+  allowance?: boolean;
   tokenType?: {
     disabledOptions?: Array<TokenType>;
   };
@@ -40,7 +41,16 @@ export interface ITokenAssetProps {
 }
 
 export const TokenAssetInput: FC<ITokenAssetProps> = props => {
-  const { prefix = "price", multiple = false, tokenType, contract, token, readOnly, disableClear = true } = props;
+  const {
+    prefix = "price",
+    multiple = false,
+    tokenType,
+    contract,
+    token,
+    readOnly,
+    disableClear = true,
+    allowance = false,
+  } = props;
 
   const { formatMessage } = useIntl();
   const form = useFormContext<any>();
@@ -112,7 +122,7 @@ export const TokenAssetInput: FC<ITokenAssetProps> = props => {
                   data={token?.data}
                   disableClear={disableClear}
                 />
-                <AmountInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} />
+                <AmountInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} allowance={allowance} />
               </Paper>
             </Box>
 

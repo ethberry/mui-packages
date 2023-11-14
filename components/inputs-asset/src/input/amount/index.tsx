@@ -1,6 +1,8 @@
 import { FC } from "react";
+import { FormattedMessage } from "react-intl";
 import { useWatch } from "react-hook-form";
 
+import { Alert } from "@mui/material";
 import { EthInput } from "@gemunion/mui-inputs-mask";
 import { TokenType } from "@gemunion/types-blockchain";
 
@@ -9,10 +11,11 @@ export interface IAmountInputProps {
   name?: string;
   readOnly?: boolean;
   forceAmount?: boolean;
+  allowance?: boolean;
 }
 
 export const AmountInput: FC<IAmountInputProps> = props => {
-  const { prefix, name = "amount", readOnly, forceAmount = false } = props;
+  const { prefix, name = "amount", readOnly, forceAmount = false, allowance = false } = props;
 
   const tokenType = useWatch({ name: `${prefix}.tokenType` });
   const decimals = useWatch({ name: `${prefix}.contract.decimals` });
@@ -24,7 +27,13 @@ export const AmountInput: FC<IAmountInputProps> = props => {
     case TokenType.ERC20:
       return <EthInput name={`${prefix}.${name}`} units={decimals} readOnly={readOnly} symbol={symbol} />;
     case TokenType.ERC1155:
-      return <EthInput name={`${prefix}.${name}`} units={decimals} readOnly={readOnly} symbol="" />;
+      return allowance ? (
+        <Alert severity="warning" sx={{ mt: 2 }}>
+          <FormattedMessage id="alert.allowanceWarning" />
+        </Alert>
+      ) : (
+        <EthInput name={`${prefix}.${name}`} units={decimals} readOnly={readOnly} symbol="" />
+      );
     case TokenType.ERC721:
     case TokenType.ERC998:
       if (forceAmount) {
