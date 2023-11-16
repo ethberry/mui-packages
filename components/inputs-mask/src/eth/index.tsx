@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { useWatch } from "react-hook-form";
-import { BigNumberish, constants } from "ethers";
+import { constants } from "ethers";
 
 import { MaskedInput } from "../mask";
 import { formatValue, normalizeValue } from "./utils";
@@ -12,7 +12,7 @@ export interface IEthInputProps {
   name: string;
   readOnly?: boolean;
   precision?: number;
-  units?: BigNumberish;
+  units?: number;
   symbol?: string;
   thousandsSeparator?: string;
 }

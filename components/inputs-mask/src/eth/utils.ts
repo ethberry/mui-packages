@@ -1,18 +1,20 @@
-import { BigNumberish, utils } from "ethers";
-import { format, number } from "mathjs";
+import { utils } from "ethers";
 
 export const formatValue =
-  (units?: BigNumberish) =>
+  (units?: number) =>
   (value: string): string => {
-    return value ? format(number(utils.parseUnits(value, units).toString()), { notation: "fixed" }) : "0";
+    if (!value) return "0";
+    const parsedValue = utils.parseUnits(value, units).toString();
+    const numValue = parseFloat(parsedValue);
+    return numValue.toFixed();
   };
 
 export const normalizeValue =
-  (units?: BigNumberish) =>
+  (units?: number) =>
   (value: string): string => {
-    // values passed from query string are parsed to number by custom qs.decoder
-    const safeValue = format(number(value), { notation: "fixed" });
-    const normalizedValue = value ? utils.formatUnits(safeValue, units) : "0";
+    if (!value) return "0";
+    const safeValue = parseFloat(value).toString();
+    const normalizedValue = utils.formatUnits(safeValue, units);
     const [whole, decimals] = normalizedValue.split(".");
 
     return decimals === "0" ? whole : normalizedValue;
