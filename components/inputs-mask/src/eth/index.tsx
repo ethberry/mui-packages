@@ -36,6 +36,7 @@ export const EthInput: FC<IEthInputProps> = props => {
     <MaskedInput
       allowNegative={allowNegative}
       decimalSeparator={fractionalDelimiter}
+      decimalScale={Number(units ?? 0)}
       thousandSeparator={thousandsSeparator}
       allowLeadingZeros={fillByZeros}
       prefix={symbol ? `${symbol} ` : ""}
