@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.12.8",
-    "@keplr-wallet/types": "0.12.42",
+    "@keplr-wallet/types": "0.12.43",
     "uuid": "9.0.1"
   },
   "description": "react cosmos provider",
@@ -25,7 +25,7 @@
     "@types/uuid": "9.0.7",
     "notistack": "3.0.1",
     "react": "18.2.0",
-    "react-intl": "6.5.4"
+    "react-intl": "6.5.5"
   },
   "engines": {
     "node": ">=18"
