@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.5.62](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.61...@gemunion/mui-inputs-mask@5.5.62) (2023-11-18)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([327d665](https://github.com/gemunion/mui-packages/commit/327d6652239280d50126caf0e04f3e434e59caea))
+- remove mathjs from EthInput and CurrencyInput ([2a3f2a2](https://github.com/gemunion/mui-packages/commit/2a3f2a2f5d190dbe0230c490b924aa109f6f080e))
+
 ## [5.5.61](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.60...@gemunion/mui-inputs-mask@5.5.61) (2023-11-12)
 
 ### Bug Fixes

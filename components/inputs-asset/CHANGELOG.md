@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.5.0...@gemunion/mui-inputs-asset@2.6.0) (2023-11-18)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([327d665](https://github.com/gemunion/mui-packages/commit/327d6652239280d50126caf0e04f3e434e59caea))
+
+### Features
+
+- allowance token input ([de11ac5](https://github.com/gemunion/mui-packages/commit/de11ac5640af063c8e29174fb28f609e98f043ca))
+
 # [2.5.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.4.59...@gemunion/mui-inputs-asset@2.5.0) (2023-11-12)
 
 ### Bug Fixes
