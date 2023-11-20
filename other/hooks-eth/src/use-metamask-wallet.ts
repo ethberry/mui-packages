@@ -69,7 +69,12 @@ export const useMetamaskWallet = <T = any>(
                       {
                         id: "snackbar.blockchainErrorReason",
                       },
-                      { reason: errorReason.reason },
+                      {
+                        reason:
+                          errorReason.reason.includes(":") || errorReason.reason.includes(" ")
+                            ? errorReason.reason
+                            : "",
+                      },
                     ),
                 { variant: "error" },
               );
