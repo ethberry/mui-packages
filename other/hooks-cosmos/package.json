@@ -8,11 +8,11 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@cosmjs/encoding": "0.31.3",
+    "@cosmjs/encoding": "0.32.1",
     "@gemunion/license-messages": "0.0.36",
     "@gemunion/provider-api": "7.0.52",
     "@gemunion/provider-cosmos": "1.1.21",
-    "@keplr-wallet/types": "0.12.43"
+    "@keplr-wallet/types": "0.12.48"
   },
   "description": "react hooks cosmos",
   "devDependencies": {
