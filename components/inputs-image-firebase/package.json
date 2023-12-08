@@ -8,19 +8,19 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/firebase": "1.2.20",
+    "@gemunion/firebase": "1.2.21",
     "@gemunion/mui-dialog-confirmation": "3.3.54",
     "@gemunion/mui-inputs-core": "7.2.61",
     "@gemunion/mui-inputs-file-firebase": "6.0.129",
     "@gemunion/mui-page-layout": "2.3.16",
-    "@gemunion/popup": "1.0.40",
+    "@gemunion/popup": "1.0.41",
     "react-beautiful-dnd": "13.1.1"
   },
   "description": "react widget",
   "devDependencies": {
     "@gemunion/cross-env": "0.0.4",
     "@gemunion/mui-form": "8.0.71",
-    "@gemunion/provider-api": "7.0.52",
+    "@gemunion/provider-api": "7.0.53",
     "@gemunion/provider-test-id": "1.0.64",
     "@mui/icons-material": "5.14.18",
     "@mui/material": "5.14.18",
