@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.65](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-test-id@1.0.64...@gemunion/provider-test-id@1.0.65) (2023-12-08)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([e1c01bd](https://github.com/gemunion/mui-packages/commit/e1c01bd9f35c0f98d441f1324eed05ab3fa9cd3b))
+
 ## [1.0.64](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-test-id@1.0.63...@gemunion/provider-test-id@1.0.64) (2023-11-18)
 
 ### Bug Fixes

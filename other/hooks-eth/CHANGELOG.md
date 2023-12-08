@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.3.12...@gemunion/react-hooks-eth@1.4.0) (2023-12-08)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([dfb99fb](https://github.com/gemunion/mui-packages/commit/dfb99fb328cf81e3cd06beff1df9992d3d680c82))
+- snackbar error reason only if it is decoded text? ([d40bd50](https://github.com/gemunion/mui-packages/commit/d40bd50f12604ffe200efcccc849db4ca94df361))
+
+### Features
+
+- useMetamask error reason to snackbar ([d175578](https://github.com/gemunion/mui-packages/commit/d175578953966e7e52fe8fb0ec8ecc44eca3d9da))
+
 ## [1.3.12](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.3.11...@gemunion/react-hooks-eth@1.3.12) (2023-11-18)
 
 ### Bug Fixes
