@@ -15,8 +15,8 @@
   "devDependencies": {
     "@gemunion/provider-api": "7.0.52",
     "@gemunion/provider-api-jwt": "2.0.48",
-    "@storybook/react": "7.5.3",
-    "@types/react": "18.2.37",
+    "@storybook/react": "7.6.4",
+    "@types/react": "18.2.42",
     "react": "18.2.0"
   },
   "engines": {
