@@ -14,11 +14,11 @@
     "@gemunion/mui-inputs-mask": "5.5.63",
     "@gemunion/react-hooks": "1.1.68",
     "@gemunion/types-blockchain": "1.2.8",
-    "@gemunion/yup-rules-eth": "2.1.22"
+    "@gemunion/yup-rules-eth": "2.1.23"
   },
   "description": "react 1inch",
   "devDependencies": {
-    "@gemunion/provider-license": "3.0.36",
+    "@gemunion/provider-license": "3.0.37",
     "@mui/icons-material": "5.14.19",
     "@mui/material": "5.14.20",
     "@types/react": "18.2.45",
