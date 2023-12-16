@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.125](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.124...@gemunion/provider-localization@3.0.125) (2023-12-16)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([89118e6](https://github.com/gemunion/mui-packages/commit/89118e61e266d3d0d0d9bc142c4a89d66f28d31a))
+- **deps:** update all non-major dependencies ([c4f462b](https://github.com/gemunion/mui-packages/commit/c4f462b855a5c28a104e44493db6253fc3f523c2))
+
 ## [3.0.124](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.123...@gemunion/provider-localization@3.0.124) (2023-12-08)
 
 ### Bug Fixes
