@@ -9,14 +9,14 @@
   },
   "dependencies": {
     "@gemunion/mui-form": "8.0.72",
-    "react-hook-form": "7.48.2"
+    "react-hook-form": "7.49.2"
   },
   "description": "react widget",
   "devDependencies": {
     "@gemunion/provider-api": "7.0.53",
     "@gemunion/provider-api-jwt": "2.0.49",
-    "@storybook/react": "7.6.4",
-    "@types/react": "18.2.42",
+    "@storybook/react": "7.6.5",
+    "@types/react": "18.2.45",
     "react": "18.2.0"
   },
   "engines": {
