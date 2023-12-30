@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/provider-test-id": "1.0.67",
-    "date-fns": "2.30.0"
+    "date-fns": "3.0.0"
   },
   "description": "react widget",
   "devDependencies": {
@@ -56,5 +56,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "6.2.7"
+  "version": "7.0.0"
 }
