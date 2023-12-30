@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.49](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@6.1.48...@gemunion/mui-inputs-file@6.1.49) (2023-12-30)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([e9f6d61](https://github.com/gemunion/mui-packages/commit/e9f6d614ac5bc6cdfcc79327db6aca105361a1dd))
+
 ## [6.1.48](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-file@6.1.47...@gemunion/mui-inputs-file@6.1.48) (2023-12-16)
 
 ### Bug Fixes

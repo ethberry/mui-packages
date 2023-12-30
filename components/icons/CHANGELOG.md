@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.43](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-icons@1.1.42...@gemunion/mui-icons@1.1.43) (2023-12-30)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([e9f6d61](https://github.com/gemunion/mui-packages/commit/e9f6d614ac5bc6cdfcc79327db6aca105361a1dd))
+
 ## [1.1.42](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-icons@1.1.41...@gemunion/mui-icons@1.1.42) (2023-12-16)
 
 ### Bug Fixes
