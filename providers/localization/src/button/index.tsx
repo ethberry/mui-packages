@@ -3,7 +3,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { IconButton, Menu, MenuItem, MenuItemProps, MenuProps, Tooltip } from "@mui/material";
 import { Translate } from "@mui/icons-material";
 
-import { useSettings } from "@gemunion/provider-settings";
+import { settingsActions, TLanguage, useAppDispatch, useAppSelector } from "@gemunion/redux";
 
 export interface ILocalizationProps {
   languages: Array<string>;
@@ -14,9 +14,11 @@ export interface ILocalizationProps {
 
 export const Localization: FC<ILocalizationProps> = props => {
   const { languages, icon, menuProps = {}, menuItemProps = {} } = props;
-
   const { formatMessage } = useIntl();
-  const settings = useSettings();
+  const settings = useAppSelector(state => state.settings);
+  const { setLanguage } = settingsActions;
+  const dispatch = useAppDispatch();
+
   const [anchor, setAnchor] = useState<Element | null>(null);
 
   const handleLanguageIconClick = (e: MouseEvent): void => {
@@ -28,7 +30,7 @@ export const Localization: FC<ILocalizationProps> = props => {
   };
 
   const handleLanguageMenuItemClick = (language: string) => (): void => {
-    settings.setLanguage(language);
+    dispatch(setLanguage(language as TLanguage));
     document.documentElement.setAttribute("lang", language);
     handleLanguageMenuClose();
   };
@@ -50,7 +52,7 @@ export const Localization: FC<ILocalizationProps> = props => {
         {languages.map(language => (
           <MenuItem
             key={language}
-            selected={settings.getLanguage() === language}
+            selected={settings.language === (language as TLanguage)}
             onClick={handleLanguageMenuItemClick(language)}
             {...menuItemProps}
           >

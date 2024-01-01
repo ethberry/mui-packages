@@ -1,43 +1,43 @@
 {
   "author": {
-    "email": "trejgun@gemunion.io",
+    "email": "trejgun+gemunion@gmail.com",
     "name": "TrejGun",
     "url": "https://gemunion.io/"
   },
   "bugs": {
-    "url": "https://github.com/gemunion/mui-packages/issues"
+    "url": "https://github.com/gemunion/common-packages/issues"
   },
-  "description": "react i18n provider",
+  "dependencies": {
+    "@gemunion/constants": "0.12.8",
+    "@gemunion/react-hooks": "1.1.70",
+    "@reduxjs/toolkit": "2.0.1",
+    "react-redux": "9.0.4"
+  },
+  "description": "react redux store",
   "devDependencies": {
-    "@gemunion/provider-license": "3.0.38",
-    "@gemunion/redux": "0.1.0",
-    "@mui/icons-material": "5.15.2",
-    "@mui/material": "5.15.2",
     "@types/react": "18.2.46",
-    "react": "18.2.0",
-    "react-intl": "6.5.5"
+    "react": "18.2.0"
   },
   "engines": {
     "node": ">=18"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "redux",
+    "redux-toolkit"
+  ],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/provider-localization",
+  "name": "@gemunion/redux",
   "peerDependencies": {
-    "@gemunion/provider-license": "^3.0.0",
-    "@gemunion/redux": "^0.1.0",
-    "@mui/icons-material": "^5.0.0",
-    "@mui/material": "^5.0.0",
-    "react": "^18.0.0",
-    "react-intl": "^6.0.0"
+    "react": "^18.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gemunion/mui-packages"
+    "url": "https://github.com/gemunion/common-packages"
   },
   "scripts": {
     "build": "tsc",
@@ -50,5 +50,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.0.126"
+  "version": "0.1.0"
 }

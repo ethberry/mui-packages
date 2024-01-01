@@ -4,20 +4,22 @@ import { IconButton, Tooltip } from "@mui/material";
 import { Brightness4, Brightness7 } from "@mui/icons-material";
 
 import { ThemeType } from "@gemunion/constants";
-import { useSettings } from "@gemunion/provider-settings";
+import { settingsActions, useAppDispatch, useAppSelector } from "@gemunion/redux";
 
 export const Theme: FC = () => {
   const { formatMessage } = useIntl();
-  const settings = useSettings();
+  const { themeType } = useAppSelector(state => state.settings);
+  const { setThemeType } = settingsActions;
+  const dispatch = useAppDispatch();
 
   const handleThemeIconClick = () => {
-    settings.setTheme(settings.getTheme() === ThemeType.light ? ThemeType.dark : ThemeType.light);
+    dispatch(setThemeType(themeType === ThemeType.light ? ThemeType.dark : ThemeType.light));
   };
 
   return (
     <Tooltip title={formatMessage({ id: "components.header.theme.switch" })}>
       <IconButton color="inherit" onClick={handleThemeIconClick} data-testid="switchTheme">
-        {settings.getTheme() === ThemeType.light ? <Brightness4 /> : <Brightness7 />}
+        {themeType === ThemeType.light ? <Brightness4 /> : <Brightness7 />}
       </IconButton>
     </Tooltip>
   );

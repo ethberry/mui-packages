@@ -19,7 +19,7 @@
   },
   "description": "Material UI theme provider",
   "devDependencies": {
-    "@gemunion/provider-settings": "4.0.68",
+    "@gemunion/redux": "0.1.0",
     "@mui/icons-material": "5.15.2",
     "@mui/material": "5.15.2",
     "@types/stylis": "4.2.5",
@@ -34,7 +34,7 @@
   "main": "./dist/index.js",
   "name": "@gemunion/provider-theme",
   "peerDependencies": {
-    "@gemunion/provider-settings": "^4.0.0",
+    "@gemunion/redux": "^0.1.0",
     "@mui/icons-material": "^5.0.0",
     "@mui/material": "^5.0.0",
     "react": "^18.0.0",

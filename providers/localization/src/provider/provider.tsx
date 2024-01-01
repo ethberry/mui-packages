@@ -2,7 +2,7 @@ import { PropsWithChildren, ReactElement } from "react";
 import { IntlProvider } from "react-intl";
 
 import { useLicense } from "@gemunion/provider-license";
-import { useSettings } from "@gemunion/provider-settings";
+import { useAppSelector } from "@gemunion/redux";
 
 import { flattenMessages } from "./utils";
 
@@ -15,7 +15,7 @@ export const LocalizationProvider = <T extends string>(
   props: PropsWithChildren<ILocalizationProviderProps<T>>,
 ): ReactElement | null => {
   const { children, i18n, defaultLanguage } = props;
-  const settings = useSettings<T>();
+  const { language } = useAppSelector(state => state.settings);
   const license = useLicense();
 
   if (!license.isValid()) {
@@ -25,8 +25,8 @@ export const LocalizationProvider = <T extends string>(
   return (
     <IntlProvider
       defaultLocale={defaultLanguage}
-      locale={settings.getLanguage()}
-      messages={Object.assign(flattenMessages(i18n[defaultLanguage]), flattenMessages(i18n[settings.getLanguage()]))}
+      locale={language}
+      messages={Object.assign(flattenMessages(i18n[defaultLanguage]), flattenMessages(i18n[language as T]))}
     >
       {children}
     </IntlProvider>

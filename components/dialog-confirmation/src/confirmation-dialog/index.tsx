@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 
 import { useLicense } from "@gemunion/provider-license";
-import { useSettings } from "@gemunion/provider-settings";
+import { useAppSelector } from "@gemunion/redux";
 
 export interface IConfirmationDialogProps extends DialogProps {
   onCancel: () => void;
@@ -36,7 +36,7 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
   } = props;
 
   const license = useLicense();
-  const settings = useSettings();
+  const settings = useAppSelector(state => state.settings);
 
   if (!license.isValid()) {
     return null;
@@ -50,7 +50,7 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
       aria-labelledby="confirmation-dialog-title"
       aria-describedby="confirmation-dialog-content"
       data-testid="DialogConfirmation"
-      dir={settings.getLayoutDirection().toLowerCase()}
+      dir={settings.layoutDirection.toLowerCase()}
       {...rest}
     >
       <DialogTitle

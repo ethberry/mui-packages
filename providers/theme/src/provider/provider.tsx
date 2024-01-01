@@ -16,7 +16,7 @@ import { create } from "jss";
 import rtl from "jss-rtl";
 import { StylesProvider, jssPreset } from "@mui/styles";
 
-import { useSettings } from "@gemunion/provider-settings";
+import { useAppSelector } from "@gemunion/redux";
 
 import { dark, light } from "./palette";
 
@@ -28,8 +28,8 @@ export interface IThemeProviderProps {
 
 export const ThemeProvider: FC<PropsWithChildren<IThemeProviderProps>> = props => {
   const { darkPalette = dark, lightPalette = light, options = {}, children } = props;
-  const settings = useSettings();
-  const direction = settings.getLayoutDirection() as Direction;
+  const { layoutDirection, themeType } = useAppSelector(state => state.settings);
+  const direction = layoutDirection as Direction;
 
   const cacheRtl = createCache({
     key: "muirtl",
@@ -51,7 +51,7 @@ export const ThemeProvider: FC<PropsWithChildren<IThemeProviderProps>> = props =
     palette: {
       light: lightPalette,
       dark: darkPalette,
-    }[settings.getTheme()],
+    }[themeType],
     direction,
     ...options,
   });

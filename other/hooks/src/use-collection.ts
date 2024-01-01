@@ -1,11 +1,12 @@
+import { ChangeEvent, useEffect, useLayoutEffect } from "react";
 import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
-import { ChangeEvent, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router";
 import { parse, stringify } from "qs";
 
 import { defaultItemsPerPage } from "@gemunion/constants";
 import { ApiError } from "@gemunion/provider-api";
+import { collectionActions, useAppDispatch, useAppSelector } from "@gemunion/redux";
 import { IIdBase, IPaginationResult, IPaginationDto, ISortDto, IMuiSortDto } from "@gemunion/types-collection";
 
 import { useApiCall } from "./use-api-call";
@@ -55,16 +56,7 @@ export const useCollection = <
 
   const { formatMessage } = useIntl();
 
-  const [isLoading, setIsLoading] = useState(false);
-  const [isFiltersOpen, setIsFilterOpen] = useState(false);
-  const [isViewDialogOpen, setIsViewDialogOpen] = useState(false);
-  const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
-  const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
-  const [didMount, setDidMount] = useState(false);
-
-  const [rows, setRows] = useState<Array<T>>([]);
-  const [count, setCount] = useState<number>(0);
-  const [selected, setSelected] = useState<T>(empty as T);
+  const fetchByQueryAbortController = new AbortController();
 
   const getSearchParams = (data: Partial<S>) => {
     const search = parse(location.search.substring(1), { decoder });
@@ -74,13 +66,47 @@ export const useCollection = <
     );
   };
 
-  const [search, setSearch] = useState<S>(
-    getSearchParams({
-      skip: 0,
-      take: defaultItemsPerPage,
-      ...data,
-    } as Partial<S>),
-  );
+  const {
+    setIsLoading,
+    setIsFilterOpen,
+    setIsViewDialogOpen,
+    setIsEditDialogOpen,
+    setIsDeleteDialogOpen,
+    setDidMount,
+    setRows,
+    setCount,
+    setSelected,
+    setSearch,
+    setNeedRefresh,
+    resetState,
+  } = collectionActions;
+  const dispatch = useAppDispatch();
+
+  const {
+    isLoading,
+    isFiltersOpen,
+    isViewDialogOpen,
+    isEditDialogOpen,
+    isDeleteDialogOpen,
+    didMount,
+    count,
+    rows: stateRows,
+    selected: stateSelected,
+    search: stateSearch,
+    needRefresh,
+  } = useAppSelector(state => state.collection);
+
+  const rows = stateRows as T[];
+  const selected = (Object.entries(stateSelected).length ? stateSelected : empty) as T;
+  const search = (
+    Object.entries(stateSearch).length
+      ? stateSearch
+      : getSearchParams({
+          skip: 0,
+          take: defaultItemsPerPage,
+          ...data,
+        } as Partial<S>)
+  ) as S;
 
   const updateQS = (id?: number) => {
     const { skip: _skip, take: _take, order: _order, ...rest } = search;
@@ -102,6 +128,7 @@ export const useCollection = <
       return api.fetchJson({
         url: baseUrl,
         data: search,
+        signal: fetchByQueryAbortController.signal,
       });
     },
     { success: false, error: false },
@@ -109,8 +136,8 @@ export const useCollection = <
 
   const fetchByQuery = async (): Promise<void> => {
     return fetchByQueryFn().then((json: IPaginationResult<T>) => {
-      setRows(json.rows);
-      setCount(json.count);
+      dispatch(setRows(json.rows));
+      dispatch(setCount(json.count));
       updateQS();
     });
   };
@@ -126,16 +153,16 @@ export const useCollection = <
 
   const fetchById = async (id: string): Promise<void> => {
     return fetchByIdFn(undefined, id).then((json: T) => {
-      setRows([json]);
-      setCount(1);
-      setSelected(json);
-      setIsEditDialogOpen(true);
-      setIsViewDialogOpen(true);
+      dispatch(setRows([json]));
+      dispatch(setCount(1));
+      dispatch(setSelected(json));
+      dispatch(setIsEditDialogOpen(true));
+      dispatch(setIsViewDialogOpen(true));
     });
   };
 
   const fetch = async (id?: string): Promise<void> => {
-    setIsLoading(true);
+    dispatch(setIsLoading(true));
     return (id ? fetchById(id) : fetchByQuery())
       .catch((e: ApiError) => {
         if (e.status) {
@@ -146,52 +173,52 @@ export const useCollection = <
             const message = formatMessage({ id: errors[key] }, { label });
             enqueueSnackbar(message, { variant: "error" });
           });
-        } else {
+        } else if (!fetchByQueryAbortController.signal.aborted) {
           console.error(e);
           enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
         }
       })
       .finally(() => {
-        setIsLoading(false);
-        setDidMount(true);
+        dispatch(setIsLoading(false));
+        dispatch(setDidMount(true));
       });
   };
 
   const handleCreate = (): void => {
-    setSelected(empty as T);
-    setIsEditDialogOpen(true);
+    dispatch(setSelected(empty as T));
+    dispatch(setIsEditDialogOpen(true));
   };
 
   const handleView = (item: T): (() => void) => {
     return (): void => {
-      setSelected(item);
-      setCount(1);
-      setIsViewDialogOpen(true);
+      dispatch(setSelected(item));
+      dispatch(setCount(1));
+      dispatch(setIsViewDialogOpen(true));
       updateQS(item.id);
     };
   };
 
   const handleViewConfirm = (): void => {
-    setIsViewDialogOpen(false);
+    dispatch(setIsViewDialogOpen(false));
     updateQS();
   };
 
   const handleViewCancel = (): void => {
-    setIsViewDialogOpen(false);
+    dispatch(setIsViewDialogOpen(false));
     updateQS();
   };
 
   const handleEdit = (item: T): (() => void) => {
     return (): void => {
-      setSelected(item);
-      setCount(1);
-      setIsEditDialogOpen(true);
+      dispatch(setSelected(item));
+      dispatch(setCount(1));
+      dispatch(setIsEditDialogOpen(true));
       updateQS(item.id);
     };
   };
 
   const handleEditCancel = (): void => {
-    setIsEditDialogOpen(false);
+    dispatch(setIsEditDialogOpen(false));
     updateQS();
   };
 
@@ -214,7 +241,7 @@ export const useCollection = <
         enqueueSnackbar(formatMessage({ id: id || values.id ? "snackbar.updated" : "snackbar.created" }), {
           variant: "success",
         });
-        setIsEditDialogOpen(false);
+        dispatch(setIsEditDialogOpen(false));
         form.reset(values);
         return fetch();
       })
@@ -236,13 +263,13 @@ export const useCollection = <
 
   const handleDelete = (item: T): (() => void) => {
     return (): void => {
-      setSelected(item);
-      setIsDeleteDialogOpen(true);
+      dispatch(setSelected(item));
+      dispatch(setIsDeleteDialogOpen(true));
     };
   };
 
   const handleDeleteCancel = (): void => {
-    setIsDeleteDialogOpen(false);
+    dispatch(setIsDeleteDialogOpen(false));
   };
 
   const { fn: handleDeleteConfirmFn } = useApiCall(
@@ -270,65 +297,78 @@ export const useCollection = <
         }
       })
       .finally(() => {
-        setIsDeleteDialogOpen(false);
+        dispatch(setIsDeleteDialogOpen(false));
       });
   };
 
   const handleRefreshPage = async () => {
     if (didMount) {
-      await fetch(id);
+      dispatch(setNeedRefresh(true));
     }
+
+    return Promise.resolve();
   };
 
   const handleChangePage = (_e: ChangeEvent<unknown>, page: number) => {
-    setSearch({
-      ...search,
-      skip: (page - 1) * search.take,
-    });
+    dispatch(
+      setSearch({
+        ...search,
+        skip: (page - 1) * search.take,
+      }),
+    );
   };
 
   const handleChangeRowsPerPage = (pageSize: number): void => {
-    setSearch({
-      ...search,
-      skip: 0,
-      take: pageSize,
-    });
+    dispatch(
+      setSearch({
+        ...search,
+        skip: 0,
+        take: pageSize,
+      }),
+    );
   };
 
-  const handleChangePaginationModel = ({ page, pageSize }: IHandleChangePaginationModelProps): void => {
-    setSearch({
-      ...search,
-      skip: page * pageSize,
-      take: pageSize,
-    });
+  const handleChangePaginationModel = (model: IHandleChangePaginationModelProps): void => {
+    const { page, pageSize } = model;
+    dispatch(
+      setSearch({
+        ...search,
+        skip: page * pageSize,
+        take: pageSize,
+      }),
+    );
   };
 
   const handleSearch = (values: S): Promise<void> => {
-    setSearch({
-      ...values,
-      skip: 0,
-      take: search.take,
-    });
+    dispatch(
+      setSearch({
+        ...values,
+        skip: 0,
+        take: search.take,
+      }),
+    );
 
     // to promisify searching for the form onSubmit function
     return Promise.resolve();
   };
 
   const handleChangeSortModel = (sortModel: ISortDto<T>[]): void => {
-    setSearch({
-      ...search,
-      order: sortModel,
-    });
+    dispatch(
+      setSearch({
+        ...search,
+        order: sortModel,
+      }),
+    );
   };
 
   const handleToggleFilters = () => {
-    setIsFilterOpen(!isFiltersOpen);
+    dispatch(setIsFilterOpen(!isFiltersOpen));
   };
 
   useDeepCompareEffect(() => {
     if (!id) {
-      setIsEditDialogOpen(false);
-      setIsViewDialogOpen(false);
+      dispatch(setIsEditDialogOpen(false));
+      dispatch(setIsViewDialogOpen(false));
     }
 
     if (hasAwaited(search)) {
@@ -336,11 +376,26 @@ export const useCollection = <
     }
 
     void fetch(id);
+
+    return () => fetchByQueryAbortController.abort();
   }, [search, id]);
 
+  useEffect(() => {
+    if (didMount && needRefresh) {
+      void fetch(id);
+      dispatch(setNeedRefresh(false));
+    }
+  }, [didMount, needRefresh, id]);
+
   useDeepCompareEffect(() => {
-    setSearch(getSearchParams(search));
+    dispatch(setSearch(getSearchParams(search)));
   }, [location]);
+
+  useLayoutEffect(() => {
+    return () => {
+      dispatch(resetState());
+    };
+  }, []);
 
   return {
     rows,
