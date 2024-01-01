@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.99...@gemunion/provider-theme@7.0.0) (2024-01-01)
+
+### Features
+
+- implement redux toolkit ([8c6957a](https://github.com/gemunion/mui-packages/commit/8c6957a7c9cca183202bda45b6f3aaf815075b28))
+
+### BREAKING CHANGES
+
+- redux store is implemented and replaced the deprecated provider-settings; providers localization and theme, use-collection hook and dialog-confirmation should be updated
+
 ## [6.0.99](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.98...@gemunion/provider-theme@6.0.99) (2023-12-30)
 
 ### Bug Fixes

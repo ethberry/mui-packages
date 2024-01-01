@@ -13,7 +13,7 @@
     "@gemunion/mui-page-layout": "2.3.19",
     "@gemunion/provider-api": "7.0.55",
     "@gemunion/provider-wallet": "3.3.65",
-    "@gemunion/react-hooks": "1.1.70",
+    "@gemunion/react-hooks": "2.0.0",
     "@gemunion/react-hooks-eth": "1.4.2",
     "@gemunion/types-collection": "1.5.14",
     "@gemunion/types-jwt": "0.3.12",
@@ -73,5 +73,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.3.33"
+  "version": "2.3.34"
 }

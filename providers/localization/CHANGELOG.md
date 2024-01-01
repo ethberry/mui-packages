@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.126...@gemunion/provider-localization@4.0.0) (2024-01-01)
+
+### Features
+
+- implement redux toolkit ([8c6957a](https://github.com/gemunion/mui-packages/commit/8c6957a7c9cca183202bda45b6f3aaf815075b28))
+
+### BREAKING CHANGES
+
+- redux store is implemented and replaced the deprecated provider-settings; providers localization and theme, use-collection hook and dialog-confirmation should be updated
+
 ## [3.0.126](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@3.0.125...@gemunion/provider-localization@3.0.126) (2023-12-30)
 
 ### Bug Fixes

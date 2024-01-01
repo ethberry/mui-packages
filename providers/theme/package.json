@@ -19,7 +19,7 @@
   },
   "description": "Material UI theme provider",
   "devDependencies": {
-    "@gemunion/redux": "0.1.0",
+    "@gemunion/redux": "0.2.0",
     "@mui/icons-material": "5.15.2",
     "@mui/material": "5.15.2",
     "@types/stylis": "4.2.5",
@@ -58,5 +58,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "6.0.99"
+  "version": "7.0.0"
 }
