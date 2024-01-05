@@ -12,6 +12,7 @@ import { ContractInput } from "../input/contract";
 import { TemplateInput } from "../input/template";
 import { AmountInput } from "../input/amount";
 import type { ITemplateAssetComponent } from "./types";
+import { ContractFeatures } from "../interfaces";
 
 type TAssetComponentParams = ITemplateAssetComponent & {
   id: string;
@@ -31,6 +32,7 @@ export interface ITemplateAssetProps {
   };
   contract?: {
     data?: {
+      excludeFeatures?: Array<ContractFeatures>;
       contractModule?: Array<string>;
       contractStatus?: Array<string>;
       [k: string]: any;
