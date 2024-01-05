@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.4.0 (2024-01-05)
+
+### Features
+
+- use chainIds 10000 and 10001 ([331365f](https://github.com/gemunion/mui-packages/commit/331365fb1d796f97eaeaf768192c83c9761ac6ee))
+
 ## [3.3.65](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.3.64...@gemunion/provider-wallet@3.3.65) (2023-12-30)
 
 ### Bug Fixes

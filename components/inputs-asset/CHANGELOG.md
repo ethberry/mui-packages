@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.6.4...@gemunion/mui-inputs-asset@2.7.0) (2024-01-05)
+
+### Features
+
+- template asset input use excludeFeatures ([e83662e](https://github.com/gemunion/mui-packages/commit/e83662e71f7ce98d2e826f9f980d8c761ef30dd3))
+
 ## [2.6.4](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.6.3...@gemunion/mui-inputs-asset@2.6.4) (2024-01-01)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset
