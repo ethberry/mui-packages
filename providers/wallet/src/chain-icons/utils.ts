@@ -25,6 +25,8 @@ export const getIconByChainId = (chainId: number): FC<SvgIconProps> | null => {
       return Arbitrum;
     case 13378:
     case 13377:
+    case 10000:
+    case 10001:
       return Besu;
     default:
       return null;

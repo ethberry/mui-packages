@@ -24,8 +24,8 @@ export const networkToChainId: Record<Networks, number> = {
   [Networks.MUMBAI]: 80001,
   [Networks.OPTIMISM]: 10,
   [Networks.ARBITRUM]: 42161,
-  [Networks.BESU]: 13378,
-  [Networks.GEMUNION]: 13377,
+  [Networks.BESU]: 10001,
+  [Networks.GEMUNION]: 10000,
 };
 
 export const chainIdToNetwork: Record<number, Networks> = (Object.keys(networkToChainId) as Networks[]).reduce(
