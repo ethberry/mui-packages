@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.53](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-picker@5.0.52...@gemunion/provider-picker@5.0.53) (2024-01-15)
+
+### Bug Fixes
+
+- import AdapterDateFns ([9ac8cc0](https://github.com/gemunion/mui-packages/commit/9ac8cc00bb4bf1616431f4262f1a61962aad9ded))
+
 ## 5.0.52 (2024-01-15)
 
 **Note:** Version bump only for package @gemunion/provider-picker
