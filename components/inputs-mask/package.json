@@ -10,12 +10,12 @@
   "dependencies": {
     "@gemunion/mui-inputs-core": "7.2.65",
     "@gemunion/provider-test-id": "1.0.67",
-    "@mui/styles": "5.15.2",
+    "@mui/styles": "5.15.4",
     "react-number-format": "5.3.1"
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.15.2",
+    "@mui/material": "5.15.4",
     "@storybook/react": "7.6.6",
     "@types/react": "18.2.46",
     "ethers": "5.7.2",
