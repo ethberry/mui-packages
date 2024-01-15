@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.25 (2024-01-15)
+
+**Note:** Version bump only for package @gemunion/provider-cosmos
+
 ## [1.1.24](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-cosmos@1.1.23...@gemunion/provider-cosmos@1.1.24) (2023-12-30)
 
 ### Bug Fixes

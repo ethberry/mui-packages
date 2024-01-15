@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.26 (2024-01-15)
+
+**Note:** Version bump only for package @gemunion/react-hooks-cosmos
+
 ## [1.1.25](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-cosmos@1.1.24...@gemunion/react-hooks-cosmos@1.1.25) (2023-12-30)
 
 ### Bug Fixes

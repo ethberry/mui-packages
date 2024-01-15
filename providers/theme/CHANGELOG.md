@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.0.1 (2024-01-15)
+
+**Note:** Version bump only for package @gemunion/provider-theme
+
 # [7.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@6.0.99...@gemunion/provider-theme@7.0.0) (2024-01-01)
 
 ### Features

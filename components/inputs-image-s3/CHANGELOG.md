@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 8.1.68 (2024-01-15)
+
+**Note:** Version bump only for package @gemunion/mui-inputs-image-s3
+
 ## [8.1.67](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-image-s3@8.1.66...@gemunion/mui-inputs-image-s3@8.1.67) (2024-01-01)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-image-s3
