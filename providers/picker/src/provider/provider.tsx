@@ -1,5 +1,6 @@
 import { FC, PropsWithChildren } from "react";
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+// https://github.com/mui/mui-x/issues/11454
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFnsV3";
 import { LocalizationProvider, LocalizationProviderProps } from "@mui/x-date-pickers/LocalizationProvider";
 
 export const PickerProvider: FC<PropsWithChildren<LocalizationProviderProps<Date, any>>> = props => {
