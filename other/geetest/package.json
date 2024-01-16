@@ -13,8 +13,8 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.55",
-    "@gemunion/provider-api-jwt": "2.0.51",
+    "@gemunion/provider-api": "7.0.56",
+    "@gemunion/provider-api-jwt": "2.0.52",
     "@storybook/react": "7.6.6",
     "@types/react": "18.2.46",
     "react": "18.2.0"
