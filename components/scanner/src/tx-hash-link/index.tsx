@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Link, SxProps, Theme, Tooltip, useMediaQuery } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 
-import { networks } from "@gemunion/provider-wallet";
+import { useAppSelector } from "@gemunion/redux";
 
 export interface ITxHashLinkProps {
   hash: string;
@@ -14,6 +14,7 @@ export const TxHashLink: FC<ITxHashLinkProps> = props => {
   const { hash, length = 16, sx = [] } = props;
 
   const { chainId = 1 } = useWeb3React();
+  const { networks } = useAppSelector(state => state.wallet);
 
   if (!hash) {
     return null;

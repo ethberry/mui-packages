@@ -19,7 +19,7 @@ export const useMetamaskWallet = <T = any>(
 
   const web3ContextGlobal = useWeb3React();
   const { isActive } = web3ContextGlobal;
-  const { openConnectWalletDialog, isDialogOpen, closeConnectWalletDialog } = useWallet();
+  const { openConnectWalletDialog, closeConnectWalletDialog } = useWallet();
 
   const { formatMessage } = useIntl();
   const { success = true, error = true } = options;
@@ -35,7 +35,6 @@ export const useMetamaskWallet = <T = any>(
     let context = web3ContextGlobal;
     if (!isActive) {
       context = await openConnectWalletDialog();
-    } else if (isDialogOpen()) {
       closeConnectWalletDialog();
     }
 

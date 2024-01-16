@@ -1,11 +1,18 @@
 import { FC, useCallback, useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 
-import { useWallet } from "../provider";
+import { useUser } from "@gemunion/provider-user";
+import { TConnectors, useAppDispatch, useAppSelector, walletActions } from "@gemunion/redux";
+
+import { particleAuth } from "../connectors/particle";
 
 export const CheckNetwork: FC = () => {
   const { isActive, chainId, connector } = useWeb3React();
-  const { network, setActiveConnector } = useWallet();
+  const { activeConnector, network } = useAppSelector(state => state.wallet);
+  const { setActiveConnector } = walletActions;
+  const dispatch = useAppDispatch();
+  const user = useUser<any>();
+  const userIsAuthenticated = user.isAuthenticated();
 
   const handleDisconnect = () => {
     if (connector?.deactivate) {
@@ -13,12 +20,16 @@ export const CheckNetwork: FC = () => {
     } else {
       void connector.resetState();
     }
-    setActiveConnector(null);
+    dispatch(setActiveConnector(null));
   };
 
   const checkChainId = useCallback(async () => {
     if (!network) {
       return;
+    }
+
+    if (activeConnector === TConnectors.PARTICLE) {
+      return particleAuth.switchChain(network.chainId);
     }
 
     try {
@@ -58,6 +69,12 @@ export const CheckNetwork: FC = () => {
       void checkChainId();
     }
   }, [connector, isActive, chainId, network]);
+
+  useEffect(() => {
+    if (network && !userIsAuthenticated) {
+      handleDisconnect();
+    }
+  }, [network, userIsAuthenticated]);
 
   return null;
 };

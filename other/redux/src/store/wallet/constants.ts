@@ -1,19 +1,6 @@
-import type { Networkish } from "@ethersproject/networks";
+import { INetwork, Networks } from "./interfaces";
 
-import { INetwork } from "../interfaces";
-
-export enum Networks {
-  ETHEREUM = "ETHEREUM",
-  GOERLY = "GOERLY",
-  BINANCE = "BINANCE",
-  BINANCE_TEST = "BINANCE_TEST",
-  POLYGON = "POLYGON",
-  MUMBAI = "MUMBAI",
-  OPTIMISM = "OPTIMISM",
-  ARBITRUM = "ARBITRUM",
-  BESU = "BESU",
-  GEMUNION = "GEMUNION",
-}
+export const STORE_CONNECTOR = "CONNECTOR";
 
 export const networkToChainId: Record<Networks, number> = {
   [Networks.ETHEREUM]: 1,
@@ -102,25 +89,95 @@ export const rpcUrls: Record<string, string[]> = {
   ],
 };
 
-export const SANDBOX_CHAINS = [5, 97, 80001, 10001, 13377];
-
-export const STORE_CONNECTOR = "CONNECTOR";
-
-export const WALLET_CONNECT_POPUP_TYPE = Symbol("WALLET_CONNECT_POPUP_TYPE");
-export const WALLET_MENU_POPUP_TYPE = Symbol("WALLET_MENU_POPUP_TYPE");
-
-export const getNetworkForWeb3Provider = (chainId: number, networks: Record<number, INetwork>): Networkish => {
-  const network = networks[chainId];
-
-  if (!network) {
-    return {
-      name: "Ethereum",
-      chainId: 1,
-    };
-  }
-
-  return {
-    name: network.chainName,
-    chainId: network.chainId,
-  };
+export const networks: Record<number, INetwork> = {
+  [networkToChainId[Networks.ETHEREUM]]: {
+    chainName: "Ethereum",
+    chainId: networkToChainId[Networks.ETHEREUM],
+    rpcUrls: rpcUrls[networkToChainId[Networks.ETHEREUM]],
+    blockExplorerUrls: ["https://etherscan.io"],
+    nativeCurrency: {
+      name: "ETH",
+      symbol: "ETH",
+      decimals: 18,
+    },
+  },
+  [networkToChainId[Networks.GOERLY]]: {
+    chainName: "Goerly",
+    chainId: networkToChainId[Networks.GOERLY],
+    rpcUrls: rpcUrls[networkToChainId[Networks.GOERLY]],
+    blockExplorerUrls: ["https://goerli.etherscan.io"],
+    nativeCurrency: {
+      name: "GOR",
+      symbol: "GOR",
+      decimals: 18,
+    },
+  },
+  [networkToChainId[Networks.BINANCE]]: {
+    chainName: "Binance Smart Chain",
+    chainId: networkToChainId[Networks.BINANCE],
+    rpcUrls: rpcUrls[networkToChainId[Networks.BINANCE]],
+    blockExplorerUrls: ["https://bscscan.com"],
+    nativeCurrency: {
+      name: "BNB",
+      symbol: "BNB",
+      decimals: 18,
+    },
+  },
+  [networkToChainId[Networks.BINANCE_TEST]]: {
+    chainName: "Binance Smart Chain Testnet",
+    chainId: networkToChainId[Networks.BINANCE_TEST],
+    rpcUrls: rpcUrls[networkToChainId[Networks.BINANCE_TEST]],
+    blockExplorerUrls: ["https://testnet.bscscan.com"],
+    nativeCurrency: {
+      name: "BNB",
+      symbol: "BNB",
+      decimals: 18,
+    },
+  },
+  [networkToChainId[Networks.POLYGON]]: {
+    chainName: "Polygon",
+    chainId: networkToChainId[Networks.POLYGON],
+    rpcUrls: rpcUrls[networkToChainId[Networks.POLYGON]],
+    blockExplorerUrls: ["https://polygonscan.com"],
+    nativeCurrency: {
+      name: "MATIC",
+      symbol: "MATIC",
+      decimals: 18,
+    },
+  },
+  [networkToChainId[Networks.MUMBAI]]: {
+    chainName: "Mumbai",
+    chainId: networkToChainId[Networks.MUMBAI],
+    rpcUrls: rpcUrls[networkToChainId[Networks.MUMBAI]],
+    blockExplorerUrls: ["https://mumbai.polygonscan.com"],
+    nativeCurrency: {
+      name: "MATIC",
+      symbol: "MATIC",
+      decimals: 18,
+    },
+  },
+  [networkToChainId[Networks.BESU]]: {
+    chainName: "Besu",
+    chainId: networkToChainId[Networks.BESU],
+    rpcUrls: rpcUrls[networkToChainId[Networks.BESU]],
+    blockExplorerUrls: ["http://localhost:8080"],
+    nativeCurrency: {
+      name: "BESU",
+      symbol: "BESU",
+      decimals: 18,
+    },
+  },
+  [networkToChainId[Networks.GEMUNION]]: {
+    chainName: "Gemunion",
+    chainId: networkToChainId[Networks.GEMUNION],
+    rpcUrls: rpcUrls[networkToChainId[Networks.GEMUNION]],
+    blockExplorerUrls: ["https://besu-explorer.gemunion.io"],
+    nativeCurrency: {
+      name: "BESU",
+      symbol: "BESU",
+      decimals: 18,
+    },
+  },
 };
+
+export const SANDBOX_CHAINS = [5, 97, 80001, 10001, 13377];

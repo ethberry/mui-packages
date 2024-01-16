@@ -23,10 +23,9 @@ export const getIconByChainId = (chainId: number): FC<SvgIconProps> | null => {
       return Polygon;
     case 42161:
       return Arbitrum;
+    case 10001:
     case 13378:
     case 13377:
-    case 10000:
-    case 10001:
       return Besu;
     default:
       return null;

@@ -4,9 +4,10 @@ import { OptionsObject, enqueueSnackbar } from "notistack";
 import { Button } from "@mui/material";
 import { NoMetaMaskError } from "@web3-react/metamask";
 
+import { TConnectors, useAppDispatch, useAppSelector, walletActions } from "@gemunion/redux";
+
 import { useWallet } from "../provider";
 import { metaMask } from "../connectors/meta-mask";
-import { TConnectors } from "../connectors/types";
 
 export interface IUseConnectMetamask {
   onClick?: () => void;
@@ -16,7 +17,10 @@ export const useConnectMetamask = (props: IUseConnectMetamask) => {
   const { onClick } = props;
 
   const { formatMessage } = useIntl();
-  const { setActiveConnector, network, connectCallback } = useWallet();
+  const { network } = useAppSelector(state => state.wallet);
+  const { setActiveConnector } = walletActions;
+  const dispatch = useAppDispatch();
+  const { connectCallback } = useWallet();
 
   const notDetectedWeb3MessageConfig: OptionsObject = {
     variant: "warning",
@@ -40,12 +44,12 @@ export const useConnectMetamask = (props: IUseConnectMetamask) => {
       return metaMask
         .activate(network || undefined)
         .then(() => {
-          setActiveConnector(TConnectors.METAMASK);
+          dispatch(setActiveConnector(TConnectors.METAMASK));
           onClick && onClick();
         })
         .catch(e => {
           console.error("error", e);
-          setActiveConnector(null);
+          dispatch(setActiveConnector(null));
           if (e && e.code === 4001) {
             enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
           } else if (e instanceof NoMetaMaskError) {

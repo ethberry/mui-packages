@@ -2,33 +2,38 @@ import { FC, useCallback, useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 import { ProviderRpcError } from "@web3-react/types";
 
+import { useUser } from "@gemunion/provider-user";
+import { TConnectors, useAppSelector } from "@gemunion/redux";
+
 import { getConnectorName, getConnectorByName } from "../connectors";
-import { STORE_CONNECTOR, useWallet } from "../provider";
-import { TConnectors } from "../connectors/types";
+import { particleAuth } from "../connectors/particle";
+import { STORE_CONNECTOR } from "../provider";
 
-interface IReconnectProps {
-  activeConnector: TConnectors | null;
-}
-
-export const Reconnect: FC<IReconnectProps> = props => {
-  const { activeConnector } = props;
-
+export const Reconnect: FC = () => {
   const { isActive, chainId, connector } = useWeb3React();
-  const { network } = useWallet();
+  const { activeConnector, network } = useAppSelector(state => state.wallet);
+  const user = useUser<any>();
+  const userIsAuthenticated = user.isAuthenticated();
 
   const handleConnect = useCallback(async () => {
     if ((!isActive || network?.chainId !== chainId) && activeConnector && network) {
-      await getConnectorByName(activeConnector)
-        ?.activate(network.chainId)
-        .catch((error: ProviderRpcError) => {
-          console.error("Reconnect error", error);
-        });
+      if (activeConnector === TConnectors.PARTICLE) {
+        await particleAuth?.connectEagerly();
+      } else {
+        await getConnectorByName(activeConnector)
+          ?.activate(network.chainId)
+          .catch((error: ProviderRpcError) => {
+            console.error("Reconnect error", error);
+          });
+      }
     }
-  }, [chainId, network]);
+  }, [activeConnector, chainId, network]);
 
   useEffect(() => {
-    void handleConnect();
-  }, [chainId, network]);
+    if (userIsAuthenticated) {
+      void handleConnect();
+    }
+  }, [chainId, network, userIsAuthenticated]);
 
   useEffect(() => {
     if (isActive) {

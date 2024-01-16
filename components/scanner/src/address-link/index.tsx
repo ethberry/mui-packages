@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Link, SxProps, Theme, Tooltip, useMediaQuery } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 
-import { networks } from "@gemunion/provider-wallet";
+import { useAppSelector } from "@gemunion/redux";
 
 export interface IAddressLinkProps {
   address?: string;
@@ -16,6 +16,7 @@ export const AddressLink: FC<IAddressLinkProps> = props => {
   const { address = "", length = addressLength, sx = [] } = props;
 
   const { chainId = 1 } = useWeb3React();
+  const { networks } = useAppSelector(state => state.wallet);
 
   if (!address) {
     return null;

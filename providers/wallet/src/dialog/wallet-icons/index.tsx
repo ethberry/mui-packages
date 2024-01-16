@@ -10,6 +10,7 @@ export * from "./keep-key";
 export * from "./ledger";
 export * from "./meta-mask";
 export * from "./mew";
+export * from "./particle";
 export * from "./portis";
 export * from "./torus";
 export * from "./trezor";

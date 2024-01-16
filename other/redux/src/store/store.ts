@@ -2,6 +2,7 @@ import { configureStore, EnhancedStore, ThunkAction, Action } from "@reduxjs/too
 
 import { collectionSlice } from "./collection";
 import { settingsSlice } from "./settings";
+import { walletSlice } from "./wallet";
 
 /* javascript-obfuscator:disable */
 const isProductionNodeEnv = process.env.NODE_ENV === "production";
@@ -10,12 +11,14 @@ const isProductionNodeEnv = process.env.NODE_ENV === "production";
 export interface IStore {
   collection: ReturnType<typeof collectionSlice.reducer>;
   settings: ReturnType<typeof settingsSlice.reducer>;
+  wallet: ReturnType<typeof walletSlice.reducer>;
 }
 
 export const store: EnhancedStore<IStore> = configureStore({
   reducer: {
     [collectionSlice.name]: collectionSlice.reducer,
     [settingsSlice.name]: settingsSlice.reducer,
+    [walletSlice.name]: walletSlice.reducer,
   },
   devTools: !isProductionNodeEnv,
 });
