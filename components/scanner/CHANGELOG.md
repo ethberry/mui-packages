@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.3 (2024-01-16)
+
+### Bug Fixes
+
+- all hooks should be before conditional return ([5c0d96d](https://github.com/gemunion/mui-packages/commit/5c0d96df56b420d425f2e6905bdf2b7e87faa49d))
+
 ## [1.3.2](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.3.1...@gemunion/mui-scanner@1.3.2) (2024-01-16)
 
 **Note:** Version bump only for package @gemunion/mui-scanner
