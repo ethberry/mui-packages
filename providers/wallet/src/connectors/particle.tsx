@@ -15,6 +15,12 @@ export interface IParticleConnectConstructorArgs {
   onError?: (error: Error) => void;
 }
 
+/* javascript-obfuscator:disable */
+const PARTICLE_PROJECT_ID = process.env.PARTICLE_PROJECT_ID;
+const PARTICLE_CLIENT_KEY = process.env.PARTICLE_CLIENT_KEY;
+const PARTICLE_APP_ID = process.env.PARTICLE_APP_ID;
+/* javascript-obfuscator:enable */
+
 export class ParticleAuth extends Connector {
   public provider: any;
   private particle: TParticleNetwork | undefined;
@@ -131,9 +137,9 @@ export const [particleAuth, hooks] = initializeConnector<ParticleAuth>(
     new ParticleAuth({
       actions,
       options: {
-        projectId: process.env.PARTICLE_PROJECT_ID as string,
-        clientKey: process.env.PARTICLE_CLIENT_KEY as string,
-        appId: process.env.PARTICLE_APP_ID as string,
+        projectId: PARTICLE_PROJECT_ID,
+        clientKey: PARTICLE_CLIENT_KEY,
+        appId: PARTICLE_APP_ID,
         wallet: {
           displayWalletEntry: false,
         },
