@@ -51,7 +51,7 @@
     "@gemunion/provider-license": "^3.0.0",
     "@gemunion/provider-popup": "^0.0.0",
     "@gemunion/provider-user": "^6.0.0",
-    "@gemunion/redux": "^0.2.0",
+    "@gemunion/redux": "^0.2.0 || ^0.3.0",
     "@mui/icons-material": "^5.0.0",
     "@mui/lab": "^5.0.0-alpha.0",
     "@mui/material": "^5.0.0",
