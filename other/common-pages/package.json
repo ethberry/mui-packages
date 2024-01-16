@@ -26,14 +26,14 @@
     "@mui/lab": "5.0.0-alpha.160",
     "@mui/material": "5.15.4",
     "@mui/styles": "5.15.4",
-    "@types/node": "20.10.6",
-    "@types/react": "18.2.46",
+    "@types/node": "20.11.3",
+    "@types/react": "18.2.48",
     "notistack": "3.0.1",
     "react": "18.2.0",
-    "react-hook-form": "7.49.2",
-    "react-intl": "6.5.5",
-    "react-router": "6.21.1",
-    "react-router-dom": "6.21.1"
+    "react-hook-form": "7.49.3",
+    "react-intl": "6.6.0",
+    "react-router": "6.21.2",
+    "react-router-dom": "6.21.2"
   },
   "engines": {
     "node": ">=18"

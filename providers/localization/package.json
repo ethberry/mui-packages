@@ -13,9 +13,9 @@
     "@gemunion/redux": "0.2.0",
     "@mui/icons-material": "5.15.4",
     "@mui/material": "5.15.4",
-    "@types/react": "18.2.46",
+    "@types/react": "18.2.48",
     "react": "18.2.0",
-    "react-intl": "6.5.5"
+    "react-intl": "6.6.0"
   },
   "engines": {
     "node": ">=18"
