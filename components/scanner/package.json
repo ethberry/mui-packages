@@ -24,7 +24,7 @@
   "main": "./dist/index.js",
   "name": "@gemunion/mui-scanner",
   "peerDependencies": {
-    "@gemunion/redux": "0.3.0",
+    "@gemunion/redux": "^0.3.0",
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
     "@web3-react/core": "^8.0.0",
