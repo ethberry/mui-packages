@@ -18,11 +18,11 @@ export const AddressLink: FC<IAddressLinkProps> = props => {
   const { chainId = 1 } = useWeb3React();
   const { networks } = useAppSelector(state => state.wallet);
 
+  const isSmallScreen = useMediaQuery<Theme>(theme => theme.breakpoints.down("sm"));
+
   if (!address) {
     return null;
   }
-
-  const isSmallScreen = useMediaQuery<Theme>(theme => theme.breakpoints.down("sm"));
 
   return (
     <Tooltip title={address}>
