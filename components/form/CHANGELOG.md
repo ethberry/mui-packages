@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 8.0.77 (2024-01-16)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([c28638e](https://github.com/gemunion/mui-packages/commit/c28638e115beabf38de24ec6bbd7c78318aed728))
+
 ## 8.0.76 (2024-01-15)
 
 **Note:** Version bump only for package @gemunion/mui-form
