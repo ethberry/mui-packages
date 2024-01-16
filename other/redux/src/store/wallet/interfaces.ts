@@ -33,6 +33,7 @@ export enum Networks {
   MUMBAI = "MUMBAI",
   OPTIMISM = "OPTIMISM",
   ARBITRUM = "ARBITRUM",
+  SEPOLIA = "SEPOLIA",
   BESU = "BESU",
   GEMUNION = "GEMUNION",
 }

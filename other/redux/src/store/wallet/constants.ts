@@ -11,8 +11,9 @@ export const networkToChainId: Record<Networks, number> = {
   [Networks.MUMBAI]: 80001,
   [Networks.OPTIMISM]: 10,
   [Networks.ARBITRUM]: 42161,
+  [Networks.SEPOLIA]: 11155111,
   [Networks.BESU]: 10001,
-  [Networks.GEMUNION]: 13377,
+  [Networks.GEMUNION]: 10000,
 };
 
 export const chainIdToNetwork: Record<number, Networks> = (Object.keys(networkToChainId) as Networks[]).reduce(
@@ -112,6 +113,17 @@ export const networks: Record<number, INetwork> = {
       decimals: 18,
     },
   },
+  [networkToChainId[Networks.SEPOLIA]]: {
+    chainName: "Sepolia",
+    chainId: networkToChainId[Networks.SEPOLIA],
+    rpcUrls: rpcUrls[networkToChainId[Networks.SEPOLIA]],
+    blockExplorerUrls: ["https://sepolia.etherscan.io/"],
+    nativeCurrency: {
+      name: "SETH",
+      symbol: "SETH",
+      decimals: 18,
+    },
+  },
   [networkToChainId[Networks.BINANCE]]: {
     chainName: "Binance Smart Chain",
     chainId: networkToChainId[Networks.BINANCE],
@@ -180,4 +192,4 @@ export const networks: Record<number, INetwork> = {
   },
 };
 
-export const SANDBOX_CHAINS = [5, 97, 80001, 10001, 13377];
+export const SANDBOX_CHAINS = [5, 97, 80001, 13378, 13377, 10001, 10000, 11155111];
