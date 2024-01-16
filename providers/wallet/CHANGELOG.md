@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.1](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.5.0...@gemunion/provider-wallet@3.5.1) (2024-01-16)
+
+### Bug Fixes
+
+- matching wallets for button ([1131529](https://github.com/gemunion/mui-packages/commit/11315293e0d91985c67ce628f4efddf79257dae2))
+
 # 3.5.0 (2024-01-16)
 
 ### Bug Fixes

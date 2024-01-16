@@ -16,7 +16,7 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@gemunion/mui-inputs-core": "7.2.67",
+    "@gemunion/mui-inputs-core": "7.2.68",
     "@gemunion/provider-license": "3.0.38",
     "@mui/material": "5.15.4",
     "@storybook/react": "7.6.8",
@@ -69,5 +69,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "8.2.68"
+  "version": "8.2.69"
 }

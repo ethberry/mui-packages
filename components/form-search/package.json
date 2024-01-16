@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/mui-form": "8.0.77",
-    "@gemunion/mui-inputs-core": "7.2.67"
+    "@gemunion/mui-inputs-core": "7.2.68"
   },
   "description": "react widget",
   "devDependencies": {
@@ -65,5 +65,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "7.2.69"
+  "version": "7.2.70"
 }
