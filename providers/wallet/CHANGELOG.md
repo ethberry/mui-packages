@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.6.1](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.6.0...@gemunion/provider-wallet@3.6.1) (2024-01-16)
+
+### Bug Fixes
+
+- particle env keys ([c7772fc](https://github.com/gemunion/mui-packages/commit/c7772fca8175e26c559387aa2bffec6e7afa3f91))
+
 # [3.6.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.5.1...@gemunion/provider-wallet@3.6.0) (2024-01-16)
 
 ### Bug Fixes
