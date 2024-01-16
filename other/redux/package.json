@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.12.8",
-    "@gemunion/react-hooks": "2.0.1",
+    "@gemunion/react-hooks": "2.0.2",
     "@reduxjs/toolkit": "2.0.1",
     "react-redux": "9.1.0"
   },
@@ -50,5 +50,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "0.3.0"
+  "version": "0.3.1"
 }

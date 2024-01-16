@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.1 (2024-01-16)
+
+### Bug Fixes
+
+- wallet interfaces and constants ([4bfa14b](https://github.com/gemunion/common-packages/commit/4bfa14b96a3a93aa727d64e5b6eb10657360c135))
+
 # 0.3.0 (2024-01-16)
 
 ### Bug Fixes

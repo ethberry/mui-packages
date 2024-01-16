@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.6.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.5.1...@gemunion/provider-wallet@3.6.0) (2024-01-16)
+
+### Bug Fixes
+
+- sepolia icon ([e70fb27](https://github.com/gemunion/mui-packages/commit/e70fb279bb5b3c51885a79aab73024e78fbf52e4))
+
+### Features
+
+- sepolia ([fa134c9](https://github.com/gemunion/mui-packages/commit/fa134c9f28c337de139e16a6849ceb989240c579))
+
 ## [3.5.1](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.5.0...@gemunion/provider-wallet@3.5.1) (2024-01-16)
 
 ### Bug Fixes
