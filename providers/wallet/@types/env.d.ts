@@ -9,6 +9,7 @@ declare global {
       JSON_RPC_ADDR_MUMBAI: string;
       JSON_RPC_ADDR_BESU: string;
       JSON_RPC_ADDR_GEMUNION: string;
+      JSON_RPC_ADDR_SEPOLIA: string;
     }
   }
 }
