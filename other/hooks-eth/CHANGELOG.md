@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.5](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.5.4...@gemunion/react-hooks-eth@1.5.5) (2024-01-17)
+
+### Bug Fixes
+
+- updating global web3Context for useMetamaskWallet ([7d88100](https://github.com/gemunion/mui-packages/commit/7d88100676146c0253ad0cf3a6287e5b4e46139f))
+
 ## 1.5.4 (2024-01-17)
 
 **Note:** Version bump only for package @gemunion/react-hooks-eth

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.6.2...@gemunion/provider-wallet@3.7.0) (2024-01-17)
+
+### Features
+
+- particle icon sign in ([70695cb](https://github.com/gemunion/mui-packages/commit/70695cb8056f3ae19144a83fb6396ea03390afbe))
+
 ## 3.6.2 (2024-01-17)
 
 ### Bug Fixes

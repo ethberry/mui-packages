@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-particle@1.1.4...@gemunion/login-button-particle@1.2.0) (2024-01-17)
+
+### Bug Fixes
+
+- login button particle in one component with subheader ([136e84d](https://github.com/gemunion/mui-packages/commit/136e84d64835d3c2975c57e838248a5f79da942a))
+
+### Features
+
+- particle icon sign in ([70695cb](https://github.com/gemunion/mui-packages/commit/70695cb8056f3ae19144a83fb6396ea03390afbe))
+
 ## 1.1.4 (2024-01-17)
 
 ### Bug Fixes
