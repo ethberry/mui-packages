@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { useWeb3React } from "@web3-react/core";
@@ -18,11 +19,16 @@ export const useMetamaskWallet = <T = any>(
   const license = useLicense();
 
   const web3ContextGlobal = useWeb3React();
-  const { isActive } = web3ContextGlobal;
+  const { connector, isActive } = web3ContextGlobal;
+  const web3ContextRef = useRef(web3ContextGlobal);
   const { openConnectWalletDialog, closeConnectWalletDialog } = useWallet();
 
   const { formatMessage } = useIntl();
   const { success = true, error = true } = options;
+
+  useEffect(() => {
+    web3ContextRef.current = web3ContextGlobal;
+  }, [connector, isActive]);
 
   return async (...args: Array<any>): Promise<T> => {
     if (!license.isValid()) {
@@ -32,7 +38,7 @@ export const useMetamaskWallet = <T = any>(
       });
     }
 
-    let context = web3ContextGlobal;
+    let context = web3ContextRef.current;
     if (!isActive) {
       context = await openConnectWalletDialog();
       closeConnectWalletDialog();
