@@ -18,7 +18,7 @@
   "description": "react widget",
   "devDependencies": {
     "@gemunion/mui-form": "8.0.78",
-    "@gemunion/provider-api-jwt": "2.0.52",
+    "@gemunion/provider-api-jwt": "2.0.53",
     "@gemunion/provider-test-id": "1.0.68",
     "@mui/icons-material": "5.15.4",
     "@mui/material": "5.15.4",
