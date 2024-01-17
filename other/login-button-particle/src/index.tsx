@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from "react";
+import { Box, Divider, Typography } from "@mui/material";
 import { useWeb3React, Web3ContextType } from "@web3-react/core";
 import { FormattedMessage } from "react-intl";
-import { AuthType } from "@particle-network/auth";
 import { v4 } from "uuid";
 
 import { phrase } from "@gemunion/constants";
@@ -14,8 +14,8 @@ import type { IMetamaskDto, IWalletLoginButtonProps } from "@gemunion/types-jwt"
 
 import { StyledButton } from "./styled";
 
-export const ParticleLoginButton: FC<IWalletLoginButtonProps & { type: AuthType }> = props => {
-  const { onWalletVerified, type } = props;
+export const ParticleLoginButton: FC<IWalletLoginButtonProps> = props => {
+  const { onWalletVerified } = props;
   const [data, setData] = useState<IMetamaskDto>({ nonce: v4(), signature: "", wallet: "" });
 
   const { account } = useWeb3React();
@@ -87,24 +87,28 @@ export const ParticleLoginButton: FC<IWalletLoginButtonProps & { type: AuthType 
 
   return (
     <ProgressOverlay isLoading={isLoading}>
-      <StyledButton
-        key={type}
-        onClick={() => handleClick(type)}
-        startIcon={getParticleButtonIcon("particle")}
-        endIcon={getParticleButtonIcon(type)}
-        disabled={isVerifying}
-        fullWidth
-      >
-        <FormattedMessage id={`pages.guest.signInWith.${type}`} />
-      </StyledButton>
+      <Box sx={{ display: "flex", flexDirection: "column", mx: "auto", width: "100%", maxWidth: 220, mt: 3 }}>
+        <Typography variant="h6" sx={{ fontSize: 16 }}>
+          Particle Wallet
+        </Typography>
+        <Divider sx={{ width: "100%" }} />
+        <StyledButton
+          onClick={() => handleClick("google")}
+          startIcon={getParticleButtonIcon("google")}
+          disabled={isVerifying}
+          fullWidth
+        >
+          <FormattedMessage id="pages.guest.signInWith.google" />
+        </StyledButton>
+        <StyledButton
+          onClick={() => handleClick("facebook")}
+          startIcon={getParticleButtonIcon("facebook")}
+          disabled={isVerifying}
+          fullWidth
+        >
+          <FormattedMessage id="pages.guest.signInWith.facebook" />
+        </StyledButton>
+      </Box>
     </ProgressOverlay>
   );
 };
-
-export const ParticleFacebookLoginButton = (props: IWalletLoginButtonProps) => (
-  <ParticleLoginButton {...props} type="facebook" />
-);
-
-export const ParticleGoogleLoginButton = (props: IWalletLoginButtonProps) => (
-  <ParticleLoginButton {...props} type="google" />
-);
