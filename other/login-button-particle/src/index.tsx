@@ -52,7 +52,16 @@ export const ParticleLoginButton: FC<IWalletLoginButtonProps & { type: AuthType 
 
         setData({ ...data, wallet, signature });
 
-        const token = await getVerifiedToken(void 0, { wallet, nonce: data.nonce, signature });
+        const userInfo = window.particle?.auth?.getUserInfo?.();
+
+        const token = await getVerifiedToken(void 0, {
+          displayName: userInfo?.name,
+          imageUrl: userInfo?.avatar,
+          email: userInfo?.google_email || userInfo?.facebook_email,
+          wallet,
+          nonce: data.nonce,
+          signature,
+        });
         await onWalletVerified(token?.token || "");
       } catch (error) {
         console.error(error);

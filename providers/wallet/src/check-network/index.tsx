@@ -62,7 +62,7 @@ export const CheckNetwork: FC = () => {
         console.error(error);
       }
     }
-  }, [network]);
+  }, [activeConnector, connector, network]);
 
   useEffect(() => {
     if (connector && isActive && chainId) {

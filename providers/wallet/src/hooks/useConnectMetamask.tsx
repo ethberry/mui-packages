@@ -17,7 +17,7 @@ export const useConnectMetamask = (props: IUseConnectMetamask) => {
   const { onClick } = props;
 
   const { formatMessage } = useIntl();
-  const { network } = useAppSelector(state => state.wallet);
+  const { activeConnector, network } = useAppSelector(state => state.wallet);
   const { setActiveConnector } = walletActions;
   const dispatch = useAppDispatch();
   const { connectCallback } = useWallet();
@@ -59,5 +59,5 @@ export const useConnectMetamask = (props: IUseConnectMetamask) => {
           }
         });
     });
-  }, [network]);
+  }, [activeConnector, network]);
 };

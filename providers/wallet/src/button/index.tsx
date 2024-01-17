@@ -37,7 +37,7 @@ export const Wallet: FC = () => {
   }
 
   const isChainValid = !profile || !chainId || profile?.chainId === chainId;
-  const isAccountMatch = !profile || !account || profile?.wallet === account.toLowerCase();
+  const isAccountMatch = !profile?.wallet || !account || profile?.wallet === account.toLowerCase();
 
   const tooltipTitle = useMemo(() => {
     switch (true) {
