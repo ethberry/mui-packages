@@ -23,4 +23,13 @@ export const StyledButton = styled(Button)(({ theme }) => ({
     marginRight: 2,
     marginLeft: -4,
   },
+  "& .MuiButton-endIcon": {
+    marginRight: theme.spacing(1),
+    marginLeft: theme.spacing(1),
+  },
+  "& .MuiButton-endIcon svg": {
+    fontSize: theme.spacing(3),
+    marginRight: 2,
+    marginLeft: -4,
+  },
 }));

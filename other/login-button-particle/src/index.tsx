@@ -90,7 +90,8 @@ export const ParticleLoginButton: FC<IWalletLoginButtonProps & { type: AuthType 
       <StyledButton
         key={type}
         onClick={() => handleClick(type)}
-        startIcon={getParticleButtonIcon(type)}
+        startIcon={getParticleButtonIcon("particle")}
+        endIcon={getParticleButtonIcon(type)}
         disabled={isVerifying}
         fullWidth
       >
