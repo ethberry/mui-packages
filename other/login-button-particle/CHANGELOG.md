@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.4 (2024-01-17)
+
+### Bug Fixes
+
+- add particle user info to db user; wallet ([ea220c1](https://github.com/gemunion/mui-packages/commit/ea220c10f5e7294cb71661d9b512a74830df888f))
+
 ## [1.1.3](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-particle@1.1.2...@gemunion/login-button-particle@1.1.3) (2024-01-16)
 
 **Note:** Version bump only for package @gemunion/login-button-particle

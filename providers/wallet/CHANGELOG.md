@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.6.2 (2024-01-17)
+
+### Bug Fixes
+
+- add particle user info to db user; wallet ([ea220c1](https://github.com/gemunion/mui-packages/commit/ea220c10f5e7294cb71661d9b512a74830df888f))
+
 ## [3.6.1](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.6.0...@gemunion/provider-wallet@3.6.1) (2024-01-16)
 
 ### Bug Fixes

@@ -10,7 +10,7 @@
   "description": "react i18n provider",
   "devDependencies": {
     "@gemunion/provider-license": "3.0.38",
-    "@gemunion/redux": "0.3.1",
+    "@gemunion/redux": "0.3.2",
     "@mui/icons-material": "5.15.4",
     "@mui/material": "5.15.4",
     "@types/react": "18.2.48",
@@ -50,5 +50,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "4.0.3"
+  "version": "4.0.4"
 }
