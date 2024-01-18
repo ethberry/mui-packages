@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.2](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.7.1...@gemunion/provider-wallet@3.7.2) (2024-01-18)
+
+### Bug Fixes
+
+- particle icons ([084ef6a](https://github.com/gemunion/mui-packages/commit/084ef6a4dc9bf1da1977ddfd71302bdfc62ebe8a))
+- particle network connect ([a4afa0b](https://github.com/gemunion/mui-packages/commit/a4afa0b8437fd53d275e8ce18bd4e4988ec6cbe0))
+
 ## [3.7.1](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.7.0...@gemunion/provider-wallet@3.7.1) (2024-01-18)
 
 ### Bug Fixes
