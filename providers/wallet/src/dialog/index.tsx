@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Dialog, DialogContent, DialogTitle } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 
-import { MetaMaskButton, WalletConnectButton } from "./buttons";
+import { MetaMaskButton, ParticleButton, WalletConnectButton } from "./buttons";
 import { CloseButton } from "./close-button";
 
 export interface IWalletConnectDialogProps {
@@ -22,6 +22,7 @@ export const WalletDialog: FC<IWalletConnectDialogProps> = props => {
       <DialogContent>
         <MetaMaskButton onClick={onClose} data-testid="ConnectMetamaskButton" />
         <WalletConnectButton onClick={onClose} data-testid="ConnectWalletConnectButton" />
+        <ParticleButton onClick={onClose} data-testid="ConnectParticleButton" />
       </DialogContent>
     </Dialog>
   );

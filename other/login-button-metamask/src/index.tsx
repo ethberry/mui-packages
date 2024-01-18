@@ -81,7 +81,7 @@ export const MetamaskLoginButton: FC<IWalletLoginButtonProps> = props => {
         disabled={isVerifying}
         fullWidth
       >
-        <FormattedMessage id="pages.guest.signInWithMetamask" />
+        <FormattedMessage id="pages.guest.signInWith.metamask" />
       </StyledButton>
     </ProgressOverlay>
   );

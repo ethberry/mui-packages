@@ -104,7 +104,7 @@ export const KeplrLoginButton: FC<IWalletLoginButtonProps> = props => {
         disabled={isVerifying}
         fullWidth
       >
-        <FormattedMessage id="pages.guest.signInWithKeplr" />
+        <FormattedMessage id="pages.guest.signInWith.keplr" />
       </StyledButton>
     </ProgressOverlay>
   );
