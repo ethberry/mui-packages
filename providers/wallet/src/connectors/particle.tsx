@@ -19,6 +19,7 @@ export interface IParticleConnectConstructorArgs {
 const PARTICLE_PROJECT_ID = process.env.PARTICLE_PROJECT_ID;
 const PARTICLE_CLIENT_KEY = process.env.PARTICLE_CLIENT_KEY;
 const PARTICLE_APP_ID = process.env.PARTICLE_APP_ID;
+
 /* javascript-obfuscator:enable */
 
 export class ParticleAuth extends Connector {
@@ -129,6 +130,14 @@ export class ParticleAuth extends Connector {
     await this.particle?.auth?.logout();
     this.removeEventListeners();
     this.actions.resetState();
+  }
+
+  isValidChain(chainId: number | undefined): boolean {
+    if (chainId) {
+      const allChains = chains.getAllChainInfos();
+      return !!allChains.find(chain => chain.id === chainId);
+    }
+    return false;
   }
 }
 

@@ -17,7 +17,7 @@ export const Reconnect: FC = () => {
 
   const handleConnect = useCallback(async () => {
     if ((!isActive || network?.chainId !== chainId) && activeConnector && network) {
-      if (activeConnector === TConnectors.PARTICLE) {
+      if (activeConnector === TConnectors.PARTICLE && particleAuth?.isValidChain(network?.chainId)) {
         await particleAuth?.connectEagerly();
       } else {
         await getConnectorByName(activeConnector)
@@ -30,10 +30,10 @@ export const Reconnect: FC = () => {
   }, [activeConnector, chainId, network]);
 
   useEffect(() => {
-    if (userIsAuthenticated) {
+    if (userIsAuthenticated && network) {
       void handleConnect();
     }
-  }, [chainId, network, userIsAuthenticated]);
+  }, [network, userIsAuthenticated]);
 
   useEffect(() => {
     if (isActive) {
@@ -43,7 +43,7 @@ export const Reconnect: FC = () => {
         localStorage.setItem(STORE_CONNECTOR, JSON.stringify(newConnector));
       }
     }
-  }, [isActive, network]);
+  }, [isActive]);
 
   return null;
 };
