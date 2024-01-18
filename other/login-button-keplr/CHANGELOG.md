@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.35 (2024-01-18)
+
+### Bug Fixes
+
+- wallet dialog by adding connect with Particle wallet; localization ([ee0aed3](https://github.com/gemunion/mui-packages/commit/ee0aed34e83be825e1ab3abaa3575f62ca73da64))
+
 ## 1.1.34 (2024-01-17)
 
 **Note:** Version bump only for package @gemunion/login-button-keplr
