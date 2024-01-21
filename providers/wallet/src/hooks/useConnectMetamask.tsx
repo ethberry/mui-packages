@@ -41,8 +41,18 @@ export const useConnectMetamask = (props: IUseConnectMetamask) => {
         enqueueSnackbar(formatMessage({ id: "snackbar.web3NotDetected" }), notDetectedWeb3MessageConfig);
       }
 
+      const metamaskNetwork = network
+        ? {
+            chainId: network.chainId,
+            chainName: network.chainName,
+            rpcUrls: network.rpcUrls,
+            blockExplorerUrls: network.blockExplorerUrls,
+            nativeCurrency: network.nativeCurrency,
+          }
+        : undefined;
+
       return metaMask
-        .activate(network || undefined)
+        .activate(metamaskNetwork)
         .then(() => {
           dispatch(setActiveConnector(TConnectors.METAMASK));
           onClick && onClick();

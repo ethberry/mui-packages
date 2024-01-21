@@ -44,8 +44,11 @@ export const CheckNetwork: FC = () => {
             method: "wallet_addEthereumChain",
             params: [
               {
-                ...network,
                 chainId: `0x${network.chainId.toString(16)}`,
+                chainName: network.chainName,
+                blockExplorerUrls: network.blockExplorerUrls,
+                rpcUrls: network.rpcUrls,
+                nativeCurrency: network.nativeCurrency,
               },
             ],
           });
