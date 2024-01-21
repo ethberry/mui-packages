@@ -24,7 +24,7 @@
     "@mui/material": "5.15.5",
     "@types/stylis": "4.2.5",
     "react": "18.2.0",
-    "react-intl": "6.6.0"
+    "react-intl": "6.6.1"
   },
   "engines": {
     "node": ">=18"
