@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.3 (2024-01-21)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([44d907e](https://github.com/gemunion/common-packages/commit/44d907ec6449c05ae72ae6b4155cd77ff94334da))
+- fetch networks from db ([a0162ef](https://github.com/gemunion/common-packages/commit/a0162ef900f54b2e631b392eb728dd96ff81f8f5))
+
 ## 0.3.2 (2024-01-17)
 
 **Note:** Version bump only for package @gemunion/redux

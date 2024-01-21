@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.43](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-metamask@1.1.42...@gemunion/login-button-metamask@1.1.43) (2024-01-21)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([44d907e](https://github.com/gemunion/mui-packages/commit/44d907ec6449c05ae72ae6b4155cd77ff94334da))
+- **deps:** update all non-major dependencies ([fdf051d](https://github.com/gemunion/mui-packages/commit/fdf051d52535df7339c1116fe2c5dc24dd3bef67))
+
 ## [1.1.42](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-metamask@1.1.41...@gemunion/login-button-metamask@1.1.42) (2024-01-18)
 
 **Note:** Version bump only for package @gemunion/login-button-metamask

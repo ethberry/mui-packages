@@ -27,8 +27,8 @@
     "@gemunion/provider-license": "3.0.38",
     "@gemunion/provider-popup": "1.0.44",
     "@gemunion/provider-user": "6.0.64",
-    "@gemunion/react-hooks": "2.0.3",
-    "@gemunion/redux": "0.3.2",
+    "@gemunion/react-hooks": "2.0.4",
+    "@gemunion/redux": "0.3.3",
     "@gemunion/types-blockchain": "1.2.9",
     "@mui/icons-material": "5.15.5",
     "@mui/material": "5.15.5",
@@ -85,5 +85,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.7.2"
+  "version": "3.7.3"
 }
