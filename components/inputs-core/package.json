@@ -16,9 +16,9 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/icons-material": "5.15.4",
-    "@mui/material": "5.15.4",
-    "@mui/styles": "5.15.4",
+    "@mui/icons-material": "5.15.5",
+    "@mui/material": "5.15.5",
+    "@mui/styles": "5.15.5",
     "@storybook/react": "7.6.8",
     "@testing-library/jest-dom": "6.2.0",
     "@testing-library/react": "14.1.2",

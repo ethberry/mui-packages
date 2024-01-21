@@ -19,9 +19,9 @@
   "description": "react widget",
   "devDependencies": {
     "@gemunion/provider-license": "3.0.38",
-    "@mui/icons-material": "5.15.4",
-    "@mui/material": "5.15.4",
-    "@mui/styles": "5.15.4",
+    "@mui/icons-material": "5.15.5",
+    "@mui/material": "5.15.5",
+    "@mui/styles": "5.15.5",
     "@storybook/react": "7.6.8",
     "@types/draft-js": "0.11.17",
     "@types/markdown-draft-js": "2.2.7",
