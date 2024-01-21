@@ -13,7 +13,7 @@
     "@types/react": "18.2.48",
     "notistack": "3.0.1",
     "react": "18.2.0",
-    "react-intl": "6.6.0"
+    "react-intl": "6.6.1"
   },
   "engines": {
     "node": ">=18"
