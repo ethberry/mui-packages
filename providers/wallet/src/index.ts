@@ -6,5 +6,4 @@ export * from "./dialog/buttons";
 export * from "./dialog/social-icons";
 export * from "./dialog/wallet-icons";
 export * from "./hooks";
-export * from "./interfaces";
 export * from "./provider";

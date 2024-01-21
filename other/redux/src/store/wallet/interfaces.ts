@@ -1,3 +1,5 @@
+import type { INetwork } from "@gemunion/types-blockchain";
+
 export interface IWalletState {
   isDialogOpen: boolean;
   activeConnector: TConnectors | null;
@@ -9,19 +11,6 @@ export enum TConnectors {
   METAMASK = "METAMASK",
   PARTICLE = "PARTICLE",
   WALLETCONNECT = "WALLETCONNECT",
-}
-
-export interface INetwork {
-  chainName: string;
-  chainId: number;
-  rpcUrls: any;
-  blockExplorerUrls: string[];
-  isSandbox?: boolean;
-  nativeCurrency: {
-    name: string;
-    symbol: string;
-    decimals: 18;
-  };
 }
 
 export enum Networks {

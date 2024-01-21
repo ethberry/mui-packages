@@ -1,4 +1,6 @@
-import { INetwork, Networks } from "./interfaces";
+import type { INetwork } from "@gemunion/types-blockchain";
+
+import { Networks } from "./interfaces";
 
 export const STORE_CONNECTOR = "CONNECTOR";
 

@@ -1,9 +1,11 @@
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
 
+import type { INetwork } from "@gemunion/types-blockchain";
+
 import { STORE_CONNECTOR } from "./constants";
 import { emptyWalletState } from "./empty";
-import type { INetwork, IWalletState, TConnectors } from "./interfaces";
+import type { IWalletState, TConnectors } from "./interfaces";
 
 const initialState: IWalletState = emptyWalletState;
 
@@ -20,6 +22,9 @@ export const walletSlice = createSlice({
     },
     setNetwork(state, action: PayloadAction<INetwork | null>) {
       state.network = action.payload;
+    },
+    setNetworks(state, action: PayloadAction<Record<number, INetwork>>) {
+      state.networks = action.payload;
     },
   },
 });

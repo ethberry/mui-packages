@@ -3,6 +3,7 @@ import { Web3ReactProvider, Web3ReactHooks, Web3ContextType } from "@web3-react/
 
 import { useLicense } from "@gemunion/provider-license";
 import { useUser } from "@gemunion/provider-user";
+import { useApiCall } from "@gemunion/react-hooks";
 import { useAppDispatch, useAppSelector, walletActions } from "@gemunion/redux";
 
 import { ConnectorsTypes } from "../connectors";
@@ -27,7 +28,7 @@ export const WalletProvider: FC<PropsWithChildren> = props => {
   const license = useLicense();
   const { profile } = useUser<any>();
   const { network, networks } = useAppSelector(state => state.wallet);
-  const { setIsDialogOpen, setNetwork } = walletActions;
+  const { setIsDialogOpen, setNetwork, setNetworks } = walletActions;
   const dispatch = useAppDispatch();
 
   const [resolve, setResolve] = useState<((context: Web3ContextType) => void) | null>(null);
@@ -40,6 +41,26 @@ export const WalletProvider: FC<PropsWithChildren> = props => {
         return _resolve;
       });
     });
+  };
+
+  const { fn: fetchNetworksFn } = useApiCall(
+    api => {
+      return api.fetchJson({
+        url: "/network",
+      });
+    },
+    { success: false, error: false },
+  );
+
+  const fetchNetworks = async () => {
+    try {
+      const networks = await fetchNetworksFn();
+      if (networks) {
+        dispatch(setNetworks(networks));
+      }
+    } catch (e) {
+      console.error("error", e);
+    }
   };
 
   const resetConnect = (): void => {
@@ -59,10 +80,14 @@ export const WalletProvider: FC<PropsWithChildren> = props => {
   );
 
   useEffect(() => {
-    if (profile?.chainId) {
+    if (profile?.chainId && networks[profile.chainId]) {
       dispatch(setNetwork(networks[profile.chainId]));
     }
-  }, [profile?.chainId]);
+  }, [profile?.chainId, networks]);
+
+  useEffect(() => {
+    void fetchNetworks();
+  }, []);
 
   if (!license.isValid()) {
     return null;
