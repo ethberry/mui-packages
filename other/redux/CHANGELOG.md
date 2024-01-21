@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://github.com/gemunion/common-packages/compare/@gemunion/redux@0.3.3...@gemunion/redux@0.3.4) (2024-01-21)
+
+### Bug Fixes
+
+- adding network to metamask ([1d18f23](https://github.com/gemunion/common-packages/commit/1d18f2376092d701ec96e096bda4316dcd6c03d2))
+
 ## 0.3.3 (2024-01-21)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.4](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.7.3...@gemunion/provider-wallet@3.7.4) (2024-01-21)
+
+### Bug Fixes
+
+- adding network to metamask ([1d18f23](https://github.com/gemunion/mui-packages/commit/1d18f2376092d701ec96e096bda4316dcd6c03d2))
+
 ## [3.7.3](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.7.2...@gemunion/provider-wallet@3.7.3) (2024-01-21)
 
 ### Bug Fixes
