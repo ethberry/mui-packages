@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.5 (2024-01-24)
+
+### Bug Fixes
+
+- set default referrer ([2d06865](https://github.com/gemunion/common-packages/commit/2d068654f00732adf8ff078d119fdf378cee8899))
+
 ## [0.3.4](https://github.com/gemunion/common-packages/compare/@gemunion/redux@0.3.3...@gemunion/redux@0.3.4) (2024-01-21)
 
 ### Bug Fixes
