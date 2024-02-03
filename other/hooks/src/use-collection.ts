@@ -388,7 +388,7 @@ export const useCollection = <
   }, [didMount, needRefresh, id]);
 
   useDeepCompareEffect(() => {
-    dispatch(setSearch(getSearchParams(search)));
+    dispatch(setSearch(getSearchParams(data)));
   }, [location]);
 
   useLayoutEffect(() => {
