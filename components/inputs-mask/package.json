@@ -16,12 +16,12 @@
   "description": "react widget",
   "devDependencies": {
     "@mui/material": "5.15.5",
-    "@storybook/react": "7.6.10",
-    "@types/react": "18.2.48",
+    "@storybook/react": "7.6.12",
+    "@types/react": "18.2.52",
     "ethers": "5.7.2",
     "react": "18.2.0",
-    "react-hook-form": "7.49.3",
-    "react-intl": "6.6.1"
+    "react-hook-form": "7.50.0",
+    "react-intl": "6.6.2"
   },
   "engines": {
     "node": ">=18"
