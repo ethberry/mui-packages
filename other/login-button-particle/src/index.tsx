@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import { Box, Divider, Typography } from "@mui/material";
+import { Box, Divider } from "@mui/material";
 import { useWeb3React, Web3ContextType } from "@web3-react/core";
 import { FormattedMessage } from "react-intl";
 import { v4 } from "uuid";
@@ -88,9 +88,6 @@ export const ParticleLoginButton: FC<IWalletLoginButtonProps> = props => {
   return (
     <ProgressOverlay isLoading={isLoading}>
       <Box sx={{ display: "flex", flexDirection: "column", mx: "auto", width: "100%", maxWidth: 220, mt: 3 }}>
-        <Typography variant="h6" sx={{ fontSize: 16 }}>
-          Particle Wallet
-        </Typography>
         <Divider sx={{ width: "100%" }} />
         <StyledButton
           onClick={() => handleClick("google")}
