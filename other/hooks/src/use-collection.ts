@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useLayoutEffect } from "react";
+import { ChangeEvent, useEffect, useLayoutEffect, useState } from "react";
 import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { useLocation, useNavigate, useParams } from "react-router";
@@ -96,17 +96,15 @@ export const useCollection = <
     needRefresh,
   } = useAppSelector(state => state.collection);
 
-  const rows = stateRows as T[];
   const selected = (Object.entries(stateSelected).length ? stateSelected : empty) as T;
-  const search = (
-    Object.entries(stateSearch).length
-      ? stateSearch
-      : getSearchParams({
-          skip: 0,
-          take: defaultItemsPerPage,
-          ...data,
-        } as Partial<S>)
-  ) as S;
+  const [search, setLocalSearch] = useState<S>(
+    getSearchParams({
+      skip: 0,
+      take: defaultItemsPerPage,
+      ...data,
+      ...stateSearch,
+    } as Partial<S>),
+  );
 
   const updateQS = (id?: number) => {
     const { skip: _skip, take: _take, order: _order, ...rest } = search;
@@ -366,6 +364,17 @@ export const useCollection = <
   };
 
   useDeepCompareEffect(() => {
+    setLocalSearch({
+      ...getSearchParams({
+        skip: 0,
+        take: defaultItemsPerPage,
+        ...data,
+      } as Partial<S>),
+      ...stateSearch,
+    });
+  }, [stateSearch]);
+
+  useDeepCompareEffect(() => {
     if (!id) {
       dispatch(setIsEditDialogOpen(false));
       dispatch(setIsViewDialogOpen(false));
@@ -387,9 +396,9 @@ export const useCollection = <
     }
   }, [didMount, needRefresh, id]);
 
-  useDeepCompareEffect(() => {
+  useLayoutEffect(() => {
     dispatch(setSearch(getSearchParams(data)));
-  }, [location]);
+  }, [location.pathname]);
 
   useLayoutEffect(() => {
     return () => {
@@ -398,7 +407,7 @@ export const useCollection = <
   }, []);
 
   return {
-    rows,
+    rows: stateRows as T[],
     count,
     search,
     selected,
