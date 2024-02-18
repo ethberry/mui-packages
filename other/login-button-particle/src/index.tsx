@@ -1,5 +1,6 @@
-import { FC, useEffect, useState } from "react";
-import { Box, Divider } from "@mui/material";
+import { FC, MouseEvent, useEffect, useState } from "react";
+import { Box, Divider, MenuItem } from "@mui/material";
+import { KeyboardArrowDown } from "@mui/icons-material";
 import { useWeb3React, Web3ContextType } from "@web3-react/core";
 import { FormattedMessage } from "react-intl";
 import { v4 } from "uuid";
@@ -7,12 +8,12 @@ import { v4 } from "uuid";
 import { phrase } from "@gemunion/constants";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useUser } from "@gemunion/provider-user";
-import { getParticleButtonIcon, useConnectParticle } from "@gemunion/provider-wallet";
+import { getParticleButtonIcon, ParticleIcon, useConnectParticle } from "@gemunion/provider-wallet";
 import { useApiCall } from "@gemunion/react-hooks";
 import { useMetamask } from "@gemunion/react-hooks-eth";
 import type { IMetamaskDto, IWalletLoginButtonProps } from "@gemunion/types-jwt";
 
-import { StyledButton } from "./styled";
+import { StyledButton, StyledMenu } from "./styled";
 
 export const ParticleLoginButton: FC<IWalletLoginButtonProps> = props => {
   const { onWalletVerified } = props;
@@ -23,6 +24,14 @@ export const ParticleLoginButton: FC<IWalletLoginButtonProps> = props => {
   const user = useUser<any>();
 
   const [isVerifying, setIsVerifying] = useState<boolean>(false);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const handleOpen = (event: MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   const { fn: getVerifiedToken, isLoading } = useApiCall(
     (api, values: IMetamaskDto) => {
@@ -87,24 +96,38 @@ export const ParticleLoginButton: FC<IWalletLoginButtonProps> = props => {
 
   return (
     <ProgressOverlay isLoading={isLoading}>
-      <Box sx={{ display: "flex", flexDirection: "column", mx: "auto", width: "100%", maxWidth: 220, mt: 3 }}>
+      <Box sx={{ display: "flex", flexDirection: "column", mx: "auto", width: "100%", maxWidth: 220, my: 3 }}>
         <Divider sx={{ width: "100%" }} />
         <StyledButton
-          onClick={() => handleClick("google")}
-          startIcon={getParticleButtonIcon("google")}
-          disabled={isVerifying}
-          fullWidth
+          id="particle-button"
+          aria-controls={open ? "particle-menu" : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? "true" : undefined}
+          onClick={handleOpen}
+          startIcon={<ParticleIcon sx={{ width: 22, height: 22 }} />}
+          endIcon={<KeyboardArrowDown />}
         >
-          <FormattedMessage id="pages.guest.signInWith.google" />
+          <FormattedMessage id="pages.guest.signInWith.particle" />
         </StyledButton>
-        <StyledButton
-          onClick={() => handleClick("facebook")}
-          startIcon={getParticleButtonIcon("facebook")}
-          disabled={isVerifying}
-          fullWidth
+        <StyledMenu
+          id="particle-menu"
+          MenuListProps={{
+            "aria-labelledby": "particle-button",
+          }}
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          elevation={0}
         >
-          <FormattedMessage id="pages.guest.signInWith.facebook" />
-        </StyledButton>
+          <MenuItem onClick={() => handleClick("google")} disabled={isVerifying}>
+            {getParticleButtonIcon("google")}
+            <FormattedMessage id="pages.guest.signInWith.google" />
+          </MenuItem>
+          <MenuItem onClick={() => handleClick("facebook")} disabled={isVerifying}>
+            {getParticleButtonIcon("facebook")}
+            <FormattedMessage id="pages.guest.signInWith.facebook" />
+          </MenuItem>
+        </StyledMenu>
       </Box>
     </ProgressOverlay>
   );
