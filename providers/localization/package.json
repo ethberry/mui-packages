@@ -13,7 +13,7 @@
     "@gemunion/redux": "0.3.6",
     "@mui/icons-material": "5.15.10",
     "@mui/material": "5.15.10",
-    "@types/react": "18.2.52",
+    "@types/react": "18.2.56",
     "react": "18.2.0",
     "react-intl": "6.6.2"
   },
