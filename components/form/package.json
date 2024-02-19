@@ -18,7 +18,7 @@
   "description": "react widget",
   "devDependencies": {
     "@gemunion/provider-license": "3.0.39",
-    "@mui/material": "5.15.7",
+    "@mui/material": "5.15.10",
     "@types/react": "18.2.52",
     "react": "18.2.0",
     "react-hook-form": "7.50.0",
