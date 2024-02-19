@@ -9,7 +9,7 @@
   },
   "description": "react i18n provider",
   "devDependencies": {
-    "@gemunion/provider-license": "3.0.39",
+    "@gemunion/provider-license": "3.0.40",
     "@gemunion/redux": "0.3.6",
     "@mui/icons-material": "5.15.10",
     "@mui/material": "5.15.10",
