@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.37](https://github.com/gemunion/mui-packages/compare/@gemunion/license-pages@1.1.36...@gemunion/license-pages@1.1.37) (2024-02-19)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([01b8e92](https://github.com/gemunion/mui-packages/commit/01b8e921df80e2bf020ae1a2511835cf066bcaef))
+
 ## 1.1.36 (2024-02-03)
 
 ### Bug Fixes

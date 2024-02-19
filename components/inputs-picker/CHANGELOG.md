@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.12](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@6.2.11...@gemunion/mui-inputs-picker@6.2.12) (2024-02-19)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([01b8e92](https://github.com/gemunion/mui-packages/commit/01b8e921df80e2bf020ae1a2511835cf066bcaef))
+
 ## 6.2.11 (2024-02-03)
 
 ### Bug Fixes
