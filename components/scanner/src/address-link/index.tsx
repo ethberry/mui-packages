@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Link, SxProps, Theme, Tooltip, Typography, useMediaQuery } from "@mui/material";
+import { Link, SxProps, Theme, Tooltip, useMediaQuery } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 
 import { useAppSelector } from "@gemunion/redux";
@@ -29,7 +29,7 @@ export const AddressLink: FC<IAddressLinkProps> = props => {
     : address.substring(0, length).concat(length < addressLength ? "..." : "");
 
   if (!networks[chainId]?.blockExplorerUrls?.length) {
-    return <Typography>{formattedAddress}</Typography>;
+    return formattedAddress;
   }
 
   return (

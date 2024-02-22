@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Link, SxProps, Theme, Tooltip, Typography, useMediaQuery } from "@mui/material";
+import { Link, SxProps, Theme, Tooltip, useMediaQuery } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 
 import { useAppSelector } from "@gemunion/redux";
@@ -27,7 +27,7 @@ export const TxHashLink: FC<ITxHashLinkProps> = props => {
     : hash.substring(0, length).concat("...");
 
   if (!networks[chainId]?.blockExplorerUrls?.length) {
-    return <Typography>{formattedHash}</Typography>;
+    return formattedHash;
   }
 
   return (
