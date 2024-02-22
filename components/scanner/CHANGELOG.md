@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.10](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.3.9...@gemunion/mui-scanner@1.3.10) (2024-02-22)
+
+### Bug Fixes
+
+- address and tx-hash links ([11e2aae](https://github.com/gemunion/mui-packages/commit/11e2aae08ceccc596e1c3dbbfdc779139ffda218))
+- address and tx-hash links doubling typography ([c5cdaa3](https://github.com/gemunion/mui-packages/commit/c5cdaa348c4abc9c72a611f6cc19a20e0023d686))
+
 ## [1.3.9](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.3.8...@gemunion/mui-scanner@1.3.9) (2024-02-19)
 
 ### Bug Fixes
