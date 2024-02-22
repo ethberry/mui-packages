@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Link, SxProps, Theme, Tooltip, useMediaQuery } from "@mui/material";
+import { Link, SxProps, Theme, Tooltip, Typography, useMediaQuery } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 
 import { useAppSelector } from "@gemunion/redux";
@@ -24,12 +24,18 @@ export const AddressLink: FC<IAddressLinkProps> = props => {
     return null;
   }
 
+  const formattedAddress = isSmallScreen
+    ? `${address.slice(0, 5)}...${address.slice(-4)}`
+    : address.substring(0, length).concat(length < addressLength ? "..." : "");
+
+  if (!networks[chainId]?.blockExplorerUrls?.length) {
+    return <Typography>{formattedAddress}</Typography>;
+  }
+
   return (
     <Tooltip title={address}>
       <Link target={"_blank"} href={`${networks[chainId].blockExplorerUrls[0]}/address/${address}`} sx={sx}>
-        {isSmallScreen
-          ? `${address.slice(0, 5)}...${address.slice(-4)}`
-          : address.substring(0, length).concat(length < addressLength ? "..." : "")}
+        {formattedAddress}
       </Link>
     </Tooltip>
   );

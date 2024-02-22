@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Link, SxProps, Theme, Tooltip, useMediaQuery } from "@mui/material";
+import { Link, SxProps, Theme, Tooltip, Typography, useMediaQuery } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 
 import { useAppSelector } from "@gemunion/redux";
@@ -22,10 +22,18 @@ export const TxHashLink: FC<ITxHashLinkProps> = props => {
     return null;
   }
 
+  const formattedHash = isSmallScreen
+    ? `${hash.slice(0, 5)}...${hash.slice(-4)}`
+    : hash.substring(0, length).concat("...");
+
+  if (!networks[chainId]?.blockExplorerUrls?.length) {
+    return <Typography>{formattedHash}</Typography>;
+  }
+
   return (
     <Tooltip title={hash}>
       <Link target={"_blank"} href={`${networks[chainId].blockExplorerUrls[0]}/tx/${hash}`} sx={sx}>
-        {isSmallScreen ? `${hash.slice(0, 5)}...${hash.slice(-4)}` : hash.substring(0, length).concat("...")}
+        {formattedHash}
       </Link>
     </Tooltip>
   );
