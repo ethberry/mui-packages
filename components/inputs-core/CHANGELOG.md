@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.2.76 (2024-03-02)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([31119be](https://github.com/gemunion/mui-packages/commit/31119be25511983be76fc03f0e3f81f129606926))
+- **deps:** update all non-major dependencies ([2bf226c](https://github.com/gemunion/mui-packages/commit/2bf226cf140eec9ee810f0e2e357310281391184))
+- mui types ([89db66c](https://github.com/gemunion/mui-packages/commit/89db66c7b3966a3d314c65a0752ed9b1ba5a2574))
+
 ## [7.2.75](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-core@7.2.74...@gemunion/mui-inputs-core@7.2.75) (2024-02-19)
 
 ### Bug Fixes
