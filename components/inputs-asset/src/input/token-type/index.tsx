@@ -2,17 +2,18 @@ import { FC } from "react";
 
 import { SelectInput } from "@gemunion/mui-inputs-core";
 import { TokenType } from "@gemunion/types-blockchain";
-import { SelectProps } from "@mui/material";
+import { SelectProps, SelectVariants } from "@mui/material";
 
 export type ITokenTypeInputProps = {
   prefix: string;
   name?: string;
   readOnly?: boolean;
   disabledOptions?: Array<TokenType>;
-} & SelectProps;
+  variant?: SelectVariants;
+} & Omit<SelectProps, "variant">;
 
 export const TokenTypeInput: FC<ITokenTypeInputProps> = props => {
-  const { prefix, name = "tokenType", variant = "standard", disabledOptions = [], readOnly } = props;
+  const { prefix, name = "tokenType", variant = "standard", disabledOptions = [], readOnly, ...rest } = props;
 
   return (
     <SelectInput
@@ -21,6 +22,7 @@ export const TokenTypeInput: FC<ITokenTypeInputProps> = props => {
       disabledOptions={disabledOptions}
       variant={variant}
       readOnly={readOnly}
+      {...rest}
     />
   );
 };

@@ -7,6 +7,7 @@ import {
   MenuItem,
   Select,
   SelectProps,
+  SelectVariants,
 } from "@mui/material";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
@@ -18,7 +19,8 @@ export type ISelectInputProps = {
   options: Record<string, string>; // enum
   disabledOptions?: Array<string>;
   InputLabelProps?: Partial<MuiInputLabelProps>;
-} & SelectProps;
+  variant?: SelectVariants;
+} & Omit<SelectProps, "variant">;
 
 export const SelectInput: FC<ISelectInputProps> = props => {
   const {
