@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@emotion/cache": "11.11.0",
-    "@emotion/react": "11.11.3",
+    "@emotion/react": "11.11.4",
     "@gemunion/constants": "0.12.8",
     "@mui/styles": "5.15.11",
     "jss": "10.10.0",
