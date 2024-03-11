@@ -12,9 +12,9 @@
     "@gemunion/firebase": "1.2.24",
     "@gemunion/mui-page-layout": "2.3.26",
     "@gemunion/provider-api": "7.0.62",
-    "@gemunion/provider-wallet": "3.7.9",
-    "@gemunion/react-hooks": "2.0.10",
-    "@gemunion/react-hooks-eth": "1.5.14",
+    "@gemunion/provider-wallet": "3.7.10",
+    "@gemunion/react-hooks": "2.0.11",
+    "@gemunion/react-hooks-eth": "1.5.15",
     "@gemunion/types-collection": "1.5.14",
     "@gemunion/types-jwt": "0.3.13",
     "@mui/icons-material": "5.15.12",
@@ -75,5 +75,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.3.51"
+  "version": "2.3.52"
 }

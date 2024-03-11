@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.10](https://github.com/gemunion/common-packages/compare/@gemunion/redux@0.3.9...@gemunion/redux@0.3.10) (2024-03-11)
+
+### Bug Fixes
+
+- add immutable zkEVM chain support for provider wallet and redux ([16e232d](https://github.com/gemunion/common-packages/commit/16e232dc809b73fdd8491761e49ba6bd121afd7c))
+
 ## [0.3.9](https://github.com/gemunion/common-packages/compare/@gemunion/redux@0.3.8...@gemunion/redux@0.3.9) (2024-03-11)
 
 ### Bug Fixes
