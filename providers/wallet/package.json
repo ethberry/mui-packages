@@ -33,7 +33,7 @@
     "@mui/icons-material": "5.15.12",
     "@mui/material": "5.15.12",
     "@mui/styles": "5.15.12",
-    "@types/react": "18.2.61",
+    "@types/react": "18.2.64",
     "@types/uuid": "9.0.8",
     "@web3-react/core": "8.2.3",
     "ethers": "5.7.2",
