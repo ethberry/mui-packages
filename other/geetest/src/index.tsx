@@ -20,7 +20,7 @@ export interface IGeeTestCaptchaProps {
 export const GeeTestCaptcha: FC<IGeeTestCaptchaProps> = props => {
   const { name, className } = props;
 
-  const [captchaObj, setCaptchaObj] = useState<any | null>(null);
+  const [captchaObj, setCaptchaObj] = useState<any>(null);
   const ref = useRef<HTMLDivElement | null>(null);
   const api = useApi();
   const form = useFormContext<any>();

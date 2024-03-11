@@ -3,8 +3,7 @@ import { Button, Card, CardActions, CardContent, CardMedia, FormControl, Grid, I
 import { get, useFormContext, useWatch } from "react-hook-form";
 import { FormattedMessage } from "react-intl";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-// eslint-disable-next-line import/no-named-as-default
-import clsx from "clsx";
+import { clsx } from "clsx";
 import path from "path";
 
 import { TextInput } from "@gemunion/mui-inputs-core";

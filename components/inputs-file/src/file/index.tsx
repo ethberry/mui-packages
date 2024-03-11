@@ -1,5 +1,5 @@
 import { FC, ReactElement, useCallback } from "react";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { DropzoneOptions, FileRejection, useDropzone } from "react-dropzone";
 import { CloudOff, CloudUpload, CloudUploadOutlined } from "@mui/icons-material";
 import { Box, FormHelperText } from "@mui/material";

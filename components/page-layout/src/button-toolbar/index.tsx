@@ -1,7 +1,7 @@
 import { FC, Children, cloneElement, ReactElement, PropsWithChildren } from "react";
 import { Grid, ButtonProps } from "@mui/material";
 import { Property } from "csstype";
-import clsx from "clsx";
+import { clsx } from "clsx";
 
 import { useStyles } from "./styles";
 

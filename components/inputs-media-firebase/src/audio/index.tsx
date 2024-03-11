@@ -4,8 +4,7 @@ import { Delete } from "@mui/icons-material";
 import { DropzoneOptions } from "react-dropzone";
 import { get, useFormContext, useWatch } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
-// eslint-disable-next-line import/no-named-as-default
-import clsx from "clsx";
+import { clsx } from "clsx";
 
 import { Accept, FirebaseFileInput, useDeleteUrl } from "@gemunion/mui-inputs-file-firebase";
 

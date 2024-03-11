@@ -3,8 +3,7 @@ import { get, useFormContext, useWatch } from "react-hook-form";
 import { Box, FormControl, FormHelperText, Grid, IconButton, InputLabel, Tooltip } from "@mui/material";
 import { Delete } from "@mui/icons-material";
 import { FormattedMessage, useIntl } from "react-intl";
-// eslint-disable-next-line import/no-named-as-default
-import clsx from "clsx";
+import { clsx } from "clsx";
 
 import { FirebaseFileInput, useDeleteUrl, Accept } from "@gemunion/mui-inputs-file-firebase";
 
