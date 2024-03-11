@@ -6,7 +6,8 @@ import { Preview } from "@storybook/react";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 import { LicenseProvider } from "@gemunion/provider-license";
-import { SettingsProvider } from "@gemunion/provider-settings";
+
+import { ReduxProvider, store } from "../other/redux";
 
 const decorators = [
   Story => {
@@ -15,7 +16,7 @@ const decorators = [
         path: "*",
         element: (
           <LicenseProvider licenseKey={process.env.STORYBOOK_GEMUNION_LICENSE}>
-            <SettingsProvider>
+            <ReduxProvider store={store}>
               <ThemeProvider theme={createTheme()}>
                 <StyledEngineProvider injectFirst>
                   <CssBaseline />
@@ -24,7 +25,7 @@ const decorators = [
                   </FormProvider>
                 </StyledEngineProvider>
               </ThemeProvider>
-            </SettingsProvider>
+            </ReduxProvider>
           </LicenseProvider>
         ),
       },

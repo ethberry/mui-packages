@@ -19,7 +19,7 @@ export const useMetamaskWallet = <T = any>(
   const license = useLicense();
 
   const web3ContextGlobal = useWeb3React();
-  const { connector, isActive } = web3ContextGlobal;
+  const { account, chainId, connector, isActive } = web3ContextGlobal;
   const web3ContextRef = useRef(web3ContextGlobal);
   const { openConnectWalletDialog, closeConnectWalletDialog } = useWallet();
 
@@ -28,7 +28,7 @@ export const useMetamaskWallet = <T = any>(
 
   useEffect(() => {
     web3ContextRef.current = web3ContextGlobal;
-  }, [connector, isActive]);
+  }, [account, chainId, connector, isActive]);
 
   return async (...args: Array<any>): Promise<T> => {
     if (!license.isValid()) {
@@ -38,13 +38,12 @@ export const useMetamaskWallet = <T = any>(
       });
     }
 
-    let context = web3ContextRef.current;
     if (!isActive) {
-      context = await openConnectWalletDialog();
+      web3ContextRef.current = await openConnectWalletDialog();
       closeConnectWalletDialog();
     }
 
-    return fn(...args, context)
+    return fn(...args, web3ContextRef.current)
       .then((transaction: any) => {
         if (success && transaction !== null) {
           enqueueSnackbar(formatMessage({ id: "snackbar.transactionSent" }, { txHash: transaction.hash }), {
