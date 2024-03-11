@@ -14,6 +14,8 @@ export const networkToChainId: Record<Networks, number> = {
   [Networks.SEPOLIA]: 11155111,
   [Networks.BESU]: 10001,
   [Networks.GEMUNION]: 10000,
+  [Networks.IMMUTABLE]: 13371,
+  [Networks.IMMUTABLE_TEST]: 13473,
 };
 
 // information from https://chainlist.org/
@@ -79,5 +81,17 @@ export const rpcUrls: Record<string, string[]> = {
     process.env.JSON_RPC_ADDR_GEMUNION,
     /* javascript-obfuscator:enable */
     "https://besu.gemunion.io",
+  ],
+  [networkToChainId[Networks.IMMUTABLE]]: [
+    /* javascript-obfuscator:disable */
+    process.env.JSON_RPC_ADDR_IMMUTABLE,
+    /* javascript-obfuscator:enable */
+    "http://rpc.immutable.com",
+  ],
+  [networkToChainId[Networks.IMMUTABLE]]: [
+    /* javascript-obfuscator:disable */
+    process.env.JSON_RPC_ADDR_IMMUTABLE_TEST,
+    /* javascript-obfuscator:enable */
+    "http://rpc.testnet.immutable.com",
   ],
 };

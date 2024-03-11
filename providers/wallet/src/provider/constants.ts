@@ -14,6 +14,8 @@ export enum Networks {
   SEPOLIA = "SEPOLIA",
   BESU = "BESU",
   GEMUNION = "GEMUNION",
+  IMMUTABLE = "IMMUTABLE",
+  IMMUTABLE_TEST = "IMMUTABLE_TEST",
 }
 
 export const networkToChainId: Record<Networks, number> = {
@@ -28,6 +30,8 @@ export const networkToChainId: Record<Networks, number> = {
   [Networks.SEPOLIA]: 11155111,
   [Networks.BESU]: 10001,
   [Networks.GEMUNION]: 10000,
+  [Networks.IMMUTABLE]: 13371,
+  [Networks.IMMUTABLE_TEST]: 13473,
 };
 
 export const chainIdToNetwork: Record<number, Networks> = (Object.keys(networkToChainId) as Networks[]).reduce(
@@ -108,9 +112,21 @@ export const rpcUrls: Record<string, string[]> = {
     /* javascript-obfuscator:enable */
     "https://rpc.sepolia.org",
   ],
+  [networkToChainId[Networks.IMMUTABLE]]: [
+    /* javascript-obfuscator:disable */
+    process.env.JSON_RPC_ADDR_IMMUTABLE,
+    /* javascript-obfuscator:enable */
+    "http://rpc.immutable.com",
+  ],
+  [networkToChainId[Networks.IMMUTABLE]]: [
+    /* javascript-obfuscator:disable */
+    process.env.JSON_RPC_ADDR_IMMUTABLE_TEST,
+    /* javascript-obfuscator:enable */
+    "http://rpc.testnet.immutable.com",
+  ],
 };
 
-export const SANDBOX_CHAINS = [5, 97, 80001, 13378, 13377, 10001, 10000, 11155111];
+export const SANDBOX_CHAINS = [5, 97, 80001, 13378, 13377, 10001, 10000, 11155111, 13473];
 
 export const STORE_CONNECTOR = "CONNECTOR";
 

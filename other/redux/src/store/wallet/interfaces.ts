@@ -25,4 +25,6 @@ export enum Networks {
   SEPOLIA = "SEPOLIA",
   BESU = "BESU",
   GEMUNION = "GEMUNION",
+  IMMUTABLE = "IMMUTABLE",
+  IMMUTABLE_TEST = "IMMUTABLE_TEST",
 }
