@@ -10,7 +10,6 @@ export const StyledCardWrapper = styled(Grid)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  flex: 1,
   height: "auto",
   marginTop: theme.spacing(2),
 }));
