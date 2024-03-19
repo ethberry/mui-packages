@@ -9,8 +9,8 @@
   },
   "description": "license-pages",
   "devDependencies": {
-    "@mui/icons-material": "5.15.12",
-    "@mui/material": "5.15.12",
+    "@mui/icons-material": "5.15.14",
+    "@mui/material": "5.15.14",
     "@types/node": "20.11.25",
     "@types/react": "18.2.64",
     "react": "18.2.0",
