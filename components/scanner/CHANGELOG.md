@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.14](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.3.13...@gemunion/mui-scanner@1.3.14) (2024-03-20)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([c9ad7a3](https://github.com/gemunion/mui-packages/commit/c9ad7a37d66098c8b51c25b5765b70f2bbdfe129))
+
 ## [1.3.13](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-scanner@1.3.12...@gemunion/mui-scanner@1.3.13) (2024-03-11)
 
 **Note:** Version bump only for package @gemunion/mui-scanner

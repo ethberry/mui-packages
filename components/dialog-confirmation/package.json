@@ -11,7 +11,7 @@
   "devDependencies": {
     "@gemunion/provider-license": "3.0.43",
     "@gemunion/provider-settings": "4.0.76",
-    "@gemunion/redux": "0.3.10",
+    "@gemunion/redux": "0.3.11",
     "@mui/material": "5.15.14",
     "@storybook/react": "8.0.2",
     "@testing-library/jest-dom": "6.4.2",
@@ -61,5 +61,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "4.0.12"
+  "version": "4.0.13"
 }
