@@ -21,11 +21,11 @@
     "@gemunion/provider-license": "3.0.42",
     "@mui/icons-material": "5.15.14",
     "@mui/material": "5.15.14",
-    "@types/react": "18.2.64",
+    "@types/react": "18.2.67",
     "@types/react-window": "1.8.8",
     "ethers": "5.7.2",
     "react": "18.2.0",
-    "react-hook-form": "7.51.0",
+    "react-hook-form": "7.51.1",
     "react-intl": "6.6.2",
     "yup": "1.4.0"
   },
