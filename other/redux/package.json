@@ -10,12 +10,12 @@
   "dependencies": {
     "@gemunion/constants": "0.12.8",
     "@gemunion/types-blockchain": "1.2.10",
-    "@reduxjs/toolkit": "2.2.1",
+    "@reduxjs/toolkit": "2.2.2",
     "react-redux": "9.1.0"
   },
   "description": "react redux store",
   "devDependencies": {
-    "@types/react": "18.2.67",
+    "@types/react": "18.2.73",
     "react": "18.2.0"
   },
   "engines": {
