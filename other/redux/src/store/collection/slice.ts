@@ -2,7 +2,7 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
 
 import { emptyCollectionState } from "./empty";
-import { ICollectionState } from "./interfaces";
+import type { ICollectionState } from "./interfaces";
 
 const initialState: ICollectionState = emptyCollectionState;
 

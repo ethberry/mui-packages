@@ -5,7 +5,7 @@ import { WalletConnect } from "@web3-react/walletconnect";
 
 import { WalletConnectIcon } from "../wallet-icons";
 import { CustomBadge } from "../custom-badge";
-import { IWalletButtonProps } from "./interfaces";
+import type { IWalletButtonProps } from "./interfaces";
 import { useConnectWalletConnect } from "../../hooks";
 
 // https://github.com/NoahZinsmeister/web3-react/blob/v6/docs/connectors/walletconnect.md

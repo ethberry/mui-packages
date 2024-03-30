@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-import { ICosmosParams, ICosmosChain, IUserAccount } from "../interfaces";
+import type { ICosmosParams, ICosmosChain, IUserAccount } from "../interfaces";
 
 export interface ICosmosContext {
   chain: ICosmosChain | null;

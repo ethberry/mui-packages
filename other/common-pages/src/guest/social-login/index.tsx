@@ -8,7 +8,8 @@ import { PasswordInput, TextInput } from "@gemunion/mui-inputs-core";
 import { ButtonToolbar, PageHeader } from "@gemunion/mui-page-layout";
 import { FormWrapper } from "@gemunion/mui-form";
 import { ApiError, useApi } from "@gemunion/provider-api";
-import { ILoginDto, IUser, useUser } from "@gemunion/provider-user";
+import { useUser } from "@gemunion/provider-user";
+import type { ILoginDto, IUser } from "@gemunion/provider-user";
 import { openUrlOnClick } from "@gemunion/popup";
 import { useDidMountEffect } from "@gemunion/react-hooks";
 

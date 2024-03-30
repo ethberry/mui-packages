@@ -2,7 +2,8 @@ import { FC, forwardRef } from "react";
 import { Box, InputBaseComponentProps } from "@mui/material";
 import { useWatch } from "react-hook-form";
 
-import { ITextInputProps, TextInput } from "../text";
+import type { ITextInputProps } from "../text";
+import { TextInput } from "../text";
 
 export type IStaticInputProps = ITextInputProps;
 

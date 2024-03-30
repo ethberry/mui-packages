@@ -1,7 +1,7 @@
 import { Dispatch, FC, PropsWithChildren, SetStateAction } from "react";
 
 import { InputRegistryContext } from "./context";
-import { IRegisteredInput } from "..";
+import type { IRegisteredInput } from "..";
 
 export interface IInputRegistryProviderProps {
   registeredInputs: IRegisteredInput[];

@@ -2,7 +2,7 @@ import { FC, useCallback, useState } from "react";
 
 import { FileInput, IFileInputProps } from "@gemunion/mui-inputs-file";
 
-import { IS3Response } from "./interfaces";
+import type { IS3Response } from "./interfaces";
 import { useS3Uploader } from "./use-s3-uploader";
 
 interface IS3FileInputProps extends Omit<IFileInputProps, "onChange"> {

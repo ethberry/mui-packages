@@ -2,7 +2,8 @@ import { FC } from "react";
 
 import { Theme, useMediaQuery } from "@mui/material";
 
-import { ITextInputProps, TextInput } from "../text";
+import type { ITextInputProps } from "../text";
+import { TextInput } from "../text";
 
 export type ITextAreaProps = ITextInputProps;
 

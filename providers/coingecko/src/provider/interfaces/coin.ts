@@ -1,4 +1,4 @@
-import { ICoinGeckoCoinTicker } from "./coin-ticker";
+import type { ICoinGeckoCoinTicker } from "./coin-ticker";
 
 export enum Language {
   en = "en",

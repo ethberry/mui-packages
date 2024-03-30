@@ -1,4 +1,4 @@
-import { IHandlerOptionsParams } from "./interfaces";
+import type { IHandlerOptionsParams } from "./interfaces";
 import { useMetamaskWallet } from "./use-metamask-wallet";
 
 export const useMetamask = (fn: (...args: Array<any>) => Promise<any>, options: IHandlerOptionsParams = {}) => {

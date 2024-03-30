@@ -5,7 +5,7 @@ import { downForMaintenance } from "@gemunion/license-messages";
 import { useLicense } from "@gemunion/provider-license";
 import { chainInfoByChainId, useCosmos } from "@gemunion/provider-cosmos";
 
-import { ICosmosParams, IHandlerOptionsParams } from "./interfaces";
+import type { ICosmosParams, IHandlerOptionsParams } from "./interfaces";
 
 export const useKeplr = <T = any>(
   fn: (cosmosParams: ICosmosParams, ...args: Array<any>) => Promise<T>,

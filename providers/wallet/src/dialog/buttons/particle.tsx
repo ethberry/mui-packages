@@ -4,7 +4,7 @@ import { Box, Collapse } from "@mui/material";
 import { CustomBadge } from "../custom-badge";
 import { useConnectParticle } from "../../hooks";
 import { hooks } from "../../connectors/particle";
-import { IWalletButtonProps } from "./interfaces";
+import type { IWalletButtonProps } from "./interfaces";
 import { getParticleButtonIcon } from "./utils";
 import { ParticleIcon } from "../wallet-icons";
 import { StyledIconButton } from "./styled";

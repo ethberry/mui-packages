@@ -5,7 +5,7 @@ import { usePopup } from "@gemunion/provider-popup";
 import { useUser } from "@gemunion/provider-user";
 
 import { useRegisteredChains } from "../hooks";
-import { ICosmosChain, IUserAccount } from "../interfaces";
+import type { ICosmosChain, IUserAccount } from "../interfaces";
 import { CosmosContext } from "./context";
 import { COSMOS_CONNECT_POPUP_TYPE } from "./constants";
 

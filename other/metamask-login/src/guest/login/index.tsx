@@ -6,11 +6,13 @@ import { useWeb3React } from "@web3-react/core";
 import { v4 } from "uuid";
 
 import { phrase } from "@gemunion/constants";
-import { IMetamaskDto } from "@gemunion/types-jwt";
+import type { IMetamaskDto } from "@gemunion/types-jwt";
 import { PageHeader } from "@gemunion/mui-page-layout";
-import { ApiError, IJwt, useApi } from "@gemunion/provider-api";
+import type { IJwt } from "@gemunion/provider-api";
+import { ApiError, useApi } from "@gemunion/provider-api";
 import { useLicense } from "@gemunion/provider-license";
-import { IUser, useUser } from "@gemunion/provider-user";
+import type { IUser } from "@gemunion/provider-user";
+import { useUser } from "@gemunion/provider-user";
 import { useWallet } from "@gemunion/provider-wallet";
 
 export const MetamaskLogin: FC = () => {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { ICosmosChain } from "../interfaces";
+import type { ICosmosChain } from "../interfaces";
 
 export interface IGetRegisteredChainsResponse {
   chains: ICosmosChain[];

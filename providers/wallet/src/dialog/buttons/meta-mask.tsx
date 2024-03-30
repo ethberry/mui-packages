@@ -5,7 +5,7 @@ import { useWeb3React } from "@web3-react/core";
 
 import { MetaMaskIcon } from "../wallet-icons";
 import { CustomBadge } from "../custom-badge";
-import { IWalletButtonProps } from "./interfaces";
+import type { IWalletButtonProps } from "./interfaces";
 import { useConnectMetamask } from "../../hooks";
 
 export const MetaMaskButton: FC<IWalletButtonProps> = props => {
