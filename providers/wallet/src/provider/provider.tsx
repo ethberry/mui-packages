@@ -16,12 +16,6 @@ import { Reconnect } from "../reconnect";
 import { CheckNetwork } from "../check-network";
 import { OnWalletConnect } from "../on-wallet-connect";
 
-const connectors: [ConnectorsTypes, Web3ReactHooks][] = [
-  [metaMask, metaMaskHooks],
-  [particleAuth, particleHooks],
-  [walletConnect, walletConnectHooks],
-];
-
 export const WalletProvider: FC<PropsWithChildren> = props => {
   const { children } = props;
 
@@ -32,6 +26,12 @@ export const WalletProvider: FC<PropsWithChildren> = props => {
   const dispatch = useAppDispatch();
 
   const [resolve, setResolve] = useState<((context: Web3ContextType) => void) | null>(null);
+
+  const connectors: [ConnectorsTypes, Web3ReactHooks][] = [
+    [metaMask, metaMaskHooks],
+    [particleAuth, particleHooks],
+    [walletConnect, walletConnectHooks],
+  ];
 
   const openConnectWalletDialog = (): Promise<any> => {
     dispatch(setIsDialogOpen(true));

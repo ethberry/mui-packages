@@ -9,8 +9,6 @@ import { getParticleButtonIcon } from "./utils";
 import { ParticleIcon } from "../wallet-icons";
 import { StyledIconButton } from "./styled";
 
-const { useIsActive } = hooks;
-
 export const ParticleButton: FC<IWalletButtonProps> = props => {
   const { disabled, onClick, badgeProps = {} } = props;
 
@@ -20,7 +18,7 @@ export const ParticleButton: FC<IWalletButtonProps> = props => {
     setOpen(value => !value);
   };
 
-  const isActive = useIsActive();
+  const isActive = hooks?.useIsActive?.();
   const handleClick = useConnectParticle({ onClick });
 
   return (
