@@ -27,6 +27,7 @@ const ratePlans = [
     features: [
       { name: "erc20", included: true },
       { name: "erc721", included: true },
+      { name: "erc998", included: false },
       { name: "erc1155", included: true },
       { name: "vesting", included: true },
       { name: "claim", included: true },
@@ -48,6 +49,7 @@ const ratePlans = [
     features: [
       { name: "erc20", included: true },
       { name: "erc721", included: true },
+      { name: "erc998", included: false },
       { name: "erc1155", included: true },
       { name: "vesting", included: true },
       { name: "claim", included: true },
@@ -62,6 +64,7 @@ const ratePlans = [
     features: [
       { name: "erc20", included: true },
       { name: "erc721", included: true },
+      { name: "erc998", included: true },
       { name: "erc1155", included: true },
       { name: "vesting", included: true },
       { name: "claim", included: true },
