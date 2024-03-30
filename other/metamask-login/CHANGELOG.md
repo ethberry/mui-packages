@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.43](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.2.42...@gemunion/metamask-login@3.2.43) (2024-03-30)
+
+### Bug Fixes
+
+- type ([0eb613a](https://github.com/gemunion/mui-packages/commit/0eb613ad4af3a07508473885fe6136bc286c31c7))
+
 ## [3.2.42](https://github.com/gemunion/mui-packages/compare/@gemunion/metamask-login@3.2.41...@gemunion/metamask-login@3.2.42) (2024-03-30)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.90](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@8.0.89...@gemunion/mui-form@8.0.90) (2024-03-30)
+
+### Bug Fixes
+
+- type ([0eb613a](https://github.com/gemunion/mui-packages/commit/0eb613ad4af3a07508473885fe6136bc286c31c7))
+
 ## [8.0.89](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form@8.0.88...@gemunion/mui-form@8.0.89) (2024-03-30)
 
 ### Bug Fixes

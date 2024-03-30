@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.79](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-coingecko@2.0.78...@gemunion/provider-coingecko@2.0.79) (2024-03-30)
+
+### Bug Fixes
+
+- type ([0eb613a](https://github.com/gemunion/mui-packages/commit/0eb613ad4af3a07508473885fe6136bc286c31c7))
+
 ## [2.0.78](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-coingecko@2.0.77...@gemunion/provider-coingecko@2.0.78) (2024-03-30)
 
 ### Bug Fixes

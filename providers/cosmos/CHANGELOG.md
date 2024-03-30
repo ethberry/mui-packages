@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.35](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-cosmos@1.1.34...@gemunion/provider-cosmos@1.1.35) (2024-03-30)
+
+### Bug Fixes
+
+- type ([0eb613a](https://github.com/gemunion/mui-packages/commit/0eb613ad4af3a07508473885fe6136bc286c31c7))
+
 ## [1.1.34](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-cosmos@1.1.33...@gemunion/provider-cosmos@1.1.34) (2024-03-30)
 
 ### Bug Fixes

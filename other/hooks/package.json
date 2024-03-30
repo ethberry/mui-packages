@@ -17,7 +17,7 @@
   "devDependencies": {
     "@gemunion/provider-api": "7.0.64",
     "@gemunion/provider-license": "3.0.44",
-    "@gemunion/redux": "0.3.12",
+    "@gemunion/redux": "0.3.13",
     "notistack": "3.0.1",
     "react": "18.2.0",
     "react-hook-form": "7.51.2",
@@ -61,5 +61,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.13"
+  "version": "2.0.14"
 }
