@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/mui-form": "8.0.88",
     "@gemunion/provider-test-id": "1.0.74",
-    "@gemunion/yup-rules": "4.2.37",
+    "@gemunion/yup-rules": "4.2.38",
     "clsx": "2.1.0",
     "use-debounce": "10.0.0"
   },
