@@ -59,6 +59,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
 
   const user = useUser<any>();
   const navigate = useNavigate();
+  const isLoginPage = window.location.pathname.includes("/login");
 
   const signInOptions = useMemo(() => providers.map(name => providersStore[name]), [providers]);
 
@@ -76,7 +77,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
     await signInWithCustomToken(authFb, token);
 
     setIsLoggingIn(true);
-    await user.logIn().catch(e => {
+    await user.logIn(void 0, isLoginPage ? void 0 : window.location.pathname).catch(e => {
       console.error("login error", e);
       setIsLoggingIn(false);
     });
