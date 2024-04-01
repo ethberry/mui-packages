@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.56](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.3.55...@gemunion/firebase-login@2.3.56) (2024-04-01)
+
+### Bug Fixes
+
+- firebase login do not redirect to dashboard if not login page ([264b1d5](https://github.com/gemunion/mui-packages/commit/264b1d513d00b53417d5d10b2898735f52b0a15a))
+
 ## [2.3.55](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.3.54...@gemunion/firebase-login@2.3.55) (2024-03-30)
 
 **Note:** Version bump only for package @gemunion/firebase-login
