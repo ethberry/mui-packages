@@ -25,6 +25,7 @@ const ratePlans = [
     title: "bronze",
     price: "2000",
     features: [
+      // no chain-link integration
       { name: "erc20", included: true },
       { name: "erc721", included: true },
       { name: "erc998", included: false },
@@ -33,7 +34,10 @@ const ratePlans = [
       { name: "claim", included: true },
       { name: "grade", included: true },
       { name: "craft", included: true },
+      { name: "waitList", included: true },
       { name: "mystery", included: false },
+      { name: "raffle", included: false },
+      { name: "staking", included: false },
       // { name: "breeding", included: false },
       // { name: "drop", included: false },
       // { name: "rent", included: false },
@@ -47,6 +51,7 @@ const ratePlans = [
     title: "silver",
     price: "5000",
     features: [
+      // no erc998, gene sequencing
       { name: "erc20", included: true },
       { name: "erc721", included: true },
       { name: "erc998", included: false },
@@ -55,7 +60,10 @@ const ratePlans = [
       { name: "claim", included: true },
       { name: "grade", included: true },
       { name: "craft", included: true },
+      { name: "waitList", included: true },
       { name: "mystery", included: true },
+      { name: "raffle", included: true },
+      { name: "staking", included: true },
     ],
   },
   {
@@ -70,7 +78,10 @@ const ratePlans = [
       { name: "claim", included: true },
       { name: "grade", included: true },
       { name: "craft", included: true },
+      { name: "waitList", included: true },
       { name: "mystery", included: true },
+      { name: "raffle", included: true },
+      { name: "staking", included: true },
     ],
   },
 ];
@@ -113,49 +124,6 @@ export const RatePlansSelection: FC = () => {
           </StyledCard>
         </StyledCardWrapper>
       ))}
-
-      <StyledCardWrapper item xs={12}>
-        <StyledCard>
-          <StyledCardContent>
-            <TitleTypography variant="h6">
-              <FormattedMessage id="pages.ratePlan.onDemand.title" />
-            </TitleTypography>
-            <Divider />
-            <Grid container spacing={{ sm: 0, md: 4 }} justifyContent="center">
-              <Grid item xs={12} sm={6} md={4} justifyContent="center">
-                <FeatureWrapper sx={{ justifyContent: "center" }}>
-                  <FeatureIconWrapper>
-                    <FeatureIconIncluded component={Done} />
-                  </FeatureIconWrapper>
-                  <FeatureTypography included>
-                    <FormattedMessage id="pages.ratePlan.onDemand.waitList" />
-                  </FeatureTypography>
-                </FeatureWrapper>
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} justifyContent="center">
-                <FeatureWrapper sx={{ justifyContent: "center" }}>
-                  <FeatureIconWrapper>
-                    <FeatureIconIncluded component={Done} />
-                  </FeatureIconWrapper>
-                  <FeatureTypography included>
-                    <FormattedMessage id="pages.ratePlan.onDemand.raffle" />
-                  </FeatureTypography>
-                </FeatureWrapper>
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} justifyContent="center">
-                <FeatureWrapper sx={{ justifyContent: "center" }}>
-                  <FeatureIconWrapper>
-                    <FeatureIconIncluded component={Done} />
-                  </FeatureIconWrapper>
-                  <FeatureTypography included>
-                    <FormattedMessage id="pages.ratePlan.onDemand.staking" />
-                  </FeatureTypography>
-                </FeatureWrapper>
-              </Grid>
-            </Grid>
-          </StyledCardContent>
-        </StyledCard>
-      </StyledCardWrapper>
 
       <StyledCardWrapper item xs={12}>
         <StyledCard>
