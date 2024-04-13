@@ -14,7 +14,7 @@
     "@gemunion/provider-api": "7.0.64",
     "@gemunion/types-blockchain": "1.2.10",
     "@json-rpc-tools/utils": "1.7.6",
-    "qs": "6.12.0",
+    "qs": "6.12.1",
     "use-deep-compare-effect": "1.8.1"
   },
   "description": "react hooks",
@@ -24,7 +24,7 @@
     "@web3-react/core": "8.2.3",
     "notistack": "3.0.1",
     "react": "18.2.0",
-    "react-intl": "6.6.4"
+    "react-intl": "6.6.5"
   },
   "engines": {
     "node": ">=18"
