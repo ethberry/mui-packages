@@ -17,7 +17,7 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@gemunion/provider-license": "3.0.44",
+    "@gemunion/provider-license": "3.0.45",
     "@mui/material": "5.15.15",
     "@types/react": "18.2.78",
     "react": "18.2.0",

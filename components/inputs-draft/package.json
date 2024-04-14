@@ -18,7 +18,7 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@gemunion/provider-license": "3.0.44",
+    "@gemunion/provider-license": "3.0.45",
     "@mui/icons-material": "5.15.15",
     "@mui/material": "5.15.15",
     "@mui/styles": "5.15.15",
