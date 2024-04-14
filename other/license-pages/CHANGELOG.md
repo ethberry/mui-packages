@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.42 (2024-04-14)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([fc833e6](https://github.com/gemunion/mui-packages/commit/fc833e6bc9f9a912a7e79e129f9ba5241a78833d))
+- rate plans description ([c969f56](https://github.com/gemunion/mui-packages/commit/c969f56d2ab7a317a3479a8420f9381634f8536d))
+
 ## [1.1.41](https://github.com/gemunion/mui-packages/compare/@gemunion/license-pages@1.1.40...@gemunion/license-pages@1.1.41) (2024-03-30)
 
 **Note:** Version bump only for package @gemunion/license-pages
