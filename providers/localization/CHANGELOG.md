@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.17](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@4.0.16...@gemunion/provider-localization@4.0.17) (2024-04-23)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([07b8461](https://github.com/gemunion/mui-packages/commit/07b8461883630e9bc181615471c7ae281bf730f5))
+- **deps:** update all non-major dependencies ([31a6694](https://github.com/gemunion/mui-packages/commit/31a66941095269842ff575dfad00602198744e04))
+
 ## 4.0.16 (2024-04-14)
 
 ### Bug Fixes

@@ -8,8 +8,8 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-form": "8.0.91",
-    "@gemunion/provider-test-id": "1.0.76",
+    "@gemunion/mui-form": "8.0.92",
+    "@gemunion/provider-test-id": "1.0.77",
     "@gemunion/yup-rules": "4.2.40",
     "clsx": "2.1.1",
     "use-debounce": "10.0.0"
@@ -72,5 +72,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "7.2.82"
+  "version": "7.2.83"
 }
