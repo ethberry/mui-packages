@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/mui-page-layout": "2.3.29",
     "@gemunion/provider-test-id": "1.0.76",
-    "clsx": "2.1.0",
+    "clsx": "2.1.1",
     "react-dropzone": "14.2.3"
   },
   "description": "react widget",
@@ -18,8 +18,8 @@
     "@mui/icons-material": "5.15.15",
     "@mui/material": "5.15.15",
     "@mui/styles": "5.15.15",
-    "@storybook/react": "8.0.8",
-    "@types/react": "18.2.78",
+    "@storybook/react": "8.0.9",
+    "@types/react": "18.2.79",
     "notistack": "3.0.1",
     "react": "18.2.0",
     "react-hook-form": "7.51.3",
