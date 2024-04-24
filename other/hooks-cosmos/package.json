@@ -10,7 +10,7 @@
   "dependencies": {
     "@cosmjs/encoding": "0.32.3",
     "@gemunion/license-messages": "0.0.36",
-    "@gemunion/provider-api": "7.0.66",
+    "@gemunion/provider-api": "7.0.67",
     "@gemunion/provider-cosmos": "1.1.37",
     "@keplr-wallet/types": "0.12.82"
   },
