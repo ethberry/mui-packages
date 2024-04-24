@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.18](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-confirmation@4.0.17...@gemunion/mui-dialog-confirmation@4.0.18) (2024-04-24)
+
+**Note:** Version bump only for package @gemunion/mui-dialog-confirmation
+
 ## [4.0.17](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-confirmation@4.0.16...@gemunion/mui-dialog-confirmation@4.0.17) (2024-04-23)
 
 ### Bug Fixes

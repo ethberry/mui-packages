@@ -9,17 +9,17 @@
   },
   "dependencies": {
     "@gemunion/firebase": "1.2.27",
-    "@gemunion/mui-dialog-confirmation": "4.0.17",
-    "@gemunion/mui-inputs-core": "7.2.83",
-    "@gemunion/mui-inputs-file-firebase": "6.0.143",
-    "@gemunion/mui-page-layout": "2.3.30",
+    "@gemunion/mui-dialog-confirmation": "4.0.18",
+    "@gemunion/mui-inputs-core": "7.2.84",
+    "@gemunion/mui-inputs-file-firebase": "6.0.144",
+    "@gemunion/mui-page-layout": "2.3.31",
     "@gemunion/popup": "1.0.52",
     "react-beautiful-dnd": "13.1.1"
   },
   "description": "react widget",
   "devDependencies": {
     "@gemunion/cross-env": "0.0.4",
-    "@gemunion/mui-form": "8.0.92",
+    "@gemunion/mui-form": "8.0.93",
     "@gemunion/provider-api": "7.0.67",
     "@gemunion/provider-test-id": "1.0.77",
     "@mui/icons-material": "5.15.15",
@@ -77,5 +77,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "8.1.85"
+  "version": "8.1.86"
 }
