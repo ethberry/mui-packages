@@ -25,6 +25,7 @@ export interface IEntityInputProps {
   dirtyAutoselect?: boolean;
   getTitle?: (item: any) => string;
   data?: Record<string, any>;
+  disabledOptions?: any[];
   variant?: "standard" | "filled" | "outlined";
   onChange?: (
     event: ChangeEvent<unknown>,
@@ -42,6 +43,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
     autoselect = false,
     dirtyAutoselect = true,
     data = {},
+    disabledOptions = [],
     variant = "standard",
     onChange,
     label,
@@ -151,7 +153,6 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                 value={value
                   .map((v: string | number) => options.find(o => o.id === v))
                   .filter((e: IAutocompleteOption | undefined) => e)}
-                // value={options.filter((option: IAutocompleteOption) => value.includes(option.id) as boolean)}
                 onChange={
                   onChange ||
                   ((_event: ChangeEvent<unknown>, options: ReadonlyArray<IAutocompleteOption> | null): void => {
@@ -159,6 +160,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                     form.setValue(name, value, { shouldDirty: true, shouldTouch: true });
                   })
                 }
+                getOptionDisabled={(option: IAutocompleteOption) => !!disabledOptions.find(o => o?.id === option?.id)}
                 getOptionLabel={(option: IAutocompleteOption) => (getTitle ? getTitle(option) : option.title)}
                 renderOption={(props: HTMLAttributes<HTMLLIElement>, option: IAutocompleteOption) => {
                   const title = getTitle ? getTitle(option) : option.title;
@@ -211,6 +213,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                     form.setValue(name, value, { shouldDirty: true, shouldTouch: true });
                   })
                 }
+                getOptionDisabled={(option: IAutocompleteOption) => !!disabledOptions.find(o => o?.id === option?.id)}
                 getOptionLabel={(option: IAutocompleteOption): string => (getTitle ? getTitle(option) : option.title)}
                 renderOption={(props: HTMLAttributes<HTMLLIElement>, option: IAutocompleteOption) => {
                   const title = getTitle ? getTitle(option) : option.title;
