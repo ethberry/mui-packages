@@ -15,3 +15,4 @@ export * from "./portis";
 export * from "./torus";
 export * from "./trezor";
 export * from "./wallet-connect";
+export * from "./zeal";
