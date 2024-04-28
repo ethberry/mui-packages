@@ -12,13 +12,13 @@
     "@gemunion/license-messages": "0.0.36",
     "@gemunion/provider-api": "7.0.67",
     "@gemunion/provider-cosmos": "1.1.38",
-    "@keplr-wallet/types": "0.12.82"
+    "@keplr-wallet/types": "0.12.83"
   },
   "description": "react hooks cosmos",
   "devDependencies": {
     "@gemunion/provider-license": "3.0.46",
     "notistack": "3.0.1",
-    "react": "18.2.0",
+    "react": "18.3.1",
     "react-intl": "6.6.5"
   },
   "engines": {
