@@ -1,4 +1,4 @@
-import { configureStore, EnhancedStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 
 import { collectionSlice } from "./collection";
 import { settingsSlice } from "./settings";
@@ -14,11 +14,11 @@ export interface IStore {
   wallet: ReturnType<typeof walletSlice.reducer>;
 }
 
-export const store: EnhancedStore<IStore> = configureStore({
+export const store = configureStore<IStore>({
   reducer: {
-    [collectionSlice.name]: collectionSlice.reducer,
-    [settingsSlice.name]: settingsSlice.reducer,
-    [walletSlice.name]: walletSlice.reducer,
+    collection: collectionSlice.reducer,
+    settings: settingsSlice.reducer,
+    wallet: walletSlice.reducer,
   },
   devTools: !isProductionNodeEnv,
 });

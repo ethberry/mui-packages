@@ -402,7 +402,7 @@ export const useCollection = <
 
   useLayoutEffect(() => {
     return () => {
-      dispatch(resetState());
+      dispatch(resetState(void 0));
     };
   }, []);
 

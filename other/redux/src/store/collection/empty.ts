@@ -1,4 +1,4 @@
-import { ICollectionState } from "./interfaces";
+import type { ICollectionState } from "./interfaces";
 
 export const emptyCollectionState: ICollectionState = {
   needRefresh: false,
