@@ -1,49 +1,48 @@
-import type { PayloadAction } from "@reduxjs/toolkit";
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice, type Slice } from "@reduxjs/toolkit";
 
 import { emptyCollectionState } from "./empty";
 import type { ICollectionState } from "./interfaces";
 
 const initialState: ICollectionState = emptyCollectionState;
 
-export const collectionSlice = createSlice({
+export const collectionSlice: Slice<ICollectionState> = createSlice({
   name: "collection",
   initialState,
   reducers: {
-    setIsLoading(state, action: PayloadAction<boolean>) {
+    setIsLoading: (state, action: PayloadAction<boolean>) => {
       state.isLoading = action.payload;
     },
-    setIsFilterOpen(state, action: PayloadAction<boolean>) {
+    setIsFilterOpen: (state, action: PayloadAction<boolean>) => {
       state.isFiltersOpen = action.payload;
     },
-    setIsViewDialogOpen(state, action: PayloadAction<boolean>) {
+    setIsViewDialogOpen: (state, action: PayloadAction<boolean>) => {
       state.isViewDialogOpen = action.payload;
     },
-    setIsEditDialogOpen(state, action: PayloadAction<boolean>) {
+    setIsEditDialogOpen: (state, action: PayloadAction<boolean>) => {
       state.isEditDialogOpen = action.payload;
     },
-    setIsDeleteDialogOpen(state, action: PayloadAction<boolean>) {
+    setIsDeleteDialogOpen: (state, action: PayloadAction<boolean>) => {
       state.isDeleteDialogOpen = action.payload;
     },
-    setDidMount(state, action: PayloadAction<boolean>) {
+    setDidMount: (state, action: PayloadAction<boolean>) => {
       state.didMount = action.payload;
     },
-    setSearch(state, action: PayloadAction<any>) {
+    setSearch: (state, action: PayloadAction<any>) => {
       state.search = action.payload;
     },
-    setRows(state, action: PayloadAction<Array<any>>) {
+    setRows: (state, action: PayloadAction<Array<any>>) => {
       state.rows = action.payload;
     },
-    setCount(state, action: PayloadAction<number>) {
+    setCount: (state, action: PayloadAction<number>) => {
       state.count = action.payload;
     },
-    setSelected(state, action: PayloadAction<any>) {
+    setSelected: (state, action: PayloadAction<any>) => {
       state.selected = action.payload;
     },
-    setNeedRefresh(state, action: PayloadAction<boolean>) {
+    setNeedRefresh: (state, action: PayloadAction<boolean>) => {
       state.needRefresh = action.payload;
     },
-    resetState(state) {
+    resetState: state => {
       state.isLoading = emptyCollectionState.isLoading;
       state.isFiltersOpen = emptyCollectionState.isFiltersOpen;
       state.isViewDialogOpen = emptyCollectionState.isViewDialogOpen;

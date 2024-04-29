@@ -1,5 +1,5 @@
 import { STORE_CONNECTOR } from "./constants";
-import { IWalletState, TConnectors } from "./interfaces";
+import type { IWalletState, TConnectors } from "./interfaces";
 
 const storedConnector = localStorage.getItem(STORE_CONNECTOR);
 
