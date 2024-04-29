@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.18](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@2.0.17...@gemunion/react-hooks@2.0.18) (2024-04-29)
+
+### Bug Fixes
+
+- build by fixing redux types ([5804473](https://github.com/gemunion/mui-packages/commit/5804473b0f0f10e3f7d117db338e47ee008c1342))
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([18ca6df](https://github.com/gemunion/mui-packages/commit/18ca6dfb8d12b53951f9f470db4f667a67348814))
+- **deps:** update all non-major dependencies ([1fed7af](https://github.com/gemunion/mui-packages/commit/1fed7afb4b47c29267e65bfa1c6b768b480a4f53))
+
 ## [2.0.17](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@2.0.16...@gemunion/react-hooks@2.0.17) (2024-04-24)
 
 **Note:** Version bump only for package @gemunion/react-hooks

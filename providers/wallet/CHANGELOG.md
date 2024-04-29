@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.17](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.7.16...@gemunion/provider-wallet@3.7.17) (2024-04-29)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([18ca6df](https://github.com/gemunion/mui-packages/commit/18ca6dfb8d12b53951f9f470db4f667a67348814))
+- **deps:** update all non-major dependencies ([1fed7af](https://github.com/gemunion/mui-packages/commit/1fed7afb4b47c29267e65bfa1c6b768b480a4f53))
+- show zeal icon after connecting zeal wallet ([b09a968](https://github.com/gemunion/mui-packages/commit/b09a968c6995436b2a50e3bc751677b3aa68554f))
+
 ## [3.7.16](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.7.15...@gemunion/provider-wallet@3.7.16) (2024-04-24)
 
 **Note:** Version bump only for package @gemunion/provider-wallet

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.62 (2024-04-29)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([1fed7af](https://github.com/gemunion/mui-packages/commit/1fed7afb4b47c29267e65bfa1c6b768b480a4f53))
+
 ## 5.0.61 (2024-04-14)
 
 **Note:** Version bump only for package @gemunion/provider-picker

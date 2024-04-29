@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.16 (2024-04-29)
+
+### Bug Fixes
+
+- build by fixing redux types ([5804473](https://github.com/gemunion/common-packages/commit/5804473b0f0f10e3f7d117db338e47ee008c1342))
+- **deps:** update all non-major dependencies ([1fed7af](https://github.com/gemunion/common-packages/commit/1fed7afb4b47c29267e65bfa1c6b768b480a4f53))
+
 ## [0.3.15](https://github.com/gemunion/common-packages/compare/@gemunion/redux@0.3.14...@gemunion/redux@0.3.15) (2024-04-23)
 
 ### Bug Fixes

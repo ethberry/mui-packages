@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.3.69](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.3.68...@gemunion/mui-inputs-entity@7.3.69) (2024-04-29)
+
+### Bug Fixes
+
+- add disabledOptions to EntityInput ([20793b6](https://github.com/gemunion/mui-packages/commit/20793b631f4861f6b4b193c0d716e95173d88da7))
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([18ca6df](https://github.com/gemunion/mui-packages/commit/18ca6dfb8d12b53951f9f470db4f667a67348814))
+- **deps:** update all non-major dependencies ([1fed7af](https://github.com/gemunion/mui-packages/commit/1fed7afb4b47c29267e65bfa1c6b768b480a4f53))
+
 ## [7.3.68](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.3.67...@gemunion/mui-inputs-entity@7.3.68) (2024-04-24)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-entity
