@@ -16,7 +16,7 @@
   },
   "description": "react hooks cosmos",
   "devDependencies": {
-    "@gemunion/provider-license": "3.0.46",
+    "@gemunion/provider-license": "3.0.47",
     "notistack": "3.0.1",
     "react": "18.3.1",
     "react-intl": "6.6.5"

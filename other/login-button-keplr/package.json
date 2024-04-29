@@ -20,7 +20,7 @@
   "description": "react keplr login button component",
   "devDependencies": {
     "@gemunion/provider-api": "7.0.68",
-    "@gemunion/provider-license": "3.0.46",
+    "@gemunion/provider-license": "3.0.47",
     "@gemunion/provider-user": "6.0.74",
     "@mui/material": "5.15.15",
     "@mui/styles": "5.15.15",
