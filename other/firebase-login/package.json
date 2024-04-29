@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.12.8",
-    "@gemunion/firebase": "1.2.27",
+    "@gemunion/firebase": "1.2.28",
     "@gemunion/mui-page-layout": "2.3.31",
-    "@gemunion/provider-api": "7.0.67",
+    "@gemunion/provider-api": "7.0.68",
     "@gemunion/provider-wallet": "3.7.16",
     "@gemunion/react-hooks": "2.0.17",
     "@gemunion/react-hooks-eth": "1.5.21",
@@ -23,9 +23,9 @@
   },
   "description": "react component",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.67",
+    "@gemunion/provider-api": "7.0.68",
     "@gemunion/provider-license": "3.0.46",
-    "@gemunion/provider-user": "6.0.73",
+    "@gemunion/provider-user": "6.0.74",
     "@keplr-wallet/types": "0.12.82",
     "@mui/material": "5.15.15",
     "@mui/styles": "5.15.15",
