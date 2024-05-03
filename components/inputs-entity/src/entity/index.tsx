@@ -109,7 +109,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
         }
       })
       .catch(e => {
-        if (!e.message.includes("The user aborted a request")) {
+        if (!e.message.includes("The user aborted a request") && !e.message.includes("AbortError")) {
           console.error(e);
           enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
         }
@@ -122,7 +122,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
   useDeepCompareEffect(() => {
     void fetchOptions();
 
-    return () => abortController.abort();
+    return () => abortController.abort({ message: "AbortError" });
   }, [data]);
 
   useEffect(() => {
