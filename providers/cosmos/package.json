@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.12.8",
-    "@keplr-wallet/types": "0.12.83",
+    "@keplr-wallet/types": "0.12.89",
     "uuid": "9.0.1"
   },
   "description": "react cosmos provider",
@@ -21,11 +21,11 @@
     "@mui/icons-material": "5.15.15",
     "@mui/material": "5.15.15",
     "@mui/styles": "5.15.15",
-    "@types/react": "18.3.1",
+    "@types/react": "18.3.2",
     "@types/uuid": "9.0.8",
     "notistack": "3.0.1",
     "react": "18.3.1",
-    "react-intl": "6.6.5"
+    "react-intl": "6.6.6"
   },
   "engines": {
     "node": ">=18"
