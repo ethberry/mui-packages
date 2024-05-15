@@ -15,9 +15,9 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/icons-material": "5.15.15",
-    "@mui/material": "5.15.15",
-    "@mui/styles": "5.15.15",
+    "@mui/icons-material": "5.15.17",
+    "@mui/material": "5.15.17",
+    "@mui/styles": "5.15.17",
     "@storybook/react": "8.1.0",
     "@types/react": "18.3.2",
     "notistack": "3.0.1",
