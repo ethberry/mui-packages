@@ -2,6 +2,7 @@ import { FC, ReactElement } from "react";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 import { MobileDatePicker, MobileDatePickerProps } from "@mui/x-date-pickers";
+import type {} from "@mui/x-date-pickers/AdapterDateFnsV3";
 
 import { useTestId } from "@gemunion/provider-test-id";
 
