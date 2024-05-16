@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@6.2.20...@gemunion/mui-inputs-picker@7.0.0) (2024-05-16)
+
+- feat!: update mui-x to v7 and date-fns to v3 ([d6a902c](https://github.com/gemunion/mui-packages/commit/d6a902c1cf1d6548bd308a4d0933336b6b871006))
+
+### BREAKING CHANGES
+
+- now need to use new components interfaces
+
 ## [6.2.20](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-picker@6.2.19...@gemunion/mui-inputs-picker@6.2.20) (2024-05-16)
 
 ### Bug Fixes
