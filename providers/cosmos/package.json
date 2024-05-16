@@ -14,10 +14,10 @@
   },
   "description": "react cosmos provider",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.68",
+    "@gemunion/provider-api": "7.0.69",
     "@gemunion/provider-license": "3.0.47",
-    "@gemunion/provider-popup": "1.0.53",
-    "@gemunion/provider-user": "6.0.74",
+    "@gemunion/provider-popup": "1.0.54",
+    "@gemunion/provider-user": "6.0.75",
     "@mui/icons-material": "5.15.17",
     "@mui/material": "5.15.17",
     "@mui/styles": "5.15.17",
