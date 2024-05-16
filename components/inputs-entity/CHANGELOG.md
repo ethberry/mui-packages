@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.3.70](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.3.69...@gemunion/mui-inputs-entity@7.3.70) (2024-05-16)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([0904dac](https://github.com/gemunion/mui-packages/commit/0904dac2319212a396043b18cf76dd13f0a81da5))
+- **deps:** update all non-major dependencies ([d24ed47](https://github.com/gemunion/mui-packages/commit/d24ed475c40f3a504f003afc64ba580e4cef9d87))
+- error - signal is aborted without reason ([ac65a1a](https://github.com/gemunion/mui-packages/commit/ac65a1a64edc45c8ca37578261ec163425d2c5b9))
+
 ## [7.3.69](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.3.68...@gemunion/mui-inputs-entity@7.3.69) (2024-04-29)
 
 ### Bug Fixes
