@@ -10,6 +10,6 @@
     }
   },
   "packages": ["components/*", "other/*", "providers/*"],
-  "useNx": false,
+  "useNx": true,
   "version": "independent"
 }
