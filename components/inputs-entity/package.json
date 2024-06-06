@@ -12,7 +12,7 @@
     "@gemunion/mui-page-layout": "2.3.33",
     "@gemunion/provider-test-id": "1.0.79",
     "@gemunion/react-hooks": "2.0.19",
-    "use-debounce": "10.0.0"
+    "use-debounce": "10.0.1"
   },
   "description": "react widget",
   "devDependencies": {
@@ -21,11 +21,11 @@
     "@mui/lab": "5.0.0-alpha.170",
     "@mui/material": "5.15.17",
     "@mui/styles": "5.15.17",
-    "@types/react": "18.3.2",
+    "@types/react": "18.3.3",
     "notistack": "3.0.1",
     "react": "18.3.1",
-    "react-hook-form": "7.51.4",
-    "react-intl": "6.6.6"
+    "react-hook-form": "7.51.5",
+    "react-intl": "6.6.8"
   },
   "engines": {
     "node": ">=18"
