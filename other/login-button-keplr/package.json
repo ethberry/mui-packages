@@ -10,11 +10,11 @@
   "dependencies": {
     "@cosmjs/stargate": "0.32.3",
     "@gemunion/constants": "0.12.8",
-    "@gemunion/firebase-login": "2.3.61",
-    "@gemunion/mui-page-layout": "2.3.33",
-    "@gemunion/provider-cosmos": "1.1.40",
-    "@gemunion/react-hooks": "2.0.19",
-    "@gemunion/react-hooks-cosmos": "1.1.41",
+    "@gemunion/firebase-login": "2.3.62",
+    "@gemunion/mui-page-layout": "2.3.34",
+    "@gemunion/provider-cosmos": "1.1.41",
+    "@gemunion/react-hooks": "2.0.20",
+    "@gemunion/react-hooks-cosmos": "1.1.42",
     "@keplr-wallet/types": "0.12.100",
     "uuid": "9.0.1"
   },
@@ -69,5 +69,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "1.1.51"
+  "version": "1.1.52"
 }

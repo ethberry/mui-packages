@@ -9,10 +9,10 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.12.8",
-    "@gemunion/mui-inputs-core": "7.2.86",
-    "@gemunion/mui-inputs-entity": "7.3.70",
-    "@gemunion/mui-inputs-mask": "5.5.87",
-    "@gemunion/react-hooks": "2.0.19",
+    "@gemunion/mui-inputs-core": "7.2.87",
+    "@gemunion/mui-inputs-entity": "7.3.71",
+    "@gemunion/mui-inputs-mask": "5.5.88",
+    "@gemunion/react-hooks": "2.0.20",
     "@gemunion/types-blockchain": "1.2.10",
     "@gemunion/yup-rules-eth": "2.1.26"
   },
@@ -65,5 +65,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.7.22"
+  "version": "2.7.23"
 }

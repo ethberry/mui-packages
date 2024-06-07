@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.1](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-picker@6.0.0...@gemunion/provider-picker@6.0.1) (2024-06-07)
+
+**Note:** Version bump only for package @gemunion/provider-picker
+
 # [6.0.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-picker@5.0.63...@gemunion/provider-picker@6.0.0) (2024-05-16)
 
 - feat!: update mui-x to v7 and date-fns to v3 ([d6a902c](https://github.com/gemunion/mui-packages/commit/d6a902c1cf1d6548bd308a4d0933336b6b871006))

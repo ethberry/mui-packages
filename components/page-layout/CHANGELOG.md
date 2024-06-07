@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.34](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-page-layout@2.3.33...@gemunion/mui-page-layout@2.3.34) (2024-06-07)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([72b803b](https://github.com/gemunion/mui-packages/commit/72b803bbc8bf4c12212ff5aedbf1c57bac8f6062))
+
 ## [2.3.33](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-page-layout@2.3.32...@gemunion/mui-page-layout@2.3.33) (2024-05-16)
 
 ### Bug Fixes
