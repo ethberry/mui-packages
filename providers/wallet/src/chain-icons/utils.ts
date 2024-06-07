@@ -9,6 +9,7 @@ import { Optimism } from "./optimism";
 import { Polygon } from "./polygon";
 import { Sepolia } from "./sepolia";
 import { ImmutableZkEVM } from "./immutable-zk-evm";
+import { Telos } from "./telos";
 
 export const getIconByChainId = (chainId: number): FC<SvgIconProps> | null => {
   switch (chainId) {
@@ -35,6 +36,9 @@ export const getIconByChainId = (chainId: number): FC<SvgIconProps> | null => {
     case 13371:
     case 13473:
       return ImmutableZkEVM;
+    case 40:
+    case 41:
+      return Telos;
     default:
       return null;
   }
