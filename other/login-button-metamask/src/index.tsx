@@ -9,11 +9,15 @@ import { useUser } from "@gemunion/provider-user";
 import { MetaMaskIcon, useConnectMetamask } from "@gemunion/provider-wallet";
 import { useApiCall } from "@gemunion/react-hooks";
 import { useMetamask } from "@gemunion/react-hooks-eth";
-import type { IMetamaskDto, IWalletLoginButtonProps } from "@gemunion/types-jwt";
+import type { IMetamaskDto } from "@gemunion/types-jwt";
 
 import { StyledButton } from "./styled";
 
-export const MetamaskLoginButton: FC<IWalletLoginButtonProps> = props => {
+export interface IMetamaskLoginButtonProps {
+  onWalletVerified: (token: string) => Promise<void>;
+}
+
+export const MetamaskLoginButton: FC<IMetamaskLoginButtonProps> = props => {
   const { onWalletVerified } = props;
   const [data, setData] = useState<IMetamaskDto>({ nonce: "", signature: "", wallet: "" });
 

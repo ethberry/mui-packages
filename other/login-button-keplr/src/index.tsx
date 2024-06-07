@@ -1,6 +1,5 @@
 import { FC, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import { StdSignature } from "@keplr-wallet/types";
 import { v4 } from "uuid";
 
 import { phrase } from "@gemunion/constants";
@@ -9,23 +8,25 @@ import { useUser } from "@gemunion/provider-user";
 import { KeplrIcon, useCosmos } from "@gemunion/provider-cosmos";
 import { useApiCall } from "@gemunion/react-hooks";
 import { useKeplr } from "@gemunion/react-hooks-cosmos";
-import type { IKeplrDto, IWalletLoginButtonProps } from "@gemunion/types-jwt";
+import type { IKeplrDto } from "@gemunion/types-jwt";
 
 import { StyledButton } from "./styled";
 
-const emptySignature: StdSignature = {
-  pub_key: {
-    type: "",
-    value: "",
-  },
-  signature: "",
-};
+export interface IKeplrLoginButtonProps {
+  onWalletVerified: (token: string) => Promise<void>;
+}
 
-export const KeplrLoginButton: FC<IWalletLoginButtonProps> = props => {
+export const KeplrLoginButton: FC<IKeplrLoginButtonProps> = props => {
   const { onWalletVerified } = props;
   const [data, setData] = useState<IKeplrDto>({
     nonce: "",
-    signature: emptySignature,
+    signature: {
+      pub_key: {
+        type: "",
+        value: "",
+      },
+      signature: "",
+    },
     wallet: "",
     chainPrefix: "",
   });
@@ -93,7 +94,18 @@ export const KeplrLoginButton: FC<IWalletLoginButtonProps> = props => {
   }, [userIsAuthenticated]);
 
   useEffect(() => {
-    setData({ nonce: v4(), signature: emptySignature, wallet: account, chainPrefix: "" });
+    setData({
+      nonce: v4(),
+      signature: {
+        pub_key: {
+          type: "",
+          value: "",
+        },
+        signature: "",
+      },
+      wallet: account,
+      chainPrefix: "",
+    });
   }, [account]);
 
   return (

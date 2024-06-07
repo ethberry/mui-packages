@@ -11,13 +11,17 @@ import { useUser } from "@gemunion/provider-user";
 import { getParticleButtonIcon, ParticleIcon, useConnectParticle } from "@gemunion/provider-wallet";
 import { useApiCall } from "@gemunion/react-hooks";
 import { useMetamask } from "@gemunion/react-hooks-eth";
-import type { IMetamaskDto, IWalletLoginButtonProps } from "@gemunion/types-jwt";
+import type { IParticleDto } from "@gemunion/types-jwt";
 
 import { StyledButton, StyledMenu } from "./styled";
 
-export const ParticleLoginButton: FC<IWalletLoginButtonProps> = props => {
+export interface IParticleLoginButtonProps {
+  onWalletVerified: (token: string) => Promise<void>;
+}
+
+export const ParticleLoginButton: FC<IParticleLoginButtonProps> = props => {
   const { onWalletVerified } = props;
-  const [data, setData] = useState<IMetamaskDto>({ nonce: v4(), signature: "", wallet: "" });
+  const [data, setData] = useState<IParticleDto>({ nonce: "", signature: "", wallet: "" });
 
   const { account } = useWeb3React();
 
@@ -34,10 +38,10 @@ export const ParticleLoginButton: FC<IWalletLoginButtonProps> = props => {
   };
 
   const { fn: getVerifiedToken, isLoading } = useApiCall(
-    (api, values: IMetamaskDto) => {
+    (api, values: IParticleDto) => {
       return api
         .fetchJson({
-          url: "/metamask/login",
+          url: "/particle/login",
           method: "POST",
           data: values,
         })
