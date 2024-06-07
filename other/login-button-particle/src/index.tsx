@@ -12,14 +12,11 @@ import { getParticleButtonIcon, ParticleIcon, useConnectParticle } from "@gemuni
 import { useApiCall } from "@gemunion/react-hooks";
 import { useMetamask } from "@gemunion/react-hooks-eth";
 import type { IParticleDto } from "@gemunion/types-jwt";
+import type { IFirebaseLoginButtonProps } from "@gemunion/firebase-login";
 
 import { StyledButton, StyledMenu } from "./styled";
 
-export interface IParticleLoginButtonProps {
-  onWalletVerified: (token: string) => Promise<void>;
-}
-
-export const ParticleLoginButton: FC<IParticleLoginButtonProps> = props => {
+export const ParticleLoginButton: FC<IFirebaseLoginButtonProps> = props => {
   const { onWalletVerified } = props;
   const [data, setData] = useState<IParticleDto>({ nonce: "", signature: "", wallet: "" });
 

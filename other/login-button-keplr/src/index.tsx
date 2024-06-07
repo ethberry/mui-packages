@@ -9,14 +9,11 @@ import { KeplrIcon, useCosmos } from "@gemunion/provider-cosmos";
 import { useApiCall } from "@gemunion/react-hooks";
 import { useKeplr } from "@gemunion/react-hooks-cosmos";
 import type { IKeplrDto } from "@gemunion/types-jwt";
+import type { IFirebaseLoginButtonProps } from "@gemunion/firebase-login";
 
 import { StyledButton } from "./styled";
 
-export interface IKeplrLoginButtonProps {
-  onWalletVerified: (token: string) => Promise<void>;
-}
-
-export const KeplrLoginButton: FC<IKeplrLoginButtonProps> = props => {
+export const KeplrLoginButton: FC<IFirebaseLoginButtonProps> = props => {
   const { onWalletVerified } = props;
   const [data, setData] = useState<IKeplrDto>({
     nonce: "",

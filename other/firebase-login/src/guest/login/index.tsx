@@ -21,9 +21,9 @@ import firebase from "@gemunion/firebase";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useLicense } from "@gemunion/provider-license";
 import { useUser } from "@gemunion/provider-user";
-import type { IWalletLoginButtonProps } from "@gemunion/types-jwt";
 
 import { StyledContainer, StyledFirebaseAuthForm } from "./styled";
+import type { IFirebaseLoginButtonProps } from "../../types";
 
 export enum PROVIDERS {
   email = "email",
@@ -44,7 +44,7 @@ export const providersStore = {
 
 export interface IFirebaseLogin {
   providers?: PROVIDERS[];
-  wallets?: Array<FC<IWalletLoginButtonProps>>;
+  wallets?: Array<FC<IFirebaseLoginButtonProps>>;
   withEmail?: boolean;
 }
 
