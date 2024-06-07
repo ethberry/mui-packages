@@ -11,17 +11,17 @@
     "@gemunion/mui-inputs-core": "7.2.86",
     "@gemunion/provider-test-id": "1.0.79",
     "@mui/styles": "5.15.17",
-    "react-number-format": "5.3.4"
+    "react-number-format": "5.4.0"
   },
   "description": "react widget",
   "devDependencies": {
     "@mui/material": "5.15.17",
-    "@storybook/react": "8.1.1",
-    "@types/react": "18.3.2",
+    "@storybook/react": "8.1.6",
+    "@types/react": "18.3.3",
     "ethers": "5.7.2",
     "react": "18.3.1",
-    "react-hook-form": "7.51.4",
-    "react-intl": "6.6.6"
+    "react-hook-form": "7.51.5",
+    "react-intl": "6.6.8"
   },
   "engines": {
     "node": ">=18"

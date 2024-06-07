@@ -10,10 +10,10 @@
   "description": "react coin gecko provider",
   "devDependencies": {
     "@gemunion/provider-license": "3.0.47",
-    "@types/react": "18.3.2",
+    "@types/react": "18.3.3",
     "notistack": "3.0.1",
     "react": "18.3.1",
-    "react-intl": "6.6.6"
+    "react-intl": "6.6.8"
   },
   "engines": {
     "node": ">=18"
