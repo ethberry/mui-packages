@@ -18,7 +18,8 @@ const i18n = {
   "form.placeholders.number": "50",
 };
 
-const AllTheProviders: FC<PropsWithChildren> = ({ children }) => {
+const AllTheProviders: FC<PropsWithChildren> = props => {
+  const { children } = props;
   return (
     <MemoryRouter>
       <ThemeProvider theme={createTheme()}>

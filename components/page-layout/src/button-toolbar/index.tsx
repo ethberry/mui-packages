@@ -10,10 +10,11 @@ export interface IButtonToolbarProps {
   justifyContent?: Property.JustifyContent;
 }
 
-export const ButtonToolbar: FC<PropsWithChildren<IButtonToolbarProps>> = ({ children = [], ...props }) => {
+export const ButtonToolbar: FC<PropsWithChildren<IButtonToolbarProps>> = props => {
+  const { children, className, justifyContent = "flex-end" } = props;
+
   const classes = useStyles();
 
-  const { className, justifyContent = "flex-end" } = props;
   return (
     <Grid container justifyContent={justifyContent} className={className}>
       {Children.map(children as Array<any>, (button: ReactElement<ButtonProps>) =>
