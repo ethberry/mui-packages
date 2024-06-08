@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.43 (2024-06-08)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([0ab4c69](https://github.com/gemunion/mui-packages/commit/0ab4c69f1793db11797e52f0a168b86e7df4892f))
+- **deps:** update all non-major dependencies ([72b803b](https://github.com/gemunion/mui-packages/commit/72b803bbc8bf4c12212ff5aedbf1c57bac8f6062))
+- **deps:** update dependency @keplr-wallet/types to v0.12.100 ([b0f8e96](https://github.com/gemunion/mui-packages/commit/b0f8e961b9a2c5b021e46079f0ae49aafa2837c0))
+
 ## [1.1.42](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-cosmos@1.1.41...@gemunion/react-hooks-cosmos@1.1.42) (2024-06-07)
 
 ### Bug Fixes

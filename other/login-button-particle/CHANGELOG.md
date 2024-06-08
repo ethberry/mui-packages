@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.20 (2024-06-08)
+
+### Bug Fixes
+
+- add particle type ([f34e014](https://github.com/gemunion/mui-packages/commit/f34e01475e0b7c03e77e4936f6aa13e3b268f153))
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([0ab4c69](https://github.com/gemunion/mui-packages/commit/0ab4c69f1793db11797e52f0a168b86e7df4892f))
+- **deps:** update all non-major dependencies ([72b803b](https://github.com/gemunion/mui-packages/commit/72b803bbc8bf4c12212ff5aedbf1c57bac8f6062))
+- fireabase button type ([cfee29a](https://github.com/gemunion/mui-packages/commit/cfee29a66219d9be5dc65d78f2fdcb7526166d28))
+
 ## [1.2.19](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-particle@1.2.18...@gemunion/login-button-particle@1.2.19) (2024-06-07)
 
 ### Bug Fixes

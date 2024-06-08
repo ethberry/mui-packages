@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.3.35 (2024-06-08)
+
+### Bug Fixes
+
+- argument destruction ([24266e7](https://github.com/gemunion/mui-packages/commit/24266e705da999a443fe8eb5855d7301be77c822))
+- **deps:** update all non-major dependencies ([72b803b](https://github.com/gemunion/mui-packages/commit/72b803bbc8bf4c12212ff5aedbf1c57bac8f6062))
+
 ## [2.3.34](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-page-layout@2.3.33...@gemunion/mui-page-layout@2.3.34) (2024-06-07)
 
 ### Bug Fixes
