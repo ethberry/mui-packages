@@ -1,4 +1,5 @@
 import type { ICollectionState } from "./interfaces";
+import { CollectionActions } from "./interfaces";
 
 export const emptyCollectionState: ICollectionState = {
   needRefresh: false,
@@ -7,6 +8,7 @@ export const emptyCollectionState: ICollectionState = {
   isViewDialogOpen: false,
   isEditDialogOpen: false,
   isDeleteDialogOpen: false,
+  action: CollectionActions.search,
   didMount: false,
   search: {},
   rows: [],

@@ -6,12 +6,14 @@ import { parse, stringify } from "qs";
 
 import { defaultItemsPerPage } from "@gemunion/constants";
 import { ApiError } from "@gemunion/provider-api";
-import { collectionActions, useAppDispatch, useAppSelector } from "@gemunion/redux";
+import { CollectionActions, collectionActions, useAppDispatch, useAppSelector } from "@gemunion/redux";
 import { IIdBase, IPaginationResult, IPaginationDto, ISortDto, IMuiSortDto } from "@gemunion/types-collection";
 
 import { useApiCall } from "./use-api-call";
 import { useDeepCompareEffect } from "./use-deep-compare-effect";
 import { decoder, deepEqual, hasAwaited } from "./utils";
+
+export { CollectionActions } from "@gemunion/redux";
 
 export interface IHandleChangePaginationModelProps {
   page: number;
@@ -33,7 +35,10 @@ const defaultRedirect = <S extends IPaginationDto>(
   baseUrl: string,
   search: Omit<S, "skip" | "take" | "order">,
   id?: number,
-) => (id ? `${baseUrl}/${id}` : `${baseUrl}?${stringify(search)}`);
+  action?: CollectionActions,
+) => {
+  return id ? `${baseUrl}/${id}/${action}` : `${baseUrl}?${stringify(search)}`;
+};
 
 export const useCollection = <
   T extends IIdBase = IIdBase,
@@ -51,6 +56,7 @@ export const useCollection = <
   } = options;
 
   const { id } = embedded ? { id: "" } : useParams<{ id: string }>();
+  const { action: defaultAction } = embedded ? { action: "" } : useParams<{ action: CollectionActions }>();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -72,6 +78,7 @@ export const useCollection = <
     setIsViewDialogOpen,
     setIsEditDialogOpen,
     setIsDeleteDialogOpen,
+    setAction,
     setDidMount,
     setRows,
     setCount,
@@ -90,6 +97,7 @@ export const useCollection = <
     isDeleteDialogOpen,
     didMount,
     count,
+    action,
     rows: stateRows,
     selected: stateSelected,
     search: stateSearch,
@@ -106,7 +114,7 @@ export const useCollection = <
     } as Partial<S>),
   );
 
-  const updateQS = (id?: number) => {
+  const updateQS = (id?: number, action?: CollectionActions) => {
     const { skip: _skip, take: _take, order: _order, ...rest } = search;
     const sameSearch = !id && location.search && deepEqual(rest, getSearchParams(data));
 
@@ -116,7 +124,7 @@ export const useCollection = <
 
     const shouldReplace = !location.search || location.search === "?" || !id;
 
-    navigate(redirect(baseUrl, rest, id), {
+    navigate(redirect(baseUrl, rest, id, action), {
       replace: shouldReplace,
     });
   };
@@ -156,6 +164,7 @@ export const useCollection = <
       dispatch(setSelected(json));
       dispatch(setIsEditDialogOpen(true));
       dispatch(setIsViewDialogOpen(true));
+      dispatch(setAction(defaultAction));
     });
   };
 
@@ -185,6 +194,7 @@ export const useCollection = <
   const handleCreate = (): void => {
     dispatch(setSelected(empty as T));
     dispatch(setIsEditDialogOpen(true));
+    dispatch(setAction(CollectionActions.edit));
   };
 
   const handleView = (item: T): (() => void) => {
@@ -192,17 +202,20 @@ export const useCollection = <
       dispatch(setSelected(item));
       dispatch(setCount(1));
       dispatch(setIsViewDialogOpen(true));
-      updateQS(item.id);
+      dispatch(setAction(CollectionActions.view));
+      updateQS(item.id, CollectionActions.view);
     };
   };
 
   const handleViewConfirm = (): void => {
     dispatch(setIsViewDialogOpen(false));
+    dispatch(setAction(CollectionActions.search));
     updateQS();
   };
 
   const handleViewCancel = (): void => {
     dispatch(setIsViewDialogOpen(false));
+    dispatch(setAction(CollectionActions.search));
     updateQS();
   };
 
@@ -211,12 +224,14 @@ export const useCollection = <
       dispatch(setSelected(item));
       dispatch(setCount(1));
       dispatch(setIsEditDialogOpen(true));
-      updateQS(item.id);
+      dispatch(setAction(CollectionActions.edit));
+      updateQS(item.id, CollectionActions.edit);
     };
   };
 
   const handleEditCancel = (): void => {
     dispatch(setIsEditDialogOpen(false));
+    dispatch(setAction(CollectionActions.search));
     updateQS();
   };
 
@@ -239,9 +254,13 @@ export const useCollection = <
         enqueueSnackbar(formatMessage({ id: id || values.id ? "snackbar.updated" : "snackbar.created" }), {
           variant: "success",
         });
-        dispatch(setIsEditDialogOpen(false));
         form.reset(values);
         return fetch();
+      })
+      .then(() => {
+        dispatch(setIsEditDialogOpen(false));
+        dispatch(setAction(CollectionActions.search));
+        updateQS();
       })
       .catch((e: ApiError) => {
         if (e.status === 400) {
@@ -263,11 +282,15 @@ export const useCollection = <
     return (): void => {
       dispatch(setSelected(item));
       dispatch(setIsDeleteDialogOpen(true));
+      dispatch(setAction(CollectionActions.delete));
+      updateQS(item.id, CollectionActions.delete);
     };
   };
 
   const handleDeleteCancel = (): void => {
     dispatch(setIsDeleteDialogOpen(false));
+    dispatch(setAction(CollectionActions.search));
+    updateQS();
   };
 
   const { fn: handleDeleteConfirmFn } = useApiCall(
@@ -296,6 +319,8 @@ export const useCollection = <
       })
       .finally(() => {
         dispatch(setIsDeleteDialogOpen(false));
+        dispatch(setAction(CollectionActions.search));
+        updateQS();
       });
   };
 
@@ -411,6 +436,7 @@ export const useCollection = <
     count,
     search,
     selected,
+    action,
 
     isLoading,
     isFiltersOpen,

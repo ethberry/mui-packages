@@ -2,6 +2,7 @@ import { PayloadAction, createSlice, type Slice } from "@reduxjs/toolkit";
 
 import { emptyCollectionState } from "./empty";
 import type { ICollectionState } from "./interfaces";
+import { CollectionActions } from "./interfaces";
 
 const initialState: ICollectionState = emptyCollectionState;
 
@@ -23,6 +24,9 @@ export const collectionSlice: Slice<ICollectionState> = createSlice({
     },
     setIsDeleteDialogOpen: (state, action: PayloadAction<boolean>) => {
       state.isDeleteDialogOpen = action.payload;
+    },
+    setAction: (state, action: PayloadAction<CollectionActions>) => {
+      state.action = action.payload;
     },
     setDidMount: (state, action: PayloadAction<boolean>) => {
       state.didMount = action.payload;
@@ -48,6 +52,7 @@ export const collectionSlice: Slice<ICollectionState> = createSlice({
       state.isViewDialogOpen = emptyCollectionState.isViewDialogOpen;
       state.isEditDialogOpen = emptyCollectionState.isEditDialogOpen;
       state.isDeleteDialogOpen = emptyCollectionState.isDeleteDialogOpen;
+      state.action = emptyCollectionState.action;
       state.didMount = emptyCollectionState.didMount;
       state.search = emptyCollectionState.search;
       state.rows = emptyCollectionState.rows;
