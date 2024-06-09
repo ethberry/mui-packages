@@ -75,9 +75,6 @@ export const useCollection = <
   const {
     setIsLoading,
     setIsFilterOpen,
-    setIsViewDialogOpen,
-    setIsEditDialogOpen,
-    setIsDeleteDialogOpen,
     setAction,
     setDidMount,
     setRows,
@@ -92,9 +89,6 @@ export const useCollection = <
   const {
     isLoading,
     isFiltersOpen,
-    isViewDialogOpen,
-    isEditDialogOpen,
-    isDeleteDialogOpen,
     didMount,
     count,
     action,
@@ -105,7 +99,7 @@ export const useCollection = <
   } = useAppSelector(state => state.collection);
 
   const selected = (Object.entries(stateSelected).length ? stateSelected : empty) as T;
-  const [search, setLocalSearch] = useState<S>(
+  const [localSearch, setLocalSearch] = useState<S>(
     getSearchParams({
       skip: 0,
       take: defaultItemsPerPage,
@@ -115,8 +109,8 @@ export const useCollection = <
   );
 
   const updateQS = (id?: number, action?: CollectionActions) => {
-    const { skip: _skip, take: _take, order: _order, ...rest } = search;
-    const sameSearch = !id && location.search && deepEqual(rest, getSearchParams(data));
+    const { skip: _skip, take: _take, order: _order, ...rest } = localSearch;
+    const sameSearch = !id && !!location.search && deepEqual(rest, getSearchParams(data));
 
     if (embedded || sameSearch) {
       return;
@@ -133,7 +127,7 @@ export const useCollection = <
     api => {
       return api.fetchJson({
         url: baseUrl,
-        data: search,
+        data: localSearch,
         signal: fetchByQueryAbortController.signal,
       });
     },
@@ -162,8 +156,6 @@ export const useCollection = <
       dispatch(setRows([json]));
       dispatch(setCount(1));
       dispatch(setSelected(json));
-      dispatch(setIsEditDialogOpen(true));
-      dispatch(setIsViewDialogOpen(true));
       dispatch(setAction(defaultAction));
     });
   };
@@ -193,7 +185,6 @@ export const useCollection = <
 
   const handleCreate = (): void => {
     dispatch(setSelected(empty as T));
-    dispatch(setIsEditDialogOpen(true));
     dispatch(setAction(CollectionActions.edit));
   };
 
@@ -201,20 +192,17 @@ export const useCollection = <
     return (): void => {
       dispatch(setSelected(item));
       dispatch(setCount(1));
-      dispatch(setIsViewDialogOpen(true));
       dispatch(setAction(CollectionActions.view));
       updateQS(item.id, CollectionActions.view);
     };
   };
 
   const handleViewConfirm = (): void => {
-    dispatch(setIsViewDialogOpen(false));
     dispatch(setAction(CollectionActions.search));
     updateQS();
   };
 
   const handleViewCancel = (): void => {
-    dispatch(setIsViewDialogOpen(false));
     dispatch(setAction(CollectionActions.search));
     updateQS();
   };
@@ -223,14 +211,12 @@ export const useCollection = <
     return (): void => {
       dispatch(setSelected(item));
       dispatch(setCount(1));
-      dispatch(setIsEditDialogOpen(true));
       dispatch(setAction(CollectionActions.edit));
       updateQS(item.id, CollectionActions.edit);
     };
   };
 
   const handleEditCancel = (): void => {
-    dispatch(setIsEditDialogOpen(false));
     dispatch(setAction(CollectionActions.search));
     updateQS();
   };
@@ -258,7 +244,6 @@ export const useCollection = <
         return fetch();
       })
       .then(() => {
-        dispatch(setIsEditDialogOpen(false));
         dispatch(setAction(CollectionActions.search));
         updateQS();
       })
@@ -281,14 +266,12 @@ export const useCollection = <
   const handleDelete = (item: T): (() => void) => {
     return (): void => {
       dispatch(setSelected(item));
-      dispatch(setIsDeleteDialogOpen(true));
       dispatch(setAction(CollectionActions.delete));
       updateQS(item.id, CollectionActions.delete);
     };
   };
 
   const handleDeleteCancel = (): void => {
-    dispatch(setIsDeleteDialogOpen(false));
     dispatch(setAction(CollectionActions.search));
     updateQS();
   };
@@ -318,7 +301,6 @@ export const useCollection = <
         }
       })
       .finally(() => {
-        dispatch(setIsDeleteDialogOpen(false));
         dispatch(setAction(CollectionActions.search));
         updateQS();
       });
@@ -335,8 +317,8 @@ export const useCollection = <
   const handleChangePage = (_e: ChangeEvent<unknown>, page: number) => {
     dispatch(
       setSearch({
-        ...search,
-        skip: (page - 1) * search.take,
+        ...localSearch,
+        skip: (page - 1) * localSearch.take,
       }),
     );
   };
@@ -344,7 +326,7 @@ export const useCollection = <
   const handleChangeRowsPerPage = (pageSize: number): void => {
     dispatch(
       setSearch({
-        ...search,
+        ...localSearch,
         skip: 0,
         take: pageSize,
       }),
@@ -355,7 +337,7 @@ export const useCollection = <
     const { page, pageSize } = model;
     dispatch(
       setSearch({
-        ...search,
+        ...localSearch,
         skip: page * pageSize,
         take: pageSize,
       }),
@@ -367,7 +349,7 @@ export const useCollection = <
       setSearch({
         ...values,
         skip: 0,
-        take: search.take,
+        take: localSearch.take,
       }),
     );
 
@@ -378,7 +360,7 @@ export const useCollection = <
   const handleChangeSortModel = (sortModel: ISortDto<T>[]): void => {
     dispatch(
       setSearch({
-        ...search,
+        ...localSearch,
         order: sortModel,
       }),
     );
@@ -401,18 +383,17 @@ export const useCollection = <
 
   useDeepCompareEffect(() => {
     if (!id) {
-      dispatch(setIsEditDialogOpen(false));
-      dispatch(setIsViewDialogOpen(false));
+      dispatch(setAction(CollectionActions.search));
     }
 
-    if (hasAwaited(search)) {
+    if (hasAwaited(localSearch)) {
       return;
     }
 
     void fetch(id);
 
     return () => fetchByQueryAbortController.abort();
-  }, [search, id]);
+  }, [localSearch, id]);
 
   useEffect(() => {
     if (didMount && needRefresh) {
@@ -422,7 +403,16 @@ export const useCollection = <
   }, [didMount, needRefresh, id]);
 
   useLayoutEffect(() => {
-    dispatch(setSearch(getSearchParams(data)));
+    dispatch(
+      setSearch({
+        ...getSearchParams({
+          skip: 0,
+          take: defaultItemsPerPage,
+          ...data,
+        } as Partial<S>),
+        ...stateSearch,
+      }),
+    );
   }, [location.pathname]);
 
   useLayoutEffect(() => {
@@ -434,15 +424,12 @@ export const useCollection = <
   return {
     rows: stateRows as T[],
     count,
-    search,
+    search: localSearch,
     selected,
     action,
 
     isLoading,
     isFiltersOpen,
-    isViewDialogOpen,
-    isDeleteDialogOpen,
-    isEditDialogOpen,
 
     fetch,
     fetchById,
