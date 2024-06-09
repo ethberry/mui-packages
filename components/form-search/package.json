@@ -17,7 +17,7 @@
     "@mui/material": "5.15.19",
     "@storybook/react": "8.1.6",
     "@testing-library/jest-dom": "6.4.5",
-    "@testing-library/react": "14.3.1",
+    "@testing-library/react": "16.0.0",
     "@types/jest": "29.5.12",
     "@types/react": "18.3.3",
     "@types/whatwg-fetch": "0.0.33",
