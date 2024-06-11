@@ -19,7 +19,6 @@ export interface IParticleConnectConstructorArgs {
 const PARTICLE_PROJECT_ID = process.env.PARTICLE_PROJECT_ID;
 const PARTICLE_CLIENT_KEY = process.env.PARTICLE_CLIENT_KEY;
 const PARTICLE_APP_ID = process.env.PARTICLE_APP_ID;
-
 /* javascript-obfuscator:enable */
 
 export class ParticleAuth extends Connector {
@@ -68,7 +67,9 @@ export class ParticleAuth extends Connector {
 
   // eslint-disable-next-line @typescript-eslint/require-await
   private async isomorphicInitialize() {
-    if (this.eagerConnection) return;
+    if (this.eagerConnection) {
+      return;
+    }
     if (typeof window !== "undefined") {
       this.particle = new ParticleNetwork(this.options);
       this.provider = new ParticleProvider(this.particle.auth);
