@@ -1,6 +1,6 @@
 import { FC, MouseEvent, useEffect, useState } from "react";
 import { Box, MenuItem } from "@mui/material";
-import { KeyboardArrowDown } from "@mui/icons-material";
+import { KeyboardArrowDown, Facebook, Google } from "@mui/icons-material";
 import { useWeb3React, Web3ContextType } from "@web3-react/core";
 import { FormattedMessage } from "react-intl";
 import { v4 } from "uuid";
@@ -8,7 +8,7 @@ import { v4 } from "uuid";
 import { phrase } from "@gemunion/constants";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useUser } from "@gemunion/provider-user";
-import { getParticleButtonIcon, ParticleIcon, useConnectParticle } from "@gemunion/provider-wallet";
+import { ParticleIcon, useConnectParticle } from "@gemunion/provider-wallet";
 import { useApiCall } from "@gemunion/react-hooks";
 import { useMetamask } from "@gemunion/react-hooks-eth";
 import type { IParticleDto } from "@gemunion/types-jwt";
@@ -120,11 +120,11 @@ export const ParticleLoginButton: FC<IFirebaseLoginButtonProps> = props => {
           elevation={0}
         >
           <MenuItem onClick={() => handleClick("google")} disabled={isVerifying}>
-            {getParticleButtonIcon("google")}
+            <Google sx={{ color: "#EA4335" }} />
             <FormattedMessage id="pages.guest.signInWith.google" />
           </MenuItem>
           <MenuItem onClick={() => handleClick("facebook")} disabled={isVerifying}>
-            {getParticleButtonIcon("facebook")}
+            <Facebook sx={{ color: "#4267B2" }} />
             <FormattedMessage id="pages.guest.signInWith.facebook" />
           </MenuItem>
         </StyledMenu>
