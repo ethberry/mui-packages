@@ -1,5 +1,5 @@
 import { FC, MouseEvent, useEffect, useState } from "react";
-import { Box, Divider, MenuItem } from "@mui/material";
+import { Box, MenuItem } from "@mui/material";
 import { KeyboardArrowDown } from "@mui/icons-material";
 import { useWeb3React, Web3ContextType } from "@web3-react/core";
 import { FormattedMessage } from "react-intl";
@@ -98,7 +98,6 @@ export const ParticleLoginButton: FC<IFirebaseLoginButtonProps> = props => {
   return (
     <ProgressOverlay isLoading={isLoading}>
       <Box sx={{ display: "flex", flexDirection: "column", mx: "auto", width: "100%", maxWidth: 220, my: 3 }}>
-        <Divider sx={{ width: "100%" }} />
         <StyledButton
           id="particle-button"
           aria-controls={open ? "particle-menu" : undefined}
