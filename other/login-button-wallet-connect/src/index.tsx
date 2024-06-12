@@ -82,7 +82,7 @@ export const WalletConnectLoginButton: FC<IFirebaseLoginButtonProps> = props => 
         disabled={isVerifying}
         fullWidth
       >
-        <FormattedMessage id="pages.guest.signInWith.metamask" />
+        <FormattedMessage id="pages.guest.signInWith.walletConnect" />
       </StyledButton>
     </ProgressOverlay>
   );
