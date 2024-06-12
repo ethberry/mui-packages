@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.21](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.7.20...@gemunion/provider-wallet@3.7.21) (2024-06-12)
+
+### Bug Fixes
+
+- add telos icon ([70bf8d4](https://github.com/gemunion/mui-packages/commit/70bf8d4ec788e49ce0bbf284e494726f69bb05b6))
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([0ab4c69](https://github.com/gemunion/mui-packages/commit/0ab4c69f1793db11797e52f0a168b86e7df4892f))
+- **deps:** update all non-major dependencies ([72b803b](https://github.com/gemunion/mui-packages/commit/72b803bbc8bf4c12212ff5aedbf1c57bac8f6062))
+- **deps:** update dependency @particle-network/chains to v1.4.14 ([7c50131](https://github.com/gemunion/mui-packages/commit/7c5013130154c2e2b9640e2cdbbcfa259e142079))
+
 ## 3.7.20 (2024-06-08)
 
 ### Bug Fixes

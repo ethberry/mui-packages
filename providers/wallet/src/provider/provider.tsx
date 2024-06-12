@@ -82,6 +82,8 @@ export const WalletProvider: FC<PropsWithChildren> = props => {
   useEffect(() => {
     if (profile?.chainId && networks[profile.chainId]) {
       dispatch(setNetwork(networks[profile.chainId]));
+    } else {
+      dispatch(setNetwork(networks[56]));
     }
   }, [profile?.chainId, networks]);
 
