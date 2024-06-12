@@ -11,6 +11,10 @@ export interface IUseConnectWalletConnect {
   onClick?: () => void;
 }
 
+/* javascript-obfuscator:disable */
+const WALLET_CONNECT_DEFAULT_CHAIN_ID = Number(process.env.WALLET_CONNECT_DEFAULT_CHAIN_ID);
+/* javascript-obfuscator:enable */
+
 export const useConnectWalletConnect = (props: IUseConnectWalletConnect) => {
   const { onClick } = props;
 
@@ -24,7 +28,7 @@ export const useConnectWalletConnect = (props: IUseConnectWalletConnect) => {
   return useCallback(() => {
     return connectCallback(async () => {
       return walletConnect
-        .activate(network ? network.chainId : undefined)
+        .activate(network ? network.chainId : WALLET_CONNECT_DEFAULT_CHAIN_ID)
         .then(() => {
           dispatch(setActiveConnector(TConnectors.WALLETCONNECT));
           onClick && onClick();

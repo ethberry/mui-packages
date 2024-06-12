@@ -12,6 +12,8 @@ declare global {
       JSON_RPC_ADDR_SEPOLIA: string;
       JSON_RPC_ADDR_IMMUTABLE: string;
       JSON_RPC_ADDR_IMMUTABLE_TEST: string;
+      WALLET_CONNECT_DEFAULT_CHAIN_ID: string;
+      WALLET_CONNECT_PROJECT_ID: string;
       PARTICLE_PROJECT_ID: string;
       PARTICLE_CLIENT_KEY: string;
       PARTICLE_APP_ID: string;
