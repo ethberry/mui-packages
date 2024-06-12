@@ -78,7 +78,7 @@ export const WalletConnectLoginButton: FC<IFirebaseLoginButtonProps> = props => 
     <ProgressOverlay isLoading={isLoading}>
       <StyledButton
         onClick={handleClick}
-        startIcon={<WalletConnectIcon viewBox="9 5 50 50" />}
+        startIcon={<WalletConnectIcon viewBox="0 0 60 60" />}
         disabled={isVerifying}
         fullWidth
       >
