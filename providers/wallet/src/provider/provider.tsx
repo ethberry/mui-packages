@@ -16,6 +16,8 @@ import { Reconnect } from "../reconnect";
 import { CheckNetwork } from "../check-network";
 import { OnWalletConnect } from "../on-wallet-connect";
 
+const { useChainId } = walletConnectHooks;
+
 export const WalletProvider: FC<PropsWithChildren> = props => {
   const { children } = props;
 
@@ -24,6 +26,7 @@ export const WalletProvider: FC<PropsWithChildren> = props => {
   const { network, networks } = useAppSelector(state => state.wallet);
   const { setIsDialogOpen, setNetwork, setNetworks } = walletActions;
   const dispatch = useAppDispatch();
+  const chainId = useChainId();
 
   const [resolve, setResolve] = useState<((context: Web3ContextType) => void) | null>(null);
 
@@ -82,8 +85,12 @@ export const WalletProvider: FC<PropsWithChildren> = props => {
   useEffect(() => {
     if (profile?.chainId && networks[profile.chainId]) {
       dispatch(setNetwork(networks[profile.chainId]));
+    } else if (chainId) {
+      dispatch(setNetwork(networks[chainId]));
+    } else {
+      dispatch(setNetwork(networks[56]));
     }
-  }, [profile?.chainId, networks]);
+  }, [profile?.chainId, chainId, networks]);
 
   useEffect(() => {
     void fetchNetworks();

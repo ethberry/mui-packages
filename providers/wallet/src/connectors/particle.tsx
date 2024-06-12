@@ -106,7 +106,9 @@ export class ParticleAuth extends Connector {
     try {
       await this.isomorphicInitialize();
 
-      if (!this.provider || !this.connected) throw new Error("No existing connection");
+      if (!this.provider || !this.connected) {
+        throw new Error("No existing connection");
+      }
       const accounts = await this.provider.request({ method: "eth_accounts" });
       const chainId = await this.provider.request({ method: "eth_chainId" });
       this.actions.update({ chainId: Number(chainId), accounts });

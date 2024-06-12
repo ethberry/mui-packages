@@ -27,9 +27,11 @@ export const ParticleLoginButton: FC<IFirebaseLoginButtonProps> = props => {
   const [isVerifying, setIsVerifying] = useState<boolean>(false);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
+
   const handleOpen = (event: MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
