@@ -78,7 +78,7 @@ export const MetamaskLoginButton: FC<IFirebaseLoginButtonProps> = props => {
     <ProgressOverlay isLoading={isLoading}>
       <StyledButton
         onClick={handleClick}
-        startIcon={<MetaMaskIcon viewBox="9 5 50 50" />}
+        startIcon={<MetaMaskIcon viewBox="0 0 60 60" />}
         disabled={isVerifying}
         fullWidth
       >

@@ -3,3 +3,4 @@ export * from "./connectors";
 export * from "./wallet-icons";
 export * from "./hooks";
 export * from "./provider";
+export * from "./icon";

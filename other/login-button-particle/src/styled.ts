@@ -8,8 +8,8 @@ export const StyledButton = styled(Button)(({ theme }) => ({
   fontWeight: 500,
   height: "auto",
   lineHeight: "normal",
-  letterSpacing: "normal",
-  maxWidth: 220,
+  width: "100%",
+  maxWidth: 250,
   minHeight: 40,
   padding: theme.spacing(1),
   marginTop: theme.spacing(2),
@@ -21,6 +21,8 @@ export const StyledButton = styled(Button)(({ theme }) => ({
   "& .MuiButton-endIcon": {
     marginRight: theme.spacing(1),
     marginLeft: theme.spacing(1),
+    right: 0,
+    position: "absolute",
   },
 }));
 
@@ -28,7 +30,7 @@ export const StyledMenu = styled(Menu)(({ theme }) => ({
   "& .MuiPaper-root": {
     borderRadius: 6,
     marginTop: theme.spacing(1),
-    minWidth: 180,
+    minWidth: 250,
     color: theme.palette.mode === "light" ? "rgb(55, 65, 81)" : theme.palette.grey[300],
     boxShadow:
       "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",

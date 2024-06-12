@@ -9,7 +9,7 @@ export const StyledButton = styled(Button)(({ theme }) => ({
   height: "auto",
   lineHeight: "normal",
   letterSpacing: "normal",
-  maxWidth: 220,
+  maxWidth: 250,
   minHeight: 40,
   padding: theme.spacing(1),
   marginTop: theme.spacing(2),

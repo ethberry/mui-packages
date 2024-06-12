@@ -109,7 +109,7 @@ export const KeplrLoginButton: FC<IFirebaseLoginButtonProps> = props => {
     <ProgressOverlay isLoading={isLoading}>
       <StyledButton
         onClick={handleClick}
-        startIcon={<KeplrIcon viewBox="0 0 42 42" />}
+        startIcon={<KeplrIcon viewBox="0 0 60 60" />}
         disabled={isVerifying}
         fullWidth
       >

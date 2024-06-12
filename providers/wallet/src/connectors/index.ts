@@ -1,5 +1,5 @@
 import { MetaMask } from "@web3-react/metamask";
-import { WalletConnect } from "@web3-react/walletconnect";
+import { WalletConnect } from "@web3-react/walletconnect-v2";
 import type { Connector } from "@web3-react/types";
 
 import { TConnectors } from "@gemunion/redux";
