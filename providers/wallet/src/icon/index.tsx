@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { AccountBalanceWallet } from "@mui/icons-material";
 import { MetaMask } from "@web3-react/metamask";
-import { WalletConnect } from "@web3-react/walletconnect";
+import { WalletConnect } from "@web3-react/walletconnect-v2";
 import { useWeb3React } from "@web3-react/core";
 
 import { MetaMaskIcon, ParticleIcon, WalletConnectIcon, ZealIcon } from "../wallet-icons";
