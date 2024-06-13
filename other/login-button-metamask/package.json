@@ -10,6 +10,7 @@
   "dependencies": {
     "@gemunion/constants": "0.12.10",
     "@gemunion/firebase-login": "2.3.67",
+    "@gemunion/mui-icons": "1.1.59",
     "@gemunion/mui-page-layout": "2.3.38",
     "@gemunion/provider-wallet": "3.8.0",
     "@gemunion/react-hooks": "2.0.24",
