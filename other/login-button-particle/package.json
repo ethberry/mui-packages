@@ -20,9 +20,9 @@
   },
   "description": "react particle login button component",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.70",
+    "@gemunion/provider-api": "7.0.71",
     "@gemunion/provider-license": "3.0.48",
-    "@gemunion/provider-user": "6.0.76",
+    "@gemunion/provider-user": "6.0.77",
     "@mui/icons-material": "5.15.20",
     "@mui/material": "5.15.20",
     "@mui/styles": "5.15.20",
