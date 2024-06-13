@@ -19,7 +19,7 @@
     "@gemunion/types-jwt": "0.4.2",
     "@mui/icons-material": "5.15.20",
     "firebaseui": "6.1.0",
-    "uuid": "9.0.1"
+    "uuid": "10.0.0"
   },
   "description": "react component",
   "devDependencies": {

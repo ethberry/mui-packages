@@ -16,7 +16,7 @@
     "@gemunion/react-hooks-eth": "1.5.27",
     "@gemunion/types-collection": "1.5.14",
     "@mui/icons-material": "5.15.20",
-    "uuid": "9.0.1"
+    "uuid": "10.0.0"
   },
   "description": "react wallet-connect login button component",
   "devDependencies": {
