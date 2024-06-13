@@ -8,21 +8,21 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/constants": "0.12.8",
+    "@gemunion/constants": "0.12.10",
     "@gemunion/firebase-login": "2.3.65",
     "@gemunion/mui-page-layout": "2.3.36",
     "@gemunion/provider-wallet": "3.7.22",
     "@gemunion/react-hooks": "2.0.22",
     "@gemunion/react-hooks-eth": "1.5.27",
-    "@gemunion/types-collection": "1.5.14",
+    "@gemunion/types-collection": "1.5.16",
     "@mui/icons-material": "5.15.20",
     "uuid": "10.0.0"
   },
   "description": "react particle login button component",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.72",
-    "@gemunion/provider-license": "3.0.48",
-    "@gemunion/provider-user": "6.0.78",
+    "@gemunion/provider-api": "7.0.74",
+    "@gemunion/provider-license": "3.0.49",
+    "@gemunion/provider-user": "6.0.80",
     "@mui/icons-material": "5.15.20",
     "@mui/material": "5.15.20",
     "@mui/styles": "5.15.20",
