@@ -5,7 +5,7 @@ import { settingsSlice } from "./settings";
 import { walletSlice } from "./wallet";
 
 /* javascript-obfuscator:disable */
-const isProductionNodeEnv = process.env.NODE_ENV === "production";
+const nodeEnv = process.env.NODE_ENV;
 /* javascript-obfuscator:enable */
 
 export interface IStore {
@@ -20,7 +20,7 @@ export const store = configureStore<IStore>({
     settings: settingsSlice.reducer,
     wallet: walletSlice.reducer,
   },
-  devTools: !isProductionNodeEnv,
+  devTools: nodeEnv !== "production",
 });
 
 export type AppDispatch = typeof store.dispatch;
