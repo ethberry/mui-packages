@@ -15,7 +15,7 @@
   },
   "description": "react hooks",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.71",
+    "@gemunion/provider-api": "7.0.72",
     "@gemunion/provider-license": "3.0.48",
     "@gemunion/redux": "0.3.19",
     "notistack": "3.0.1",
