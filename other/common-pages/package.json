@@ -22,10 +22,10 @@
   "devDependencies": {
     "@gemunion/provider-api": "7.0.70",
     "@gemunion/provider-user": "6.0.76",
-    "@mui/icons-material": "5.15.19",
+    "@mui/icons-material": "5.15.20",
     "@mui/lab": "5.0.0-alpha.170",
-    "@mui/material": "5.15.19",
-    "@mui/styles": "5.15.19",
+    "@mui/material": "5.15.20",
+    "@mui/styles": "5.15.20",
     "@types/node": "20.14.2",
     "@types/react": "18.3.3",
     "notistack": "3.0.1",
