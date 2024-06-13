@@ -9,14 +9,14 @@ import { useUser } from "@gemunion/provider-user";
 import { WalletConnectIcon, useConnectWalletConnect } from "@gemunion/provider-wallet";
 import { useApiCall } from "@gemunion/react-hooks";
 import { useMetamask } from "@gemunion/react-hooks-eth";
-import type { IMetamaskDto } from "@gemunion/types-jwt";
+import type { IWalletConnectDto } from "@gemunion/types-jwt";
 import type { IFirebaseLoginButtonProps } from "@gemunion/firebase-login";
 
 import { StyledButton } from "./styled";
 
 export const WalletConnectLoginButton: FC<IFirebaseLoginButtonProps> = props => {
   const { onWalletVerified } = props;
-  const [data, setData] = useState<IMetamaskDto>({ nonce: "", signature: "", wallet: "" });
+  const [data, setData] = useState<IWalletConnectDto>({ nonce: "", signature: "", wallet: "" });
 
   const { account } = useWeb3React();
   const user = useUser<any>();
@@ -24,10 +24,10 @@ export const WalletConnectLoginButton: FC<IFirebaseLoginButtonProps> = props => 
   const [isVerifying, setIsVerifying] = useState<boolean>(false);
 
   const { fn: getVerifiedToken, isLoading } = useApiCall(
-    (api, values: IMetamaskDto) => {
+    (api, values: IWalletConnectDto) => {
       return api
         .fetchJson({
-          url: "/metamask/login",
+          url: "/wallet-connect/login",
           method: "POST",
           data: values,
         })
