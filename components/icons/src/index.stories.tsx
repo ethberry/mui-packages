@@ -1,11 +1,8 @@
 import { IconButton } from "@mui/material";
 import { StoryObj } from "@storybook/react";
 
-import { Gas } from "./gas";
-import { OpenSea } from "./open-sea";
-import { OneInch } from "./cryptoicons/1inch";
-import { Usdt } from "./cryptoicons/usdt";
-import { Uniswap } from "./cryptoicons/uniswap";
+import { Besu, Arbitrum, Binance, Ethereum, ImmutableZkEVM, Optimism, Polygon, Sepolia } from "./chains";
+import { MetaMaskIcon, ParticleIcon, WalletConnectIcon, ZealIcon } from "./wallets";
 
 export default {
   title: "Icons",
@@ -18,10 +15,28 @@ const SimpleTemplate: Story = {
   render: () => (
     <div>
       <IconButton>
-        <Gas />
+        <Besu />
       </IconButton>
       <IconButton>
-        <OpenSea />
+        <Arbitrum />
+      </IconButton>
+      <IconButton>
+        <Binance />
+      </IconButton>
+      <IconButton>
+        <Ethereum />
+      </IconButton>
+      <IconButton>
+        <ImmutableZkEVM />
+      </IconButton>
+      <IconButton>
+        <Optimism />
+      </IconButton>
+      <IconButton>
+        <Polygon />
+      </IconButton>
+      <IconButton>
+        <Sepolia />
       </IconButton>
     </div>
   ),
@@ -33,22 +48,16 @@ const CryptoiconsTemplate: Story = {
   render: () => (
     <div>
       <IconButton>
-        <OneInch />
+        <MetaMaskIcon />
       </IconButton>
       <IconButton>
-        <OneInch sx={{ fill: "#D82122" }} />
+        <ParticleIcon />
       </IconButton>
       <IconButton>
-        <Usdt />
+        <WalletConnectIcon />
       </IconButton>
       <IconButton>
-        <Usdt sx={{ fill: "#26A17B" }} />
-      </IconButton>
-      <IconButton>
-        <Uniswap />
-      </IconButton>
-      <IconButton>
-        <Uniswap sx={{ fill: "#FF007A" }} />
+        <ZealIcon />
       </IconButton>
     </div>
   ),

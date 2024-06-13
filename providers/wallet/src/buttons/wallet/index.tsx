@@ -11,7 +11,7 @@ import { WalletMenuDialog } from "../../dialogs/wallet";
 import { ConnectWallet } from "../../dialogs/connect";
 import { StyledButton, StyledTooltipContent } from "./styled";
 import { useWallet, WALLET_MENU_POPUP_TYPE } from "../../provider";
-import { WalletIcon } from "../../icons/wallet";
+import { WalletIcon } from "../../icons";
 
 export const WalletButton: FC<PropsWithChildren> = props => {
   const { children } = props;

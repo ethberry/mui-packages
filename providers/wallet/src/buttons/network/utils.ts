@@ -1,6 +1,6 @@
 import { Help } from "@mui/icons-material";
 
-import { getIconByChainId } from "../../icons/chains";
+import { getIconByChainId } from "../../icons/utils";
 
 export const getChainIconParams = (chainId: number) => {
   const chainIcon = getIconByChainId(chainId);

@@ -1,15 +1,17 @@
 import { FC } from "react";
 import { SvgIconProps } from "@mui/material";
 
-import { Arbitrum } from "./arbitrum";
-import { Besu } from "./besu";
-import { Binance } from "./binance";
-import { Ethereum } from "./ethereum";
-import { Optimism } from "./optimism";
-import { Polygon } from "./polygon";
-import { Sepolia } from "./sepolia";
-import { ImmutableZkEVM } from "./immutable-zk-evm";
-import { Telos } from "./telos";
+import {
+  Arbitrum,
+  Besu,
+  Binance,
+  Ethereum,
+  Optimism,
+  Polygon,
+  Sepolia,
+  ImmutableZkEVM,
+  Telos,
+} from "@gemunion/mui-icons";
 
 export const getIconByChainId = (chainId: number): FC<SvgIconProps> | null => {
   switch (chainId) {
