@@ -1,9 +1,9 @@
 import React, { Component, ErrorInfo, ReactNode } from "react";
-import { Alert, Box, IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 import { Refresh } from "@mui/icons-material";
 import { FormattedMessage } from "react-intl";
 
-import { StyledError } from "./styled";
+import { StyledAlert, StyledError, StyledPreBottom, StyledPreTop, StyledPreWrapper } from "./styled";
 
 interface IProps {
   children?: ReactNode;
@@ -14,6 +14,10 @@ interface IState {
   error: Error | null;
   errorInfo?: ErrorInfo | null;
 }
+
+/* javascript-obfuscator:disable */
+const nodeEnv = process.env.NODE_ENV;
+/* javascript-obfuscator:enable */
 
 export class ErrorBoundary extends Component<IProps, IState> {
   public state: IState = {
@@ -39,26 +43,23 @@ export class ErrorBoundary extends Component<IProps, IState> {
     if (this.state.hasError) {
       return (
         <StyledError>
-          <Alert
+          <StyledAlert
             severity="error"
-            sx={{ width: "100%", "& .MuiAlert-action": { pt: 0 } }}
             action={
               <IconButton size="small" onClick={this.reloadPage}>
                 <Refresh />
               </IconButton>
             }
           >
-            <FormattedMessage id={`alert.${process.env.NODE_ENV !== "production" ? "uncaughtError" : "knownError"}`} />
-          </Alert>
-          {process.env.NODE_ENV !== "production" ? (
-            <Box>
-              <Box component="pre" sx={{ mb: 0 }}>
-                {this.state.error?.toString() || ""}
-              </Box>
-              <Box component="pre" sx={{ mt: 0 }}>
+            <FormattedMessage id={`alert.${nodeEnv !== "production" ? "uncaughtError" : "knownError"}`} />
+          </StyledAlert>
+          {nodeEnv !== "production" ? (
+            <StyledPreWrapper>
+              <StyledPreTop component="pre">{this.state.error?.toString() || ""}</StyledPreTop>
+              <StyledPreBottom component="pre">
                 {this.state.errorInfo?.componentStack?.toString() || ""}
-              </Box>
-            </Box>
+              </StyledPreBottom>
+            </StyledPreWrapper>
           ) : null}
         </StyledError>
       );
