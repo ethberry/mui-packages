@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.21](https://github.com/gemunion/common-packages/compare/@gemunion/redux@0.3.20...@gemunion/redux@0.3.21) (2024-06-13)
+
+### Bug Fixes
+
+- code style ([43709f3](https://github.com/gemunion/common-packages/commit/43709f321e7c7d90eefbe737ce4f7240a6ed445b))
+
 ## 0.3.20 (2024-06-13)
 
 ### Bug Fixes

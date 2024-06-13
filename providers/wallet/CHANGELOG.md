@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.7.23...@gemunion/provider-wallet@3.8.0) (2024-06-13)
+
+### Bug Fixes
+
+- circular deps ([5d9b20f](https://github.com/gemunion/mui-packages/commit/5d9b20f080e62a5461570c5516b98cf05e8ba23b))
+
+### Features
+
+- move in components ([79fa63f](https://github.com/gemunion/mui-packages/commit/79fa63f7cf457a083d8f23ab7be28126c440986b))
+
 ## [3.7.23](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.7.22...@gemunion/provider-wallet@3.7.23) (2024-06-13)
 
 ### Bug Fixes

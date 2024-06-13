@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.24](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks@2.0.23...@gemunion/react-hooks@2.0.24) (2024-06-13)
+
+**Note:** Version bump only for package @gemunion/react-hooks
+
 ## 2.0.23 (2024-06-13)
 
 ### Bug Fixes
