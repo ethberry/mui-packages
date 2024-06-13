@@ -1,4 +1,4 @@
-import { FC, useCallback, useMemo } from "react";
+import { FC, PropsWithChildren, useCallback, useMemo } from "react";
 import { Badge, Box, Tooltip } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 import { useIntl } from "react-intl";
@@ -12,14 +12,9 @@ import { ConnectWallet } from "../../dialogs/connect";
 import { StyledButton, StyledTooltipContent } from "./styled";
 import { useWallet, WALLET_MENU_POPUP_TYPE } from "../../provider";
 import { WalletIcon } from "../../icons/wallet";
-import { IFirebaseLoginButtonProps } from "@gemunion/firebase-login";
 
-interface IWalletButtonProps {
-  wallets?: Array<FC<IFirebaseLoginButtonProps>>;
-}
-
-export const WalletButton: FC<IWalletButtonProps> = props => {
-  const { wallets = [] } = props;
+export const WalletButton: FC<PropsWithChildren> = props => {
+  const { children } = props;
 
   const { isOpenPopup, openPopup, closePopup } = usePopup();
   const { chainId, isActive, account } = useWeb3React();
@@ -71,7 +66,9 @@ export const WalletButton: FC<IWalletButtonProps> = props => {
           </Badge>
         </StyledButton>
       </Tooltip>
-      <ConnectWallet onClose={closeConnectWalletDialog} open={isDialogOpen} wallets={wallets} />
+      <ConnectWallet onClose={closeConnectWalletDialog} open={isDialogOpen}>
+        {children}
+      </ConnectWallet>
       <WalletMenuDialog onClose={handleCloseWalletDialog} open={isOpenPopup(WALLET_MENU_POPUP_TYPE)} />
     </Box>
   );

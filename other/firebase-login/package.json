@@ -12,7 +12,6 @@
     "@gemunion/firebase": "1.2.32",
     "@gemunion/mui-page-layout": "2.3.37",
     "@gemunion/provider-api": "7.0.74",
-    "@gemunion/provider-wallet": "3.7.23",
     "@gemunion/react-hooks": "2.0.23",
     "@gemunion/react-hooks-eth": "1.5.28",
     "@gemunion/types-collection": "1.5.16",
