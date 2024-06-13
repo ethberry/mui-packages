@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.20 (2024-06-13)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([442654d](https://github.com/gemunion/common-packages/commit/442654d06c754c31b953a87e86cb7d2d181bc0e9))
+
 ## 0.3.19 (2024-06-08)
 
 ### Bug Fixes

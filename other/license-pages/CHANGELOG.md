@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.1 (2024-06-13)
+
+**Note:** Version bump only for package @gemunion/license-pages
+
 # 1.3.0 (2024-06-08)
 
 ### Bug Fixes

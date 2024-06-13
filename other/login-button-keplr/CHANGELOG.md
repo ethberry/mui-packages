@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.56](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-keplr@1.1.55...@gemunion/login-button-keplr@1.1.56) (2024-06-13)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([442654d](https://github.com/gemunion/mui-packages/commit/442654d06c754c31b953a87e86cb7d2d181bc0e9))
+- **deps:** update all non-major dependencies ([9729f28](https://github.com/gemunion/mui-packages/commit/9729f288709350eab93b30263cbc7ef596e63a51))
+- **deps:** update dependency @keplr-wallet/types to v0.12.102 ([ad3caac](https://github.com/gemunion/mui-packages/commit/ad3caace79bdc468956b326e7099e640112061ec))
+
 ## [1.1.55](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-keplr@1.1.54...@gemunion/login-button-keplr@1.1.55) (2024-06-12)
 
 **Note:** Version bump only for package @gemunion/login-button-keplr
