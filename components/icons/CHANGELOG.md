@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.60 (2024-06-13)
+
+### Bug Fixes
+
+- use icons ([f22e5d5](https://github.com/gemunion/mui-packages/commit/f22e5d59fee787932ea511117b95c41363e20a6c))
+
 ## 1.1.59 (2024-06-13)
 
 ### Bug Fixes
