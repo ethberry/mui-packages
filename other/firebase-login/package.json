@@ -26,7 +26,7 @@
     "@gemunion/provider-api": "7.0.72",
     "@gemunion/provider-license": "3.0.48",
     "@gemunion/provider-user": "6.0.78",
-    "@keplr-wallet/types": "0.12.101",
+    "@keplr-wallet/types": "0.12.102",
     "@mui/material": "5.15.20",
     "@mui/styles": "5.15.20",
     "firebase": "10.12.2",
