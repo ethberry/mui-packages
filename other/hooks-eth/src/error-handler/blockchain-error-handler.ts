@@ -4,7 +4,7 @@ import { BlockchainErrorType, CustomErrorPrefix, IBlockchainError, SystemErrorPr
 import { panicErrorCodeToReason } from "./panic-code-handler";
 import { customErrorToReason } from "./custom-error-handler";
 
-export const parseBlockchainError = (error: string): IBlockchainError => {
+export const parseBlockchainError = (error: SystemErrorPrefix): IBlockchainError => {
   const isEmptyError = error === SystemErrorPrefix.EMPTY;
   const isSystemStringError = error.startsWith(SystemErrorPrefix.ERROR_STRING_PREFIX);
   const isSystemPanicError = error.startsWith(SystemErrorPrefix.PANIC_CODE_PREFIX);

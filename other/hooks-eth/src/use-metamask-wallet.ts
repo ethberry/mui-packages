@@ -10,7 +10,7 @@ import { useLicense } from "@gemunion/provider-license";
 import { useWallet } from "@gemunion/provider-wallet";
 
 import { IHandlerOptionsParams } from "./interfaces";
-import { BlockchainErrorType, parseBlockchainError } from "./error-handler";
+import { BlockchainErrorType, parseBlockchainError, SystemErrorPrefix } from "./error-handler";
 
 export const useMetamaskWallet = <T = any>(
   fn: (...args: Array<any>) => Promise<T>,
@@ -62,7 +62,7 @@ export const useMetamaskWallet = <T = any>(
             console.error(`[blockchain error]${errorType ? ` [${errorType}]` : ""}`, e.message);
           } else {
             if (e.error?.data?.data) {
-              const errorData = e.error?.data?.data as string;
+              const errorData = e.error?.data?.data as SystemErrorPrefix;
               const errorReason = parseBlockchainError(errorData);
               enqueueSnackbar(
                 errorReason.type === BlockchainErrorType.CUSTOM_ERROR
