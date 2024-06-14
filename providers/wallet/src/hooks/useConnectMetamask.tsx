@@ -8,9 +8,10 @@ import { TConnectors, useAppDispatch, useAppSelector, walletActions } from "@gem
 
 import { useWallet } from "../provider";
 import { metaMask } from "../connectors/meta-mask";
+// import { walletConnect } from "../connectors/wallet-connect";
 
 export interface IUseConnectMetamask {
-  onClick?: () => void;
+  onClick: () => Promise<void>;
 }
 
 export const useConnectMetamask = (props: IUseConnectMetamask) => {
@@ -41,26 +42,17 @@ export const useConnectMetamask = (props: IUseConnectMetamask) => {
         enqueueSnackbar(formatMessage({ id: "snackbar.web3NotDetected" }), notDetectedWeb3MessageConfig);
       }
 
-      const metamaskNetwork = network
-        ? {
-            chainId: network.chainId,
-            chainName: network.chainName,
-            rpcUrls: network.rpcUrls,
-            blockExplorerUrls: network.blockExplorerUrls,
-            nativeCurrency: network.nativeCurrency,
-          }
-        : undefined;
-
       return metaMask
-        .activate(metamaskNetwork)
+        .activate(network)
         .then(() => {
           dispatch(setActiveConnector(TConnectors.METAMASK));
-          onClick && onClick();
+          return onClick();
         })
-        .catch(e => {
-          console.error("error", e);
+        .catch(async e => {
+          console.error(e);
+          await metaMask.resetState();
           dispatch(setActiveConnector(null));
-          if (e && e.code === 4001) {
+          if (e.message === "User rejected the request.") {
             enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
           } else if (e instanceof NoMetaMaskError) {
             enqueueSnackbar(formatMessage({ id: "snackbar.web3NotDetected" }), notDetectedWeb3MessageConfig);

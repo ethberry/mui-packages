@@ -9,11 +9,11 @@ import { useWallet } from "../provider";
 import { particleAuth } from "../connectors/particle";
 
 export interface IUseConnectParticle {
-  onClick?: () => void;
+  onClick: () => Promise<void>;
 }
 
 export const useConnectParticle = (props: IUseConnectParticle) => {
-  const { onClick = () => {} } = props;
+  const { onClick } = props;
 
   const { formatMessage } = useIntl();
   const { activeConnector, network } = useAppSelector(state => state.wallet);
@@ -28,12 +28,17 @@ export const useConnectParticle = (props: IUseConnectParticle) => {
           .activate({ preferredAuthType: type })
           .then(() => {
             dispatch(setActiveConnector(TConnectors.PARTICLE));
-            onClick();
+            return onClick();
           })
-          .catch(e => {
+          .catch(async e => {
             console.error("error", e);
+            await particleAuth.deactivate?.();
             dispatch(setActiveConnector(null));
-            if (e && e.code === 4001) {
+            if (e.message === "isNotActive") {
+              enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
+            } else if (e.message === "The user rejected the request") {
+              enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
+            } else if (e.message === "The user cancel the operation") {
               enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
             } else {
               enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });

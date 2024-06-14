@@ -8,7 +8,7 @@ import { useWallet } from "../provider";
 import { walletConnect } from "../connectors/wallet-connect";
 
 export interface IUseConnectWalletConnect {
-  onClick?: () => void;
+  onClick: () => Promise<void>;
 }
 
 /* javascript-obfuscator:disable */
@@ -31,13 +31,20 @@ export const useConnectWalletConnect = (props: IUseConnectWalletConnect) => {
         .activate(network ? network.chainId : WALLET_CONNECT_DEFAULT_CHAIN_ID)
         .then(() => {
           dispatch(setActiveConnector(TConnectors.WALLETCONNECT));
-          onClick && onClick();
+          return onClick();
         })
-        .catch(e => {
-          console.error("error", e);
+        .catch(async e => {
+          console.error(e);
+          await walletConnect.deactivate?.();
           dispatch(setActiveConnector(null));
-          if (e && e.code === 4001) {
+          if (e.message === "isNotActive") {
+            enqueueSnackbar(formatMessage({ id: "snackbar.walletIsNotConnected" }), { variant: "error" });
+          } else if (e.message === "User rejected") {
             enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
+          } else if (e.message === "Connection request reset. Please try again.") {
+            enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
+          } else if (e.message === "User signature failure") {
+            enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "error" });
           } else {
             enqueueSnackbar(formatMessage({ id: "snackbar.blockchainError" }), { variant: "error" });
           }

@@ -19,7 +19,7 @@ export const walletSlice: Slice<IWalletState> = createSlice({
       state.activeConnector = action.payload;
       localStorage.setItem(STORE_CONNECTOR, JSON.stringify(action.payload));
     },
-    setNetwork: (state, action: PayloadAction<INetwork | null>) => {
+    setNetwork: (state, action: PayloadAction<INetwork | undefined>) => {
       state.network = action.payload;
     },
     setNetworks: (state, action: PayloadAction<Record<number, INetwork>>) => {

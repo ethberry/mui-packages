@@ -70,8 +70,8 @@ export const KeplrLoginButton: FC<IFirebaseLoginButtonProps> = props => {
 
         const token = await getVerifiedToken(void 0, { wallet, nonce: data.nonce, signature, chainPrefix });
         await onWalletVerified(token?.token || "");
-      } catch (error) {
-        console.error(error);
+      } catch (e) {
+        console.error(e);
         setIsVerifying(false);
       }
     },
