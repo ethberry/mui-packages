@@ -1,61 +1,20 @@
-import { FC, MouseEvent, useEffect, useState, useRef } from "react";
+import { FC, MouseEvent, useEffect, useState } from "react";
 import { MenuItem } from "@mui/material";
 import { Facebook, Google, KeyboardArrowDown } from "@mui/icons-material";
 import { useWeb3React, Web3ContextType } from "@web3-react/core";
-import { FormattedMessage, useIntl } from "react-intl";
+import { FormattedMessage } from "react-intl";
 import { v4 } from "uuid";
-import { enqueueSnackbar } from "notistack";
 
 import { phrase } from "@gemunion/constants";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useUser } from "@gemunion/provider-user";
-import { useConnectParticle } from "@gemunion/provider-wallet";
+import { useConnectParticle, useWalletInit } from "@gemunion/provider-wallet";
 import { ParticleIcon } from "@gemunion/mui-icons";
 import { useApiCall } from "@gemunion/react-hooks";
 import type { IParticleDto } from "@gemunion/types-jwt";
 import type { IFirebaseLoginButtonProps } from "@gemunion/firebase-login";
 
 import { StyledButton, StyledMenu } from "./styled";
-import { IHandlerOptionsParams } from "@gemunion/react-hooks-eth/dist/interfaces";
-
-export const useMetamaskWallet = <T = any,>(
-  fn: (...args: Array<any>) => Promise<T>,
-  options: IHandlerOptionsParams = {},
-) => {
-  const web3ContextGlobal = useWeb3React();
-  const { account, chainId, connector, isActive } = web3ContextGlobal;
-  const web3ContextRef = useRef(web3ContextGlobal);
-
-  const { formatMessage } = useIntl();
-  const { success = true } = options;
-
-  useEffect(() => {
-    web3ContextRef.current = web3ContextGlobal;
-  }, [account, chainId, connector, isActive]);
-
-  return async (...args: Array<any>): Promise<T> => {
-    if (!web3ContextRef.current.isActive) {
-      return Promise.reject(new Error("isNotActive"));
-    }
-
-    return fn(...args, web3ContextRef.current).then((transaction: any) => {
-      if (success && transaction !== null) {
-        enqueueSnackbar(formatMessage({ id: "snackbar.transactionSent" }, { txHash: transaction.hash }), {
-          variant: "info",
-        });
-      }
-      return transaction as T;
-    });
-  };
-};
-
-export const useMetamask = (fn: (...args: Array<any>) => Promise<any>, options: IHandlerOptionsParams = {}) => {
-  const metaFn = useMetamaskWallet(fn, options);
-
-  return (...args: Array<any>) => {
-    return metaFn(...args) as Promise<void>;
-  };
-};
 
 export const ParticleLoginButton: FC<IFirebaseLoginButtonProps> = props => {
   const { onWalletVerified } = props;
@@ -93,37 +52,34 @@ export const ParticleLoginButton: FC<IFirebaseLoginButtonProps> = props => {
     { success: false },
   );
 
-  const handleLogin = useMetamask(
-    async (web3Context: Web3ContextType) => {
-      try {
-        setIsVerifying(true);
+  const handleLogin = useWalletInit(async (web3Context: Web3ContextType) => {
+    try {
+      setIsVerifying(true);
 
-        const wallet = web3Context.account!;
-        const provider = web3Context.provider!;
+      const wallet = web3Context.account!;
+      const provider = web3Context.provider!;
 
-        const signature = await provider.getSigner().signMessage(`${phrase}${data.nonce}`);
+      const signature = await provider.getSigner().signMessage(`${phrase}${data.nonce}`);
 
-        setData({ ...data, wallet, signature });
+      setData({ ...data, wallet, signature });
 
-        const userInfo = window.particle?.auth?.getUserInfo?.();
+      const userInfo = window.particle?.auth?.getUserInfo?.();
 
-        const token = await getVerifiedToken(void 0, {
-          displayName: userInfo?.name,
-          imageUrl: userInfo?.avatar,
-          email: userInfo?.google_email || userInfo?.facebook_email,
-          wallet,
-          nonce: data.nonce,
-          signature,
-        });
-        await onWalletVerified(token?.token || "");
-      } catch (e) {
-        console.error(e);
-        setIsVerifying(false);
-        throw e;
-      }
-    },
-    { success: false, error: false },
-  );
+      const token = await getVerifiedToken(void 0, {
+        displayName: userInfo?.name,
+        imageUrl: userInfo?.avatar,
+        email: userInfo?.google_email || userInfo?.facebook_email,
+        wallet,
+        nonce: data.nonce,
+        signature,
+      });
+      await onWalletVerified(token?.token || "");
+    } catch (e) {
+      console.error(e);
+      setIsVerifying(false);
+      throw e;
+    }
+  });
 
   const handleClick = useConnectParticle({ onClick: handleLogin });
 
