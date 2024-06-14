@@ -6,10 +6,9 @@ import { v4 } from "uuid";
 import { phrase } from "@gemunion/constants";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useUser } from "@gemunion/provider-user";
-import { useConnectWalletConnect } from "@gemunion/provider-wallet";
+import { useConnectWalletConnect, useWalletInit } from "@gemunion/provider-wallet";
 import { WalletConnectIcon } from "@gemunion/mui-icons";
 import { useApiCall } from "@gemunion/react-hooks";
-import { useMetamask } from "@gemunion/react-hooks-eth";
 import type { IWalletConnectDto } from "@gemunion/types-jwt";
 import type { IFirebaseLoginButtonProps } from "@gemunion/firebase-login";
 
@@ -40,26 +39,24 @@ export const WalletConnectLoginButton: FC<IFirebaseLoginButtonProps> = props => 
     { success: false },
   );
 
-  const handleLogin = useMetamask(
-    async (web3Context: Web3ContextType) => {
-      try {
-        setIsVerifying(true);
+  const handleLogin = useWalletInit(async (web3Context: Web3ContextType) => {
+    try {
+      setIsVerifying(true);
 
-        const wallet = web3Context.account!;
-        const provider = web3Context.provider!;
+      const wallet = web3Context.account!;
+      const provider = web3Context.provider!;
 
-        const signature = await provider.getSigner().signMessage(`${phrase}${data.nonce}`);
-        setData({ ...data, wallet, signature });
+      const signature = await provider.getSigner().signMessage(`${phrase}${data.nonce}`);
+      setData({ ...data, wallet, signature });
 
-        const token = await getVerifiedToken(void 0, { wallet, nonce: data.nonce, signature });
-        await onWalletVerified(token?.token || "");
-      } catch (error) {
-        console.error(error);
-        setIsVerifying(false);
-      }
-    },
-    { success: false },
-  );
+      const token = await getVerifiedToken(void 0, { wallet, nonce: data.nonce, signature });
+      await onWalletVerified(token?.token || "");
+    } catch (e) {
+      console.error(e);
+      setIsVerifying(false);
+      throw e;
+    }
+  });
 
   const handleClick = useConnectWalletConnect({ onClick: handleLogin });
 

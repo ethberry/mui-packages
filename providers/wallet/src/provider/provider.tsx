@@ -37,9 +37,7 @@ export const WalletProvider: FC<PropsWithChildren> = props => {
     dispatch(setIsDialogOpen(true));
 
     return new Promise(_resolve => {
-      setResolve(() => {
-        return _resolve;
-      });
+      setResolve(() => _resolve);
     });
   };
 
@@ -72,12 +70,7 @@ export const WalletProvider: FC<PropsWithChildren> = props => {
     resetConnect();
   };
 
-  const connectCallback = useCallback(
-    async (fn: () => Promise<any>) => {
-      await fn();
-    },
-    [resolve],
-  );
+  const connectCallback = useCallback(async (fn: () => Promise<any>) => fn(), [resolve]);
 
   useEffect(() => {
     if (profile?.chainId && networks[profile.chainId]) {

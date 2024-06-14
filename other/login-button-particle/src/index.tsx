@@ -8,10 +8,9 @@ import { v4 } from "uuid";
 import { phrase } from "@gemunion/constants";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useUser } from "@gemunion/provider-user";
-import { useConnectParticle } from "@gemunion/provider-wallet";
+import { useConnectParticle, useWalletInit } from "@gemunion/provider-wallet";
 import { ParticleIcon } from "@gemunion/mui-icons";
 import { useApiCall } from "@gemunion/react-hooks";
-import { useMetamask } from "@gemunion/react-hooks-eth";
 import type { IParticleDto } from "@gemunion/types-jwt";
 import type { IFirebaseLoginButtonProps } from "@gemunion/firebase-login";
 
@@ -53,36 +52,34 @@ export const ParticleLoginButton: FC<IFirebaseLoginButtonProps> = props => {
     { success: false },
   );
 
-  const handleLogin = useMetamask(
-    async (web3Context: Web3ContextType) => {
-      try {
-        setIsVerifying(true);
+  const handleLogin = useWalletInit(async (web3Context: Web3ContextType) => {
+    try {
+      setIsVerifying(true);
 
-        const wallet = web3Context.account!;
-        const provider = web3Context.provider!;
+      const wallet = web3Context.account!;
+      const provider = web3Context.provider!;
 
-        const signature = await provider.getSigner().signMessage(`${phrase}${data.nonce}`);
+      const signature = await provider.getSigner().signMessage(`${phrase}${data.nonce}`);
 
-        setData({ ...data, wallet, signature });
+      setData({ ...data, wallet, signature });
 
-        const userInfo = window.particle?.auth?.getUserInfo?.();
+      const userInfo = window.particle?.auth?.getUserInfo?.();
 
-        const token = await getVerifiedToken(void 0, {
-          displayName: userInfo?.name,
-          imageUrl: userInfo?.avatar,
-          email: userInfo?.google_email || userInfo?.facebook_email,
-          wallet,
-          nonce: data.nonce,
-          signature,
-        });
-        await onWalletVerified(token?.token || "");
-      } catch (error) {
-        console.error(error);
-        setIsVerifying(false);
-      }
-    },
-    { success: false },
-  );
+      const token = await getVerifiedToken(void 0, {
+        displayName: userInfo?.name,
+        imageUrl: userInfo?.avatar,
+        email: userInfo?.google_email || userInfo?.facebook_email,
+        wallet,
+        nonce: data.nonce,
+        signature,
+      });
+      await onWalletVerified(token?.token || "");
+    } catch (e) {
+      console.error(e);
+      setIsVerifying(false);
+      throw e;
+    }
+  });
 
   const handleClick = useConnectParticle({ onClick: handleLogin });
 

@@ -3,7 +3,7 @@ import type { INetwork } from "@gemunion/types-blockchain";
 export interface IWalletState {
   isDialogOpen: boolean;
   activeConnector: TConnectors | null;
-  network: INetwork | null;
+  network: INetwork | undefined;
   networks: Record<number, INetwork>;
 }
 

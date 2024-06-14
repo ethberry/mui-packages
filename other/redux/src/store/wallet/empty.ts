@@ -6,6 +6,6 @@ const storedConnector = localStorage.getItem(STORE_CONNECTOR);
 export const emptyWalletState: IWalletState = {
   isDialogOpen: false,
   activeConnector: storedConnector ? (JSON.parse(storedConnector) as TConnectors) : null,
-  network: null,
+  network: void 0,
   networks: {},
 };
