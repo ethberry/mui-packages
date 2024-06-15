@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.70](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.3.69...@gemunion/firebase-login@2.3.70) (2024-06-15)
+
+### Bug Fixes
+
+- close dialog after login ([f2ac366](https://github.com/gemunion/mui-packages/commit/f2ac366faf27c31486e18df61e63ae594b04ae38))
+
 ## [2.3.69](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.3.68...@gemunion/firebase-login@2.3.69) (2024-06-15)
 
 **Note:** Version bump only for package @gemunion/firebase-login

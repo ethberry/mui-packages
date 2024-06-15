@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.8.3](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.8.2...@gemunion/provider-wallet@3.8.3) (2024-06-15)
+
+### Bug Fixes
+
+- close dialog after login ([f2ac366](https://github.com/gemunion/mui-packages/commit/f2ac366faf27c31486e18df61e63ae594b04ae38))
+
 ## [3.8.2](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.8.1...@gemunion/provider-wallet@3.8.2) (2024-06-15)
 
 ### Bug Fixes
