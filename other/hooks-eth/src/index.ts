@@ -4,4 +4,3 @@ export * from "./use-metamask";
 export * from "./use-metamask-value";
 export * from "./use-server-signature";
 export * from "./use-system-contract";
-export * from "../../../providers/wallet/src/hooks/useWalletInit";
