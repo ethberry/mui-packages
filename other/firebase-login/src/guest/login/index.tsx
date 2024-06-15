@@ -44,13 +44,13 @@ export const providersStore = {
 
 export interface IFirebaseLogin {
   providers?: PROVIDERS[];
-  wallets?: Array<FC<IFirebaseLoginButtonProps>>;
+  buttons?: Array<FC<IFirebaseLoginButtonProps>>;
   withEmail?: boolean;
-  onWalletVerified?: () => void;
+  onTokenVerified?: () => void;
 }
 
 export const FirebaseLogin: FC<IFirebaseLogin> = props => {
-  const { providers = [PROVIDERS.email], wallets = [], withEmail = true, onWalletVerified } = props;
+  const { providers = [PROVIDERS.email], buttons = [], withEmail = true, onTokenVerified } = props;
   const { formatMessage } = useIntl();
 
   const license = useLicense();
@@ -70,7 +70,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
 
   const authFb = getAuth(firebase);
 
-  const handleWalletVerified = async (token: string) => {
+  const handleTokenVerified = async (token: string) => {
     if (!token) {
       return;
     }
@@ -83,7 +83,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
       setIsLoggingIn(false);
     });
     setIsLoggingIn(false);
-    onWalletVerified?.();
+    onTokenVerified?.();
   };
 
   useLayoutEffect(() => {
@@ -151,8 +151,8 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
             </Box>
           )}
           <StyledFirebaseAuthForm withEmail={withEmail} id="firebaseui-auth-container" />
-          {wallets.map((Wallet, i) => (
-            <Wallet key={i} onWalletVerified={handleWalletVerified} />
+          {buttons.map((Button, i) => (
+            <Button key={i} onTokenVerified={handleTokenVerified} />
           ))}
         </Grid>
       </StyledContainer>

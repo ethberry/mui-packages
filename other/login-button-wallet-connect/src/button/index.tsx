@@ -6,17 +6,17 @@ import { v4 } from "uuid";
 import { phrase } from "@gemunion/constants";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useUser } from "@gemunion/provider-user";
-import { useConnectMetamask, useWalletInit } from "@gemunion/provider-wallet";
-import { MetaMaskIcon } from "@gemunion/mui-icons";
+import { useConnectWalletConnect, useWalletInit } from "@gemunion/provider-wallet";
+import { WalletConnectIcon } from "@gemunion/mui-icons";
 import { useApiCall } from "@gemunion/react-hooks";
-import type { IMetamaskDto } from "@gemunion/types-jwt";
+import type { IWalletConnectDto } from "@gemunion/types-jwt";
 import type { IFirebaseLoginButtonProps } from "@gemunion/firebase-login";
 
 import { StyledButton } from "./styled";
 
-export const MetamaskLoginButton: FC<IFirebaseLoginButtonProps> = props => {
-  const { onWalletVerified } = props;
-  const [data, setData] = useState<IMetamaskDto>({ nonce: "", signature: "", wallet: "" });
+export const WalletConnectLoginButton: FC<IFirebaseLoginButtonProps> = props => {
+  const { onTokenVerified } = props;
+  const [data, setData] = useState<IWalletConnectDto>({ nonce: "", signature: "", wallet: "" });
 
   const { account } = useWeb3React();
   const user = useUser<any>();
@@ -24,10 +24,10 @@ export const MetamaskLoginButton: FC<IFirebaseLoginButtonProps> = props => {
   const [isVerifying, setIsVerifying] = useState<boolean>(false);
 
   const { fn: getVerifiedToken, isLoading } = useApiCall(
-    (api, values: IMetamaskDto) => {
+    (api, values: IWalletConnectDto) => {
       return api
         .fetchJson({
-          url: "/metamask/login",
+          url: "/wallet-connect/login",
           method: "POST",
           data: values,
         })
@@ -50,7 +50,7 @@ export const MetamaskLoginButton: FC<IFirebaseLoginButtonProps> = props => {
       setData({ ...data, wallet, signature });
 
       const token = await getVerifiedToken(void 0, { wallet, nonce: data.nonce, signature });
-      await onWalletVerified(token?.token || "");
+      await onTokenVerified(token?.token || "");
     } catch (e) {
       console.error(e);
       setIsVerifying(false);
@@ -58,7 +58,7 @@ export const MetamaskLoginButton: FC<IFirebaseLoginButtonProps> = props => {
     }
   });
 
-  const handleClick = useConnectMetamask({ onClick: handleLogin });
+  const handleClick = useConnectWalletConnect({ onClick: handleLogin });
 
   const userIsAuthenticated = user.isAuthenticated();
 
@@ -76,11 +76,11 @@ export const MetamaskLoginButton: FC<IFirebaseLoginButtonProps> = props => {
     <ProgressOverlay isLoading={isLoading}>
       <StyledButton
         onClick={handleClick}
-        startIcon={<MetaMaskIcon viewBox="0 0 60 60" />}
+        startIcon={<WalletConnectIcon viewBox="0 0 60 60" />}
         disabled={isVerifying}
         fullWidth
       >
-        <FormattedMessage id="pages.guest.signInWith.metamask" />
+        <FormattedMessage id="pages.guest.signInWith.walletConnect" />
       </StyledButton>
     </ProgressOverlay>
   );

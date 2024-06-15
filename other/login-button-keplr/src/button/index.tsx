@@ -14,7 +14,7 @@ import type { IFirebaseLoginButtonProps } from "@gemunion/firebase-login";
 import { StyledButton } from "./styled";
 
 export const KeplrLoginButton: FC<IFirebaseLoginButtonProps> = props => {
-  const { onWalletVerified } = props;
+  const { onTokenVerified } = props;
   const [data, setData] = useState<IKeplrDto>({
     nonce: "",
     signature: {
@@ -69,7 +69,7 @@ export const KeplrLoginButton: FC<IFirebaseLoginButtonProps> = props => {
         setData({ ...data, wallet, signature, chainPrefix });
 
         const token = await getVerifiedToken(void 0, { wallet, nonce: data.nonce, signature, chainPrefix });
-        await onWalletVerified(token?.token || "");
+        await onTokenVerified(token?.token || "");
       } catch (e) {
         console.error(e);
         setIsVerifying(false);

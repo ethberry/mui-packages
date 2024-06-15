@@ -1,3 +1,3 @@
 export interface IFirebaseLoginButtonProps {
-  onWalletVerified: (token: string) => Promise<void>;
+  onTokenVerified: (token: string) => Promise<void>;
 }

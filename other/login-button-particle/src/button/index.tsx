@@ -17,7 +17,7 @@ import type { IFirebaseLoginButtonProps } from "@gemunion/firebase-login";
 import { StyledButton, StyledMenu } from "./styled";
 
 export const ParticleLoginButton: FC<IFirebaseLoginButtonProps> = props => {
-  const { onWalletVerified } = props;
+  const { onTokenVerified } = props;
   const [data, setData] = useState<IParticleDto>({ nonce: "", signature: "", wallet: "" });
 
   const { account } = useWeb3React();
@@ -73,7 +73,7 @@ export const ParticleLoginButton: FC<IFirebaseLoginButtonProps> = props => {
         nonce: data.nonce,
         signature,
       });
-      await onWalletVerified(token?.token || "");
+      await onTokenVerified(token?.token || "");
     } catch (e) {
       console.error(e);
       setIsVerifying(false);

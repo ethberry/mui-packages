@@ -70,7 +70,7 @@ export const WalletButton: FC<PropsWithChildren> = props => {
       <ConnectWallet onClose={closeConnectWalletDialog} open={isDialogOpen}>
         {Children.map(children as Array<any>, (button: ReactElement) =>
           cloneElement(button, {
-            onWalletVerified: closeConnectWalletDialog,
+            onTokenVerified: closeConnectWalletDialog,
           }),
         )}
       </ConnectWallet>
