@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.69](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-metamask@1.1.68...@gemunion/login-button-metamask@1.1.69) (2024-06-15)
+
+### Bug Fixes
+
+- should not logout on refresh ([07a5070](https://github.com/gemunion/mui-packages/commit/07a5070342b2c9a6eb69c9dc8ad9c2cd51a4f05a))
+
 ## [1.1.68](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-metamask@1.1.67...@gemunion/login-button-metamask@1.1.68) (2024-06-15)
 
 ### Bug Fixes
