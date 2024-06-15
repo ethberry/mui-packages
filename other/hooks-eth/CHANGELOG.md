@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.33](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.5.32...@gemunion/react-hooks-eth@1.5.33) (2024-06-15)
+
+**Note:** Version bump only for package @gemunion/react-hooks-eth
+
 ## [1.5.32](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.5.31...@gemunion/react-hooks-eth@1.5.32) (2024-06-15)
 
 **Note:** Version bump only for package @gemunion/react-hooks-eth
