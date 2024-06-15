@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.8.2](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.8.1...@gemunion/provider-wallet@3.8.2) (2024-06-15)
+
+### Bug Fixes
+
+- cleanup useWalletInit ([1854489](https://github.com/gemunion/mui-packages/commit/185448971ad4fb58ef4544b6ded6841085d814c0))
+- use icons ([f22e5d5](https://github.com/gemunion/mui-packages/commit/f22e5d59fee787932ea511117b95c41363e20a6c))
+- user flow ([8c656c7](https://github.com/gemunion/mui-packages/commit/8c656c72d61c8761aee44e783935dc2a911f1071))
+
 ## [3.8.1](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.8.0...@gemunion/provider-wallet@3.8.1) (2024-06-13)
 
 ### Bug Fixes

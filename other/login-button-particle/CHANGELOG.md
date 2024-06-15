@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.26](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-particle@1.2.25...@gemunion/login-button-particle@1.2.26) (2024-06-15)
+
+### Bug Fixes
+
+- cleanup useWalletInit ([1854489](https://github.com/gemunion/mui-packages/commit/185448971ad4fb58ef4544b6ded6841085d814c0))
+- use icons, part 2 ([88638c0](https://github.com/gemunion/mui-packages/commit/88638c04b773eeb0be4c5ebc5be17b4641fb85fe))
+- user flow ([8c656c7](https://github.com/gemunion/mui-packages/commit/8c656c72d61c8761aee44e783935dc2a911f1071))
+
 ## [1.2.25](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-particle@1.2.24...@gemunion/login-button-particle@1.2.25) (2024-06-13)
 
 ### Bug Fixes
