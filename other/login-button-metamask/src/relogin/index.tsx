@@ -111,7 +111,7 @@ export const MetamaskRelogin: FC<PropsWithChildren> = props => {
 
   useLayoutEffect(() => {
     if (!isActive) {
-      void handleDisconnect();
+      // void handleDisconnect();
       currentWallet.current = null;
     }
   }, [isActive]);
