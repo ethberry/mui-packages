@@ -32,6 +32,7 @@ export interface ITemplateAssetProps {
   };
   contract?: {
     data?: {
+      includeExternalContracts?: boolean;
       excludeFeatures?: Array<ContractFeatures>;
       contractModule?: Array<string>;
       contractStatus?: Array<string>;
