@@ -1,5 +1,5 @@
 import { Children, cloneElement, FC, PropsWithChildren, ReactElement, useCallback, useMemo } from "react";
-import { Badge, Box, Tooltip } from "@mui/material";
+import { Box, Tooltip } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 import { useIntl } from "react-intl";
 
@@ -12,6 +12,7 @@ import { ConnectWallet } from "../../dialogs/connect";
 import { StyledButton, StyledTooltipContent } from "./styled";
 import { useWallet, WALLET_MENU_POPUP_TYPE } from "../../provider";
 import { WalletIcon } from "../../icons";
+import { StyledBadge, StyledCircle } from "../network/styled";
 
 export const WalletButton: FC<PropsWithChildren> = props => {
   const { children } = props;
@@ -33,7 +34,7 @@ export const WalletButton: FC<PropsWithChildren> = props => {
     closePopup();
   };
 
-  const isChainValid = !profile || !chainId || profile?.chainId === chainId;
+  const isChainValid = !chainId || profile?.chainId === chainId;
 
   const tooltipTitle = useMemo(() => {
     switch (true) {
@@ -55,16 +56,16 @@ export const WalletButton: FC<PropsWithChildren> = props => {
   return (
     <Box>
       <Tooltip title={tooltipTitle} enterDelay={300}>
-        <StyledButton color="inherit" onClick={handleOpenDialog} data-testid="OpenWalletOptionsDialog">
-          <Badge color="error" badgeContent="!" invisible={isChainValid}>
+        <StyledBadge color="primary" badgeContent={<StyledCircle />} invisible={isChainValid}>
+          <StyledButton color="inherit" onClick={handleOpenDialog} data-testid="OpenWalletOptionsDialog">
             <WalletIcon />
             <Box sx={{ ml: 1 }}>
               {account
                 ? `${account.slice(0, 6)}...${account.slice(-4)}`
                 : formatMessage({ id: "components.header.wallet.connect" })}
             </Box>
-          </Badge>
-        </StyledButton>
+          </StyledButton>
+        </StyledBadge>
       </Tooltip>
       <ConnectWallet onClose={closeConnectWalletDialog} open={isDialogOpen}>
         {Children.map(children as Array<any>, (button: ReactElement) =>
