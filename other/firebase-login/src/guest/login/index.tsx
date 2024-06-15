@@ -46,10 +46,11 @@ export interface IFirebaseLogin {
   providers?: PROVIDERS[];
   wallets?: Array<FC<IFirebaseLoginButtonProps>>;
   withEmail?: boolean;
+  onWalletVerified?: () => void;
 }
 
 export const FirebaseLogin: FC<IFirebaseLogin> = props => {
-  const { providers = [PROVIDERS.email], wallets = [], withEmail = true } = props;
+  const { providers = [PROVIDERS.email], wallets = [], withEmail = true, onWalletVerified } = props;
   const { formatMessage } = useIntl();
 
   const license = useLicense();
@@ -69,7 +70,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
 
   const authFb = getAuth(firebase);
 
-  const onWalletVerified = async (token: string) => {
+  const handleWalletVerified = async (token: string) => {
     if (!token) {
       return;
     }
@@ -78,10 +79,11 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
 
     setIsLoggingIn(true);
     await user.logIn(void 0, isLoginPage ? void 0 : window.location.pathname).catch(e => {
-      console.error("login error", e);
+      console.error(e);
       setIsLoggingIn(false);
     });
     setIsLoggingIn(false);
+    onWalletVerified?.();
   };
 
   useLayoutEffect(() => {
@@ -150,7 +152,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
           )}
           <StyledFirebaseAuthForm withEmail={withEmail} id="firebaseui-auth-container" />
           {wallets.map((Wallet, i) => (
-            <Wallet key={i} onWalletVerified={onWalletVerified} />
+            <Wallet key={i} onWalletVerified={handleWalletVerified} />
           ))}
         </Grid>
       </StyledContainer>

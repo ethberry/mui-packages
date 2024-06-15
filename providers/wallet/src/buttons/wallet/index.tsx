@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren, useCallback, useMemo } from "react";
+import { Children, cloneElement, FC, PropsWithChildren, ReactElement, useCallback, useMemo } from "react";
 import { Badge, Box, Tooltip } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 import { useIntl } from "react-intl";
@@ -67,7 +67,11 @@ export const WalletButton: FC<PropsWithChildren> = props => {
         </StyledButton>
       </Tooltip>
       <ConnectWallet onClose={closeConnectWalletDialog} open={isDialogOpen}>
-        {children}
+        {Children.map(children as Array<any>, (button: ReactElement) =>
+          cloneElement(button, {
+            onWalletVerified: closeConnectWalletDialog,
+          }),
+        )}
       </ConnectWallet>
       <WalletMenuDialog onClose={handleCloseWalletDialog} open={isOpenPopup(WALLET_MENU_POPUP_TYPE)} />
     </Box>
