@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.62 (2024-06-22)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([8283fce](https://github.com/gemunion/mui-packages/commit/8283fceb0a295fc851beb3ab731874dab786c07b))
+- **deps:** update all non-major dependencies ([87d49d9](https://github.com/gemunion/mui-packages/commit/87d49d98bac93cbfb05dd6ec4a4371430c48fc53))
+
 ## [1.1.61](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-keplr@1.1.60...@gemunion/login-button-keplr@1.1.61) (2024-06-15)
 
 ### Bug Fixes

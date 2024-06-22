@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.0.5 (2024-06-22)
+
+### Bug Fixes
+
+- **deps:** update [@mui](https://github.com/mui) packages to v7.7.1 ([3c54aba](https://github.com/gemunion/mui-packages/commit/3c54abae4bfe293a3f07cc38a5b4947be27add51))
+
 ## 6.0.4 (2024-06-15)
 
 ### Bug Fixes

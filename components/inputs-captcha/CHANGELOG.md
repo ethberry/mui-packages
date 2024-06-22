@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.1.133 (2024-06-22)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([87d49d9](https://github.com/gemunion/mui-packages/commit/87d49d98bac93cbfb05dd6ec4a4371430c48fc53))
+
 ## 4.1.132 (2024-06-13)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-captcha
