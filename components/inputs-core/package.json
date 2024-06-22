@@ -19,7 +19,7 @@
     "@mui/icons-material": "5.15.20",
     "@mui/material": "5.15.20",
     "@mui/styles": "5.15.20",
-    "@storybook/react": "8.1.9",
+    "@storybook/react": "8.1.10",
     "@testing-library/jest-dom": "6.4.6",
     "@testing-library/react": "16.0.0",
     "@types/jest": "29.5.12",
@@ -29,10 +29,10 @@
     "jest-environment-jsdom": "29.7.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-hook-form": "7.51.5",
+    "react-hook-form": "7.52.0",
     "react-intl": "6.6.8",
     "react-router-dom": "6.23.1",
-    "ts-jest": "29.1.4",
+    "ts-jest": "29.1.5",
     "whatwg-fetch": "3.6.20"
   },
   "engines": {
