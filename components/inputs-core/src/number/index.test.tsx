@@ -4,13 +4,11 @@ import { MemoryRouter } from "react-router-dom";
 import { cleanup, render } from "@testing-library/react";
 import { FormProvider, useForm } from "react-hook-form";
 import { createTheme, ThemeProvider } from "@mui/material";
-import "whatwg-fetch";
 
 import { TestIdProvider } from "@gemunion/provider-test-id";
 
 import { NumberInput } from "./index";
 
-beforeAll(() => (window.fetch = window.fetch || fetch));
 afterEach(cleanup);
 
 const i18n = {
