@@ -8,20 +8,20 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/constants": "0.12.10",
+    "@gemunion/constants": "0.12.11",
     "@gemunion/mui-form": "8.0.102",
     "@gemunion/mui-inputs-captcha": "4.1.132",
     "@gemunion/mui-inputs-core": "7.2.93",
     "@gemunion/mui-page-layout": "2.3.39",
     "@gemunion/popup": "1.0.57",
     "@gemunion/react-hooks": "2.0.25",
-    "@gemunion/yup-rules": "4.2.48",
+    "@gemunion/yup-rules": "4.2.49",
     "yup": "1.4.0"
   },
   "description": "react context provider",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.74",
-    "@gemunion/provider-user": "6.0.80",
+    "@gemunion/provider-api": "7.0.75",
+    "@gemunion/provider-user": "6.0.81",
     "@mui/icons-material": "5.15.20",
     "@mui/lab": "5.0.0-alpha.170",
     "@mui/material": "5.15.20",
