@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/constants": "0.12.11",
+    "@gemunion/constants": "0.12.12",
     "@gemunion/mui-inputs-core": "7.2.94",
     "@gemunion/mui-inputs-entity": "7.3.78",
     "@gemunion/mui-inputs-mask": "5.5.95",

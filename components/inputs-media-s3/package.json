@@ -20,7 +20,7 @@
   "description": "react widget media s3",
   "devDependencies": {
     "@gemunion/mui-form": "8.0.103",
-    "@gemunion/provider-api-jwt": "2.0.71",
+    "@gemunion/provider-api-jwt": "2.0.72",
     "@gemunion/provider-test-id": "1.0.82",
     "@mui/icons-material": "5.15.20",
     "@mui/material": "5.15.20",
