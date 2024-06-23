@@ -7,8 +7,8 @@ import { downForMaintenance } from "@gemunion/license-messages";
 import { ApiError, IApiContext, useApi } from "@gemunion/provider-api";
 import { useLicense } from "@gemunion/provider-license";
 
-export const useApiCall = <T = any>(
-  fn: (api: IApiContext, ...args: Array<any>) => Promise<T>,
+export const useApiCall = <T = any, V = any>(
+  fn: (api: IApiContext, ...args: Array<V>) => Promise<T>,
   { success = true, error = true } = {},
 ) => {
   const api = useApi();
@@ -18,7 +18,7 @@ export const useApiCall = <T = any>(
   const { formatMessage } = useIntl();
   const [isLoading, setIsLoading] = useState(false);
 
-  const wrapper = (form?: UseFormReturn, ...args: Array<any>) => {
+  const wrapper = (form?: UseFormReturn, ...args: Array<V>) => {
     if (!license.isValid()) {
       return Promise.reject(downForMaintenance()).catch((e: string) => {
         enqueueSnackbar(e, { variant: "error" });
