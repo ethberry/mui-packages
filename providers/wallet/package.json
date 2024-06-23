@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/constants": "0.12.11",
+    "@gemunion/constants": "0.12.12",
     "@gemunion/firebase": "1.2.32",
     "@gemunion/mui-icons": "1.1.62",
     "@gemunion/mui-page-layout": "2.3.40",
@@ -27,10 +27,10 @@
   },
   "description": "react wallet provider",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.75",
+    "@gemunion/provider-api": "7.0.76",
     "@gemunion/provider-license": "3.0.50",
     "@gemunion/provider-popup": "1.0.57",
-    "@gemunion/provider-user": "6.0.81",
+    "@gemunion/provider-user": "6.0.82",
     "@gemunion/react-hooks": "2.0.26",
     "@gemunion/redux": "0.3.23",
     "@gemunion/types-blockchain": "1.2.12",

@@ -8,10 +8,10 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/constants": "0.12.11",
+    "@gemunion/constants": "0.12.12",
     "@gemunion/firebase": "1.2.32",
     "@gemunion/mui-page-layout": "2.3.40",
-    "@gemunion/provider-api": "7.0.75",
+    "@gemunion/provider-api": "7.0.76",
     "@gemunion/react-hooks": "2.0.26",
     "@gemunion/react-hooks-eth": "1.5.34",
     "@gemunion/types-collection": "1.5.16",
@@ -22,9 +22,9 @@
   },
   "description": "react component",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.75",
+    "@gemunion/provider-api": "7.0.76",
     "@gemunion/provider-license": "3.0.50",
-    "@gemunion/provider-user": "6.0.81",
+    "@gemunion/provider-user": "6.0.82",
     "@keplr-wallet/types": "0.12.104",
     "@mui/material": "5.15.20",
     "@mui/styles": "5.15.20",
