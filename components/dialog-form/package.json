@@ -12,14 +12,14 @@
     "@gemunion/mui-form": "8.0.104",
     "@gemunion/mui-page-layout": "2.3.40",
     "@gemunion/react-hooks": "2.0.27",
-    "react-router": "6.23.1"
+    "react-router": "6.24.0"
   },
   "description": "react widget",
   "devDependencies": {
     "@gemunion/mui-inputs-core": "7.2.95",
     "@gemunion/provider-license": "3.0.50",
     "@mui/material": "5.15.20",
-    "@storybook/react": "8.1.10",
+    "@storybook/react": "8.1.11",
     "@testing-library/jest-dom": "6.4.6",
     "@testing-library/react": "16.0.0",
     "@types/jest": "29.5.12",
@@ -30,7 +30,7 @@
     "react-dom": "18.3.1",
     "react-hook-form": "7.52.0",
     "react-intl": "6.6.8",
-    "react-router-dom": "6.23.1",
+    "react-router-dom": "6.24.0",
     "ts-jest": "29.1.5"
   },
   "engines": {

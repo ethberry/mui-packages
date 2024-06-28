@@ -13,7 +13,7 @@
     "@gemunion/provider-settings": "4.0.89",
     "@gemunion/redux": "0.3.24",
     "@mui/material": "5.15.20",
-    "@storybook/react": "8.1.10",
+    "@storybook/react": "8.1.11",
     "@testing-library/jest-dom": "6.4.6",
     "@testing-library/react": "16.0.0",
     "@types/jest": "29.5.12",
