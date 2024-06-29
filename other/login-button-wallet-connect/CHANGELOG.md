@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.71](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-wallet-connect@1.1.70...@gemunion/login-button-wallet-connect@1.1.71) (2024-06-29)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([14900d2](https://github.com/gemunion/mui-packages/commit/14900d202b9081f32d3825b749ee018efcdfb665))
+
 ## [1.1.70](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-wallet-connect@1.1.69...@gemunion/login-button-wallet-connect@1.1.70) (2024-06-23)
 
 ### Bug Fixes
