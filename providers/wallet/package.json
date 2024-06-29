@@ -27,10 +27,10 @@
   },
   "description": "react wallet provider",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.76",
+    "@gemunion/provider-api": "7.0.77",
     "@gemunion/provider-license": "3.0.50",
     "@gemunion/provider-popup": "1.0.57",
-    "@gemunion/provider-user": "6.0.82",
+    "@gemunion/provider-user": "6.0.83",
     "@gemunion/react-hooks": "2.0.27",
     "@gemunion/redux": "0.3.24",
     "@gemunion/types-blockchain": "1.2.12",

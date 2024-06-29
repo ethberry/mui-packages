@@ -24,9 +24,9 @@
   },
   "description": "react metamask login button component",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.76",
+    "@gemunion/provider-api": "7.0.77",
     "@gemunion/provider-license": "3.0.50",
-    "@gemunion/provider-user": "6.0.82",
+    "@gemunion/provider-user": "6.0.83",
     "@mui/material": "5.15.21",
     "@mui/styles": "5.15.21",
     "@web3-react/core": "8.2.3",
