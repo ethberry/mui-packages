@@ -8,14 +8,14 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@cosmjs/stargate": "0.32.3",
+    "@cosmjs/stargate": "0.32.4",
     "@gemunion/constants": "0.12.12",
     "@gemunion/firebase-login": "2.3.73",
     "@gemunion/mui-page-layout": "2.3.40",
     "@gemunion/provider-cosmos": "1.1.46",
     "@gemunion/react-hooks": "2.0.27",
     "@gemunion/react-hooks-cosmos": "1.1.47",
-    "@keplr-wallet/types": "0.12.104",
+    "@keplr-wallet/types": "0.12.107",
     "uuid": "10.0.0"
   },
   "description": "react keplr login button component",
@@ -28,8 +28,8 @@
     "notistack": "3.0.1",
     "react": "18.3.1",
     "react-intl": "6.6.8",
-    "react-router": "6.23.1",
-    "react-router-dom": "6.23.1"
+    "react-router": "6.24.0",
+    "react-router-dom": "6.24.0"
   },
   "engines": {
     "node": ">=18"
