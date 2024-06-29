@@ -24,7 +24,7 @@ export const MetamaskRelogin: FC<PropsWithChildren> = props => {
 
   const [didMount, setDidMount] = useState(false);
   const [isConnecting, setIsConnecting] = useState(false);
-  const currentWallet = useRef<string | null>(null);
+  const currentWallet = useRef<string>("");
 
   const handleDisconnect = async () => {
     await user.logOut();
@@ -112,7 +112,7 @@ export const MetamaskRelogin: FC<PropsWithChildren> = props => {
   useLayoutEffect(() => {
     if (!isActive) {
       // void handleDisconnect();
-      currentWallet.current = null;
+      currentWallet.current = "";
     }
   }, [isActive]);
 
