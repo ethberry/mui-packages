@@ -32,13 +32,12 @@ export const useSystemContract = <T extends IDeployable, M = any>(
         method: "POST",
         data: {
           contractModule,
-          chainId: web3Context.chainId,
         },
       })
       .catch((e: any) => {
         if (error && e.status !== 400) {
           enqueueSnackbar(formatMessage({ id: "snackbar.internalServerError" }), { variant: "error" });
-          console.error("[server error]", e);
+          console.error(e);
           return null;
         }
         throw e;
