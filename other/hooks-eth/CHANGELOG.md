@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.37](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.5.36...@gemunion/react-hooks-eth@1.5.37) (2024-07-02)
+
+### Bug Fixes
+
+- do not pass chainId ([88ebfa2](https://github.com/gemunion/mui-packages/commit/88ebfa2e36675d006d0286e2353281f324a2ed93))
+
 ## [1.5.36](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.5.35...@gemunion/react-hooks-eth@1.5.36) (2024-06-29)
 
 **Note:** Version bump only for package @gemunion/react-hooks-eth
