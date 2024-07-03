@@ -3,6 +3,7 @@ import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { useWeb3React } from "@web3-react/core";
 import { ErrorCode } from "@ethersproject/logger";
+// TODO replace with https://github.com/MetaMask/rpc-errors/blob/main/src/error-constants.ts
 import { RESERVED_ERROR_CODES, SERVER_ERROR_CODE_RANGE, STANDARD_ERROR_MAP } from "@json-rpc-tools/utils";
 
 import { downForMaintenance } from "@gemunion/license-messages";
