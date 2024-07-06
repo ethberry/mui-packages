@@ -14,7 +14,7 @@
     "@gemunion/provider-api": "7.0.77",
     "@gemunion/types-blockchain": "1.2.12",
     "@json-rpc-tools/utils": "1.7.6",
-    "qs": "6.12.1",
+    "qs": "6.12.2",
     "use-deep-compare-effect": "1.8.1"
   },
   "description": "react hooks",
