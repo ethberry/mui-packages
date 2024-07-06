@@ -15,13 +15,13 @@
     "@gemunion/mui-page-layout": "2.3.41",
     "@gemunion/popup": "1.0.57",
     "@gemunion/react-hooks": "2.0.28",
-    "@gemunion/yup-rules": "4.2.51",
+    "@gemunion/yup-rules": "4.2.52",
     "yup": "1.4.0"
   },
   "description": "react context provider",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.77",
-    "@gemunion/provider-user": "6.0.83",
+    "@gemunion/provider-api": "7.0.78",
+    "@gemunion/provider-user": "6.0.84",
     "@mui/icons-material": "5.16.0",
     "@mui/lab": "5.0.0-alpha.171",
     "@mui/material": "5.16.0",
