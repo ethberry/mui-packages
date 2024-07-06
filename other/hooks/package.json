@@ -11,7 +11,7 @@
     "@gemunion/constants": "0.12.12",
     "@gemunion/license-messages": "0.0.36",
     "@gemunion/types-collection": "1.5.16",
-    "qs": "6.12.1"
+    "qs": "6.12.2"
   },
   "description": "react hooks",
   "devDependencies": {
@@ -20,10 +20,10 @@
     "@gemunion/redux": "0.3.24",
     "notistack": "3.0.1",
     "react": "18.3.1",
-    "react-hook-form": "7.52.0",
+    "react-hook-form": "7.52.1",
     "react-intl": "6.6.8",
-    "react-router": "6.24.0",
-    "react-router-dom": "6.24.0"
+    "react-router": "6.24.1",
+    "react-router-dom": "6.24.1"
   },
   "engines": {
     "node": ">=18"
