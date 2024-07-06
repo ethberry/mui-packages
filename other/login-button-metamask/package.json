@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.12.12",
-    "@gemunion/firebase": "1.2.32",
+    "@gemunion/firebase": "1.2.33",
     "@gemunion/firebase-login": "2.3.75",
     "@gemunion/mui-icons": "1.1.63",
     "@gemunion/mui-page-layout": "2.3.41",
@@ -24,9 +24,9 @@
   },
   "description": "react metamask login button component",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.77",
+    "@gemunion/provider-api": "7.0.78",
     "@gemunion/provider-license": "3.0.50",
-    "@gemunion/provider-user": "6.0.83",
+    "@gemunion/provider-user": "6.0.84",
     "@mui/material": "5.16.0",
     "@mui/styles": "5.16.0",
     "@web3-react/core": "8.2.3",
