@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.0.7 (2024-07-06)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([3e766ba](https://github.com/gemunion/mui-packages/commit/3e766ba0b94ad842385f52fda3befaa3b90e9214))
+
 ## 7.0.6 (2024-06-29)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-picker

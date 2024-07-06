@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.94 (2024-07-06)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([e23e690](https://github.com/gemunion/common-packages/commit/e23e690389c8059d96ce40278572e8220ec4f2a9))
+- **deps:** update all non-major dependencies ([3e766ba](https://github.com/gemunion/common-packages/commit/3e766ba0b94ad842385f52fda3befaa3b90e9214))
+
 ## [2.1.93](https://github.com/gemunion/common-packages/compare/@gemunion/geetest@2.1.92...@gemunion/geetest@2.1.93) (2024-06-29)
 
 ### Bug Fixes

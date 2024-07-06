@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.33](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-particle@1.2.32...@gemunion/login-button-particle@1.2.33) (2024-07-06)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([e23e690](https://github.com/gemunion/mui-packages/commit/e23e690389c8059d96ce40278572e8220ec4f2a9))
+- **deps:** update all non-major dependencies ([3e766ba](https://github.com/gemunion/mui-packages/commit/3e766ba0b94ad842385f52fda3befaa3b90e9214))
+
 ## [1.2.32](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-particle@1.2.31...@gemunion/login-button-particle@1.2.32) (2024-07-02)
 
 **Note:** Version bump only for package @gemunion/login-button-particle
