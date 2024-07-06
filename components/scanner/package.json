@@ -10,8 +10,8 @@
   "description": "react widget",
   "devDependencies": {
     "@gemunion/redux": "0.3.24",
-    "@mui/material": "5.15.21",
-    "@mui/styles": "5.15.21",
+    "@mui/material": "5.16.0",
+    "@mui/styles": "5.16.0",
     "@types/react": "18.3.3",
     "@web3-react/core": "8.2.3",
     "react": "18.3.1"
