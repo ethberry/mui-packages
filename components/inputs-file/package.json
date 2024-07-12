@@ -18,7 +18,7 @@
     "@mui/icons-material": "5.16.0",
     "@mui/material": "5.16.0",
     "@mui/styles": "5.16.0",
-    "@storybook/react": "8.1.11",
+    "@storybook/react": "8.2.2",
     "@types/react": "18.3.3",
     "notistack": "3.0.1",
     "react": "18.3.1",

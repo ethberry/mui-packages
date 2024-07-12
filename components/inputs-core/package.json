@@ -19,7 +19,7 @@
     "@mui/icons-material": "5.16.0",
     "@mui/material": "5.16.0",
     "@mui/styles": "5.16.0",
-    "@storybook/react": "8.1.11",
+    "@storybook/react": "8.2.2",
     "@testing-library/jest-dom": "6.4.6",
     "@testing-library/react": "16.0.0",
     "@types/jest": "29.5.12",
@@ -31,7 +31,7 @@
     "react-hook-form": "7.52.1",
     "react-intl": "6.6.8",
     "react-router-dom": "6.24.1",
-    "ts-jest": "29.1.5"
+    "ts-jest": "29.2.2"
   },
   "engines": {
     "node": ">=18"
