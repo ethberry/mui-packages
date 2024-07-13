@@ -12,7 +12,7 @@
     "@gemunion/provider-license": "3.0.50",
     "@gemunion/provider-settings": "4.0.91",
     "@gemunion/redux": "0.3.25",
-    "@mui/material": "5.16.0",
+    "@mui/material": "5.16.1",
     "@storybook/react": "8.2.2",
     "@testing-library/jest-dom": "6.4.6",
     "@testing-library/react": "16.0.0",
