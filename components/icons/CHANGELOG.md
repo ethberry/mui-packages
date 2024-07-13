@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.65](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-icons@1.1.64...@gemunion/mui-icons@1.1.65) (2024-07-13)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([6cb2869](https://github.com/gemunion/mui-packages/commit/6cb28696ca09b35c4fa2b07e3a6b16d73c81dd4a))
+
 ## 1.1.64 (2024-07-06)
 
 **Note:** Version bump only for package @gemunion/mui-icons
