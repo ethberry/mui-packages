@@ -11,10 +11,11 @@ export interface IAvatarInputProps {
   label?: string | number | ReactElement;
   bucket?: string;
   accept?: Accept;
+  required?: boolean;
 }
 
 export const AvatarInput: FC<IAvatarInputProps> = props => {
-  const { name, label, bucket, accept } = props;
+  const { name, label, bucket, accept, required } = props;
 
   const form = useFormContext<any>();
   const error = get(form.formState.errors, name);
@@ -41,7 +42,7 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
 
   if (value) {
     return (
-      <FormControl fullWidth sx={{ mt: 2, height: 200, width: 200, position: "relative" }}>
+      <FormControl fullWidth sx={{ mt: 2, height: 200, width: 200, position: "relative" }} required={required}>
         <InputLabel id={`${name}-select-label`} shrink>
           {localizedLabel}
         </InputLabel>
@@ -86,7 +87,7 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
   }
 
   return (
-    <FormControl fullWidth sx={{ mt: 2, height: 200, width: 200, position: "relative" }}>
+    <FormControl fullWidth sx={{ mt: 2, height: 200, width: 200, position: "relative" }} required={required}>
       <InputLabel id={`${name}-select-label`} shrink>
         <FormattedMessage id={`form.labels.${name}`} />
       </InputLabel>
