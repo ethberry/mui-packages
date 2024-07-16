@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/firebase": "1.2.34",
-    "@gemunion/mui-inputs-file": "6.1.73",
+    "@gemunion/mui-inputs-file": "6.1.74",
     "uuid": "10.0.0"
   },
   "description": "react widget",
@@ -51,5 +51,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "6.0.156"
+  "version": "6.0.157"
 }
