@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@cosmjs/stargate": "0.32.4",
-    "@gemunion/constants": "0.12.12",
+    "@gemunion/constants": "0.12.13",
     "@gemunion/firebase-login": "2.3.77",
     "@gemunion/mui-page-layout": "2.3.43",
     "@gemunion/provider-cosmos": "1.1.49",
@@ -20,9 +20,9 @@
   },
   "description": "react keplr login button component",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.79",
+    "@gemunion/provider-api": "7.0.80",
     "@gemunion/provider-license": "3.0.50",
-    "@gemunion/provider-user": "6.0.85",
+    "@gemunion/provider-user": "6.0.86",
     "@mui/material": "5.16.1",
     "@mui/styles": "5.16.1",
     "notistack": "3.0.1",

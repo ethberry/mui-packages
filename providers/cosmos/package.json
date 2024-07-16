@@ -8,16 +8,16 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/constants": "0.12.12",
+    "@gemunion/constants": "0.12.13",
     "@keplr-wallet/types": "0.12.110",
     "uuid": "10.0.0"
   },
   "description": "react cosmos provider",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.79",
+    "@gemunion/provider-api": "7.0.80",
     "@gemunion/provider-license": "3.0.50",
-    "@gemunion/provider-popup": "1.0.57",
-    "@gemunion/provider-user": "6.0.85",
+    "@gemunion/provider-popup": "1.0.58",
+    "@gemunion/provider-user": "6.0.86",
     "@mui/icons-material": "5.16.1",
     "@mui/material": "5.16.1",
     "@mui/styles": "5.16.1",
