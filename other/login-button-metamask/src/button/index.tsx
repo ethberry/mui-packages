@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import { useWeb3React, Web3ContextType } from "@web3-react/core";
+import { Web3ContextType } from "@web3-react/core";
 import { FormattedMessage } from "react-intl";
 import { v4 } from "uuid";
 
@@ -16,11 +16,8 @@ import { StyledButton } from "./styled";
 
 export const MetamaskLoginButton: FC<IFirebaseLoginButtonProps> = props => {
   const { onTokenVerified } = props;
-  const [data, setData] = useState<IMetamaskDto>({ nonce: "", signature: "", wallet: "" });
 
-  const { account } = useWeb3React();
   const user = useUser<any>();
-
   const [isVerifying, setIsVerifying] = useState<boolean>(false);
 
   const { fn: getVerifiedToken, isLoading } = useApiCall(
@@ -45,11 +42,9 @@ export const MetamaskLoginButton: FC<IFirebaseLoginButtonProps> = props => {
 
       const wallet = web3Context.account!;
       const provider = web3Context.provider!;
-
-      const signature = await provider.getSigner().signMessage(`${phrase}${data.nonce}`);
-      setData({ ...data, wallet, signature });
-
-      const token = await getVerifiedToken(void 0, { wallet, nonce: data.nonce, signature });
+      const nonce = v4();
+      const signature = await provider.getSigner().signMessage(`${phrase}${nonce}`);
+      const token = await getVerifiedToken(void 0, { wallet, nonce, signature });
       await onTokenVerified(token?.token || "");
     } catch (e) {
       console.error(e);
@@ -67,10 +62,6 @@ export const MetamaskLoginButton: FC<IFirebaseLoginButtonProps> = props => {
       setIsVerifying(false);
     }
   }, [userIsAuthenticated]);
-
-  useEffect(() => {
-    setData({ nonce: v4(), signature: "", wallet: account || "" });
-  }, [account]);
 
   return (
     <ProgressOverlay isLoading={isLoading}>
