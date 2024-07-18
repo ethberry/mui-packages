@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.77](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-metamask@1.1.76...@gemunion/login-button-metamask@1.1.77) (2024-07-18)
+
+### Bug Fixes
+
+- fixed MetamaskRelogin and MetamaskLoginButton ([f22c851](https://github.com/gemunion/mui-packages/commit/f22c851b777ddccb9c5246ce597dc83fdb87b6cd))
+
 ## [1.1.76](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-metamask@1.1.75...@gemunion/login-button-metamask@1.1.76) (2024-07-16)
 
 ### Bug Fixes
