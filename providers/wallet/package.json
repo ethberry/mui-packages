@@ -21,7 +21,7 @@
     "@web3-react/types": "8.2.3",
     "@web3-react/url": "8.2.3",
     "@web3-react/walletconnect-v2": "8.5.1",
-    "firebase": "10.12.3",
+    "firebase": "10.12.4",
     "uuid": "10.0.0"
   },
   "description": "react wallet provider",

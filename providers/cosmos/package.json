@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.12.13",
-    "@keplr-wallet/types": "0.12.110",
+    "@keplr-wallet/types": "0.12.111",
     "uuid": "10.0.0"
   },
   "description": "react cosmos provider",
