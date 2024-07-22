@@ -81,7 +81,8 @@ export const rpcUrls: Record<string, string[]> = {
   [networkToChainId[Networks.IMMUTABLE]]: ["http://rpc.testnet.immutable.com"],
 };
 
-export const SANDBOX_CHAINS = [5, 97, 80001, 13378, 13377, 10001, 10000, 11155111, 13473];
+//export const SANDBOX_CHAINS = [5, 97, 80001, 13378, 13377, 10001, 10000, 11155111, 13473];
+export const SANDBOX_CHAINS = [5, 97, 10001, 10000, 11155111, 13473];
 
 export const STORE_CONNECTOR = "CONNECTOR";
 
