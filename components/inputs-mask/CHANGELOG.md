@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.5.102](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-mask@5.5.101...@gemunion/mui-inputs-mask@5.5.102) (2024-07-22)
+
+### Bug Fixes
+
+- fixed formatValue util arguments ([7ed8f3b](https://github.com/gemunion/mui-packages/commit/7ed8f3bd51da2343155a05e83c94a9d9c5434ab4))
+- fixed numeric field trigger ([8fd7604](https://github.com/gemunion/mui-packages/commit/8fd760469fc4077986907881dddd5a12d24afa24))
+
 ## 5.5.101 (2024-07-20)
 
 ### Bug Fixes
