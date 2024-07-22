@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.78 (2024-07-22)
+
+**Note:** Version bump only for package @gemunion/login-button-wallet-connect
+
 ## 1.1.77 (2024-07-22)
 
 **Note:** Version bump only for package @gemunion/login-button-wallet-connect

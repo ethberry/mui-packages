@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.8.13 (2024-07-22)
+
+### Bug Fixes
+
+- wallet connect ([18c308b](https://github.com/gemunion/mui-packages/commit/18c308b9b0d5555e3ac049446218cef49944ce34))
+
 ## 3.8.12 (2024-07-22)
 
 ### Bug Fixes
