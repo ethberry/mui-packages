@@ -6,10 +6,11 @@ import { MaskedInput } from "../mask";
 import { formatValue, normalizeValue } from "./utils";
 
 export interface IEthInputProps {
+  name: string;
   allowNegative?: boolean;
   fractionalDelimiter?: string;
   fillByZeros?: boolean;
-  name: string;
+  required?: boolean;
   readOnly?: boolean;
   precision?: number;
   units?: BigNumberish;

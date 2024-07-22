@@ -7,6 +7,7 @@ import { useTestId } from "@gemunion/provider-test-id";
 
 export interface IMaskedInputProps {
   name: string;
+  required?: boolean;
   thousandSeparator?: string;
   valueIsNumericString?: boolean;
   prefix?: string;
