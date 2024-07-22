@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.8.14](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.8.13...@gemunion/provider-wallet@3.8.14) (2024-07-22)
+
+### Bug Fixes
+
+- wallet connect ([5232dbd](https://github.com/gemunion/mui-packages/commit/5232dbd00ffa7104f4d1156677f31698b8cb3190))
+- wallet connect ([18c308b](https://github.com/gemunion/mui-packages/commit/18c308b9b0d5555e3ac049446218cef49944ce34))
+
 ## 3.8.13 (2024-07-22)
 
 ### Bug Fixes
