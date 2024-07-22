@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.80](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-wallet-connect@1.1.79...@gemunion/login-button-wallet-connect@1.1.80) (2024-07-22)
+
+**Note:** Version bump only for package @gemunion/login-button-wallet-connect
+
 ## [1.1.79](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-wallet-connect@1.1.78...@gemunion/login-button-wallet-connect@1.1.79) (2024-07-22)
 
 **Note:** Version bump only for package @gemunion/login-button-wallet-connect
