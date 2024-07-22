@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.8.12 (2024-07-22)
+
+### Bug Fixes
+
+- SANDBOX_CHAINS for wallet connect ([cea9613](https://github.com/gemunion/mui-packages/commit/cea9613b2b82cef6f15da4176ea3fa28b2d33790))
+
 ## 3.8.11 (2024-07-20)
 
 ### Bug Fixes
