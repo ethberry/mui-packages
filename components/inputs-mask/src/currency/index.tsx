@@ -6,10 +6,11 @@ import { number, format } from "../math";
 import { MaskedInput } from "../mask";
 
 export interface ICurrencyInputProps {
+  name: string;
   allowNegative?: boolean;
   fractionalDelimiter?: string;
   fillByZeros?: boolean;
-  name: string;
+  required?: boolean;
   readOnly?: boolean;
   precision?: number;
   symbol?: string;
