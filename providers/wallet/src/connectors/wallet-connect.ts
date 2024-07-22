@@ -37,7 +37,7 @@ export const [walletConnect, hooks, store]: [WalletConnect, Web3ReactHooks, Web3
         options: {
           projectId: WALLET_CONNECT_PROJECT_ID,
           chains: [1, 5, 97, 80002, 10001, 10000, 11155111, 13473], // [WALLET_CONNECT_DEFAULT_CHAIN_ID]
-          optionalChains: [5, 97, 80002, 10001, 10000, 11155111, 13473],
+          optionalChains: [1, 5, 97, 80002, 10001, 10000, 11155111, 13473],
           showQrModal: true,
           qrModalOptions: {
             themeVariables: {
