@@ -8,7 +8,7 @@ export enum Networks {
   BINANCE = "BINANCE",
   BINANCE_TEST = "BINANCE_TEST",
   POLYGON = "POLYGON",
-  MUMBAI = "MUMBAI",
+  AMOY = "AMOY",
   OPTIMISM = "OPTIMISM",
   ARBITRUM = "ARBITRUM",
   SEPOLIA = "SEPOLIA",
@@ -24,7 +24,7 @@ export const networkToChainId: Record<Networks, number> = {
   [Networks.BINANCE]: 56,
   [Networks.BINANCE_TEST]: 97,
   [Networks.POLYGON]: 137,
-  [Networks.MUMBAI]: 80001,
+  [Networks.AMOY]: 80002,
   [Networks.OPTIMISM]: 10,
   [Networks.ARBITRUM]: 42161,
   [Networks.SEPOLIA]: 11155111,
@@ -69,20 +69,14 @@ export const rpcUrls: Record<string, string[]> = {
     "https://rpc-mainnet.matic.quiknode.pro",
     "https://polygon-rpc.com",
   ],
-  [networkToChainId[Networks.MUMBAI]]: [
-    "https://matic-mumbai.chainstacklabs.com",
-    "https://matic-testnet-archive-rpc.bwarelabs.com",
-    "https://rpc-mumbai.maticvigil.com",
-  ],
+  [networkToChainId[Networks.AMOY]]: ["https://rpc-amoy.polygon.technology", "https://rpc.ankr.com/polygon_amoy"],
   [networkToChainId[Networks.BESU]]: ["http://127.0.0.1:8545"],
   [networkToChainId[Networks.GEMUNION]]: ["https://besu.gemunion.io"],
   [networkToChainId[Networks.SEPOLIA]]: ["https://rpc.sepolia.org"],
-  [networkToChainId[Networks.IMMUTABLE]]: ["http://rpc.immutable.com"],
-  [networkToChainId[Networks.IMMUTABLE]]: ["http://rpc.testnet.immutable.com"],
+  [networkToChainId[Networks.IMMUTABLE]]: ["http://rpc.immutable.com", "http://rpc.testnet.immutable.com"],
 };
 
-//export const SANDBOX_CHAINS = [5, 97, 80001, 13378, 13377, 10001, 10000, 11155111, 13473];
-export const SANDBOX_CHAINS = [5, 97, 10001, 10000, 11155111, 13473];
+export const SANDBOX_CHAINS = [5, 97, 80002, 10001, 10000, 11155111, 13473];
 
 export const STORE_CONNECTOR = "CONNECTOR";
 
