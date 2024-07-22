@@ -29,7 +29,8 @@ export const CurrencyInput: FC<ICurrencyInputProps> = props => {
     ...rest
   } = props;
 
-  const formatValue = (value: string): number => (value ? number(number(value) * 10 ** precision) : 0);
+  const formatValue = (value: string): number | string =>
+    value ? number(Math.round(number(value) * 10 ** precision)) : "";
   const normalizeValue = (value: number): string =>
     value ? format(value / 10 ** precision, { notation: "fixed" }) : "0";
 

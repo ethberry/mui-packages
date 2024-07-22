@@ -39,6 +39,10 @@ export const MaskedInput: FC<IMaskedInputProps> = props => {
     form.setValue(props.name, formattedValue, { shouldTouch: true, shouldDirty: true });
   };
 
+  const onTriggerField = () => {
+    void form.trigger(name);
+  };
+
   return (
     <NumericFormat
       customInput={TextInput}
@@ -47,7 +51,8 @@ export const MaskedInput: FC<IMaskedInputProps> = props => {
       normalizeValue={normalizeValue}
       formatValue={formatValue}
       readOnly={readOnly}
-      onChange={() => {}}
+      onChange={onTriggerField}
+      onBlur={onTriggerField}
       {...rest}
       {...testIdProps}
     />
