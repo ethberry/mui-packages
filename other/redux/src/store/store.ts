@@ -1,17 +1,44 @@
 import { configureStore, combineReducers, ThunkAction, Action } from "@reduxjs/toolkit";
 
-import { LOCAL_STORAGE_KEYS, SET_LANGUAGE_ACTION_TYPE } from "@gemunion/constants";
+import {
+  LAYOUT_DIRECTION,
+  LOCAL_STORAGE_KEYS,
+  RTLLanguages,
+  LAYOUT_SLICE_NAME,
+  SET_LANGUAGE_ACTION_TYPE,
+  SET_LAYOUT_DIRECTION_ACTION_TYPE,
+  SET_LAYOUT_THEME_ACTION_TYPE,
+} from "@gemunion/constants";
 import { saveToLS } from "@gemunion/utils";
 
 /* javascript-obfuscator:disable */
 const nodeEnv = process.env.NODE_ENV;
 /* javascript-obfuscator:enable */
 
-export const settingsMiddleware = () => {
+export const settingsMiddleware = (api: any) => {
   return (next: any) =>
     (action: any): unknown => {
       if (action.type === SET_LANGUAGE_ACTION_TYPE) {
+        const state = api.getState();
         saveToLS(LOCAL_STORAGE_KEYS.LANGUAGE, action.payload);
+        saveToLS(LOCAL_STORAGE_KEYS.LAYOUT, {
+          layoutDirection: action.payload === RTLLanguages.AR ? LAYOUT_DIRECTION.rtl : LAYOUT_DIRECTION.ltr,
+          themeType: state[LAYOUT_SLICE_NAME].themeType,
+        });
+      }
+      if (action.type === SET_LAYOUT_DIRECTION_ACTION_TYPE) {
+        const state = api.getState();
+        saveToLS(LOCAL_STORAGE_KEYS.LAYOUT, {
+          layoutDirection: action.payload,
+          themeType: state[LAYOUT_SLICE_NAME].themeType,
+        });
+      }
+      if (action.type === SET_LAYOUT_THEME_ACTION_TYPE) {
+        const state = api.getState();
+        saveToLS(LOCAL_STORAGE_KEYS.LAYOUT, {
+          layoutDirection: state[LAYOUT_SLICE_NAME].layoutDirection,
+          themeType: action.payload,
+        });
       }
       return next(action);
     };
