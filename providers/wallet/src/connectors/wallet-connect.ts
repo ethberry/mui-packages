@@ -7,7 +7,7 @@ import { rpcUrls } from "../provider/constants";
 
 /* javascript-obfuscator:disable */
 const WALLET_CONNECT_PROJECT_ID = process.env.WALLET_CONNECT_PROJECT_ID;
-// const WALLET_CONNECT_DEFAULT_CHAIN_ID = Number(process.env.WALLET_CONNECT_DEFAULT_CHAIN_ID);
+const WALLET_CONNECT_DEFAULT_CHAIN_ID = process.env.WALLET_CONNECT_DEFAULT_CHAIN_ID;
 /* javascript-obfuscator:enable */
 
 export const [walletConnect, hooks, store]: [WalletConnect, Web3ReactHooks, Web3ReactStore] =
@@ -17,7 +17,7 @@ export const [walletConnect, hooks, store]: [WalletConnect, Web3ReactHooks, Web3
         actions,
         options: {
           projectId: WALLET_CONNECT_PROJECT_ID,
-          chains: Object.keys(rpcUrls).map(Number), // [WALLET_CONNECT_DEFAULT_CHAIN_ID]
+          chains: [Number(WALLET_CONNECT_DEFAULT_CHAIN_ID)], // only 1 item
           optionalChains: Object.keys(rpcUrls).map(Number),
           showQrModal: true,
           qrModalOptions: {

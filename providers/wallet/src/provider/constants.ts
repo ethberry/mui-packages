@@ -3,59 +3,48 @@ import type { Networkish } from "@ethersproject/networks";
 import type { INetwork } from "@gemunion/types-blockchain";
 
 export enum Networks {
-  ETHEREUM = "ETHEREUM",
-  GOERLY = "GOERLY",
-  BINANCE = "BINANCE",
-  BINANCE_TEST = "BINANCE_TEST",
-  POLYGON = "POLYGON",
-  MUMBAI = "MUMBAI",
-  OPTIMISM = "OPTIMISM",
-  ARBITRUM = "ARBITRUM",
-  SEPOLIA = "SEPOLIA",
-  BESU = "BESU",
-  GEMUNION = "GEMUNION",
-  IMMUTABLE = "IMMUTABLE",
-  IMMUTABLE_TEST = "IMMUTABLE_TEST",
+  ETHEREUM = 1,
+  ETHEREUM_SEPOLIA = 11155111,
+
+  GEMUNION = 10000,
+  GEMUNION_BESU = 10001,
+
+  BINANCE = 56,
+  BINANCE_TEST = 97,
+
+  POLYGON = 137,
+  POLYGON_AMOY = 80002,
+
+  AVALANCHE = 43114,
+  AVALANCHE_FUJI = 43113,
+
+  FANTOM = 250,
+  FANTOM_TEST = 4002,
+
+  ARBITRUM = 42161,
+  ARBITRUM_SEPOLIA = 421614,
+
+  OPTIMISM = 10,
+  OPTIMISM_SEPOLIA = 11155420,
+
+  IMMUTABLE = 13371,
+  IMMUTABLE_TEST = 13473,
 }
-
-export const networkToChainId: Record<Networks, number> = {
-  [Networks.ETHEREUM]: 1,
-  [Networks.GOERLY]: 5,
-  [Networks.BINANCE]: 56,
-  [Networks.BINANCE_TEST]: 97,
-  [Networks.POLYGON]: 137,
-  [Networks.MUMBAI]: 80001,
-  [Networks.OPTIMISM]: 10,
-  [Networks.ARBITRUM]: 42161,
-  [Networks.SEPOLIA]: 11155111,
-  [Networks.BESU]: 10001,
-  [Networks.GEMUNION]: 10000,
-  [Networks.IMMUTABLE]: 13371,
-  [Networks.IMMUTABLE_TEST]: 13473,
-};
-
-export const chainIdToNetwork: Record<number, Networks> = (Object.keys(networkToChainId) as Networks[]).reduce(
-  (memo: Record<number, Networks>, current: Networks) => {
-    memo[networkToChainId[current]] = current;
-    return memo;
-  },
-  {},
-);
 
 // information from https://chainlist.org/
 export const rpcUrls: Record<string, string[]> = {
-  [networkToChainId[Networks.ETHEREUM]]: [
+  [Networks.ETHEREUM]: [
     "https://main-rpc.linkpool.io",
     "https://eth-mainnet.public.blastapi.io",
     "https://eth-rpc.gateway.pokt.network",
   ],
-  [networkToChainId[Networks.GOERLY]]: ["https://rpc.goerli.mudit.blog"],
-  [networkToChainId[Networks.BINANCE]]: [
+  [Networks.ETHEREUM_SEPOLIA]: ["https://rpc.sepolia.org"],
+  [Networks.BINANCE]: [
     "https://binance.llamarpc.com",
     "https://bsc-dataseed1.defibit.io",
     "https://bsc-dataseed1.ninicoin.io",
   ],
-  [networkToChainId[Networks.BINANCE_TEST]]: [
+  [Networks.BINANCE_TEST]: [
     "https://data-seed-prebsc-1-s1.binance.org:8545",
     "https://data-seed-prebsc-2-s1.binance.org:8545",
     "http://data-seed-prebsc-1-s2.binance.org:8545",
@@ -63,25 +52,24 @@ export const rpcUrls: Record<string, string[]> = {
     "https://data-seed-prebsc-1-s3.binance.org:8545",
     "https://data-seed-prebsc-2-s3.binance.org:8545",
   ],
-  [networkToChainId[Networks.POLYGON]]: [
+  [Networks.POLYGON]: [
     "https://polygon-mainnet.public.blastapi.io",
     "https://matic-mainnet-archive-rpc.bwarelabs.com",
     "https://rpc-mainnet.matic.quiknode.pro",
     "https://polygon-rpc.com",
   ],
-  [networkToChainId[Networks.MUMBAI]]: [
+  [Networks.POLYGON_AMOY]: [
     "https://matic-mumbai.chainstacklabs.com",
     "https://matic-testnet-archive-rpc.bwarelabs.com",
     "https://rpc-mumbai.maticvigil.com",
   ],
-  [networkToChainId[Networks.BESU]]: ["http://127.0.0.1:8545"],
-  [networkToChainId[Networks.GEMUNION]]: ["https://besu.gemunion.io"],
-  [networkToChainId[Networks.SEPOLIA]]: ["https://rpc.sepolia.org"],
-  [networkToChainId[Networks.IMMUTABLE]]: ["http://rpc.immutable.com"],
-  [networkToChainId[Networks.IMMUTABLE]]: ["http://rpc.testnet.immutable.com"],
+  [Networks.GEMUNION_BESU]: ["http://127.0.0.1:8545"],
+  [Networks.GEMUNION]: ["https://besu.gemunion.io"],
+  [Networks.IMMUTABLE]: ["http://rpc.immutable.com"],
+  [Networks.IMMUTABLE_TEST]: ["http://rpc.testnet.immutable.com"],
 };
 
-export const SANDBOX_CHAINS = [5, 97, 80001, 13378, 13377, 10001, 10000, 11155111, 13473];
+export const SANDBOX_CHAINS = [97, 80002, 10001, 10000, 11155111, 13473];
 
 export const STORE_CONNECTOR = "CONNECTOR";
 
