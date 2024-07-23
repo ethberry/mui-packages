@@ -1,7 +1,7 @@
 import { FC, MouseEvent, useEffect, useState } from "react";
 import { MenuItem } from "@mui/material";
 import { Facebook, Google, KeyboardArrowDown } from "@mui/icons-material";
-import { useWeb3React, Web3ContextType } from "@web3-react/core";
+import { Web3ContextType } from "@web3-react/core";
 import { FormattedMessage } from "react-intl";
 import { v4 } from "uuid";
 
@@ -18,9 +18,6 @@ import { StyledButton, StyledMenu } from "./styled";
 
 export const ParticleLoginButton: FC<IFirebaseLoginButtonProps> = props => {
   const { onTokenVerified } = props;
-  const [data, setData] = useState<IParticleDto>({ nonce: "", signature: "", wallet: "" });
-
-  const { account } = useWeb3React();
 
   const user = useUser<any>();
 
@@ -58,10 +55,8 @@ export const ParticleLoginButton: FC<IFirebaseLoginButtonProps> = props => {
 
       const wallet = web3Context.account!;
       const provider = web3Context.provider!;
-
-      const signature = await provider.getSigner().signMessage(`${phrase}${data.nonce}`);
-
-      setData({ ...data, wallet, signature });
+      const nonce = v4();
+      const signature = await provider.getSigner().signMessage(`${phrase}${nonce}`);
 
       const userInfo = window.particle?.auth?.getUserInfo?.();
 
@@ -70,7 +65,7 @@ export const ParticleLoginButton: FC<IFirebaseLoginButtonProps> = props => {
         imageUrl: userInfo?.avatar,
         email: userInfo?.google_email || userInfo?.facebook_email,
         wallet,
-        nonce: data.nonce,
+        nonce,
         signature,
       });
       await onTokenVerified(token?.token || "");
@@ -90,10 +85,6 @@ export const ParticleLoginButton: FC<IFirebaseLoginButtonProps> = props => {
       setIsVerifying(false);
     }
   }, [userIsAuthenticated]);
-
-  useEffect(() => {
-    setData({ nonce: v4(), signature: "", wallet: account || "" });
-  }, [account]);
 
   return (
     <ProgressOverlay isLoading={isLoading}>
