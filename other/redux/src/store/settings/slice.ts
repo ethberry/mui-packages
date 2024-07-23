@@ -1,9 +1,9 @@
 import { PayloadAction, createSlice, type Slice } from "@reduxjs/toolkit";
 
-import { RTLLanguages, ThemeType } from "@gemunion/constants";
+import { ThemeType } from "@gemunion/constants";
 
 import { emptySettingsState } from "./empty";
-import { LAYOUT_DIRECTION, type ISettingsState, TLanguage } from "./interfaces";
+import { LAYOUT_DIRECTION, type ISettingsState } from "./interfaces";
 
 const localSettingsState = localStorage.getItem("settings");
 const initialState: ISettingsState = localSettingsState !== null ? JSON.parse(localSettingsState) : emptySettingsState;
@@ -12,11 +12,11 @@ export const settingsSlice: Slice<ISettingsState> = createSlice({
   name: "settings",
   initialState,
   reducers: {
-    setLanguage: (state, action: PayloadAction<TLanguage>) => {
-      state.language = action.payload;
-      state.layoutDirection = state.language === RTLLanguages.AR ? LAYOUT_DIRECTION.rtl : LAYOUT_DIRECTION.ltr;
-      localStorage.setItem("settings", JSON.stringify(state));
-    },
+    // setLanguage: (state, action: PayloadAction<TLanguage>) => {
+    //   state.language = action.payload;
+    //   state.layoutDirection = state.language === RTLLanguages.AR ? LAYOUT_DIRECTION.rtl : LAYOUT_DIRECTION.ltr;
+    //   localStorage.setItem("settings", JSON.stringify(state));
+    // },
     setLayoutDirection: (state, action: PayloadAction<LAYOUT_DIRECTION>) => {
       state.layoutDirection = action.payload;
       localStorage.setItem("settings", JSON.stringify(state));
