@@ -11,7 +11,7 @@
     "@ethersproject/abi": "5.7.0",
     "@ethersproject/logger": "5.7.0",
     "@gemunion/license-messages": "0.0.36",
-    "@gemunion/provider-api": "7.0.80",
+    "@gemunion/provider-api": "7.0.81",
     "@gemunion/types-blockchain": "1.2.13",
     "@json-rpc-tools/utils": "1.7.6",
     "qs": "6.12.3",
@@ -19,8 +19,8 @@
   },
   "description": "react hooks",
   "devDependencies": {
-    "@gemunion/provider-license": "3.0.50",
-    "@gemunion/provider-wallet": "3.8.10",
+    "@gemunion/provider-license": "3.0.51",
+    "@gemunion/provider-wallet": "3.8.15",
     "@web3-react/core": "8.2.3",
     "notistack": "3.0.1",
     "react": "18.3.1",
@@ -59,5 +59,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "1.5.40"
+  "version": "1.5.45"
 }

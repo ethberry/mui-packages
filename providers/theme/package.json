@@ -8,10 +8,10 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@emotion/cache": "11.11.0",
-    "@emotion/react": "11.11.4",
+    "@emotion/cache": "11.13.0",
+    "@emotion/react": "11.13.0",
     "@gemunion/constants": "0.12.13",
-    "@mui/styles": "5.16.1",
+    "@mui/styles": "5.16.4",
     "jss": "10.10.0",
     "jss-rtl": "0.3.0",
     "stylis": "4.3.2",
@@ -20,8 +20,8 @@
   "description": "Material UI theme provider",
   "devDependencies": {
     "@gemunion/redux": "0.3.26",
-    "@mui/icons-material": "5.16.1",
-    "@mui/material": "5.16.1",
+    "@mui/icons-material": "5.16.4",
+    "@mui/material": "5.16.4",
     "@types/stylis": "4.2.6",
     "react": "18.3.1",
     "react-intl": "6.6.8"
@@ -58,5 +58,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "7.0.30"
+  "version": "7.0.31"
 }

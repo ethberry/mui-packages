@@ -13,8 +13,8 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "5.16.1",
-    "@mui/styles": "5.16.1",
+    "@mui/material": "5.16.4",
+    "@mui/styles": "5.16.4",
     "@types/react": "18.3.3",
     "@types/react-google-recaptcha": "2.1.9",
     "react": "18.3.1",
@@ -53,5 +53,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "4.1.137"
+  "version": "4.1.138"
 }

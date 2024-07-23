@@ -5,7 +5,7 @@ import { format, number } from "../math";
 export const formatValue =
   (units?: BigNumberish) =>
   (value: string): string => {
-    return value ? format(number(utils.parseUnits(value, units).toString()), { notation: "fixed" }) : "0";
+    return value ? format(number(utils.parseUnits(value, units).toString()), { notation: "fixed" }) : "";
   };
 
 export const normalizeValue =

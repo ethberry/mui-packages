@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.0.31 (2024-07-20)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([67302a5](https://github.com/gemunion/mui-packages/commit/67302a5fc5f9e83c3f784695eb8e5452edc3f0a6))
+
 ## [7.0.30](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@7.0.29...@gemunion/provider-theme@7.0.30) (2024-07-16)
 
 ### Bug Fixes

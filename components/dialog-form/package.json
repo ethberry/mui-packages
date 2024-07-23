@@ -8,18 +8,18 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-dialog-confirmation": "4.0.33",
-    "@gemunion/mui-form": "8.0.108",
-    "@gemunion/mui-page-layout": "2.3.44",
-    "@gemunion/react-hooks": "2.0.31",
-    "react-router": "6.24.1"
+    "@gemunion/mui-dialog-confirmation": "4.0.34",
+    "@gemunion/mui-form": "8.0.109",
+    "@gemunion/mui-page-layout": "2.3.45",
+    "@gemunion/react-hooks": "2.0.32",
+    "react-router": "6.25.1"
   },
   "description": "react widget",
   "devDependencies": {
-    "@gemunion/mui-inputs-core": "7.2.99",
-    "@gemunion/provider-license": "3.0.50",
-    "@mui/material": "5.16.1",
-    "@storybook/react": "8.2.2",
+    "@gemunion/mui-inputs-core": "7.2.100",
+    "@gemunion/provider-license": "3.0.51",
+    "@mui/material": "5.16.4",
+    "@storybook/react": "8.2.5",
     "@testing-library/jest-dom": "6.4.6",
     "@testing-library/react": "16.0.0",
     "@types/jest": "29.5.12",
@@ -30,8 +30,8 @@
     "react-dom": "18.3.1",
     "react-hook-form": "7.52.1",
     "react-intl": "6.6.8",
-    "react-router-dom": "6.24.1",
-    "ts-jest": "29.2.2"
+    "react-router-dom": "6.25.1",
+    "ts-jest": "29.2.3"
   },
   "engines": {
     "node": ">=22"
@@ -67,5 +67,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "8.2.100"
+  "version": "8.2.101"
 }

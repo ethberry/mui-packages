@@ -8,11 +8,11 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/firebase": "1.2.34",
-    "@gemunion/mui-dialog-confirmation": "4.0.33",
-    "@gemunion/mui-inputs-core": "7.2.99",
-    "@gemunion/mui-inputs-file-firebase": "6.0.157",
-    "@gemunion/mui-page-layout": "2.3.44",
+    "@gemunion/firebase": "1.2.35",
+    "@gemunion/mui-dialog-confirmation": "4.0.34",
+    "@gemunion/mui-inputs-core": "7.2.100",
+    "@gemunion/mui-inputs-file-firebase": "6.0.158",
+    "@gemunion/mui-page-layout": "2.3.45",
     "@gemunion/popup": "1.0.58",
     "clsx": "2.1.1",
     "react-beautiful-dnd": "13.1.1",
@@ -21,14 +21,14 @@
   "description": "react widget media firebase",
   "devDependencies": {
     "@gemunion/cross-env": "0.0.4",
-    "@gemunion/mui-form": "8.0.108",
-    "@gemunion/mui-inputs-file": "6.1.74",
-    "@gemunion/provider-api": "7.0.80",
+    "@gemunion/mui-form": "8.0.109",
+    "@gemunion/mui-inputs-file": "6.1.75",
+    "@gemunion/provider-api": "7.0.81",
     "@gemunion/provider-test-id": "1.0.83",
-    "@mui/icons-material": "5.16.1",
-    "@mui/material": "5.16.1",
-    "@mui/styles": "5.16.1",
-    "@storybook/react": "8.2.2",
+    "@mui/icons-material": "5.16.4",
+    "@mui/material": "5.16.4",
+    "@mui/styles": "5.16.4",
+    "@storybook/react": "8.2.5",
     "@testing-library/jest-dom": "6.4.6",
     "@testing-library/react": "16.0.0",
     "@types/jest": "29.5.12",
@@ -41,7 +41,7 @@
     "react": "18.3.1",
     "react-hook-form": "7.52.1",
     "react-intl": "6.6.8",
-    "ts-jest": "29.2.2"
+    "ts-jest": "29.2.3"
   },
   "engines": {
     "node": ">=22"
@@ -81,5 +81,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "1.1.101"
+  "version": "1.1.102"
 }

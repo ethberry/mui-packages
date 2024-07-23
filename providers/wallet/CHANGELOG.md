@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.8.15](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.8.14...@gemunion/provider-wallet@3.8.15) (2024-07-22)
+
+### Bug Fixes
+
+- wallet connect ([bdd5405](https://github.com/gemunion/mui-packages/commit/bdd5405a7e1b5ac6f01499b961a1c5a2a14d8f36))
+- wallet connect ([5232dbd](https://github.com/gemunion/mui-packages/commit/5232dbd00ffa7104f4d1156677f31698b8cb3190))
+- wallet connect ([18c308b](https://github.com/gemunion/mui-packages/commit/18c308b9b0d5555e3ac049446218cef49944ce34))
+
+## [3.8.14](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.8.13...@gemunion/provider-wallet@3.8.14) (2024-07-22)
+
+### Bug Fixes
+
+- wallet connect ([5232dbd](https://github.com/gemunion/mui-packages/commit/5232dbd00ffa7104f4d1156677f31698b8cb3190))
+- wallet connect ([18c308b](https://github.com/gemunion/mui-packages/commit/18c308b9b0d5555e3ac049446218cef49944ce34))
+
+## 3.8.13 (2024-07-22)
+
+### Bug Fixes
+
+- wallet connect ([18c308b](https://github.com/gemunion/mui-packages/commit/18c308b9b0d5555e3ac049446218cef49944ce34))
+
+## 3.8.12 (2024-07-22)
+
+### Bug Fixes
+
+- SANDBOX_CHAINS for wallet connect ([cea9613](https://github.com/gemunion/mui-packages/commit/cea9613b2b82cef6f15da4176ea3fa28b2d33790))
+
+## 3.8.11 (2024-07-20)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([400f59b](https://github.com/gemunion/mui-packages/commit/400f59be08224b7c03146e3870002c141369cfbf))
+- **deps:** update all non-major dependencies ([67302a5](https://github.com/gemunion/mui-packages/commit/67302a5fc5f9e83c3f784695eb8e5452edc3f0a6))
+
 ## [3.8.10](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.8.9...@gemunion/provider-wallet@3.8.10) (2024-07-16)
 
 ### Bug Fixes
