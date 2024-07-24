@@ -1,14 +1,17 @@
 import { FC, useCallback, useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 
+import type { INetwork } from "@gemunion/types-blockchain";
 import { useUser } from "@gemunion/provider-user";
-import { TConnectors, useAppDispatch, useAppSelector, walletActions } from "@gemunion/redux";
+import { useAppDispatch, useAppSelector } from "@gemunion/redux";
 
 import { particleAuth } from "../connectors/particle";
+import { TConnectors, walletActions, walletSelectors } from "../reducer";
 
 export const CheckNetwork: FC = () => {
   const { isActive, chainId, connector } = useWeb3React();
-  const { activeConnector, network } = useAppSelector(state => state.wallet);
+  const network = useAppSelector<INetwork>(walletSelectors.networkSelector);
+  const activeConnector = useAppSelector(walletSelectors.activeConnectorSelector);
   const { setActiveConnector } = walletActions;
   const dispatch = useAppDispatch();
   const user = useUser<any>();

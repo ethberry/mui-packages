@@ -5,9 +5,11 @@ import {
   LOCAL_STORAGE_KEYS,
   RTLLanguages,
   LAYOUT_SLICE_NAME,
+  SET_ACTIVE_CONNECTOR_ACTION_TYPE,
   SET_LANGUAGE_ACTION_TYPE,
   SET_LAYOUT_DIRECTION_ACTION_TYPE,
   SET_LAYOUT_THEME_ACTION_TYPE,
+  SET_REFERRER_ACTION_TYPE,
 } from "@gemunion/constants";
 import { saveToLS } from "@gemunion/utils";
 
@@ -18,6 +20,12 @@ const nodeEnv = process.env.NODE_ENV;
 export const settingsMiddleware = (api: any) => {
   return (next: any) =>
     (action: any): unknown => {
+      if (action.type === SET_REFERRER_ACTION_TYPE) {
+        saveToLS(LOCAL_STORAGE_KEYS.REFERRER, action.payload);
+      }
+      if (action.type === SET_ACTIVE_CONNECTOR_ACTION_TYPE) {
+        saveToLS(LOCAL_STORAGE_KEYS.STORE_CONNECTOR, action.payload);
+      }
       if (action.type === SET_LANGUAGE_ACTION_TYPE) {
         const state = api.getState();
         saveToLS(LOCAL_STORAGE_KEYS.LANGUAGE, action.payload);

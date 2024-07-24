@@ -3,10 +3,11 @@ import { useIntl } from "react-intl";
 import { enqueueSnackbar } from "notistack";
 import { AuthType } from "@particle-network/auth";
 
-import { TConnectors, useAppDispatch, useAppSelector, walletActions } from "@gemunion/redux";
+import { useAppDispatch, useAppSelector } from "@gemunion/redux";
 
 import { useWallet } from "../provider";
 import { particleAuth } from "../connectors/particle";
+import { TConnectors, walletActions, walletSelectors } from "../reducer";
 
 export interface IUseConnectParticle {
   onClick: () => Promise<void>;
@@ -16,7 +17,8 @@ export const useConnectParticle = (props: IUseConnectParticle) => {
   const { onClick } = props;
 
   const { formatMessage } = useIntl();
-  const { activeConnector, network } = useAppSelector(state => state.wallet);
+  const network = useAppSelector(walletSelectors.networkSelector);
+  const activeConnector = useAppSelector(walletSelectors.activeConnectorSelector);
   const { setActiveConnector } = walletActions;
   const dispatch = useAppDispatch();
   const { connectCallback } = useWallet();

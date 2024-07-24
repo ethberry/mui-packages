@@ -4,9 +4,10 @@ import { FormattedMessage } from "react-intl";
 import { useWeb3React } from "@web3-react/core";
 
 import { useUser } from "@gemunion/provider-user";
-import { useAppDispatch, walletActions } from "@gemunion/redux";
+import { useAppDispatch } from "@gemunion/redux";
 
 import { CloseButton } from "../../buttons/close";
+import { walletActions } from "../../reducer";
 
 export interface IWalletDialogProps {
   open: boolean;
