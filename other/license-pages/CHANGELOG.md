@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.8 (2024-07-24)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([f4599a2](https://github.com/gemunion/mui-packages/commit/f4599a2fff0e5e662c4b594733c071c2c961b9fd))
+
 ## 1.3.7 (2024-07-20)
 
 ### Bug Fixes
