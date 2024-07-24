@@ -9,31 +9,31 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.12.13",
-    "@gemunion/firebase": "1.2.34",
-    "@gemunion/mui-page-layout": "2.3.44",
-    "@gemunion/provider-api": "7.0.80",
-    "@gemunion/react-hooks": "2.0.31",
-    "@gemunion/react-hooks-eth": "1.5.40",
+    "@gemunion/firebase": "1.2.35",
+    "@gemunion/mui-page-layout": "2.3.45",
+    "@gemunion/provider-api": "7.0.81",
+    "@gemunion/react-hooks": "2.0.32",
+    "@gemunion/react-hooks-eth": "1.5.45",
     "@gemunion/types-collection": "1.5.17",
     "@gemunion/types-jwt": "0.4.5",
-    "@mui/icons-material": "5.16.1",
+    "@mui/icons-material": "5.16.4",
     "firebaseui": "6.1.0",
     "uuid": "10.0.0"
   },
   "description": "react component",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.80",
-    "@gemunion/provider-license": "3.0.50",
-    "@gemunion/provider-user": "6.0.86",
-    "@keplr-wallet/types": "0.12.110",
-    "@mui/material": "5.16.1",
-    "@mui/styles": "5.16.1",
-    "firebase": "10.12.3",
+    "@gemunion/provider-api": "7.0.81",
+    "@gemunion/provider-license": "3.0.51",
+    "@gemunion/provider-user": "6.0.87",
+    "@keplr-wallet/types": "0.12.111",
+    "@mui/material": "5.16.4",
+    "@mui/styles": "5.16.4",
+    "firebase": "10.12.4",
     "notistack": "3.0.1",
     "react": "18.3.1",
     "react-intl": "6.6.8",
-    "react-router": "6.24.1",
-    "react-router-dom": "6.24.1"
+    "react-router": "6.25.1",
+    "react-router-dom": "6.25.1"
   },
   "engines": {
     "node": ">=22"
@@ -74,5 +74,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.3.78"
+  "version": "2.3.83"
 }

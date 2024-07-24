@@ -9,31 +9,31 @@
   },
   "dependencies": {
     "@gemunion/constants": "0.12.13",
-    "@gemunion/mui-form": "8.0.108",
-    "@gemunion/mui-inputs-captcha": "4.1.137",
-    "@gemunion/mui-inputs-core": "7.2.99",
-    "@gemunion/mui-page-layout": "2.3.44",
+    "@gemunion/mui-form": "8.0.109",
+    "@gemunion/mui-inputs-captcha": "4.1.138",
+    "@gemunion/mui-inputs-core": "7.2.100",
+    "@gemunion/mui-page-layout": "2.3.45",
     "@gemunion/popup": "1.0.58",
-    "@gemunion/react-hooks": "2.0.31",
-    "@gemunion/yup-rules": "4.2.54",
+    "@gemunion/react-hooks": "2.0.32",
+    "@gemunion/yup-rules": "4.2.55",
     "yup": "1.4.0"
   },
   "description": "react context provider",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.80",
-    "@gemunion/provider-user": "6.0.86",
-    "@mui/icons-material": "5.16.1",
+    "@gemunion/provider-api": "7.0.81",
+    "@gemunion/provider-user": "6.0.87",
+    "@mui/icons-material": "5.16.4",
     "@mui/lab": "5.0.0-alpha.172",
-    "@mui/material": "5.16.1",
-    "@mui/styles": "5.16.1",
-    "@types/node": "20.14.10",
+    "@mui/material": "5.16.4",
+    "@mui/styles": "5.16.4",
+    "@types/node": "20.14.11",
     "@types/react": "18.3.3",
     "notistack": "3.0.1",
     "react": "18.3.1",
     "react-hook-form": "7.52.1",
     "react-intl": "6.6.8",
-    "react-router": "6.24.1",
-    "react-router-dom": "6.24.1"
+    "react-router": "6.25.1",
+    "react-router-dom": "6.25.1"
   },
   "engines": {
     "node": ">=22"
@@ -74,5 +74,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "11.0.112"
+  "version": "11.0.113"
 }

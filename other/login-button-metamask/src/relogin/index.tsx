@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren, useLayoutEffect, useRef, useState } from "react";
+import { FC, PropsWithChildren, useLayoutEffect, useEffect, useRef, useState } from "react";
 import { Web3ContextType, useWeb3React } from "@web3-react/core";
 import { getAuth, signInWithCustomToken } from "firebase/auth";
 import { v4 } from "uuid";
@@ -67,10 +67,8 @@ export const MetamaskRelogin: FC<PropsWithChildren> = props => {
     try {
       const provider = web3Context.provider!;
       const nonce = v4();
-
       const signature = await provider.getSigner().signMessage(`${phrase}${nonce}`);
-
-      const token = await getVerifiedToken(void 0, { wallet: currentWallet.current, nonce, signature });
+      const token = await getVerifiedToken(void 0, { wallet: currentWallet.current || account, nonce, signature });
       await handleTokenVerified(token?.token || "");
     } catch (error) {
       console.error(error);
@@ -98,23 +96,23 @@ export const MetamaskRelogin: FC<PropsWithChildren> = props => {
     void handleMetamaskLogin();
   }, [account, activeConnector, didMount, isConnecting, isUserAuthenticated]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!isActive) {
+      currentWallet.current = "";
+      setDidMount(false);
       return;
     }
-    currentWallet.current = account;
-    setDidMount(true);
-    return () => {
-      setDidMount(false);
-    };
-  }, [account, isActive, didMount]);
 
-  useLayoutEffect(() => {
-    if (!isActive) {
-      // void handleDisconnect();
-      currentWallet.current = "";
+    if (!didMount) {
+      setDidMount(true);
     }
-  }, [isActive]);
+
+    if (!didMount && account) {
+      currentWallet.current = account;
+    } else if (currentWallet.current !== account && didMount) {
+      void handleDisconnect();
+    }
+  }, [account, didMount, isActive]);
 
   return <ProgressOverlay isLoading={isConnecting}>{children}</ProgressOverlay>;
 };
