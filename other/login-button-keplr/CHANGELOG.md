@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.74](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-keplr@1.1.73...@gemunion/login-button-keplr@1.1.74) (2024-07-24)
+
+### Bug Fixes
+
+- fixed nonce in buttons login wallet ([85fc068](https://github.com/gemunion/mui-packages/commit/85fc0681e4b540db53d1fa9f5daedb874f35487c))
+
 ## [1.1.73](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-keplr@1.1.72...@gemunion/login-button-keplr@1.1.73) (2024-07-22)
 
 **Note:** Version bump only for package @gemunion/login-button-keplr
