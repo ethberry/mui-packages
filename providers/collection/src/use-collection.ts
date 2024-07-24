@@ -4,16 +4,15 @@ import { useIntl } from "react-intl";
 import { useLocation, useNavigate, useParams } from "react-router";
 import { parse, stringify } from "qs";
 
+import { useApiCall, useDeepCompareEffect } from "@gemunion/react-hooks";
 import { defaultItemsPerPage } from "@gemunion/constants";
 import { ApiError } from "@gemunion/provider-api";
-import { CollectionActions, collectionActions, useAppDispatch, useAppSelector } from "@gemunion/redux";
+import { useAppDispatch, useAppSelector } from "@gemunion/redux";
+
 import { IIdBase, IPaginationResult, IPaginationDto, ISortDto, IMuiSortDto } from "@gemunion/types-collection";
 
-import { useApiCall } from "./use-api-call";
-import { useDeepCompareEffect } from "./use-deep-compare-effect";
 import { decoder, deepEqual, hasAwaited } from "./utils";
-
-export { CollectionActions } from "@gemunion/redux";
+import { CollectionActions, collectionActions, collectionSelector, ICollectionState } from "./reducer";
 
 export interface IHandleChangePaginationModelProps {
   page: number;
@@ -96,7 +95,7 @@ export const useCollection = <
     selected: stateSelected,
     search: stateSearch,
     needRefresh,
-  } = useAppSelector(state => state.collection);
+  }: ICollectionState = useAppSelector(collectionSelector);
 
   const selected = (Object.entries(stateSelected).length ? stateSelected : empty) as T;
   const [localSearch, setLocalSearch] = useState<S>(

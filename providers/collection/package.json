@@ -11,6 +11,7 @@
     "@gemunion/constants": "0.12.13",
     "@gemunion/license-messages": "0.0.36",
     "@gemunion/types-collection": "1.5.17",
+    "@gemunion/react-hooks": "2.0.32",
     "qs": "6.12.3"
   },
   "description": "react hooks",
@@ -21,7 +22,9 @@
     "notistack": "3.0.1",
     "react": "18.3.1",
     "react-hook-form": "7.52.1",
-    "react-intl": "6.6.8"
+    "react-intl": "6.6.8",
+    "react-router": "6.25.1",
+    "react-router-dom": "6.25.1"
   },
   "engines": {
     "node": ">=22"
@@ -29,7 +32,7 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/react-hooks",
+  "name": "@gemunion/collection",
   "peerDependencies": {
     "@gemunion/provider-api": "^7.0.0",
     "@gemunion/provider-license": "^3.0.0",
@@ -37,7 +40,9 @@
     "notistack": "^3.0.0",
     "react": "^18.0.0",
     "react-hook-form": "^7.0.0",
-    "react-intl": "^6.0.0"
+    "react-intl": "^6.0.0",
+    "react-router": "^6.0.0",
+    "react-router-dom": "^6.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -57,5 +62,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.32"
+  "version": "0.0.1"
 }
