@@ -1,3 +1,5 @@
+import { constants } from "ethers";
+
 import type { IWalletState } from "./interfaces";
 
 export const emptyWalletState: IWalletState = {
@@ -5,5 +7,5 @@ export const emptyWalletState: IWalletState = {
   activeConnector: null,
   network: void 0,
   networks: {},
-  referrer: "0x0000000000000000000000000000000000000000",
+  referrer: constants.AddressZero,
 };
