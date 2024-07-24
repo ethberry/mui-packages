@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.90 (2024-07-24)
+
+**Note:** Version bump only for package @gemunion/provider-coingecko
+
 ## 2.0.89 (2024-07-20)
 
 ### Bug Fixes

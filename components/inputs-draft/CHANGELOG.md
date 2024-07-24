@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.2.103 (2024-07-24)
+
+### Bug Fixes
+
+- **deps:** update [@gemunion](https://github.com/gemunion) packages ([1b96cd4](https://github.com/gemunion/mui-packages/commit/1b96cd40c803d61833a0791beff19b5166fcbc4b))
+- **deps:** update all non-major dependencies ([f4599a2](https://github.com/gemunion/mui-packages/commit/f4599a2fff0e5e662c4b594733c071c2c961b9fd))
+
 ## 5.2.102 (2024-07-20)
 
 ### Bug Fixes

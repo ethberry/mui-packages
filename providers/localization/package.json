@@ -13,7 +13,7 @@
     "@reduxjs/toolkit": "^2.2.6"
   },
   "devDependencies": {
-    "@gemunion/provider-license": "3.0.51",
+    "@gemunion/provider-license": "3.0.52",
     "@mui/icons-material": "5.16.4",
     "@mui/material": "5.16.4",
     "@types/react": "18.3.3",
@@ -53,5 +53,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "4.0.31"
+  "version": "4.0.32"
 }
