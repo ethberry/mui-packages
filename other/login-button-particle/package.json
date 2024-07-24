@@ -22,7 +22,7 @@
   "description": "react particle login button component",
   "devDependencies": {
     "@gemunion/provider-api": "7.0.84",
-    "@gemunion/provider-license": "3.0.51",
+    "@gemunion/provider-license": "3.0.52",
     "@gemunion/provider-user": "6.0.90",
     "@mui/icons-material": "5.16.4",
     "@mui/material": "5.16.4",
