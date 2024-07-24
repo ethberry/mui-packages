@@ -15,21 +15,8 @@ import { StyledButton } from "./styled";
 
 export const KeplrLoginButton: FC<IFirebaseLoginButtonProps> = props => {
   const { onTokenVerified } = props;
-  const [data, setData] = useState<IKeplrDto>({
-    nonce: "",
-    signature: {
-      pub_key: {
-        type: "",
-        value: "",
-      },
-      signature: "",
-    },
-    wallet: "",
-    chainPrefix: "",
-  });
 
   const user = useUser<any>();
-  const [account, setAccount] = useState("");
   const { enabledChains } = useCosmos();
   const chainId = enabledChains[1];
 
@@ -63,12 +50,9 @@ export const KeplrLoginButton: FC<IFirebaseLoginButtonProps> = props => {
         const chainPrefix = chainInfo.find(chain => chain.chainId === chainId)!.bech32Config.bech32PrefixAccAddr;
         const keplrAccounts = await offlineSigner.getAccounts();
         const wallet = keplrAccounts[0].address;
-        setAccount(wallet);
-
-        const signature = await keplr.signArbitrary(chainId, wallet, `${phrase}${data.nonce}`);
-        setData({ ...data, wallet, signature, chainPrefix });
-
-        const token = await getVerifiedToken(void 0, { wallet, nonce: data.nonce, signature, chainPrefix });
+        const nonce = v4();
+        const signature = await keplr.signArbitrary(chainId, wallet, `${phrase}${nonce}`);
+        const token = await getVerifiedToken(void 0, { wallet, nonce, signature, chainPrefix });
         await onTokenVerified(token?.token || "");
       } catch (e) {
         console.error(e);
@@ -89,21 +73,6 @@ export const KeplrLoginButton: FC<IFirebaseLoginButtonProps> = props => {
       setIsVerifying(false);
     }
   }, [userIsAuthenticated]);
-
-  useEffect(() => {
-    setData({
-      nonce: v4(),
-      signature: {
-        pub_key: {
-          type: "",
-          value: "",
-        },
-        signature: "",
-      },
-      wallet: account,
-      chainPrefix: "",
-    });
-  }, [account]);
 
   return (
     <ProgressOverlay isLoading={isLoading}>
