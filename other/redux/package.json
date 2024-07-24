@@ -8,8 +8,8 @@
     "url": "https://github.com/gemunion/common-packages/issues"
   },
   "dependencies": {
-    "@gemunion/constants": "0.12.13",
-    "@gemunion/types-blockchain": "1.2.13",
+    "@gemunion/constants": "0.12.16",
+    "@gemunion/types-blockchain": "1.2.14",
     "@reduxjs/toolkit": "2.2.6",
     "react-redux": "9.1.2"
   },

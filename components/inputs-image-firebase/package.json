@@ -20,7 +20,7 @@
   "devDependencies": {
     "@gemunion/cross-env": "0.0.4",
     "@gemunion/mui-form": "8.0.109",
-    "@gemunion/provider-api": "7.0.81",
+    "@gemunion/provider-api": "7.0.84",
     "@gemunion/provider-test-id": "1.0.83",
     "@mui/icons-material": "5.16.4",
     "@mui/material": "5.16.4",
