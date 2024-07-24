@@ -10,7 +10,7 @@
   "description": "react widget",
   "devDependencies": {
     "@gemunion/provider-license": "3.0.51",
-    "@gemunion/provider-settings": "4.0.94",
+    "@gemunion/provider-settings": "4.0.97",
     "@gemunion/redux": "0.3.26",
     "@mui/material": "5.16.4",
     "@storybook/react": "8.2.5",

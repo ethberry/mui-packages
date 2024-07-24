@@ -14,7 +14,7 @@ export interface IUseConnectWalletConnect {
 }
 
 /* javascript-obfuscator:disable */
-const WALLET_CONNECT_DEFAULT_CHAIN_ID = Number(process.env.WALLET_CONNECT_DEFAULT_CHAIN_ID);
+const WALLET_CONNECT_DEFAULT_CHAIN_ID = process.env.WALLET_CONNECT_DEFAULT_CHAIN_ID;
 /* javascript-obfuscator:enable */
 
 export const useConnectWalletConnect = (props: IUseConnectWalletConnect) => {
@@ -30,7 +30,7 @@ export const useConnectWalletConnect = (props: IUseConnectWalletConnect) => {
   return useCallback(() => {
     return connectCallback(async () => {
       return walletConnect
-        .activate(network ? network.chainId : WALLET_CONNECT_DEFAULT_CHAIN_ID)
+        .activate(network ? network.chainId : Number(WALLET_CONNECT_DEFAULT_CHAIN_ID))
         .then(() => {
           dispatch(setActiveConnector(TConnectors.WALLETCONNECT));
           return onClick();
@@ -42,8 +42,13 @@ export const useConnectWalletConnect = (props: IUseConnectWalletConnect) => {
           if (e.message === "isNotActive") {
             enqueueSnackbar(formatMessage({ id: "snackbar.walletIsNotConnected" }), { variant: "error" });
           } else if (e.message === "User rejected") {
+            // Cancel button in Binance app
+            enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
+          } else if (e.message === "User rejected methods.") {
+            // Cancel button in Metamask app
             enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
           } else if (e.message === "Connection request reset. Please try again.") {
+            // X button on popup
             enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "warning" });
           } else if (e.message === "User signature failure") {
             enqueueSnackbar(formatMessage({ id: "snackbar.rejectedByUser" }), { variant: "error" });
