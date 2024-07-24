@@ -5,12 +5,13 @@ import { useIntl } from "react-intl";
 
 import { usePopup } from "@gemunion/provider-popup";
 import { useUser } from "@gemunion/provider-user";
-import { useAppDispatch, useAppSelector, walletActions } from "@gemunion/redux";
+import { useAppDispatch, useAppSelector } from "@gemunion/redux";
 
 import { WalletMenuDialog } from "../../dialogs/wallet";
 import { ConnectWallet } from "../../dialogs/connect";
 import { StyledButton, StyledTooltipContent } from "./styled";
 import { useWallet, WALLET_MENU_POPUP_TYPE } from "../../provider";
+import { walletActions, walletSelectors } from "../../reducer";
 import { WalletIcon } from "../../icons";
 import { StyledBadge, StyledCircle } from "../network/styled";
 
@@ -22,7 +23,7 @@ export const WalletButton: FC<PropsWithChildren> = props => {
   const { formatMessage } = useIntl();
   const { profile } = useUser<any>();
   const { closeConnectWalletDialog } = useWallet();
-  const { isDialogOpen } = useAppSelector(state => state.wallet);
+  const isDialogOpen = useAppSelector<boolean>(walletSelectors.isDialogOpenSelector);
   const dispatch = useAppDispatch();
   const { setIsDialogOpen } = walletActions;
 

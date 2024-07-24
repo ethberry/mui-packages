@@ -2,10 +2,12 @@ import { useCallback } from "react";
 import { useIntl } from "react-intl";
 import { enqueueSnackbar } from "notistack";
 
-import { TConnectors, useAppDispatch, useAppSelector, walletActions } from "@gemunion/redux";
+import type { INetwork } from "@gemunion/types-blockchain";
+import { useAppDispatch, useAppSelector } from "@gemunion/redux";
 
 import { useWallet } from "../provider";
 import { walletConnect } from "../connectors/wallet-connect";
+import { TConnectors, walletActions, walletSelectors } from "../reducer";
 
 export interface IUseConnectWalletConnect {
   onClick: () => Promise<void>;
@@ -20,7 +22,7 @@ export const useConnectWalletConnect = (props: IUseConnectWalletConnect) => {
 
   const { formatMessage } = useIntl();
 
-  const { network } = useAppSelector(state => state.wallet);
+  const network = useAppSelector<INetwork>(walletSelectors.networkSelector);
   const { setActiveConnector } = walletActions;
   const dispatch = useAppDispatch();
   const { connectCallback } = useWallet();

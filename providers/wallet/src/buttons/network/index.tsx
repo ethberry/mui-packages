@@ -1,6 +1,7 @@
 import { FC, MouseEvent, useState } from "react";
 import { IconButton, ListItemText, Menu, MenuItem, Tooltip } from "@mui/material";
 
+import type { INetwork } from "@gemunion/types-blockchain";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useUser } from "@gemunion/provider-user";
 import { useAppSelector } from "@gemunion/redux";
@@ -8,12 +9,13 @@ import { useAppSelector } from "@gemunion/redux";
 import { spinnerMixin, StyledBadge, StyledCircle, StyledListItemIcon, StyledSvgIcon } from "./styled";
 import { getChainIconParams } from "./utils";
 import { SANDBOX_CHAINS } from "../../provider";
+import { walletSelectors } from "../../reducer";
 
 export const NetworkButton: FC = () => {
   const user = useUser<any>();
   const [anchor, setAnchor] = useState<Element | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const { networks } = useAppSelector(state => state.wallet);
+  const networks = useAppSelector<Record<number, INetwork>>(walletSelectors.networksSelector);
 
   const handleMenuOpen = (event: MouseEvent): void => {
     setAnchor(event.currentTarget);

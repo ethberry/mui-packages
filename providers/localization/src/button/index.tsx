@@ -3,7 +3,9 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { IconButton, Menu, MenuItem, MenuItemProps, MenuProps, Tooltip } from "@mui/material";
 import { Translate } from "@mui/icons-material";
 
-import { settingsActions, TLanguage, useAppDispatch, useAppSelector } from "@gemunion/redux";
+import { TLanguage, useAppDispatch, useAppSelector } from "@gemunion/redux";
+
+import { languageSelector, setLanguage } from "../reducer";
 
 export interface ILocalizationProps {
   languages: Array<string>;
@@ -15,8 +17,8 @@ export interface ILocalizationProps {
 export const Localization: FC<ILocalizationProps> = props => {
   const { languages, icon, menuProps = {}, menuItemProps = {} } = props;
   const { formatMessage } = useIntl();
-  const settings = useAppSelector(state => state.settings);
-  const { setLanguage } = settingsActions;
+
+  const languageFromState = useAppSelector(languageSelector);
   const dispatch = useAppDispatch();
 
   const [anchor, setAnchor] = useState<Element | null>(null);
@@ -52,7 +54,7 @@ export const Localization: FC<ILocalizationProps> = props => {
         {languages.map(language => (
           <MenuItem
             key={language}
-            selected={settings.language === (language as TLanguage)}
+            selected={languageFromState === language}
             onClick={handleLanguageMenuItemClick(language)}
             {...menuItemProps}
           >

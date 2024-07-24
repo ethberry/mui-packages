@@ -9,6 +9,9 @@ const initialState: ICollectionState = emptyCollectionState;
 export const collectionSlice: Slice<ICollectionState> = createSlice({
   name: "collection",
   initialState,
+  selectors: {
+    collectionSelector: state => state,
+  },
   reducers: {
     setIsLoading: (state, action: PayloadAction<boolean>) => {
       state.isLoading = action.payload;
@@ -64,3 +67,5 @@ export const collectionSlice: Slice<ICollectionState> = createSlice({
 });
 
 export const collectionActions = collectionSlice.actions;
+
+export const { collectionSelector } = collectionSlice.selectors as any;

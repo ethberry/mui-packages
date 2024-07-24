@@ -1,28 +1,23 @@
-import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import { configureStore, combineReducers, ThunkAction, Action } from "@reduxjs/toolkit";
 
-import { collectionSlice } from "./collection";
-import { settingsSlice } from "./settings";
-import { walletSlice } from "./wallet";
+import { settingsMiddleware } from "./middlewares";
 
 /* javascript-obfuscator:disable */
 const nodeEnv = process.env.NODE_ENV;
 /* javascript-obfuscator:enable */
 
-export interface IStore {
-  collection: ReturnType<typeof collectionSlice.reducer>;
-  settings: ReturnType<typeof settingsSlice.reducer>;
-  wallet: ReturnType<typeof walletSlice.reducer>;
-}
+export const createStore = <T extends Record<string, any>>(slices: Array<T>) => {
+  const reducers = slices.reduce((obj: Record<string, any>, slice) => {
+    obj[slice.name] = slice.reducer;
+    return obj;
+  }, {});
+  return configureStore({
+    reducer: combineReducers(reducers),
+    middleware: getDefaultMiddleware => getDefaultMiddleware().concat([settingsMiddleware]),
+    devTools: nodeEnv !== "production",
+  });
+};
 
-export const store = configureStore<IStore>({
-  reducer: {
-    collection: collectionSlice.reducer,
-    settings: settingsSlice.reducer,
-    wallet: walletSlice.reducer,
-  },
-  devTools: nodeEnv !== "production",
-});
-
-export type AppDispatch = typeof store.dispatch;
-export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = ReturnType<typeof createStore>["dispatch"];
+export type RootState = ReturnType<typeof createStore>["getState"];
 export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, RootState, unknown, Action<string>>;

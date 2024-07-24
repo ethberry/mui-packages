@@ -4,12 +4,13 @@ import { IconButton, Tooltip } from "@mui/material";
 import { Brightness4, Brightness7 } from "@mui/icons-material";
 
 import { ThemeType } from "@gemunion/constants";
-import { settingsActions, useAppDispatch, useAppSelector } from "@gemunion/redux";
+import { useAppDispatch, useAppSelector } from "@gemunion/redux";
+
+import { themeTypeSelector, setThemeType } from "../reducer";
 
 export const Theme: FC = () => {
   const { formatMessage } = useIntl();
-  const { themeType } = useAppSelector(state => state.settings);
-  const { setThemeType } = settingsActions;
+  const themeType = useAppSelector(themeTypeSelector);
   const dispatch = useAppDispatch();
 
   const handleThemeIconClick = () => {

@@ -4,11 +4,12 @@ import { OptionsObject, enqueueSnackbar } from "notistack";
 import { Button } from "@mui/material";
 import { NoMetaMaskError } from "@web3-react/metamask";
 
-import { TConnectors, useAppDispatch, useAppSelector, walletActions } from "@gemunion/redux";
+import type { INetwork } from "@gemunion/types-blockchain";
+import { useAppDispatch, useAppSelector } from "@gemunion/redux";
 
 import { useWallet } from "../provider";
 import { metaMask } from "../connectors/meta-mask";
-// import { walletConnect } from "../connectors/wallet-connect";
+import { TConnectors, walletActions, walletSelectors } from "../reducer";
 
 export interface IUseConnectMetamask {
   onClick: () => Promise<void>;
@@ -18,7 +19,8 @@ export const useConnectMetamask = (props: IUseConnectMetamask) => {
   const { onClick } = props;
 
   const { formatMessage } = useIntl();
-  const { activeConnector, network } = useAppSelector(state => state.wallet);
+  const network = useAppSelector<INetwork>(walletSelectors.networkSelector);
+  const activeConnector = useAppSelector(walletSelectors.activeConnectorSelector);
   const { setActiveConnector } = walletActions;
   const dispatch = useAppDispatch();
   const { connectCallback } = useWallet();
