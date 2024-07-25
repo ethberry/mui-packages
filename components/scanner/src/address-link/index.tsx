@@ -2,7 +2,9 @@ import { FC } from "react";
 import { Link, SxProps, Theme, Tooltip, useMediaQuery } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 
+import type { INetwork } from "@gemunion/types-blockchain";
 import { useAppSelector } from "@gemunion/redux";
+import { walletSelectors } from "@gemunion/provider-wallet";
 
 export interface IAddressLinkProps {
   address?: string;
@@ -16,7 +18,7 @@ export const AddressLink: FC<IAddressLinkProps> = props => {
   const { address = "", length = addressLength, sx = [] } = props;
 
   const { chainId = 1 } = useWeb3React();
-  const { networks } = useAppSelector(state => state.wallet);
+  const networks = useAppSelector<Record<number, INetwork>>(walletSelectors.networksSelector);
 
   const isSmallScreen = useMediaQuery<Theme>(theme => theme.breakpoints.down("sm"));
 

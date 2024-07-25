@@ -14,6 +14,7 @@
     "@gemunion/mui-icons": "1.1.68",
     "@gemunion/mui-page-layout": "2.3.46",
     "@gemunion/provider-wallet": "3.8.17",
+    "@gemunion/provider-collection": "0.0.1",
     "@gemunion/react-hooks": "2.0.33",
     "@gemunion/react-hooks-eth": "1.5.47",
     "@gemunion/redux": "0.3.27",
