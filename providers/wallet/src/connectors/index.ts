@@ -2,11 +2,10 @@ import { MetaMask } from "@web3-react/metamask";
 import { WalletConnect } from "@web3-react/walletconnect-v2";
 import type { Connector } from "@web3-react/types";
 
-import { TConnectors } from "@gemunion/redux";
-
 import { metaMask } from "./meta-mask";
 import { walletConnect } from "./wallet-connect";
 import { particleAuth, ParticleAuth } from "./particle";
+import { TConnectors } from "../reducer";
 
 export { ParticleAuth } from "./particle";
 

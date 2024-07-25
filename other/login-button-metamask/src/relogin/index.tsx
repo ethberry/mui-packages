@@ -7,10 +7,11 @@ import { phrase } from "@gemunion/constants";
 import firebase from "@gemunion/firebase";
 import { useUser } from "@gemunion/provider-user";
 import { useApiCall } from "@gemunion/react-hooks";
-import { TConnectors, useAppSelector, collectionActions, useAppDispatch } from "@gemunion/redux";
+import { useAppSelector, useAppDispatch } from "@gemunion/redux";
 import type { IMetamaskDto } from "@gemunion/types-jwt";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
-import { useConnectMetamask, useWalletInit } from "@gemunion/provider-wallet";
+import { useConnectMetamask, useWalletInit, TConnectors, walletSelectors } from "@gemunion/provider-wallet";
+import { collectionActions } from "@gemunion/provider-collection";
 
 export const MetamaskRelogin: FC<PropsWithChildren> = props => {
   const { children } = props;
@@ -18,7 +19,7 @@ export const MetamaskRelogin: FC<PropsWithChildren> = props => {
   const user = useUser<any>();
   const isUserAuthenticated = user.isAuthenticated();
   const { account = "", connector, isActive } = useWeb3React();
-  const { activeConnector } = useAppSelector(state => state.wallet);
+  const activeConnector = useAppSelector<TConnectors>(walletSelectors.activeConnectorSelector);
   const dispatch = useAppDispatch();
   const { setNeedRefresh } = collectionActions;
 

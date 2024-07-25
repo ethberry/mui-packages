@@ -3,7 +3,7 @@ import { Web3ReactStore } from "@web3-react/types";
 import { WalletConnect } from "@web3-react/walletconnect-v2";
 
 // do not import from provider
-import { rpcUrls } from "../provider/constants";
+import { rpcUrls } from "../constants";
 
 /* javascript-obfuscator:disable */
 const WALLET_CONNECT_PROJECT_ID = process.env.WALLET_CONNECT_PROJECT_ID;

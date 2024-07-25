@@ -32,7 +32,7 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/collection-provider",
+  "name": "@gemunion/provider-collection",
   "peerDependencies": {
     "@gemunion/provider-api": "^7.0.0",
     "@gemunion/provider-license": "^3.0.0",
