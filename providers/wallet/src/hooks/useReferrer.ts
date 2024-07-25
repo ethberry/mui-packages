@@ -10,11 +10,10 @@ export const useReferrer = (dispatch: any) => {
   useLayoutEffect(() => {
     const referrer = searchParams.get(LOCAL_STORAGE_KEYS.REFERRER);
     if (referrer) {
-      void dispatch(walletActions.setReferrer(referrer));
+      dispatch(walletActions.setReferrer(referrer));
       searchParams.delete(LOCAL_STORAGE_KEYS.REFERRER);
 
-      const queryString = searchParams.toString();
-      window.history.pushState({}, "", `?${queryString}`);
+      window.history.pushState({}, "", window.location.pathname);
     }
   }, [searchParams]);
 };
