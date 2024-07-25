@@ -16,7 +16,6 @@ export const localizationSlice: Slice<ILocalizationState> = createSlice({
   reducers: {
     setLanguage: (state, action: PayloadAction<TLanguage>) => {
       state.language = action.payload;
-      // state.layoutDirection = state.language === RTLLanguages.AR ? LAYOUT_DIRECTION.rtl : LAYOUT_DIRECTION.ltr;
     },
   },
   extraReducers: builder =>
