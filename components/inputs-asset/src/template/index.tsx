@@ -98,12 +98,17 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
       remove(i);
     };
 
+  const sanitizeId = (id: string): string => {
+    return id.replace(/[^a-zA-Z0-9._-]/g, "");
+  };
+
   return (
     <Box mt={2}>
       <Box sx={{ display: "flex", alignItems: "center" }}>
         {showLabel ? (
           <Typography sx={{ mr: 1 }}>
-            <FormattedMessage id={`form.labels.${ancestorPrefix}`} />
+            <FormattedMessage id={`form.labels.${sanitizeId(ancestorPrefix)}`} />{" "}
+            {ancestorPrefix.includes("*") && <span>*</span>}
           </Typography>
         ) : null}
         {multiple && !readOnly ? (

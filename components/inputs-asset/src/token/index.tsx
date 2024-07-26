@@ -53,9 +53,14 @@ export const TokenAssetInput: FC<ITokenAssetProps> = props => {
   } = props;
 
   const { formatMessage } = useIntl();
+
+  const sanitizeId = (id: string): string => {
+    return id.replace(/[^a-zA-Z0-9._-]/g, "");
+  };
+
   const form = useFormContext<any>();
   const ancestorPrefix = prefix.split(".").pop() as string;
-  const nestedPrefix = `${prefix}.components`;
+  const nestedPrefix = `${sanitizeId(prefix)}.components`;
 
   const values = get(useWatch(), nestedPrefix);
 
@@ -88,7 +93,8 @@ export const TokenAssetInput: FC<ITokenAssetProps> = props => {
       <Box mt={2}>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Typography sx={{ mr: 1 }}>
-            <FormattedMessage id={`form.labels.${ancestorPrefix}`} />
+            <FormattedMessage id={`form.labels.${sanitizeId(ancestorPrefix)}`} />{" "}
+            {ancestorPrefix.includes("*") && <span>*</span>}
           </Typography>
           {multiple && !readOnly ? (
             <Tooltip title={formatMessage({ id: "form.tips.create" })}>

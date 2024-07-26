@@ -2,7 +2,13 @@ import { ChangeEvent, FC, HTMLAttributes, ReactElement, useCallback, useEffect, 
 import { useIntl } from "react-intl";
 import { enqueueSnackbar } from "notistack";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
-import { Autocomplete, AutocompleteChangeReason, AutocompleteRenderInputParams, TextField } from "@mui/material";
+import {
+  Autocomplete,
+  AutocompleteChangeReason,
+  AutocompleteRenderInputParams,
+  TextField,
+  TextFieldProps,
+} from "@mui/material";
 
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
 import { useTestId } from "@gemunion/provider-test-id";
@@ -10,7 +16,7 @@ import { useApiCall, useDeepCompareEffect } from "@gemunion/react-hooks";
 
 import { IAutocompleteOption } from "../interfaces";
 
-export interface IComboEntityInputProps {
+export interface IComboEntityInputProps extends Omit<TextFieldProps, "onChange" | "name"> {
   name: string;
   label?: string | number | ReactElement;
   placeholder?: string;
@@ -49,6 +55,7 @@ export const ComboEntityInput: FC<IComboEntityInputProps> = props => {
     readOnly,
     freeSolo = false,
     disableClear,
+    ...rest
   } = props;
   const suffix = name.split(".").pop() as string;
 
@@ -188,6 +195,7 @@ export const ComboEntityInput: FC<IComboEntityInputProps> = props => {
                     }
                   }}
                   fullWidth
+                  {...rest}
                 />
               )}
             />
