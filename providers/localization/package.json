@@ -10,7 +10,8 @@
   "description": "react i18n provider",
   "dependencies": {
     "@gemunion/constants": "0.12.16",
-    "@reduxjs/toolkit": "2.2.6"
+    "@gemunion/redux": "0.3.27",
+    "@reduxjs/toolkit": "^2.2.6"
   },
   "devDependencies": {
     "@gemunion/provider-license": "3.0.52",
@@ -29,7 +30,6 @@
   "name": "@gemunion/provider-localization",
   "peerDependencies": {
     "@gemunion/provider-license": "^3.0.0",
-    "@gemunion/redux": "^0.1.0",
     "@mui/icons-material": "^5.0.0",
     "@mui/material": "^5.0.0",
     "react": "^18.0.0",

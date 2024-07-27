@@ -3,9 +3,9 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { IconButton, Menu, MenuItem, MenuItemProps, MenuProps, Tooltip } from "@mui/material";
 import { Translate } from "@mui/icons-material";
 
-import { TLanguage, useAppDispatch, useAppSelector } from "@gemunion/redux";
+import { useAppDispatch, useAppSelector } from "@gemunion/redux";
 
-import { languageSelector, setLanguage } from "../reducer";
+import { languageSelector, setLanguage, TLanguage } from "../reducer";
 
 export interface ILocalizationProps {
   languages: Array<string>;
