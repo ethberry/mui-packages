@@ -13,7 +13,7 @@
     "@gemunion/firebase-login": "2.3.88",
     "@gemunion/mui-icons": "1.1.69",
     "@gemunion/mui-page-layout": "2.3.47",
-    "@gemunion/provider-collection": "0.0.3",
+    "@gemunion/provider-collection": "1.0.3",
     "@gemunion/provider-wallet": "3.8.20",
     "@gemunion/react-hooks": "2.0.35",
     "@gemunion/react-hooks-eth": "1.5.50",
