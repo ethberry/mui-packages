@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.9](https://github.com/gemunion/mui-packages/compare/@gemunion/license-pages@1.3.8...@gemunion/license-pages@1.3.9) (2024-07-27)
+
+**Note:** Version bump only for package @gemunion/license-pages
+
 ## 1.3.8 (2024-07-24)
 
 ### Bug Fixes
