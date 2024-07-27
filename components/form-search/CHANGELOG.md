@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.104](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-form-search@7.2.103...@gemunion/mui-form-search@7.2.104) (2024-07-25)
+
+**Note:** Version bump only for package @gemunion/mui-form-search
+
 ## 7.2.103 (2024-07-24)
 
 ### Bug Fixes
