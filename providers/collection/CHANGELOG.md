@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-collection@0.0.3...@gemunion/provider-collection@1.0.4) (2024-07-29)
+
+### Bug Fixes
+
+- version ([5eb9a99](https://github.com/gemunion/mui-packages/commit/5eb9a99aba7060d45ccb38d0c64e50f1aa18fd7a))
+
 ## 0.0.3 (2024-07-27)
 
 ### Bug Fixes
