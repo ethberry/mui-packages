@@ -1,4 +1,4 @@
-import { FC, Fragment, MouseEvent, ReactElement, useState } from "react";
+import { FC, Fragment, MouseEvent, ReactElement, useLayoutEffect, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { IconButton, Menu, MenuItem, MenuItemProps, MenuProps, Tooltip } from "@mui/material";
 import { Translate } from "@mui/icons-material";
@@ -31,11 +31,28 @@ export const Localization: FC<ILocalizationProps> = props => {
     setAnchor(null);
   };
 
+  const cleanLanguageValue = (value: string): string => {
+    let cleanedValue = value;
+    while (cleanedValue.startsWith('"') && cleanedValue.endsWith('"')) {
+      cleanedValue = cleanedValue.slice(1, -1);
+    }
+    return cleanedValue;
+  };
+
   const handleLanguageMenuItemClick = (language: string) => (): void => {
     dispatch(setLanguage(language as TLanguage));
+    localStorage.setItem("language", language);
     document.documentElement.setAttribute("lang", language);
     handleLanguageMenuClose();
   };
+
+  useLayoutEffect(() => {
+    const language = localStorage.getItem("language");
+    if (language) {
+      dispatch(setLanguage(cleanLanguageValue(language)));
+      document.documentElement.setAttribute("lang", language);
+    }
+  }, []);
 
   return (
     <Fragment>
