@@ -12,6 +12,7 @@
     "@gemunion/license-messages": "0.0.36",
     "@gemunion/react-hooks": "2.0.35",
     "@gemunion/types-collection": "1.5.17",
+    "@reduxjs/toolkit": "2.2.6",
     "qs": "6.12.3"
   },
   "description": "react hooks",
