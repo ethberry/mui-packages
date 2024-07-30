@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-collection@1.0.4...@gemunion/provider-collection@1.0.5) (2024-07-30)
+
+### Bug Fixes
+
+- add lost dep ([20e087f](https://github.com/gemunion/mui-packages/commit/20e087f3a4d1d44bd41d22d967359ac9847173ca))
+
 ## [1.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-collection@0.0.3...@gemunion/provider-collection@1.0.4) (2024-07-29)
 
 ### Bug Fixes
