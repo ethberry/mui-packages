@@ -4,32 +4,34 @@ import { Web3ReactProvider, Web3ReactHooks, Web3ContextType } from "@web3-react/
 import type { INetwork } from "@gemunion/types-blockchain";
 import { useLicense } from "@gemunion/provider-license";
 import { useUser } from "@gemunion/provider-user";
-import { useApiCall } from "@gemunion/react-hooks";
 import { useAppDispatch, useAppSelector } from "@gemunion/redux";
 
 import { ConnectorsTypes } from "../connectors";
 import { metaMask, hooks as metaMaskHooks } from "../connectors/meta-mask";
 import { particleAuth, hooks as particleHooks } from "../connectors/particle";
-import { walletConnect, hooks as walletConnectHooks } from "../connectors/wallet-connect";
 import { WalletContext } from "./context";
 import { getNetworkForWeb3Provider } from "./constants";
 import { Reconnect } from "../reconnect";
 import { CheckNetwork } from "../check-network";
 import { OnWalletConnect } from "../on-wallet-connect";
-import { walletSelectors, walletActions, initializeActiveConnector } from "../reducer";
+import { walletSelectors, walletActions, TWalletConnectorTuple } from "../reducer";
 import { useReferrer } from "../hooks";
+import { withNetworksFetching } from "./withNetworksFetching";
 
-export const WalletProvider: FC<PropsWithChildren> = props => {
+const _WalletProvider: FC<PropsWithChildren> = props => {
   const { children } = props;
 
   const license = useLicense();
   const { profile } = useUser<any>();
   const network = useAppSelector<INetwork>(walletSelectors.networkSelector);
   const networks = useAppSelector<Record<number, INetwork>>(walletSelectors.networksSelector);
-  const { setIsDialogOpen, setNetwork, setNetworks } = walletActions;
+  const [walletConnect, walletConnectHooks] = useAppSelector<TWalletConnectorTuple>(
+    walletSelectors.walletConnectorSelector,
+  );
+  const { setIsDialogOpen, setNetwork } = walletActions;
   const dispatch = useAppDispatch();
-
   useReferrer(dispatch);
+
   const [resolve, setResolve] = useState<((context: Web3ContextType) => void) | null>(null);
 
   const connectors: [ConnectorsTypes, Web3ReactHooks][] = [
@@ -44,26 +46,6 @@ export const WalletProvider: FC<PropsWithChildren> = props => {
     return new Promise(_resolve => {
       setResolve(() => _resolve);
     });
-  };
-
-  const { fn: fetchNetworksFn } = useApiCall(
-    api => {
-      return api.fetchJson({
-        url: "/network",
-      });
-    },
-    { success: false, error: false },
-  );
-
-  const fetchNetworks = async () => {
-    try {
-      const networks = await fetchNetworksFn();
-      if (networks) {
-        dispatch(setNetworks(networks));
-      }
-    } catch (e) {
-      console.error("error", e);
-    }
   };
 
   const resetConnect = (): void => {
@@ -82,11 +64,6 @@ export const WalletProvider: FC<PropsWithChildren> = props => {
       dispatch(setNetwork(networks[profile.chainId]));
     }
   }, [profile?.chainId, networks]);
-
-  useEffect(() => {
-    void dispatch(initializeActiveConnector());
-    void fetchNetworks();
-  }, []);
 
   if (!license.isValid()) {
     return null;
@@ -113,3 +90,5 @@ export const WalletProvider: FC<PropsWithChildren> = props => {
     </Web3ReactProvider>
   );
 };
+
+export const WalletProvider = withNetworksFetching(_WalletProvider);
