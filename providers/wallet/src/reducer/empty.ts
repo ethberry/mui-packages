@@ -7,6 +7,5 @@ export const emptyWalletState: IWalletState = {
   activeConnector: null,
   network: void 0,
   networks: {},
-  walletConnector: null,
   referrer: constants.AddressZero,
 };

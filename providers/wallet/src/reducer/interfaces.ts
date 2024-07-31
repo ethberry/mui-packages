@@ -11,7 +11,6 @@ export interface IWalletState {
   activeConnector: TConnectors | null;
   network: INetwork | undefined;
   networks: Record<number, INetwork>;
-  walletConnector: TWalletConnectorTuple | null;
   referrer: string;
 }
 

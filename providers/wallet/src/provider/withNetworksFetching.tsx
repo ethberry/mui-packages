@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ComponentType, FC } from "react";
+import React, { ComponentType, ReactNode, useEffect, useState } from "react";
 
 import { useApiCall } from "@gemunion/react-hooks";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
@@ -6,8 +6,12 @@ import { useAppDispatch } from "@gemunion/redux";
 
 import { initializeActiveConnector, walletActions } from "../reducer";
 
-export const withNetworksFetching = (WrappedComponent: ComponentType) => {
-  const WithDataFetchingComponent: FC = props => {
+interface IWithDataFetchingProps {
+  children?: ReactNode;
+}
+
+export const withNetworksFetching = <P extends IWithDataFetchingProps>(WrappedComponent: ComponentType<P>) => {
+  return (props: P) => {
     const dispatch = useAppDispatch();
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -54,6 +58,4 @@ export const withNetworksFetching = (WrappedComponent: ComponentType) => {
 
     return <WrappedComponent {...props} />;
   };
-
-  return WithDataFetchingComponent;
 };

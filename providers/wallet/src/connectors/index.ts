@@ -6,7 +6,8 @@ import { useAppSelector } from "@gemunion/redux";
 
 import { metaMask } from "./meta-mask";
 import { particleAuth, ParticleAuth } from "./particle";
-import { TConnectors, TWalletConnectorTuple, walletSelectors } from "../reducer";
+import { TConnectors, walletSelectors } from "../reducer";
+import { useWallet } from "../provider";
 
 export { ParticleAuth } from "./particle";
 
@@ -27,7 +28,9 @@ export type ConnectorsTypes = MetaMask | ParticleAuth | WalletConnect;
 
 export const useGetConnectorByName = () => {
   const activeConnector = useAppSelector<TConnectors>(walletSelectors.activeConnectorSelector);
-  const [walletConnect] = useAppSelector<TWalletConnectorTuple>(walletSelectors.walletConnectorSelector);
+  const {
+    walletConnector: [walletConnect],
+  } = useWallet();
 
   const setConnectorByName = {
     [TConnectors.METAMASK]: metaMask,

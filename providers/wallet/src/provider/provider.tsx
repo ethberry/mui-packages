@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren, useCallback, useEffect, useState } from "react";
+import { FC, PropsWithChildren, useCallback, useEffect, useMemo, useState } from "react";
 import { Web3ReactProvider, Web3ReactHooks, Web3ContextType } from "@web3-react/core";
 
 import type { INetwork } from "@gemunion/types-blockchain";
@@ -14,9 +14,10 @@ import { getNetworkForWeb3Provider } from "./constants";
 import { Reconnect } from "../reconnect";
 import { CheckNetwork } from "../check-network";
 import { OnWalletConnect } from "../on-wallet-connect";
-import { walletSelectors, walletActions, TWalletConnectorTuple } from "../reducer";
+import { walletSelectors, walletActions } from "../reducer";
 import { useReferrer } from "../hooks";
 import { withNetworksFetching } from "./withNetworksFetching";
+import { initializeWalletConnector } from "../connectors/wallet-connect";
 
 const _WalletProvider: FC<PropsWithChildren> = props => {
   const { children } = props;
@@ -25,19 +26,21 @@ const _WalletProvider: FC<PropsWithChildren> = props => {
   const { profile } = useUser<any>();
   const network = useAppSelector<INetwork>(walletSelectors.networkSelector);
   const networks = useAppSelector<Record<number, INetwork>>(walletSelectors.networksSelector);
-  const [walletConnect, walletConnectHooks] = useAppSelector<TWalletConnectorTuple>(
-    walletSelectors.walletConnectorSelector,
-  );
+
   const { setIsDialogOpen, setNetwork } = walletActions;
   const dispatch = useAppDispatch();
   useReferrer(dispatch);
 
   const [resolve, setResolve] = useState<((context: Web3ContextType) => void) | null>(null);
 
+  const [walletConnect, hooks, store] = useMemo(() => {
+    return initializeWalletConnector(networks);
+  }, []);
+
   const connectors: [ConnectorsTypes, Web3ReactHooks][] = [
     [metaMask, metaMaskHooks],
     [particleAuth, particleHooks],
-    [walletConnect, walletConnectHooks],
+    [walletConnect, hooks],
   ];
 
   const openConnectWalletDialog = (): Promise<any> => {
@@ -78,6 +81,7 @@ const _WalletProvider: FC<PropsWithChildren> = props => {
           openConnectWalletDialog,
           closeConnectWalletDialog,
           connectCallback,
+          walletConnector: [walletConnect, hooks, store],
         }}
       >
         <>
