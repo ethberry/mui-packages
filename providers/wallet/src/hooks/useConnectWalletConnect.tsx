@@ -6,7 +6,6 @@ import type { INetwork } from "@gemunion/types-blockchain";
 import { useAppDispatch, useAppSelector } from "@gemunion/redux";
 
 import { useWallet } from "../provider";
-// import { walletConnect } from "../connectors/wallet-connect";
 import { TConnectors, TWalletConnectorTuple, walletActions, walletSelectors } from "../reducer";
 
 export interface IUseConnectWalletConnect {

@@ -5,7 +5,6 @@ import type { Connector } from "@web3-react/types";
 import { useAppSelector } from "@gemunion/redux";
 
 import { metaMask } from "./meta-mask";
-// import { walletConnect } from "./wallet-connect";
 import { particleAuth, ParticleAuth } from "./particle";
 import { TConnectors, TWalletConnectorTuple, walletSelectors } from "../reducer";
 
@@ -25,19 +24,6 @@ export const getConnectorName = (connector: Connector) => {
 };
 
 export type ConnectorsTypes = MetaMask | ParticleAuth | WalletConnect;
-
-// export const getConnectorByName = (name: TConnectors): ConnectorsTypes | null => {
-//   switch (name) {
-//     case TConnectors.METAMASK:
-//       return metaMask;
-//     case TConnectors.PARTICLE:
-//       return particleAuth;
-//     case TConnectors.WALLETCONNECT:
-//       return walletConnect;
-//     default:
-//       return null;
-//   }
-// };
 
 export const useGetConnectorByName = () => {
   const activeConnector = useAppSelector<TConnectors>(walletSelectors.activeConnectorSelector);
