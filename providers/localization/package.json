@@ -10,7 +10,7 @@
   "description": "react i18n provider",
   "dependencies": {
     "@gemunion/constants": "0.12.16",
-    "@gemunion/redux": "0.3.27",
+    "@gemunion/redux": "0.3.29",
     "@reduxjs/toolkit": "^2.2.6"
   },
   "devDependencies": {
