@@ -12,8 +12,8 @@
     "@gemunion/license-messages": "0.0.36",
     "@gemunion/react-hooks": "2.0.35",
     "@gemunion/types-collection": "1.5.17",
-    "@reduxjs/toolkit": "2.2.6",
-    "qs": "6.12.3"
+    "@reduxjs/toolkit": "2.2.7",
+    "qs": "6.13.0"
   },
   "description": "react hooks",
   "devDependencies": {
@@ -24,8 +24,8 @@
     "react": "18.3.1",
     "react-hook-form": "7.52.1",
     "react-intl": "6.6.8",
-    "react-router": "6.25.1",
-    "react-router-dom": "6.25.1"
+    "react-router": "6.26.0",
+    "react-router-dom": "6.26.0"
   },
   "engines": {
     "node": ">=22"
