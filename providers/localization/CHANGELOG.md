@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.0.36 (2024-08-02)
+
+### Bug Fixes
+
+- **deps:** update gemunion to v0.3.29 ([75c0d68](https://github.com/gemunion/mui-packages/commit/75c0d68173e4aa544a6e3d7688b883741b02e48d))
+
 ## [4.0.35](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@4.0.34...@gemunion/provider-localization@4.0.35) (2024-07-27)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.30 (2024-08-02)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([7df3b06](https://github.com/gemunion/common-packages/commit/7df3b06e782cc619b0b3fecbaf6cc61d4bf15f68))
+
 ## [0.3.29](https://github.com/gemunion/common-packages/compare/@gemunion/redux@0.3.27...@gemunion/redux@0.3.29) (2024-07-27)
 
 ### Bug Fixes
