@@ -15,7 +15,7 @@
   "devDependencies": {
     "@gemunion/provider-license": "3.0.52",
     "@mui/material": "5.16.5",
-    "@storybook/react": "8.2.6",
+    "@storybook/react": "8.2.7",
     "@testing-library/jest-dom": "6.4.8",
     "@testing-library/react": "16.0.0",
     "@types/jest": "29.5.12",
@@ -26,8 +26,8 @@
     "react-dom": "18.3.1",
     "react-hook-form": "7.52.1",
     "react-intl": "6.6.8",
-    "react-router-dom": "6.25.1",
-    "ts-jest": "29.2.3"
+    "react-router-dom": "6.26.0",
+    "ts-jest": "29.2.4"
   },
   "engines": {
     "node": ">=22"
