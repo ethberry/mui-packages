@@ -6,7 +6,7 @@ import type { INetwork } from "@gemunion/types-blockchain";
 import { useUser } from "@gemunion/provider-user";
 import { useAppSelector } from "@gemunion/redux";
 
-import { getConnectorName, getConnectorByName } from "../connectors";
+import { getConnectorName, useGetConnectorByName } from "../connectors";
 import { particleAuth } from "../connectors/particle";
 import { TConnectors, walletSelectors } from "../reducer";
 import { STORE_CONNECTOR } from "../constants";
@@ -16,6 +16,7 @@ export const Reconnect: FC = () => {
   const activeConnector = useAppSelector<TConnectors>(walletSelectors.activeConnectorSelector);
   const network = useAppSelector<INetwork>(walletSelectors.networkSelector);
   const user = useUser<any>();
+  const { connectorByName } = useGetConnectorByName();
   const userIsAuthenticated = user.isAuthenticated();
 
   const handleConnect = useCallback(async () => {
@@ -23,11 +24,9 @@ export const Reconnect: FC = () => {
       if (activeConnector === TConnectors.PARTICLE && particleAuth?.isValidChain(network?.chainId)) {
         await particleAuth?.connectEagerly();
       } else {
-        await getConnectorByName(activeConnector)
-          ?.activate(network.chainId)
-          .catch((error: ProviderRpcError) => {
-            console.error("Reconnect error", error);
-          });
+        await connectorByName?.activate(network.chainId).catch((error: ProviderRpcError) => {
+          console.error("Reconnect error", error);
+        });
       }
     }
   }, [activeConnector, chainId, network]);

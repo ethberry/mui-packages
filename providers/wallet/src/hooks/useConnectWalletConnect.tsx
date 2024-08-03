@@ -6,7 +6,6 @@ import type { INetwork } from "@gemunion/types-blockchain";
 import { useAppDispatch, useAppSelector } from "@gemunion/redux";
 
 import { useWallet } from "../provider";
-import { walletConnect } from "../connectors/wallet-connect";
 import { TConnectors, walletActions, walletSelectors } from "../reducer";
 
 export interface IUseConnectWalletConnect {
@@ -23,6 +22,9 @@ export const useConnectWalletConnect = (props: IUseConnectWalletConnect) => {
   const { formatMessage } = useIntl();
 
   const network = useAppSelector<INetwork>(walletSelectors.networkSelector);
+  const {
+    walletConnector: [walletConnect],
+  } = useWallet();
   const { setActiveConnector } = walletActions;
   const dispatch = useAppDispatch();
   const { connectCallback } = useWallet();
@@ -35,7 +37,7 @@ export const useConnectWalletConnect = (props: IUseConnectWalletConnect) => {
           dispatch(setActiveConnector(TConnectors.WALLETCONNECT));
           return onClick();
         })
-        .catch(async e => {
+        .catch(async (e: any) => {
           console.error(e);
           await walletConnect.deactivate?.();
           dispatch(setActiveConnector(null));
@@ -57,5 +59,5 @@ export const useConnectWalletConnect = (props: IUseConnectWalletConnect) => {
           }
         });
     });
-  }, [network]);
+  }, [network, walletConnect]);
 };
