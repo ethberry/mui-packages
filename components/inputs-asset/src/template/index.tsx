@@ -21,6 +21,7 @@ type TAssetComponentParams = ITemplateAssetComponent & {
 export interface ITemplateAssetProps {
   prefix: string;
   multiple?: boolean;
+  required?: boolean;
   allowEmpty?: boolean;
   autoSelect?: boolean;
   disableClear?: boolean;
@@ -51,6 +52,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
   const {
     prefix = "price",
     multiple = false,
+    required,
     tokenType,
     contract,
     template,
@@ -103,7 +105,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
       <Box sx={{ display: "flex", alignItems: "center" }}>
         {showLabel ? (
           <Typography sx={{ mr: 1 }}>
-            <FormattedMessage id={`form.labels.${ancestorPrefix}`} />
+            <FormattedMessage id={`form.labels.${ancestorPrefix}`} /> {required && <span>*</span>}
           </Typography>
         ) : null}
         {multiple && !readOnly ? (

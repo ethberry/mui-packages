@@ -20,6 +20,7 @@ export interface ITokenAssetProps {
   readOnly?: boolean;
   disableClear?: boolean;
   allowance?: boolean;
+  required?: boolean;
   tokenType?: {
     disabledOptions?: Array<TokenType>;
   };
@@ -50,9 +51,11 @@ export const TokenAssetInput: FC<ITokenAssetProps> = props => {
     readOnly,
     disableClear = true,
     allowance = false,
+    required,
   } = props;
 
   const { formatMessage } = useIntl();
+
   const form = useFormContext<any>();
   const ancestorPrefix = prefix.split(".").pop() as string;
   const nestedPrefix = `${prefix}.components`;
@@ -88,7 +91,7 @@ export const TokenAssetInput: FC<ITokenAssetProps> = props => {
       <Box mt={2}>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Typography sx={{ mr: 1 }}>
-            <FormattedMessage id={`form.labels.${ancestorPrefix}`} />
+            <FormattedMessage id={`form.labels.${ancestorPrefix}`} /> {required && <span>*</span>}
           </Typography>
           {multiple && !readOnly ? (
             <Tooltip title={formatMessage({ id: "form.tips.create" })}>
