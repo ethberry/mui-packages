@@ -1,6 +1,6 @@
-import { FC } from "react";
+import { FC, useLayoutEffect } from "react";
 import { get, useFieldArray, useFormContext, useWatch } from "react-hook-form";
-import { FormattedMessage, useIntl } from "react-intl";
+import { useIntl } from "react-intl";
 import { Box, IconButton, Paper, Tooltip, Typography } from "@mui/material";
 import { Add, Delete } from "@mui/icons-material";
 
@@ -21,11 +21,11 @@ type TAssetComponentParams = ITemplateAssetComponent & {
 export interface ITemplateAssetProps {
   prefix: string;
   multiple?: boolean;
-  required?: boolean;
   allowEmpty?: boolean;
   autoSelect?: boolean;
   disableClear?: boolean;
   readOnly?: boolean;
+  required?: boolean;
   showLabel?: boolean;
   forceAmount?: boolean;
   tokenType?: {
@@ -52,7 +52,6 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
   const {
     prefix = "price",
     multiple = false,
-    required,
     tokenType,
     contract,
     template,
@@ -62,12 +61,14 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
     disableClear = true,
     showLabel = true,
     forceAmount = false,
+    required = false,
   } = props;
 
   const { formatMessage } = useIntl();
   const form = useFormContext<any>();
   const ancestorPrefix = prefix.split(".").pop() as string;
   const nestedPrefix = `${prefix}.components`;
+  const formattedLabel = `${formatMessage({ id: `form.labels.${ancestorPrefix}` })}${required ? "*" : ""}`;
 
   const { fields, append, remove } = useFieldArray({ name: nestedPrefix, control: form.control });
   const watchFields = useWatch({ name: nestedPrefix });
@@ -79,16 +80,18 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
       }) as TAssetComponentParams,
   );
 
-  if (allowEmpty === true) {
-    values.map((val, indx) => {
-      const comp = get(form.getValues(), `${nestedPrefix}[${indx}]`);
-      if (allowEmpty && !comp.allowEmpty) {
-        Object.assign(comp, { allowEmpty });
-        form.setValue(`${nestedPrefix}[${indx}]`, comp);
-      }
-      return val;
-    });
-  }
+  useLayoutEffect(() => {
+    if (allowEmpty === true) {
+      values.map((val, indx) => {
+        const comp = get(form.getValues(), `${nestedPrefix}[${indx}]`);
+        if (allowEmpty && !comp.allowEmpty) {
+          Object.assign(comp, { allowEmpty });
+          form.setValue(`${nestedPrefix}[${indx}]`, comp);
+        }
+        return val;
+      });
+    }
+  }, [allowEmpty, values]);
 
   const handleOptionAdd = (): (() => void) => (): void => {
     append((ancestorPrefix === "price" ? emptyPrice : emptyItem).components[0]);
@@ -103,11 +106,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
   return (
     <Box mt={2}>
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        {showLabel ? (
-          <Typography sx={{ mr: 1 }}>
-            <FormattedMessage id={`form.labels.${ancestorPrefix}`} /> {required && <span>*</span>}
-          </Typography>
-        ) : null}
+        {showLabel ? <Typography sx={{ mr: 1 }}>{formattedLabel}</Typography> : null}
         {multiple && !readOnly ? (
           <Tooltip title={formatMessage({ id: "form.tips.create" })}>
             <IconButton size="small" aria-label="add" onClick={handleOptionAdd()}>

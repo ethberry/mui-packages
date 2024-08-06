@@ -105,6 +105,9 @@ export const EntityInput: FC<IEntityInputProps> = props => {
               : form.setValue(name, multiple ? newValue.map((o: IAutocompleteOption) => o.id) : newValue.id, {
                   shouldDirty: dirtyAutoselect,
                 });
+            if (error) {
+              void form.trigger(name);
+            }
           }
         }
       })
