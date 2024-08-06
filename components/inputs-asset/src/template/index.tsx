@@ -21,7 +21,6 @@ type TAssetComponentParams = ITemplateAssetComponent & {
 export interface ITemplateAssetProps {
   prefix: string;
   multiple?: boolean;
-  allowEmpty?: boolean;
   autoSelect?: boolean;
   disableClear?: boolean;
   readOnly?: boolean;
@@ -56,7 +55,6 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
     contract,
     template,
     readOnly,
-    allowEmpty,
     autoSelect,
     disableClear = true,
     showLabel = true,
@@ -81,17 +79,17 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
   );
 
   useLayoutEffect(() => {
-    if (allowEmpty === true) {
+    if (forceAmount === true) {
       values.map((val, indx) => {
         const comp = get(form.getValues(), `${nestedPrefix}[${indx}]`);
-        if (allowEmpty && !comp.allowEmpty) {
-          Object.assign(comp, { allowEmpty });
+        if (forceAmount && !comp.allowEmpty) {
+          Object.assign(comp, { forceAmount });
           form.setValue(`${nestedPrefix}[${indx}]`, comp);
         }
         return val;
       });
     }
-  }, [allowEmpty, values]);
+  }, [forceAmount]);
 
   const handleOptionAdd = (): (() => void) => (): void => {
     append((ancestorPrefix === "price" ? emptyPrice : emptyItem).components[0]);
@@ -141,7 +139,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
             <Box ml={2}>
               <Tooltip title={formatMessage({ id: "form.tips.delete" })}>
                 <span>
-                  <IconButton aria-label="delete" onClick={handleOptionDelete(i)} disabled={!i && !allowEmpty}>
+                  <IconButton aria-label="delete" onClick={handleOptionDelete(i)} disabled={!i}>
                     <Delete />
                   </IconButton>
                 </span>
