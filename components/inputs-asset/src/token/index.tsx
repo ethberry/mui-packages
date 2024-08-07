@@ -1,6 +1,6 @@
 import { FC, useMemo } from "react";
 import { get, useFormContext, useWatch } from "react-hook-form";
-import { FormattedMessage, useIntl } from "react-intl";
+import { useIntl } from "react-intl";
 import { Box, IconButton, Paper, Tooltip, Typography } from "@mui/material";
 import { Add, Delete } from "@mui/icons-material";
 
@@ -59,6 +59,7 @@ export const TokenAssetInput: FC<ITokenAssetProps> = props => {
   const form = useFormContext<any>();
   const ancestorPrefix = prefix.split(".").pop() as string;
   const nestedPrefix = `${prefix}.components`;
+  const formattedLabel = `${formatMessage({ id: `form.labels.${ancestorPrefix}` })}${required ? " *" : ""}`;
 
   const values = get(useWatch(), nestedPrefix);
 
@@ -90,9 +91,7 @@ export const TokenAssetInput: FC<ITokenAssetProps> = props => {
     () => (
       <Box mt={2}>
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Typography sx={{ mr: 1 }}>
-            <FormattedMessage id={`form.labels.${ancestorPrefix}`} /> {required && <span>*</span>}
-          </Typography>
+          <Typography sx={{ mr: 1 }}>{formattedLabel}</Typography>
           {multiple && !readOnly ? (
             <Tooltip title={formatMessage({ id: "form.tips.create" })}>
               <IconButton size="small" aria-label="add" onClick={handleOptionAdd()}>
@@ -120,6 +119,8 @@ export const TokenAssetInput: FC<ITokenAssetProps> = props => {
                 />
                 <ContractInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} data={contract?.data} />
                 <TokenInput
+                  autoSelect
+                  name={"token.tokenId"}
                   prefix={`${nestedPrefix}[${i}]`}
                   readOnly={readOnly}
                   data={token?.data}
