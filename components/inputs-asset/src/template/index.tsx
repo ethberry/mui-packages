@@ -66,7 +66,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
   const form = useFormContext<any>();
   const ancestorPrefix = prefix.split(".").pop() as string;
   const nestedPrefix = `${prefix}.components`;
-  const formattedLabel = `${formatMessage({ id: `form.labels.${ancestorPrefix}` })}${required ? "*" : ""}`;
+  const formattedLabel = `${formatMessage({ id: `form.labels.${ancestorPrefix}` })}${required ? " *" : ""}`;
 
   const { fields, append, remove } = useFieldArray({ name: nestedPrefix, control: form.control });
   const watchFields = useWatch({ name: nestedPrefix });

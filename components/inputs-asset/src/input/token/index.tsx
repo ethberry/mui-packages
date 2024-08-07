@@ -8,6 +8,7 @@ import { TokenType } from "@gemunion/types-blockchain";
 export interface ITokenInputProps {
   prefix: string;
   name?: string;
+  autoSelect?: boolean;
   readOnly?: boolean;
   disableClear?: boolean;
   data?: {
@@ -17,7 +18,7 @@ export interface ITokenInputProps {
 }
 
 export const TokenInput: FC<ITokenInputProps> = props => {
-  const { prefix, name = "tokenId", data, readOnly, disableClear = true } = props;
+  const { prefix, name = "tokenId", data, readOnly, autoSelect, disableClear = true } = props;
   const form = useFormContext<any>();
 
   const { formatMessage } = useIntl();
@@ -41,6 +42,7 @@ export const TokenInput: FC<ITokenInputProps> = props => {
       return (
         <EntityInput
           name={`${prefix}.${name}`}
+          optionKey={"tokenId"}
           controller="tokens"
           data={{
             contractIds: [contractId],
@@ -50,6 +52,7 @@ export const TokenInput: FC<ITokenInputProps> = props => {
           placeholder={formatMessage({ id: "form.placeholders.tokenIds" })}
           getTitle={(token: any) => `${token.template.title as string} #${token.tokenId as string}`}
           readOnly={readOnly}
+          autoselect={autoSelect}
           onChange={handleChange}
           disableClear={readOnly || disableClear}
         />

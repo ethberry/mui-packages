@@ -26,7 +26,6 @@ export const templateAssetAmountValidationSchema = lazy((forceAmount: boolean) =
   bigNumberValidationSchema.when("tokenType", {
     is: (tokenType: TokenType) => forceAmount || (tokenType !== TokenType.ERC721 && tokenType !== TokenType.ERC998),
     then: () =>
-      // TODO fix eslint-disable in the end of the task
       // eslint-disable-next-line @typescript-eslint/no-unsafe-return
       bigNumberValidationSchema.min(1, "form.validations.rangeUnderflow").required("form.validations.valueMissing"),
   }),

@@ -59,7 +59,7 @@ export const TokenAssetInput: FC<ITokenAssetProps> = props => {
   const form = useFormContext<any>();
   const ancestorPrefix = prefix.split(".").pop() as string;
   const nestedPrefix = `${prefix}.components`;
-  const formattedLabel = `${formatMessage({ id: `form.labels.${ancestorPrefix}` })}${required ? "*" : ""}`;
+  const formattedLabel = `${formatMessage({ id: `form.labels.${ancestorPrefix}` })}${required ? " *" : ""}`;
 
   const values = get(useWatch(), nestedPrefix);
 
@@ -119,6 +119,8 @@ export const TokenAssetInput: FC<ITokenAssetProps> = props => {
                 />
                 <ContractInput prefix={`${nestedPrefix}[${i}]`} readOnly={readOnly} data={contract?.data} />
                 <TokenInput
+                  autoSelect
+                  name={"token.tokenId"}
                   prefix={`${nestedPrefix}[${i}]`}
                   readOnly={readOnly}
                   data={token?.data}

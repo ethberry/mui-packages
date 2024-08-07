@@ -19,6 +19,7 @@ export interface IEntityInputProps {
   controller: string;
   disabled?: boolean;
   readOnly?: boolean;
+  required?: boolean;
   disableClear?: boolean;
   multiple?: boolean;
   autoselect?: boolean;
@@ -26,6 +27,7 @@ export interface IEntityInputProps {
   getTitle?: (item: any) => string;
   data?: Record<string, any>;
   disabledOptions?: any[];
+  optionKey?: keyof IAutocompleteOption;
   variant?: "standard" | "filled" | "outlined";
   onChange?: (
     event: ChangeEvent<unknown>,
@@ -51,6 +53,8 @@ export const EntityInput: FC<IEntityInputProps> = props => {
     disabled,
     readOnly,
     disableClear,
+    required,
+    optionKey = "id",
   } = props;
   const suffix = name.split(".").pop() as string;
 
@@ -65,7 +69,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
   const value = useWatch({ name });
 
   const { formatMessage } = useIntl();
-  const localizedLabel = label ?? formatMessage({ id: `form.labels.${suffix}` });
+  const localizedLabel = label ?? `${formatMessage({ id: `form.labels.${suffix}` })}`;
   const localizedPlaceholder = placeholder ?? formatMessage({ id: `form.placeholders.${suffix}` });
   const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
@@ -208,7 +212,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                 multiple={false}
                 disabled={disabled}
                 options={options}
-                value={options.find((option: IAutocompleteOption) => value === option.id) || null}
+                value={options.find((option: IAutocompleteOption) => value === option[optionKey]) || null}
                 onChange={
                   onChange ||
                   ((_event: ChangeEvent<unknown>, option: IAutocompleteOption | null): void => {
@@ -230,6 +234,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
                   <TextField
                     {...field}
                     {...params}
+                    required={required}
                     inputProps={{ ...params.inputProps, readOnly, ...testIdProps }}
                     InputProps={{ ...params.InputProps }}
                     label={localizedLabel}
