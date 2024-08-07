@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.7.43 (2024-08-07)
+
+### Bug Fixes
+
+- ComboEntityInput; TokenAssetInput; TemplateAssetInput ([4875547](https://github.com/gemunion/mui-packages/commit/48755471261a270512e717e86328cf103c3b2799))
+- fixed comment code ([7e69474](https://github.com/gemunion/mui-packages/commit/7e69474c65a6770580ebb8794e564b3158ddd07a))
+- fixed template and token inputs ([7abe0fe](https://github.com/gemunion/mui-packages/commit/7abe0fe53a39ce10caaa636d1da5105563133c88))
+- fixed template asset input validation schema and added formAmount handle for validation ([261f3c5](https://github.com/gemunion/mui-packages/commit/261f3c59c4540039c6dfabf05e148d653d1b5c79))
+- fixed token asset input and input entity ([f51f11f](https://github.com/gemunion/mui-packages/commit/f51f11f2faa549bcd4cd5d6510dcfe06747cd1b4))
+- TokenAssetInput; TemplateAssetInput ([250f2a8](https://github.com/gemunion/mui-packages/commit/250f2a8ae75002cc0bbfd548071fd28c24a98f50))
+
 ## 2.7.42 (2024-08-02)
 
 **Note:** Version bump only for package @gemunion/mui-inputs-asset

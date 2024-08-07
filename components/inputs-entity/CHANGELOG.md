@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.3.89 (2024-08-07)
+
+### Bug Fixes
+
+- ComboEntityInput; TokenAssetInput; TemplateAssetInput ([4875547](https://github.com/gemunion/mui-packages/commit/48755471261a270512e717e86328cf103c3b2799))
+- fixed template and token inputs ([7abe0fe](https://github.com/gemunion/mui-packages/commit/7abe0fe53a39ce10caaa636d1da5105563133c88))
+- fixed token asset input and input entity ([f51f11f](https://github.com/gemunion/mui-packages/commit/f51f11f2faa549bcd4cd5d6510dcfe06747cd1b4))
+
 ## 7.3.88 (2024-08-02)
 
 ### Bug Fixes
