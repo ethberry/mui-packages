@@ -19,7 +19,7 @@
     "@gemunion/mui-inputs-core": "7.2.104",
     "@gemunion/provider-license": "3.0.52",
     "@mui/material": "5.16.6",
-    "@storybook/react": "8.2.7",
+    "@storybook/react": "8.2.8",
     "@testing-library/jest-dom": "6.4.8",
     "@testing-library/react": "16.0.0",
     "@types/jest": "29.5.12",
@@ -28,7 +28,7 @@
     "jest-environment-jsdom": "29.7.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-hook-form": "7.52.1",
+    "react-hook-form": "7.52.2",
     "react-intl": "6.6.8",
     "react-router-dom": "6.26.0",
     "ts-jest": "29.2.4"
