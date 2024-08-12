@@ -32,6 +32,7 @@ export const SelectInput: FC<ISelectInputProps> = props => {
     disabledOptions = [],
     InputLabelProps = {},
     readOnly,
+    required,
     ...rest
   } = props;
 
@@ -42,6 +43,8 @@ export const SelectInput: FC<ISelectInputProps> = props => {
 
   const form = useFormContext<any>();
   const formValues = useWatch();
+
+  const withCustomRequiredInputLabelProps = { ...InputLabelProps, required };
 
   const error = get(form.formState.errors, name);
 
@@ -55,7 +58,7 @@ export const SelectInput: FC<ISelectInputProps> = props => {
       control={form.control}
       render={({ field }) => (
         <FormControl fullWidth sx={{ my: 1 }}>
-          <InputLabel id={`${name}-select-label`} variant={variant} {...InputLabelProps}>
+          <InputLabel id={`${name}-select-label`} variant={variant} {...withCustomRequiredInputLabelProps}>
             {localizedLabel}
           </InputLabel>
           <Select
