@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.44](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.7.43...@gemunion/mui-inputs-asset@2.7.44) (2024-08-12)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([15f835f](https://github.com/gemunion/mui-packages/commit/15f835f8a03ef03205e4b7d362c2700f8a904f4b))
+- fixed get empty default value and contract data props order ([a97d67d](https://github.com/gemunion/mui-packages/commit/a97d67d807671a9099e0c55ee893263b657c2d8c))
+
 ## 2.7.43 (2024-08-07)
 
 ### Bug Fixes

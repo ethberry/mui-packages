@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.2.105 (2024-08-12)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([15f835f](https://github.com/gemunion/mui-packages/commit/15f835f8a03ef03205e4b7d362c2700f8a904f4b))
+- **deps:** update gemunion to v4.2.62 ([debde2f](https://github.com/gemunion/mui-packages/commit/debde2fbb08f200bfd3a3ea56170d453e72417d0))
+- fixed select input required field displaying ([c83b30b](https://github.com/gemunion/mui-packages/commit/c83b30b768899aee83da89c1035e290399b0181d))
+
 ## 7.2.104 (2024-08-02)
 
 ### Bug Fixes

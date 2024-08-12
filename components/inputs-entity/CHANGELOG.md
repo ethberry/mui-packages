@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.3.90](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-entity@7.3.89...@gemunion/mui-inputs-entity@7.3.90) (2024-08-12)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([15f835f](https://github.com/gemunion/mui-packages/commit/15f835f8a03ef03205e4b7d362c2700f8a904f4b))
+
 ## 7.3.89 (2024-08-07)
 
 ### Bug Fixes
