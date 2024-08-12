@@ -5,7 +5,7 @@ import { imageUrl } from "@gemunion/constants";
 
 import type { ITemplateAsset, ITemplateAssetComponent } from "./types";
 
-export function getEmptyTemplate(tokenType = TokenType.ERC20): any {
+export function getEmptyTemplate(tokenType = TokenType.NATIVE): any {
   return {
     components: [
       {
