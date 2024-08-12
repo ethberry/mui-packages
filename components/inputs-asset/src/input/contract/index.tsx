@@ -35,8 +35,8 @@ export const ContractInput: FC<IContractInputProps> = props => {
       name={`${prefix}.${name}`}
       controller="contracts"
       data={{
-        contractType: [tokenType],
         ...data,
+        contractType: [tokenType],
       }}
       onChange={handleChange}
       readOnly={readOnly}
