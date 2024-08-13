@@ -10,6 +10,7 @@ import { getConnectorName, useGetConnectorByName } from "../connectors";
 import { particleAuth } from "../connectors/particle";
 import { TConnectors, walletSelectors } from "../reducer";
 import { STORE_CONNECTOR } from "../constants";
+import { useSwitchNetwork } from "../hooks";
 
 export const Reconnect: FC = () => {
   const { isActive, chainId, connector } = useWeb3React();
@@ -18,6 +19,8 @@ export const Reconnect: FC = () => {
   const user = useUser<any>();
   const { connectorByName } = useGetConnectorByName();
   const userIsAuthenticated = user.isAuthenticated();
+
+  useSwitchNetwork(network);
 
   const handleConnect = useCallback(async () => {
     if ((!isActive || network?.chainId !== chainId) && activeConnector && network) {

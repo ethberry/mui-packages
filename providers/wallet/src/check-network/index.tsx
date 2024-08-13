@@ -9,7 +9,7 @@ import { particleAuth } from "../connectors/particle";
 import { TConnectors, walletActions, walletSelectors } from "../reducer";
 
 export const CheckNetwork: FC = () => {
-  const { isActive, chainId, connector } = useWeb3React();
+  const { isActive, connector } = useWeb3React();
   const network = useAppSelector<INetwork>(walletSelectors.networkSelector);
   const activeConnector = useAppSelector(walletSelectors.activeConnectorSelector);
   const { setActiveConnector } = walletActions;
@@ -71,10 +71,10 @@ export const CheckNetwork: FC = () => {
   }, [activeConnector, connector, network]);
 
   useEffect(() => {
-    if (connector && isActive && chainId) {
+    if (connector && isActive) {
       void checkChainId();
     }
-  }, [connector, isActive, chainId, network]);
+  }, [connector, isActive, network]);
 
   useEffect(() => {
     if (network && !userIsAuthenticated) {
