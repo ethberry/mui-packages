@@ -11,6 +11,7 @@ import { walletActions, walletSelectors } from "../reducer";
 export const useSwitchNetwork = (network: INetwork) => {
   const { chainId } = useWeb3React();
   const user = useUser<any>();
+  const isUserAuthenticated = user.isAuthenticated();
 
   const networks = useAppSelector<Record<number, INetwork>>(walletSelectors.networksSelector);
   const dispatch = useAppDispatch();
@@ -26,8 +27,8 @@ export const useSwitchNetwork = (network: INetwork) => {
   };
 
   useEffect(() => {
-    if (chainId) {
+    if (isUserAuthenticated && chainId) {
       switchNetwork(chainId);
     }
-  }, [network, chainId]);
+  }, [network, chainId, isUserAuthenticated]);
 };
