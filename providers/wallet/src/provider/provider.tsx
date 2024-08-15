@@ -12,7 +12,6 @@ import { particleAuth, hooks as particleHooks } from "../connectors/particle";
 import { WalletContext } from "./context";
 import { getNetworkForWeb3Provider } from "./constants";
 import { Reconnect } from "../reconnect";
-import { CheckNetwork } from "../check-network";
 import { OnWalletConnect } from "../on-wallet-connect";
 import { walletSelectors, walletActions } from "../reducer";
 import { useReferrer } from "../hooks";
@@ -87,7 +86,6 @@ const _WalletProvider: FC<PropsWithChildren> = props => {
         <>
           {children}
           <Reconnect />
-          <CheckNetwork />
           <OnWalletConnect resolveContext={resolve} resetConnect={resetConnect} />
         </>
       </WalletContext.Provider>
