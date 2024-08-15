@@ -41,6 +41,7 @@ export const useSwitchNetwork = (network: INetwork) => {
         method: "wallet_switchEthereumChain",
         params: [{ chainId: `0x${network.chainId.toString(16)}` }],
       });
+      dispatch(setNeedRefresh(true));
       currentMetamaskChainId.current = network.chainId;
     } catch (error: any) {
       if (error.code === 4902) {
@@ -61,6 +62,7 @@ export const useSwitchNetwork = (network: INetwork) => {
             method: "wallet_switchEthereumChain",
             params: [{ chainId: `0x${network.chainId.toString(16)}` }],
           });
+          dispatch(setNeedRefresh(true));
           currentMetamaskChainId.current = network.chainId;
         } catch (addError: any) {
           handleDisconnect();
