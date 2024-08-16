@@ -8,19 +8,25 @@ import firebase from "@gemunion/firebase";
 import { useUser } from "@gemunion/provider-user";
 import { useApiCall } from "@gemunion/react-hooks";
 import { useAppSelector, useAppDispatch } from "@gemunion/redux";
-import type { IMetamaskDto } from "@gemunion/types-jwt";
+import type { IMetamaskDto, IWalletConnectDto } from "@gemunion/types-jwt";
 import { collectionActions } from "@gemunion/provider-collection";
 
 import { TConnectors, walletSelectors } from "../reducer";
 import { useWalletInit } from "./useWalletInit";
 import { useConnectMetamask } from "./useConnectMetamask";
+import { useWallet } from "../provider";
+import { useConnectWalletConnect } from "./useConnectWalletConnect";
 
 export const useSwitchAccount = () => {
   const authFb = getAuth(firebase);
   const user = useUser<any>();
   const { account = "", isActive, provider } = useWeb3React();
+
   const currentWallet = useRef<string>("");
   const disconnectedAccounts = useRef<Map<string, boolean>>(new Map());
+  const {
+    walletConnector: [walletConnect],
+  } = useWallet();
 
   const activeConnector = useAppSelector<TConnectors>(walletSelectors.activeConnectorSelector);
   const dispatch = useAppDispatch();
@@ -45,10 +51,10 @@ export const useSwitchAccount = () => {
   };
 
   const { fn: getVerifiedToken } = useApiCall(
-    (api, values: IMetamaskDto) => {
+    (api, values: IMetamaskDto | IWalletConnectDto) => {
       return api
         .fetchJson({
-          url: "/metamask/login",
+          url: activeConnector === TConnectors.METAMASK ? "/metamask/login" : "/wallet-connect/login",
           method: "POST",
           data: values,
         })
@@ -73,10 +79,28 @@ export const useSwitchAccount = () => {
     }
   });
 
+  const handleLogin = useWalletInit(async (web3Context: Web3ContextType) => {
+    try {
+      const wallet = web3Context.account!;
+      const provider = web3Context.provider!;
+      const nonce = v4();
+      const signature = await provider.getSigner().signMessage(`${phrase}${nonce}`);
+      console.log("accounts", wallet, signature || "not signature", currentWallet.current || "not current", isActive);
+      console.log("signer", provider.getSigner().getAddress());
+      const token = await getVerifiedToken(void 0, { wallet, nonce, signature });
+      await handleTokenVerified(token?.token || "");
+    } catch (e) {
+      console.error(e);
+
+      throw e;
+    }
+  });
+
   const handleMetamaskLogin = useConnectMetamask({ onClick: onLoginMetamask });
+  const handleWalletConnectLogin = useConnectWalletConnect({ onClick: handleLogin });
 
   useEffect(() => {
-    if (!activeConnector || activeConnector === TConnectors.PARTICLE || currentWallet.current === account) {
+    if (!activeConnector || currentWallet.current === account) {
       if (disconnectedAccounts.current.has(account)) {
         void handleMetamaskLogin();
         disconnectedAccounts.current.delete(account);
@@ -84,34 +108,75 @@ export const useSwitchAccount = () => {
       return;
     }
 
-    provider!
-      .listAccounts()
-      .then(accountList => {
-        if (!isActive) {
-          return;
-        }
+    if (activeConnector === TConnectors.WALLETCONNECT && walletConnect.provider) {
+      if (!isActive) {
+        return;
+      }
 
-        if (currentWallet.current && !accountList.includes(currentWallet.current)) {
-          if (isUserAuthenticated) {
-            void user.logOut();
-            disconnectedAccounts.current.set(currentWallet.current, true);
-          }
-          return;
-        }
+      const walletConnectAccounts = walletConnect.provider.accounts;
+      console.log(
+        "accounts",
+        walletConnectAccounts,
+        account || "not account",
+        currentWallet.current || "not current",
+        isActive,
+      );
 
-        if (!currentWallet.current) {
-          currentWallet.current = account;
-        } else if (currentWallet.current !== account) {
-          if (isUserAuthenticated) {
-            void user.logOut();
-          } else {
-            void handleMetamaskLogin();
+      if (!currentWallet.current) {
+        currentWallet.current = account;
+      } else if (currentWallet.current !== account) {
+        if (isUserAuthenticated) {
+          // void walletConnect.deactivate();
+          void user.logOut().then(() => {
             currentWallet.current = account;
-          }
+            void walletConnect.resetState();
+            void handleWalletConnectLogin();
+          });
+        } else {
         }
-      })
-      .catch((e: any) => {
-        console.error(e);
-      });
+      }
+    }
+  }, [account, isActive, isUserAuthenticated, activeConnector]);
+
+  useEffect(() => {
+    if (!activeConnector || currentWallet.current === account) {
+      if (disconnectedAccounts.current.has(account)) {
+        void handleMetamaskLogin();
+        disconnectedAccounts.current.delete(account);
+      }
+      return;
+    }
+
+    if (activeConnector === TConnectors.METAMASK) {
+      provider!
+        .listAccounts()
+        .then(accountList => {
+          if (!isActive) {
+            return;
+          }
+
+          if (currentWallet.current && !accountList.includes(currentWallet.current)) {
+            if (isUserAuthenticated) {
+              void user.logOut();
+              disconnectedAccounts.current.set(currentWallet.current, true);
+            }
+            return;
+          }
+
+          if (!currentWallet.current) {
+            currentWallet.current = account;
+          } else if (currentWallet.current !== account) {
+            if (isUserAuthenticated) {
+              void user.logOut();
+            } else {
+              void handleMetamaskLogin();
+              currentWallet.current = account;
+            }
+          }
+        })
+        .catch((e: any) => {
+          console.error(e);
+        });
+    }
   }, [account, isActive, isUserAuthenticated, activeConnector]);
 };
