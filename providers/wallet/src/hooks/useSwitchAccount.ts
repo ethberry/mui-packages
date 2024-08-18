@@ -20,12 +20,12 @@ import { useConnectWalletConnect } from "./useConnectWalletConnect";
 export const useSwitchAccount = () => {
   const authFb = getAuth(firebase);
   const user = useUser<any>();
-  const { account = "", isActive, provider } = useWeb3React();
+  const { account = "", isActive, provider, connector } = useWeb3React();
 
   const currentWallet = useRef<string>("");
   const disconnectedAccounts = useRef<Map<string, boolean>>(new Map());
   const {
-    walletConnector: [walletConnect],
+    walletConnector: [walletConnect, _, store],
   } = useWallet();
 
   const activeConnector = useAppSelector<TConnectors>(walletSelectors.activeConnectorSelector);
@@ -36,6 +36,15 @@ export const useSwitchAccount = () => {
 
   const handleDisconnect = async () => {
     await user.logOut();
+  };
+
+  const _handleDisconnect = async () => {
+    await user.logOut();
+    if (connector?.deactivate) {
+      void connector.deactivate();
+    } else {
+      void connector?.resetState();
+    }
   };
 
   const handleTokenVerified = async (token: string) => {
@@ -84,14 +93,11 @@ export const useSwitchAccount = () => {
       const wallet = web3Context.account!;
       const provider = web3Context.provider!;
       const nonce = v4();
-      const signature = await provider.getSigner().signMessage(`${phrase}${nonce}`);
-      console.log("accounts", wallet, signature || "not signature", currentWallet.current || "not current", isActive);
-      console.log("signer", provider.getSigner().getAddress());
-      const token = await getVerifiedToken(void 0, { wallet, nonce, signature });
+      const signature = await provider.getSigner(currentWallet.current || undefined).signMessage(`${phrase}${nonce}`);
+      const token = await getVerifiedToken(void 0, { wallet: currentWallet.current || wallet, nonce, signature });
       await handleTokenVerified(token?.token || "");
     } catch (e) {
       console.error(e);
-
       throw e;
     }
   });
@@ -100,43 +106,33 @@ export const useSwitchAccount = () => {
   const handleWalletConnectLogin = useConnectWalletConnect({ onClick: handleLogin });
 
   useEffect(() => {
-    if (!activeConnector || currentWallet.current === account) {
-      if (disconnectedAccounts.current.has(account)) {
-        void handleMetamaskLogin();
-        disconnectedAccounts.current.delete(account);
-      }
+    console.log("account", disconnectedAccounts.current.size, activeConnector);
+    if (!activeConnector && disconnectedAccounts.current.size > 0) {
+      void handleWalletConnectLogin();
+      disconnectedAccounts.current.delete(account);
       return;
     }
 
-    if (activeConnector === TConnectors.WALLETCONNECT && walletConnect.provider) {
-      if (!isActive) {
-        return;
-      }
-
-      const walletConnectAccounts = walletConnect.provider.accounts;
-      console.log(
-        "accounts",
-        walletConnectAccounts,
-        account || "not account",
-        currentWallet.current || "not current",
-        isActive,
-      );
-
-      if (!currentWallet.current) {
-        currentWallet.current = account;
-      } else if (currentWallet.current !== account) {
+    const accountsChangedObserver = (accounts: Array<string>) => {
+      if (accounts.length > 1) {
+        currentWallet.current = accounts[0];
+        void handleWalletConnectLogin();
+      } else {
+        console.log("account", account);
+        console.log("accounts", accounts);
         if (isUserAuthenticated) {
-          // void walletConnect.deactivate();
-          void user.logOut().then(() => {
-            currentWallet.current = account;
-            void walletConnect.resetState();
-            void handleWalletConnectLogin();
-          });
-        } else {
+          disconnectedAccounts.current.set(account, true);
+          void _handleDisconnect();
         }
       }
-    }
-  }, [account, isActive, isUserAuthenticated, activeConnector]);
+    };
+
+    walletConnect.provider?.on("accountsChanged", accountsChangedObserver);
+
+    return () => {
+      walletConnect.provider?.off("accountsChanged", accountsChangedObserver);
+    };
+  }, [walletConnect, account, isActive, isUserAuthenticated, activeConnector]);
 
   useEffect(() => {
     if (!activeConnector || currentWallet.current === account) {
