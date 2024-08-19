@@ -17,6 +17,13 @@ import { useConnectMetamask } from "./useConnectMetamask";
 import { useWallet } from "../provider";
 import { useConnectWalletConnect } from "./useConnectWalletConnect";
 
+const fetchUrlByActiveConnector: {
+  [Key in Exclude<TConnectors, "PARTICLE">]: string;
+} = {
+  [TConnectors.METAMASK]: "/metamask/login",
+  [TConnectors.WALLETCONNECT]: "/wallet-connect/login",
+};
+
 export const useSwitchAccount = () => {
   const authFb = getAuth(firebase);
   const user = useUser<any>();
@@ -25,7 +32,7 @@ export const useSwitchAccount = () => {
   const currentWallet = useRef<string>("");
   const disconnectedAccounts = useRef<Map<string, boolean>>(new Map());
   const {
-    walletConnector: [walletConnect, _, store],
+    walletConnector: [walletConnect],
   } = useWallet();
 
   const activeConnector = useAppSelector<TConnectors>(walletSelectors.activeConnectorSelector);
@@ -63,7 +70,7 @@ export const useSwitchAccount = () => {
     (api, values: IMetamaskDto | IWalletConnectDto) => {
       return api
         .fetchJson({
-          url: activeConnector === TConnectors.METAMASK ? "/metamask/login" : "/wallet-connect/login",
+          url: fetchUrlByActiveConnector[activeConnector as keyof typeof fetchUrlByActiveConnector],
           method: "POST",
           data: values,
         })
@@ -88,7 +95,7 @@ export const useSwitchAccount = () => {
     }
   });
 
-  const handleLogin = useWalletInit(async (web3Context: Web3ContextType) => {
+  const onLoginWalletConnect = useWalletInit(async (web3Context: Web3ContextType) => {
     try {
       const wallet = web3Context.account!;
       const provider = web3Context.provider!;
@@ -103,10 +110,10 @@ export const useSwitchAccount = () => {
   });
 
   const handleMetamaskLogin = useConnectMetamask({ onClick: onLoginMetamask });
-  const handleWalletConnectLogin = useConnectWalletConnect({ onClick: handleLogin });
+  const handleWalletConnectLogin = useConnectWalletConnect({ onClick: onLoginWalletConnect });
 
+  /** for handling accounts in wallet connect **/
   useEffect(() => {
-    console.log("account", disconnectedAccounts.current.size, activeConnector);
     if (!activeConnector && disconnectedAccounts.current.size > 0) {
       void handleWalletConnectLogin();
       disconnectedAccounts.current.delete(account);
@@ -115,11 +122,10 @@ export const useSwitchAccount = () => {
 
     const accountsChangedObserver = (accounts: Array<string>) => {
       if (accounts.length > 1) {
+        /** active wallet will be first array element during switch in mobile app**/
         currentWallet.current = accounts[0];
         void handleWalletConnectLogin();
       } else {
-        console.log("account", account);
-        console.log("accounts", accounts);
         if (isUserAuthenticated) {
           disconnectedAccounts.current.set(account, true);
           void _handleDisconnect();
@@ -134,6 +140,7 @@ export const useSwitchAccount = () => {
     };
   }, [walletConnect, account, isActive, isUserAuthenticated, activeConnector]);
 
+  /** for handling accounts in metamask plugin **/
   useEffect(() => {
     if (!activeConnector || currentWallet.current === account) {
       if (disconnectedAccounts.current.has(account)) {
