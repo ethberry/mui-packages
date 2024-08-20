@@ -1,28 +1,29 @@
-import { FC, useCallback, useEffect } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useWeb3React } from "@web3-react/core";
 
-import type { INetwork } from "@gemunion/types-blockchain";
-import { useUser } from "@gemunion/provider-user";
+import { collectionActions } from "@gemunion/provider-collection";
 import { useAppDispatch, useAppSelector } from "@gemunion/redux";
+import { useUser } from "@gemunion/provider-user";
+import { INetwork } from "@gemunion/types-blockchain";
 
-import { particleAuth } from "../connectors/particle";
 import { TConnectors, walletActions, walletSelectors } from "../reducer";
+import { particleAuth } from "../connectors/particle";
 
-export const CheckNetwork: FC = () => {
-  const { isActive, chainId, connector } = useWeb3React();
-  const network = useAppSelector<INetwork>(walletSelectors.networkSelector);
-  const activeConnector = useAppSelector(walletSelectors.activeConnectorSelector);
-  const { setActiveConnector } = walletActions;
-  const dispatch = useAppDispatch();
+export const useSwitchNetwork = (network: INetwork) => {
+  const { chainId: metamaskChainId, isActive, connector } = useWeb3React();
   const user = useUser<any>();
-  const userIsAuthenticated = user.isAuthenticated();
+  const isUserAuthenticated = user.isAuthenticated();
+
+  const networks = useAppSelector<Record<number, INetwork>>(walletSelectors.networksSelector);
+  const activeConnector = useAppSelector(walletSelectors.activeConnectorSelector);
+  const dispatch = useAppDispatch();
+
+  const { setNeedRefresh } = collectionActions;
+  const { setActiveConnector, setNetwork } = walletActions;
+
+  const currentMetamaskChainId = useRef<number | null>(null);
 
   const handleDisconnect = () => {
-    if (connector?.deactivate) {
-      void connector.deactivate();
-    } else {
-      void connector.resetState();
-    }
     dispatch(setActiveConnector(null));
   };
 
@@ -40,6 +41,8 @@ export const CheckNetwork: FC = () => {
         method: "wallet_switchEthereumChain",
         params: [{ chainId: `0x${network.chainId.toString(16)}` }],
       });
+      dispatch(setNeedRefresh(true));
+      currentMetamaskChainId.current = network.chainId;
     } catch (error: any) {
       if (error.code === 4902) {
         try {
@@ -59,28 +62,46 @@ export const CheckNetwork: FC = () => {
             method: "wallet_switchEthereumChain",
             params: [{ chainId: `0x${network.chainId.toString(16)}` }],
           });
+          dispatch(setNeedRefresh(true));
+          currentMetamaskChainId.current = network.chainId;
         } catch (addError: any) {
           handleDisconnect();
+          currentMetamaskChainId.current = null;
           console.error(addError);
         }
       } else if (error.code === 4001) {
         handleDisconnect();
+        currentMetamaskChainId.current = null;
         console.error(error);
       }
     }
   }, [activeConnector, connector, network]);
 
+  const switchNetwork = (metamaskChainId: number) => {
+    if (network?.chainId !== metamaskChainId) {
+      dispatch(setNetwork(networks[metamaskChainId]));
+      void user.setProfile({ chainId: metamaskChainId }).then(() => {
+        dispatch(setNeedRefresh(true));
+      });
+    }
+  };
+
   useEffect(() => {
-    if (connector && isActive && chainId) {
+    if (connector && isActive) {
       void checkChainId();
     }
-  }, [connector, isActive, chainId, network]);
+  }, [connector, isActive, network]);
 
   useEffect(() => {
-    if (network && !userIsAuthenticated) {
+    if (network && !isUserAuthenticated) {
       handleDisconnect();
+    } else if (
+      network &&
+      metamaskChainId &&
+      currentMetamaskChainId.current === network.chainId &&
+      currentMetamaskChainId.current !== metamaskChainId
+    ) {
+      switchNetwork(metamaskChainId);
     }
-  }, [network, userIsAuthenticated]);
-
-  return null;
+  }, [network, metamaskChainId, isUserAuthenticated]);
 };
