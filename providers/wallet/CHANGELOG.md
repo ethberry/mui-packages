@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.9.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.8.24...@gemunion/provider-wallet@3.9.0) (2024-08-20)
+
+### Bug Fixes
+
+- fixed refresh page after successfully change chain from application ([72749f4](https://github.com/gemunion/mui-packages/commit/72749f4af8904c73b79c062d174b1d98e53d2617))
+- fixed switch accounts when user chose more than one account in mobile app ([b09dcdd](https://github.com/gemunion/mui-packages/commit/b09dcdd50a5a1db9ff6139fea5c91e2518fe45cf))
+- fixed switch in wallet connect ([0bbbf1b](https://github.com/gemunion/mui-packages/commit/0bbbf1b26a772631f0c92b82d297971b3d78b664))
+
+### Features
+
+- added switch account hook + fixed deps + fixed switch network hook ([659e00a](https://github.com/gemunion/mui-packages/commit/659e00a9fcb31cc439b2b5b54ab4b517a8b56bf7))
+- added switch network hook ([c99226b](https://github.com/gemunion/mui-packages/commit/c99226b4fde4bf0a7130eb530237a1d6f9619e1d))
+- refactored switch network hook + deleted relogin and check network components ([54200e8](https://github.com/gemunion/mui-packages/commit/54200e8f41a8f3375ee075ad58595fd5b872784b))
+- started to add wallet connect switch account ([19cc0a6](https://github.com/gemunion/mui-packages/commit/19cc0a6f7270389a06eb4fc6c27ce398fc75e137))
+
 ## 3.8.24 (2024-08-12)
 
 **Note:** Version bump only for package @gemunion/provider-wallet
