@@ -30,8 +30,10 @@ export const NumberInput: FC<INumberInputProps> = props => {
     const value = e.target.value;
     if (!value) {
       form.setValue(name, 0, { shouldTouch: true });
+      void form.trigger(name);
     } else {
       form.setValue(name, Number(value), { shouldTouch: true });
+      void form.trigger(name);
     }
   };
 
