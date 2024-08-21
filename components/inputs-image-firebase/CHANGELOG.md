@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 8.2.7 (2024-08-21)
+
+### Bug Fixes
+
+- fixed avatar displaying ([2e49afe](https://github.com/gemunion/mui-packages/commit/2e49afea5c29eedca7743ff1889037f5e0799ca4))
+
 ## 8.2.6 (2024-08-12)
 
 ### Bug Fixes

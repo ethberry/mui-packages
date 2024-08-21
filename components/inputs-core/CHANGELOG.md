@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.2.106 (2024-08-21)
+
+### Bug Fixes
+
+- fixed number input ([b43e866](https://github.com/gemunion/mui-packages/commit/b43e8667c152b2130dfd8c13d10e6e979f8c6459))
+
 ## 7.2.105 (2024-08-12)
 
 ### Bug Fixes

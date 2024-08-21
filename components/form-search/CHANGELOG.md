@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.2.108 (2024-08-21)
+
+**Note:** Version bump only for package @gemunion/mui-form-search
+
 ## 7.2.107 (2024-08-12)
 
 ### Bug Fixes

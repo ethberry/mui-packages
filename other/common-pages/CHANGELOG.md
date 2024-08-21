@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 11.0.119 (2024-08-21)
+
+**Note:** Version bump only for package @gemunion/common-pages
+
 ## 11.0.118 (2024-08-12)
 
 ### Bug Fixes
