@@ -75,6 +75,7 @@ export const AvatarInput: FC<IAvatarInputProps> = props => {
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
+            objectFit: "cover",
           }}
         />
         {localizedHelperText && (
