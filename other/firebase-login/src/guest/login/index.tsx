@@ -1,5 +1,5 @@
 import { FC, useEffect, useLayoutEffect, useMemo, useState } from "react";
-import { Box, Button, Grid } from "@mui/material";
+import { Box, Button, Grid, SxProps } from "@mui/material";
 import { NavigateNext } from "@mui/icons-material";
 import { auth } from "firebaseui";
 import {
@@ -47,10 +47,11 @@ export interface IFirebaseLogin {
   buttons?: Array<FC<IFirebaseLoginButtonProps>>;
   withEmail?: boolean;
   onTokenVerified?: () => void;
+  containerStyles?: SxProps;
 }
 
 export const FirebaseLogin: FC<IFirebaseLogin> = props => {
-  const { providers = [PROVIDERS.email], buttons = [], withEmail = true, onTokenVerified } = props;
+  const { providers = [PROVIDERS.email], buttons = [], withEmail = true, onTokenVerified, containerStyles } = props;
   const { formatMessage } = useIntl();
 
   const license = useLicense();
@@ -132,8 +133,8 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
 
   return (
     <ProgressOverlay isLoading={isLoggingIn} spinnerSx={{ zIndex: 1000 }}>
-      <StyledContainer container>
-        <Grid item xs={12}>
+      <StyledContainer sx={containerStyles} container>
+        <Grid id={"firebase-login-box"} item xs={12}>
           {showMessage && (
             <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
               <FormattedMessage id="pages.guest.confirmation" />
