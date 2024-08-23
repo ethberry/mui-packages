@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.94](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.3.93...@gemunion/firebase-login@2.3.94) (2024-08-23)
+
+### Bug Fixes
+
+- fixed firebase login component for external styling ([b12994a](https://github.com/gemunion/mui-packages/commit/b12994ae7a2fbf1a7fe12d92e14e27b02a7af796))
+- fixed firebase login component for external styling [#2](https://github.com/gemunion/mui-packages/issues/2) ([433f8eb](https://github.com/gemunion/mui-packages/commit/433f8eb7ee152fb1df4c6fdf5729dc8f6fb28ab4))
+
 ## [2.3.93](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.3.92...@gemunion/firebase-login@2.3.93) (2024-08-20)
 
 **Note:** Version bump only for package @gemunion/firebase-login
