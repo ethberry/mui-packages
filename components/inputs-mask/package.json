@@ -16,8 +16,8 @@
   "description": "react widget",
   "devDependencies": {
     "@mui/material": "5.16.7",
-    "@storybook/react": "8.2.8",
-    "@types/react": "18.3.3",
+    "@storybook/react": "8.2.9",
+    "@types/react": "18.3.4",
     "ethers": "5.7.2",
     "react": "18.3.1",
     "react-hook-form": "7.52.2",
