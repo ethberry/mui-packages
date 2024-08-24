@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.9.1 (2024-08-24)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([596635b](https://github.com/gemunion/mui-packages/commit/596635b9c9e48d5284a6a5d7f345b177bd31621c))
+
 # [3.9.0](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@3.8.24...@gemunion/provider-wallet@3.9.0) (2024-08-20)
 
 ### Bug Fixes

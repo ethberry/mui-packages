@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.0.14 (2024-08-24)
+
+### Bug Fixes
+
+- **deps:** update [@mui](https://github.com/mui) packages to v7.14.0 ([943fc55](https://github.com/gemunion/mui-packages/commit/943fc554d230c5443b6192df95521742fd96aa80))
+
 ## 6.0.13 (2024-08-12)
 
 **Note:** Version bump only for package @gemunion/provider-picker

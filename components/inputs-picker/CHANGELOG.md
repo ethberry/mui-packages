@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.0.14 (2024-08-24)
+
+### Bug Fixes
+
+- **deps:** update [@mui](https://github.com/mui) packages to v7.14.0 ([943fc55](https://github.com/gemunion/mui-packages/commit/943fc554d230c5443b6192df95521742fd96aa80))
+- **deps:** update all non-major dependencies ([596635b](https://github.com/gemunion/mui-packages/commit/596635b9c9e48d5284a6a5d7f345b177bd31621c))
+
 ## 7.0.13 (2024-08-12)
 
 ### Bug Fixes

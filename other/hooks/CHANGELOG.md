@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.38 (2024-08-24)
+
+**Note:** Version bump only for package @gemunion/react-hooks
+
 ## 2.0.37 (2024-08-12)
 
 ### Bug Fixes
