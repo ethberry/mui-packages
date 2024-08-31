@@ -11,16 +11,16 @@
     "@gemunion/mui-inputs-core": "7.2.107",
     "@gemunion/provider-test-id": "1.0.84",
     "@mui/styles": "5.16.7",
-    "react-number-format": "5.4.0"
+    "react-number-format": "5.4.1"
   },
   "description": "react widget",
   "devDependencies": {
     "@mui/material": "5.16.7",
     "@storybook/react": "8.2.9",
-    "@types/react": "18.3.4",
+    "@types/react": "18.3.5",
     "ethers": "5.7.2",
     "react": "18.3.1",
-    "react-hook-form": "7.52.2",
+    "react-hook-form": "7.53.0",
     "react-intl": "6.6.8"
   },
   "engines": {
