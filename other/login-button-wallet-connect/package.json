@@ -21,9 +21,9 @@
   },
   "description": "react wallet-connect login button component",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.86",
-    "@gemunion/provider-license": "3.0.53",
-    "@gemunion/provider-user": "6.0.92",
+    "@gemunion/provider-api": "7.0.87",
+    "@gemunion/provider-license": "3.0.54",
+    "@gemunion/provider-user": "6.0.93",
     "@mui/material": "5.16.7",
     "@mui/styles": "5.16.7",
     "@web3-react/core": "8.2.3",
