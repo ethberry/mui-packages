@@ -31,7 +31,7 @@
     "@mui/material": "5.16.7",
     "@mui/styles": "5.16.7",
     "@web3-react/core": "8.2.3",
-    "firebase": "10.13.0",
+    "firebase": "10.13.1",
     "notistack": "3.0.1",
     "react": "18.3.1",
     "react-intl": "6.6.8",
