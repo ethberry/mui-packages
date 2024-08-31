@@ -10,10 +10,10 @@
   "dependencies": {
     "@gemunion/constants": "0.13.1",
     "@gemunion/firebase": "1.2.38",
-    "@gemunion/mui-page-layout": "2.3.50",
+    "@gemunion/mui-page-layout": "2.3.51",
     "@gemunion/provider-api": "7.0.87",
-    "@gemunion/react-hooks": "2.0.38",
-    "@gemunion/react-hooks-eth": "1.5.56",
+    "@gemunion/react-hooks": "2.0.39",
+    "@gemunion/react-hooks-eth": "1.5.57",
     "@gemunion/types-collection": "1.5.17",
     "@gemunion/types-jwt": "0.4.5",
     "@mui/icons-material": "5.16.7",
@@ -72,5 +72,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.3.95"
+  "version": "2.3.96"
 }
