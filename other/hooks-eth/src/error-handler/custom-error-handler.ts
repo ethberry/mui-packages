@@ -1,10 +1,10 @@
-import { CustomErrorPrefix } from "./interfaces";
+import { CustomErrors } from "./interfaces";
 
 export const customErrorToReason = (error: string): string => {
   const code = error.slice(0, 10);
-  for (const key in CustomErrorPrefix) {
+  for (const key in CustomErrors) {
     if (key === code) {
-      return CustomErrorPrefix[key as keyof typeof CustomErrorPrefix];
+      return CustomErrors[key as keyof typeof CustomErrors];
     }
   }
   return "Unknown custom error";
