@@ -1,39 +1,27 @@
-import { ChangeEvent, FC, HTMLAttributes, ReactElement, useCallback, useEffect, useState } from "react";
+import { ChangeEvent, FC, HTMLAttributes, ReactElement, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
-import { enqueueSnackbar } from "notistack";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/material";
 
 import { useInputRegistry } from "@gemunion/mui-form";
 import { ProgressOverlay } from "@gemunion/mui-page-layout";
-import { useApi } from "@gemunion/provider-api";
 import { useTestId } from "@gemunion/provider-test-id";
 import { useDeepCompareEffect } from "@gemunion/react-hooks";
 
-import { IAutocompleteOption } from "../interfaces";
+import { IAutocompleteOption, INoContentEntity } from "../interfaces";
+import { useEntity } from "../useEntity";
 
-export interface IEntityInputProps {
-  name: string;
+export interface IEntityInputProps extends INoContentEntity {
   label?: string | number | ReactElement;
   placeholder?: string;
-  controller: string;
   disabled?: boolean;
   readOnly?: boolean;
   required?: boolean;
   disableClear?: boolean;
-  multiple?: boolean;
-  autoselect?: boolean;
-  dirtyAutoselect?: boolean;
   getTitle?: (item: any) => string;
-  data?: Record<string, any>;
   disabledOptions?: any[];
   optionKey?: keyof IAutocompleteOption;
   variant?: "standard" | "filled" | "outlined";
-  onChange?: (
-    event: ChangeEvent<unknown>,
-    options: ReadonlyArray<IAutocompleteOption> | IAutocompleteOption | null,
-    reason: string,
-  ) => void;
 }
 
 export const EntityInput: FC<IEntityInputProps> = props => {
@@ -56,78 +44,42 @@ export const EntityInput: FC<IEntityInputProps> = props => {
     required,
     optionKey = "id",
   } = props;
-  const suffix = name.split(".").pop() as string;
+
+  const [open, setOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [options, setOptions] = useState<Array<IAutocompleteOption>>([]);
 
   const { registerInput, unregisterInput } = useInputRegistry();
   const { testId } = useTestId();
+  const { formatMessage } = useIntl();
+
+  const suffix = name.split(".").pop() as string;
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
-  const [open, setOpen] = useState(false);
+  const { fetchOptions, abortController } = useEntity({
+    controller,
+    name,
+    data,
+    dirtyAutoselect,
+    multiple,
+    autoselect,
+    onChange,
+    setOptions,
+  });
 
   const form = useFormContext<any>();
   const error = get(form.formState.errors, name);
   const value = useWatch({ name });
 
-  const { formatMessage } = useIntl();
   const localizedLabel = label ?? `${formatMessage({ id: `form.labels.${suffix}` })}`;
   const localizedPlaceholder = placeholder ?? formatMessage({ id: `form.placeholders.${suffix}` });
   const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 
-  const [isLoading, setIsLoading] = useState(false);
-  const [options, setOptions] = useState<Array<IAutocompleteOption>>([]);
-
-  const api = useApi();
-  const abortController = new AbortController();
-
-  const fetchOptions = useCallback(async (): Promise<void> => {
-    setIsLoading(true);
-    return api
-      .fetchJson({
-        url: `/${controller}/autocomplete`,
-        data,
-        signal: abortController.signal,
-      })
-      .then((json: Array<any>) => {
-        setOptions(json);
-        if (autoselect) {
-          const newValue = multiple ? [json[0]] : json[0];
-
-          if (!newValue) {
-            form.setValue(name, null, { shouldDirty: dirtyAutoselect });
-            return;
-          }
-
-          const isValueNotExistInOptions =
-            value &&
-            (multiple
-              ? value.some((v: number) => json.every((o: IAutocompleteOption) => o.id !== v))
-              : json.every((o: IAutocompleteOption) => o.id !== value));
-
-          if (!value || isValueNotExistInOptions) {
-            onChange
-              ? onChange({} as ChangeEvent<unknown>, newValue, "autoselect")
-              : form.setValue(name, multiple ? newValue.map((o: IAutocompleteOption) => o.id) : newValue.id, {
-                  shouldDirty: dirtyAutoselect,
-                });
-            if (error) {
-              void form.trigger(name);
-            }
-          }
-        }
-      })
-      .catch(e => {
-        if (!e.message.includes("The user aborted a request") && !e.message.includes("AbortError")) {
-          console.error(e);
-          enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
-        }
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  }, [data, value, name, multiple, form]);
-
   useDeepCompareEffect(() => {
-    void fetchOptions();
+    setIsLoading(true);
+    void fetchOptions().finally(() => {
+      setIsLoading(false);
+    });
 
     return () => abortController.abort({ message: "AbortError" });
   }, [data]);

@@ -7,6 +7,7 @@ import { MaskedInput } from "../mask";
 
 export interface ICurrencyInputProps {
   name: string;
+  label?: string;
   allowNegative?: boolean;
   fractionalDelimiter?: string;
   fillByZeros?: boolean;
