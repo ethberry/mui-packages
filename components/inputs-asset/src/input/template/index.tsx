@@ -2,7 +2,7 @@ import { ChangeEvent, FC } from "react";
 import { useFormContext, useWatch } from "react-hook-form";
 import { useIntl } from "react-intl";
 
-import { EntityInput } from "@gemunion/mui-inputs-entity";
+import { EntityInput, NoContentEntity } from "@gemunion/mui-inputs-entity";
 import { TokenType } from "@gemunion/types-blockchain";
 import { CommonStatus } from "../../interfaces";
 
@@ -91,6 +91,19 @@ export const TemplateInput: FC<ITemplateInputProps> = props => {
       );
     case TokenType.NATIVE:
     case TokenType.ERC20:
+      return (
+        <NoContentEntity
+          name={`${prefix}.${name}`}
+          controller="templates"
+          data={{
+            contractIds: [contractId],
+            templateStatus: [CommonStatus.ACTIVE, CommonStatus.HIDDEN],
+            ...data,
+          }}
+          autoselect={autoSelect}
+          onChange={handleChange}
+        />
+      );
     default:
       return null;
   }
