@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.54](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-particle@1.2.53...@gemunion/login-button-particle@1.2.54) (2024-09-03)
+
+**Note:** Version bump only for package @gemunion/login-button-particle
+
 ## [1.2.53](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-particle@1.2.52...@gemunion/login-button-particle@1.2.53) (2024-08-31)
 
 ### Bug Fixes

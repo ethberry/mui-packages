@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.8.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.7.47...@gemunion/mui-inputs-asset@2.8.0) (2024-09-03)
+
+### Features
+
+- added no content entity for ERC20 and Native templates ([bd7e964](https://github.com/gemunion/mui-packages/commit/bd7e96402c857afb41cba9e21748fe184eb15097))
+
 ## [2.7.47](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.7.46...@gemunion/mui-inputs-asset@2.7.47) (2024-08-31)
 
 ### Bug Fixes

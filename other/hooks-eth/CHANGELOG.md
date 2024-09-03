@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.5.57...@gemunion/react-hooks-eth@1.6.0) (2024-09-03)
+
+### Bug Fixes
+
+- fixed useAllowance typing ([7944041](https://github.com/gemunion/mui-packages/commit/7944041e7874ee9a6034fd8ec81e749b9dbb34ad))
+- update custom errors list ([d565088](https://github.com/gemunion/mui-packages/commit/d565088c393ce620a68578f3207c67e644ae6052))
+
+### Features
+
+- added no content entity for ERC20 and Native templates ([bd7e964](https://github.com/gemunion/mui-packages/commit/bd7e96402c857afb41cba9e21748fe184eb15097))
+
 ## [1.5.57](https://github.com/gemunion/mui-packages/compare/@gemunion/react-hooks-eth@1.5.56...@gemunion/react-hooks-eth@1.5.57) (2024-08-31)
 
 ### Bug Fixes
