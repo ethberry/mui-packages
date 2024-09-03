@@ -2,35 +2,29 @@ import { Web3ContextType } from "@web3-react/core";
 import { useIntl } from "react-intl";
 import { enqueueSnackbar } from "notistack";
 
-import { TokenType } from "@gemunion/types-blockchain";
-import { BigNumber, BigNumberish, Contract, ContractTransaction } from "ethers";
+import { TokenType, IAsset } from "@gemunion/types-blockchain";
+import { BigNumber, Contract, ContractTransaction } from "ethers";
 
-import ERC20AllowanceABI from "./allowance-abis/erc20Allowance.json";
-import ERC721IsApprovedForAllABI from "./allowance-abis/erc721IsApprovedForAll.json";
-import ERC1155IsApprovedForAllABI from "./allowance-abis/erc1155IsApprovedForAll.json";
+import ERC20AllowanceABI from "./allowance-abis/ERC20/allowance.json";
+import ERC721IsApprovedForAllABI from "./allowance-abis/ERC721/isApprovedForAll.json";
+import ERC1155IsApprovedForAllABI from "./allowance-abis//ERC1155/isApprovedForAll.json";
 
-import ERC20ApproveABI from "./allowance-abis/erc20Approve.json";
-import ERC721SetApprovalForAllABI from "./allowance-abis/erc721SetApprovalForAll.json";
-import ERC1155SetApprovalForAllABI from "./allowance-abis/erc1155SetApprovalForAll.json";
+import ERC20ApproveABI from "./allowance-abis/ERC20/approve.json";
+import ERC721SetApprovalForAllABI from "./allowance-abis/ERC721/setApprovalForAll.json";
+import ERC1155SetApprovalForAllABI from "./allowance-abis/ERC1155/setApprovalForAll.json";
 
-// Where to import IAsset?
-interface IAsset {
-  token: string;
-  amount?: BigNumberish;
-  tokenType: TokenType;
-  tokenId?: string | number;
-}
+type OmitAsset = Omit<IAsset, "tokenType"> & { tokenType: TokenType };
 
 export interface IUseAllowanceOptionsParams {
   contract: string;
-  assets: IAsset[];
+  assets: Array<OmitAsset>;
 }
 
 export const groupAssetsByContract = (params: Array<IUseAllowanceOptionsParams>) => {
-  const result: Record<string, Array<IAsset>> = {};
+  const result: Record<string, Array<OmitAsset>> = {};
 
   for (const param of params) {
-    const grouped: Record<string, IAsset> = {};
+    const grouped: Record<string, OmitAsset> = {};
 
     for (const asset of param.assets) {
       const { token, tokenType, amount } = asset;
@@ -42,7 +36,7 @@ export const groupAssetsByContract = (params: Array<IUseAllowanceOptionsParams>)
         // Dublication of the token
         if (tokenType === TokenType.ERC20 && amount /* amount can be undefined */) {
           // If the token is ERC20, combine amount.
-          const updatedAmount = BigNumber.from(grouped[token].amount).add(amount);
+          const updatedAmount = BigNumber.from(grouped[token].amount).add(amount).toString();
           grouped[token].amount = updatedAmount;
         } else {
           // If the Token Is 721 / 998 / 1155
@@ -60,7 +54,7 @@ export const groupAssetsByContract = (params: Array<IUseAllowanceOptionsParams>)
   return result;
 };
 
-export const checkAllowance = async (contract: string, asset: IAsset, web3Context: Web3ContextType) => {
+export const checkAllowance = async (contract: string, asset: OmitAsset, web3Context: Web3ContextType) => {
   const { token, tokenType, amount = 1n } = asset;
   // NATIVE
   if (tokenType === TokenType.NATIVE) {
@@ -92,7 +86,7 @@ export const checkAllowance = async (contract: string, asset: IAsset, web3Contex
   }
 };
 
-export const approveTokens = async (contract: string, asset: IAsset, web3Context: Web3ContextType) => {
+export const approveTokens = async (contract: string, asset: OmitAsset, web3Context: Web3ContextType) => {
   const { token, tokenType, amount = 1n } = asset;
 
   // ERC20
