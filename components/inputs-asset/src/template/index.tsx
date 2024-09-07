@@ -79,7 +79,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
   );
 
   useLayoutEffect(() => {
-    if (forceAmount === true) {
+    if (forceAmount) {
       values.map((val, indx) => {
         const comp = get(form.getValues(), `${nestedPrefix}[${indx}]`);
         if (forceAmount && !comp.allowEmpty) {
