@@ -14,7 +14,7 @@
   "description": "react widget",
   "devDependencies": {
     "@gemunion/provider-license": "3.0.54",
-    "@mui/material": "5.16.7",
+    "@mui/material": "6.0.2",
     "@storybook/react": "8.2.9",
     "@testing-library/jest-dom": "6.5.0",
     "@testing-library/react": "16.0.1",
@@ -38,7 +38,7 @@
   "name": "@gemunion/mui-form-search",
   "peerDependencies": {
     "@gemunion/provider-license": "^3.0.0",
-    "@mui/material": "^5.0.0",
+    "@mui/material": "^5.0.0 || ^6.0.0",
     "react": "^18.0.0",
     "react-hook-form": "^7.0.0",
     "react-router-dom": "^6.0.0"
