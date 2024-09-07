@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.8.1 (2024-09-07)
+
+### Bug Fixes
+
+- simplify code ([a69efdc](https://github.com/gemunion/mui-packages/commit/a69efdcb6caadeff13a189ee2f2c995faffc64ae))
+
 # [2.8.0](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-inputs-asset@2.7.47...@gemunion/mui-inputs-asset@2.8.0) (2024-09-03)
 
 ### Features

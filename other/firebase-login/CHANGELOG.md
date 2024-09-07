@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.3.98 (2024-09-07)
+
+**Note:** Version bump only for package @gemunion/firebase-login
+
 ## [2.3.97](https://github.com/gemunion/mui-packages/compare/@gemunion/firebase-login@2.3.96...@gemunion/firebase-login@2.3.97) (2024-09-03)
 
 **Note:** Version bump only for package @gemunion/firebase-login
