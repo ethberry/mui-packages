@@ -9,7 +9,7 @@ exports[`<PageHeader /> renders component 1`] = `
       class="MuiGrid-root MuiGrid-item css-qhlix2-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-mvle4o-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-k2dfhw-MuiTypography-root"
       >
         Title
       </h2>

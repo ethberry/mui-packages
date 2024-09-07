@@ -37,8 +37,8 @@
   "name": "@gemunion/provider-theme",
   "peerDependencies": {
     "@gemunion/redux": "^0.1.0",
-    "@mui/icons-material": "^5.0.0 || ^6.0.0",
-    "@mui/material": "^5.0.0 || ^6.0.0",
+    "@mui/icons-material": "^6.0.0",
+    "@mui/material": "^6.0.0",
     "react": "^18.0.0",
     "react-intl": "^6.0.0"
   },

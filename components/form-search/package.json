@@ -38,7 +38,7 @@
   "name": "@gemunion/mui-form-search",
   "peerDependencies": {
     "@gemunion/provider-license": "^3.0.0",
-    "@mui/material": "^5.0.0 || ^6.0.0",
+    "@mui/material": "^6.0.0",
     "react": "^18.0.0",
     "react-hook-form": "^7.0.0",
     "react-router-dom": "^6.0.0"

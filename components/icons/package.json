@@ -22,7 +22,7 @@
   "main": "./dist/index.js",
   "name": "@gemunion/mui-icons",
   "peerDependencies": {
-    "@mui/material": "^5.0.0 || ^6.0.0",
+    "@mui/material": "^6.0.0",
     "react": "^18.0.0"
   },
   "publishConfig": {
