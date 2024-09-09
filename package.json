@@ -14,8 +14,6 @@
     "@emotion/react": "11.13.3",
     "@emotion/styled": "11.13.0",
     "@gemunion/eslint-config": "4.0.6",
-    "@gemunion/provider-license": "3.0.54",
-    "@mui/material": "6.0.2",
     "@storybook/addon-essentials": "8.2.9",
     "@storybook/addon-interactions": "8.2.9",
     "@storybook/addon-links": "8.2.9",
