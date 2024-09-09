@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.0.40 (2024-09-07)
+
+### Bug Fixes
+
+- manually bump version ([eeb77d1](https://github.com/gemunion/mui-packages/commit/eeb77d17e0eb098e1b678fdb3194b18ccb83e662))
+
 ## [4.0.39](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-localization@4.0.38...@gemunion/provider-localization@4.0.39) (2024-08-31)
 
 ### Bug Fixes

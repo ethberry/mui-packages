@@ -13,7 +13,7 @@
     "@gemunion/mui-page-layout": "3.0.0",
     "@gemunion/provider-api": "7.0.87",
     "@gemunion/react-hooks": "2.0.39",
-    "@gemunion/react-hooks-eth": "1.6.0",
+    "@gemunion/react-hooks-eth": "1.6.1",
     "@gemunion/types-collection": "1.5.17",
     "@gemunion/types-jwt": "0.4.5",
     "@mui/icons-material": "6.0.2",
