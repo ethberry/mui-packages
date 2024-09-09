@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.0.1 (2024-09-09)
+
+**Note:** Version bump only for package @gemunion/mui-dialog-delete
+
 ## [3.3.99](https://github.com/gemunion/mui-packages/compare/@gemunion/mui-dialog-delete@3.3.98...@gemunion/mui-dialog-delete@3.3.99) (2024-08-31)
 
 ### Bug Fixes
