@@ -16,7 +16,7 @@
     "@gemunion/provider-collection": "1.0.9",
     "@gemunion/provider-wallet": "4.0.1",
     "@gemunion/react-hooks": "2.0.39",
-    "@gemunion/react-hooks-eth": "1.6.2",
+    "@gemunion/react-hooks-eth": "2.0.0",
     "@gemunion/redux": "0.3.32",
     "@gemunion/types-collection": "1.5.17",
     "@mui/icons-material": "6.0.2",
