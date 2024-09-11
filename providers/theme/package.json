@@ -11,7 +11,7 @@
     "@emotion/cache": "11.13.1",
     "@emotion/react": "11.13.3",
     "@gemunion/constants": "0.13.1",
-    "@gemunion/utils": "1.4.0",
+    "@gemunion/utils": "1.5.0",
     "@mui/styles": "6.0.2",
     "@reduxjs/toolkit": "2.2.7",
     "jss": "10.10.0",
