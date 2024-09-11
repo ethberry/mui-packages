@@ -10,7 +10,7 @@
   "dependencies": {
     "@gemunion/mui-page-layout": "3.0.1",
     "@gemunion/provider-test-id": "1.0.85",
-    "@gemunion/react-hooks": "2.0.40",
+    "@gemunion/react-hooks": "2.0.41",
     "@hookform/resolvers": "3.9.0",
     "use-debounce": "10.0.3",
     "yup": "1.4.0"
@@ -58,5 +58,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "9.0.2"
+  "version": "9.0.3"
 }

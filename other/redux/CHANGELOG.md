@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.34](https://github.com/gemunion/common-packages/compare/@gemunion/redux@0.3.33...@gemunion/redux@0.3.34) (2024-09-11)
+
+### Bug Fixes
+
+- **deps:** update gemunion to v1.5.0 ([cb1584a](https://github.com/gemunion/common-packages/commit/cb1584a2ac2e016c7e0ee35504914f8808c59a1f))
+
 ## 0.3.33 (2024-09-11)
 
 **Note:** Version bump only for package @gemunion/redux
