@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@8.0.3...@gemunion/provider-theme@8.0.4) (2024-09-14)
+
+**Note:** Version bump only for package @gemunion/provider-theme
+
 ## [8.0.3](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-theme@8.0.2...@gemunion/provider-theme@8.0.3) (2024-09-11)
 
 ### Bug Fixes
