@@ -14,7 +14,7 @@
     "@reduxjs/toolkit": "2.2.7"
   },
   "devDependencies": {
-    "@gemunion/provider-license": "3.0.54",
+    "@gemunion/provider-license": "3.0.55",
     "@mui/icons-material": "6.1.0",
     "@mui/material": "6.1.0",
     "@types/react": "18.3.5",
