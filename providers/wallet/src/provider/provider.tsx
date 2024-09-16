@@ -18,8 +18,12 @@ import { useReferrer } from "../hooks";
 import { withNetworksFetching } from "./withNetworksFetching";
 import { initializeWalletConnector } from "../connectors/wallet-connect";
 
-const _WalletProvider: FC<PropsWithChildren> = props => {
-  const { children } = props;
+type TWalletProviderProps = PropsWithChildren<{
+  customProjectErrors?: Record<string, string>;
+}>;
+
+const _WalletProvider: FC<TWalletProviderProps> = props => {
+  const { children, customProjectErrors } = props;
 
   const license = useLicense();
   const { profile } = useUser<any>();
@@ -81,6 +85,7 @@ const _WalletProvider: FC<PropsWithChildren> = props => {
           closeConnectWalletDialog,
           connectCallback,
           walletConnector: [walletConnect, hooks, store],
+          customProjectErrors,
         }}
       >
         <>
