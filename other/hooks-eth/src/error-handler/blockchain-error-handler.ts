@@ -4,11 +4,16 @@ import { BlockchainErrorType, CustomErrors, IBlockchainError, SystemErrorPrefix 
 import { panicErrorCodeToReason } from "./panic-code-handler";
 import { customErrorToReason } from "./custom-error-handler";
 
-export const parseBlockchainError = (error: SystemErrorPrefix): IBlockchainError => {
+export const parseBlockchainError = (
+  error: SystemErrorPrefix,
+  customProjectErrors?: Record<string, string>,
+): IBlockchainError => {
+  const errors: { [key: string]: string } = { ...CustomErrors, ...customProjectErrors };
+
   const isEmptyError = error === SystemErrorPrefix.EMPTY;
   const isSystemStringError = error.startsWith(SystemErrorPrefix.ERROR_STRING_PREFIX);
   const isSystemPanicError = error.startsWith(SystemErrorPrefix.PANIC_CODE_PREFIX);
-  const isCustomError = Object.keys(CustomErrors).some(key => error.startsWith(key));
+  const isCustomError = Object.keys(errors).some(key => error.startsWith(key));
 
   if (isEmptyError) {
     return { type: BlockchainErrorType.EMPTY, reason: "Empty error" };
@@ -23,7 +28,7 @@ export const parseBlockchainError = (error: SystemErrorPrefix): IBlockchainError
     const reason = panicErrorCodeToReason(code);
     return { type: BlockchainErrorType.SYSTEM_PANIC_CODE, reason };
   } else if (isCustomError) {
-    const reason = customErrorToReason(error);
+    const reason = customErrorToReason(error, customProjectErrors);
     return { type: BlockchainErrorType.CUSTOM_ERROR, reason };
   }
 
