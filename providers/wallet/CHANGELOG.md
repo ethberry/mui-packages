@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.5](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@4.0.4...@gemunion/provider-wallet@4.0.5) (2024-09-16)
+
+### Bug Fixes
+
+- refactored blockchain errors handling ([d0d34f5](https://github.com/gemunion/mui-packages/commit/d0d34f5323ac0ff467cc80bb3d5daf681bded5e2))
+
 ## [4.0.4](https://github.com/gemunion/mui-packages/compare/@gemunion/provider-wallet@4.0.3...@gemunion/provider-wallet@4.0.4) (2024-09-14)
 
 ### Bug Fixes
