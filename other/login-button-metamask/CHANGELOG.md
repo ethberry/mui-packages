@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.7](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-metamask@2.0.6...@gemunion/login-button-metamask@2.0.7) (2024-09-19)
+
+### Bug Fixes
+
+- fixed displaying login buttons in mobile devices ([70a41b7](https://github.com/gemunion/mui-packages/commit/70a41b77ee460c1afb4125e1df5efae8181fc446))
+- fixed with dev mode ([c00d16a](https://github.com/gemunion/mui-packages/commit/c00d16a877e934b5c7e0bec158b23bed144a0821))
+
 ## [2.0.6](https://github.com/gemunion/mui-packages/compare/@gemunion/login-button-metamask@2.0.5...@gemunion/login-button-metamask@2.0.6) (2024-09-16)
 
 **Note:** Version bump only for package @gemunion/login-button-metamask
