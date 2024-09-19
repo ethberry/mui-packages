@@ -2,6 +2,11 @@
 export const isDesktopDevice = () => {
   const userAgent = navigator.userAgent;
 
+  // for always displaying in dev mode
+  if (process.env.NODE_ENV === "development") {
+    return true;
+  }
+
   if (/iPad|iPhone|iPod/.test(userAgent)) {
     return false;
   }
