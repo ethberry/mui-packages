@@ -13,6 +13,7 @@ import type { IWalletConnectDto } from "@gemunion/types-jwt";
 import type { IFirebaseLoginButtonProps } from "@gemunion/firebase-login";
 
 import { StyledButton } from "./styled";
+import { isDesktopDevice } from "./utils";
 
 export const WalletConnectLoginButton: FC<IFirebaseLoginButtonProps> = props => {
   const { onTokenVerified } = props;
@@ -64,6 +65,10 @@ export const WalletConnectLoginButton: FC<IFirebaseLoginButtonProps> = props => 
       setIsVerifying(false);
     }
   }, [userIsAuthenticated]);
+
+  if (!isDesktopDevice()) {
+    return null;
+  }
 
   return (
     <ProgressOverlay isLoading={isLoading}>

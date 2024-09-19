@@ -13,6 +13,7 @@ import type { IMetamaskDto } from "@gemunion/types-jwt";
 import type { IFirebaseLoginButtonProps } from "@gemunion/firebase-login";
 
 import { StyledButton } from "./styled";
+import { isDesktopDevice } from "./utils";
 
 export const MetamaskLoginButton: FC<IFirebaseLoginButtonProps> = props => {
   const { onTokenVerified } = props;
@@ -62,6 +63,10 @@ export const MetamaskLoginButton: FC<IFirebaseLoginButtonProps> = props => {
       setIsVerifying(false);
     }
   }, [userIsAuthenticated]);
+
+  if (!isDesktopDevice()) {
+    return null;
+  }
 
   return (
     <ProgressOverlay isLoading={isLoading}>
