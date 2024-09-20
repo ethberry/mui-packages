@@ -13,7 +13,7 @@
     "@gemunion/redux": "0.3.34",
     "@mui/material": "6.1.0",
     "@mui/styles": "6.1.0",
-    "@types/react": "18.3.5",
+    "@types/react": "18.3.8",
     "@web3-react/core": "8.2.3",
     "react": "18.3.1"
   },
