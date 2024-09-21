@@ -17,7 +17,7 @@
   "description": "react widget",
   "devDependencies": {
     "@gemunion/mui-inputs-core": "8.0.4",
-    "@gemunion/provider-license": "3.0.55",
+    "@gemunion/provider-license": "3.0.56",
     "@mui/material": "6.1.1",
     "@storybook/react": "8.3.2",
     "@testing-library/jest-dom": "6.5.0",
