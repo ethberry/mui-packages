@@ -12,7 +12,7 @@
     "@emotion/react": "11.13.3",
     "@gemunion/constants": "0.13.1",
     "@gemunion/utils": "1.5.0",
-    "@mui/styles": "6.1.0",
+    "@mui/styles": "6.1.1",
     "@reduxjs/toolkit": "2.2.7",
     "jss": "10.10.0",
     "jss-rtl": "0.3.0",
@@ -22,8 +22,8 @@
   "description": "Material UI theme provider",
   "devDependencies": {
     "@gemunion/redux": "0.3.34",
-    "@mui/icons-material": "6.1.0",
-    "@mui/material": "6.1.0",
+    "@mui/icons-material": "6.1.1",
+    "@mui/material": "6.1.1",
     "@types/stylis": "4.2.6",
     "react": "18.3.1",
     "react-intl": "6.6.8"

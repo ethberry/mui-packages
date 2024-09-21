@@ -11,8 +11,8 @@
   "devDependencies": {
     "@gemunion/provider-wallet": "4.0.5",
     "@gemunion/redux": "0.3.34",
-    "@mui/material": "6.1.0",
-    "@mui/styles": "6.1.0",
+    "@mui/material": "6.1.1",
+    "@mui/styles": "6.1.1",
     "@types/react": "18.3.8",
     "@web3-react/core": "8.2.3",
     "react": "18.3.1"
