@@ -20,7 +20,7 @@
   },
   "description": "react widget media firebase",
   "devDependencies": {
-    "@gemunion/cross-env": "0.0.4",
+    "@gemunion/cross-env": "0.0.5",
     "@gemunion/mui-form": "9.0.5",
     "@gemunion/mui-inputs-file": "7.0.3",
     "@gemunion/provider-api": "7.0.89",

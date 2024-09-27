@@ -18,7 +18,7 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@gemunion/cross-env": "0.0.4",
+    "@gemunion/cross-env": "0.0.5",
     "@gemunion/mui-form": "9.0.5",
     "@gemunion/provider-api": "7.0.89",
     "@gemunion/provider-test-id": "1.0.86",
