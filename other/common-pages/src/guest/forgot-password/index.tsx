@@ -4,12 +4,12 @@ import { useNavigate } from "react-router";
 import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
-import { Captcha } from "@gemunion/mui-inputs-captcha";
-import { PageHeader } from "@gemunion/mui-page-layout";
-import { FormWrapper } from "@gemunion/mui-form";
-import { TextInput } from "@gemunion/mui-inputs-core";
-import { useUser } from "@gemunion/provider-user";
-import { ApiError, useApi } from "@gemunion/provider-api";
+import { Captcha } from "@ethberry/mui-inputs-captcha";
+import { PageHeader } from "@ethberry/mui-page-layout";
+import { FormWrapper } from "@ethberry/mui-form";
+import { TextInput } from "@ethberry/mui-inputs-core";
+import { useUser } from "@ethberry/provider-user";
+import { ApiError, useApi } from "@ethberry/provider-api";
 
 import { validationSchema } from "./validation";
 

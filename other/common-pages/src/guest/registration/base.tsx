@@ -4,10 +4,10 @@ import { useNavigate } from "react-router";
 import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
-import { FormWrapper } from "@gemunion/mui-form";
-import { PageHeader } from "@gemunion/mui-page-layout";
-import { useUser } from "@gemunion/provider-user";
-import { ApiError } from "@gemunion/provider-api";
+import { FormWrapper } from "@ethberry/mui-form";
+import { PageHeader } from "@ethberry/mui-page-layout";
+import { useUser } from "@ethberry/provider-user";
+import { ApiError } from "@ethberry/provider-api";
 
 export interface IRegistrationBaseProps {
   initialValues: any;

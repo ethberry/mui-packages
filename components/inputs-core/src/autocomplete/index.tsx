@@ -3,7 +3,7 @@ import { Autocomplete, AutocompleteRenderInputParams, TextField } from "@mui/mat
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 
-import { useTestId } from "@gemunion/provider-test-id";
+import { useTestId } from "@ethberry/provider-test-id";
 
 export interface IAutocompleteOptions {
   key: string | number;

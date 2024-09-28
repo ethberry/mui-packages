@@ -1,16 +1,16 @@
 {
   "author": {
-    "email": "trejgun@gemunion.io",
+    "email": "trejgun@gmail.com",
     "name": "TrejGun",
-    "url": "https://gemunion.io/"
+    "url": "https://ethberry.io/"
   },
   "bugs": {
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "description": "react widget",
   "devDependencies": {
-    "@gemunion/provider-wallet": "4.0.6",
-    "@gemunion/redux": "0.3.35",
+    "@ethberry/provider-wallet": "4.0.6",
+    "@ethberry/redux": "0.3.35",
     "@mui/material": "6.1.1",
     "@mui/styles": "6.1.1",
     "@types/react": "18.3.10",
@@ -23,9 +23,9 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/mui-scanner",
+  "name": "@ethberry/mui-scanner",
   "peerDependencies": {
-    "@gemunion/redux": "^0.3.0",
+    "@ethberry/redux": "^0.3.0",
     "@mui/material": "^6.0.0",
     "@mui/styles": "^6.0.0",
     "@web3-react/core": "^8.0.0",

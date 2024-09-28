@@ -1,7 +1,7 @@
 import { FC, Fragment, PropsWithChildren, useEffect, useState } from "react";
 import { Outlet, Navigate } from "react-router-dom";
 
-import { useUser } from "@gemunion/provider-user";
+import { useUser } from "@ethberry/provider-user";
 
 export const FirebaseProtected: FC<PropsWithChildren> = props => {
   const { children } = props;

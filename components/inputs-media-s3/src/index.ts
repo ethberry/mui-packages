@@ -3,4 +3,4 @@ export * from "./image";
 export * from "./gallery";
 export * from "./video";
 
-export { useDeleteUrl } from "@gemunion/mui-inputs-file-s3";
+export { useDeleteUrl } from "@ethberry/mui-inputs-file-s3";

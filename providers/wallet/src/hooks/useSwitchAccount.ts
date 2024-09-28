@@ -3,13 +3,13 @@ import { Web3ContextType, useWeb3React } from "@web3-react/core";
 import { getAuth, signInWithCustomToken } from "firebase/auth";
 import { v4 } from "uuid";
 
-import { phrase } from "@gemunion/constants";
-import firebase from "@gemunion/firebase";
-import { useUser } from "@gemunion/provider-user";
-import { useApiCall } from "@gemunion/react-hooks";
-import { useAppSelector, useAppDispatch } from "@gemunion/redux";
-import type { IMetamaskDto, IWalletConnectDto } from "@gemunion/types-jwt";
-import { collectionActions } from "@gemunion/provider-collection";
+import { phrase } from "@ethberry/constants";
+import firebase from "@ethberry/firebase";
+import { useUser } from "@ethberry/provider-user";
+import { useApiCall } from "@ethberry/react-hooks";
+import { useAppSelector, useAppDispatch } from "@ethberry/redux";
+import type { IMetamaskDto, IWalletConnectDto } from "@ethberry/types-jwt";
+import { collectionActions } from "@ethberry/provider-collection";
 
 import { TConnectors, walletSelectors } from "../reducer";
 import { useWalletInit } from "./useWalletInit";

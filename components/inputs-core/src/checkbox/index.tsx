@@ -3,7 +3,7 @@ import { useIntl } from "react-intl";
 import { useFormContext, Controller } from "react-hook-form";
 import { Checkbox, CheckboxProps, FormControlLabel } from "@mui/material";
 
-import { useTestId } from "@gemunion/provider-test-id";
+import { useTestId } from "@ethberry/provider-test-id";
 
 export interface ICheckboxInputProps extends CheckboxProps {
   name: string;

@@ -1,4 +1,4 @@
 export * from "./avatar";
 export * from "./photo";
 
-export { useDeleteUrl } from "@gemunion/mui-inputs-file-s3";
+export { useDeleteUrl } from "@ethberry/mui-inputs-file-s3";

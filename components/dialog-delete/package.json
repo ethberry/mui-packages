@@ -1,16 +1,16 @@
 {
   "author": {
-    "email": "trejgun@gemunion.io",
+    "email": "trejgun@gmail.com",
     "name": "TrejGun",
-    "url": "https://gemunion.io/"
+    "url": "https://ethberry.io/"
   },
   "bugs": {
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-dialog-confirmation": "5.0.5",
-    "@gemunion/mui-page-layout": "3.0.3",
-    "@gemunion/provider-settings": "4.0.102"
+    "@ethberry/mui-dialog-confirmation": "5.0.5",
+    "@ethberry/mui-page-layout": "3.0.3",
+    "@ethberry/provider-settings": "4.0.102"
   },
   "description": "react widget",
   "devDependencies": {
@@ -33,7 +33,7 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/mui-dialog-delete",
+  "name": "@ethberry/mui-dialog-delete",
   "peerDependencies": {
     "@mui/material": "^6.0.0",
     "react": "^18.0.0",

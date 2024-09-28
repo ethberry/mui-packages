@@ -1,7 +1,7 @@
 import { FC, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { get, useFormContext } from "react-hook-form";
 
-import { useApi } from "@gemunion/provider-api";
+import { useApi } from "@ethberry/provider-api";
 
 interface IRegisterResult {
   challenge: string;

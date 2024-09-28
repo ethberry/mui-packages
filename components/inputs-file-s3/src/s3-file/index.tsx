@@ -1,6 +1,6 @@
 import { FC, useCallback, useState } from "react";
 
-import { FileInput, IFileInputProps } from "@gemunion/mui-inputs-file";
+import { FileInput, IFileInputProps } from "@ethberry/mui-inputs-file";
 
 import type { IS3Response } from "./interfaces";
 import { useS3Uploader } from "./use-s3-uploader";

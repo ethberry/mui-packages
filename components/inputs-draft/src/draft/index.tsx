@@ -3,10 +3,10 @@ import { TextFieldProps } from "@mui/material";
 import { useFormContext, useWatch } from "react-hook-form";
 import { useIntl } from "react-intl";
 
-import { useTestId } from "@gemunion/provider-test-id";
-import { TToolbarControl } from "@gemunion/mui-rte";
-import { TextInput } from "@gemunion/mui-inputs-core";
-import { useLicense } from "@gemunion/provider-license";
+import { useTestId } from "@ethberry/provider-test-id";
+import { TToolbarControl } from "@ethberry/mui-rte";
+import { TextInput } from "@ethberry/mui-inputs-core";
+import { useLicense } from "@ethberry/provider-license";
 
 import { IRichTextInputProps, RichTextInput } from "../input";
 

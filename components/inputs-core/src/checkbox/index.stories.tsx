@@ -2,7 +2,7 @@ import { IntlProvider } from "react-intl";
 import { FormProvider, useForm } from "react-hook-form";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { TestIdProvider } from "@gemunion/provider-test-id";
+import { TestIdProvider } from "@ethberry/provider-test-id";
 
 import { CheckboxInput } from "./index";
 

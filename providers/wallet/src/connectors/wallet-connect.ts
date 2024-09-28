@@ -2,7 +2,7 @@ import { initializeConnector, Web3ReactHooks } from "@web3-react/core";
 import { Web3ReactStore } from "@web3-react/types";
 import { WalletConnect } from "@web3-react/walletconnect-v2";
 
-import type { INetwork } from "@gemunion/types-blockchain";
+import type { INetwork } from "@ethberry/types-blockchain";
 
 /* javascript-obfuscator:disable */
 const WALLET_CONNECT_PROJECT_ID = process.env.WALLET_CONNECT_PROJECT_ID;

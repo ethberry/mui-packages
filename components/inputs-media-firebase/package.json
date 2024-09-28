@@ -1,30 +1,30 @@
 {
   "author": {
-    "email": "trejgun@gemunion.io",
+    "email": "trejgun@gmail.com",
     "name": "TrejGun",
-    "url": "https://gemunion.io/"
+    "url": "https://ethberry.io/"
   },
   "bugs": {
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/firebase": "1.2.39",
-    "@gemunion/mui-dialog-confirmation": "5.0.5",
-    "@gemunion/mui-inputs-core": "8.0.5",
-    "@gemunion/mui-inputs-file-firebase": "7.0.3",
-    "@gemunion/mui-page-layout": "3.0.3",
-    "@gemunion/popup": "1.0.61",
+    "@ethberry/firebase": "1.2.39",
+    "@ethberry/mui-dialog-confirmation": "5.0.5",
+    "@ethberry/mui-inputs-core": "8.0.5",
+    "@ethberry/mui-inputs-file-firebase": "7.0.3",
+    "@ethberry/mui-page-layout": "3.0.3",
+    "@ethberry/popup": "1.0.61",
     "clsx": "2.1.1",
     "react-beautiful-dnd": "13.1.1",
     "react-dropzone": "14.2.3"
   },
   "description": "react widget media firebase",
   "devDependencies": {
-    "@gemunion/cross-env": "0.0.4",
-    "@gemunion/mui-form": "9.0.5",
-    "@gemunion/mui-inputs-file": "7.0.3",
-    "@gemunion/provider-api": "7.0.89",
-    "@gemunion/provider-test-id": "1.0.86",
+    "@ethberry/cross-env": "0.0.4",
+    "@ethberry/mui-form": "9.0.5",
+    "@ethberry/mui-inputs-file": "7.0.3",
+    "@ethberry/provider-api": "7.0.89",
+    "@ethberry/provider-test-id": "1.0.86",
     "@mui/icons-material": "6.1.1",
     "@mui/material": "6.1.1",
     "@mui/styles": "6.1.1",
@@ -49,9 +49,9 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/mui-inputs-media-firebase",
+  "name": "@ethberry/mui-inputs-media-firebase",
   "peerDependencies": {
-    "@gemunion/provider-api": "^7.0.0",
+    "@ethberry/provider-api": "^7.0.0",
     "@mui/icons-material": "^6.0.0",
     "@mui/material": "^6.0.0",
     "@mui/styles": "^6.0.0",

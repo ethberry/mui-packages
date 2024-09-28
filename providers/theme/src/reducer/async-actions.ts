@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-import { LAYOUT_SLICE_NAME, LOCAL_STORAGE_KEYS } from "@gemunion/constants";
-import { readFromLS } from "@gemunion/utils";
+import { LAYOUT_SLICE_NAME, LOCAL_STORAGE_KEYS } from "@ethberry/constants";
+import { readFromLS } from "@ethberry/utils";
 
 import { ILayoutState } from "./interfaces";
 import { emptyLayoutState } from "./empty";

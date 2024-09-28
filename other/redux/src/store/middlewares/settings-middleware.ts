@@ -8,8 +8,8 @@ import {
   SET_LAYOUT_DIRECTION_ACTION_TYPE,
   SET_LAYOUT_THEME_ACTION_TYPE,
   SET_REFERRER_ACTION_TYPE,
-} from "@gemunion/constants";
-import { saveToLS } from "@gemunion/utils";
+} from "@ethberry/constants";
+import { saveToLS } from "@ethberry/utils";
 
 const actionsHandle: {
   [key: string]: (action: any, api: any) => void;

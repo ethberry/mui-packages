@@ -5,7 +5,7 @@ import { Delete } from "@mui/icons-material";
 import { FormattedMessage, useIntl } from "react-intl";
 import { clsx } from "clsx";
 
-import { S3FileInput, useDeleteUrl, Accept } from "@gemunion/mui-inputs-file-s3";
+import { S3FileInput, useDeleteUrl, Accept } from "@ethberry/mui-inputs-file-s3";
 
 import { useStyles } from "./styles";
 

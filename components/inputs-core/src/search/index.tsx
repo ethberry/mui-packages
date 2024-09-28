@@ -4,7 +4,7 @@ import { useFormContext, Controller } from "react-hook-form";
 import { IconButton, IconButtonProps, InputBase, InputBaseProps, Paper, PaperProps } from "@mui/material";
 import { SearchOutlined } from "@mui/icons-material";
 
-import { useTestId } from "@gemunion/provider-test-id";
+import { useTestId } from "@ethberry/provider-test-id";
 
 export interface ISearchInputProps extends InputBaseProps {
   iconButtonProps?: Partial<IconButtonProps>;

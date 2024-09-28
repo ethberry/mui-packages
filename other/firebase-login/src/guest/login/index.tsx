@@ -17,10 +17,10 @@ import { enqueueSnackbar } from "notistack";
 
 import "firebaseui/dist/firebaseui.css";
 
-import firebase from "@gemunion/firebase";
-import { ProgressOverlay } from "@gemunion/mui-page-layout";
-import { useLicense } from "@gemunion/provider-license";
-import { useUser } from "@gemunion/provider-user";
+import firebase from "@ethberry/firebase";
+import { ProgressOverlay } from "@ethberry/mui-page-layout";
+import { useLicense } from "@ethberry/provider-license";
+import { useUser } from "@ethberry/provider-user";
 
 import { StyledContainer, StyledFirebaseAuthForm } from "./styled";
 import type { IFirebaseLoginButtonProps } from "../../types";

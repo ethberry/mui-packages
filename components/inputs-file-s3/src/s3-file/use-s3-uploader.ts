@@ -1,6 +1,6 @@
 import { lookup } from "mime-types";
 
-import { useApiCall } from "@gemunion/react-hooks";
+import { useApiCall } from "@ethberry/react-hooks";
 
 import { IS3Response, IS3SignDataRequest, IUseS3UploaderProps, IUseS3UploaderReturnProps } from "./interfaces";
 

@@ -1,7 +1,7 @@
 import { FC, useEffect } from "react";
 
-import { useDeepCompareEffect } from "@gemunion/react-hooks";
-import { useInputRegistry } from "@gemunion/mui-form";
+import { useDeepCompareEffect } from "@ethberry/react-hooks";
+import { useInputRegistry } from "@ethberry/mui-form";
 
 import { INoContentEntity } from "../interfaces";
 import { useEntity } from "../useEntity";

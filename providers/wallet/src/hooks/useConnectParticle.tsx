@@ -3,7 +3,7 @@ import { useIntl } from "react-intl";
 import { enqueueSnackbar } from "notistack";
 import { AuthType } from "@particle-network/auth";
 
-import { useAppDispatch, useAppSelector } from "@gemunion/redux";
+import { useAppDispatch, useAppSelector } from "@ethberry/redux";
 
 import { useWallet } from "../provider";
 import { particleAuth } from "../connectors/particle";

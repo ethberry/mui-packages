@@ -3,9 +3,9 @@ import { Box, Tooltip } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 import { useIntl } from "react-intl";
 
-import { usePopup } from "@gemunion/provider-popup";
-import { useUser } from "@gemunion/provider-user";
-import { useAppDispatch, useAppSelector } from "@gemunion/redux";
+import { usePopup } from "@ethberry/provider-popup";
+import { useUser } from "@ethberry/provider-user";
+import { useAppDispatch, useAppSelector } from "@ethberry/redux";
 
 import { WalletMenuDialog } from "../../dialogs/wallet";
 import { ConnectWallet } from "../../dialogs/connect";

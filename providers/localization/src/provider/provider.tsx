@@ -1,8 +1,8 @@
 import { PropsWithChildren, ReactElement, useEffect } from "react";
 import { IntlProvider } from "react-intl";
 
-import { useLicense } from "@gemunion/provider-license";
-import { useAppDispatch, useAppSelector } from "@gemunion/redux";
+import { useLicense } from "@ethberry/provider-license";
+import { useAppDispatch, useAppSelector } from "@ethberry/redux";
 
 import { flattenMessages } from "./utils";
 import { languageSelector, initializeLanguage } from "../reducer";

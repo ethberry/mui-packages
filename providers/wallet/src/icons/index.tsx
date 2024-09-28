@@ -4,7 +4,7 @@ import { MetaMask } from "@web3-react/metamask";
 import { WalletConnect } from "@web3-react/walletconnect-v2";
 import { useWeb3React } from "@web3-react/core";
 
-import { MetaMaskIcon, ParticleIcon, WalletConnectIcon, ZealIcon } from "@gemunion/mui-icons";
+import { MetaMaskIcon, ParticleIcon, WalletConnectIcon, ZealIcon } from "@ethberry/mui-icons";
 import { ParticleAuth } from "../connectors";
 
 export const WalletIcon: FC = () => {

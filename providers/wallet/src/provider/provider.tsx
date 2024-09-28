@@ -1,10 +1,10 @@
 import { FC, PropsWithChildren, useCallback, useEffect, useMemo, useState } from "react";
 import { Web3ReactProvider, Web3ReactHooks, Web3ContextType } from "@web3-react/core";
 
-import type { INetwork } from "@gemunion/types-blockchain";
-import { useLicense } from "@gemunion/provider-license";
-import { useUser } from "@gemunion/provider-user";
-import { useAppDispatch, useAppSelector } from "@gemunion/redux";
+import type { INetwork } from "@ethberry/types-blockchain";
+import { useLicense } from "@ethberry/provider-license";
+import { useUser } from "@ethberry/provider-user";
+import { useAppDispatch, useAppSelector } from "@ethberry/redux";
 
 import { ConnectorsTypes } from "../connectors";
 import { metaMask, hooks as metaMaskHooks } from "../connectors/meta-mask";

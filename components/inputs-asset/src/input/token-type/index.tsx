@@ -1,7 +1,7 @@
 import { FC } from "react";
 
-import { SelectInput } from "@gemunion/mui-inputs-core";
-import { TokenType } from "@gemunion/types-blockchain";
+import { SelectInput } from "@ethberry/mui-inputs-core";
+import { TokenType } from "@ethberry/types-blockchain";
 import { SelectProps, SelectVariants } from "@mui/material";
 
 export type ITokenTypeInputProps = {

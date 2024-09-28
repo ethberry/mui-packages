@@ -5,7 +5,7 @@ import { cleanup, render } from "@testing-library/react";
 import { FormProvider, useForm } from "react-hook-form";
 import { createTheme, ThemeProvider } from "@mui/material";
 
-import { TestIdProvider } from "@gemunion/provider-test-id";
+import { TestIdProvider } from "@ethberry/provider-test-id";
 
 import { NumberInput } from "./index";
 

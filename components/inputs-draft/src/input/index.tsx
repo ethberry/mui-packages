@@ -2,8 +2,8 @@ import { forwardRef } from "react";
 import type { InputBaseComponentProps } from "@mui/material/InputBase";
 import { EditorState } from "draft-js";
 
-import { RichTextEditor } from "@gemunion/mui-rte";
-import type { IRichTextEditorRef, TToolbarControl } from "@gemunion/mui-rte";
+import { RichTextEditor } from "@ethberry/mui-rte";
+import type { IRichTextEditorRef, TToolbarControl } from "@ethberry/mui-rte";
 
 export interface IRichTextInputProps extends Omit<InputBaseComponentProps, "value"> {
   onStateChange?: (state: EditorState) => void;

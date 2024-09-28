@@ -12,7 +12,7 @@ import {
 import { FormattedMessage, useIntl } from "react-intl";
 import { Controller, get, useFormContext, useWatch } from "react-hook-form";
 
-import { useTestId } from "@gemunion/provider-test-id";
+import { useTestId } from "@ethberry/provider-test-id";
 
 export type ISelectInputProps = {
   name: string;

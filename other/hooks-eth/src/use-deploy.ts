@@ -3,8 +3,8 @@ import { Web3ContextType } from "@web3-react/core";
 import { useIntl } from "react-intl";
 import { enqueueSnackbar } from "notistack";
 
-import type { IServerSignature } from "@gemunion/types-blockchain";
-import type { IFetchProps } from "@gemunion/provider-api";
+import type { IServerSignature } from "@ethberry/types-blockchain";
+import type { IFetchProps } from "@ethberry/provider-api";
 
 import { useServerSignature } from "./use-server-signature";
 import { useMetamask } from "./use-metamask";

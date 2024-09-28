@@ -2,7 +2,7 @@ import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { deleteObject, getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 
-import app from "@gemunion/firebase";
+import app from "@ethberry/firebase";
 import { v4 } from "uuid";
 
 export const useDeleteUrl = (bucket?: string): ((url: string) => Promise<void>) => {

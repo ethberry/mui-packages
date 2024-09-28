@@ -1,15 +1,15 @@
 {
   "author": {
-    "email": "trejgun@gemunion.io",
+    "email": "trejgun@gmail.com",
     "name": "TrejGun",
-    "url": "https://gemunion.io/"
+    "url": "https://ethberry.io/"
   },
   "bugs": {
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/firebase": "1.2.39",
-    "@gemunion/mui-inputs-file": "7.0.3",
+    "@ethberry/firebase": "1.2.39",
+    "@ethberry/mui-inputs-file": "7.0.3",
     "uuid": "10.0.0"
   },
   "description": "react widget",
@@ -26,7 +26,7 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/mui-inputs-file-firebase",
+  "name": "@ethberry/mui-inputs-file-firebase",
   "peerDependencies": {
     "firebase": "^10.0.0",
     "notistack": "^3.0.0",

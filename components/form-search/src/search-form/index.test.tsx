@@ -3,7 +3,7 @@ import { cleanup, render } from "@testing-library/react";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { MemoryRouter } from "react-router-dom";
 
-import { LicenseProvider } from "@gemunion/provider-license";
+import { LicenseProvider } from "@ethberry/provider-license";
 
 import { CommonSearchForm } from "./index";
 
@@ -28,7 +28,7 @@ describe("<CommonSearchForm />", () => {
     };
 
     const { asFragment } = render(
-      <LicenseProvider licenseKey={process.env.STORYBOOK_GEMUNION_LICENSE}>
+      <LicenseProvider licenseKey={process.env.STORYBOOK_ETHBERRY_LICENSE}>
         <MemoryRouter>
           <ThemeProvider theme={createTheme()}>
             <IntlProvider locale="en" messages={i18n}>

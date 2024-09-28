@@ -2,8 +2,8 @@ import { Web3ContextType } from "@web3-react/core";
 import { useIntl } from "react-intl";
 import { enqueueSnackbar } from "notistack";
 
-import { useApi } from "@gemunion/provider-api";
-import type { IDeployable, IServerSignature } from "@gemunion/types-blockchain";
+import { useApi } from "@ethberry/provider-api";
+import type { IDeployable, IServerSignature } from "@ethberry/types-blockchain";
 
 import type { IHandlerOptionsParams } from "./interfaces";
 

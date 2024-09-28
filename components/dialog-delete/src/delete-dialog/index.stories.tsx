@@ -1,7 +1,7 @@
 import { IntlProvider } from "react-intl";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { SettingsProvider } from "@gemunion/provider-settings";
+import { SettingsProvider } from "@ethberry/provider-settings";
 
 import { DeleteDialog } from "./index";
 

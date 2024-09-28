@@ -2,8 +2,8 @@ import { useCallback } from "react";
 import { useIntl } from "react-intl";
 import { enqueueSnackbar } from "notistack";
 
-import type { INetwork } from "@gemunion/types-blockchain";
-import { useAppDispatch, useAppSelector } from "@gemunion/redux";
+import type { INetwork } from "@ethberry/types-blockchain";
+import { useAppDispatch, useAppSelector } from "@ethberry/redux";
 
 import { useWallet } from "../provider";
 import { TConnectors, walletActions, walletSelectors } from "../reducer";

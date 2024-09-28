@@ -1,6 +1,6 @@
 import { constants } from "ethers";
 
-import { TokenType } from "@gemunion/types-blockchain";
+import { TokenType } from "@ethberry/types-blockchain";
 
 import type { ITokenAsset, ITokenAssetComponent } from "./types";
 

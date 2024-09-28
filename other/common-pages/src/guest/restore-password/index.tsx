@@ -4,10 +4,10 @@ import { Grid } from "@mui/material";
 import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
-import { PasswordInput } from "@gemunion/mui-inputs-core";
-import { PageHeader } from "@gemunion/mui-page-layout";
-import { FormWrapper } from "@gemunion/mui-form";
-import { ApiError, useApi } from "@gemunion/provider-api";
+import { PasswordInput } from "@ethberry/mui-inputs-core";
+import { PageHeader } from "@ethberry/mui-page-layout";
+import { FormWrapper } from "@ethberry/mui-form";
+import { ApiError, useApi } from "@ethberry/provider-api";
 
 import { validationSchema } from "./validation";
 

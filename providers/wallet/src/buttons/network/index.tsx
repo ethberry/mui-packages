@@ -1,10 +1,10 @@
 import { FC, MouseEvent, useState } from "react";
 import { IconButton, ListItemText, Menu, MenuItem, Tooltip } from "@mui/material";
 
-import type { INetwork } from "@gemunion/types-blockchain";
-import { ProgressOverlay } from "@gemunion/mui-page-layout";
-import { useUser } from "@gemunion/provider-user";
-import { useAppSelector } from "@gemunion/redux";
+import type { INetwork } from "@ethberry/types-blockchain";
+import { ProgressOverlay } from "@ethberry/mui-page-layout";
+import { useUser } from "@ethberry/provider-user";
+import { useAppSelector } from "@ethberry/redux";
 
 import { spinnerMixin, StyledBadge, StyledCircle, StyledListItemIcon, StyledSvgIcon } from "./styled";
 import { getChainIconParams } from "./utils";

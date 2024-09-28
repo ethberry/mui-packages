@@ -5,7 +5,7 @@ import { Delete } from "@mui/icons-material";
 import { FormattedMessage, useIntl } from "react-intl";
 import { clsx } from "clsx";
 
-import { FirebaseFileInput, useDeleteUrl, Accept } from "@gemunion/mui-inputs-file-firebase";
+import { FirebaseFileInput, useDeleteUrl, Accept } from "@ethberry/mui-inputs-file-firebase";
 
 import { useStyles } from "./styles";
 

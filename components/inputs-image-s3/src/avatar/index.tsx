@@ -4,7 +4,7 @@ import { Box, FormControl, FormHelperText, Grid, IconButton, InputLabel, Tooltip
 import { Delete } from "@mui/icons-material";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { Accept, S3FileInput, useDeleteUrl } from "@gemunion/mui-inputs-file-s3";
+import { Accept, S3FileInput, useDeleteUrl } from "@ethberry/mui-inputs-file-s3";
 
 export interface IAvatarInputProps {
   name: string;

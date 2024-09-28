@@ -1,30 +1,30 @@
 {
   "author": {
-    "email": "trejgun@gemunion.io",
+    "email": "trejgun@gmail.com",
     "name": "TrejGun",
-    "url": "https://gemunion.io/"
+    "url": "https://ethberry.io/"
   },
   "bugs": {
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/constants": "0.13.1",
-    "@gemunion/firebase": "1.2.39",
-    "@gemunion/mui-page-layout": "3.0.3",
-    "@gemunion/provider-api": "7.0.89",
-    "@gemunion/react-hooks": "2.0.43",
-    "@gemunion/react-hooks-eth": "2.0.6",
-    "@gemunion/types-collection": "1.5.17",
-    "@gemunion/types-jwt": "0.4.5",
+    "@ethberry/constants": "0.13.1",
+    "@ethberry/firebase": "1.2.39",
+    "@ethberry/mui-page-layout": "3.0.3",
+    "@ethberry/provider-api": "7.0.89",
+    "@ethberry/react-hooks": "2.0.43",
+    "@ethberry/react-hooks-eth": "2.0.6",
+    "@ethberry/types-collection": "1.5.17",
+    "@ethberry/types-jwt": "0.4.5",
     "@mui/icons-material": "6.1.1",
     "firebaseui": "6.1.0",
     "uuid": "10.0.0"
   },
   "description": "react component",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.89",
-    "@gemunion/provider-license": "3.0.56",
-    "@gemunion/provider-user": "6.0.95",
+    "@ethberry/provider-api": "7.0.89",
+    "@ethberry/provider-license": "3.0.56",
+    "@ethberry/provider-user": "6.0.95",
     "@mui/material": "6.1.1",
     "@mui/styles": "6.1.1",
     "firebase": "10.13.2",
@@ -40,11 +40,11 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/firebase-login",
+  "name": "@ethberry/firebase-login",
   "peerDependencies": {
-    "@gemunion/provider-api": "^7.0.0",
-    "@gemunion/provider-license": "^3.0.0",
-    "@gemunion/provider-user": "^6.0.0",
+    "@ethberry/provider-api": "^7.0.0",
+    "@ethberry/provider-license": "^3.0.0",
+    "@ethberry/provider-user": "^6.0.0",
     "@mui/material": "^6.0.0",
     "@mui/styles": "^6.0.0",
     "firebase": "^10.0.0",

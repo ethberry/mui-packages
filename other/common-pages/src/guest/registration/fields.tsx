@@ -1,7 +1,7 @@
 import { FC, Fragment } from "react";
 
-import { PasswordInput, TextInput } from "@gemunion/mui-inputs-core";
-import { Captcha } from "@gemunion/mui-inputs-captcha";
+import { PasswordInput, TextInput } from "@ethberry/mui-inputs-core";
+import { Captcha } from "@ethberry/mui-inputs-captcha";
 
 export const DefaultRegistrationFields: FC = () => {
   return (

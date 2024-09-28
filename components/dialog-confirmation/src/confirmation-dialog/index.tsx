@@ -10,9 +10,9 @@ import {
   DialogTitle,
 } from "@mui/material";
 
-import { useLicense } from "@gemunion/provider-license";
-import { useAppSelector } from "@gemunion/redux";
-import { layoutDirectionSelector } from "@gemunion/provider-theme";
+import { useLicense } from "@ethberry/provider-license";
+import { useAppSelector } from "@ethberry/redux";
+import { layoutDirectionSelector } from "@ethberry/provider-theme";
 
 export interface IConfirmationDialogProps extends DialogProps {
   onCancel: () => void;

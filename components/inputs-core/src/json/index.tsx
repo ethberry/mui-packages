@@ -1,6 +1,6 @@
 import { FC, FocusEvent } from "react";
 import { useFormContext } from "react-hook-form";
-import { jsonValidationSchema } from "@gemunion/yup-rules";
+import { jsonValidationSchema } from "@ethberry/yup-rules";
 
 import { TextArea, ITextAreaProps } from "../textarea";
 

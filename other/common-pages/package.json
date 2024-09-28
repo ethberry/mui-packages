@@ -1,27 +1,27 @@
 {
   "author": {
-    "email": "trejgun@gemunion.io",
+    "email": "trejgun@gmail.com",
     "name": "TrejGun",
-    "url": "https://gemunion.io/"
+    "url": "https://ethberry.io/"
   },
   "bugs": {
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/constants": "0.13.1",
-    "@gemunion/mui-form": "9.0.5",
-    "@gemunion/mui-inputs-captcha": "5.0.3",
-    "@gemunion/mui-inputs-core": "8.0.5",
-    "@gemunion/mui-page-layout": "3.0.3",
-    "@gemunion/popup": "1.0.61",
-    "@gemunion/react-hooks": "2.0.43",
-    "@gemunion/yup-rules": "4.2.66",
+    "@ethberry/constants": "0.13.1",
+    "@ethberry/mui-form": "9.0.5",
+    "@ethberry/mui-inputs-captcha": "5.0.3",
+    "@ethberry/mui-inputs-core": "8.0.5",
+    "@ethberry/mui-page-layout": "3.0.3",
+    "@ethberry/popup": "1.0.61",
+    "@ethberry/react-hooks": "2.0.43",
+    "@ethberry/yup-rules": "4.2.66",
     "yup": "1.4.0"
   },
   "description": "react context provider",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.89",
-    "@gemunion/provider-user": "6.0.95",
+    "@ethberry/provider-api": "7.0.89",
+    "@ethberry/provider-user": "6.0.95",
     "@mui/icons-material": "6.1.1",
     "@mui/lab": "6.0.0-beta.10",
     "@mui/material": "6.1.1",
@@ -41,10 +41,10 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/common-pages",
+  "name": "@ethberry/common-pages",
   "peerDependencies": {
-    "@gemunion/provider-api": "^7.0.0",
-    "@gemunion/provider-user": "^6.0.0",
+    "@ethberry/provider-api": "^7.0.0",
+    "@ethberry/provider-user": "^6.0.0",
     "@mui/icons-material": "^6.0.0",
     "@mui/lab": "^6.0.0-beta.0",
     "@mui/material": "^6.0.0",

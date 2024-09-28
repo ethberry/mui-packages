@@ -2,7 +2,7 @@ import { FC, PropsWithChildren, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import { enqueueSnackbar } from "notistack";
 
-import { useLicense } from "@gemunion/provider-license";
+import { useLicense } from "@ethberry/provider-license";
 
 import { ICoinGeckoCoinTicker, ICoinGeckoTickers } from "./interfaces";
 

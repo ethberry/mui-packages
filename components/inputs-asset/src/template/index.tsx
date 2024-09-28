@@ -4,7 +4,7 @@ import { useIntl } from "react-intl";
 import { Box, IconButton, Paper, Tooltip, Typography } from "@mui/material";
 import { Add, Delete } from "@mui/icons-material";
 
-import { TokenType } from "@gemunion/types-blockchain";
+import { TokenType } from "@ethberry/types-blockchain";
 
 import { emptyItem, emptyPrice } from "./empty";
 import { TokenTypeInput } from "../input/token-type";

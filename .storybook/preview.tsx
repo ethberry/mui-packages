@@ -5,7 +5,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import { Preview } from "@storybook/react";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
-import { LicenseProvider } from "@gemunion/provider-license";
+import { LicenseProvider } from "@ethberry/provider-license";
 
 import { ReduxProvider, store } from "../other/redux";
 
@@ -15,7 +15,7 @@ const decorators = [
       {
         path: "*",
         element: (
-          <LicenseProvider licenseKey={process.env.STORYBOOK_GEMUNION_LICENSE}>
+          <LicenseProvider licenseKey={process.env.STORYBOOK_ETHBERRY_LICENSE}>
             <ReduxProvider store={store}>
               <ThemeProvider theme={createTheme()}>
                 <StyledEngineProvider injectFirst>

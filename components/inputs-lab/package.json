@@ -1,14 +1,14 @@
 {
   "author": {
-    "email": "trejgun@gemunion.io",
+    "email": "trejgun@gmail.com",
     "name": "TrejGun",
-    "url": "https://gemunion.io/"
+    "url": "https://ethberry.io/"
   },
   "bugs": {
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/provider-test-id": "1.0.86",
+    "@ethberry/provider-test-id": "1.0.86",
     "clsx": "2.1.1"
   },
   "description": "react widget",
@@ -28,7 +28,7 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/mui-inputs-lab",
+  "name": "@ethberry/mui-inputs-lab",
   "peerDependencies": {
     "@mui/icons-material": "^6.0.0",
     "@mui/lab": "^6.0.0-beta.0",

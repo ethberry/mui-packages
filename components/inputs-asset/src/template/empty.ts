@@ -1,7 +1,7 @@
 import { constants } from "ethers";
 
-import { TokenType } from "@gemunion/types-blockchain";
-import { imageUrl } from "@gemunion/constants";
+import { TokenType } from "@ethberry/types-blockchain";
+import { imageUrl } from "@ethberry/constants";
 
 import type { ITemplateAsset, ITemplateAssetComponent } from "./types";
 

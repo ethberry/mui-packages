@@ -1,15 +1,15 @@
 {
   "author": {
-    "email": "trejgun@gemunion.io",
+    "email": "trejgun@gmail.com",
     "name": "TrejGun",
-    "url": "https://gemunion.io/"
+    "url": "https://ethberry.io/"
   },
   "bugs": {
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-inputs-core": "8.0.5",
-    "@gemunion/provider-test-id": "1.0.86",
+    "@ethberry/mui-inputs-core": "8.0.5",
+    "@ethberry/provider-test-id": "1.0.86",
     "@mui/styles": "6.1.1",
     "react-number-format": "5.4.2"
   },
@@ -29,7 +29,7 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/mui-inputs-mask",
+  "name": "@ethberry/mui-inputs-mask",
   "peerDependencies": {
     "@mui/material": "^6.0.0",
     "ethers": "^5.6.0",

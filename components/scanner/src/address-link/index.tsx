@@ -2,9 +2,9 @@ import { FC } from "react";
 import { Link, SxProps, Theme, Tooltip, useMediaQuery } from "@mui/material";
 import { useWeb3React } from "@web3-react/core";
 
-import type { INetwork } from "@gemunion/types-blockchain";
-import { useAppSelector } from "@gemunion/redux";
-import { walletSelectors } from "@gemunion/provider-wallet";
+import type { INetwork } from "@ethberry/types-blockchain";
+import { useAppSelector } from "@ethberry/redux";
+import { walletSelectors } from "@ethberry/provider-wallet";
 
 export interface IAddressLinkProps {
   address?: string;

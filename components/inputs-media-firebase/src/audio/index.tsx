@@ -6,7 +6,7 @@ import { get, useFormContext, useWatch } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
 import { clsx } from "clsx";
 
-import { Accept, FirebaseFileInput, useDeleteUrl } from "@gemunion/mui-inputs-file-firebase";
+import { Accept, FirebaseFileInput, useDeleteUrl } from "@ethberry/mui-inputs-file-firebase";
 
 import { ACCEPTED_FORMATS, MAX_FILE_SIZE } from "./constants";
 import { useStyles } from "./styles";

@@ -3,7 +3,7 @@ import { useIntl } from "react-intl";
 import { Controller, useFormContext } from "react-hook-form";
 import { FormControlLabel, Switch, SwitchProps } from "@mui/material";
 
-import { useTestId } from "@gemunion/provider-test-id";
+import { useTestId } from "@ethberry/provider-test-id";
 
 export interface ISwitchInputProps extends SwitchProps {
   name: string;

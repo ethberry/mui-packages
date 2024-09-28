@@ -4,7 +4,7 @@ import { Box, FormControl, FormHelperText, Grid, IconButton, InputLabel, Tooltip
 import { Delete } from "@mui/icons-material";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { FirebaseFileInput, useDeleteUrl, Accept } from "@gemunion/mui-inputs-file-firebase";
+import { FirebaseFileInput, useDeleteUrl, Accept } from "@ethberry/mui-inputs-file-firebase";
 
 export interface IAvatarInputProps {
   name: string;

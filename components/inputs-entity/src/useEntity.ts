@@ -3,7 +3,7 @@ import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { get, useFormContext, useWatch } from "react-hook-form";
 
-import { useApi } from "@gemunion/provider-api";
+import { useApi } from "@ethberry/provider-api";
 
 import { IAutocompleteOption, INoContentEntity } from "./interfaces";
 

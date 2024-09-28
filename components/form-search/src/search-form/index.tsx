@@ -2,8 +2,8 @@ import { FC, PropsWithChildren } from "react";
 import { Collapse, Grid } from "@mui/material";
 import { UseFormReturn } from "react-hook-form";
 
-import { AutoSave, FormWrapper } from "@gemunion/mui-form";
-import { SearchInput } from "@gemunion/mui-inputs-core";
+import { AutoSave, FormWrapper } from "@ethberry/mui-form";
+import { SearchInput } from "@ethberry/mui-inputs-core";
 
 interface ICommonSearchFormProps {
   onSubmit: (values: any, form: UseFormReturn) => Promise<void>;

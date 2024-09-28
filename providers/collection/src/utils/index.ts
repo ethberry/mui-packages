@@ -1,6 +1,6 @@
 import { defaultDecoder } from "qs";
 
-import { InputType } from "@gemunion/types-collection";
+import { InputType } from "@ethberry/types-collection";
 
 // https://github.com/ljharb/qs/issues/91#issuecomment-522289267
 export const decoder = (str: string, _decoder: defaultDecoder, charset: string): any => {

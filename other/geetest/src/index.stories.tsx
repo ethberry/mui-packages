@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import { FormWrapper } from "@gemunion/mui-form";
-import { ApiProviderJwt } from "@gemunion/provider-api-jwt";
+import { FormWrapper } from "@ethberry/mui-form";
+import { ApiProviderJwt } from "@ethberry/provider-api-jwt";
 
 import { GeeTestCaptcha } from ".";
 

@@ -16,8 +16,8 @@ import { create } from "jss";
 import rtl from "jss-rtl";
 import { StylesProvider, jssPreset } from "@mui/styles";
 
-import { useAppDispatch, useAppSelector } from "@gemunion/redux";
-import { ThemeType } from "@gemunion/constants";
+import { useAppDispatch, useAppSelector } from "@ethberry/redux";
+import { ThemeType } from "@ethberry/constants";
 
 import { dark, light } from "./palette";
 import { layoutDirectionSelector, themeTypeSelector, initializeLayout } from "../reducer";

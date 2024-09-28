@@ -4,8 +4,8 @@ import { useIntl } from "react-intl";
 import { Box, IconButton, Paper, Tooltip, Typography } from "@mui/material";
 import { Add, Delete } from "@mui/icons-material";
 
-import { TokenType } from "@gemunion/types-blockchain";
-import { useDeepCompareEffect } from "@gemunion/react-hooks";
+import { TokenType } from "@ethberry/types-blockchain";
+import { useDeepCompareEffect } from "@ethberry/react-hooks";
 
 import { ContractInput } from "../input/contract";
 import { TokenInput } from "../input/token";

@@ -3,8 +3,8 @@ import { useIntl } from "react-intl";
 import { IconButton, Tooltip } from "@mui/material";
 import { Brightness4, Brightness7 } from "@mui/icons-material";
 
-import { ThemeType } from "@gemunion/constants";
-import { useAppDispatch, useAppSelector } from "@gemunion/redux";
+import { ThemeType } from "@ethberry/constants";
+import { useAppDispatch, useAppSelector } from "@ethberry/redux";
 
 import { themeTypeSelector, setThemeType } from "../reducer";
 

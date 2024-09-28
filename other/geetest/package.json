@@ -1,20 +1,20 @@
 {
   "author": {
-    "email": "trejgun@gemunion.io",
+    "email": "trejgun@gmail.com",
     "name": "TrejGun",
-    "url": "https://gemunion.io/"
+    "url": "https://ethberry.io/"
   },
   "bugs": {
     "url": "https://github.com/gemunion/common-packages/issues"
   },
   "dependencies": {
-    "@gemunion/mui-form": "9.0.5",
+    "@ethberry/mui-form": "9.0.5",
     "react-hook-form": "7.53.0"
   },
   "description": "react widget",
   "devDependencies": {
-    "@gemunion/provider-api": "7.0.89",
-    "@gemunion/provider-api-jwt": "2.0.85",
+    "@ethberry/provider-api": "7.0.89",
+    "@ethberry/provider-api-jwt": "2.0.85",
     "@storybook/react": "8.3.4",
     "@types/react": "18.3.10",
     "react": "18.3.1"
@@ -25,9 +25,9 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/geetest",
+  "name": "@ethberry/geetest",
   "peerDependencies": {
-    "@gemunion/provider-api": "^7.0.0",
+    "@ethberry/provider-api": "^7.0.0",
     "react": "^18.0.0"
   },
   "publishConfig": {

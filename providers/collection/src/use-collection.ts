@@ -4,12 +4,12 @@ import { useIntl } from "react-intl";
 import { useLocation, useNavigate, useParams } from "react-router";
 import { parse, stringify } from "qs";
 
-import { useApiCall, useDeepCompareEffect } from "@gemunion/react-hooks";
-import { defaultItemsPerPage } from "@gemunion/constants";
-import { ApiError } from "@gemunion/provider-api";
-import { useAppDispatch, useAppSelector } from "@gemunion/redux";
+import { useApiCall, useDeepCompareEffect } from "@ethberry/react-hooks";
+import { defaultItemsPerPage } from "@ethberry/constants";
+import { ApiError } from "@ethberry/provider-api";
+import { useAppDispatch, useAppSelector } from "@ethberry/redux";
 
-import { IIdBase, IPaginationResult, IPaginationDto, ISortDto, IMuiSortDto } from "@gemunion/types-collection";
+import { IIdBase, IPaginationResult, IPaginationDto, ISortDto, IMuiSortDto } from "@ethberry/types-collection";
 
 import { decoder, deepEqual, hasAwaited } from "./utils";
 import { CollectionActions, collectionActions, collectionSelector, ICollectionState } from "./reducer";

@@ -5,7 +5,7 @@ import { Box, InputLabel } from "@mui/material";
 import { Rating, RatingProps } from "@mui/lab";
 import { Star, SvgIconComponent } from "@mui/icons-material";
 
-import { useTestId } from "@gemunion/provider-test-id";
+import { useTestId } from "@ethberry/provider-test-id";
 
 export interface IRatingInputProps extends RatingProps {
   name: string;

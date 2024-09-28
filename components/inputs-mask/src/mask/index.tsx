@@ -2,8 +2,8 @@ import { FC } from "react";
 import { useFormContext } from "react-hook-form";
 import { NumericFormat } from "react-number-format";
 
-import { TextInput } from "@gemunion/mui-inputs-core";
-import { useTestId } from "@gemunion/provider-test-id";
+import { TextInput } from "@ethberry/mui-inputs-core";
+import { useTestId } from "@ethberry/provider-test-id";
 
 export interface IMaskedInputProps {
   name: string;

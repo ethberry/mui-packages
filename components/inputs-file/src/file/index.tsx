@@ -7,8 +7,8 @@ import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";
 
-import { ProgressOverlay } from "@gemunion/mui-page-layout";
-import { useTestId } from "@gemunion/provider-test-id";
+import { ProgressOverlay } from "@ethberry/mui-page-layout";
+import { useTestId } from "@ethberry/provider-test-id";
 
 import { ACCEPTED_FORMATS, MAX_FILE_SIZE, MIN_FILE_SIZE } from "./constants";
 import { humanFileSize } from "./utils";

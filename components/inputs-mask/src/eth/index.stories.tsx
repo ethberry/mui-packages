@@ -3,7 +3,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import { constants } from "ethers";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { TestIdProvider } from "@gemunion/provider-test-id";
+import { TestIdProvider } from "@ethberry/provider-test-id";
 
 import { EthInput } from "./index";
 

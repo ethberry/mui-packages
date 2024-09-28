@@ -1,7 +1,7 @@
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      STORYBOOK_GEMUNION_LICENSE: string;
+      STORYBOOK_ETHBERRY_LICENSE: string;
     }
   }
 }

@@ -5,7 +5,7 @@ import { FormattedMessage } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";
 import { Grid, FormHelperText } from "@mui/material";
 
-import { useTestId } from "@gemunion/provider-test-id";
+import { useTestId } from "@ethberry/provider-test-id";
 
 interface ICaptchaProps {
   name?: string;

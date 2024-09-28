@@ -2,7 +2,7 @@ import { FC } from "react";
 import { FieldValues, useFormContext, UseFormReturn } from "react-hook-form";
 import { useDebouncedCallback } from "use-debounce";
 
-import { useDeepCompareEffect } from "@gemunion/react-hooks";
+import { useDeepCompareEffect } from "@ethberry/react-hooks";
 
 interface IOnFormStateChangeProps {
   onFormStateChange: (form: UseFormReturn<FieldValues, any>) => Promise<void>;

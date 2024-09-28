@@ -1,7 +1,7 @@
 import { IntlProvider } from "react-intl";
 import { cleanup, render } from "@testing-library/react";
 import { createTheme, ThemeProvider } from "@mui/material";
-import { FormWrapper } from "@gemunion/mui-form";
+import { FormWrapper } from "@ethberry/mui-form";
 import { SnackbarProvider } from "notistack";
 
 import { VideoInput } from "./index";

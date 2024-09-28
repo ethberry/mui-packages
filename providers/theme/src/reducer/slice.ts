@@ -6,7 +6,7 @@ import {
   LAYOUT_DIRECTION,
   LAYOUT_SLICE_NAME,
   SET_LANGUAGE_ACTION_TYPE,
-} from "@gemunion/constants";
+} from "@ethberry/constants";
 
 import { ILayoutState } from "./interfaces";
 import { emptyLayoutState } from "./empty";

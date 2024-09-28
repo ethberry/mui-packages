@@ -1,8 +1,8 @@
 {
   "author": {
-    "email": "trejgun@gemunion.io",
+    "email": "trejgun@gmail.com",
     "name": "TrejGun",
-    "url": "https://gemunion.io/"
+    "url": "https://ethberry.io/"
   },
   "dependencies": {
     "@lerna/legacy-package-management": "8.1.8",
@@ -13,7 +13,7 @@
   "devDependencies": {
     "@emotion/react": "11.13.3",
     "@emotion/styled": "11.13.0",
-    "@gemunion/eslint-config": "4.0.6",
+    "@ethberry/eslint-config": "4.0.6",
     "@storybook/addon-essentials": "8.3.4",
     "@storybook/addon-interactions": "8.3.4",
     "@storybook/addon-links": "8.3.4",
@@ -54,7 +54,7 @@
     "node": ">=22"
   },
   "license": "UNLICENSED",
-  "name": "@gemunion/mui-packages",
+  "name": "@ethberry/mui-packages",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },

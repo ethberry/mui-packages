@@ -3,7 +3,7 @@ import { useIntl } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";
 import { DateRange, MobileDateRangePicker, MobileDateRangePickerProps } from "@mui/x-date-pickers-pro";
 
-import { useTestId } from "@gemunion/provider-test-id";
+import { useTestId } from "@ethberry/provider-test-id";
 
 interface IDateTimeInputProps extends MobileDateRangePickerProps<any> {
   fieldSeparator?: any;

@@ -2,7 +2,7 @@ import { FC } from "react";
 import { FieldValues, get, useFormContext, UseFormReturn, useWatch } from "react-hook-form";
 import { useDebouncedCallback } from "use-debounce";
 
-import { useDeepCompareEffect } from "@gemunion/react-hooks";
+import { useDeepCompareEffect } from "@ethberry/react-hooks";
 
 import { useInputRegistry } from "../input-registry-provider";
 

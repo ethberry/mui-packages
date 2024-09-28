@@ -6,7 +6,7 @@ import { get, useFormContext, useWatch } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
 import { clsx } from "clsx";
 
-import { Accept, S3FileInput, useDeleteUrl } from "@gemunion/mui-inputs-file-s3";
+import { Accept, S3FileInput, useDeleteUrl } from "@ethberry/mui-inputs-file-s3";
 
 import { ACCEPTED_FORMATS, MAX_FILE_SIZE } from "./constants";
 import { useStyles } from "./styles";

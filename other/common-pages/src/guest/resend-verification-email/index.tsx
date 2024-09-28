@@ -4,11 +4,11 @@ import { enqueueSnackbar } from "notistack";
 import { Grid } from "@mui/material";
 import { useIntl } from "react-intl";
 
-import { Captcha } from "@gemunion/mui-inputs-captcha";
-import { PageHeader } from "@gemunion/mui-page-layout";
-import { TextInput } from "@gemunion/mui-inputs-core";
-import { FormWrapper } from "@gemunion/mui-form";
-import { ApiError, useApi } from "@gemunion/provider-api";
+import { Captcha } from "@ethberry/mui-inputs-captcha";
+import { PageHeader } from "@ethberry/mui-page-layout";
+import { TextInput } from "@ethberry/mui-inputs-core";
+import { FormWrapper } from "@ethberry/mui-form";
+import { ApiError, useApi } from "@ethberry/provider-api";
 
 import { validationSchema } from "./validation";
 

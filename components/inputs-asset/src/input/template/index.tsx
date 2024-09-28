@@ -2,8 +2,8 @@ import { ChangeEvent, FC } from "react";
 import { useFormContext, useWatch } from "react-hook-form";
 import { useIntl } from "react-intl";
 
-import { EntityInput, NoContentEntity } from "@gemunion/mui-inputs-entity";
-import { TokenType } from "@gemunion/types-blockchain";
+import { EntityInput, NoContentEntity } from "@ethberry/mui-inputs-entity";
+import { TokenType } from "@ethberry/types-blockchain";
 import { CommonStatus } from "../../interfaces";
 
 export interface ITemplateInputProps {

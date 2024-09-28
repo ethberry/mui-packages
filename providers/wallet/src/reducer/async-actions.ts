@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-import { WALLET_SLICE_NAME, LOCAL_STORAGE_KEYS } from "@gemunion/constants";
-import { readFromLS } from "@gemunion/utils";
+import { WALLET_SLICE_NAME, LOCAL_STORAGE_KEYS } from "@ethberry/constants";
+import { readFromLS } from "@ethberry/utils";
 
 import { TConnectors } from "./interfaces";
 

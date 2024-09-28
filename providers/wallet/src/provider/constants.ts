@@ -1,6 +1,6 @@
 import type { Networkish } from "@ethersproject/networks";
 
-import type { INetwork } from "@gemunion/types-blockchain";
+import type { INetwork } from "@ethberry/types-blockchain";
 
 export const SANDBOX_CHAINS = [97, 80002, 10001, 10000, 11155111, 13473];
 

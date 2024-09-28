@@ -4,8 +4,8 @@ import { OptionsObject, enqueueSnackbar } from "notistack";
 import { Button } from "@mui/material";
 import { NoMetaMaskError } from "@web3-react/metamask";
 
-import type { INetwork } from "@gemunion/types-blockchain";
-import { useAppDispatch, useAppSelector } from "@gemunion/redux";
+import type { INetwork } from "@ethberry/types-blockchain";
+import { useAppDispatch, useAppSelector } from "@ethberry/redux";
 
 import { useWallet } from "../provider";
 import { metaMask } from "../connectors/meta-mask";

@@ -1,8 +1,8 @@
 import React, { ComponentType, ReactNode, useEffect, useState } from "react";
 
-import { useApiCall } from "@gemunion/react-hooks";
-import { ProgressOverlay } from "@gemunion/mui-page-layout";
-import { useAppDispatch } from "@gemunion/redux";
+import { useApiCall } from "@ethberry/react-hooks";
+import { ProgressOverlay } from "@ethberry/mui-page-layout";
+import { useAppDispatch } from "@ethberry/redux";
 
 import { initializeActiveConnector, walletActions } from "../reducer";
 

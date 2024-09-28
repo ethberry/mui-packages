@@ -1,7 +1,7 @@
 import { IntlProvider } from "react-intl";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { TextInput } from "@gemunion/mui-inputs-core";
+import { TextInput } from "@ethberry/mui-inputs-core";
 
 import { FormDialog } from "./index";
 

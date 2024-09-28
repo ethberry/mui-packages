@@ -11,7 +11,7 @@ import {
   Sepolia,
   ImmutableZkEVM,
   Telos,
-} from "@gemunion/mui-icons";
+} from "@ethberry/mui-icons";
 
 export const getIconByChainId = (chainId: number): FC<SvgIconProps> | null => {
   switch (chainId) {

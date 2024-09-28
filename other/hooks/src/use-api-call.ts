@@ -3,9 +3,9 @@ import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { UseFormReturn } from "react-hook-form";
 
-import { downForMaintenance } from "@gemunion/license-messages";
-import { ApiError, IApiContext, useApi } from "@gemunion/provider-api";
-import { useLicense } from "@gemunion/provider-license";
+import { downForMaintenance } from "@ethberry/license-messages";
+import { ApiError, IApiContext, useApi } from "@ethberry/provider-api";
+import { useLicense } from "@ethberry/provider-license";
 
 export const useApiCall = <T = any, V = any>(
   fn: (api: IApiContext, ...args: Array<V>) => Promise<T>,

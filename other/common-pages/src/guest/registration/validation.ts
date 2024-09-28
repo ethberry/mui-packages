@@ -5,7 +5,7 @@ import {
   displayNameValidationSchema,
   emailValidationSchema,
   passwordValidationSchema,
-} from "@gemunion/yup-rules";
+} from "@ethberry/yup-rules";
 
 export const validationSchema = object().shape({
   email: emailValidationSchema,

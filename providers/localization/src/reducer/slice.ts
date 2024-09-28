@@ -1,6 +1,6 @@
 import { PayloadAction, Slice, createSlice, isAnyOf } from "@reduxjs/toolkit";
 
-import { EnabledLanguages, LOCALIZATION_SLICE_NAME } from "@gemunion/constants";
+import { EnabledLanguages, LOCALIZATION_SLICE_NAME } from "@ethberry/constants";
 
 import { ILocalizationState, TLanguage } from "./interfaces";
 import { initializeLanguage } from "./async-actions";

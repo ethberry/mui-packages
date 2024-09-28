@@ -3,14 +3,14 @@ import { Web3ContextType } from "@web3-react/core";
 import { FormattedMessage } from "react-intl";
 import { v4 } from "uuid";
 
-import { phrase } from "@gemunion/constants";
-import { ProgressOverlay } from "@gemunion/mui-page-layout";
-import { useUser } from "@gemunion/provider-user";
-import { useConnectMetamask, useWalletInit } from "@gemunion/provider-wallet";
-import { MetaMaskIcon } from "@gemunion/mui-icons";
-import { useApiCall } from "@gemunion/react-hooks";
-import type { IMetamaskDto } from "@gemunion/types-jwt";
-import type { IFirebaseLoginButtonProps } from "@gemunion/firebase-login";
+import { phrase } from "@ethberry/constants";
+import { ProgressOverlay } from "@ethberry/mui-page-layout";
+import { useUser } from "@ethberry/provider-user";
+import { useConnectMetamask, useWalletInit } from "@ethberry/provider-wallet";
+import { MetaMaskIcon } from "@ethberry/mui-icons";
+import { useApiCall } from "@ethberry/react-hooks";
+import type { IMetamaskDto } from "@ethberry/types-jwt";
+import type { IFirebaseLoginButtonProps } from "@ethberry/firebase-login";
 
 import { StyledButton } from "./styled";
 import { isDesktopDevice } from "./utils";

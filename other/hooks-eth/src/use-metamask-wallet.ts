@@ -6,9 +6,9 @@ import { ErrorCode } from "@ethersproject/logger";
 // TODO replace with https://github.com/MetaMask/rpc-errors/blob/main/src/error-constants.ts
 import { RESERVED_ERROR_CODES, SERVER_ERROR_CODE_RANGE, STANDARD_ERROR_MAP } from "@json-rpc-tools/utils";
 
-import { downForMaintenance } from "@gemunion/license-messages";
-import { useLicense } from "@gemunion/provider-license";
-import { useWallet } from "@gemunion/provider-wallet";
+import { downForMaintenance } from "@ethberry/license-messages";
+import { useLicense } from "@ethberry/provider-license";
+import { useWallet } from "@ethberry/provider-wallet";
 
 import { IHandlerOptionsParams } from "./interfaces";
 import { BlockchainErrorType, parseBlockchainError, SystemErrorPrefix } from "./error-handler";

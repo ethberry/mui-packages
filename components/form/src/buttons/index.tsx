@@ -3,7 +3,7 @@ import { useFormContext } from "react-hook-form";
 import { Button, ButtonProps } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 
-import { ButtonToolbar } from "@gemunion/mui-page-layout";
+import { ButtonToolbar } from "@ethberry/mui-page-layout";
 
 interface IFormButtonsProps {
   formButtonProps?: Partial<ButtonProps>;

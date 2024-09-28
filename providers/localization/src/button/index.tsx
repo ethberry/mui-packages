@@ -3,7 +3,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { IconButton, Menu, MenuItem, MenuItemProps, MenuProps, Tooltip } from "@mui/material";
 import { Translate } from "@mui/icons-material";
 
-import { useAppDispatch, useAppSelector } from "@gemunion/redux";
+import { useAppDispatch, useAppSelector } from "@ethberry/redux";
 
 import { languageSelector, setLanguage, TLanguage } from "../reducer";
 

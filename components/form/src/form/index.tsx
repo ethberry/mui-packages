@@ -4,9 +4,9 @@ import { SxProps, Theme } from "@mui/material/styles";
 import { FieldValues, FormProvider, SubmitHandler, useForm, UseFormReturn } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-import { useDeepCompareEffect } from "@gemunion/react-hooks";
-import { useLicense } from "@gemunion/provider-license";
-import { TestIdProvider } from "@gemunion/provider-test-id";
+import { useDeepCompareEffect } from "@ethberry/react-hooks";
+import { useLicense } from "@ethberry/provider-license";
+import { TestIdProvider } from "@ethberry/provider-test-id";
 
 import { FormButtons } from "../buttons";
 import { PromptIfDirty } from "../prompt";

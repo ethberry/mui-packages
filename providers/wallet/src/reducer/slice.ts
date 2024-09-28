@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice, isAnyOf, Slice } from "@reduxjs/toolkit";
 
-import type { INetwork } from "@gemunion/types-blockchain";
-import { WALLET_SLICE_NAME } from "@gemunion/constants";
+import type { INetwork } from "@ethberry/types-blockchain";
+import { WALLET_SLICE_NAME } from "@ethberry/constants";
 
 import { emptyWalletState } from "./empty";
 import type { IWalletState, TConnectors } from "./interfaces";

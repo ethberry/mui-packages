@@ -4,9 +4,9 @@ import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Grid } from "@mui/material";
 
-import { ProgressOverlay } from "@gemunion/mui-page-layout";
-import { useUser } from "@gemunion/provider-user";
-import { ApiError, useApi } from "@gemunion/provider-api";
+import { ProgressOverlay } from "@ethberry/mui-page-layout";
+import { useUser } from "@ethberry/provider-user";
+import { ApiError, useApi } from "@ethberry/provider-api";
 
 export const VerifyEmail: FC = () => {
   const navigate = useNavigate();

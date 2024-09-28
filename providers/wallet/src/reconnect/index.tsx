@@ -2,9 +2,9 @@ import { FC, useCallback, useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 import { ProviderRpcError } from "@web3-react/types";
 
-import type { INetwork } from "@gemunion/types-blockchain";
-import { useUser } from "@gemunion/provider-user";
-import { useAppSelector } from "@gemunion/redux";
+import type { INetwork } from "@ethberry/types-blockchain";
+import { useUser } from "@ethberry/provider-user";
+import { useAppSelector } from "@ethberry/redux";
 
 import { getConnectorName, useGetConnectorByName } from "../connectors";
 import { particleAuth } from "../connectors/particle";

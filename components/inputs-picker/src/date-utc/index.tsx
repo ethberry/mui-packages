@@ -4,7 +4,7 @@ import { Controller, get, useFormContext } from "react-hook-form";
 import { MobileDatePicker, MobileDatePickerProps } from "@mui/x-date-pickers";
 import { addMinutes, subMinutes } from "date-fns";
 
-import { useTestId } from "@gemunion/provider-test-id";
+import { useTestId } from "@ethberry/provider-test-id";
 
 interface IDateUtcInputProps extends MobileDatePickerProps<any> {
   name: string;

@@ -3,8 +3,8 @@ import { FormattedMessage } from "react-intl";
 import { useWatch } from "react-hook-form";
 
 import { Alert } from "@mui/material";
-import { EthInput } from "@gemunion/mui-inputs-mask";
-import { TokenType } from "@gemunion/types-blockchain";
+import { EthInput } from "@ethberry/mui-inputs-mask";
+import { TokenType } from "@ethberry/types-blockchain";
 
 export interface IAmountInputProps {
   prefix: string;

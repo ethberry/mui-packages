@@ -2,7 +2,7 @@ import { Web3ContextType } from "@web3-react/core";
 import { useIntl } from "react-intl";
 import { enqueueSnackbar } from "notistack";
 
-import { TokenType } from "@gemunion/types-blockchain";
+import { TokenType } from "@ethberry/types-blockchain";
 import { BigNumber, BigNumberish, Contract, ContractTransaction } from "ethers";
 
 import ERC20AllowanceABI from "./allowance-abis/ERC20/allowance.json";

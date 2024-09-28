@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useRef } from "react";
 import { useWeb3React } from "@web3-react/core";
 
-import { collectionActions } from "@gemunion/provider-collection";
-import { useAppDispatch, useAppSelector } from "@gemunion/redux";
-import { useUser } from "@gemunion/provider-user";
-import { INetwork } from "@gemunion/types-blockchain";
+import { collectionActions } from "@ethberry/provider-collection";
+import { useAppDispatch, useAppSelector } from "@ethberry/redux";
+import { useUser } from "@ethberry/provider-user";
+import { INetwork } from "@ethberry/types-blockchain";
 
 import { TConnectors, walletActions, walletSelectors } from "../reducer";
 import { particleAuth } from "../connectors/particle";

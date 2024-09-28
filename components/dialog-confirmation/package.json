@@ -1,18 +1,18 @@
 {
   "author": {
-    "email": "trejgun@gemunion.io",
+    "email": "trejgun@gmail.com",
     "name": "TrejGun",
-    "url": "https://gemunion.io/"
+    "url": "https://ethberry.io/"
   },
   "bugs": {
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "description": "react widget",
   "devDependencies": {
-    "@gemunion/provider-license": "3.0.56",
-    "@gemunion/provider-settings": "4.0.102",
-    "@gemunion/provider-theme": "8.0.5",
-    "@gemunion/redux": "0.3.35",
+    "@ethberry/provider-license": "3.0.56",
+    "@ethberry/provider-settings": "4.0.102",
+    "@ethberry/provider-theme": "8.0.5",
+    "@ethberry/redux": "0.3.35",
     "@mui/material": "6.1.1",
     "@storybook/react": "8.3.4",
     "@testing-library/jest-dom": "6.5.0",
@@ -32,10 +32,10 @@
   "keywords": [],
   "license": "UNLICENSED",
   "main": "./dist/index.js",
-  "name": "@gemunion/mui-dialog-confirmation",
+  "name": "@ethberry/mui-dialog-confirmation",
   "peerDependencies": {
-    "@gemunion/provider-license": "^3.0.0",
-    "@gemunion/redux": "^0.1.0",
+    "@ethberry/provider-license": "^3.0.0",
+    "@ethberry/redux": "^0.1.0",
     "@mui/material": "^6.0.0",
     "react": "^18.0.0",
     "react-intl": "^6.0.0"

@@ -3,8 +3,8 @@ import { FormProvider, useForm } from "react-hook-form";
 import { SnackbarProvider } from "notistack";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { ApiProviderJwt } from "@gemunion/provider-api-jwt";
-import { TestIdProvider } from "@gemunion/provider-test-id";
+import { ApiProviderJwt } from "@ethberry/provider-api-jwt";
+import { TestIdProvider } from "@ethberry/provider-test-id";
 
 import { PhotoInput } from "./index";
 

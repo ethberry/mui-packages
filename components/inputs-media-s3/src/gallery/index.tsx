@@ -5,11 +5,11 @@ import { FormattedMessage } from "react-intl";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { clsx } from "clsx";
 
-import { TextInput } from "@gemunion/mui-inputs-core";
-import { ProgressOverlay } from "@gemunion/mui-page-layout";
-import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
-import { S3FileInput, useDeleteUrl, Accept } from "@gemunion/mui-inputs-file-s3";
-import { openUrlOnClick } from "@gemunion/popup";
+import { TextInput } from "@ethberry/mui-inputs-core";
+import { ProgressOverlay } from "@ethberry/mui-page-layout";
+import { ConfirmationDialog } from "@ethberry/mui-dialog-confirmation";
+import { S3FileInput, useDeleteUrl, Accept } from "@ethberry/mui-inputs-file-s3";
+import { openUrlOnClick } from "@ethberry/popup";
 
 import { useStyles } from "./styles";
 

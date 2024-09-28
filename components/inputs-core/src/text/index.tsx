@@ -3,7 +3,7 @@ import { useIntl } from "react-intl";
 import { useFormContext, Controller, get } from "react-hook-form";
 import { TextField, TextFieldProps } from "@mui/material";
 
-import { useTestId } from "@gemunion/provider-test-id";
+import { useTestId } from "@ethberry/provider-test-id";
 
 export type ITextInputProps = {
   name: string;

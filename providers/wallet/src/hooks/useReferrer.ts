@@ -1,6 +1,6 @@
 import { useLayoutEffect } from "react";
 
-import { LOCAL_STORAGE_KEYS } from "@gemunion/constants";
+import { LOCAL_STORAGE_KEYS } from "@ethberry/constants";
 
 import { walletActions } from "../reducer";
 

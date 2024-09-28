@@ -3,8 +3,8 @@ import { Button, Dialog, DialogContent, DialogTitle } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 import { useWeb3React } from "@web3-react/core";
 
-import { useUser } from "@gemunion/provider-user";
-import { useAppDispatch } from "@gemunion/redux";
+import { useUser } from "@ethberry/provider-user";
+import { useAppDispatch } from "@ethberry/redux";
 
 import { CloseButton } from "../../buttons/close";
 import { walletActions } from "../../reducer";

@@ -4,10 +4,10 @@ import { FieldValues, UseFormReturn } from "react-hook-form";
 import { useIntl } from "react-intl";
 import { useParams } from "react-router";
 
-import { ConfirmationDialog } from "@gemunion/mui-dialog-confirmation";
-import { ProgressOverlay } from "@gemunion/mui-page-layout";
-import { FormWrapper } from "@gemunion/mui-form";
-import { useDeepCompareEffect } from "@gemunion/react-hooks";
+import { ConfirmationDialog } from "@ethberry/mui-dialog-confirmation";
+import { ProgressOverlay } from "@ethberry/mui-page-layout";
+import { FormWrapper } from "@ethberry/mui-form";
+import { useDeepCompareEffect } from "@ethberry/react-hooks";
 
 export interface IFormDialogProps<T> {
   showButtons?: boolean;

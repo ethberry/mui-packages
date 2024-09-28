@@ -10,9 +10,9 @@ import {
   TextFieldProps,
 } from "@mui/material";
 
-import { ProgressOverlay } from "@gemunion/mui-page-layout";
-import { useTestId } from "@gemunion/provider-test-id";
-import { useApiCall, useDeepCompareEffect } from "@gemunion/react-hooks";
+import { ProgressOverlay } from "@ethberry/mui-page-layout";
+import { useTestId } from "@ethberry/provider-test-id";
+import { useApiCall, useDeepCompareEffect } from "@ethberry/react-hooks";
 
 import { IAutocompleteOption } from "../interfaces";
 

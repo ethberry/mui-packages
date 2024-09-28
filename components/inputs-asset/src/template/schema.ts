@@ -1,7 +1,7 @@
 import { array, lazy, mixed, number, object } from "yup";
 
-import { bigNumberValidationSchema } from "@gemunion/yup-rules-eth";
-import { TokenType } from "@gemunion/types-blockchain";
+import { bigNumberValidationSchema } from "@ethberry/yup-rules-eth";
+import { TokenType } from "@ethberry/types-blockchain";
 
 export const templateAssetTokenTypeValidationSchema = mixed<TokenType>()
   .oneOf(Object.values(TokenType))

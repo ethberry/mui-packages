@@ -1,4 +1,4 @@
-import { EnabledLanguages, RTLLanguages } from "@gemunion/constants";
+import { EnabledLanguages, RTLLanguages } from "@ethberry/constants";
 
 // remove RTLLanguages after common next release
 export type TLanguage = EnabledLanguages | RTLLanguages;
