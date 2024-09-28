@@ -39,13 +39,13 @@
     "@mui/icons-material": "6.1.1",
     "@mui/material": "6.1.1",
     "@mui/styles": "6.1.1",
-    "@types/react": "18.3.8",
+    "@types/react": "18.3.10",
     "@types/uuid": "10.0.0",
     "@web3-react/core": "8.2.3",
     "ethers": "5.7.2",
     "notistack": "3.0.1",
     "react": "18.3.1",
-    "react-intl": "6.6.8"
+    "react-intl": "6.7.0"
   },
   "engines": {
     "node": ">=22"
