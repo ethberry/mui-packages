@@ -1,5 +1,4 @@
 import { FC } from "react";
-// eslint-disable-next-line import/no-named-as-default
 import ReCAPTCHA from "react-google-recaptcha";
 import { FormattedMessage } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";

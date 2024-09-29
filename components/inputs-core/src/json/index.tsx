@@ -12,7 +12,8 @@ export const JsonInput: FC<ITextAreaProps> = props => {
   const normalizeValue = (value: string) => {
     try {
       return JSON.stringify(JSON.parse(value), null, "\t");
-    } catch (_e) {
+    } catch (e) {
+      void e;
       return value;
     }
   };

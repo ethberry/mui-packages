@@ -7,7 +7,7 @@ import { TLanguage } from "./interfaces";
 
 export const initializeLanguage = createAsyncThunk<TLanguage, void, any>(
   `${LOCALIZATION_SLICE_NAME}/initializeLanguage`,
-  async (_, thunkAPI) => {
+  (_, thunkAPI) => {
     try {
       const language: TLanguage = readFromLS(LOCAL_STORAGE_KEYS.LANGUAGE, EnabledLanguages.EN);
       if (!language) {
@@ -15,6 +15,7 @@ export const initializeLanguage = createAsyncThunk<TLanguage, void, any>(
       }
       return language;
     } catch (e) {
+      void e;
       return thunkAPI.rejectWithValue(null);
     }
   },

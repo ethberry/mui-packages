@@ -7,6 +7,7 @@ import jestRules from "@ethberry/eslint-config/tests/jest.mjs";
 export default [
   {
     ignores: [
+      ".storybook",
       "**/dist",
     ]
   },

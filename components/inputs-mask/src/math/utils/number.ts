@@ -1,8 +1,8 @@
 import { isNumber } from "../is";
 
-interface SplitValue { sign: "+" | "-" | ""; coefficients: number[]; exponent: number }
+interface ISplitValue { sign: "+" | "-" | ""; coefficients: number[]; exponent: number }
 
-// eslint-disable-next-line @typescript-eslint/ban-types
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export function format(value: number, options: object | Function | number): string {
   if (typeof options === "function") {
     return options(value) as string;
@@ -66,7 +66,7 @@ export function format(value: number, options: object | Function | number): stri
   }
 }
 
-export function splitNumber(value: number | string): SplitValue {
+export function splitNumber(value: number | string): ISplitValue {
   const match = /^(-?)(\d+\.?\d*)(e([+-]?\d+))?$/.exec(String(value)
     .toLowerCase());
   if (!match) {
@@ -97,7 +97,7 @@ export function splitNumber(value: number | string): SplitValue {
     exponent++;
   }
 
-  return { sign, coefficients, exponent } as SplitValue;
+  return { sign, coefficients, exponent } as ISplitValue;
 }
 
 export function toFixed(value: any, precision?: number): string {

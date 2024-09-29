@@ -103,9 +103,11 @@ export const ComboEntityInput: FC<IComboEntityInputProps> = props => {
           const isValueNotExistInOptions = value && json.every((o: IAutocompleteOption) => o[targetId] !== value);
 
           if (!value || isValueNotExistInOptions) {
-            onChange
-              ? onChange({} as ChangeEvent<unknown>, newValue, "autoselect")
-              : form.setValue(name, newValue[targetId], { shouldDirty: true });
+            if (onChange) {
+              onChange({} as ChangeEvent<unknown>, newValue, "autoselect");
+            } else {
+              form.setValue(name, newValue[targetId], { shouldDirty: true });
+            }
           }
         }
       })
@@ -127,7 +129,9 @@ export const ComboEntityInput: FC<IComboEntityInputProps> = props => {
     const unregisterInput = registerInput?.(name, true);
 
     return () => {
-      unregisterInput && unregisterInput();
+      if (unregisterInput) {
+        unregisterInput();
+      }
     };
   }, [name, registerInput]);
 

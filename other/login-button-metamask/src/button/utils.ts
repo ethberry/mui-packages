@@ -1,6 +1,6 @@
 // TODO - transfer to common package utils
 export const isDesktopDevice = () => {
-  const userAgent = navigator.userAgent;
+  const userAgent = window.navigator.userAgent;
 
   // for always displaying in dev mode
   if (process.env.NODE_ENV === "development") {

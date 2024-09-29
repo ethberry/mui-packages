@@ -15,6 +15,7 @@ export const initializeActiveConnector = createAsyncThunk<TConnectors, void, any
       }
       return activeConnector;
     } catch (e) {
+      void e;
       return thunkAPI.rejectWithValue(null);
     }
   },

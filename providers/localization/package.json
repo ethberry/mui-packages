@@ -7,12 +7,13 @@
   "bugs": {
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
-  "description": "react i18n provider",
   "dependencies": {
     "@ethberry/constants": "0.13.3",
     "@ethberry/redux": "0.3.36",
+    "@ethberry/utils": "1.5.2",
     "@reduxjs/toolkit": "2.2.7"
   },
+  "description": "react i18n provider",
   "devDependencies": {
     "@ethberry/provider-license": "3.0.57",
     "@mui/icons-material": "6.1.1",

@@ -33,8 +33,8 @@ export const useMetamaskWallet = <T = any>(
 
   return async (...args: Array<any>): Promise<T> => {
     if (!license.isValid()) {
-      return Promise.reject(downForMaintenance()).catch((e: string) => {
-        enqueueSnackbar(e, { variant: "error" });
+      return Promise.reject(new Error(downForMaintenance())).catch((e: Error) => {
+        enqueueSnackbar(e.message, { variant: "error" });
         return null as unknown as T;
       });
     }

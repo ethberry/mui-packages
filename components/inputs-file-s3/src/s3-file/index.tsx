@@ -48,7 +48,11 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
     },
     onError: (error: Error) => {
       setIsLoading(false);
-      onError ? onError(error) : console.error(error);
+      if (onError) {
+        onError(error);
+      } else {
+        console.error(error);
+      }
     },
   });
 

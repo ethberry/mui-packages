@@ -32,9 +32,9 @@ export const useS3Uploader = (props: IUseS3UploaderProps) => {
           data,
         })
         .then((json: IS3Response) => json?.signedUrl)
-        .catch(error => {
-          console.error("[sign error]", error);
-          throw error;
+        .catch((e: Error) => {
+          console.error("[sign error]", e);
+          throw e;
         }),
     { success: false },
   );
@@ -69,10 +69,8 @@ export const useS3Uploader = (props: IUseS3UploaderProps) => {
     }
 
     try {
-      for (let i = 0; i < files.length; i++) {
-        const file = files[i];
+      for (const file of files) {
         const signedUrl = await getSignResult(file);
-
         if (!signedUrl) {
           throw new Error("signedUrl is missing");
         }
