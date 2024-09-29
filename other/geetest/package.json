@@ -5,7 +5,7 @@
     "url": "https://ethberry.io/"
   },
   "bugs": {
-    "url": "https://github.com/gemunion/common-packages/issues"
+    "url": "https://github.com/ethberry/common-packages/issues"
   },
   "dependencies": {
     "@ethberry/mui-form": "9.0.6",
@@ -35,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gemunion/common-packages"
+    "url": "https://github.com/ethberry/common-packages"
   },
   "scripts": {
     "build": "tsc",

@@ -7,8 +7,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-- eslint ([a322671](https://github.com/gemunion/mui-packages/commit/a322671c87069edd33a523f5ae27c0981d367bae))
-- eslint + ethberry ([b124310](https://github.com/gemunion/mui-packages/commit/b124310b8e15d573c09e4c4efee39af03c54621e))
+- eslint ([a322671](https://github.com/ethberry/mui-packages/commit/a322671c87069edd33a523f5ae27c0981d367bae))
+- eslint + ethberry ([b124310](https://github.com/ethberry/mui-packages/commit/b124310b8e15d573c09e4c4efee39af03c54621e))
 
 ## 8.0.3 (2024-09-21)
 
