@@ -72,7 +72,7 @@
     "test": "exit 0"
   },
   "sideEffects": false,
-  "title": "-=Gemun Ion Studio=-",
+  "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
   "version": "12.0.6"
 }

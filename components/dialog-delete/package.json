@@ -57,7 +57,7 @@
     "test:watch": "jest --config jest.config.json"
   },
   "sideEffects": false,
-  "title": "-=Gemun Ion Studio=-",
+  "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
   "version": "4.0.6"
 }

@@ -57,7 +57,7 @@
     "lerna:version": "lerna version --ignore-scripts",
     "lint": "eslint . --fix",
     "obfuscate": "sh scripts/obfuscate.sh",
-    "prettier": "prettier \"components/**/*.{ts,tsx}\" \"other/**/*.{ts,tsx}\" \"providers/**/*.{ts,tsx}\" --write",
+    "prettier": "prettier . --write",
     "storybook": "storybook dev -p 6006",
     "test": "sh scripts/test.sh"
   },
