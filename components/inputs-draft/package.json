@@ -8,7 +8,7 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/draft-js-utils": "1.2.50",
+    "@ethberry/draft-js-utils": "1.2.52",
     "@ethberry/mui-form": "9.0.5",
     "@ethberry/mui-inputs-core": "8.0.5",
     "@ethberry/mui-rte": "4.0.14",
@@ -18,7 +18,7 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@ethberry/provider-license": "3.0.56",
+    "@ethberry/provider-license": "3.0.57",
     "@mui/icons-material": "6.1.1",
     "@mui/material": "6.1.1",
     "@mui/styles": "6.1.1",

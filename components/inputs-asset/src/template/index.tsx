@@ -64,7 +64,7 @@ export const TemplateAssetInput: FC<ITemplateAssetProps> = props => {
 
   const { formatMessage } = useIntl();
   const form = useFormContext<any>();
-  const ancestorPrefix = prefix.split(".").pop() as string;
+  const ancestorPrefix = prefix.split(".").pop()!;
   const nestedPrefix = `${prefix}.components`;
   const formattedLabel = `${formatMessage({ id: `form.labels.${ancestorPrefix}` })}${required ? " *" : ""}`;
 

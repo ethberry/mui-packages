@@ -74,7 +74,7 @@ export const useSwitchAccount = () => {
           method: "POST",
           data: values,
         })
-        .catch(error => {
+        .catch((error: any) => {
           void handleDisconnect();
           throw error;
         }) as Promise<{ token: string }>;

@@ -11,9 +11,7 @@ import {
 } from "@ethberry/constants";
 import { saveToLS } from "@ethberry/utils";
 
-const actionsHandle: {
-  [key: string]: (action: any, api: any) => void;
-} = {
+const actionsHandle: Record<string, (action: any, api: any) => void> = {
   [SET_REFERRER_ACTION_TYPE]: action => {
     saveToLS(LOCAL_STORAGE_KEYS.REFERRER, action.payload);
   },

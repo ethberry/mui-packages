@@ -70,7 +70,7 @@ export const FormDialog: FC<PropsWithChildren<IFormDialogProps<any>>> = props =>
     e.preventDefault();
     e.stopPropagation();
 
-    if (innerRef && innerRef.current) {
+    if (innerRef?.current) {
       setIsLoading(true);
       innerRef.current.dispatchEvent(new Event("submit", { bubbles: false, cancelable: true }));
       setIsLoading(false);

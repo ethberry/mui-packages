@@ -11,7 +11,7 @@ export const Error: FC = () => {
   return (
     <StyledContainer>
       <Alert severity="error" sx={{ width: "fit-content" }}>
-        <FormattedMessage id={`errors.${error as string}`} />
+        <FormattedMessage id={`errors.${error!}`} />
       </Alert>
     </StyledContainer>
   );

@@ -8,7 +8,7 @@ export const parseBlockchainError = (
   error: SystemErrorPrefix,
   customProjectErrors?: Record<string, string>,
 ): IBlockchainError => {
-  const errors: { [key: string]: string } = { ...CustomErrors, ...customProjectErrors };
+  const errors: Record<string, string> = { ...CustomErrors, ...customProjectErrors };
 
   const isEmptyError = error === SystemErrorPrefix.EMPTY;
   const isSystemStringError = error.startsWith(SystemErrorPrefix.ERROR_STRING_PREFIX);

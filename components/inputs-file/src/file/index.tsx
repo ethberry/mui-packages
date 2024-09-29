@@ -48,7 +48,7 @@ export const FileInput: FC<IFileInputProps> = props => {
   const form = useFormContext<any>();
   const error = get(form.formState.errors, name);
 
-  const suffix = name.split(".").pop() as string;
+  const suffix = name.split(".").pop()!;
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
   const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 

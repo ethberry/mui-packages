@@ -32,7 +32,7 @@ export interface IMarkdownInputProps {
 export const MarkdownInput: FC<IMarkdownInputProps & TextFieldProps> = props => {
   const { name, InputLabelProps, customControls = [], ...rest } = props;
 
-  const suffix = name.split(".").pop() as string;
+  const suffix = name.split(".").pop()!;
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};

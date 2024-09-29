@@ -8,7 +8,7 @@ import { emptyLayoutState } from "./empty";
 
 export const initializeLayout = createAsyncThunk<ILayoutState, void, any>(
   `${LAYOUT_SLICE_NAME}/initializeLayout`,
-  async (_, thunkAPI) => {
+   (_, thunkAPI) => {
     try {
       const layout: ILayoutState = readFromLS(LOCAL_STORAGE_KEYS.LAYOUT, emptyLayoutState);
       if (!layout) {
@@ -16,6 +16,7 @@ export const initializeLayout = createAsyncThunk<ILayoutState, void, any>(
       }
       return layout;
     } catch (e) {
+      void e;
       return thunkAPI.rejectWithValue(null);
     }
   },

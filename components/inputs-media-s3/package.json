@@ -12,7 +12,7 @@
     "@ethberry/mui-inputs-core": "8.0.5",
     "@ethberry/mui-inputs-file-s3": "8.0.5",
     "@ethberry/mui-page-layout": "3.0.3",
-    "@ethberry/popup": "1.0.61",
+    "@ethberry/popup": "1.0.63",
     "clsx": "2.1.1",
     "react-beautiful-dnd": "13.1.1",
     "react-dropzone": "14.2.3"
@@ -20,7 +20,7 @@
   "description": "react widget media s3",
   "devDependencies": {
     "@ethberry/mui-form": "9.0.5",
-    "@ethberry/provider-api-jwt": "2.0.85",
+    "@ethberry/provider-api-jwt": "2.0.87",
     "@ethberry/provider-test-id": "1.0.86",
     "@mui/icons-material": "6.1.1",
     "@mui/material": "6.1.1",

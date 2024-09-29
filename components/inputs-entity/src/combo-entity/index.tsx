@@ -57,7 +57,7 @@ export const ComboEntityInput: FC<IComboEntityInputProps> = props => {
     disableClear,
     ...rest
   } = props;
-  const suffix = name.split(".").pop() as string;
+  const suffix = name.split(".").pop()!;
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
@@ -124,7 +124,7 @@ export const ComboEntityInput: FC<IComboEntityInputProps> = props => {
   }, [data]);
 
   useEffect(() => {
-    const unregisterInput = registerInput && registerInput(name, true);
+    const unregisterInput = registerInput?.(name, true);
 
     return () => {
       unregisterInput && unregisterInput();

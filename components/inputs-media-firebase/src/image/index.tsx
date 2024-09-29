@@ -32,7 +32,7 @@ export const ImageInput: FC<IImageInputProps> = props => {
 
   const { formatMessage } = useIntl();
   const deleteUrl = useDeleteUrl(bucket);
-  const suffix = name.split(".").pop() as string;
+  const suffix = name.split(".").pop()!;
   const localizedLabel = label === void 0 ? formatMessage({ id: `form.labels.${suffix}` }) : label;
   const localizedHelperText = error ? formatMessage({ id: error.message }, { label: localizedLabel }) : "";
 

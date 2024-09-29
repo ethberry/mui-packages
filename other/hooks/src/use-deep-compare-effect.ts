@@ -14,7 +14,7 @@ function isPrimitive(val: unknown) {
 }
 
 function checkDeps(deps: DependencyList) {
-  if (!deps || !deps.length) {
+  if (!deps?.length) {
     throw new Error("useDeepCompareEffect should not be used with no dependencies. Use React.useEffect instead.");
   }
   if (deps.every(isPrimitive)) {
@@ -37,7 +37,6 @@ export const useDeepCompareMemoize = <T>(value: T) => {
     signalRef.current += 1;
   }
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   return useMemo(() => ref.current, [signalRef.current]);
 };
 
@@ -49,7 +48,6 @@ export const useDeepCompareEffect = (callback: EffectCallback, dependencies: Dep
   if (nodeEnv !== "production") {
     checkDeps(dependencies);
   }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   return useEffect(callback, useDeepCompareMemoize(dependencies));
 };
 
@@ -57,6 +55,5 @@ export const useDeepCompareEffectNoCheck = (
   callback: EffectCallback,
   dependencies: DependencyList,
 ): UseEffectReturn => {
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   return useEffect(callback, useDeepCompareMemoize(dependencies));
 };

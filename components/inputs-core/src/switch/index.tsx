@@ -16,7 +16,7 @@ export const SwitchInput: FC<ISwitchInputProps & SwitchProps> = props => {
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
-  const suffix = name.split(".").pop() as string;
+  const suffix = name.split(".").pop()!;
 
   const form = useFormContext<any>();
 

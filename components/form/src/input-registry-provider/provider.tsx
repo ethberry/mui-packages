@@ -11,7 +11,7 @@ export interface IInputRegistryProviderProps {
 export const InputRegistryProvider: FC<PropsWithChildren<IInputRegistryProviderProps>> = props => {
   const { children, registeredInputs, setRegisteredInputs } = props;
 
-  const registerInput = (name: string, isAsync: boolean = true) => {
+  const registerInput = (name: string, isAsync = true) => {
     setRegisteredInputs(inputs => [...inputs, { name, isAsync }]);
   };
 

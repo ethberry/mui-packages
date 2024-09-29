@@ -30,7 +30,7 @@ export const DateRangeInput: FC<IDateTimeInputProps> = props => {
   const { testId } = useTestId();
   const getTestIdProps = (suffix: string) => (testId ? { "data-testid": `${testId}-${name}-${suffix}` } : {});
 
-  const suffix = name.split(".").pop() as string;
+  const suffix = name.split(".").pop()!;
 
   const { formatMessage } = useIntl();
   const localizedLabelStart = formatMessage({ id: `form.labels.${suffix}Start` });

@@ -18,7 +18,7 @@ export const RatingInput: FC<PropsWithChildren<IRatingInputProps>> = props => {
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
-  const suffix = name.split(".").pop() as string;
+  const suffix = name.split(".").pop()!;
 
   const form = useFormContext<any>();
 

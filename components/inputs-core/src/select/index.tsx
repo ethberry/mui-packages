@@ -36,7 +36,7 @@ export const SelectInput: FC<ISelectInputProps> = props => {
     ...rest
   } = props;
 
-  const suffix = name.split(".").pop() as string;
+  const suffix = name.split(".").pop()!;
 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};

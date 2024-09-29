@@ -27,7 +27,7 @@ export const AutocompleteInput: FC<IAutocompleteInputProps> = props => {
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
-  const suffix = name.split(".").pop() as string;
+  const suffix = name.split(".").pop()!;
 
   const form = useFormContext<any>();
   const error = get(form.formState.errors, name);

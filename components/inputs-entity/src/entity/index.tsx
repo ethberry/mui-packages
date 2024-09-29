@@ -53,7 +53,7 @@ export const EntityInput: FC<IEntityInputProps> = props => {
   const { testId } = useTestId();
   const { formatMessage } = useIntl();
 
-  const suffix = name.split(".").pop() as string;
+  const suffix = name.split(".").pop()!;
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
   const { fetchOptions, abortController } = useEntity({

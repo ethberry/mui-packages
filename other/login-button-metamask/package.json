@@ -8,8 +8,8 @@
     "url": "https://github.com/gemunion/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/constants": "0.13.1",
-    "@ethberry/firebase": "1.2.39",
+    "@ethberry/constants": "0.13.3",
+    "@ethberry/firebase": "1.2.41",
     "@ethberry/firebase-login": "3.0.7",
     "@ethberry/mui-icons": "2.0.3",
     "@ethberry/mui-page-layout": "3.0.3",
@@ -18,16 +18,16 @@
     "@ethberry/react-hooks": "2.0.43",
     "@ethberry/react-hooks-eth": "2.0.6",
     "@ethberry/redux": "0.3.35",
-    "@ethberry/types-collection": "1.5.17",
+    "@ethberry/types-collection": "1.5.19",
     "@mui/icons-material": "6.1.1",
     "firebaseui": "6.1.0",
     "uuid": "10.0.0"
   },
   "description": "react metamask login button component",
   "devDependencies": {
-    "@ethberry/provider-api": "7.0.89",
-    "@ethberry/provider-license": "3.0.56",
-    "@ethberry/provider-user": "6.0.95",
+    "@ethberry/provider-api": "7.0.91",
+    "@ethberry/provider-license": "3.0.57",
+    "@ethberry/provider-user": "6.0.97",
     "@mui/material": "6.1.1",
     "@mui/styles": "6.1.1",
     "@web3-react/core": "8.2.3",

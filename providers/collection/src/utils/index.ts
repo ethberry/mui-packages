@@ -29,6 +29,7 @@ export const decoder = (str: string, _decoder: defaultDecoder, charset: string):
   try {
     return decodeURIComponent(strWithoutPlus);
   } catch (e) {
+    void e;
     return strWithoutPlus;
   }
 };

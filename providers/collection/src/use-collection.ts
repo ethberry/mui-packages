@@ -167,7 +167,7 @@ export const useCollection = <
           const errors = e.getLocalizedValidationErrors();
 
           Object.keys(errors).forEach((key: string) => {
-            const label = formatMessage({ id: `form.labels.${key.split(".").pop() as string}` });
+            const label = formatMessage({ id: `form.labels.${key.split(".").pop()!}` });
             const message = formatMessage({ id: errors[key] }, { label });
             enqueueSnackbar(message, { variant: "error" });
           });

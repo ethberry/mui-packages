@@ -1,6 +1,6 @@
 import { isNumber } from "../is";
 
-type SplitValue = { sign: "+" | "-" | ""; coefficients: number[]; exponent: number };
+interface SplitValue { sign: "+" | "-" | ""; coefficients: number[]; exponent: number }
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 export function format(value: number, options: object | Function | number): string {
@@ -67,9 +67,8 @@ export function format(value: number, options: object | Function | number): stri
 }
 
 export function splitNumber(value: number | string): SplitValue {
-  const match = String(value)
-    .toLowerCase()
-    .match(/^(-?)(\d+\.?\d*)(e([+-]?\d+))?$/);
+  const match = /^(-?)(\d+\.?\d*)(e([+-]?\d+))?$/.exec(String(value)
+    .toLowerCase());
   if (!match) {
     throw new SyntaxError("Invalid number " + value);
   }
@@ -98,7 +97,7 @@ export function splitNumber(value: number | string): SplitValue {
     exponent++;
   }
 
-  return <SplitValue>{ sign, coefficients, exponent };
+  return { sign, coefficients, exponent } as SplitValue;
 }
 
 export function toFixed(value: any, precision?: number): string {
@@ -164,8 +163,8 @@ export function toPrecision(
     return String(value);
   }
 
-  const lowerExp = options && options.lowerExp !== undefined ? options.lowerExp : -3;
-  const upperExp = options && options.upperExp !== undefined ? options.upperExp : 5;
+  const lowerExp = options?.lowerExp !== undefined ? options.lowerExp : -3;
+  const upperExp = options?.upperExp !== undefined ? options.upperExp : 5;
 
   const split = splitNumber(value);
   // eslint-disable-next-line @typescript-eslint/no-use-before-define

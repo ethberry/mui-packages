@@ -90,9 +90,10 @@ export class ParticleAuth extends Connector {
         if (!this.connected) {
           await this.particle.auth.login(params);
         }
-        const account = (await this.particle.evm.getAddress()) as string;
+        const account = (await this.particle.evm.getAddress())!;
         this.actions.update({ chainId: this.particle.auth.getChainId(), accounts: [account] });
-      } catch (error) {
+      } catch (e) {
+        void e;
         cancelActivation();
       }
     } else {
