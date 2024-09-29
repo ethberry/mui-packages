@@ -10,7 +10,7 @@
   "dependencies": {
     "@ethberry/mui-form": "9.0.6",
     "@ethberry/provider-test-id": "1.0.87",
-    "@ethberry/yup-rules": "4.2.68",
+    "@ethberry/yup-rules": "4.2.70",
     "clsx": "2.1.1",
     "use-debounce": "10.0.3"
   },
