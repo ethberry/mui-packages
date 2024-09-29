@@ -13,7 +13,7 @@
   "devDependencies": {
     "@emotion/react": "11.13.3",
     "@emotion/styled": "11.13.0",
-    "@ethberry/eslint-config": "4.0.6",
+    "@ethberry/eslint-config": "5.0.3",
     "@storybook/addon-essentials": "8.3.4",
     "@storybook/addon-interactions": "8.3.4",
     "@storybook/addon-links": "8.3.4",
