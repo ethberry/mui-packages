@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.0.6 (2024-09-29)
+
+### Bug Fixes
+
+- **deps:** update dependency @ethberry/mui-rte to v4 ([efeb989](https://github.com/gemunion/mui-packages/commit/efeb989969698add5b853adc99ab6c484c0aa8a5))
+- eslint ([a322671](https://github.com/gemunion/mui-packages/commit/a322671c87069edd33a523f5ae27c0981d367bae))
+- eslint + ethberry ([b124310](https://github.com/gemunion/mui-packages/commit/b124310b8e15d573c09e4c4efee39af03c54621e))
+
 ## 6.0.5 (2024-09-21)
 
 ### Bug Fixes

@@ -9,8 +9,8 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@ethberry/provider-wallet": "4.0.6",
-    "@ethberry/redux": "0.3.35",
+    "@ethberry/provider-wallet": "4.0.7",
+    "@ethberry/redux": "0.3.36",
     "@mui/material": "6.1.1",
     "@mui/styles": "6.1.1",
     "@types/react": "18.3.10",
@@ -51,5 +51,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.6"
+  "version": "2.0.7"
 }

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.87 (2024-09-29)
+
+### Bug Fixes
+
+- eslint + ethberry ([b124310](https://github.com/ethberry/mui-packages/commit/b124310b8e15d573c09e4c4efee39af03c54621e))
+
 ## 1.0.86 (2024-09-21)
 
 **Note:** Version bump only for package @gemunion/provider-test-id

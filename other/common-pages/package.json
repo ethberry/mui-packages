@@ -9,12 +9,12 @@
   },
   "dependencies": {
     "@ethberry/constants": "0.13.3",
-    "@ethberry/mui-form": "9.0.5",
-    "@ethberry/mui-inputs-captcha": "5.0.3",
-    "@ethberry/mui-inputs-core": "8.0.5",
-    "@ethberry/mui-page-layout": "3.0.3",
+    "@ethberry/mui-form": "9.0.6",
+    "@ethberry/mui-inputs-captcha": "5.0.4",
+    "@ethberry/mui-inputs-core": "8.0.6",
+    "@ethberry/mui-page-layout": "3.0.4",
     "@ethberry/popup": "1.0.63",
-    "@ethberry/react-hooks": "2.0.43",
+    "@ethberry/react-hooks": "2.0.44",
     "@ethberry/yup-rules": "4.2.68",
     "yup": "1.4.0"
   },
@@ -74,5 +74,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "12.0.5"
+  "version": "12.0.6"
 }

@@ -10,10 +10,10 @@
   "dependencies": {
     "@ethberry/constants": "0.13.3",
     "@ethberry/firebase": "1.2.41",
-    "@ethberry/mui-page-layout": "3.0.3",
+    "@ethberry/mui-page-layout": "3.0.4",
     "@ethberry/provider-api": "7.0.91",
-    "@ethberry/react-hooks": "2.0.43",
-    "@ethberry/react-hooks-eth": "2.0.6",
+    "@ethberry/react-hooks": "2.0.44",
+    "@ethberry/react-hooks-eth": "2.0.7",
     "@ethberry/types-collection": "1.5.19",
     "@ethberry/types-jwt": "0.4.7",
     "@mui/icons-material": "6.1.1",
@@ -72,5 +72,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.0.7"
+  "version": "3.0.8"
 }

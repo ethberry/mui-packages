@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@ethberry/firebase": "1.2.41",
-    "@ethberry/mui-inputs-file": "7.0.3",
+    "@ethberry/mui-inputs-file": "7.0.4",
     "uuid": "10.0.0"
   },
   "description": "react widget",
@@ -51,5 +51,5 @@
   "sideEffects": false,
   "title": "-=Gemun Ion Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "7.0.3"
+  "version": "7.0.4"
 }
