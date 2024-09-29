@@ -10,7 +10,7 @@
   "description": "react widget",
   "devDependencies": {
     "@ethberry/provider-license": "3.0.57",
-    "@ethberry/provider-settings": "4.0.104",
+    "@ethberry/provider-settings": "4.0.106",
     "@ethberry/provider-theme": "8.0.6",
     "@ethberry/redux": "0.3.36",
     "@mui/material": "6.1.1",
