@@ -20,7 +20,7 @@
   },
   "description": "react widget media firebase",
   "devDependencies": {
-    "@ethberry/cross-env": "0.0.4",
+    "@ethberry/cross-env": "0.0.5",
     "@ethberry/mui-form": "9.0.5",
     "@ethberry/mui-inputs-file": "7.0.3",
     "@ethberry/provider-api": "7.0.89",
