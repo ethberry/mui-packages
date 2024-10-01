@@ -22,7 +22,7 @@
     "@storybook/react": "8.3.4",
     "@storybook/react-webpack5": "8.3.4",
     "@storybook/types": "8.3.4",
-    "husky": "4.3.8",
+    "husky": "9.1.6",
     "javascript-obfuscator": "4.1.1",
     "lint-staged": "15.2.10",
     "prettier": "3.3.3",
@@ -57,6 +57,7 @@
     "lerna:version": "lerna version --ignore-scripts",
     "lint": "eslint . --fix",
     "obfuscate": "sh scripts/obfuscate.sh",
+    "prepare": "husky",
     "prettier": "prettier . --write",
     "storybook": "storybook dev -p 6006",
     "test": "sh scripts/test.sh"
