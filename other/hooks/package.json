@@ -8,15 +8,15 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/constants": "0.13.4",
+    "@ethberry/constants": "0.13.5",
     "@ethberry/license-messages": "0.0.37",
     "@ethberry/types-collection": "1.5.20",
     "qs": "6.13.0"
   },
   "description": "react hooks",
   "devDependencies": {
-    "@ethberry/provider-api": "7.0.93",
-    "@ethberry/provider-license": "3.0.57",
+    "@ethberry/provider-api": "7.0.94",
+    "@ethberry/provider-license": "3.0.58",
     "@ethberry/redux": "0.3.36",
     "notistack": "3.0.1",
     "react": "18.3.1",

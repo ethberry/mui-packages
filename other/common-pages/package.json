@@ -8,20 +8,20 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/constants": "0.13.4",
+    "@ethberry/constants": "0.13.5",
     "@ethberry/mui-form": "9.0.6",
     "@ethberry/mui-inputs-captcha": "5.0.4",
     "@ethberry/mui-inputs-core": "8.0.6",
     "@ethberry/mui-page-layout": "3.0.4",
-    "@ethberry/popup": "1.0.65",
+    "@ethberry/popup": "1.0.66",
     "@ethberry/react-hooks": "2.0.44",
-    "@ethberry/yup-rules": "4.2.70",
+    "@ethberry/yup-rules": "4.2.71",
     "yup": "1.4.0"
   },
   "description": "react context provider",
   "devDependencies": {
-    "@ethberry/provider-api": "7.0.93",
-    "@ethberry/provider-user": "6.0.99",
+    "@ethberry/provider-api": "7.0.94",
+    "@ethberry/provider-user": "6.0.100",
     "@mui/icons-material": "6.1.2",
     "@mui/lab": "6.0.0-beta.10",
     "@mui/material": "6.1.2",
