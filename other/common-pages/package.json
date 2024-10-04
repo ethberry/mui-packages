@@ -27,7 +27,7 @@
     "@mui/material": "6.1.2",
     "@mui/styles": "6.1.2",
     "@types/node": "20.16.10",
-    "@types/react": "18.3.10",
+    "@types/react": "18.3.11",
     "notistack": "3.0.1",
     "react": "18.3.1",
     "react-hook-form": "7.53.0",
