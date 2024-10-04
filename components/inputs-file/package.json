@@ -11,15 +11,15 @@
     "@ethberry/mui-page-layout": "3.0.4",
     "@ethberry/provider-test-id": "1.0.87",
     "clsx": "2.1.1",
-    "react-dropzone": "14.2.3"
+    "react-dropzone": "14.2.9"
   },
   "description": "react widget",
   "devDependencies": {
     "@mui/icons-material": "6.1.2",
     "@mui/material": "6.1.2",
     "@mui/styles": "6.1.2",
-    "@storybook/react": "8.3.4",
-    "@types/react": "18.3.10",
+    "@storybook/react": "8.3.5",
+    "@types/react": "18.3.11",
     "notistack": "3.0.1",
     "react": "18.3.1",
     "react-hook-form": "7.53.0",
