@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.10](https://github.com/ethberry/mui-packages/compare/@ethberry/login-button-metamask@2.0.9...@ethberry/login-button-metamask@2.0.10) (2024-10-04)
+
+### Bug Fixes
+
+- ethberry ([aced60c](https://github.com/ethberry/mui-packages/commit/aced60ca1779311355c248e1c8f2cd4486d70dc0))
+- lint ([3d66cd6](https://github.com/ethberry/mui-packages/commit/3d66cd69f276b56597780aeba5e6d6a590687cb2))
+- lint ([44392cf](https://github.com/ethberry/mui-packages/commit/44392cf24e9e51b099ee4244907ac188e353f3e7))
+
 ## 2.0.9 (2024-09-29)
 
 ### Bug Fixes

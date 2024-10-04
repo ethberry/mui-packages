@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.96](https://github.com/ethberry/mui-packages/compare/@ethberry/provider-coingecko@2.0.95...@ethberry/provider-coingecko@2.0.96) (2024-10-04)
+
+### Bug Fixes
+
+- ethberry ([aced60c](https://github.com/ethberry/mui-packages/commit/aced60ca1779311355c248e1c8f2cd4486d70dc0))
+- lint ([3d66cd6](https://github.com/ethberry/mui-packages/commit/3d66cd69f276b56597780aeba5e6d6a590687cb2))
+
 ## 2.0.95 (2024-09-29)
 
 ### Bug Fixes

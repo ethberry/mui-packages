@@ -11,8 +11,8 @@
   "devDependencies": {
     "@ethberry/provider-license": "3.0.58",
     "@ethberry/provider-settings": "4.0.107",
-    "@ethberry/provider-theme": "8.0.6",
-    "@ethberry/redux": "0.3.36",
+    "@ethberry/provider-theme": "8.0.7",
+    "@ethberry/redux": "0.3.37",
     "@mui/material": "6.1.2",
     "@storybook/react": "8.3.5",
     "@testing-library/jest-dom": "6.5.0",
@@ -60,5 +60,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "5.0.6"
+  "version": "5.0.7"
 }

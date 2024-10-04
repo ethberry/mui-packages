@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@ethberry/constants": "0.13.5",
-    "@ethberry/redux": "0.3.36",
+    "@ethberry/redux": "0.3.37",
     "@ethberry/utils": "1.5.3",
     "@reduxjs/toolkit": "2.2.7"
   },
@@ -54,5 +54,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "5.0.6"
+  "version": "5.0.7"
 }

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.111](https://github.com/ethberry/common-packages/compare/@ethberry/geetest@2.1.110...@ethberry/geetest@2.1.111) (2024-10-04)
+
+### Bug Fixes
+
+- lint ([3d66cd6](https://github.com/ethberry/common-packages/commit/3d66cd69f276b56597780aeba5e6d6a590687cb2))
+
 ## 2.1.110 (2024-09-29)
 
 ### Bug Fixes
