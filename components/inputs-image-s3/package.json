@@ -12,13 +12,13 @@
     "@ethberry/mui-inputs-core": "8.0.6",
     "@ethberry/mui-inputs-file-s3": "8.0.6",
     "@ethberry/mui-page-layout": "3.0.4",
-    "@ethberry/popup": "1.0.65",
+    "@ethberry/popup": "1.0.66",
     "react-beautiful-dnd": "13.1.1"
   },
   "description": "react widget",
   "devDependencies": {
     "@ethberry/mui-form": "9.0.6",
-    "@ethberry/provider-api-jwt": "2.0.89",
+    "@ethberry/provider-api-jwt": "2.0.90",
     "@ethberry/provider-test-id": "1.0.87",
     "@mui/icons-material": "6.1.2",
     "@mui/material": "6.1.2",

@@ -8,7 +8,7 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/constants": "0.13.4",
+    "@ethberry/constants": "0.13.5",
     "@ethberry/firebase-login": "3.0.8",
     "@ethberry/mui-icons": "2.0.4",
     "@ethberry/mui-page-layout": "3.0.4",
@@ -21,9 +21,9 @@
   },
   "description": "react wallet-connect login button component",
   "devDependencies": {
-    "@ethberry/provider-api": "7.0.93",
-    "@ethberry/provider-license": "3.0.57",
-    "@ethberry/provider-user": "6.0.99",
+    "@ethberry/provider-api": "7.0.94",
+    "@ethberry/provider-license": "3.0.58",
+    "@ethberry/provider-user": "6.0.100",
     "@mui/material": "6.1.2",
     "@mui/styles": "6.1.2",
     "@web3-react/core": "8.2.3",

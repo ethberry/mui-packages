@@ -8,10 +8,10 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/constants": "0.13.4",
-    "@ethberry/firebase": "1.2.42",
+    "@ethberry/constants": "0.13.5",
+    "@ethberry/firebase": "1.2.43",
     "@ethberry/mui-page-layout": "3.0.4",
-    "@ethberry/provider-api": "7.0.93",
+    "@ethberry/provider-api": "7.0.94",
     "@ethberry/react-hooks": "2.0.44",
     "@ethberry/react-hooks-eth": "2.0.7",
     "@ethberry/types-collection": "1.5.20",
@@ -22,9 +22,9 @@
   },
   "description": "react component",
   "devDependencies": {
-    "@ethberry/provider-api": "7.0.93",
-    "@ethberry/provider-license": "3.0.57",
-    "@ethberry/provider-user": "6.0.99",
+    "@ethberry/provider-api": "7.0.94",
+    "@ethberry/provider-license": "3.0.58",
+    "@ethberry/provider-user": "6.0.100",
     "@mui/material": "6.1.2",
     "@mui/styles": "6.1.2",
     "firebase": "10.13.2",

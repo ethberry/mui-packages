@@ -8,14 +8,14 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/constants": "0.13.4",
+    "@ethberry/constants": "0.13.5",
     "@ethberry/redux": "0.3.36",
     "@ethberry/utils": "1.5.3",
     "@reduxjs/toolkit": "2.2.7"
   },
   "description": "react i18n provider",
   "devDependencies": {
-    "@ethberry/provider-license": "3.0.57",
+    "@ethberry/provider-license": "3.0.58",
     "@mui/icons-material": "6.1.2",
     "@mui/material": "6.1.2",
     "@types/react": "18.3.10",
