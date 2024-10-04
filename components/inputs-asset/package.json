@@ -19,8 +19,8 @@
   "description": "react 1inch",
   "devDependencies": {
     "@ethberry/provider-license": "3.0.57",
-    "@mui/icons-material": "6.1.1",
-    "@mui/material": "6.1.1",
+    "@mui/icons-material": "6.1.2",
+    "@mui/material": "6.1.2",
     "@types/react": "18.3.10",
     "@types/react-window": "1.8.8",
     "ethers": "5.7.2",
