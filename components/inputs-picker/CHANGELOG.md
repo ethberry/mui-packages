@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.1.0](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-picker@8.0.5...@ethberry/mui-inputs-picker@8.1.0) (2024-10-05)
+
+### Bug Fixes
+
+- **deps:** update [@mui](https://github.com/mui) packages to v7.19.0 ([379d03d](https://github.com/ethberry/mui-packages/commit/379d03dda4f25b6aa3e1509b9920f021ac4bebe6))
+
+### Features
+
+- manually update date-fns ([cdcc68c](https://github.com/ethberry/mui-packages/commit/cdcc68cc7591ff4c01c22b5dddadde9d6a740e79))
+
 ## [8.0.5](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-picker@8.0.4...@ethberry/mui-inputs-picker@8.0.5) (2024-10-04)
 
 ### Bug Fixes
