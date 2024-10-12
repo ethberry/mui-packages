@@ -1,24 +1,15 @@
 import { FC } from "react";
 import { SvgIconProps } from "@mui/material";
 
-import {
-  Arbitrum,
-  Besu,
-  Binance,
-  Ethereum,
-  Optimism,
-  Polygon,
-  Sepolia,
-  ImmutableZkEVM,
-  Telos,
-} from "@ethberry/mui-icons";
+import { Arbitrum, Besu, Binance, Ethereum, Optimism, Polygon, ImmutableZkEVM, Telos } from "@ethberry/mui-icons";
 
 export const getIconByChainId = (chainId: number): FC<SvgIconProps> | null => {
   switch (chainId) {
     case 1:
-    case 5:
+    case 11155111:
       return Ethereum;
     case 10:
+    case 11155420:
       return Optimism;
     case 56:
     case 97:
@@ -27,13 +18,10 @@ export const getIconByChainId = (chainId: number): FC<SvgIconProps> | null => {
     case 80002:
       return Polygon;
     case 42161:
+    case 421614:
       return Arbitrum;
-    case 11155111:
-      return Sepolia;
-    case 13378:
-    case 13377:
     case 10000:
-    case 10001:
+    case 11111:
       return Besu;
     case 13371:
     case 13473:
