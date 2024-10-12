@@ -1,19 +1,17 @@
 import { defaultAbiCoder } from "@ethersproject/abi";
 
-import { BlockchainErrorType, CustomErrors, IBlockchainError, SystemErrorPrefix } from "./interfaces";
+import { BlockchainErrorType, IBlockchainError, SystemErrorPrefix } from "./interfaces";
 import { panicErrorCodeToReason } from "./panic-code-handler";
 import { customErrorToReason } from "./custom-error-handler";
 
 export const parseBlockchainError = (
   error: SystemErrorPrefix,
-  customProjectErrors?: Record<string, string>,
+  customErrors: Record<string, string>,
 ): IBlockchainError => {
-  const errors: Record<string, string> = { ...CustomErrors, ...customProjectErrors };
-
   const isEmptyError = error === SystemErrorPrefix.EMPTY;
   const isSystemStringError = error.startsWith(SystemErrorPrefix.ERROR_STRING_PREFIX);
   const isSystemPanicError = error.startsWith(SystemErrorPrefix.PANIC_CODE_PREFIX);
-  const isCustomError = Object.keys(errors).some(key => error.startsWith(key));
+  const isCustomError = Object.keys(customErrors).some(key => error.startsWith(key));
 
   if (isEmptyError) {
     return { type: BlockchainErrorType.EMPTY, reason: "Empty error" };
@@ -28,7 +26,7 @@ export const parseBlockchainError = (
     const reason = panicErrorCodeToReason(code);
     return { type: BlockchainErrorType.SYSTEM_PANIC_CODE, reason };
   } else if (isCustomError) {
-    const reason = customErrorToReason(error, customProjectErrors);
+    const reason = customErrorToReason(error, customErrors);
     return { type: BlockchainErrorType.CUSTOM_ERROR, reason };
   }
 

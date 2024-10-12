@@ -19,11 +19,11 @@ import { withNetworksFetching } from "./withNetworksFetching";
 import { initializeWalletConnector } from "../connectors/wallet-connect";
 
 type TWalletProviderProps = PropsWithChildren<{
-  customProjectErrors?: Record<string, string>;
+  customErrors?: Record<string, string>;
 }>;
 
 const _WalletProvider: FC<TWalletProviderProps> = props => {
-  const { children, customProjectErrors } = props;
+  const { children, customErrors = {} } = props;
 
   const license = useLicense();
   const { profile } = useUser<any>();
@@ -85,7 +85,7 @@ const _WalletProvider: FC<TWalletProviderProps> = props => {
           closeConnectWalletDialog,
           connectCallback,
           walletConnector: [walletConnect, hooks, store],
-          customProjectErrors,
+          customErrors,
         }}
       >
         <>

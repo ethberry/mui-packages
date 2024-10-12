@@ -22,7 +22,7 @@ export const useMetamaskWallet = <T = any>(
   const web3ContextGlobal = useWeb3React();
   const { account, chainId, connector, isActive } = web3ContextGlobal;
   const web3ContextRef = useRef(web3ContextGlobal);
-  const { openConnectWalletDialog, closeConnectWalletDialog, customProjectErrors } = useWallet();
+  const { openConnectWalletDialog, closeConnectWalletDialog, customErrors } = useWallet();
 
   const { formatMessage } = useIntl();
   const { success = true, error = true } = options;
@@ -64,7 +64,7 @@ export const useMetamaskWallet = <T = any>(
           } else {
             if (e.error?.data?.data) {
               const errorData = e.error?.data?.data as SystemErrorPrefix;
-              const errorReason = parseBlockchainError(errorData, customProjectErrors);
+              const errorReason = parseBlockchainError(errorData, customErrors);
 
               enqueueSnackbar(
                 errorReason.type === BlockchainErrorType.CUSTOM_ERROR

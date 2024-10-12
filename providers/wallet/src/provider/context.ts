@@ -7,7 +7,7 @@ export interface IWalletContext {
   connectCallback: (fn: () => Promise<any>) => Promise<void>;
   closeConnectWalletDialog: () => void;
   walletConnector: TWalletConnectorTuple;
-  customProjectErrors?: Record<string, string>;
+  customErrors: Record<string, string>;
 }
 
 export const WalletContext = createContext<IWalletContext>(undefined!);

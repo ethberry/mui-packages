@@ -1,12 +1,10 @@
-import { CustomErrors } from "./interfaces";
-
-export const customErrorToReason = (error: string, customProjectErrors: Record<string, string> = {}): string => {
+export const customErrorToReason = (error: string, customErrors: Record<string, string> = {}): string => {
   const code = error.slice(0, 10);
-  const errors = { ...CustomErrors, ...customProjectErrors };
+  const errors = { ...customErrors };
 
   for (const key in errors) {
     if (key === code) {
-      return errors[key as keyof typeof CustomErrors];
+      return errors[key];
     }
   }
   return "Unknown custom error";
