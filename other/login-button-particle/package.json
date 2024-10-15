@@ -9,12 +9,12 @@
   },
   "dependencies": {
     "@ethberry/constants": "0.13.5",
-    "@ethberry/firebase-login": "3.0.9",
+    "@ethberry/firebase-login": "3.0.10",
     "@ethberry/mui-icons": "2.0.5",
     "@ethberry/mui-page-layout": "3.0.5",
-    "@ethberry/provider-wallet": "4.0.8",
+    "@ethberry/provider-wallet": "4.0.9",
     "@ethberry/react-hooks": "2.0.45",
-    "@ethberry/react-hooks-eth": "2.0.8",
+    "@ethberry/react-hooks-eth": "2.0.9",
     "@ethberry/types-collection": "1.5.20",
     "@mui/icons-material": "6.1.2",
     "uuid": "10.0.0"
@@ -76,5 +76,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.9"
+  "version": "2.0.10"
 }

@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@ethberry/mui-dialog-confirmation": "5.0.7",
-    "@ethberry/mui-inputs-core": "8.0.7",
+    "@ethberry/mui-inputs-core": "8.0.8",
     "@ethberry/mui-inputs-file-s3": "8.0.7",
     "@ethberry/mui-page-layout": "3.0.5",
     "@ethberry/popup": "1.0.66",
@@ -74,5 +74,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "9.0.7"
+  "version": "9.0.8"
 }

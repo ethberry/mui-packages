@@ -13,7 +13,7 @@
     "@ethberry/mui-page-layout": "3.0.5",
     "@ethberry/provider-api": "7.0.94",
     "@ethberry/react-hooks": "2.0.45",
-    "@ethberry/react-hooks-eth": "2.0.8",
+    "@ethberry/react-hooks-eth": "2.0.9",
     "@ethberry/types-collection": "1.5.20",
     "@ethberry/types-jwt": "0.4.8",
     "@mui/icons-material": "6.1.2",
@@ -72,5 +72,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.0.9"
+  "version": "3.0.10"
 }

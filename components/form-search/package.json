@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@ethberry/mui-form": "9.0.7",
-    "@ethberry/mui-inputs-core": "8.0.7"
+    "@ethberry/mui-inputs-core": "8.0.8"
   },
   "description": "react widget",
   "devDependencies": {
@@ -63,5 +63,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "8.0.7"
+  "version": "8.0.8"
 }

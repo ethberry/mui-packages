@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.10 (2024-10-15)
+
+**Note:** Version bump only for package @ethberry/firebase-login
+
 ## [3.0.9](https://github.com/ethberry/mui-packages/compare/@ethberry/firebase-login@3.0.8...@ethberry/firebase-login@3.0.9) (2024-10-04)
 
 ### Bug Fixes

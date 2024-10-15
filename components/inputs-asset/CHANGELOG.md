@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.8 (2024-10-15)
+
+### Bug Fixes
+
+- objects strusture ([f281c60](https://github.com/ethberry/mui-packages/commit/f281c60d5ddfa2da467f936b14178abcd02df396))
+
 ## [3.0.7](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-asset@3.0.6...@ethberry/mui-inputs-asset@3.0.7) (2024-10-04)
 
 ### Bug Fixes

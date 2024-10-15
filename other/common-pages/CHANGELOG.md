@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 12.0.8 (2024-10-15)
+
+**Note:** Version bump only for package @ethberry/common-pages
+
 ## [12.0.7](https://github.com/ethberry/mui-packages/compare/@ethberry/common-pages@12.0.6...@ethberry/common-pages@12.0.7) (2024-10-04)
 
 ### Bug Fixes

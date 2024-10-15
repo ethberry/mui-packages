@@ -10,7 +10,7 @@
   "dependencies": {
     "@ethberry/draft-js-utils": "1.2.54",
     "@ethberry/mui-form": "9.0.7",
-    "@ethberry/mui-inputs-core": "8.0.7",
+    "@ethberry/mui-inputs-core": "8.0.8",
     "@ethberry/mui-rte": "4.0.14",
     "@ethberry/provider-test-id": "1.0.88",
     "draft-js": "0.11.7",
@@ -66,5 +66,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "6.0.7"
+  "version": "6.0.8"
 }

@@ -21,7 +21,7 @@
   "description": "react hooks",
   "devDependencies": {
     "@ethberry/provider-license": "3.0.58",
-    "@ethberry/provider-wallet": "4.0.8",
+    "@ethberry/provider-wallet": "4.0.9",
     "@web3-react/core": "8.2.3",
     "notistack": "3.0.1",
     "react": "18.3.1",
@@ -58,5 +58,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.8"
+  "version": "2.0.9"
 }

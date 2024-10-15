@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.9 (2024-10-15)
+
+### Bug Fixes
+
+- custom errors ([6912031](https://github.com/ethberry/mui-packages/commit/69120311c4b9eab7260edba66894e69a35cd5ea7))
+
 ## [2.0.8](https://github.com/ethberry/mui-packages/compare/@ethberry/react-hooks-eth@2.0.7...@ethberry/react-hooks-eth@2.0.8) (2024-10-04)
 
 ### Bug Fixes

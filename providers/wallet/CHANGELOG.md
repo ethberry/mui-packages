@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.0.9 (2024-10-15)
+
+### Bug Fixes
+
+- chain images ([2dba51c](https://github.com/ethberry/mui-packages/commit/2dba51c0776726a0e352c1ef24bdab459d94ead7))
+- custom errors ([6912031](https://github.com/ethberry/mui-packages/commit/69120311c4b9eab7260edba66894e69a35cd5ea7))
+
 ## [4.0.8](https://github.com/ethberry/mui-packages/compare/@ethberry/provider-wallet@4.0.7...@ethberry/provider-wallet@4.0.8) (2024-10-04)
 
 ### Bug Fixes

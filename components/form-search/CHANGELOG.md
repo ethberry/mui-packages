@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 8.0.8 (2024-10-15)
+
+**Note:** Version bump only for package @ethberry/mui-form-search
+
 ## [8.0.7](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-form-search@8.0.6...@ethberry/mui-form-search@8.0.7) (2024-10-04)
 
 ### Bug Fixes
