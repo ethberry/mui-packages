@@ -4,14 +4,6 @@ export interface ITemplateAssetComponent {
   id: number;
   tokenType: TokenType;
   contractId: number;
-  contract: {
-    id: number;
-    title: string;
-    address: string;
-    decimals: number;
-    contractType: TokenType;
-    contractFeatures: Array<any>;
-  };
   templateId: number;
   template: {
     id: number;
@@ -23,6 +15,14 @@ export interface ITemplateAssetComponent {
       id: number;
       tokenId: string;
     }>;
+    contract: {
+      id: number;
+      title: string;
+      address: string;
+      decimals: number;
+      contractType: TokenType;
+      contractFeatures: Array<any>;
+    };
   };
   amount: string;
 }

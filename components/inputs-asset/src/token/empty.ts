@@ -10,11 +10,13 @@ export function getEmptyToken(tokenType = TokenType.ERC20, contractId = 0): any 
       {
         tokenType,
         contractId,
-        contract: {
-          decimals: tokenType === TokenType.NATIVE || tokenType === TokenType.ERC20 ? 18 : 0,
-          address: constants.AddressZero,
-        },
         templateId: 0,
+        template: {
+          contract: {
+            decimals: tokenType === TokenType.NATIVE || tokenType === TokenType.ERC20 ? 18 : 0,
+            address: constants.AddressZero,
+          },
+        },
         token: {
           tokenId: "0",
         },

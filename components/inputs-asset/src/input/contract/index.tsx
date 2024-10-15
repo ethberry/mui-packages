@@ -23,11 +23,11 @@ export const ContractInput: FC<IContractInputProps> = props => {
   const handleChange = (_event: ChangeEvent<unknown>, option: any): void => {
     form.setValue(`${prefix}.${name}`, option?.id ?? 0, { shouldDirty: true });
     form.setValue(`${prefix}.amount`, BigNumber.from(10).pow(option?.decimals).toString());
-    form.setValue(`${prefix}.contract.address`, option?.address ?? "0x");
-    form.setValue(`${prefix}.contract.decimals`, option?.decimals ?? 0);
-    form.setValue(`${prefix}.contract.symbol`, option?.symbol ?? "");
-    form.setValue(`${prefix}.contract.contractType`, option?.contractType ?? "");
-    form.setValue(`${prefix}.contract.contractFeatures`, option?.contractFeatures ?? []);
+    form.setValue(`${prefix}.template.contract.address`, option?.address ?? "0x");
+    form.setValue(`${prefix}.template.contract.decimals`, option?.decimals ?? 0);
+    form.setValue(`${prefix}.template.contract.symbol`, option?.symbol ?? "");
+    form.setValue(`${prefix}.template.contract.contractType`, option?.contractType ?? "");
+    form.setValue(`${prefix}.template.contract.contractFeatures`, option?.contractFeatures ?? []);
   };
 
   return (

@@ -12,14 +12,6 @@ export function getEmptyTemplate(tokenType = TokenType.NATIVE): any {
         // id: 0, breaks validation
         tokenType,
         contractId: 0,
-        contract: {
-          id: 0,
-          title: "",
-          contractType: tokenType,
-          contractFeatures: [] as Array<any>,
-          decimals: tokenType === TokenType.NATIVE || tokenType === TokenType.ERC20 ? 18 : 0,
-          address: constants.AddressZero,
-        },
         templateId: 0,
         template: {
           id: 0,
@@ -39,6 +31,14 @@ export function getEmptyTemplate(tokenType = TokenType.NATIVE): any {
             entityMap: {},
           }),
           imageUrl,
+          contract: {
+            id: 0,
+            title: "",
+            contractType: tokenType,
+            contractFeatures: [] as Array<any>,
+            decimals: tokenType === TokenType.NATIVE || tokenType === TokenType.ERC20 ? 18 : 0,
+            address: constants.AddressZero,
+          },
         },
         amount:
           tokenType === TokenType.NATIVE || tokenType === TokenType.ERC20 ? constants.WeiPerEther.toString() : "1",
