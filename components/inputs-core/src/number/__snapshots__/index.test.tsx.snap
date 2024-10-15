@@ -3,7 +3,7 @@
 exports[`<NumberInput /> renders decimal value 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-mxn6hc-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-r14av6-MuiFormControl-root-MuiTextField-root"
   >
     <label
       class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-nmluci-MuiFormLabel-root-MuiInputLabel-root"
@@ -18,7 +18,7 @@ exports[`<NumberInput /> renders decimal value 1`] = `
     >
       <input
         aria-invalid="false"
-        class="MuiInputBase-input MuiInput-input css-1o3an4k-MuiInputBase-input-MuiInput-input"
+        class="MuiInputBase-input MuiInput-input css-1smhhcz-MuiInputBase-input-MuiInput-input"
         data-testid="number-number"
         id=":r2:"
         name="number"
@@ -34,7 +34,7 @@ exports[`<NumberInput /> renders decimal value 1`] = `
 exports[`<NumberInput /> renders negative value 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-mxn6hc-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-r14av6-MuiFormControl-root-MuiTextField-root"
   >
     <label
       class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-nmluci-MuiFormLabel-root-MuiInputLabel-root"
@@ -49,7 +49,7 @@ exports[`<NumberInput /> renders negative value 1`] = `
     >
       <input
         aria-invalid="false"
-        class="MuiInputBase-input MuiInput-input css-1o3an4k-MuiInputBase-input-MuiInput-input"
+        class="MuiInputBase-input MuiInput-input css-1smhhcz-MuiInputBase-input-MuiInput-input"
         data-testid="number-number"
         id=":r1:"
         name="number"
@@ -65,7 +65,7 @@ exports[`<NumberInput /> renders negative value 1`] = `
 exports[`<NumberInput /> renders positive value 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-mxn6hc-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-r14av6-MuiFormControl-root-MuiTextField-root"
   >
     <label
       class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-nmluci-MuiFormLabel-root-MuiInputLabel-root"
@@ -80,7 +80,7 @@ exports[`<NumberInput /> renders positive value 1`] = `
     >
       <input
         aria-invalid="false"
-        class="MuiInputBase-input MuiInput-input css-1o3an4k-MuiInputBase-input-MuiInput-input"
+        class="MuiInputBase-input MuiInput-input css-1smhhcz-MuiInputBase-input-MuiInput-input"
         data-testid="number-number"
         id=":r0:"
         name="number"
