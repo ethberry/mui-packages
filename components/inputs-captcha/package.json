@@ -13,8 +13,8 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "6.1.2",
-    "@mui/styles": "6.1.2",
+    "@mui/material": "6.1.6",
+    "@mui/styles": "6.1.6",
     "@types/react": "18.3.12",
     "@types/react-google-recaptcha": "2.1.9",
     "react": "18.3.1",

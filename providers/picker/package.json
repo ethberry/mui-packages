@@ -8,12 +8,12 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@mui/x-date-pickers": "7.19.0",
-    "@mui/x-date-pickers-pro": "7.19.0"
+    "@mui/x-date-pickers": "7.22.1",
+    "@mui/x-date-pickers-pro": "7.22.1"
   },
   "description": "Material UI picker provider",
   "devDependencies": {
-    "@mui/material": "6.1.2",
+    "@mui/material": "6.1.6",
     "react": "18.3.1"
   },
   "engines": {

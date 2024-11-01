@@ -16,8 +16,8 @@
   "description": "react i18n provider",
   "devDependencies": {
     "@ethberry/provider-license": "3.0.58",
-    "@mui/icons-material": "6.1.2",
-    "@mui/material": "6.1.2",
+    "@mui/icons-material": "6.1.6",
+    "@mui/material": "6.1.6",
     "@types/react": "18.3.12",
     "react": "18.3.1",
     "react-intl": "6.8.4"
