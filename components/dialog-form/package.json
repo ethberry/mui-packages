@@ -18,7 +18,7 @@
   "devDependencies": {
     "@ethberry/mui-inputs-core": "8.0.8",
     "@ethberry/provider-license": "3.0.58",
-    "@mui/material": "6.1.2",
+    "@mui/material": "6.1.6",
     "@storybook/react": "8.4.1",
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.0.1",
