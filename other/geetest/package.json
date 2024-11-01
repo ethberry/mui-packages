@@ -9,14 +9,14 @@
   },
   "dependencies": {
     "@ethberry/mui-form": "9.0.7",
-    "react-hook-form": "7.53.0"
+    "react-hook-form": "7.53.1"
   },
   "description": "react widget",
   "devDependencies": {
     "@ethberry/provider-api": "7.0.94",
     "@ethberry/provider-api-jwt": "2.0.90",
-    "@storybook/react": "8.3.5",
-    "@types/react": "18.3.11",
+    "@storybook/react": "8.4.1",
+    "@types/react": "18.3.12",
     "react": "18.3.1"
   },
   "engines": {
