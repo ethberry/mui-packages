@@ -21,9 +21,9 @@
   },
   "description": "react particle login button component",
   "devDependencies": {
-    "@ethberry/provider-api": "7.0.94",
-    "@ethberry/provider-license": "3.0.58",
-    "@ethberry/provider-user": "6.0.100",
+    "@ethberry/provider-api": "7.0.95",
+    "@ethberry/provider-license": "3.0.59",
+    "@ethberry/provider-user": "6.0.101",
     "@mui/icons-material": "6.1.6",
     "@mui/material": "6.1.6",
     "@mui/styles": "6.1.6",

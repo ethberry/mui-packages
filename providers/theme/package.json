@@ -11,7 +11,7 @@
     "@emotion/cache": "11.13.1",
     "@emotion/react": "11.13.3",
     "@ethberry/constants": "0.13.5",
-    "@ethberry/utils": "1.5.3",
+    "@ethberry/utils": "1.6.0",
     "@mui/styles": "6.1.6",
     "@reduxjs/toolkit": "2.3.0",
     "jss": "10.10.0",

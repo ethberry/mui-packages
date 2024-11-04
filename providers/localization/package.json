@@ -10,12 +10,12 @@
   "dependencies": {
     "@ethberry/constants": "0.13.5",
     "@ethberry/redux": "0.3.37",
-    "@ethberry/utils": "1.5.3",
+    "@ethberry/utils": "1.6.0",
     "@reduxjs/toolkit": "2.3.0"
   },
   "description": "react i18n provider",
   "devDependencies": {
-    "@ethberry/provider-license": "3.0.58",
+    "@ethberry/provider-license": "3.0.59",
     "@mui/icons-material": "6.1.6",
     "@mui/material": "6.1.6",
     "@types/react": "18.3.12",
