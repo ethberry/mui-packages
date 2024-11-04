@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.89 (2024-11-04)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([b1f2fbc](https://github.com/ethberry/mui-packages/commit/b1f2fbcfa9af3f33fc4c80c889139d00d599da7d))
+
 ## [1.0.88](https://github.com/ethberry/mui-packages/compare/@ethberry/provider-test-id@1.0.87...@ethberry/provider-test-id@1.0.88) (2024-10-04)
 
 ### Bug Fixes

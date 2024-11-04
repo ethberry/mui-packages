@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.10](https://github.com/ethberry/mui-packages/compare/@ethberry/react-hooks-eth@2.0.9...@ethberry/react-hooks-eth@2.0.10) (2024-11-04)
+
+### Bug Fixes
+
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([039a29a](https://github.com/ethberry/mui-packages/commit/039a29ae019517d60353a5cddc4b8df90cb7c3db))
+- **deps:** update all non-major dependencies ([b1f2fbc](https://github.com/ethberry/mui-packages/commit/b1f2fbcfa9af3f33fc4c80c889139d00d599da7d))
+
 ## 2.0.9 (2024-10-15)
 
 ### Bug Fixes

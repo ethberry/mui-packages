@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.12](https://github.com/ethberry/mui-packages/compare/@ethberry/login-button-metamask@2.0.11...@ethberry/login-button-metamask@2.0.12) (2024-11-04)
+
+### Bug Fixes
+
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([039a29a](https://github.com/ethberry/mui-packages/commit/039a29ae019517d60353a5cddc4b8df90cb7c3db))
+- **deps:** update all non-major dependencies ([b1f2fbc](https://github.com/ethberry/mui-packages/commit/b1f2fbcfa9af3f33fc4c80c889139d00d599da7d))
+- **deps:** update dependency firebase to v11 ([a202b85](https://github.com/ethberry/mui-packages/commit/a202b858dde8c42caaa6cf200bd24783bcf86cfe))
+
 ## 2.0.11 (2024-10-15)
 
 **Note:** Version bump only for package @ethberry/login-button-metamask

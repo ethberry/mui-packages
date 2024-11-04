@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 8.1.1 (2024-11-04)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([b1f2fbc](https://github.com/ethberry/mui-packages/commit/b1f2fbcfa9af3f33fc4c80c889139d00d599da7d))
+
 # [8.1.0](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-picker@8.0.5...@ethberry/mui-inputs-picker@8.1.0) (2024-10-05)
 
 ### Bug Fixes

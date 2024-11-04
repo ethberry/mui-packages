@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.8 (2024-11-04)
+
+### Bug Fixes
+
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([039a29a](https://github.com/ethberry/mui-packages/commit/039a29ae019517d60353a5cddc4b8df90cb7c3db))
+- **deps:** update all non-major dependencies ([b1f2fbc](https://github.com/ethberry/mui-packages/commit/b1f2fbcfa9af3f33fc4c80c889139d00d599da7d))
+
 ## [5.0.7](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-dialog-confirmation@5.0.6...@ethberry/mui-dialog-confirmation@5.0.7) (2024-10-04)
 
 ### Bug Fixes

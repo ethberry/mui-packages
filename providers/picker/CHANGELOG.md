@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.0.7 (2024-11-04)
+
+**Note:** Version bump only for package @ethberry/provider-picker
+
 ## [7.0.6](https://github.com/ethberry/mui-packages/compare/@ethberry/provider-picker@7.0.5...@ethberry/provider-picker@7.0.6) (2024-10-05)
 
 ### Bug Fixes

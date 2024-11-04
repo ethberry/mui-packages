@@ -9,12 +9,12 @@
   },
   "dependencies": {
     "@ethberry/constants": "0.13.5",
-    "@ethberry/mui-form": "9.0.7",
-    "@ethberry/mui-inputs-captcha": "5.0.5",
-    "@ethberry/mui-inputs-core": "8.0.8",
-    "@ethberry/mui-page-layout": "3.0.5",
+    "@ethberry/mui-form": "9.0.8",
+    "@ethberry/mui-inputs-captcha": "5.0.6",
+    "@ethberry/mui-inputs-core": "8.0.9",
+    "@ethberry/mui-page-layout": "3.0.6",
     "@ethberry/popup": "1.0.67",
-    "@ethberry/react-hooks": "2.0.45",
+    "@ethberry/react-hooks": "2.0.46",
     "@ethberry/yup-rules": "4.2.72",
     "yup": "1.4.0"
   },
@@ -74,5 +74,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "12.0.8"
+  "version": "12.0.9"
 }

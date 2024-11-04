@@ -9,10 +9,10 @@
   },
   "dependencies": {
     "@ethberry/firebase": "1.2.44",
-    "@ethberry/mui-dialog-confirmation": "5.0.7",
-    "@ethberry/mui-inputs-core": "8.0.8",
-    "@ethberry/mui-inputs-file-firebase": "7.0.5",
-    "@ethberry/mui-page-layout": "3.0.5",
+    "@ethberry/mui-dialog-confirmation": "5.0.8",
+    "@ethberry/mui-inputs-core": "8.0.9",
+    "@ethberry/mui-inputs-file-firebase": "7.0.6",
+    "@ethberry/mui-page-layout": "3.0.6",
     "@ethberry/popup": "1.0.67",
     "clsx": "2.1.1",
     "react-beautiful-dnd": "13.1.1",
@@ -21,10 +21,10 @@
   "description": "react widget media firebase",
   "devDependencies": {
     "@ethberry/cross-env": "0.0.5",
-    "@ethberry/mui-form": "9.0.7",
-    "@ethberry/mui-inputs-file": "7.0.5",
+    "@ethberry/mui-form": "9.0.8",
+    "@ethberry/mui-inputs-file": "7.0.6",
     "@ethberry/provider-api": "7.0.95",
-    "@ethberry/provider-test-id": "1.0.88",
+    "@ethberry/provider-test-id": "1.0.89",
     "@mui/icons-material": "6.1.6",
     "@mui/material": "6.1.6",
     "@mui/styles": "6.1.6",
@@ -80,5 +80,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.8"
+  "version": "2.0.9"
 }

@@ -17,7 +17,7 @@
   "devDependencies": {
     "@ethberry/provider-api": "7.0.95",
     "@ethberry/provider-license": "3.0.59",
-    "@ethberry/redux": "0.3.37",
+    "@ethberry/redux": "0.3.38",
     "notistack": "3.0.1",
     "react": "18.3.1",
     "react-hook-form": "7.53.1",
@@ -57,5 +57,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.45"
+  "version": "2.0.46"
 }
