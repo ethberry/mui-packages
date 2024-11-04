@@ -13,7 +13,7 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@ethberry/provider-license": "3.0.58",
+    "@ethberry/provider-license": "3.0.59",
     "@mui/material": "6.1.6",
     "@storybook/react": "8.4.1",
     "@testing-library/jest-dom": "6.6.3",

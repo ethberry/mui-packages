@@ -9,8 +9,8 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@ethberry/provider-license": "3.0.58",
-    "@ethberry/provider-settings": "4.0.107",
+    "@ethberry/provider-license": "3.0.59",
+    "@ethberry/provider-settings": "4.0.108",
     "@ethberry/provider-theme": "8.0.7",
     "@ethberry/redux": "0.3.37",
     "@mui/material": "6.1.6",
