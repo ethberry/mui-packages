@@ -2,8 +2,6 @@ import { FC, PropsWithChildren, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import { enqueueSnackbar } from "notistack";
 
-import { useLicense } from "@ethberry/provider-license";
-
 import { ICoinGeckoCoinTicker, ICoinGeckoTickers } from "./interfaces";
 
 import { CoinGeckoContext } from "./context";
@@ -15,7 +13,6 @@ export interface ICoinGeckoProviderProps {
 
 export const CoinGeckoProvider: FC<PropsWithChildren<ICoinGeckoProviderProps>> = props => {
   const { children, defaultCurrency = "ethereum", defaultMarkets = ["binance"] } = props;
-  const license = useLicense();
   const { formatMessage } = useIntl();
 
   const [baseCoinId, setBaseCoinId] = useState<string>(defaultCurrency);
@@ -57,10 +54,6 @@ export const CoinGeckoProvider: FC<PropsWithChildren<ICoinGeckoProviderProps>> =
       clearInterval(interval);
     };
   }, []);
-
-  if (!license.isValid()) {
-    return null;
-  }
 
   return (
     <CoinGeckoContext.Provider

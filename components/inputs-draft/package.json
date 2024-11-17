@@ -8,28 +8,27 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/draft-js-utils": "1.2.55",
-    "@ethberry/mui-form": "9.0.8",
-    "@ethberry/mui-inputs-core": "8.0.9",
-    "@ethberry/mui-rte": "4.0.15",
-    "@ethberry/provider-test-id": "1.0.89",
+    "@ethberry/draft-js-utils": "1.2.54",
+    "@ethberry/mui-form": "9.0.7",
+    "@ethberry/mui-inputs-core": "8.0.7",
+    "@ethberry/mui-rte": "4.0.14",
+    "@ethberry/provider-test-id": "1.0.88",
     "draft-js": "0.11.7",
     "markdown-draft-js": "2.4.0"
   },
   "description": "react widget",
   "devDependencies": {
-    "@ethberry/provider-license": "3.0.59",
-    "@mui/icons-material": "6.1.6",
-    "@mui/material": "6.1.6",
-    "@mui/styles": "6.1.6",
-    "@storybook/react": "8.4.1",
+    "@mui/icons-material": "6.1.2",
+    "@mui/material": "6.1.2",
+    "@mui/styles": "6.1.2",
+    "@storybook/react": "8.3.5",
     "@types/draft-js": "0.11.18",
     "@types/markdown-draft-js": "2.2.7",
-    "@types/react": "18.3.12",
+    "@types/react": "18.3.11",
     "react": "18.3.1",
-    "react-hook-form": "7.53.1",
-    "react-intl": "6.8.6",
-    "react-router-dom": "6.27.0"
+    "react-hook-form": "7.53.0",
+    "react-intl": "6.7.0",
+    "react-router-dom": "6.26.2"
   },
   "engines": {
     "node": ">=22"
@@ -39,7 +38,6 @@
   "main": "./dist/index.js",
   "name": "@ethberry/mui-inputs-draft",
   "peerDependencies": {
-    "@ethberry/provider-license": "^3.0.0",
     "@mui/icons-material": "^6.0.0",
     "@mui/material": "^6.0.0",
     "@mui/styles": "^6.0.0",
@@ -66,5 +64,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "6.0.9"
+  "version": "6.0.7"
 }

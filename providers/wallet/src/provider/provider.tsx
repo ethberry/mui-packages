@@ -2,7 +2,6 @@ import { FC, PropsWithChildren, useCallback, useEffect, useMemo, useState } from
 import { Web3ReactProvider, Web3ReactHooks, Web3ContextType } from "@web3-react/core";
 
 import type { INetwork } from "@ethberry/types-blockchain";
-import { useLicense } from "@ethberry/provider-license";
 import { useUser } from "@ethberry/provider-user";
 import { useAppDispatch, useAppSelector } from "@ethberry/redux";
 
@@ -25,7 +24,6 @@ type TWalletProviderProps = PropsWithChildren<{
 const _WalletProvider: FC<TWalletProviderProps> = props => {
   const { children, customErrors = {} } = props;
 
-  const license = useLicense();
   const { profile } = useUser<any>();
   const network = useAppSelector<INetwork>(walletSelectors.networkSelector);
   const networks = useAppSelector<Record<number, INetwork>>(walletSelectors.networksSelector);
@@ -70,10 +68,6 @@ const _WalletProvider: FC<TWalletProviderProps> = props => {
       dispatch(setNetwork(networks[profile.chainId]));
     }
   }, [profile?.chainId, networks]);
-
-  if (!license.isValid()) {
-    return null;
-  }
 
   const providerNetwork = network ? getNetworkForWeb3Provider(network.chainId, networks) : undefined;
 

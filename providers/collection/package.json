@@ -9,23 +9,21 @@
   },
   "dependencies": {
     "@ethberry/constants": "0.13.5",
-    "@ethberry/license-messages": "0.0.37",
-    "@ethberry/react-hooks": "2.0.46",
+    "@ethberry/react-hooks": "2.0.45",
     "@ethberry/types-collection": "1.5.20",
-    "@reduxjs/toolkit": "2.3.0",
+    "@reduxjs/toolkit": "2.2.7",
     "qs": "6.13.0"
   },
   "description": "react hooks",
   "devDependencies": {
-    "@ethberry/provider-api": "7.0.95",
-    "@ethberry/provider-license": "3.0.59",
-    "@ethberry/redux": "0.3.38",
+    "@ethberry/provider-api": "7.0.94",
+    "@ethberry/redux": "0.3.37",
     "notistack": "3.0.1",
     "react": "18.3.1",
-    "react-hook-form": "7.53.1",
-    "react-intl": "6.8.6",
-    "react-router": "6.27.0",
-    "react-router-dom": "6.27.0"
+    "react-hook-form": "7.53.0",
+    "react-intl": "6.7.0",
+    "react-router": "6.26.2",
+    "react-router-dom": "6.26.2"
   },
   "engines": {
     "node": ">=22"
@@ -36,7 +34,6 @@
   "name": "@ethberry/provider-collection",
   "peerDependencies": {
     "@ethberry/provider-api": "^7.0.0",
-    "@ethberry/provider-license": "^3.0.0",
     "@ethberry/redux": "^0.1.0",
     "notistack": "^3.0.0",
     "react": "^18.0.0",
@@ -63,5 +60,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "1.0.16"
+  "version": "1.0.15"
 }

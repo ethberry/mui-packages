@@ -3,9 +3,7 @@ import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { UseFormReturn } from "react-hook-form";
 
-import { downForMaintenance } from "@ethberry/license-messages";
 import { ApiError, IApiContext, useApi } from "@ethberry/provider-api";
-import { useLicense } from "@ethberry/provider-license";
 
 export const useApiCall = <T = any, V = any>(
   fn: (api: IApiContext, ...args: Array<V>) => Promise<T>,
@@ -13,19 +11,10 @@ export const useApiCall = <T = any, V = any>(
 ) => {
   const api = useApi();
 
-  const license = useLicense();
-
   const { formatMessage } = useIntl();
   const [isLoading, setIsLoading] = useState(false);
 
   const wrapper = (form?: UseFormReturn, ...args: Array<V>) => {
-    if (!license.isValid()) {
-      return Promise.reject(new Error(downForMaintenance())).catch((e: Error) => {
-        enqueueSnackbar(e.message, { variant: "error" });
-        return null as unknown as T;
-      });
-    }
-
     setIsLoading(true);
     return fn(api, ...args)
       .then((res: T) => {

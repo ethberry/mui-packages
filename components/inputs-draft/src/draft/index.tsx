@@ -6,7 +6,6 @@ import { useIntl } from "react-intl";
 import { useTestId } from "@ethberry/provider-test-id";
 import { TToolbarControl } from "@ethberry/mui-rte";
 import { TextInput } from "@ethberry/mui-inputs-core";
-import { useLicense } from "@ethberry/provider-license";
 
 import { IRichTextInputProps, RichTextInput } from "../input";
 
@@ -37,7 +36,6 @@ export const RichTextEditor: FC<IRichTextFieldProps & TextFieldProps> = props =>
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
-  const license = useLicense();
   const form = useFormContext<any>();
   const value = useWatch({ name });
 
@@ -53,10 +51,6 @@ export const RichTextEditor: FC<IRichTextFieldProps & TextFieldProps> = props =>
     controls: defaultControls.concat(customControls),
     ...testIdProps,
   };
-
-  if (!license.isValid()) {
-    return null;
-  }
 
   return (
     <TextInput

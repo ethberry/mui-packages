@@ -6,8 +6,6 @@ import { ErrorCode } from "@ethersproject/logger";
 // TODO replace with https://github.com/MetaMask/rpc-errors/blob/main/src/error-constants.ts
 import { RESERVED_ERROR_CODES, SERVER_ERROR_CODE_RANGE, STANDARD_ERROR_MAP } from "@json-rpc-tools/utils";
 
-import { downForMaintenance } from "@ethberry/license-messages";
-import { useLicense } from "@ethberry/provider-license";
 import { useWallet } from "@ethberry/provider-wallet";
 
 import { IHandlerOptionsParams } from "./interfaces";
@@ -17,8 +15,6 @@ export const useMetamaskWallet = <T = any>(
   fn: (...args: Array<any>) => Promise<T>,
   options: IHandlerOptionsParams = {},
 ) => {
-  const license = useLicense();
-
   const web3ContextGlobal = useWeb3React();
   const { account, chainId, connector, isActive } = web3ContextGlobal;
   const web3ContextRef = useRef(web3ContextGlobal);
@@ -32,13 +28,6 @@ export const useMetamaskWallet = <T = any>(
   }, [account, chainId, connector, isActive]);
 
   return async (...args: Array<any>): Promise<T> => {
-    if (!license.isValid()) {
-      return Promise.reject(new Error(downForMaintenance())).catch((e: Error) => {
-        enqueueSnackbar(e.message, { variant: "error" });
-        return null as unknown as T;
-      });
-    }
-
     if (!isActive) {
       web3ContextRef.current = await openConnectWalletDialog();
       closeConnectWalletDialog();

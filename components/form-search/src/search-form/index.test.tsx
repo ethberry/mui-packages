@@ -3,8 +3,6 @@ import { cleanup, render } from "@testing-library/react";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { MemoryRouter } from "react-router-dom";
 
-import { LicenseProvider } from "@ethberry/provider-license";
-
 import { CommonSearchForm } from "./index";
 
 afterEach(cleanup);
@@ -28,15 +26,13 @@ describe("<CommonSearchForm />", () => {
     };
 
     const { asFragment } = render(
-      <LicenseProvider licenseKey={process.env.STORYBOOK_ETHBERRY_LICENSE}>
-        <MemoryRouter>
-          <ThemeProvider theme={createTheme()}>
-            <IntlProvider locale="en" messages={i18n}>
-              <CommonSearchForm {...formProps} />
-            </IntlProvider>
-          </ThemeProvider>
-        </MemoryRouter>
-      </LicenseProvider>,
+      <MemoryRouter>
+        <ThemeProvider theme={createTheme()}>
+          <IntlProvider locale="en" messages={i18n}>
+            <CommonSearchForm {...formProps} />
+          </IntlProvider>
+        </ThemeProvider>
+      </MemoryRouter>,
       { container },
     );
 

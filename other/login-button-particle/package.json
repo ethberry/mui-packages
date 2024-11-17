@@ -9,31 +9,30 @@
   },
   "dependencies": {
     "@ethberry/constants": "0.13.5",
-    "@ethberry/firebase-login": "3.0.11",
-    "@ethberry/mui-icons": "2.0.6",
-    "@ethberry/mui-page-layout": "3.0.6",
-    "@ethberry/provider-wallet": "4.0.10",
-    "@ethberry/react-hooks": "2.0.46",
-    "@ethberry/react-hooks-eth": "2.0.10",
+    "@ethberry/firebase-login": "3.0.9",
+    "@ethberry/mui-icons": "2.0.5",
+    "@ethberry/mui-page-layout": "3.0.5",
+    "@ethberry/provider-wallet": "4.0.8",
+    "@ethberry/react-hooks": "2.0.45",
+    "@ethberry/react-hooks-eth": "2.0.8",
     "@ethberry/types-collection": "1.5.20",
-    "@mui/icons-material": "6.1.6",
-    "uuid": "11.0.2"
+    "@mui/icons-material": "6.1.2",
+    "uuid": "10.0.0"
   },
   "description": "react particle login button component",
   "devDependencies": {
-    "@ethberry/provider-api": "7.0.95",
-    "@ethberry/provider-license": "3.0.59",
-    "@ethberry/provider-user": "6.0.101",
-    "@mui/icons-material": "6.1.6",
-    "@mui/material": "6.1.6",
-    "@mui/styles": "6.1.6",
+    "@ethberry/provider-api": "7.0.94",
+    "@ethberry/provider-user": "6.0.100",
+    "@mui/icons-material": "6.1.2",
+    "@mui/material": "6.1.2",
+    "@mui/styles": "6.1.2",
     "@particle-network/auth": "1.3.1",
     "@web3-react/core": "8.2.3",
     "notistack": "3.0.1",
     "react": "18.3.1",
-    "react-intl": "6.8.6",
-    "react-router": "6.27.0",
-    "react-router-dom": "6.27.0"
+    "react-intl": "6.7.0",
+    "react-router": "6.26.2",
+    "react-router-dom": "6.26.2"
   },
   "engines": {
     "node": ">=22"
@@ -44,7 +43,6 @@
   "name": "@ethberry/login-button-particle",
   "peerDependencies": {
     "@ethberry/provider-api": "^7.0.0",
-    "@ethberry/provider-license": "^3.0.0",
     "@ethberry/provider-user": "^6.0.0",
     "@ethberry/types-jwt": "^0.4.0",
     "@mui/icons-material": "^6.0.0",
@@ -76,5 +74,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.11"
+  "version": "2.0.9"
 }

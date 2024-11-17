@@ -9,11 +9,10 @@
   },
   "description": "react coin gecko provider",
   "devDependencies": {
-    "@ethberry/provider-license": "3.0.59",
-    "@types/react": "18.3.12",
+    "@types/react": "18.3.11",
     "notistack": "3.0.1",
     "react": "18.3.1",
-    "react-intl": "6.8.6"
+    "react-intl": "6.7.0"
   },
   "engines": {
     "node": ">=22"
@@ -23,7 +22,6 @@
   "main": "./dist/index.js",
   "name": "@ethberry/provider-coingecko",
   "peerDependencies": {
-    "@ethberry/provider-license": "^3.0.0",
     "notistack": "^3.0.0",
     "react": "^18.0.0",
     "react-intl": "^6.0.0"
@@ -46,5 +44,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.97"
+  "version": "2.0.96"
 }

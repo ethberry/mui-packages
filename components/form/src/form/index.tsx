@@ -5,7 +5,6 @@ import { FieldValues, FormProvider, SubmitHandler, useForm, UseFormReturn } from
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import { useDeepCompareEffect } from "@ethberry/react-hooks";
-import { useLicense } from "@ethberry/provider-license";
 import { TestIdProvider } from "@ethberry/provider-test-id";
 
 import { FormButtons } from "../buttons";
@@ -54,8 +53,6 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
     testId,
   } = props;
 
-  const license = useLicense();
-
   const resolver = validationSchema ? yupResolver(validationSchema) : undefined;
   const [registeredInputs, setRegisteredInputs] = useState<IRegisteredInput[]>([]);
 
@@ -91,10 +88,6 @@ export const FormWrapper: FC<PropsWithChildren<IFormWrapperProps<any>>> = props 
       innerRef?.current?.removeEventListener("submit", listener);
     };
   }, [innerRef?.current]);
-
-  if (!license.isValid()) {
-    return null;
-  }
 
   const testIdProps = testId ? { "data-testid": `${testId}-form` } : {};
 

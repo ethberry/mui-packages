@@ -19,7 +19,6 @@ import "firebaseui/dist/firebaseui.css";
 
 import firebase from "@ethberry/firebase";
 import { ProgressOverlay } from "@ethberry/mui-page-layout";
-import { useLicense } from "@ethberry/provider-license";
 import { useUser } from "@ethberry/provider-user";
 
 import { StyledContainer, StyledFirebaseAuthForm } from "./styled";
@@ -53,8 +52,6 @@ export interface IFirebaseLogin {
 export const FirebaseLogin: FC<IFirebaseLogin> = props => {
   const { providers = [PROVIDERS.email], buttons = [], withEmail = true, onTokenVerified, sx } = props;
   const { formatMessage } = useIntl();
-
-  const license = useLicense();
 
   const [showMessage, setShowMessage] = useState<boolean>(false);
   const [isLoggingIn, setIsLoggingIn] = useState<boolean>(false);
@@ -126,10 +123,6 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
   useEffect(() => {
     return () => setShowMessage(false);
   }, []);
-
-  if (!license.isValid()) {
-    return null;
-  }
 
   return (
     <ProgressOverlay isLoading={isLoggingIn} spinnerSx={{ zIndex: 1000 }}>

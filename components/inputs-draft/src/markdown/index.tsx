@@ -7,7 +7,6 @@ import { draftToMarkdown, markdownToDraft } from "markdown-draft-js";
 import { useTestId } from "@ethberry/provider-test-id";
 import type { TToolbarControl } from "@ethberry/mui-rte";
 import { TextInput } from "@ethberry/mui-inputs-core";
-import { useLicense } from "@ethberry/provider-license";
 
 import type { IRichTextInputProps } from "../input";
 import { RichTextInput } from "../input";
@@ -37,7 +36,6 @@ export const MarkdownInput: FC<IMarkdownInputProps & TextFieldProps> = props => 
   const { testId } = useTestId();
   const testIdProps = testId ? { "data-testid": `${testId}-${name}` } : {};
 
-  const license = useLicense();
   const form = useFormContext<any>();
   const value = useWatch({ name });
 
@@ -57,10 +55,6 @@ export const MarkdownInput: FC<IMarkdownInputProps & TextFieldProps> = props => 
     controls: defaultControls.concat(customControls),
     ...testIdProps,
   };
-
-  if (!license.isValid()) {
-    return null;
-  }
 
   return (
     <TextInput

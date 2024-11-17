@@ -8,29 +8,28 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/mui-dialog-confirmation": "5.0.8",
-    "@ethberry/mui-form": "9.0.8",
-    "@ethberry/mui-page-layout": "3.0.6",
-    "@ethberry/react-hooks": "2.0.46",
-    "react-router": "6.27.0"
+    "@ethberry/mui-dialog-confirmation": "5.0.7",
+    "@ethberry/mui-form": "9.0.7",
+    "@ethberry/mui-page-layout": "3.0.5",
+    "@ethberry/react-hooks": "2.0.45",
+    "react-router": "6.26.2"
   },
   "description": "react widget",
   "devDependencies": {
-    "@ethberry/mui-inputs-core": "8.0.9",
-    "@ethberry/provider-license": "3.0.59",
-    "@mui/material": "6.1.6",
-    "@storybook/react": "8.4.1",
-    "@testing-library/jest-dom": "6.6.3",
+    "@ethberry/mui-inputs-core": "8.0.7",
+    "@mui/material": "6.1.2",
+    "@storybook/react": "8.3.5",
+    "@testing-library/jest-dom": "6.5.0",
     "@testing-library/react": "16.0.1",
-    "@types/jest": "29.5.14",
-    "@types/react": "18.3.12",
+    "@types/jest": "29.5.13",
+    "@types/react": "18.3.11",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-hook-form": "7.53.1",
-    "react-intl": "6.8.6",
-    "react-router-dom": "6.27.0",
+    "react-hook-form": "7.53.0",
+    "react-intl": "6.7.0",
+    "react-router-dom": "6.26.2",
     "ts-jest": "29.2.5"
   },
   "engines": {
@@ -67,5 +66,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "9.0.9"
+  "version": "9.0.7"
 }

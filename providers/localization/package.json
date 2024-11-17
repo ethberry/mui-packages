@@ -9,18 +9,17 @@
   },
   "dependencies": {
     "@ethberry/constants": "0.13.5",
-    "@ethberry/redux": "0.3.38",
-    "@ethberry/utils": "1.6.0",
-    "@reduxjs/toolkit": "2.3.0"
+    "@ethberry/redux": "0.3.37",
+    "@ethberry/utils": "1.5.3",
+    "@reduxjs/toolkit": "2.2.7"
   },
   "description": "react i18n provider",
   "devDependencies": {
-    "@ethberry/provider-license": "3.0.59",
-    "@mui/icons-material": "6.1.6",
-    "@mui/material": "6.1.6",
-    "@types/react": "18.3.12",
+    "@mui/icons-material": "6.1.2",
+    "@mui/material": "6.1.2",
+    "@types/react": "18.3.11",
     "react": "18.3.1",
-    "react-intl": "6.8.6"
+    "react-intl": "6.7.0"
   },
   "engines": {
     "node": ">=22"
@@ -30,7 +29,6 @@
   "main": "./dist/index.js",
   "name": "@ethberry/provider-localization",
   "peerDependencies": {
-    "@ethberry/provider-license": "^3.0.0",
     "@mui/icons-material": "^6.0.0",
     "@mui/material": "^6.0.0",
     "react": "^18.0.0",
@@ -54,5 +52,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "5.0.8"
+  "version": "5.0.7"
 }

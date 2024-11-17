@@ -8,22 +8,21 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/mui-page-layout": "3.0.6",
-    "@ethberry/provider-test-id": "1.0.89",
-    "@ethberry/react-hooks": "2.0.46",
-    "@hookform/resolvers": "3.9.1",
-    "use-debounce": "10.0.4",
+    "@ethberry/mui-page-layout": "3.0.5",
+    "@ethberry/provider-test-id": "1.0.88",
+    "@ethberry/react-hooks": "2.0.45",
+    "@hookform/resolvers": "3.9.0",
+    "use-debounce": "10.0.3",
     "yup": "1.4.0"
   },
   "description": "react widget",
   "devDependencies": {
-    "@ethberry/provider-license": "3.0.59",
-    "@mui/material": "6.1.6",
-    "@types/react": "18.3.12",
+    "@mui/material": "6.1.2",
+    "@types/react": "18.3.11",
     "react": "18.3.1",
-    "react-hook-form": "7.53.1",
-    "react-intl": "6.8.6",
-    "react-router-dom": "6.27.0"
+    "react-hook-form": "7.53.0",
+    "react-intl": "6.7.0",
+    "react-router-dom": "6.26.2"
   },
   "engines": {
     "node": ">=22"
@@ -33,7 +32,6 @@
   "main": "./dist/index.js",
   "name": "@ethberry/mui-form",
   "peerDependencies": {
-    "@ethberry/provider-license": "^3.0.0",
     "@mui/material": "^6.0.0",
     "react": "^18.0.0",
     "react-hook-form": "^7.0.0",
@@ -58,5 +56,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "9.0.8"
+  "version": "9.0.7"
 }

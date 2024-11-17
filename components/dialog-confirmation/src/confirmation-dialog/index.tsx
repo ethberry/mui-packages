@@ -10,7 +10,6 @@ import {
   DialogTitle,
 } from "@mui/material";
 
-import { useLicense } from "@ethberry/provider-license";
 import { useAppSelector } from "@ethberry/redux";
 import { layoutDirectionSelector } from "@ethberry/provider-theme";
 
@@ -36,12 +35,7 @@ export const ConfirmationDialog: FC<IConfirmationDialogProps> = props => {
     ...rest
   } = props;
 
-  const license = useLicense();
   const layoutDirection: string = useAppSelector(layoutDirectionSelector);
-
-  if (!license.isValid()) {
-    return null;
-  }
 
   return (
     <Dialog
