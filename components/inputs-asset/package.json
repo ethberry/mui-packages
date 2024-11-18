@@ -9,12 +9,12 @@
   },
   "dependencies": {
     "@ethberry/constants": "0.13.5",
-    "@ethberry/mui-inputs-core": "8.0.7",
-    "@ethberry/mui-inputs-entity": "8.0.7",
-    "@ethberry/mui-inputs-mask": "6.0.7",
-    "@ethberry/react-hooks": "2.0.45",
-    "@ethberry/types-blockchain": "1.3.4",
-    "@ethberry/yup-rules-eth": "2.1.39"
+    "@ethberry/mui-inputs-core": "8.0.9",
+    "@ethberry/mui-inputs-entity": "8.0.8",
+    "@ethberry/mui-inputs-mask": "6.0.9",
+    "@ethberry/react-hooks": "2.0.46",
+    "@ethberry/types-blockchain": "1.3.5",
+    "@ethberry/yup-rules-eth": "2.1.40"
   },
   "description": "react 1inch",
   "devDependencies": {
