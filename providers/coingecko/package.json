@@ -9,10 +9,10 @@
   },
   "description": "react coin gecko provider",
   "devDependencies": {
-    "@types/react": "18.3.11",
+    "@types/react": "18.3.12",
     "notistack": "3.0.1",
     "react": "18.3.1",
-    "react-intl": "6.7.0"
+    "react-intl": "6.8.9"
   },
   "engines": {
     "node": ">=22"

@@ -15,7 +15,7 @@
     "@ethberry/popup": "1.0.67",
     "clsx": "2.1.1",
     "react-beautiful-dnd": "13.1.1",
-    "react-dropzone": "14.3.3"
+    "react-dropzone": "14.3.5"
   },
   "description": "react widget media s3",
   "devDependencies": {
@@ -25,7 +25,7 @@
     "@mui/icons-material": "6.1.7",
     "@mui/material": "6.1.7",
     "@mui/styles": "6.1.7",
-    "@storybook/react": "8.4.1",
+    "@storybook/react": "8.4.4",
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.0.1",
     "@types/jest": "29.5.14",
@@ -35,8 +35,8 @@
     "jest-environment-jsdom": "29.7.0",
     "notistack": "3.0.1",
     "react": "18.3.1",
-    "react-hook-form": "7.53.1",
-    "react-intl": "6.8.6",
+    "react-hook-form": "7.53.2",
+    "react-intl": "6.8.9",
     "ts-jest": "29.2.5"
   },
   "engines": {

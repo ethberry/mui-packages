@@ -18,8 +18,8 @@
     "@types/react": "18.3.12",
     "@types/react-google-recaptcha": "2.1.9",
     "react": "18.3.1",
-    "react-hook-form": "7.53.1",
-    "react-intl": "6.8.6"
+    "react-hook-form": "7.53.2",
+    "react-intl": "6.8.9"
   },
   "engines": {
     "node": ">=22"
