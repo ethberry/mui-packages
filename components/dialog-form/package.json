@@ -12,24 +12,24 @@
     "@ethberry/mui-form": "9.0.8",
     "@ethberry/mui-page-layout": "3.0.6",
     "@ethberry/react-hooks": "2.0.46",
-    "react-router": "6.26.2"
+    "react-router": "6.28.0"
   },
   "description": "react widget",
   "devDependencies": {
     "@ethberry/mui-inputs-core": "8.0.9",
     "@mui/material": "6.1.7",
-    "@storybook/react": "8.3.5",
-    "@testing-library/jest-dom": "6.5.0",
+    "@storybook/react": "8.4.4",
+    "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.0.1",
-    "@types/jest": "29.5.13",
-    "@types/react": "18.3.11",
+    "@types/jest": "29.5.14",
+    "@types/react": "18.3.12",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-hook-form": "7.53.0",
-    "react-intl": "6.7.0",
-    "react-router-dom": "6.26.2",
+    "react-hook-form": "7.53.2",
+    "react-intl": "6.8.9",
+    "react-router-dom": "6.28.0",
     "ts-jest": "29.2.5"
   },
   "engines": {
