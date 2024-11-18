@@ -21,7 +21,7 @@
     "@ethberry/types-collection": "1.5.20",
     "@mui/icons-material": "6.1.7",
     "firebaseui": "6.1.0",
-    "uuid": "10.0.0"
+    "uuid": "11.0.3"
   },
   "description": "react metamask login button component",
   "devDependencies": {
