@@ -8,9 +8,9 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/mui-page-layout": "3.0.5",
-    "@ethberry/provider-test-id": "1.0.88",
-    "@ethberry/react-hooks": "2.0.45",
+    "@ethberry/mui-page-layout": "3.0.6",
+    "@ethberry/provider-test-id": "1.0.89",
+    "@ethberry/react-hooks": "2.0.46",
     "@hookform/resolvers": "3.9.0",
     "use-debounce": "10.0.3",
     "yup": "1.4.0"
