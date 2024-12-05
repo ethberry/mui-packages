@@ -12,7 +12,7 @@
     "@ethberry/provider-settings": "4.0.108",
     "@ethberry/provider-theme": "8.0.8",
     "@ethberry/redux": "0.3.38",
-    "@mui/material": "6.1.7",
+    "@mui/material": "6.1.10",
     "@storybook/react": "8.4.4",
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.0.1",
