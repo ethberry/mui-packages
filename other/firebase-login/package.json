@@ -10,7 +10,7 @@
   "dependencies": {
     "@ethberry/constants": "0.13.5",
     "@ethberry/firebase": "1.2.45",
-    "@ethberry/mui-page-layout": "3.0.6",
+    "@ethberry/mui-page-layout": "3.0.7",
     "@ethberry/provider-api": "7.0.96",
     "@ethberry/react-hooks": "2.0.46",
     "@ethberry/react-hooks-eth": "2.0.10",
@@ -70,5 +70,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.0.9"
+  "version": "3.0.10"
 }

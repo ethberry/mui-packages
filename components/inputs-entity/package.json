@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "@ethberry/mui-form": "9.0.8",
-    "@ethberry/mui-page-layout": "3.0.6",
-    "@ethberry/provider-test-id": "1.0.89",
+    "@ethberry/mui-page-layout": "3.0.7",
+    "@ethberry/provider-test-id": "1.0.90",
     "@ethberry/react-hooks": "2.0.46",
     "use-debounce": "10.0.4"
   },
@@ -63,5 +63,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "8.0.8"
+  "version": "8.0.9"
 }

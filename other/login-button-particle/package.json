@@ -10,8 +10,8 @@
   "dependencies": {
     "@ethberry/constants": "0.13.5",
     "@ethberry/firebase-login": "3.0.11",
-    "@ethberry/mui-icons": "2.0.6",
-    "@ethberry/mui-page-layout": "3.0.6",
+    "@ethberry/mui-icons": "2.0.7",
+    "@ethberry/mui-page-layout": "3.0.7",
     "@ethberry/provider-wallet": "4.0.10",
     "@ethberry/react-hooks": "2.0.46",
     "@ethberry/react-hooks-eth": "2.0.10",
@@ -74,5 +74,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.9"
+  "version": "2.0.10"
 }
