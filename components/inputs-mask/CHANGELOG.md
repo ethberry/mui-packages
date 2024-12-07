@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-mask@6.0.13...@ethberry/mui-inputs-mask@7.0.0) (2024-12-07)
+
+**Note:** Version bump only for package @ethberry/mui-inputs-mask
+
 ## [6.0.13](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-mask@6.0.12...@ethberry/mui-inputs-mask@6.0.13) (2024-12-07)
 
 **Note:** Version bump only for package @ethberry/mui-inputs-mask

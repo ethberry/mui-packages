@@ -8,8 +8,8 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/mui-form": "9.0.11",
-    "@ethberry/mui-inputs-core": "8.0.13"
+    "@ethberry/mui-form": "10.0.0",
+    "@ethberry/mui-inputs-core": "9.0.0"
   },
   "description": "react widget",
   "devDependencies": {
@@ -61,5 +61,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "8.0.11"
+  "version": "9.0.0"
 }

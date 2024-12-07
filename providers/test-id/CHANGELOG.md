@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/ethberry/mui-packages/compare/@ethberry/provider-test-id@1.0.93...@ethberry/provider-test-id@2.0.0) (2024-12-07)
+
+**Note:** Version bump only for package @ethberry/provider-test-id
+
 ## [1.0.93](https://github.com/ethberry/mui-packages/compare/@ethberry/provider-test-id@1.0.92...@ethberry/provider-test-id@1.0.93) (2024-12-07)
 
 **Note:** Version bump only for package @ethberry/provider-test-id

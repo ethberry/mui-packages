@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/ethberry/mui-packages/compare/@ethberry/login-button-particle@2.0.13...@ethberry/login-button-particle@3.0.0) (2024-12-07)
+
+**Note:** Version bump only for package @ethberry/login-button-particle
+
 ## [2.0.13](https://github.com/ethberry/mui-packages/compare/@ethberry/login-button-particle@2.0.12...@ethberry/login-button-particle@2.0.13) (2024-12-07)
 
 ### Bug Fixes

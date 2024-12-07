@@ -10,10 +10,10 @@
   "dependencies": {
     "@ethberry/constants": "0.13.6",
     "@ethberry/firebase": "2.0.1",
-    "@ethberry/mui-page-layout": "3.0.10",
+    "@ethberry/mui-page-layout": "4.0.0",
     "@ethberry/provider-api": "8.0.1",
-    "@ethberry/react-hooks": "2.0.49",
-    "@ethberry/react-hooks-eth": "2.0.12",
+    "@ethberry/react-hooks": "3.0.0",
+    "@ethberry/react-hooks-eth": "3.0.0",
     "@ethberry/types-collection": "1.5.21",
     "@ethberry/types-jwt": "0.4.9",
     "@mui/icons-material": "6.1.10",
@@ -68,5 +68,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.0.13"
+  "version": "4.0.0"
 }

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/ethberry/mui-packages/compare/@ethberry/provider-coingecko@2.0.100...@ethberry/provider-coingecko@3.0.0) (2024-12-07)
+
+**Note:** Version bump only for package @ethberry/provider-coingecko
+
 ## [2.0.100](https://github.com/ethberry/mui-packages/compare/@ethberry/provider-coingecko@2.0.99...@ethberry/provider-coingecko@2.0.100) (2024-12-07)
 
 **Note:** Version bump only for package @ethberry/provider-coingecko

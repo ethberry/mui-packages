@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/ethberry/mui-packages/compare/@ethberry/react-hooks@2.0.49...@ethberry/react-hooks@3.0.0) (2024-12-07)
+
+**Note:** Version bump only for package @ethberry/react-hooks
+
 ## [2.0.49](https://github.com/ethberry/mui-packages/compare/@ethberry/react-hooks@2.0.48...@ethberry/react-hooks@2.0.49) (2024-12-07)
 
 ### Bug Fixes
