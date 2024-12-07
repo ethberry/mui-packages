@@ -11,8 +11,8 @@
   "devDependencies": {
     "@mui/material": "6.1.10",
     "@storybook/react": "8.4.7",
-    "@types/react": "18.3.14",
-    "react": "18.3.1"
+    "@types/react": "19.0.1",
+    "react": "19.0.0"
   },
   "engines": {
     "node": ">=22"
@@ -23,7 +23,7 @@
   "name": "@ethberry/mui-icons",
   "peerDependencies": {
     "@mui/material": "^6.0.0",
-    "react": "^18.0.0"
+    "react": "^18.0.0 || ^19.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
