@@ -33,17 +33,17 @@ const Template: Story = {
   render: args => <SearchInput {...args} />,
 };
 
-export const Simple = {
-  ...Template,
-  args: {
-    name: "search",
-  },
-};
-
-export const Disabled = {
-  ...Template,
-  args: {
-    name: "search",
-    disabled: true,
-  },
-};
+// export const Simple = {
+//   ...Template,
+//   args: {
+//     name: "search",
+//   },
+// };
+//
+// export const Disabled = {
+//   ...Template,
+//   args: {
+//     name: "search",
+//     disabled: true,
+//   },
+// };

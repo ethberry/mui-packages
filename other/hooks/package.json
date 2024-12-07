@@ -29,12 +29,12 @@
   "main": "./dist/index.js",
   "name": "@ethberry/react-hooks",
   "peerDependencies": {
-    "@ethberry/provider-api": "^7.0.0 || ^8.0.0",
+    "@ethberry/provider-api": "^8.0.0",
     "@ethberry/redux": "^0.1.0",
     "notistack": "^3.0.0",
-    "react": "^18.0.0 || ^19.0.0",
+    "react": "^19.0.0",
     "react-hook-form": "^7.0.0",
-    "react-intl": "^6.0.0 || ^7.0.0"
+    "react-intl": "^7.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

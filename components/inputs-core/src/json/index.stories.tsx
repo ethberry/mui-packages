@@ -43,9 +43,9 @@ const Template: Story = {
   render: args => <JsonInput {...args} />,
 };
 
-export const Simple = {
-  ...Template,
-  args: {
-    name: "json",
-  },
-};
+// export const Simple = {
+//   ...Template,
+//   args: {
+//     name: "json",
+//   },
+// };

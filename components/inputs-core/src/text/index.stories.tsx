@@ -52,19 +52,19 @@ type Story = StoryObj<typeof TextInput>;
 const Template: Story = {
   render: args => <TextInput {...args} />,
 };
-
-export const Simple = {
-  ...Template,
-  args: {
-    name: "text",
-  },
-};
-
-export const CustomLabel = {
-  ...Template,
-  args: {
-    name: "text",
-    label: "My label",
-    placeholder: "My placeholder",
-  },
-};
+//
+// export const Simple = {
+//   ...Template,
+//   args: {
+//     name: "text",
+//   },
+// };
+//
+// export const CustomLabel = {
+//   ...Template,
+//   args: {
+//     name: "text",
+//     label: "My label",
+//     placeholder: "My placeholder",
+//   },
+// };

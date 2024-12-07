@@ -33,17 +33,17 @@ const Template: Story = {
   render: args => <PasswordInput {...args} />,
 };
 
-export const Simple = {
-  ...Template,
-  args: {
-    name: "password",
-  },
-};
-
-export const Disabled = {
-  ...Template,
-  args: {
-    name: "password",
-    disabled: true,
-  },
-};
+// export const Simple = {
+//   ...Template,
+//   args: {
+//     name: "password",
+//   },
+// };
+//
+// export const Disabled = {
+//   ...Template,
+//   args: {
+//     name: "password",
+//     disabled: true,
+//   },
+// };

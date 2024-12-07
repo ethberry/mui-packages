@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Link } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink } from "react-router";
 
 import { useProductTypes } from "./hook";
 import {

@@ -32,18 +32,18 @@ type Story = StoryObj<typeof TextArea>;
 const Template: Story = {
   render: args => <TextArea {...args} />,
 };
-
-export const Simple = {
-  ...Template,
-  args: {
-    name: "textarea",
-  },
-};
-
-export const Disabled = {
-  ...Template,
-  args: {
-    name: "textarea",
-    disabled: true,
-  },
-};
+//
+// export const Simple = {
+//   ...Template,
+//   args: {
+//     name: "textarea",
+//   },
+// };
+//
+// export const Disabled = {
+//   ...Template,
+//   args: {
+//     name: "textarea",
+//     disabled: true,
+//   },
+// };

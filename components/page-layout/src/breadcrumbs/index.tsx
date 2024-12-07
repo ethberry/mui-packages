@@ -1,7 +1,7 @@
 import { FC, useMemo } from "react";
 import { FormattedMessage } from "react-intl";
 import { Breadcrumbs as MuiBreadcrumbs, Link, Typography } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink } from "react-router";
 
 export interface IBreadcrumbsProps {
   path: Array<string> | Record<string, string>;

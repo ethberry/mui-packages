@@ -10,6 +10,5 @@
     }
   },
   "packages": ["components/*", "other/*", "providers/*"],
-  "useNx": true,
   "version": "independent"
 }

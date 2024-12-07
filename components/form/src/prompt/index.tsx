@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { useIntl } from "react-intl";
-import { unstable_usePrompt as usePrompt } from "react-router-dom";
+import { unstable_usePrompt as usePrompt } from "react-router";
 import { useFormContext } from "react-hook-form";
 
 interface IPromptIfDirtyProps {

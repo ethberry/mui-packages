@@ -33,21 +33,21 @@ type Story = StoryObj<typeof RichTextEditor>;
 const DraftTemplate: Story = {
   render: args => <RichTextEditor {...args} />,
 };
-
-export const Simple = {
-  ...DraftTemplate,
-  args: {
-    name: "draft",
-  },
-};
-
-const DraftDefaultValueTemplate: Story = {
-  render: args => <RichTextEditor {...args} />,
-};
-
-export const DefaultValue = {
-  ...DraftDefaultValueTemplate,
-  args: {
-    name: "draft",
-  },
-};
+//
+// export const Simple = {
+//   ...DraftTemplate,
+//   args: {
+//     name: "draft",
+//   },
+// };
+//
+// const DraftDefaultValueTemplate: Story = {
+//   render: args => <RichTextEditor {...args} />,
+// };
+//
+// export const DefaultValue = {
+//   ...DraftDefaultValueTemplate,
+//   args: {
+//     name: "draft",
+//   },
+// };

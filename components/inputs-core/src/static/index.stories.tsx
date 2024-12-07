@@ -32,18 +32,18 @@ type Story = StoryObj<typeof StaticInput>;
 const Template: Story = {
   render: args => <StaticInput {...args} />,
 };
-
-export const Simple = {
-  ...Template,
-  args: {
-    name: "static",
-  },
-};
-
-export const Disabled = {
-  ...Template,
-  args: {
-    name: "static",
-    disabled: true,
-  },
-};
+//
+// export const Simple = {
+//   ...Template,
+//   args: {
+//     name: "static",
+//   },
+// };
+//
+// export const Disabled = {
+//   ...Template,
+//   args: {
+//     name: "static",
+//     disabled: true,
+//   },
+// };

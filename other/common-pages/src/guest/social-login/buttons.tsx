@@ -2,7 +2,7 @@ import { FC } from "react";
 import { useFormContext } from "react-hook-form";
 import { Button } from "@mui/material";
 import { FormattedMessage } from "react-intl";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink } from "react-router";
 
 import { ButtonToolbar } from "@ethberry/mui-page-layout";
 

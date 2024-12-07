@@ -2,7 +2,7 @@ import { FC, PropsWithChildren } from "react";
 import { IntlProvider } from "react-intl";
 import { cleanup, render } from "@testing-library/react";
 import { createTheme, ThemeProvider } from "@mui/material";
-import { MemoryRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router";
 
 import { FormDialog } from "./";
 

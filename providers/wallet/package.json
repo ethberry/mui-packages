@@ -57,9 +57,9 @@
   "name": "@ethberry/provider-wallet",
   "peerDependencies": {
     "@ethberry/constants": "^0.13.0",
-    "@ethberry/provider-api": "^7.0.0 || ^8.0.0",
+    "@ethberry/provider-api": "^8.0.0",
     "@ethberry/provider-popup": "^0.0.0",
-    "@ethberry/provider-user": "^6.0.0 || ^7.0.0",
+    "@ethberry/provider-user": "^7.0.0",
     "@ethberry/react-hooks": "^2.0.0",
     "@ethberry/redux": "^0.3.0",
     "@ethberry/types-blockchain": "^1.0.0",
@@ -70,9 +70,9 @@
     "@web3-react/core": "^8.0.0",
     "ethers": "^5.6.0",
     "notistack": "^3.0.0",
-    "react": "^18.0.0 || ^19.0.0",
-    "react-intl": "^6.0.0 || ^7.0.0",
-    "uuid": "^10.0.0 || ^11.0.0"
+    "react": "^19.0.0",
+    "react-intl": "^7.0.0",
+    "uuid": "^11.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

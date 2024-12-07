@@ -33,34 +33,34 @@ const Template: Story = {
   render: args => <NumberInput {...args} />,
 };
 
-export const Simple = {
-  ...Template,
-  args: {
-    name: "number",
-  },
-};
-
-export const Negative = {
-  ...Template,
-  args: {
-    name: "number",
-    allowNegative: true,
-    value: -50,
-  },
-};
-
-export const ReadOnly = {
-  ...Template,
-  args: {
-    name: "number",
-    readOnly: true,
-  },
-};
-
-export const Disabled = {
-  ...Template,
-  args: {
-    name: "number",
-    disabled: true,
-  },
-};
+// export const Simple = {
+//   ...Template,
+//   args: {
+//     name: "number",
+//   },
+// };
+//
+// export const Negative = {
+//   ...Template,
+//   args: {
+//     name: "number",
+//     allowNegative: true,
+//     value: -50,
+//   },
+// };
+//
+// export const ReadOnly = {
+//   ...Template,
+//   args: {
+//     name: "number",
+//     readOnly: true,
+//   },
+// };
+//
+// export const Disabled = {
+//   ...Template,
+//   args: {
+//     name: "number",
+//     disabled: true,
+//   },
+// };

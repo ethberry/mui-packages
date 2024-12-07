@@ -35,10 +35,10 @@ const Template: Story = {
   render: args => <ConfirmationDialog {...args}>some text</ConfirmationDialog>,
 };
 
-export const Simple = {
-  ...Template,
-  args: {
-    open: true,
-    disablePortal: true,
-  },
-};
+// export const Simple = {
+//   ...Template,
+//   args: {
+//     open: true,
+//     disablePortal: true,
+//   },
+// };

@@ -1,5 +1,5 @@
 import { FC, Fragment, PropsWithChildren, useEffect, useState } from "react";
-import { Outlet, Navigate } from "react-router-dom";
+import { Outlet, Navigate } from "react-router";
 
 import { useUser } from "@ethberry/provider-user";
 

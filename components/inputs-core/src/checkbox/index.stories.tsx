@@ -32,25 +32,25 @@ const Template: Story = {
   render: args => <CheckboxInput {...args} />,
 };
 
-export const Simple = {
-  ...Template,
-  args: {
-    name: "checkbox",
-  },
-};
-
-export const Disabled = {
-  ...Template,
-  args: {
-    name: "checkbox",
-    disabled: true,
-  },
-};
-
-export const Label = {
-  ...Template,
-  args: {
-    name: "checkbox",
-    label: "My label",
-  },
-};
+// export const Simple = {
+//   ...Template,
+//   args: {
+//     name: "checkbox",
+//   },
+// };
+//
+// export const Disabled = {
+//   ...Template,
+//   args: {
+//     name: "checkbox",
+//     disabled: true,
+//   },
+// };
+//
+// export const Label = {
+//   ...Template,
+//   args: {
+//     name: "checkbox",
+//     label: "My label",
+//   },
+// };

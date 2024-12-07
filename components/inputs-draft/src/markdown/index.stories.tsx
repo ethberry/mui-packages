@@ -36,25 +36,25 @@ const MarkdownTemplate: Story = {
     </FormProvider>
   ),
 };
-
-export const Simple = {
-  ...MarkdownTemplate,
-  args: {
-    name: "markdown",
-  },
-};
-
-const MarkdownDefaultValueTemplate: Story = {
-  render: args => (
-    <FormProvider {...useForm({ defaultValues: { markdown: markdownString } })}>
-      <MarkdownInput {...args} />
-    </FormProvider>
-  ),
-};
-
-export const DefaultValue = {
-  ...MarkdownDefaultValueTemplate,
-  args: {
-    name: "markdown",
-  },
-};
+//
+// export const Simple = {
+//   ...MarkdownTemplate,
+//   args: {
+//     name: "markdown",
+//   },
+// };
+//
+// const MarkdownDefaultValueTemplate: Story = {
+//   render: args => (
+//     <FormProvider {...useForm({ defaultValues: { markdown: markdownString } })}>
+//       <MarkdownInput {...args} />
+//     </FormProvider>
+//   ),
+// };
+//
+// export const DefaultValue = {
+//   ...MarkdownDefaultValueTemplate,
+//   args: {
+//     name: "markdown",
+//   },
+// };
