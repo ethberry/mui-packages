@@ -9,8 +9,8 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@ethberry/provider-wallet": "4.0.10",
-    "@ethberry/redux": "0.3.40",
+    "@ethberry/provider-wallet": "4.0.11",
+    "@ethberry/redux": "0.3.41",
     "@mui/material": "6.1.10",
     "@mui/styles": "6.1.10",
     "@types/react": "18.3.14",
@@ -51,5 +51,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.12"
+  "version": "2.0.13"
 }

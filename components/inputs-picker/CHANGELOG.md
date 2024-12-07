@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.4](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-picker@8.1.1...@ethberry/mui-inputs-picker@8.1.4) (2024-12-07)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([1f7f84d](https://github.com/ethberry/mui-packages/commit/1f7f84d26715b1c15fb35879d02a70b0ce81f8f9))
+- **deps:** update all non-major dependencies ([c73f637](https://github.com/ethberry/mui-packages/commit/c73f6376a13da95d1641d6746e66dcc8ea6d0c6b))
+
 ## [8.1.3](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-picker@8.1.2...@ethberry/mui-inputs-picker@8.1.3) (2024-12-07)
 
 **Note:** Version bump only for package @ethberry/mui-inputs-picker

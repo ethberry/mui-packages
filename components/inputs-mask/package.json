@@ -8,8 +8,8 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/mui-inputs-core": "8.0.11",
-    "@ethberry/provider-test-id": "1.0.91",
+    "@ethberry/mui-inputs-core": "8.0.12",
+    "@ethberry/provider-test-id": "1.0.92",
     "@mui/styles": "6.1.10",
     "react-number-format": "5.4.2"
   },
@@ -55,5 +55,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "6.0.11"
+  "version": "6.0.12"
 }

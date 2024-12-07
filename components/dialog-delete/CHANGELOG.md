@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.11](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-dialog-delete@4.0.8...@ethberry/mui-dialog-delete@4.0.11) (2024-12-07)
+
+### Bug Fixes
+
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([dd05631](https://github.com/ethberry/mui-packages/commit/dd056317898b0f8ed2a9dbc491800128e81ad257))
+- **deps:** update all non-major dependencies ([1f7f84d](https://github.com/ethberry/mui-packages/commit/1f7f84d26715b1c15fb35879d02a70b0ce81f8f9))
+- **deps:** update all non-major dependencies ([c73f637](https://github.com/ethberry/mui-packages/commit/c73f6376a13da95d1641d6746e66dcc8ea6d0c6b))
+
 ## [4.0.10](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-dialog-delete@4.0.9...@ethberry/mui-dialog-delete@4.0.10) (2024-12-07)
 
 **Note:** Version bump only for package @ethberry/mui-dialog-delete

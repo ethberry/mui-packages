@@ -9,11 +9,11 @@
   },
   "dependencies": {
     "@ethberry/firebase": "1.2.45",
-    "@ethberry/mui-icons": "2.0.8",
-    "@ethberry/mui-page-layout": "3.0.8",
-    "@ethberry/provider-collection": "1.0.17",
-    "@ethberry/react-hooks": "2.0.47",
-    "@ethberry/redux": "0.3.40",
+    "@ethberry/mui-icons": "2.0.9",
+    "@ethberry/mui-page-layout": "3.0.9",
+    "@ethberry/provider-collection": "1.0.18",
+    "@ethberry/react-hooks": "2.0.48",
+    "@ethberry/redux": "0.3.41",
     "@ethberry/types-jwt": "0.4.8",
     "@ethberry/utils": "1.6.0",
     "@ethersproject/networks": "5.7.1",
@@ -92,5 +92,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "4.0.10"
+  "version": "4.0.11"
 }
