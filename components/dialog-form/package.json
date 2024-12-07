@@ -8,15 +8,15 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/mui-dialog-confirmation": "5.0.11",
-    "@ethberry/mui-form": "9.0.10",
-    "@ethberry/mui-page-layout": "3.0.9",
-    "@ethberry/react-hooks": "2.0.48",
+    "@ethberry/mui-dialog-confirmation": "5.0.12",
+    "@ethberry/mui-form": "9.0.11",
+    "@ethberry/mui-page-layout": "3.0.10",
+    "@ethberry/react-hooks": "2.0.49",
     "react-router": "7.0.2"
   },
   "description": "react widget",
   "devDependencies": {
-    "@ethberry/mui-inputs-core": "8.0.12",
+    "@ethberry/mui-inputs-core": "8.0.13",
     "@mui/material": "6.1.10",
     "@storybook/react": "8.4.7",
     "@testing-library/jest-dom": "6.6.3",
@@ -66,5 +66,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "9.0.10"
+  "version": "9.0.11"
 }

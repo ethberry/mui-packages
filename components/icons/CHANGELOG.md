@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.10](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-icons@2.0.9...@ethberry/mui-icons@2.0.10) (2024-12-07)
+
+**Note:** Version bump only for package @ethberry/mui-icons
+
 ## [2.0.9](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-icons@2.0.6...@ethberry/mui-icons@2.0.9) (2024-12-07)
 
 ### Bug Fixes

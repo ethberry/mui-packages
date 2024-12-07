@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.12](https://github.com/ethberry/mui-packages/compare/@ethberry/provider-theme@8.0.11...@ethberry/provider-theme@8.0.12) (2024-12-07)
+
+**Note:** Version bump only for package @ethberry/provider-theme
+
 ## [8.0.11](https://github.com/ethberry/mui-packages/compare/@ethberry/provider-theme@8.0.8...@ethberry/provider-theme@8.0.11) (2024-12-07)
 
 ### Bug Fixes

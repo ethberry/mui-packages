@@ -8,10 +8,10 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/mui-dialog-confirmation": "5.0.11",
-    "@ethberry/mui-inputs-core": "8.0.12",
-    "@ethberry/mui-inputs-file-s3": "8.0.11",
-    "@ethberry/mui-page-layout": "3.0.9",
+    "@ethberry/mui-dialog-confirmation": "5.0.12",
+    "@ethberry/mui-inputs-core": "8.0.13",
+    "@ethberry/mui-inputs-file-s3": "8.0.12",
+    "@ethberry/mui-page-layout": "3.0.10",
     "@ethberry/popup": "2.0.1",
     "clsx": "2.1.1",
     "react-beautiful-dnd": "13.1.1",
@@ -19,9 +19,9 @@
   },
   "description": "react widget media s3",
   "devDependencies": {
-    "@ethberry/mui-form": "9.0.10",
+    "@ethberry/mui-form": "9.0.11",
     "@ethberry/provider-api-jwt": "3.0.1",
-    "@ethberry/provider-test-id": "1.0.92",
+    "@ethberry/provider-test-id": "1.0.93",
     "@mui/icons-material": "6.1.10",
     "@mui/material": "6.1.10",
     "@mui/styles": "6.1.10",
@@ -76,5 +76,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "2.0.12"
+  "version": "2.0.13"
 }

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.10](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-file-firebase@7.0.9...@ethberry/mui-inputs-file-firebase@7.0.10) (2024-12-07)
+
+### Bug Fixes
+
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([6ce6af0](https://github.com/ethberry/mui-packages/commit/6ce6af0c6b5c649106771d8da39cd385de9e5f52))
+
 ## [7.0.9](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-file-firebase@7.0.6...@ethberry/mui-inputs-file-firebase@7.0.9) (2024-12-07)
 
 ### Bug Fixes

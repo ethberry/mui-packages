@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.13](https://github.com/ethberry/mui-packages/compare/@ethberry/firebase-login@3.0.12...@ethberry/firebase-login@3.0.13) (2024-12-07)
+
+### Bug Fixes
+
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([6ce6af0](https://github.com/ethberry/mui-packages/commit/6ce6af0c6b5c649106771d8da39cd385de9e5f52))
+
 ## [3.0.12](https://github.com/ethberry/mui-packages/compare/@ethberry/firebase-login@3.0.11...@ethberry/firebase-login@3.0.12) (2024-12-07)
 
 ### Bug Fixes

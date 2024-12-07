@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.19](https://github.com/ethberry/mui-packages/compare/@ethberry/provider-collection@1.0.18...@ethberry/provider-collection@1.0.19) (2024-12-07)
+
+### Bug Fixes
+
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([6ce6af0](https://github.com/ethberry/mui-packages/commit/6ce6af0c6b5c649106771d8da39cd385de9e5f52))
+
 ## [1.0.18](https://github.com/ethberry/mui-packages/compare/@ethberry/provider-collection@1.0.16...@ethberry/provider-collection@1.0.18) (2024-12-07)
 
 ### Bug Fixes
