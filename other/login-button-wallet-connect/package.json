@@ -21,8 +21,8 @@
   },
   "description": "react wallet-connect login button component",
   "devDependencies": {
-    "@ethberry/provider-api": "7.0.95",
-    "@ethberry/provider-user": "6.0.101",
+    "@ethberry/provider-api": "7.0.96",
+    "@ethberry/provider-user": "6.0.102",
     "@mui/material": "6.1.10",
     "@mui/styles": "6.1.10",
     "@web3-react/core": "8.2.3",

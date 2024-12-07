@@ -8,12 +8,12 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/firebase": "1.2.44",
+    "@ethberry/firebase": "1.2.45",
     "@ethberry/mui-dialog-confirmation": "5.0.8",
     "@ethberry/mui-inputs-core": "8.0.9",
     "@ethberry/mui-inputs-file-firebase": "7.0.6",
     "@ethberry/mui-page-layout": "3.0.6",
-    "@ethberry/popup": "1.0.67",
+    "@ethberry/popup": "1.0.68",
     "clsx": "2.1.1",
     "react-beautiful-dnd": "13.1.1",
     "react-dropzone": "14.3.5"
@@ -23,7 +23,7 @@
     "@ethberry/cross-env": "0.0.5",
     "@ethberry/mui-form": "9.0.8",
     "@ethberry/mui-inputs-file": "7.0.6",
-    "@ethberry/provider-api": "7.0.95",
+    "@ethberry/provider-api": "7.0.96",
     "@ethberry/provider-test-id": "1.0.89",
     "@mui/icons-material": "6.1.10",
     "@mui/material": "6.1.10",

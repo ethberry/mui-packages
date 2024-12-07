@@ -8,7 +8,7 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/firebase": "1.2.44",
+    "@ethberry/firebase": "1.2.45",
     "@ethberry/mui-icons": "2.0.6",
     "@ethberry/mui-page-layout": "3.0.6",
     "@ethberry/provider-collection": "1.0.16",
@@ -33,9 +33,9 @@
   "description": "react wallet provider",
   "devDependencies": {
     "@ethberry/constants": "0.13.5",
-    "@ethberry/provider-api": "7.0.95",
-    "@ethberry/provider-popup": "1.0.67",
-    "@ethberry/provider-user": "6.0.101",
+    "@ethberry/provider-api": "7.0.96",
+    "@ethberry/provider-popup": "1.0.68",
+    "@ethberry/provider-user": "6.0.102",
     "@ethberry/types-blockchain": "1.3.5",
     "@mui/icons-material": "6.1.10",
     "@mui/material": "6.1.10",

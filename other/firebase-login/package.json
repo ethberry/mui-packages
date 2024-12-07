@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "@ethberry/constants": "0.13.5",
-    "@ethberry/firebase": "1.2.44",
+    "@ethberry/firebase": "1.2.45",
     "@ethberry/mui-page-layout": "3.0.6",
-    "@ethberry/provider-api": "7.0.95",
+    "@ethberry/provider-api": "7.0.96",
     "@ethberry/react-hooks": "2.0.46",
     "@ethberry/react-hooks-eth": "2.0.10",
     "@ethberry/types-collection": "1.5.20",
@@ -22,8 +22,8 @@
   },
   "description": "react component",
   "devDependencies": {
-    "@ethberry/provider-api": "7.0.95",
-    "@ethberry/provider-user": "6.0.101",
+    "@ethberry/provider-api": "7.0.96",
+    "@ethberry/provider-user": "6.0.102",
     "@mui/material": "6.1.10",
     "@mui/styles": "6.1.10",
     "firebase": "11.0.2",

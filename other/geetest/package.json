@@ -13,8 +13,8 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@ethberry/provider-api": "7.0.95",
-    "@ethberry/provider-api-jwt": "2.0.91",
+    "@ethberry/provider-api": "7.0.96",
+    "@ethberry/provider-api-jwt": "2.0.92",
     "@storybook/react": "8.4.7",
     "@types/react": "18.3.14",
     "react": "18.3.1"

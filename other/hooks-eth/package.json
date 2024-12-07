@@ -8,7 +8,7 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/provider-api": "7.0.95",
+    "@ethberry/provider-api": "7.0.96",
     "@ethberry/types-blockchain": "1.3.5",
     "@ethersproject/abi": "5.7.0",
     "@ethersproject/logger": "5.7.0",
