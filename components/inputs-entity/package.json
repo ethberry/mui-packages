@@ -16,7 +16,7 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@ethberry/provider-api": "7.0.96",
+    "@ethberry/provider-api": "8.0.1",
     "@mui/icons-material": "6.1.10",
     "@mui/lab": "6.0.0-beta.18",
     "@mui/material": "6.1.10",
@@ -35,7 +35,7 @@
   "main": "./dist/index.js",
   "name": "@ethberry/mui-inputs-entity",
   "peerDependencies": {
-    "@ethberry/provider-api": "^7.0.0",
+    "@ethberry/provider-api": "^7.0.0 || ^8.0.0",
     "@mui/icons-material": "^6.0.0",
     "@mui/lab": "^6.0.0-beta.0",
     "@mui/material": "^6.0.0",
