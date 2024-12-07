@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@ethberry/constants": "0.13.6",
-    "@ethberry/firebase": "1.2.45",
+    "@ethberry/firebase": "2.0.1",
     "@ethberry/firebase-login": "3.0.12",
     "@ethberry/mui-icons": "2.0.9",
     "@ethberry/mui-page-layout": "3.0.9",
@@ -25,8 +25,8 @@
   },
   "description": "react metamask login button component",
   "devDependencies": {
-    "@ethberry/provider-api": "7.0.96",
-    "@ethberry/provider-user": "6.0.102",
+    "@ethberry/provider-api": "8.0.1",
+    "@ethberry/provider-user": "7.0.1",
     "@mui/material": "6.1.10",
     "@mui/styles": "6.1.10",
     "@web3-react/core": "8.2.3",
@@ -45,8 +45,8 @@
   "main": "./dist/index.js",
   "name": "@ethberry/login-button-metamask",
   "peerDependencies": {
-    "@ethberry/provider-api": "^7.0.0",
-    "@ethberry/provider-user": "^6.0.0",
+    "@ethberry/provider-api": "^7.0.0 || ^8.0.0",
+    "@ethberry/provider-user": "^6.0.0 || ^7.0.0",
     "@ethberry/types-jwt": "^0.4.0",
     "@mui/material": "^6.0.0",
     "@mui/styles": "^6.0.0",

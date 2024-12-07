@@ -9,7 +9,7 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@ethberry/provider-settings": "4.0.109",
+    "@ethberry/provider-settings": "5.0.1",
     "@ethberry/provider-theme": "8.0.11",
     "@ethberry/redux": "0.3.41",
     "@mui/material": "6.1.10",
