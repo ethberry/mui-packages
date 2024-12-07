@@ -13,7 +13,7 @@
     "@ethberry/redux": "0.3.38",
     "@mui/material": "6.1.10",
     "@mui/styles": "6.1.10",
-    "@types/react": "18.3.12",
+    "@types/react": "18.3.14",
     "@web3-react/core": "8.2.3",
     "react": "18.3.1"
   },
