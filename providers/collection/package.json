@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@ethberry/constants": "0.13.5",
-    "@ethberry/react-hooks": "2.0.46",
+    "@ethberry/react-hooks": "2.0.47",
     "@ethberry/types-collection": "1.5.20",
     "@reduxjs/toolkit": "2.4.0",
     "qs": "6.13.1"
@@ -17,7 +17,7 @@
   "description": "react hooks",
   "devDependencies": {
     "@ethberry/provider-api": "7.0.96",
-    "@ethberry/redux": "0.3.39",
+    "@ethberry/redux": "0.3.40",
     "notistack": "3.0.1",
     "react": "18.3.1",
     "react-hook-form": "7.54.0",
@@ -60,5 +60,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "1.0.16"
+  "version": "1.0.17"
 }

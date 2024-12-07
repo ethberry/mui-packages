@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.40](https://github.com/ethberry/common-packages/compare/@ethberry/redux@0.3.39...@ethberry/redux@0.3.40) (2024-12-07)
+
+**Note:** Version bump only for package @ethberry/redux
+
 ## [0.3.39](https://github.com/ethberry/common-packages/compare/@ethberry/redux@0.3.38...@ethberry/redux@0.3.39) (2024-12-07)
 
 ### Bug Fixes

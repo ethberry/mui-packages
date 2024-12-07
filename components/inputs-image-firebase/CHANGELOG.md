@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.11](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-image-firebase@9.0.10...@ethberry/mui-inputs-image-firebase@9.0.11) (2024-12-07)
+
+**Note:** Version bump only for package @ethberry/mui-inputs-image-firebase
+
 ## [9.0.10](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-image-firebase@9.0.9...@ethberry/mui-inputs-image-firebase@9.0.10) (2024-12-07)
 
 ### Bug Fixes

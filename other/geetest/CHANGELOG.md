@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.114](https://github.com/ethberry/common-packages/compare/@ethberry/geetest@2.1.113...@ethberry/geetest@2.1.114) (2024-12-07)
+
+**Note:** Version bump only for package @ethberry/geetest
+
 ## [2.1.113](https://github.com/ethberry/common-packages/compare/@ethberry/geetest@2.1.112...@ethberry/geetest@2.1.113) (2024-12-07)
 
 ### Bug Fixes
