@@ -8,9 +8,9 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/constants": "0.13.5",
+    "@ethberry/constants": "0.13.6",
     "@ethberry/redux": "0.3.41",
-    "@ethberry/utils": "1.6.0",
+    "@ethberry/utils": "1.6.1",
     "@reduxjs/toolkit": "2.4.0"
   },
   "description": "react i18n provider",

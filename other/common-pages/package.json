@@ -8,7 +8,7 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/constants": "0.13.5",
+    "@ethberry/constants": "0.13.6",
     "@ethberry/mui-form": "9.0.10",
     "@ethberry/mui-inputs-captcha": "5.0.9",
     "@ethberry/mui-inputs-core": "8.0.12",
