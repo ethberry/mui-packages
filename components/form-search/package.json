@@ -25,7 +25,7 @@
     "react-dom": "18.3.1",
     "react-hook-form": "7.54.0",
     "react-intl": "7.0.1",
-    "react-router-dom": "6.28.0",
+    "react-router-dom": "7.0.2",
     "ts-jest": "29.2.5"
   },
   "engines": {
@@ -39,7 +39,7 @@
     "@mui/material": "^6.0.0",
     "react": "^18.0.0",
     "react-hook-form": "^7.0.0",
-    "react-router-dom": "^6.0.0"
+    "react-router-dom": "^6.0.0 || ^7.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
