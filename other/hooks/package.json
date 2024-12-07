@@ -8,8 +8,8 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/constants": "0.13.5",
-    "@ethberry/types-collection": "1.5.20",
+    "@ethberry/constants": "0.13.6",
+    "@ethberry/types-collection": "1.5.21",
     "qs": "6.13.1"
   },
   "description": "react hooks",

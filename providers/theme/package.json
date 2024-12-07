@@ -10,8 +10,8 @@
   "dependencies": {
     "@emotion/cache": "11.13.5",
     "@emotion/react": "11.13.5",
-    "@ethberry/constants": "0.13.5",
-    "@ethberry/utils": "1.6.0",
+    "@ethberry/constants": "0.13.6",
+    "@ethberry/utils": "1.6.1",
     "@mui/styles": "6.1.10",
     "@reduxjs/toolkit": "2.4.0",
     "jss": "10.10.0",
