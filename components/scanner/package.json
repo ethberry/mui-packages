@@ -25,7 +25,7 @@
   "main": "./dist/index.js",
   "name": "@ethberry/mui-scanner",
   "peerDependencies": {
-    "@ethberry/redux": "^0.3.0",
+    "@ethberry/redux": "^0.3.0 || ^1.0.0",
     "@mui/material": "^6.0.0",
     "@mui/styles": "^6.0.0",
     "@web3-react/core": "^8.0.0",
