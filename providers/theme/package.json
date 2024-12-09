@@ -8,8 +8,8 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@emotion/cache": "11.13.5",
-    "@emotion/react": "11.13.5",
+    "@emotion/cache": "11.14.0",
+    "@emotion/react": "11.14.0",
     "@ethberry/constants": "0.13.6",
     "@ethberry/utils": "1.6.1",
     "@mui/styles": "6.1.10",
@@ -26,7 +26,7 @@
     "@mui/material": "6.1.10",
     "@types/stylis": "4.2.7",
     "react": "19.0.0",
-    "react-intl": "7.0.1"
+    "react-intl": "7.0.4"
   },
   "engines": {
     "node": ">=22"

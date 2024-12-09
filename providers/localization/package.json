@@ -19,7 +19,7 @@
     "@mui/material": "6.1.10",
     "@types/react": "19.0.1",
     "react": "19.0.0",
-    "react-intl": "7.0.1"
+    "react-intl": "7.0.4"
   },
   "engines": {
     "node": ">=22"
