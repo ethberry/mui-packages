@@ -30,7 +30,7 @@
     "@web3-react/core": "8.2.3",
     "notistack": "3.0.1",
     "react": "19.0.0",
-    "react-intl": "7.0.1",
+    "react-intl": "7.0.4",
     "react-router": "7.0.2"
   },
   "engines": {

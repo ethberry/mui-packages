@@ -10,8 +10,8 @@
     "react-scripts": "5.0.1"
   },
   "devDependencies": {
-    "@emotion/react": "11.13.5",
-    "@emotion/styled": "11.13.5",
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.0",
     "@ethberry/eslint-config": "5.0.4",
     "@storybook/addon-essentials": "8.4.7",
     "@storybook/addon-interactions": "8.4.7",
