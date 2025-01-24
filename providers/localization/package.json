@@ -11,15 +11,15 @@
     "@ethberry/constants": "0.13.6",
     "@ethberry/redux": "1.0.0",
     "@ethberry/utils": "1.6.1",
-    "@reduxjs/toolkit": "2.4.0"
+    "@reduxjs/toolkit": "2.5.0"
   },
   "description": "react i18n provider",
   "devDependencies": {
     "@mui/icons-material": "6.1.10",
     "@mui/material": "6.1.10",
-    "@types/react": "19.0.1",
+    "@types/react": "19.0.8",
     "react": "19.0.0",
-    "react-intl": "7.0.4"
+    "react-intl": "7.1.5"
   },
   "engines": {
     "node": ">=22"

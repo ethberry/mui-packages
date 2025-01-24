@@ -14,16 +14,16 @@
     "@ethersproject/logger": "5.7.0",
     "@json-rpc-tools/utils": "1.7.6",
     "ethers": "5.7.2",
-    "qs": "6.13.1",
+    "qs": "6.14.0",
     "use-deep-compare-effect": "1.8.1"
   },
   "description": "react hooks",
   "devDependencies": {
     "@ethberry/provider-wallet": "5.0.0",
     "@web3-react/core": "8.2.3",
-    "notistack": "3.0.1",
+    "notistack": "3.0.2",
     "react": "19.0.0",
-    "react-intl": "7.0.4"
+    "react-intl": "7.1.5"
   },
   "engines": {
     "node": ">=22"
@@ -36,7 +36,7 @@
     "@web3-react/core": "^8.0.0",
     "notistack": "^3.0.0",
     "react": "^19.0.0",
-    "react-intl": "7.0.4"
+    "react-intl": "7.1.5"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

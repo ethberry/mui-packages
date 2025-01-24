@@ -11,17 +11,17 @@
     "@ethberry/mui-inputs-core": "9.0.0",
     "@ethberry/provider-test-id": "2.0.0",
     "@mui/styles": "6.1.10",
-    "react-number-format": "5.4.2"
+    "react-number-format": "5.4.3"
   },
   "description": "react widget",
   "devDependencies": {
     "@mui/material": "6.1.10",
-    "@storybook/react": "8.4.7",
-    "@types/react": "19.0.1",
+    "@storybook/react": "8.5.1",
+    "@types/react": "19.0.8",
     "ethers": "5.7.2",
     "react": "19.0.0",
-    "react-hook-form": "7.54.0",
-    "react-intl": "7.0.4"
+    "react-hook-form": "7.54.2",
+    "react-intl": "7.1.5"
   },
   "engines": {
     "node": ">=22"

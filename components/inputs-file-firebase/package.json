@@ -10,15 +10,15 @@
   "dependencies": {
     "@ethberry/firebase": "2.0.1",
     "@ethberry/mui-inputs-file": "8.0.0",
-    "uuid": "11.0.3"
+    "uuid": "11.0.5"
   },
   "description": "react widget",
   "devDependencies": {
     "@types/uuid": "10.0.0",
-    "firebase": "11.0.2",
-    "notistack": "3.0.1",
+    "firebase": "11.2.0",
+    "notistack": "3.0.2",
     "react": "19.0.0",
-    "react-intl": "7.0.4"
+    "react-intl": "7.1.5"
   },
   "engines": {
     "node": ">=22"
