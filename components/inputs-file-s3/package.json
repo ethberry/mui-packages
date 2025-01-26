@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@ethberry/mui-inputs-file": "8.0.0",
-    "@ethberry/provider-api": "8.0.1",
+    "@ethberry/provider-api": "8.0.2",
     "@ethberry/react-hooks": "3.0.0",
     "mime-types": "2.1.35"
   },
