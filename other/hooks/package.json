@@ -15,7 +15,7 @@
   "description": "react hooks",
   "devDependencies": {
     "@ethberry/provider-api": "8.0.2",
-    "@ethberry/redux": "1.0.0",
+    "@ethberry/redux": "1.0.1",
     "notistack": "3.0.2",
     "react": "19.0.0",
     "react-hook-form": "7.54.2",
@@ -54,5 +54,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "3.0.0"
+  "version": "3.0.1"
 }

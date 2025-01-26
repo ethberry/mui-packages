@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.1](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-form-search@9.0.0...@ethberry/mui-form-search@9.0.1) (2025-01-26)
+
+### Bug Fixes
+
+- **deps:** update [@mui](https://github.com/mui) packages ([3cf5d84](https://github.com/ethberry/mui-packages/commit/3cf5d84b27874150d967669c18d21aa5c840f203))
+- **deps:** update all non-major dependencies ([d1491e2](https://github.com/ethberry/mui-packages/commit/d1491e2dc8bb3415d4445a5b8ef5806d0e9f9335))
+- **deps:** update all non-major dependencies ([ff4a6c9](https://github.com/ethberry/mui-packages/commit/ff4a6c9f8ec6a0395bb4de381d5e6f571356b485))
+
 # [9.0.0](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-form-search@8.0.11...@ethberry/mui-form-search@9.0.0) (2024-12-07)
 
 **Note:** Version bump only for package @ethberry/mui-form-search

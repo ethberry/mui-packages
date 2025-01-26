@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@ethberry/firebase": "2.0.2",
-    "@ethberry/mui-inputs-file": "8.0.0",
+    "@ethberry/mui-inputs-file": "8.0.1",
     "uuid": "11.0.5"
   },
   "description": "react widget",
@@ -51,5 +51,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "8.0.0"
+  "version": "8.0.1"
 }
