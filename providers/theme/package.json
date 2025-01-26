@@ -12,7 +12,7 @@
     "@emotion/react": "11.14.0",
     "@ethberry/constants": "0.13.6",
     "@ethberry/utils": "1.6.1",
-    "@mui/styles": "6.1.10",
+    "@mui/styles": "6.4.1",
     "@reduxjs/toolkit": "2.5.0",
     "jss": "10.10.0",
     "jss-rtl": "0.3.0",
@@ -22,8 +22,8 @@
   "description": "Material UI theme provider",
   "devDependencies": {
     "@ethberry/redux": "1.0.0",
-    "@mui/icons-material": "6.1.10",
-    "@mui/material": "6.1.10",
+    "@mui/icons-material": "6.4.1",
+    "@mui/material": "6.4.1",
     "@types/stylis": "4.2.7",
     "react": "19.0.0",
     "react-intl": "7.1.5"

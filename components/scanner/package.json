@@ -11,8 +11,8 @@
   "devDependencies": {
     "@ethberry/provider-wallet": "5.0.0",
     "@ethberry/redux": "1.0.0",
-    "@mui/material": "6.1.10",
-    "@mui/styles": "6.1.10",
+    "@mui/material": "6.4.1",
+    "@mui/styles": "6.4.1",
     "@types/react": "19.0.8",
     "@web3-react/core": "8.2.3",
     "react": "19.0.0"

@@ -10,12 +10,12 @@
   "dependencies": {
     "@ethberry/mui-inputs-core": "9.0.0",
     "@ethberry/provider-test-id": "2.0.0",
-    "@mui/styles": "6.1.10",
+    "@mui/styles": "6.4.1",
     "react-number-format": "5.4.3"
   },
   "description": "react widget",
   "devDependencies": {
-    "@mui/material": "6.1.10",
+    "@mui/material": "6.4.1",
     "@storybook/react": "8.5.1",
     "@types/react": "19.0.8",
     "ethers": "5.7.2",
