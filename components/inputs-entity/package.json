@@ -16,7 +16,7 @@
   },
   "description": "react widget",
   "devDependencies": {
-    "@ethberry/provider-api": "8.0.1",
+    "@ethberry/provider-api": "8.0.2",
     "@mui/icons-material": "6.4.1",
     "@mui/lab": "6.0.0-beta.24",
     "@mui/material": "6.4.1",

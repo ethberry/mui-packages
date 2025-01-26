@@ -14,7 +14,7 @@
     "@ethberry/mui-inputs-mask": "7.0.0",
     "@ethberry/react-hooks": "3.0.0",
     "@ethberry/types-blockchain": "1.3.6",
-    "@ethberry/yup-rules-eth": "2.1.42"
+    "@ethberry/yup-rules-eth": "2.1.43"
   },
   "description": "react 1inch",
   "devDependencies": {
