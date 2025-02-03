@@ -3,7 +3,7 @@ import { SvgIcon, SvgIconProps } from "@mui/material";
 
 export const Optimism: FC<SvgIconProps> = props => {
   return (
-    <SvgIcon {...props}>
+    <SvgIcon {...props} viewBox="0 0 60 60">
       <path
         d="M29.9994 59.3336C46.1996 59.3336 59.3326 46.2006 59.3326 30.0004C59.3326 13.8 46.1996 0.666992 29.9994 0.666992C13.799 0.666992 0.666016 13.8 0.666016 30.0004C0.666016 46.2006 13.799 59.3336 29.9994 59.3336Z"
         fill="#FF0420"

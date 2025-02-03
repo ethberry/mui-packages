@@ -3,7 +3,7 @@ import { SvgIcon, SvgIconProps } from "@mui/material";
 
 export const Telos: FC<SvgIconProps> = props => {
   return (
-    <SvgIcon {...props}>
+    <SvgIcon {...props} viewBox="0 0 60 60">
       <defs>
         <clipPath id="clip1">
           <path d="M 7 7 L 53 7 L 53 53 L 7 53 Z M 7 7 " />

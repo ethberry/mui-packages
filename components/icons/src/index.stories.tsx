@@ -1,7 +1,7 @@
 import { IconButton } from "@mui/material";
 import { StoryObj } from "@storybook/react";
 
-import { Besu, Arbitrum, Binance, Ethereum, ImmutableZkEVM, Optimism, Polygon, Sepolia } from "./chains";
+import { Besu, Arbitrum, Binance, Ethereum, ImmutableZkEVM, Optimism, Polygon, Sepolia, Telos } from "./chains";
 import { MetaMaskIcon, ParticleIcon, WalletConnectIcon, ZealIcon } from "./wallets";
 
 export default {
@@ -37,6 +37,9 @@ const SimpleTemplate: Story = {
       </IconButton>
       <IconButton>
         <Sepolia />
+      </IconButton>
+      <IconButton>
+        <Telos />
       </IconButton>
     </div>
   ),
