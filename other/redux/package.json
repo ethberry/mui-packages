@@ -11,7 +11,7 @@
     "@ethberry/constants": "0.13.6",
     "@ethberry/types-blockchain": "1.3.6",
     "@ethberry/utils": "1.6.1",
-    "@reduxjs/toolkit": "2.5.0",
+    "@reduxjs/toolkit": "2.5.1",
     "react-redux": "9.2.0"
   },
   "description": "react redux store",
