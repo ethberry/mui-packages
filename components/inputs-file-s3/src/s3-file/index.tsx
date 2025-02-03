@@ -67,7 +67,6 @@ export const S3FileInput: FC<IS3FileInputProps> = props => {
       return;
     }
 
-    // eslint-disable-next-line no-new
     await uploadFilesToS3({ files });
   }, []);
 

@@ -1,5 +1,5 @@
 import { FC, ReactElement } from "react";
-import { Box, FormControl, FormHelperText, Grid, IconButton, InputLabel, Tooltip } from "@mui/material";
+import { Box, FormControl, FormHelperText, Grid2, IconButton, InputLabel, Tooltip } from "@mui/material";
 import { Delete } from "@mui/icons-material";
 import { DropzoneOptions } from "react-dropzone";
 import { get, useFormContext, useWatch } from "react-hook-form";
@@ -79,8 +79,8 @@ export const VideoInput: FC<IVideoInputProps> = props => {
       <InputLabel id={`${name}-select-label`} shrink>
         <FormattedMessage id={`form.labels.${name}`} />
       </InputLabel>
-      <Grid container className={classes.container}>
-        <Grid item>
+      <Grid2 container className={classes.container}>
+        <Grid2>
           <S3FileInput
             label={label}
             name={name}
@@ -90,8 +90,8 @@ export const VideoInput: FC<IVideoInputProps> = props => {
             maxSize={maxSize}
             maxFiles={1}
           />
-        </Grid>
-      </Grid>
+        </Grid2>
+      </Grid2>
     </FormControl>
   );
 };

@@ -1,7 +1,7 @@
 import { FC, useEffect } from "react";
 import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
-import { Grid } from "@mui/material";
+import { Grid2 } from "@mui/material";
 
 import { PasswordInput, TextInput } from "@ethberry/mui-inputs-core";
 import { PageHeader } from "@ethberry/mui-page-layout";
@@ -55,7 +55,7 @@ export const SystemLogin: FC = () => {
   }, []);
 
   return (
-    <Grid
+    <Grid2
       container
       sx={{
         display: "flex",
@@ -66,7 +66,7 @@ export const SystemLogin: FC = () => {
         margin: "0 auto",
       }}
     >
-      <Grid item sm={12}>
+      <Grid2 size={{ sm: 12 }}>
         <PageHeader message="pages.guest.login" />
 
         <FormWrapper
@@ -84,8 +84,8 @@ export const SystemLogin: FC = () => {
           <PasswordInput name="password" autoComplete="current-password" />
           <LoginButtons />
         </FormWrapper>
-      </Grid>
-    </Grid>
+      </Grid2>
+    </Grid2>
   );
 };
 

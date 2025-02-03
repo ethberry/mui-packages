@@ -2,7 +2,7 @@ import { FC, useEffect } from "react";
 import { useNavigate, useParams } from "react-router";
 import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
-import { Grid } from "@mui/material";
+import { Grid2 } from "@mui/material";
 
 import { ProgressOverlay } from "@ethberry/mui-page-layout";
 import { useUser } from "@ethberry/provider-user";
@@ -30,7 +30,7 @@ export const VerifyEmail: FC = () => {
       .catch((e: ApiError) => {
         if (e.status) {
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
-          navigate("/resend-verification-email");
+          void navigate("/resend-verification-email");
         } else {
           console.error(e);
           enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
@@ -39,13 +39,13 @@ export const VerifyEmail: FC = () => {
   }, []);
 
   return (
-    <Grid
+    <Grid2
       sx={{
         width: 400,
         margin: "auto",
       }}
     >
       <ProgressOverlay isLoading={true} />
-    </Grid>
+    </Grid2>
   );
 };

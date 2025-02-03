@@ -117,7 +117,7 @@ export const useCollection = <
 
     const shouldReplace = !location.search || location.search === "?" || !id;
 
-    navigate(redirect(baseUrl, rest, id, action), {
+    void navigate(redirect(baseUrl, rest, id, action), {
       replace: shouldReplace,
     });
   };

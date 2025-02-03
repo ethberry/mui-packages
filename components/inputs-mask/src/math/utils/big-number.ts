@@ -32,11 +32,9 @@ export function format(value: any, options: any): string {
 
   switch (notation) {
     case "fixed":
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
       return toFixed(value, precision);
 
     case "exponential":
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
       return toExponential(value, precision);
 
     case "auto": {
@@ -51,7 +49,6 @@ export function format(value: any, options: any): string {
       if (exp >= lowerExp && exp < upperExp) {
         str = rounded.toFixed();
       } else {
-        // eslint-disable-next-line @typescript-eslint/no-use-before-define
         str = toExponential(value, precision);
       }
 

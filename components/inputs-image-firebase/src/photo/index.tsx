@@ -1,5 +1,5 @@
 import { FC, ReactElement, useState } from "react";
-import { Button, Card, CardActions, CardContent, CardMedia, FormControl, Grid, InputLabel } from "@mui/material";
+import { Button, Card, CardActions, CardContent, CardMedia, FormControl, Grid2, InputLabel } from "@mui/material";
 import { get, useFormContext, useWatch } from "react-hook-form";
 import { FormattedMessage } from "react-intl";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
@@ -93,7 +93,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
       <DragDropContext onDragEnd={handleDragEnd}>
         <Droppable droppableId="droppable" direction="horizontal">
           {provided => (
-            <Grid
+            <Grid2
               container
               direction="row"
               justifyContent="flex-start"
@@ -102,7 +102,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
               sx={{ mt: 1 }}
               {...provided.droppableProps}
             >
-              <Grid item>
+              <Grid2>
                 <ProgressOverlay isLoading={isLoading}>
                   <FirebaseFileInput
                     name={name}
@@ -113,11 +113,11 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
                     accept={accept}
                   />
                 </ProgressOverlay>
-              </Grid>
+              </Grid2>
               {value.map((option: { imageUrl: string; title: string }, i: number) => (
                 <Draggable key={i} draggableId={i.toString()} index={i}>
                   {provided => (
-                    <Grid item ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
+                    <Grid2 ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
                       <Card>
                         <CardMedia
                           image={option.imageUrl}
@@ -136,12 +136,12 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
                           </Button>
                         </CardActions>
                       </Card>
-                    </Grid>
+                    </Grid2>
                   )}
                 </Draggable>
               ))}
               {provided.placeholder}
-            </Grid>
+            </Grid2>
           )}
         </Droppable>
       </DragDropContext>

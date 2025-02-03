@@ -1,6 +1,10 @@
 import { isNumber } from "../is";
 
-interface ISplitValue { sign: "+" | "-" | ""; coefficients: number[]; exponent: number }
+interface ISplitValue {
+  sign: "+" | "-" | "";
+  coefficients: number[];
+  exponent: number;
+}
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export function format(value: number, options: object | Function | number): string {
@@ -41,15 +45,12 @@ export function format(value: number, options: object | Function | number): stri
 
   switch (notation) {
     case "fixed":
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
       return toFixed(value, precision);
 
     case "exponential":
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
       return toExponential(value, precision);
 
     case "auto":
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
       return toPrecision(value, precision, options && (options as any)).replace(/((\.\d*?)(0+))($|e)/, function () {
         // eslint-disable-next-line prefer-rest-params
         const digits = arguments[2];
@@ -67,8 +68,7 @@ export function format(value: number, options: object | Function | number): stri
 }
 
 export function splitNumber(value: number | string): ISplitValue {
-  const match = /^(-?)(\d+\.?\d*)(e([+-]?\d+))?$/.exec(String(value)
-    .toLowerCase());
+  const match = /^(-?)(\d+\.?\d*)(e([+-]?\d+))?$/.exec(String(value).toLowerCase());
   if (!match) {
     throw new SyntaxError("Invalid number " + value);
   }
@@ -107,19 +107,16 @@ export function toFixed(value: any, precision?: number): string {
 
   const splitValue = splitNumber(value);
   const rounded =
-    // eslint-disable-next-line @typescript-eslint/no-use-before-define
     typeof precision === "number" ? roundDigits(splitValue, splitValue.exponent + 1 + precision) : splitValue;
   let c = rounded.coefficients;
   let p = rounded.exponent + 1; // exponent may have changed
 
   const pp = p + (precision || 0);
   if (c.length < pp) {
-    // eslint-disable-next-line @typescript-eslint/no-use-before-define
     c = c.concat(zeros(pp - c.length));
   }
 
   if (p < 0) {
-    // eslint-disable-next-line @typescript-eslint/no-use-before-define
     c = zeros(-p + 1).concat(c);
     p = 1;
   }
@@ -137,13 +134,12 @@ export function toExponential(value: any, precision?: number) {
   }
 
   const split = splitNumber(value);
-  // eslint-disable-next-line @typescript-eslint/no-use-before-define
+
   const rounded = precision ? roundDigits(split, precision) : split;
   let c = rounded.coefficients;
   const e = rounded.exponent;
 
   if (typeof precision === "number" && c.length < precision) {
-    // eslint-disable-next-line @typescript-eslint/no-use-before-define
     c = c.concat(zeros(precision - c.length));
   }
 
@@ -167,7 +163,7 @@ export function toPrecision(
   const upperExp = options?.upperExp !== undefined ? options.upperExp : 5;
 
   const split = splitNumber(value);
-  // eslint-disable-next-line @typescript-eslint/no-use-before-define
+
   const rounded = precision ? roundDigits(split, precision) : split;
   if (rounded.exponent < lowerExp || rounded.exponent >= upperExp) {
     return toExponential(value, precision);
@@ -176,14 +172,11 @@ export function toPrecision(
     const e = rounded.exponent;
 
     if (precision && c.length < precision) {
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
       c = c.concat(zeros(precision - c.length));
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-use-before-define
     c = c.concat(zeros(e - c.length + 1 + (precision && c.length < precision ? precision - c.length : 0)));
 
-    // eslint-disable-next-line @typescript-eslint/no-use-before-define
     c = zeros(-e).concat(c);
 
     const dot = e > 0 ? e : 0;

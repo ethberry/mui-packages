@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useNavigate } from "react-router";
 import { enqueueSnackbar } from "notistack";
-import { Grid } from "@mui/material";
+import { Grid2 } from "@mui/material";
 import { useIntl } from "react-intl";
 
 import { Captcha } from "@ethberry/mui-inputs-captcha";
@@ -31,7 +31,7 @@ export const ResendVerificationEmail: FC = () => {
         data: values,
       })
       .then(() => {
-        navigate("/message/resend-successful");
+        void navigate("/message/resend-successful");
       })
       .catch((e: ApiError) => {
         if (e.status === 400) {
@@ -50,7 +50,7 @@ export const ResendVerificationEmail: FC = () => {
   };
 
   return (
-    <Grid
+    <Grid2
       container
       sx={{
         alignItems: "center",
@@ -58,7 +58,7 @@ export const ResendVerificationEmail: FC = () => {
         margin: "0 auto",
       }}
     >
-      <Grid item sm={10}>
+      <Grid2 size={{ sm: 10 }}>
         <PageHeader message="pages.guest.resendVerificationEmail" />
 
         <FormWrapper
@@ -73,7 +73,7 @@ export const ResendVerificationEmail: FC = () => {
           <TextInput name="email" autoComplete="username" />
           <Captcha />
         </FormWrapper>
-      </Grid>
-    </Grid>
+      </Grid2>
+    </Grid2>
   );
 };

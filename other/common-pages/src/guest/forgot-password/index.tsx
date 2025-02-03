@@ -1,5 +1,5 @@
 import { FC, useEffect } from "react";
-import { Grid } from "@mui/material";
+import { Grid2 } from "@mui/material";
 import { useNavigate } from "react-router";
 import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
@@ -33,7 +33,7 @@ export const ForgotPassword: FC = () => {
         data: values,
       })
       .then(() => {
-        navigate("/message/forgot-successful");
+        void navigate("/message/forgot-successful");
       })
       .catch((e: ApiError) => {
         if (e.status === 400) {
@@ -58,7 +58,7 @@ export const ForgotPassword: FC = () => {
   }, [user.isAuthenticated()]);
 
   return (
-    <Grid
+    <Grid2
       container
       sx={{
         display: "flex",
@@ -68,7 +68,7 @@ export const ForgotPassword: FC = () => {
         margin: "0 auto",
       }}
     >
-      <Grid item sm={10}>
+      <Grid2 size={{ sm: 10 }}>
         <PageHeader message="pages.guest.forgotPassword" />
         <FormWrapper
           validationSchema={validationSchema}
@@ -82,7 +82,7 @@ export const ForgotPassword: FC = () => {
           <TextInput name="email" autoComplete="username" />
           <Captcha />
         </FormWrapper>
-      </Grid>
-    </Grid>
+      </Grid2>
+    </Grid2>
   );
 };

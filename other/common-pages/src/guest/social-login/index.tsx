@@ -1,7 +1,7 @@
 import { FC, useEffect } from "react";
 import { enqueueSnackbar } from "notistack";
 import { FormattedMessage, useIntl } from "react-intl";
-import { Button, Grid } from "@mui/material";
+import { Button, Grid2 } from "@mui/material";
 import { Facebook, Google } from "@mui/icons-material";
 
 import { PasswordInput, TextInput } from "@ethberry/mui-inputs-core";
@@ -58,7 +58,7 @@ export const SocialLogin: FC = () => {
   }, []);
 
   return (
-    <Grid
+    <Grid2
       container
       sx={{
         display: "flex",
@@ -69,7 +69,7 @@ export const SocialLogin: FC = () => {
         margin: "0 auto",
       }}
     >
-      <Grid item sm={12}>
+      <Grid2 size={{ sm: 12 }}>
         <PageHeader message="pages.guest.login" />
 
         <FormWrapper
@@ -107,7 +107,7 @@ export const SocialLogin: FC = () => {
             <FormattedMessage id="form.buttons.facebook" />
           </Button>
         </ButtonToolbar>
-      </Grid>
-    </Grid>
+      </Grid2>
+    </Grid2>
   );
 };

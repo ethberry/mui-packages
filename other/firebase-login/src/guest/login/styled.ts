@@ -1,7 +1,7 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid2 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const StyledContainer = styled(Grid)(({ theme }) => ({
+export const StyledContainer = styled(Grid2)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",

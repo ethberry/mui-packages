@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { useNavigate, useParams } from "react-router";
-import { Grid } from "@mui/material";
+import { Grid2 } from "@mui/material";
 import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
@@ -33,7 +33,7 @@ export const RestorePassword: FC = () => {
       })
       .then(() => {
         enqueueSnackbar(formatMessage({ id: "snackbar.passwordChanged" }), { variant: "success" });
-        navigate("/login");
+        void navigate("/login");
       })
       .catch((e: ApiError) => {
         if (e.status === 400) {
@@ -44,7 +44,7 @@ export const RestorePassword: FC = () => {
           });
         } else if (e.status) {
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
-          navigate("/forgot-password");
+          void navigate("/forgot-password");
         } else {
           console.error(e);
           enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
@@ -53,7 +53,7 @@ export const RestorePassword: FC = () => {
   };
 
   return (
-    <Grid
+    <Grid2
       sx={{
         alignItems: "center",
         justifyContent: "center",
@@ -75,6 +75,6 @@ export const RestorePassword: FC = () => {
         <PasswordInput name="password" autoComplete="new-password" />
         <PasswordInput name="confirm" autoComplete="new-password" />
       </FormWrapper>
-    </Grid>
+    </Grid2>
   );
 };

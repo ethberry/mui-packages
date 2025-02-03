@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Grid } from "@mui/material";
+import { Grid2 } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 import { Clear, Done } from "@mui/icons-material";
 
@@ -91,9 +91,9 @@ const ratePlans = [
 
 export const RatePlansSelection: FC = () => {
   return (
-    <Grid container justifyContent="center" spacing={2}>
+    <Grid2 container justifyContent="center" spacing={2}>
       {ratePlans.map((plan, index) => (
-        <StyledCardWrapper item xs={12} sm={6} md={4} key={index}>
+        <StyledCardWrapper size={{ xs: 12, sm: 6, md: 4 }} key={index}>
           <StyledCard>
             <StyledCardContent>
               <TitleTypography variant="h6">
@@ -128,15 +128,15 @@ export const RatePlansSelection: FC = () => {
         </StyledCardWrapper>
       ))}
 
-      <StyledCardWrapper item xs={12}>
+      <StyledCardWrapper size={{ xs: 12 }}>
         <StyledCard>
           <StyledCardContent>
             <TitleTypography variant="h6">
               <FormattedMessage id="pages.ratePlan.alwaysIncluded.title" />
             </TitleTypography>
             <Divider />
-            <Grid container spacing={{ sm: 0, md: 4 }} justifyContent="center">
-              <Grid item xs={12} sm={6} md={6} justifyContent="center">
+            <Grid2 container spacing={{ sm: 0, md: 4 }} justifyContent="center">
+              <Grid2 size={{ xs: 12, sm: 6, md: 6 }} justifyContent="center">
                 <FeatureWrapper sx={{ justifyContent: "center" }}>
                   <FeatureIconWrapper>
                     <FeatureIconIncluded component={Done} />
@@ -145,8 +145,8 @@ export const RatePlansSelection: FC = () => {
                     <FormattedMessage id="pages.ratePlan.alwaysIncluded.history" />
                   </FeatureTypography>
                 </FeatureWrapper>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} justifyContent="center">
+              </Grid2>
+              <Grid2 size={{ xs: 12, sm: 6, md: 6 }} justifyContent="center">
                 <FeatureWrapper sx={{ justifyContent: "center" }}>
                   <FeatureIconWrapper>
                     <FeatureIconIncluded component={Done} />
@@ -155,8 +155,8 @@ export const RatePlansSelection: FC = () => {
                     <FormattedMessage id="pages.ratePlan.alwaysIncluded.openSea" />
                   </FeatureTypography>
                 </FeatureWrapper>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} justifyContent="center">
+              </Grid2>
+              <Grid2 size={{ xs: 12, sm: 6, md: 6 }} justifyContent="center">
                 <FeatureWrapper sx={{ justifyContent: "center" }}>
                   <FeatureIconWrapper>
                     <FeatureIconIncluded component={Done} />
@@ -165,8 +165,8 @@ export const RatePlansSelection: FC = () => {
                     <FormattedMessage id="pages.ratePlan.alwaysIncluded.insights" />
                   </FeatureTypography>
                 </FeatureWrapper>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} justifyContent="center">
+              </Grid2>
+              <Grid2 size={{ xs: 12, sm: 6, md: 6 }} justifyContent="center">
                 <FeatureWrapper sx={{ justifyContent: "center" }}>
                   <FeatureIconWrapper>
                     <FeatureIconIncluded component={Done} />
@@ -175,11 +175,11 @@ export const RatePlansSelection: FC = () => {
                     <FormattedMessage id="pages.ratePlan.alwaysIncluded.dispenser" />
                   </FeatureTypography>
                 </FeatureWrapper>
-              </Grid>
-            </Grid>
+              </Grid2>
+            </Grid2>
           </StyledCardContent>
         </StyledCard>
       </StyledCardWrapper>
-    </Grid>
+    </Grid2>
   );
 };

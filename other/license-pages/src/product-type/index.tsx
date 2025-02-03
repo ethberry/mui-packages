@@ -25,7 +25,7 @@ export const ProductTypeSelection: FC<IProductTypeSelectionProps> = props => {
   return (
     <StyledCardsWrapper container justifyContent="center" spacing={4}>
       {productTypes.map((type, index) => (
-        <StyledCardWrapper item xs={12} sm={6} md={4} key={index}>
+        <StyledCardWrapper size={{ xs: 12, sm: 6, md: 4 }} key={index}>
           <StyledCard>
             <StyledCardContent>
               <TitleTypography variant="h6">{type.title}</TitleTypography>

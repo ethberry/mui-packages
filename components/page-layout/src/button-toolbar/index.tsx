@@ -1,5 +1,5 @@
 import { FC, Children, cloneElement, ReactElement, PropsWithChildren } from "react";
-import { Grid, ButtonProps } from "@mui/material";
+import { Grid2, ButtonProps } from "@mui/material";
 import { Property } from "csstype";
 import { clsx } from "clsx";
 
@@ -16,12 +16,12 @@ export const ButtonToolbar: FC<PropsWithChildren<IButtonToolbarProps>> = props =
   const classes = useStyles();
 
   return (
-    <Grid container justifyContent={justifyContent} className={className}>
+    <Grid2 container justifyContent={justifyContent} className={className}>
       {Children.map(children as Array<any>, (button: ReactElement<ButtonProps>) =>
         cloneElement(button, {
           className: clsx(classes[justifyContent], button.props.className),
         }),
       )}
-    </Grid>
+    </Grid2>
   );
 };

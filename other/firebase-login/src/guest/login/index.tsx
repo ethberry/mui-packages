@@ -1,5 +1,5 @@
 import { FC, useEffect, useLayoutEffect, useMemo, useState } from "react";
-import { Box, Button, Grid, SxProps } from "@mui/material";
+import { Box, Button, Grid2, SxProps } from "@mui/material";
 import { NavigateNext } from "@mui/icons-material";
 import { auth } from "firebaseui";
 import {
@@ -63,7 +63,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
   const signInOptions = useMemo(() => providers.map(name => providersStore[name]), [providers]);
 
   const handleMainPageClick = () => {
-    navigate("/");
+    void navigate("/");
   };
 
   const authFb = getAuth(firebase);
@@ -127,7 +127,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
   return (
     <ProgressOverlay isLoading={isLoggingIn} spinnerSx={{ zIndex: 1000 }}>
       <StyledContainer sx={sx} container>
-        <Grid className="FirebaseLogin-buttonsBox" item xs={12}>
+        <Grid2 size={{ xs: 12 }} className="FirebaseLogin-buttonsBox">
           {showMessage && (
             <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
               <FormattedMessage id="pages.guest.confirmation" />
@@ -148,7 +148,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
           {buttons.map((Button, i) => (
             <Button key={i} onTokenVerified={handleTokenVerified} />
           ))}
-        </Grid>
+        </Grid2>
       </StyledContainer>
     </ProgressOverlay>
   );

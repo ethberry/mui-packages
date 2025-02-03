@@ -13,7 +13,6 @@ const controlCharacters: Record<string, string> = {
 };
 
 export function format(value: any, options: any): string {
-  // eslint-disable-next-line @typescript-eslint/no-use-before-define
   const result = _format(value, options);
   if (options && typeof options === "object" && "truncate" in options && result.length > options.truncate) {
     return result.substring(0, options.truncate - 3) + "...";

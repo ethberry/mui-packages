@@ -2,7 +2,7 @@ import { FC } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { FormattedMessage } from "react-intl";
 import { Controller, get, useFormContext } from "react-hook-form";
-import { Grid, FormHelperText } from "@mui/material";
+import { Grid2, FormHelperText } from "@mui/material";
 
 import { useTestId } from "@ethberry/provider-test-id";
 
@@ -28,7 +28,7 @@ export const Captcha: FC<ICaptchaProps> = props => {
       name={name}
       control={form.control}
       render={({ field }) => (
-        <Grid sx={{ my: 1 }}>
+        <Grid2 sx={{ my: 1 }}>
           <ReCAPTCHA
             sitekey={siteKey}
             {...field}
@@ -42,7 +42,7 @@ export const Captcha: FC<ICaptchaProps> = props => {
               <FormattedMessage id={error.message} />
             </FormHelperText>
           ) : null}
-        </Grid>
+        </Grid2>
       )}
     />
   );

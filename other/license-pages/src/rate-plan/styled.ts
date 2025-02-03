@@ -1,7 +1,7 @@
-import { Box, Grid, Card, CardContent, SvgIcon, Typography, TypographyProps } from "@mui/material";
+import { Box, Grid2, Card, CardContent, SvgIcon, Typography, TypographyProps } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const StyledCardWrapper = styled(Grid)(({ theme }) => ({
+export const StyledCardWrapper = styled(Grid2)(({ theme }) => ({
   width: "100%",
   height: "auto",
   marginTop: theme.spacing(2),

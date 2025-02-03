@@ -1,6 +1,6 @@
 import { FC, ReactElement } from "react";
 import { get, useFormContext, useWatch } from "react-hook-form";
-import { Box, FormControl, FormHelperText, Grid, IconButton, InputLabel, Tooltip } from "@mui/material";
+import { Box, FormControl, FormHelperText, Grid2, IconButton, InputLabel, Tooltip } from "@mui/material";
 import { Delete } from "@mui/icons-material";
 import { FormattedMessage, useIntl } from "react-intl";
 import { clsx } from "clsx";
@@ -79,11 +79,11 @@ export const ImageInput: FC<IImageInputProps> = props => {
       <InputLabel id={`${name}-select-label`} shrink>
         <FormattedMessage id={`form.labels.${name}`} />
       </InputLabel>
-      <Grid container className={classes.container}>
-        <Grid item>
+      <Grid2 container className={classes.container}>
+        <Grid2>
           <S3FileInput label={label} name={name} onChange={onChange} bucket={bucket} accept={accept} maxFiles={1} />
-        </Grid>
-      </Grid>
+        </Grid2>
+      </Grid2>
     </FormControl>
   );
 };

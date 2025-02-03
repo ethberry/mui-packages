@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren, useEffect } from "react";
-import { Grid } from "@mui/material";
+import { Grid2 } from "@mui/material";
 import { useNavigate } from "react-router";
 import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
@@ -27,7 +27,7 @@ export const RegistrationBase: FC<PropsWithChildren<IRegistrationBaseProps>> = p
       .signUp(values)
       .then(() => {
         enqueueSnackbar(formatMessage({ id: "snackbar.created" }), { variant: "success" });
-        navigate("/message/registration-successful");
+        void navigate("/message/registration-successful");
       })
       .catch((e: ApiError) => {
         if (e.status === 400) {
@@ -52,7 +52,7 @@ export const RegistrationBase: FC<PropsWithChildren<IRegistrationBaseProps>> = p
   }, [user.isAuthenticated()]);
 
   return (
-    <Grid
+    <Grid2
       container
       sx={{
         display: "flex",
@@ -63,7 +63,7 @@ export const RegistrationBase: FC<PropsWithChildren<IRegistrationBaseProps>> = p
         margin: "0 auto",
       }}
     >
-      <Grid item sm={12}>
+      <Grid2 size={{ sm: 12 }}>
         <PageHeader message="pages.guest.registration" />
         <FormWrapper
           onSubmit={handleSubmit}
@@ -73,7 +73,7 @@ export const RegistrationBase: FC<PropsWithChildren<IRegistrationBaseProps>> = p
         >
           {children}
         </FormWrapper>
-      </Grid>
-    </Grid>
+      </Grid2>
+    </Grid2>
   );
 };

@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren } from "react";
 import { FormattedMessage } from "react-intl";
-import { Grid, Typography } from "@mui/material";
+import { Grid2, Typography } from "@mui/material";
 import { SxProps, Theme } from "@mui/material/styles";
 
 import { ButtonToolbar } from "../button-toolbar";
@@ -15,7 +15,7 @@ export const PageHeader: FC<PropsWithChildren<IPageHeader>> = props => {
   const { children, message, data, sx = [] } = props;
 
   return (
-    <Grid
+    <Grid2
       container
       justifyContent="space-between"
       alignItems="center"
@@ -29,7 +29,7 @@ export const PageHeader: FC<PropsWithChildren<IPageHeader>> = props => {
         ...(Array.isArray(sx) ? sx : [sx]),
       ]}
     >
-      <Grid item sx={{ mr: 2 }}>
+      <Grid2 sx={{ mr: 2 }}>
         <Typography
           component="h2"
           sx={[
@@ -41,17 +41,16 @@ export const PageHeader: FC<PropsWithChildren<IPageHeader>> = props => {
         >
           <FormattedMessage id={message} values={data} />
         </Typography>
-      </Grid>
+      </Grid2>
 
-      <Grid
-        item
+      <Grid2
         sx={{
           display: "flex",
           flexGrow: 1,
         }}
       >
         <ButtonToolbar>{children}</ButtonToolbar>
-      </Grid>
-    </Grid>
+      </Grid2>
+    </Grid2>
   );
 };
