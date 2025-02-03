@@ -28,21 +28,17 @@ export default {
 
 type Story = StoryObj<typeof SwitchInput>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <SwitchInput {...args} />,
+  args: {
+    name: "switch",
+  },
 };
-//
-// export const Simple = {
-//   ...Template,
-//   args: {
-//     name: "switch",
-//   },
-// };
-//
-// export const Disabled = {
-//   ...Template,
-//   args: {
-//     name: "switch",
-//     disabled: true,
-//   },
-// };
+
+export const Disabled: Story = {
+  render: args => <SwitchInput {...args} />,
+  args: {
+    name: "switch",
+    disabled: true,
+  },
+};

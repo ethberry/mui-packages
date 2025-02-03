@@ -29,21 +29,17 @@ export default {
 
 type Story = StoryObj<typeof TextArea>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <TextArea {...args} />,
+  args: {
+    name: "textarea",
+  },
 };
-//
-// export const Simple = {
-//   ...Template,
-//   args: {
-//     name: "textarea",
-//   },
-// };
-//
-// export const Disabled = {
-//   ...Template,
-//   args: {
-//     name: "textarea",
-//     disabled: true,
-//   },
-// };
+
+export const Disabled: Story = {
+  render: args => <TextArea {...args} />,
+  args: {
+    name: "textarea",
+    disabled: true,
+  },
+};

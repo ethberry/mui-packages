@@ -40,12 +40,8 @@ export default {
 
 type Story = StoryObj<typeof AvatarInput>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <AvatarInput {...args} />,
-};
-
-export const Simple = {
-  ...Template,
   args: {
     name: "avatar",
   },

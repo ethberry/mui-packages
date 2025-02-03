@@ -1,4 +1,4 @@
-import { IntlProvider, FormattedMessage } from "react-intl";
+import { FormattedMessage, IntlProvider } from "react-intl";
 import { Button } from "@mui/material";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -24,26 +24,22 @@ export default {
 
 type Story = StoryObj<typeof PageHeader>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <PageHeader {...args} />,
-};
-
-export const Simple = {
-  ...Template,
   args: {
     message: "pages.test.title",
   },
 };
 
-export const WithVariable = {
-  ...Template,
+export const WithVariable: Story = {
+  render: args => <PageHeader {...args} />,
   args: {
     message: "pages.test.title-with-var",
     data: { var: "VAR" },
   },
 };
 
-const TemplateWithButton: Story = {
+export const WithButton: Story = {
   render: args => (
     <PageHeader {...args}>
       <Button color="primary" variant="contained">
@@ -51,10 +47,6 @@ const TemplateWithButton: Story = {
       </Button>
     </PageHeader>
   ),
-};
-
-export const WithButton = {
-  ...TemplateWithButton,
   args: {
     message: "pages.test.title",
   },

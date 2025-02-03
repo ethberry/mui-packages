@@ -29,21 +29,17 @@ export default {
 
 type Story = StoryObj<typeof PasswordInput>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <PasswordInput {...args} />,
+  args: {
+    name: "password",
+  },
 };
 
-// export const Simple = {
-//   ...Template,
-//   args: {
-//     name: "password",
-//   },
-// };
-//
-// export const Disabled = {
-//   ...Template,
-//   args: {
-//     name: "password",
-//     disabled: true,
-//   },
-// };
+export const Disabled: Story = {
+  render: args => <PasswordInput {...args} />,
+  args: {
+    name: "password",
+    disabled: true,
+  },
+};

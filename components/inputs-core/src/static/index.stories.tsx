@@ -29,21 +29,17 @@ export default {
 
 type Story = StoryObj<typeof StaticInput>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <StaticInput {...args} />,
+  args: {
+    name: "static",
+  },
 };
-//
-// export const Simple = {
-//   ...Template,
-//   args: {
-//     name: "static",
-//   },
-// };
-//
-// export const Disabled = {
-//   ...Template,
-//   args: {
-//     name: "static",
-//     disabled: true,
-//   },
-// };
+
+export const Disabled: Story = {
+  render: args => <StaticInput {...args} />,
+  args: {
+    name: "static",
+    disabled: true,
+  },
+};

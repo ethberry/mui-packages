@@ -37,12 +37,8 @@ export default {
 
 type Story = StoryObj<typeof AudioInput>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <AudioInput {...args} />,
-};
-
-export const Simple = {
-  ...Template,
   args: {
     name: "audio",
   },

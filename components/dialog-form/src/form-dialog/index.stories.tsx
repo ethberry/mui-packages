@@ -32,16 +32,12 @@ export default {
 
 type Story = StoryObj<typeof FormDialog>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => (
     <FormDialog {...args}>
       <TextInput name="title" />
     </FormDialog>
   ),
-};
-
-export const Simple = {
-  ...Template,
   args: {
     open: true,
     showButtons: true,

@@ -29,32 +29,24 @@ export default {
 
 type Story = StoryObj<typeof MarkdownInput>;
 
-const MarkdownTemplate: Story = {
+export const Simple: Story = {
   render: args => (
     <FormProvider {...useForm({ defaultValues: {} })}>
       <MarkdownInput {...args} />
     </FormProvider>
   ),
+  args: {
+    name: "markdown",
+  },
 };
-//
-// export const Simple = {
-//   ...MarkdownTemplate,
-//   args: {
-//     name: "markdown",
-//   },
-// };
-//
-// const MarkdownDefaultValueTemplate: Story = {
-//   render: args => (
-//     <FormProvider {...useForm({ defaultValues: { markdown: markdownString } })}>
-//       <MarkdownInput {...args} />
-//     </FormProvider>
-//   ),
-// };
-//
-// export const DefaultValue = {
-//   ...MarkdownDefaultValueTemplate,
-//   args: {
-//     name: "markdown",
-//   },
-// };
+
+export const DefaultValue: Story = {
+  render: args => (
+    <FormProvider {...useForm({ defaultValues: { markdown: markdownString } })}>
+      <MarkdownInput {...args} />
+    </FormProvider>
+  ),
+  args: {
+    name: "markdown",
+  },
+};

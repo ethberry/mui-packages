@@ -33,12 +33,8 @@ export default {
 
 type Story = StoryObj<typeof FileInput>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <FileInput {...args} />,
-};
-
-export const Simple = {
-  ...Template,
   args: {
     name: "file",
     onChange: (files: Array<File>) => {

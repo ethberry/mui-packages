@@ -39,13 +39,9 @@ export default {
 
 type Story = StoryObj<typeof JsonInput>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <JsonInput {...args} />,
+  args: {
+    name: "json",
+  },
 };
-
-// export const Simple = {
-//   ...Template,
-//   args: {
-//     name: "json",
-//   },
-// };

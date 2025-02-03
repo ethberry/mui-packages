@@ -9,8 +9,6 @@ export default {
 
 type Story = StoryObj<typeof Spinner>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <Spinner {...args} />,
 };
-
-export const Simple = Template;

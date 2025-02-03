@@ -37,12 +37,8 @@ export default {
 
 type Story = StoryObj<typeof VideoInput>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <VideoInput {...args} />,
-};
-
-export const Simple = {
-  ...Template,
   args: {
     name: "video",
   },

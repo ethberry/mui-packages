@@ -28,25 +28,21 @@ export default {
 
 type Story = StoryObj<typeof SliderInput>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <SliderInput {...args} />,
+  args: {
+    name: "slider",
+    min: 100,
+    max: 1000,
+  },
 };
-//
-// export const Simple = {
-//   ...Template,
-//   args: {
-//     name: "slider",
-//     min: 100,
-//     max: 1000,
-//   },
-// };
-//
-// export const Disabled = {
-//   ...Template,
-//   args: {
-//     name: "slider",
-//     min: 100,
-//     max: 1000,
-//     disabled: true,
-//   },
-// };
+
+export const Disabled: Story = {
+  render: args => <SliderInput {...args} />,
+  args: {
+    name: "slider",
+    min: 100,
+    max: 1000,
+    disabled: true,
+  },
+};

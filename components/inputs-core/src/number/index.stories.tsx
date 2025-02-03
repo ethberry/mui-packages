@@ -29,38 +29,34 @@ export default {
 
 type Story = StoryObj<typeof NumberInput>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <NumberInput {...args} />,
+  args: {
+    name: "number",
+  },
 };
 
-// export const Simple = {
-//   ...Template,
-//   args: {
-//     name: "number",
-//   },
-// };
-//
-// export const Negative = {
-//   ...Template,
-//   args: {
-//     name: "number",
-//     allowNegative: true,
-//     value: -50,
-//   },
-// };
-//
-// export const ReadOnly = {
-//   ...Template,
-//   args: {
-//     name: "number",
-//     readOnly: true,
-//   },
-// };
-//
-// export const Disabled = {
-//   ...Template,
-//   args: {
-//     name: "number",
-//     disabled: true,
-//   },
-// };
+export const Negative: Story = {
+  render: args => <NumberInput {...args} />,
+  args: {
+    name: "number",
+    allowNegative: true,
+    value: -50,
+  },
+};
+
+export const ReadOnly: Story = {
+  render: args => <NumberInput {...args} />,
+  args: {
+    name: "number",
+    readOnly: true,
+  },
+};
+
+export const Disabled: Story = {
+  render: args => <NumberInput {...args} />,
+  args: {
+    name: "number",
+    disabled: true,
+  },
+};

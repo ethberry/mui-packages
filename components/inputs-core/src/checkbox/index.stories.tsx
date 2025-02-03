@@ -28,29 +28,25 @@ export default {
 
 type Story = StoryObj<typeof CheckboxInput>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <CheckboxInput {...args} />,
+  args: {
+    name: "checkbox",
+  },
 };
 
-// export const Simple = {
-//   ...Template,
-//   args: {
-//     name: "checkbox",
-//   },
-// };
-//
-// export const Disabled = {
-//   ...Template,
-//   args: {
-//     name: "checkbox",
-//     disabled: true,
-//   },
-// };
-//
-// export const Label = {
-//   ...Template,
-//   args: {
-//     name: "checkbox",
-//     label: "My label",
-//   },
-// };
+export const Disabled: Story = {
+  render: args => <CheckboxInput {...args} />,
+  args: {
+    name: "checkbox",
+    disabled: true,
+  },
+};
+
+export const Label: Story = {
+  render: args => <CheckboxInput {...args} />,
+  args: {
+    name: "checkbox",
+    label: "My label",
+  },
+};

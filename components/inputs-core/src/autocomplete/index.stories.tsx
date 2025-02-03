@@ -29,12 +29,8 @@ export default {
 
 type Story = StoryObj<typeof AutocompleteInput>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <AutocompleteInput {...args} />,
-};
-
-export const Simple = {
-  ...Template,
   args: {
     name: "autocomplete",
     options: [

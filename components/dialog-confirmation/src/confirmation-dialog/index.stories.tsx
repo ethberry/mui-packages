@@ -31,14 +31,10 @@ export default {
 
 type Story = StoryObj<typeof ConfirmationDialog>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <ConfirmationDialog {...args}>some text</ConfirmationDialog>,
+  args: {
+    open: true,
+    disablePortal: true,
+  },
 };
-
-// export const Simple = {
-//   ...Template,
-//   args: {
-//     open: true,
-//     disablePortal: true,
-//   },
-// };

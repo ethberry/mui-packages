@@ -32,12 +32,8 @@ export default {
 
 type Story = StoryObj<typeof DeleteDialog>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <DeleteDialog {...args}>some text</DeleteDialog>,
-};
-
-export const Simple = {
-  ...Template,
   args: {
     open: true,
     initialValues: {

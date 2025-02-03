@@ -37,12 +37,8 @@ export default {
 
 type Story = StoryObj<typeof ImageInput>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <ImageInput {...args} />,
-};
-
-export const Simple = {
-  ...Template,
   args: {
     name: "image",
   },

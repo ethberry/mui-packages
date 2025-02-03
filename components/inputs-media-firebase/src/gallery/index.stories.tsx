@@ -39,12 +39,8 @@ export default {
 
 type Story = StoryObj<typeof GalleryInput>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <GalleryInput {...args} />,
-};
-
-export const Simple = {
-  ...Template,
   args: {
     name: "gallery",
   },

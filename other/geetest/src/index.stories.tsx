@@ -21,12 +21,8 @@ export default {
 
 type Story = StoryObj<typeof GeeTestCaptcha>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <GeeTestCaptcha {...args} />,
-};
-
-export const Simple = {
-  ...Template,
   args: {
     name: "captcha",
   },

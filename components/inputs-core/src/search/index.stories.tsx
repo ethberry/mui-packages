@@ -29,21 +29,17 @@ export default {
 
 type Story = StoryObj<typeof SearchInput>;
 
-const Template: Story = {
+export const Simple: Story = {
   render: args => <SearchInput {...args} />,
+  args: {
+    name: "search",
+  },
 };
 
-// export const Simple = {
-//   ...Template,
-//   args: {
-//     name: "search",
-//   },
-// };
-//
-// export const Disabled = {
-//   ...Template,
-//   args: {
-//     name: "search",
-//     disabled: true,
-//   },
-// };
+export const Disabled: Story = {
+  render: args => <SearchInput {...args} />,
+  args: {
+    name: "search",
+    disabled: true,
+  },
+};

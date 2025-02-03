@@ -30,27 +30,23 @@ export default {
 
 type Story = StoryObj<typeof CurrencyInput>;
 
-const Template: Story = {
+export const USD: Story = {
   render: args => <CurrencyInput {...args} />,
-};
-
-export const USD = {
-  ...Template,
   args: {
     name: "currencyMask",
   },
 };
 
-export const YEN = {
-  ...Template,
+export const YEN: Story = {
+  render: args => <CurrencyInput {...args} />,
   args: {
     name: "currencyMask",
     precision: 0,
   },
 };
 
-export const PERCENT = {
-  ...Template,
+export const PERCENT: Story = {
+  render: args => <CurrencyInput {...args} />,
   args: {
     name: "currencyMask",
     symbol: "",
