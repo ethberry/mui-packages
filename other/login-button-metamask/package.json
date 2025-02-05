@@ -19,7 +19,7 @@
     "@ethberry/react-hooks-eth": "3.0.3",
     "@ethberry/redux": "1.0.1",
     "@ethberry/types-collection": "1.5.21",
-    "@mui/icons-material": "6.4.1",
+    "@mui/icons-material": "6.4.3",
     "firebaseui": "6.1.0",
     "uuid": "11.0.5"
   },
@@ -27,8 +27,8 @@
   "devDependencies": {
     "@ethberry/provider-api": "8.0.3",
     "@ethberry/provider-user": "7.0.3",
-    "@mui/material": "6.4.1",
-    "@mui/styles": "6.4.1",
+    "@mui/material": "6.4.3",
+    "@mui/styles": "6.4.3",
     "@web3-react/core": "8.2.3",
     "firebase": "11.2.0",
     "notistack": "3.0.2",
