@@ -11,7 +11,7 @@
     "@ethberry/draft-js-utils": "2.0.1",
     "@ethberry/mui-form": "10.0.1",
     "@ethberry/mui-inputs-core": "9.0.1",
-    "@ethberry/mui-rte": "4.0.15",
+    "@ethberry/mui-rte": "5.0.1",
     "@ethberry/provider-test-id": "2.0.1",
     "draft-js": "0.11.7",
     "markdown-draft-js": "2.4.0"
