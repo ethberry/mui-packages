@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.2 (2025-02-05)
+
+### Bug Fixes
+
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([fa63a97](https://github.com/ethberry/mui-packages/commit/fa63a97f5e5d96e58b55723c4e450ecb5c3eafb3))
+
 ## [3.0.1](https://github.com/ethberry/mui-packages/compare/@ethberry/react-hooks@3.0.0...@ethberry/react-hooks@3.0.1) (2025-01-26)
 
 ### Bug Fixes

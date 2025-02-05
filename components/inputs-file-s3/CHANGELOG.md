@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 9.0.2 (2025-02-05)
+
+### Bug Fixes
+
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([fa63a97](https://github.com/ethberry/mui-packages/commit/fa63a97f5e5d96e58b55723c4e450ecb5c3eafb3))
+- Grid2 ([94aa4c1](https://github.com/ethberry/mui-packages/commit/94aa4c15af34ecb0bc32b6b47dd805a2cd3b439e))
+
 ## [9.0.1](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-file-s3@9.0.0...@ethberry/mui-inputs-file-s3@9.0.1) (2025-01-26)
 
 ### Bug Fixes

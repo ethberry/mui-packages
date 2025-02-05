@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.2 (2025-02-05)
+
+### Bug Fixes
+
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([fa63a97](https://github.com/ethberry/mui-packages/commit/fa63a97f5e5d96e58b55723c4e450ecb5c3eafb3))
+- **deps:** update [@mui](https://github.com/mui) packages ([9e53495](https://github.com/ethberry/mui-packages/commit/9e5349562b12163b8274e8cfb927d20646489d01))
+- **deps:** update all non-major dependencies ([490e909](https://github.com/ethberry/mui-packages/commit/490e9092d1c224f8b5149476f8167ad8901b6c89))
+
 ## [5.0.1](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-dialog-delete@5.0.0...@ethberry/mui-dialog-delete@5.0.1) (2025-01-26)
 
 ### Bug Fixes

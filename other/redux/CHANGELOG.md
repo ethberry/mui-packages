@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.2 (2025-02-05)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([490e909](https://github.com/ethberry/common-packages/commit/490e9092d1c224f8b5149476f8167ad8901b6c89))
+
 ## [1.0.1](https://github.com/ethberry/common-packages/compare/@ethberry/redux@1.0.0...@ethberry/redux@1.0.1) (2025-01-26)
 
 ### Bug Fixes

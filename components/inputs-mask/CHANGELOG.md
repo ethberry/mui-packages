@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.3](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-mask@7.0.2...@ethberry/mui-inputs-mask@7.0.3) (2025-02-05)
+
+### Bug Fixes
+
+- **deps:** update [@mui](https://github.com/mui) packages ([9e53495](https://github.com/ethberry/mui-packages/commit/9e5349562b12163b8274e8cfb927d20646489d01))
+- **deps:** update all non-major dependencies ([490e909](https://github.com/ethberry/mui-packages/commit/490e9092d1c224f8b5149476f8167ad8901b6c89))
+- Grid2 ([94aa4c1](https://github.com/ethberry/mui-packages/commit/94aa4c15af34ecb0bc32b6b47dd805a2cd3b439e))
+
 ## [7.0.2](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-mask@7.0.1...@ethberry/mui-inputs-mask@7.0.2) (2025-01-26)
 
 **Note:** Version bump only for package @ethberry/mui-inputs-mask

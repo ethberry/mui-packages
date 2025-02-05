@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 10.0.2 (2025-02-05)
+
+### Bug Fixes
+
+- **deps:** update [@mui](https://github.com/mui) packages ([9e53495](https://github.com/ethberry/mui-packages/commit/9e5349562b12163b8274e8cfb927d20646489d01))
+- **deps:** update all non-major dependencies ([490e909](https://github.com/ethberry/mui-packages/commit/490e9092d1c224f8b5149476f8167ad8901b6c89))
+
 ## [10.0.1](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-dialog-form@10.0.0...@ethberry/mui-dialog-form@10.0.1) (2025-01-26)
 
 ### Bug Fixes
