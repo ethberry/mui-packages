@@ -125,7 +125,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
   }, []);
 
   return (
-    <ProgressOverlay isLoading={isLoggingIn} spinnerSx={{ zIndex: 1000 }}>
+    <ProgressOverlay isLoading={isLoggingIn}>
       <StyledContainer sx={sx} container>
         <Grid2 size={{ xs: 12 }} className="FirebaseLogin-buttonsBox">
           {showMessage && (
