@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.1.0](https://github.com/ethberry/mui-packages/compare/@ethberry/common-pages@13.0.2...@ethberry/common-pages@13.1.0) (2025-02-09)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([ce9084c](https://github.com/ethberry/mui-packages/commit/ce9084c2d80a050d73c336928dcb2fe767c73eae))
+- jwt login/registration ([05afc5e](https://github.com/ethberry/mui-packages/commit/05afc5e69f57585ef4d4c457e53a595e22fb948d))
+
+### Features
+
+- cleanup common pages ([32d9d08](https://github.com/ethberry/mui-packages/commit/32d9d08f82e6b67fceea4e18264a1065967c89b3))
+
 ## 13.0.2 (2025-02-05)
 
 ### Bug Fixes

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/ethberry/mui-packages/compare/@ethberry/firebase-login@4.0.2...@ethberry/firebase-login@4.1.0) (2025-02-09)
+
+### Bug Fixes
+
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([0855f9d](https://github.com/ethberry/mui-packages/commit/0855f9dd8edbc4f49fe1719d93724ca63921f68c))
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([5d6c4b3](https://github.com/ethberry/mui-packages/commit/5d6c4b3300e27e3b71c9f60de3855a8513244823))
+- **deps:** update all non-major dependencies ([ce9084c](https://github.com/ethberry/mui-packages/commit/ce9084c2d80a050d73c336928dcb2fe767c73eae))
+- skeleton ([7ae6986](https://github.com/ethberry/mui-packages/commit/7ae6986f2b9e4fba9fc19ae3ba08350eaea62cb4))
+
+### Features
+
+- rework auth packages ([df91151](https://github.com/ethberry/mui-packages/commit/df91151347090d4ecb3d8731adfd3318dcbfe6b1))
+
 ## 4.0.2 (2025-02-05)
 
 ### Bug Fixes

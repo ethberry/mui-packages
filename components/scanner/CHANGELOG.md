@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.3](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-scanner@3.0.2...@ethberry/mui-scanner@3.0.3) (2025-02-09)
+
+### Bug Fixes
+
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([5d6c4b3](https://github.com/ethberry/mui-packages/commit/5d6c4b3300e27e3b71c9f60de3855a8513244823))
+
 ## 3.0.2 (2025-02-05)
 
 ### Bug Fixes

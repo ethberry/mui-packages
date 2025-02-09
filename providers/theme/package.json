@@ -21,7 +21,7 @@
   },
   "description": "Material UI theme provider",
   "devDependencies": {
-    "@ethberry/redux": "1.0.2",
+    "@ethberry/redux": "1.0.3",
     "@mui/icons-material": "6.4.3",
     "@mui/material": "6.4.3",
     "@types/stylis": "4.2.7",
@@ -60,5 +60,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "9.0.2"
+  "version": "9.0.3"
 }

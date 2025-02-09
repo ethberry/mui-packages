@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.3](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-picker@9.0.2...@ethberry/mui-inputs-picker@9.0.3) (2025-02-09)
+
+### Bug Fixes
+
+- **deps:** update [@mui](https://github.com/mui) packages to v7.26.0 ([f0f2c63](https://github.com/ethberry/mui-packages/commit/f0f2c6317f485c4e54269a0fac49cbbd42db66e0))
+- **deps:** update all non-major dependencies ([ce9084c](https://github.com/ethberry/mui-packages/commit/ce9084c2d80a050d73c336928dcb2fe767c73eae))
+
 ## 9.0.2 (2025-02-05)
 
 ### Bug Fixes

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.3](https://github.com/ethberry/mui-packages/compare/@ethberry/login-button-wallet-connect@3.0.2...@ethberry/login-button-wallet-connect@3.0.3) (2025-02-09)
+
+### Bug Fixes
+
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([0855f9d](https://github.com/ethberry/mui-packages/commit/0855f9dd8edbc4f49fe1719d93724ca63921f68c))
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([5d6c4b3](https://github.com/ethberry/mui-packages/commit/5d6c4b3300e27e3b71c9f60de3855a8513244823))
+- **deps:** update all non-major dependencies ([ce9084c](https://github.com/ethberry/mui-packages/commit/ce9084c2d80a050d73c336928dcb2fe767c73eae))
+
 ## 3.0.2 (2025-02-05)
 
 ### Bug Fixes

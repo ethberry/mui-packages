@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.2 (2025-02-09)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([ce9084c](https://github.com/ethberry/mui-packages/commit/ce9084c2d80a050d73c336928dcb2fe767c73eae))
+
 ## [3.0.1](https://github.com/ethberry/mui-packages/compare/@ethberry/provider-coingecko@3.0.0...@ethberry/provider-coingecko@3.0.1) (2025-01-26)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.3](https://github.com/ethberry/mui-packages/compare/@ethberry/provider-picker@8.0.2...@ethberry/provider-picker@8.0.3) (2025-02-09)
+
+### Bug Fixes
+
+- **deps:** update [@mui](https://github.com/mui) packages to v7.26.0 ([f0f2c63](https://github.com/ethberry/mui-packages/commit/f0f2c6317f485c4e54269a0fac49cbbd42db66e0))
+
 ## 8.0.2 (2025-02-05)
 
 ### Bug Fixes

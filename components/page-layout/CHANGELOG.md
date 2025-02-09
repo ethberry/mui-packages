@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.3](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-page-layout@4.0.2...@ethberry/mui-page-layout@4.0.3) (2025-02-09)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([ce9084c](https://github.com/ethberry/mui-packages/commit/ce9084c2d80a050d73c336928dcb2fe767c73eae))
+- skeleton ([7ae6986](https://github.com/ethberry/mui-packages/commit/7ae6986f2b9e4fba9fc19ae3ba08350eaea62cb4))
+- tests ([1ade873](https://github.com/ethberry/mui-packages/commit/1ade87392a1a19f0d9b0703278ee084c97b7c994))
+
 ## 4.0.2 (2025-02-05)
 
 ### Bug Fixes

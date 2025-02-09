@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.3](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-core@9.0.2...@ethberry/mui-inputs-core@9.0.3) (2025-02-09)
+
+### Bug Fixes
+
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([0855f9d](https://github.com/ethberry/mui-packages/commit/0855f9dd8edbc4f49fe1719d93724ca63921f68c))
+- **deps:** update all non-major dependencies ([ce9084c](https://github.com/ethberry/mui-packages/commit/ce9084c2d80a050d73c336928dcb2fe767c73eae))
+- tests ([1ade873](https://github.com/ethberry/mui-packages/commit/1ade87392a1a19f0d9b0703278ee084c97b7c994))
+
 ## 9.0.2 (2025-02-05)
 
 ### Bug Fixes
