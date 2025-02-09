@@ -1,6 +1,5 @@
 import { FC, PropsWithChildren, useEffect } from "react";
 import { Grid2 } from "@mui/material";
-import { useNavigate } from "react-router";
 import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 
@@ -17,17 +16,15 @@ export interface IRegistrationBaseProps {
 export const RegistrationBase: FC<PropsWithChildren<IRegistrationBaseProps>> = props => {
   const { children, initialValues, validationSchema } = props;
 
-  const navigate = useNavigate();
   const { formatMessage } = useIntl();
 
   const user = useUser<any>();
 
   const handleSubmit = (values: any, form: any): Promise<void> => {
     return user
-      .signUp(values)
+      .signUp(values, "/message/registration-successful")
       .then(() => {
         enqueueSnackbar(formatMessage({ id: "snackbar.created" }), { variant: "success" });
-        void navigate("/message/registration-successful");
       })
       .catch((e: ApiError) => {
         if (e.status === 400) {

@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
 import { Grid2 } from "@mui/material";
@@ -6,9 +6,9 @@ import { Grid2 } from "@mui/material";
 import { PasswordInput, TextInput } from "@ethberry/mui-inputs-core";
 import { PageHeader } from "@ethberry/mui-page-layout";
 import { FormWrapper } from "@ethberry/mui-form";
-import { ApiError, useApi } from "@ethberry/provider-api";
-import { useUser } from "@ethberry/provider-user";
+import { ApiError } from "@ethberry/provider-api";
 import type { ILoginDto, IUser } from "@ethberry/provider-user";
+import { useUser } from "@ethberry/provider-user";
 import { useDidMountEffect } from "@ethberry/react-hooks";
 
 import { validationSchema } from "./validation";
@@ -18,11 +18,6 @@ export const SystemLogin: FC = () => {
   const { formatMessage } = useIntl();
 
   const user = useUser<IUser>();
-  const api = useApi();
-
-  /* javascript-obfuscator:disable */
-  const baseUrl = process.env.BE_URL;
-  /* javascript-obfuscator:enable */
 
   const handleSubmit = async (values: ILoginDto): Promise<void> => {
     await user.logIn(values, "/dashboard").catch((e: ApiError) => {
@@ -35,24 +30,9 @@ export const SystemLogin: FC = () => {
     });
   };
 
-  const onMessage = (event: MessageEvent): void => {
-    if (event.origin === baseUrl) {
-      api.setToken(event.data);
-      void user.getProfile("/dashboard");
-    }
-  };
-
   useDidMountEffect(() => {
     void user.getProfile("/dashboard");
   }, [user.isAuthenticated()]);
-
-  useEffect(() => {
-    window.addEventListener("message", onMessage, false);
-
-    return (): void => {
-      window.removeEventListener("message", onMessage);
-    };
-  }, []);
 
   return (
     <Grid2
