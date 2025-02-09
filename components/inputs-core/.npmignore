@@ -2,5 +2,6 @@
 /node_modules
 /tsconfig.json
 /jest.config.json
+/setup-jest.ts
 **/*.stories.*
 **/*.test.*
