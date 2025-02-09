@@ -8,7 +8,7 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/constants": "0.13.6",
+    "@ethberry/constants": "0.13.7",
     "@ethberry/firebase-login": "4.0.2",
     "@ethberry/mui-icons": "3.0.2",
     "@ethberry/mui-page-layout": "4.0.2",
@@ -21,8 +21,8 @@
   },
   "description": "react particle login button component",
   "devDependencies": {
-    "@ethberry/provider-api": "8.0.3",
-    "@ethberry/provider-user": "7.0.3",
+    "@ethberry/provider-api": "8.1.0",
+    "@ethberry/provider-user": "7.1.0",
     "@mui/icons-material": "6.4.3",
     "@mui/material": "6.4.3",
     "@mui/styles": "6.4.3",

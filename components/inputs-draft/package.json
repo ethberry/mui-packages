@@ -8,7 +8,7 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/draft-js-utils": "2.0.1",
+    "@ethberry/draft-js-utils": "2.0.2",
     "@ethberry/mui-form": "10.0.2",
     "@ethberry/mui-inputs-core": "9.0.2",
     "@ethberry/mui-rte": "5.0.1",

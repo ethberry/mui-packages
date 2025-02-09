@@ -14,13 +14,13 @@
     "@ethberry/mui-page-layout": "4.0.2",
     "@ethberry/popup": "2.0.2",
     "@ethberry/react-hooks": "3.0.2",
-    "@ethberry/yup-rules": "5.0.3",
+    "@ethberry/yup-rules": "5.0.4",
     "yup": "1.6.1"
   },
   "description": "react context provider",
   "devDependencies": {
-    "@ethberry/provider-api": "8.0.3",
-    "@ethberry/provider-user": "7.0.3",
+    "@ethberry/provider-api": "8.1.0",
+    "@ethberry/provider-user": "7.1.0",
     "@mui/icons-material": "6.4.3",
     "@mui/material": "6.4.3",
     "@mui/styles": "6.4.3",

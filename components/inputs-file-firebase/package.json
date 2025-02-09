@@ -8,7 +8,7 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/firebase": "2.0.2",
+    "@ethberry/firebase": "2.0.3",
     "@ethberry/mui-inputs-file": "8.0.2",
     "uuid": "11.0.5"
   },
