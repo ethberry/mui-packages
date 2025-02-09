@@ -24,7 +24,7 @@
     "jest-environment-jsdom": "29.7.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "react-intl": "7.1.5",
+    "react-intl": "7.1.6",
     "ts-jest": "29.2.5"
   },
   "engines": {
