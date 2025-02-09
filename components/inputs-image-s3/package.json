@@ -18,7 +18,7 @@
   "description": "react widget",
   "devDependencies": {
     "@ethberry/mui-form": "10.0.2",
-    "@ethberry/provider-api-jwt": "3.0.3",
+    "@ethberry/provider-api-jwt": "3.0.4",
     "@ethberry/provider-test-id": "2.0.1",
     "@mui/icons-material": "6.4.3",
     "@mui/material": "6.4.3",

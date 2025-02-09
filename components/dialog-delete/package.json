@@ -10,7 +10,7 @@
   "dependencies": {
     "@ethberry/mui-dialog-confirmation": "6.0.2",
     "@ethberry/mui-page-layout": "4.0.2",
-    "@ethberry/provider-settings": "5.0.3"
+    "@ethberry/provider-settings": "5.0.4"
   },
   "description": "react widget",
   "devDependencies": {
