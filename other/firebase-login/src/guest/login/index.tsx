@@ -4,12 +4,13 @@ import { NavigateNext } from "@mui/icons-material";
 import { auth } from "firebaseui";
 import {
   EmailAuthProvider,
+  FacebookAuthProvider,
   getAuth,
   GoogleAuthProvider,
-  FacebookAuthProvider,
-  TwitterAuthProvider,
   sendEmailVerification,
   signInWithCustomToken,
+  TwitterAuthProvider,
+  User,
 } from "firebase/auth";
 import { FormattedMessage, useIntl } from "react-intl";
 import { useNavigate } from "react-router";
@@ -17,9 +18,9 @@ import { enqueueSnackbar } from "notistack";
 
 import "firebaseui/dist/firebaseui.css";
 
+import { useApi } from "@ethberry/provider-api";
 import firebase from "@ethberry/firebase";
 import { ProgressOverlay } from "@ethberry/mui-page-layout";
-import { useUser } from "@ethberry/provider-user";
 
 import { StyledContainer, StyledFirebaseAuthForm } from "./styled";
 import type { IFirebaseLoginButtonProps } from "../../types";
@@ -56,8 +57,9 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
   const [showMessage, setShowMessage] = useState<boolean>(false);
   const [isLoggingIn, setIsLoggingIn] = useState<boolean>(false);
 
-  const user = useUser<any>();
   const navigate = useNavigate();
+  const api = useApi();
+
   const isLoginPage = window.location.pathname.includes("/login");
 
   const signInOptions = useMemo(() => providers.map(name => providersStore[name]), [providers]);
@@ -68,19 +70,28 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
 
   const authFb = getAuth(firebase);
 
+  const logIn = async (user: User) => {
+    const accessToken = await user.getIdToken(true);
+    const now = Date.now();
+    api.setToken({
+      accessToken,
+      accessTokenExpiresAt: now + 1000 * 60 * 60,
+      refreshToken: "",
+      refreshTokenExpiresAt: now + 1000 * 60 * 60,
+    });
+    if (isLoginPage) {
+      void navigate(window.location.pathname);
+    }
+  };
+
   const handleTokenVerified = async (token: string) => {
     if (!token) {
       return;
     }
 
-    await signInWithCustomToken(authFb, token);
+    const userCredentials = await signInWithCustomToken(authFb, token);
+    await logIn(userCredentials.user);
 
-    setIsLoggingIn(true);
-    await user.logIn(void 0, isLoginPage ? void 0 : window.location.pathname).catch(e => {
-      console.error(e);
-      setIsLoggingIn(false);
-    });
-    setIsLoggingIn(false);
     onTokenVerified?.();
   };
 
@@ -99,9 +110,7 @@ export const FirebaseLogin: FC<IFirebaseLogin> = props => {
             });
           } else {
             setIsLoggingIn(true);
-            void user.logIn().catch(() => {
-              setIsLoggingIn(false);
-            });
+            void logIn(authFb.currentUser!);
           }
           return false;
         },
