@@ -1,9 +1,9 @@
-import { FC, Fragment, PropsWithChildren, useEffect, useState } from "react";
+import { FC, PropsWithChildren, useEffect, useState } from "react";
 import { Outlet, Navigate } from "react-router";
 
 import { useUser } from "@ethberry/provider-user";
 
-export const FirebaseProtected: FC<PropsWithChildren> = props => {
+export const Protected: FC<PropsWithChildren> = props => {
   const { children } = props;
 
   const [isReady, setIsReady] = useState(false);
@@ -22,7 +22,5 @@ export const FirebaseProtected: FC<PropsWithChildren> = props => {
     return <Navigate to="/login" />;
   }
 
-  return children ? <Fragment>{children}</Fragment> : <Outlet />;
+  return children ? children : <Outlet />;
 };
-
-export const Protected = FirebaseProtected;

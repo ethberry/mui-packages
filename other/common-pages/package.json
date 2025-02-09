@@ -7,30 +7,12 @@
   "bugs": {
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
-  "dependencies": {
-    "@ethberry/constants": "0.13.6",
-    "@ethberry/mui-form": "10.0.2",
-    "@ethberry/mui-inputs-captcha": "6.0.2",
-    "@ethberry/mui-inputs-core": "9.0.2",
-    "@ethberry/mui-page-layout": "4.0.2",
-    "@ethberry/popup": "2.0.2",
-    "@ethberry/react-hooks": "3.0.2",
-    "@ethberry/yup-rules": "5.0.3",
-    "yup": "1.6.1"
-  },
   "description": "react context provider",
   "devDependencies": {
-    "@ethberry/provider-api": "8.0.3",
-    "@ethberry/provider-user": "7.0.3",
-    "@mui/icons-material": "6.4.3",
-    "@mui/lab": "6.0.0-beta.26",
     "@mui/material": "6.4.3",
-    "@mui/styles": "6.4.3",
     "@types/node": "22.13.1",
     "@types/react": "19.0.8",
-    "notistack": "3.0.2",
     "react": "19.0.0",
-    "react-hook-form": "7.54.2",
     "react-intl": "7.1.5",
     "react-router": "7.1.5"
   },
@@ -42,15 +24,7 @@
   "main": "./dist/index.js",
   "name": "@ethberry/common-pages",
   "peerDependencies": {
-    "@ethberry/provider-api": "^8.0.0",
-    "@ethberry/provider-user": "^7.0.0",
-    "@mui/icons-material": "^6.0.0",
-    "@mui/lab": "^6.0.0-beta.0",
-    "@mui/material": "^6.0.0",
-    "@mui/styles": "^6.0.0",
-    "notistack": "^3.0.0",
     "react": "^19.0.0",
-    "react-hook-form": "^7.0.0",
     "react-intl": "^7.0.0",
     "react-router": "^7.0.0"
   },
