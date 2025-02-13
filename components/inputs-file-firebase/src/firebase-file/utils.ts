@@ -16,8 +16,7 @@ export const useDeleteUrl = (bucket?: string): ((url: string) => Promise<void>) 
     }
     const storageRef = ref(storage, url);
     await deleteObject(storageRef)
-      .then((message: any) => {
-        console.info("message", message);
+      .then(() => {
         enqueueSnackbar(formatMessage({ id: "snackbar.deleted" }), { variant: "success" });
       })
       .catch((e: any) => {

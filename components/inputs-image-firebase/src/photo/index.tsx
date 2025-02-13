@@ -1,17 +1,82 @@
-import { FC, ReactElement, useState } from "react";
-import { Button, Card, CardActions, CardContent, CardMedia, FormControl, Grid2, InputLabel } from "@mui/material";
+import { createContext, FC, memo, ReactElement, useContext, useEffect, useRef, useState } from "react";
 import { get, useFormContext, useWatch } from "react-hook-form";
+import { Button, Card, CardActions, CardContent, CardMedia, FormControl, Grid2, InputLabel } from "@mui/material";
 import { FormattedMessage } from "react-intl";
-import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import path from "path";
+import { combine } from "@atlaskit/pragmatic-drag-and-drop/combine";
+import {
+  draggable,
+  dropTargetForElements,
+  monitorForElements,
+} from "@atlaskit/pragmatic-drag-and-drop/element/adapter";
 
-import { TextInput } from "@ethberry/mui-inputs-core";
 import { ProgressOverlay } from "@ethberry/mui-page-layout";
+import { Accept, FirebaseFileInput, useDeleteUrl } from "@ethberry/mui-inputs-file-firebase";
 import { ConfirmationDialog } from "@ethberry/mui-dialog-confirmation";
-import { FirebaseFileInput, useDeleteUrl, Accept } from "@ethberry/mui-inputs-file-firebase";
+import { TextInput } from "@ethberry/mui-inputs-core";
 import { openUrlOnClick } from "@ethberry/popup";
 
-import { useStyles } from "./styles";
+function getInstanceId() {
+  return Symbol("instance-id");
+}
+
+const InstanceIdContext = createContext<symbol | null>(null);
+
+interface IPhotoItemProps {
+  caption: string;
+  imageUrl: string;
+  index: number;
+  name: string;
+  onDelete: () => void;
+}
+
+const PhotoItem = memo(function PhotoItem({ caption, imageUrl, index, name, onDelete }: IPhotoItemProps) {
+  const ref = useRef<HTMLImageElement | null>(null);
+
+  const instanceId = useContext(InstanceIdContext);
+
+  useEffect(() => {
+    const el = ref.current!;
+
+    return combine(
+      draggable({
+        element: el,
+        getInitialData: () => ({ type: "grid-item", imageUrl, instanceId }),
+      }),
+      dropTargetForElements({
+        element: el,
+        getData: () => ({ imageUrl }),
+        getIsSticky: () => true,
+        canDrop: ({ source }) =>
+          source.data.instanceId === instanceId &&
+          source.data.type === "grid-item" &&
+          source.data.imageUrl !== imageUrl,
+      }),
+    );
+  }, [instanceId, imageUrl]);
+
+  return (
+    <Grid2 ref={ref}>
+      <Card>
+        <CardMedia
+          image={imageUrl}
+          onClick={openUrlOnClick(imageUrl)}
+          sx={{
+            width: 200,
+            height: 150,
+          }}
+        />
+        <CardContent>
+          <TextInput name={`${name}[${index}].caption`} value={caption} />
+        </CardContent>
+        <CardActions>
+          <Button size="small" color="primary" onClick={onDelete}>
+            <FormattedMessage id="form.buttons.delete" />
+          </Button>
+        </CardActions>
+      </Card>
+    </Grid2>
+  );
+});
 
 export interface IPhotoInputProps {
   name: string;
@@ -24,13 +89,12 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
   const { name, label, accept, bucket } = props;
 
   const form = useFormContext<any>();
-  const value = get(useWatch(), name);
-
-  const classes = useStyles();
+  const value: Array<{ caption: string; imageUrl: string }> = get(useWatch(), name);
   const deleteUrl = useDeleteUrl(bucket);
   const [isLoading, setIsLoading] = useState(false);
   const [isDeleteImageDialogOpen, setIsDeleteImageDialogOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [instanceId] = useState(getInstanceId);
 
   const handleOptionDelete = (index: number): (() => void) => {
     return (): void => {
@@ -42,7 +106,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
   const handleDeleteConfirm = async (): Promise<void> => {
     const newValue = get(form.getValues(), name);
     const [deleted] = newValue.splice(selectedImageIndex, 1);
-    const fileName = path.basename(new URL(deleted.imageUrl).pathname);
+    const fileName = new URL(deleted.imageUrl).pathname.split("/").pop()!;
 
     await deleteUrl(fileName);
 
@@ -61,28 +125,46 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
     urls.forEach(imageUrl => {
       newValue.push({
         imageUrl,
-        title: "",
+        caption: "",
       });
     });
     form.setValue(name, newValue, { shouldTouch: true, shouldDirty: true });
-    void form.trigger(name);
+    // void form.trigger(name);
     setIsLoading(false);
   };
 
-  const handleDragEnd = (result: any) => {
-    // dropped outside the list
-    if (!result.destination) {
-      return;
-    }
-    setIsLoading(true);
+  useEffect(() => {
+    return monitorForElements({
+      canMonitor({ source }) {
+        return source.data.instanceId === instanceId;
+      },
+      onDrop({ source, location }) {
+        const destination = location.current.dropTargets[0];
+        if (!destination) {
+          return;
+        }
+        const destinationSrc = destination.data.imageUrl;
+        const startSrc = source.data.imageUrl;
 
-    const newValue = get(form.getValues(), name);
-    const [removed] = newValue.splice(result.source.index, 1);
-    newValue.splice(result.destination.index, 0, removed);
+        if (typeof destinationSrc !== "string") {
+          return;
+        }
 
-    form.setValue(name, newValue);
-    setIsLoading(false);
-  };
+        if (typeof startSrc !== "string") {
+          return;
+        }
+
+        const updated = [...value];
+        updated[value.findIndex(item => item.imageUrl === startSrc)] = value.find(
+          item => item.imageUrl === destinationSrc,
+        )!;
+        updated[value.findIndex(item => item.imageUrl === destinationSrc)] = value.find(
+          item => item.imageUrl === startSrc,
+        )!;
+        form.setValue(name, updated);
+      },
+    });
+  }, [instanceId, value]);
 
   return (
     <FormControl fullWidth sx={{ mt: 2 }}>
@@ -90,64 +172,34 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
         <FormattedMessage id={`form.labels.${name}`} />
       </InputLabel>
 
-      <DragDropContext onDragEnd={handleDragEnd}>
-        <Droppable droppableId="droppable" direction="horizontal">
-          {provided => (
-            <Grid2
-              container
-              direction="row"
-              justifyContent="flex-start"
-              alignItems="flex-start"
-              ref={provided.innerRef}
-              sx={{ mt: 1 }}
-              {...provided.droppableProps}
-            >
-              <Grid2>
-                <ProgressOverlay isLoading={isLoading}>
-                  <FirebaseFileInput
-                    name={name}
-                    label={label}
-                    onChange={handleFileChange}
-                    classes={{ root: classes.media }}
-                    bucket={bucket}
-                    accept={accept}
-                  />
-                </ProgressOverlay>
-              </Grid2>
-              {value.map((option: { imageUrl: string; title: string }, i: number) => (
-                <Draggable key={i} draggableId={i.toString()} index={i}>
-                  {provided => (
-                    <Grid2 ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
-                      <Card>
-                        <CardMedia
-                          image={option.imageUrl}
-                          onClick={openUrlOnClick(option.imageUrl)}
-                          sx={{
-                            width: 200,
-                            height: 150,
-                          }}
-                        />
-                        <CardContent>
-                          <TextInput name={`${name}[${i}].title`} value={option.title} />
-                        </CardContent>
-                        <CardActions>
-                          <Button size="small" color="primary" onClick={handleOptionDelete(i)}>
-                            <FormattedMessage id="form.buttons.delete" />
-                          </Button>
-                        </CardActions>
-                      </Card>
-                    </Grid2>
-                  )}
-                </Draggable>
-              ))}
-              {provided.placeholder}
-            </Grid2>
-          )}
-        </Droppable>
-      </DragDropContext>
+      <InstanceIdContext.Provider value={instanceId}>
+        <Grid2 container spacing={2} direction="row" justifyContent="flex-start" alignItems="flex-start">
+          <Grid2>
+            <ProgressOverlay isLoading={isLoading}>
+              <FirebaseFileInput
+                name={`${name}-file`}
+                label={label}
+                onChange={handleFileChange}
+                bucket={bucket}
+                accept={accept}
+              />
+            </ProgressOverlay>
+          </Grid2>
+          {value.map((item, i) => (
+            <PhotoItem
+              caption={item.caption}
+              imageUrl={item.imageUrl}
+              name={name}
+              index={i}
+              key={i}
+              onDelete={handleOptionDelete(i)}
+            />
+          ))}
+        </Grid2>
+      </InstanceIdContext.Provider>
 
       <ConfirmationDialog open={isDeleteImageDialogOpen} onCancel={handleDeleteCancel} onConfirm={handleDeleteConfirm}>
-        <FormattedMessage id="dialogs.delete" values={value[selectedImageIndex]} />
+        <FormattedMessage id="dialogs.delete" values={{ title: value[selectedImageIndex]?.caption }} />
       </ConfirmationDialog>
     </FormControl>
   );
