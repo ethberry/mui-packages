@@ -10,7 +10,7 @@
   "description": "react context provider",
   "devDependencies": {
     "@mui/material": "6.4.3",
-    "@types/node": "22.13.1",
+    "@types/node": "22.13.4",
     "@types/react": "19.0.8",
     "react": "19.0.0",
     "react-intl": "7.1.6",
