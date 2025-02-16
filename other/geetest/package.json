@@ -15,8 +15,8 @@
   "devDependencies": {
     "@ethberry/provider-api": "8.1.0",
     "@ethberry/provider-api-jwt": "3.0.4",
-    "@storybook/react": "8.5.3",
-    "@types/react": "19.0.8",
+    "@storybook/react": "8.5.6",
+    "@types/react": "19.0.9",
     "react": "19.0.0"
   },
   "engines": {

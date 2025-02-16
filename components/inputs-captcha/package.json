@@ -15,7 +15,7 @@
   "devDependencies": {
     "@mui/material": "6.4.4",
     "@mui/styles": "6.4.4",
-    "@types/react": "19.0.8",
+    "@types/react": "19.0.9",
     "@types/react-google-recaptcha": "2.1.9",
     "react": "19.0.0",
     "react-hook-form": "7.54.2",
