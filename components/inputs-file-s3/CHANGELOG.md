@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.4](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-file-s3@9.0.3...@ethberry/mui-inputs-file-s3@9.0.4) (2025-02-16)
+
+### Bug Fixes
+
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([2a42b96](https://github.com/ethberry/mui-packages/commit/2a42b96cb15d4abd645a6e437de1ebbbe61db4bb))
+
 ## [9.0.3](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-file-s3@9.0.2...@ethberry/mui-inputs-file-s3@9.0.3) (2025-02-09)
 
 ### Bug Fixes

@@ -9,17 +9,17 @@
   },
   "dependencies": {
     "@atlaskit/pragmatic-drag-and-drop": "1.5.0",
-    "@ethberry/mui-dialog-confirmation": "6.0.3",
-    "@ethberry/mui-inputs-core": "9.0.3",
-    "@ethberry/mui-inputs-file-s3": "9.0.3",
-    "@ethberry/mui-page-layout": "4.0.3",
+    "@ethberry/mui-dialog-confirmation": "6.0.4",
+    "@ethberry/mui-inputs-core": "9.0.4",
+    "@ethberry/mui-inputs-file-s3": "9.0.4",
+    "@ethberry/mui-page-layout": "4.0.4",
     "@ethberry/popup": "2.0.3"
   },
   "description": "react widget",
   "devDependencies": {
-    "@ethberry/mui-form": "10.0.3",
+    "@ethberry/mui-form": "10.0.4",
     "@ethberry/provider-api-jwt": "3.0.5",
-    "@ethberry/provider-test-id": "2.0.2",
+    "@ethberry/provider-test-id": "2.0.3",
     "@mui/icons-material": "6.4.4",
     "@mui/material": "6.4.4",
     "@mui/styles": "6.4.4",
@@ -73,5 +73,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "10.0.3"
+  "version": "10.0.4"
 }

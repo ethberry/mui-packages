@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.4](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-page-layout@4.0.3...@ethberry/mui-page-layout@4.0.4) (2025-02-16)
+
+### Bug Fixes
+
+- **deps:** update [@mui](https://github.com/mui) packages ([487f8fd](https://github.com/ethberry/mui-packages/commit/487f8fd9c0e5ca2bf25add1b470fbf84b0128ea2))
+
 ## [4.0.3](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-page-layout@4.0.2...@ethberry/mui-page-layout@4.0.3) (2025-02-09)
 
 ### Bug Fixes

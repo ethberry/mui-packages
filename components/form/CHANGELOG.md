@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.4](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-form@10.0.3...@ethberry/mui-form@10.0.4) (2025-02-16)
+
+### Bug Fixes
+
+- **deps:** update [@mui](https://github.com/mui) packages ([487f8fd](https://github.com/ethberry/mui-packages/commit/487f8fd9c0e5ca2bf25add1b470fbf84b0128ea2))
+- **deps:** update dependency @hookform/resolvers to v4 ([a0da285](https://github.com/ethberry/mui-packages/commit/a0da2851df4a6d6f5805a4a7abdfa30b10d1f417))
+
 ## [10.0.3](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-form@10.0.2...@ethberry/mui-form@10.0.3) (2025-02-09)
 
 ### Bug Fixes

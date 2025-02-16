@@ -8,12 +8,12 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/mui-form": "10.0.3",
-    "@ethberry/mui-inputs-captcha": "6.0.3",
-    "@ethberry/mui-inputs-core": "9.0.3",
-    "@ethberry/mui-page-layout": "4.0.3",
+    "@ethberry/mui-form": "10.0.4",
+    "@ethberry/mui-inputs-captcha": "6.0.4",
+    "@ethberry/mui-inputs-core": "9.0.4",
+    "@ethberry/mui-page-layout": "4.0.4",
     "@ethberry/popup": "2.0.3",
-    "@ethberry/react-hooks": "3.0.3",
+    "@ethberry/react-hooks": "3.0.4",
     "@ethberry/yup-rules": "5.0.5",
     "yup": "1.6.1"
   },
@@ -69,5 +69,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "13.1.0"
+  "version": "13.1.1"
 }

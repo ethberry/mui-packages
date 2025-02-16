@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.4](https://github.com/ethberry/mui-packages/compare/@ethberry/provider-theme@9.0.3...@ethberry/provider-theme@9.0.4) (2025-02-16)
+
+### Bug Fixes
+
+- **deps:** update [@mui](https://github.com/mui) packages ([487f8fd](https://github.com/ethberry/mui-packages/commit/487f8fd9c0e5ca2bf25add1b470fbf84b0128ea2))
+
 ## [9.0.3](https://github.com/ethberry/mui-packages/compare/@ethberry/provider-theme@9.0.2...@ethberry/provider-theme@9.0.3) (2025-02-09)
 
 ### Bug Fixes

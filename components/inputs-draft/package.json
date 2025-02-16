@@ -9,10 +9,10 @@
   },
   "dependencies": {
     "@ethberry/draft-js-utils": "2.0.3",
-    "@ethberry/mui-form": "10.0.3",
-    "@ethberry/mui-inputs-core": "9.0.3",
+    "@ethberry/mui-form": "10.0.4",
+    "@ethberry/mui-inputs-core": "9.0.4",
     "@ethberry/mui-rte": "5.0.1",
-    "@ethberry/provider-test-id": "2.0.2",
+    "@ethberry/provider-test-id": "2.0.3",
     "draft-js": "0.11.7",
     "markdown-draft-js": "2.4.0"
   },
@@ -64,5 +64,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "7.0.3"
+  "version": "7.0.4"
 }

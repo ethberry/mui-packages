@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.1.1](https://github.com/ethberry/mui-packages/compare/@ethberry/common-pages@13.1.0...@ethberry/common-pages@13.1.1) (2025-02-16)
+
+### Bug Fixes
+
+- **deps:** update [@mui](https://github.com/mui) packages ([487f8fd](https://github.com/ethberry/mui-packages/commit/487f8fd9c0e5ca2bf25add1b470fbf84b0128ea2))
+
 # [13.1.0](https://github.com/ethberry/mui-packages/compare/@ethberry/common-pages@13.0.2...@ethberry/common-pages@13.1.0) (2025-02-09)
 
 ### Bug Fixes
