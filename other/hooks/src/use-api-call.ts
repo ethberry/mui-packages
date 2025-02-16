@@ -5,6 +5,9 @@ import { UseFormReturn } from "react-hook-form";
 
 import { ApiError, IApiContext, useApi } from "@ethberry/provider-api";
 
+/**
+ * @deprecated
+ */
 export const useApiCall = <T = any, V = any>(
   fn: (api: IApiContext, ...args: Array<V>) => Promise<T>,
   { success = true, error = true } = {},
