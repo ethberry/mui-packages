@@ -15,8 +15,8 @@
   },
   "description": "react component",
   "devDependencies": {
-    "@ethberry/provider-user": "7.1.0",
-    "@ethberry/yup-rules": "5.0.4",
+    "@ethberry/provider-user": "7.1.1",
+    "@ethberry/yup-rules": "5.0.5",
     "@mui/material": "6.4.4",
     "@mui/styles": "6.4.4",
     "firebase": "11.3.1",
