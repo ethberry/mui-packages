@@ -11,10 +11,18 @@ import { ApiError } from "@ethberry/provider-api";
 export interface IRegistrationBaseProps {
   initialValues: any;
   validationSchema: any;
+  successSignUpUrl?: string;
+  profileRedirectUrl?: string;
 }
 
 export const RegistrationBase: FC<PropsWithChildren<IRegistrationBaseProps>> = props => {
-  const { children, initialValues, validationSchema } = props;
+  const {
+    children,
+    initialValues,
+    validationSchema,
+    successSignUpUrl = "/message/registration-successful",
+    profileRedirectUrl = "/profile",
+  } = props;
 
   const { formatMessage } = useIntl();
 
@@ -22,7 +30,7 @@ export const RegistrationBase: FC<PropsWithChildren<IRegistrationBaseProps>> = p
 
   const handleSubmit = (values: any, form: any): Promise<void> => {
     return user
-      .signUp(values, "/message/registration-successful")
+      .signUp(values, successSignUpUrl)
       .then(() => {
         enqueueSnackbar(formatMessage({ id: "snackbar.created" }), { variant: "success" });
       })
@@ -44,7 +52,7 @@ export const RegistrationBase: FC<PropsWithChildren<IRegistrationBaseProps>> = p
 
   useEffect(() => {
     if (user.isAuthenticated()) {
-      void user.getProfile("/profile");
+      void user.getProfile(profileRedirectUrl);
     }
   }, [user.isAuthenticated()]);
 

@@ -10,6 +10,7 @@ import { FormWrapper } from "@ethberry/mui-form";
 import { ApiError, useApi } from "@ethberry/provider-api";
 
 import { validationSchema } from "./validation";
+import { AUTH_ROUTES } from "../paths";
 
 interface IRestorePasswordDto {
   password: string;
@@ -17,7 +18,19 @@ interface IRestorePasswordDto {
   token: string;
 }
 
-export const RestorePassword: FC = () => {
+interface IRestorePasswordProps {
+  fetchUrl?: string;
+  successRestoreUrl?: string;
+  errorRestoreUrl?: string;
+}
+
+export const RestorePassword: FC<IRestorePasswordProps> = props => {
+  const {
+    fetchUrl = "/auth/restore-password",
+    successRestoreUrl = AUTH_ROUTES.LOGIN,
+    errorRestoreUrl = AUTH_ROUTES.FORGOT_PASSWORD,
+  } = props;
+
   const navigate = useNavigate();
   const { token } = useParams<{ token: string }>();
   const { formatMessage } = useIntl();
@@ -27,13 +40,13 @@ export const RestorePassword: FC = () => {
   const handleSubmit = (values: IRestorePasswordDto, form: any): Promise<void> => {
     return api
       .fetchJson({
-        url: "/auth/restore-password",
+        url: fetchUrl,
         method: "POST",
         data: values,
       })
       .then(() => {
         enqueueSnackbar(formatMessage({ id: "snackbar.passwordChanged" }), { variant: "success" });
-        void navigate("/login");
+        void navigate(successRestoreUrl);
       })
       .catch((e: ApiError) => {
         if (e.status === 400) {
@@ -44,7 +57,7 @@ export const RestorePassword: FC = () => {
           });
         } else if (e.status) {
           enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
-          void navigate("/forgot-password");
+          void navigate(errorRestoreUrl);
         } else {
           console.error(e);
           enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
