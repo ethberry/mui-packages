@@ -3,7 +3,7 @@
 exports[`<ButtonToolbar /> renders component 1`] = `
 <DocumentFragment>
   <div
-    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-fa87wz-MuiGrid2-root"
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-1ea765k-MuiGrid2-root"
   />
 </DocumentFragment>
 `;
