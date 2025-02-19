@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.5](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-page-layout@4.0.4...@ethberry/mui-page-layout@4.0.5) (2025-02-19)
+
+### Bug Fixes
+
+- fixed buttons toolbar props ([038468c](https://github.com/ethberry/mui-packages/commit/038468c585463317b93a2c4d5b3131750b600e76))
+- fixed pages layout snapshots ([5f9a57f](https://github.com/ethberry/mui-packages/commit/5f9a57f85586cf2decf841740ff55adac7f0ea61))
+
 ## [4.0.4](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-page-layout@4.0.3...@ethberry/mui-page-layout@4.0.4) (2025-02-16)
 
 ### Bug Fixes

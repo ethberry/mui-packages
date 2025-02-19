@@ -8,9 +8,9 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/mui-page-layout": "4.0.4",
+    "@ethberry/mui-page-layout": "4.0.5",
     "@ethberry/provider-test-id": "2.0.3",
-    "@ethberry/react-hooks": "3.0.4",
+    "@ethberry/react-hooks": "3.0.5",
     "@hookform/resolvers": "4.1.0",
     "use-debounce": "10.0.4",
     "yup": "1.6.1"
@@ -56,5 +56,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "10.0.4"
+  "version": "10.0.5"
 }

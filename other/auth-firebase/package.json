@@ -8,10 +8,10 @@
     "url": "https://github.com/ethberry/mui-packages/issues"
   },
   "dependencies": {
-    "@ethberry/mui-form": "10.0.4",
-    "@ethberry/mui-inputs-core": "9.0.4",
-    "@ethberry/mui-page-layout": "4.0.4",
-    "@ethberry/react-hooks": "3.0.4"
+    "@ethberry/mui-form": "10.0.5",
+    "@ethberry/mui-inputs-core": "9.0.5",
+    "@ethberry/mui-page-layout": "4.0.5",
+    "@ethberry/react-hooks": "3.0.5"
   },
   "description": "react component",
   "devDependencies": {
@@ -61,5 +61,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "4.1.1"
+  "version": "4.1.2"
 }
