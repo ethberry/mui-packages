@@ -18,7 +18,7 @@ exports[`<PageHeader /> renders component 1`] = `
       class="MuiGrid2-root MuiGrid2-direction-xs-row css-uxd57x-MuiGrid2-root"
     >
       <div
-        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-fa87wz-MuiGrid2-root"
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-1ea765k-MuiGrid2-root"
       />
     </div>
   </div>
