@@ -6,30 +6,31 @@ import { ForgotPassword } from "./forgot-password";
 import { RestorePassword } from "./restore-password";
 import { VerifyEmail } from "./verify-email";
 import { ResendVerificationEmail } from "./resend-verification-email";
+import { AUTH_ROUTES } from "./paths";
 
 export const routes: Array<RouteObject> = [
   {
-    path: "/registration",
+    path: AUTH_ROUTES.REGISTRATION,
     element: <Registration />,
   },
   {
-    path: "/login",
+    path: AUTH_ROUTES.LOGIN,
     element: <SystemLogin />,
   },
   {
-    path: "/forgot-password",
+    path: AUTH_ROUTES.FORGOT_PASSWORD,
     element: <ForgotPassword />,
   },
   {
-    path: "/restore-password/:token",
+    path: AUTH_ROUTES.RESTORE_PASSWORD,
     element: <RestorePassword />,
   },
   {
-    path: "/verify-email/:token",
+    path: AUTH_ROUTES.VERIFY_EMAIL,
     element: <VerifyEmail />,
   },
   {
-    path: "/resend-verification-email",
+    path: AUTH_ROUTES.RESEND_EMAIL,
     element: <ResendVerificationEmail />,
   },
 ];

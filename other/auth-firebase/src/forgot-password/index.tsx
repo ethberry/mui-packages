@@ -3,47 +3,41 @@ import { Grid2 } from "@mui/material";
 import { useNavigate } from "react-router";
 import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
+import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 
-import { Captcha } from "@ethberry/mui-inputs-captcha";
 import { PageHeader } from "@ethberry/mui-page-layout";
 import { FormWrapper } from "@ethberry/mui-form";
 import { TextInput } from "@ethberry/mui-inputs-core";
 import { useUser } from "@ethberry/provider-user";
-import { ApiError, useApi } from "@ethberry/provider-api";
+import { ApiError } from "@ethberry/provider-api";
 
 import { validationSchema } from "./validation";
 
 interface IForgotPasswordDto {
   email: string;
-  captcha: string;
 }
 
 interface IForgotPasswordProps {
-  fetchUrl?: string;
+  resetEmailUrl?: string;
   successSendUrl?: string;
   profileRedirectUrl?: string;
 }
 
 export const ForgotPassword: FC<IForgotPasswordProps> = props => {
   const {
-    fetchUrl = "/auth/forgot-password",
+    resetEmailUrl = `${process.env.BE_URL}/restore-password`,
     successSendUrl = "/message/forgot-successful",
     profileRedirectUrl = "/profile",
   } = props;
 
   const navigate = useNavigate();
   const { formatMessage } = useIntl();
+  const auth = getAuth();
 
   const user = useUser<any>();
-  const api = useApi();
 
   const handleSubmit = (values: IForgotPasswordDto, form: any): Promise<void> => {
-    return api
-      .fetchJson({
-        url: fetchUrl,
-        method: "POST",
-        data: values,
-      })
+    return sendPasswordResetEmail(auth, values.email, { url: resetEmailUrl })
       .then(() => {
         void navigate(successSendUrl);
       })
@@ -87,12 +81,10 @@ export const ForgotPassword: FC<IForgotPasswordProps> = props => {
           onSubmit={handleSubmit}
           initialValues={{
             email: "",
-            captcha: "",
           }}
           testId="ForgotPassword"
         >
           <TextInput name="email" autoComplete="username" />
-          <Captcha />
         </FormWrapper>
       </Grid2>
     </Grid2>

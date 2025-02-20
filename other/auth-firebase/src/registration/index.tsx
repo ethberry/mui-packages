@@ -10,7 +10,14 @@ import { PasswordInput, TextInput } from "@ethberry/mui-inputs-core";
 
 import { validationSchema } from "./validation";
 
-export const Registration: FC<PropsWithChildren> = () => {
+interface IRegistrationProps extends PropsWithChildren {
+  signUpRedirectUrl?: string;
+  profileRedirectUrl?: string;
+}
+
+export const Registration: FC<IRegistrationProps> = props => {
+  const { signUpRedirectUrl = "/message/registration-successful", profileRedirectUrl = "/profile" } = props;
+
   const { formatMessage } = useIntl();
 
   const user = useUser<any>();
@@ -18,7 +25,7 @@ export const Registration: FC<PropsWithChildren> = () => {
   const handleSubmit = (values: any, form: any): Promise<void> => {
     form.reset(values, { keepValues: true });
     return user
-      .signUp(values, "/message/registration-successful")
+      .signUp(values, signUpRedirectUrl)
       .then(() => {
         enqueueSnackbar(formatMessage({ id: "snackbar.created" }), { variant: "success" });
       })
@@ -33,7 +40,7 @@ export const Registration: FC<PropsWithChildren> = () => {
 
   useEffect(() => {
     if (user.isAuthenticated()) {
-      void user.getProfile("/profile");
+      void user.getProfile(profileRedirectUrl);
     }
   }, [user.isAuthenticated()]);
 

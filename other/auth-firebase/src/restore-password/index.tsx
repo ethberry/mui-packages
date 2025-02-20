@@ -3,11 +3,11 @@ import { useNavigate, useParams } from "react-router";
 import { Grid2 } from "@mui/material";
 import { enqueueSnackbar } from "notistack";
 import { useIntl } from "react-intl";
+import { getAuth, confirmPasswordReset } from "firebase/auth";
 
 import { PasswordInput } from "@ethberry/mui-inputs-core";
 import { PageHeader } from "@ethberry/mui-page-layout";
 import { FormWrapper } from "@ethberry/mui-form";
-import { ApiError, useApi } from "@ethberry/provider-api";
 
 import { validationSchema } from "./validation";
 import { AUTH_ROUTES } from "../paths";
@@ -19,50 +19,42 @@ interface IRestorePasswordDto {
 }
 
 interface IRestorePasswordProps {
-  fetchUrl?: string;
-  successRestoreUrl?: string;
-  errorRestoreUrl?: string;
+  successUpdateUrl?: string;
+  errorUpdateUrl?: string;
 }
 
 export const RestorePassword: FC<IRestorePasswordProps> = props => {
-  const {
-    fetchUrl = "/auth/restore-password",
-    successRestoreUrl = AUTH_ROUTES.LOGIN,
-    errorRestoreUrl = AUTH_ROUTES.FORGOT_PASSWORD,
-  } = props;
+  const { successUpdateUrl = AUTH_ROUTES.LOGIN, errorUpdateUrl = AUTH_ROUTES.FORGOT_PASSWORD } = props;
 
   const navigate = useNavigate();
   const { token } = useParams<{ token: string }>();
   const { formatMessage } = useIntl();
 
-  const api = useApi();
+  const auth = getAuth();
 
-  const handleSubmit = (values: IRestorePasswordDto, form: any): Promise<void> => {
-    return api
-      .fetchJson({
-        url: fetchUrl,
-        method: "POST",
-        data: values,
-      })
-      .then(() => {
-        enqueueSnackbar(formatMessage({ id: "snackbar.passwordChanged" }), { variant: "success" });
-        void navigate(successRestoreUrl);
-      })
-      .catch((e: ApiError) => {
-        if (e.status === 400) {
-          const errors = e.getLocalizedValidationErrors();
+  const handleSubmit = async (values: IRestorePasswordDto, form: any): Promise<void> => {
+    try {
+      if (!token) {
+        throw Error();
+      }
+      await confirmPasswordReset(auth, token, values.password);
+      enqueueSnackbar(formatMessage({ id: "snackbar.passwordChanged" }), { variant: "success" });
+      void navigate(successUpdateUrl);
+    } catch (e) {
+      if (e.status === 400) {
+        const errors = e.getLocalizedValidationErrors();
 
-          Object.keys(errors).forEach(key => {
-            form.setError(key, { type: "custom", message: errors[key] });
-          });
-        } else if (e.status) {
-          enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
-          void navigate(errorRestoreUrl);
-        } else {
-          console.error(e);
-          enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
-        }
-      });
+        Object.keys(errors).forEach(key => {
+          form.setError(key, { type: "custom", message: errors[key] });
+        });
+      } else if (e.status) {
+        enqueueSnackbar(formatMessage({ id: `snackbar.${e.message}` }), { variant: "error" });
+        void navigate(errorUpdateUrl);
+      } else {
+        console.error(e);
+        enqueueSnackbar(formatMessage({ id: "snackbar.error" }), { variant: "error" });
+      }
+    }
   };
 
   return (
@@ -81,7 +73,6 @@ export const RestorePassword: FC<IRestorePasswordProps> = props => {
         initialValues={{
           password: "",
           confirm: "",
-          token,
         }}
         testId="RestorePassword"
       >

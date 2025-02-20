@@ -17,7 +17,14 @@ interface IResendVerificationEmailDto {
   captcha: string;
 }
 
-export const ResendVerificationEmail: FC = () => {
+interface IResendVerificationEmailProps {
+  fetchUrl?: string;
+  successResendUrl?: string;
+}
+
+export const ResendVerificationEmail: FC<IResendVerificationEmailProps> = props => {
+  const { fetchUrl = "/auth/resend-email-verification", successResendUrl = "/message/resend-successful" } = props;
+
   const navigate = useNavigate();
   const { formatMessage } = useIntl();
 
@@ -26,12 +33,12 @@ export const ResendVerificationEmail: FC = () => {
   const handleSubmit = (values: IResendVerificationEmailDto, form: any): Promise<void> => {
     return api
       .fetchJson({
-        url: "/auth/resend-email-verification",
+        url: fetchUrl,
         method: "POST",
         data: values,
       })
       .then(() => {
-        void navigate("/message/resend-successful");
+        void navigate(successResendUrl);
       })
       .catch((e: ApiError) => {
         if (e.status === 400) {

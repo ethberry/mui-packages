@@ -23,10 +23,11 @@ export interface IFirebaseLoginButtonProps {
 
 export interface IFirebaseLoginProps {
   buttons?: Array<ComponentType<IFirebaseLoginButtonProps>>;
+  profileRedirectUrl?: string;
 }
 
 export const Login: FC<IFirebaseLoginProps> = props => {
-  const { buttons } = props;
+  const { buttons, profileRedirectUrl = "/dashboard" } = props;
 
   const { formatMessage } = useIntl();
   const location = useLocation();
@@ -64,7 +65,7 @@ export const Login: FC<IFirebaseLoginProps> = props => {
   };
 
   useDidMountEffect(() => {
-    void user.getProfile("/dashboard");
+    void user.getProfile(profileRedirectUrl);
   }, [user.isAuthenticated()]);
 
   return (
