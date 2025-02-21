@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0](https://github.com/ethberry/mui-packages/compare/@ethberry/auth-firebase@4.1.2...@ethberry/auth-firebase@4.2.0) (2025-02-21)
+
+### Features
+
+- added forgot password to auth-fb ([c2cc973](https://github.com/ethberry/mui-packages/commit/c2cc97325715d3f72098d7be65002b8f0963a13a))
+- added restore password component to auth-fb ([58aabd3](https://github.com/ethberry/mui-packages/commit/58aabd333bc537fdf80a35f6d625a83527fb105a))
+
 ## [4.1.2](https://github.com/ethberry/mui-packages/compare/@ethberry/auth-firebase@4.1.1...@ethberry/auth-firebase@4.1.2) (2025-02-19)
 
 **Note:** Version bump only for package @ethberry/auth-firebase

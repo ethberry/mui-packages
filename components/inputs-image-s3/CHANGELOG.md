@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.6](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-image-s3@10.0.5...@ethberry/mui-inputs-image-s3@10.0.6) (2025-02-21)
+
+### Bug Fixes
+
+- pass region ([42e4296](https://github.com/ethberry/mui-packages/commit/42e429602a808d6241e060d9bfa5d7b8332f1420))
+
 ## [10.0.5](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-image-s3@10.0.4...@ethberry/mui-inputs-image-s3@10.0.5) (2025-02-19)
 
 **Note:** Version bump only for package @ethberry/mui-inputs-image-s3

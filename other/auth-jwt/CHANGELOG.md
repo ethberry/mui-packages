@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.2.0](https://github.com/ethberry/mui-packages/compare/@ethberry/auth-jwt@13.1.2...@ethberry/auth-jwt@13.2.0) (2025-02-21)
+
+### Bug Fixes
+
+- little fixes with props ([9900bba](https://github.com/ethberry/mui-packages/commit/9900bbae56e7238f08ad841d9172f62da8c8cfe6))
+- return removed forgot password from auth-jwt and refactored it ([176811a](https://github.com/ethberry/mui-packages/commit/176811aecdbf68cad2b37dcc0b79c91c239c3285))
+
+### Features
+
+- added forgot password to auth-fb ([c2cc973](https://github.com/ethberry/mui-packages/commit/c2cc97325715d3f72098d7be65002b8f0963a13a))
+
 ## [13.1.2](https://github.com/ethberry/mui-packages/compare/@ethberry/auth-jwt@13.1.1...@ethberry/auth-jwt@13.1.2) (2025-02-19)
 
 **Note:** Version bump only for package @ethberry/auth-jwt

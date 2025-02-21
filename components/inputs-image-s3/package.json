@@ -73,5 +73,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "10.0.5"
+  "version": "10.0.6"
 }

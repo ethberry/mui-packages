@@ -61,5 +61,5 @@
   "sideEffects": false,
   "title": "-=EthBerry Studio=-",
   "types": "./dist/index.d.ts",
-  "version": "4.1.2"
+  "version": "4.2.0"
 }
