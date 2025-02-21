@@ -82,11 +82,12 @@ export interface IPhotoInputProps {
   name: string;
   label?: string | number | ReactElement;
   bucket?: string;
+  region?: string;
   accept?: Accept;
 }
 
 export const PhotoInput: FC<IPhotoInputProps> = props => {
-  const { name, label, accept, bucket } = props;
+  const { name, label, accept, bucket, region } = props;
 
   const form = useFormContext<any>();
   const value: Array<{ caption: string; imageUrl: string }> = get(useWatch(), name);
@@ -178,6 +179,7 @@ export const PhotoInput: FC<IPhotoInputProps> = props => {
                 label={label}
                 onChange={handleFileChange}
                 bucket={bucket}
+                region={region}
                 accept={accept}
               />
             </ProgressOverlay>
