@@ -17,8 +17,8 @@
   "devDependencies": {
     "@ethberry/provider-user": "7.1.1",
     "@ethberry/yup-rules": "5.0.5",
-    "@mui/material": "6.4.4",
-    "@mui/styles": "6.4.4",
+    "@mui/material": "6.4.5",
+    "@mui/styles": "6.4.5",
     "firebase": "11.3.1",
     "notistack": "3.0.2",
     "react": "19.0.0",
