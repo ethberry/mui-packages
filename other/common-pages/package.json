@@ -13,11 +13,11 @@
   },
   "devDependencies": {
     "@mui/material": "6.4.4",
-    "@types/node": "22.13.4",
-    "@types/react": "19.0.9",
+    "@types/node": "22.13.5",
+    "@types/react": "19.0.10",
     "react": "19.0.0",
     "react-intl": "7.1.6",
-    "react-router": "7.1.5"
+    "react-router": "7.2.0"
   },
   "engines": {
     "node": ">=22"

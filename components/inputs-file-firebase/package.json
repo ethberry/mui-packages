@@ -10,7 +10,7 @@
   "dependencies": {
     "@ethberry/firebase": "2.0.4",
     "@ethberry/mui-inputs-file": "8.0.5",
-    "uuid": "11.0.5"
+    "uuid": "11.1.0"
   },
   "description": "react widget",
   "devDependencies": {
