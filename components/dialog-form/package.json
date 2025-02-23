@@ -12,25 +12,25 @@
     "@ethberry/mui-form": "10.0.5",
     "@ethberry/mui-page-layout": "4.0.5",
     "@ethberry/react-hooks": "3.0.5",
-    "react-router": "7.1.5"
+    "react-router": "7.2.0"
   },
   "description": "react widget",
   "devDependencies": {
     "@ethberry/mui-inputs-core": "9.0.5",
     "@mui/material": "6.4.4",
-    "@storybook/react": "8.5.6",
+    "@storybook/react": "8.5.8",
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.2.0",
     "@types/jest": "29.5.14",
-    "@types/react": "19.0.9",
+    "@types/react": "19.0.10",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-hook-form": "7.54.2",
     "react-intl": "7.1.6",
-    "react-router": "7.1.5",
-    "ts-jest": "29.2.5"
+    "react-router": "7.2.0",
+    "ts-jest": "29.2.6"
   },
   "engines": {
     "node": ">=22"
