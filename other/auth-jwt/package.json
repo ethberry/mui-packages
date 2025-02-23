@@ -21,9 +21,9 @@
   "devDependencies": {
     "@ethberry/provider-api": "8.1.1",
     "@ethberry/provider-user": "7.1.1",
-    "@mui/icons-material": "6.4.4",
-    "@mui/material": "6.4.4",
-    "@mui/styles": "6.4.4",
+    "@mui/icons-material": "6.4.5",
+    "@mui/material": "6.4.5",
+    "@mui/styles": "6.4.5",
     "@types/node": "22.13.5",
     "@types/react": "19.0.10",
     "notistack": "3.0.2",
