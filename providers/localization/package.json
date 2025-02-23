@@ -15,8 +15,8 @@
   },
   "description": "react i18n provider",
   "devDependencies": {
-    "@mui/icons-material": "6.4.4",
-    "@mui/material": "6.4.4",
+    "@mui/icons-material": "6.4.5",
+    "@mui/material": "6.4.5",
     "@types/react": "19.0.10",
     "react": "19.0.0",
     "react-intl": "7.1.6"
