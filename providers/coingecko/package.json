@@ -9,7 +9,7 @@
   },
   "description": "react coin gecko provider",
   "devDependencies": {
-    "@types/react": "19.0.9",
+    "@types/react": "19.0.10",
     "notistack": "3.0.2",
     "react": "19.0.0",
     "react-intl": "7.1.6"
