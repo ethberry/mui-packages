@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.6 (2025-02-23)
+
+### Bug Fixes
+
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([6cf95fe](https://github.com/ethberry/common-packages/commit/6cf95fef5b550513468fefaf7a39b312a6f696ff))
+- **deps:** update all non-major dependencies ([ea4350a](https://github.com/ethberry/common-packages/commit/ea4350a63d05fd4b3f1e568a17273a45b22db099))
+
 ## [3.0.5](https://github.com/ethberry/common-packages/compare/@ethberry/geetest@3.0.4...@ethberry/geetest@3.0.5) (2025-02-19)
 
 **Note:** Version bump only for package @ethberry/geetest

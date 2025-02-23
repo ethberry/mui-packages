@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.1](https://github.com/ethberry/mui-packages/compare/@ethberry/auth-firebase@4.2.0...@ethberry/auth-firebase@4.2.1) (2025-02-23)
+
+### Bug Fixes
+
+- **deps:** update [@ethberry](https://github.com/ethberry) packages ([6cf95fe](https://github.com/ethberry/mui-packages/commit/6cf95fef5b550513468fefaf7a39b312a6f696ff))
+- **deps:** update [@mui](https://github.com/mui) packages ([f153d52](https://github.com/ethberry/mui-packages/commit/f153d52b1748149413124facc1f6dbe997763ab8))
+- **deps:** update all non-major dependencies ([ea4350a](https://github.com/ethberry/mui-packages/commit/ea4350a63d05fd4b3f1e568a17273a45b22db099))
+
 # [4.2.0](https://github.com/ethberry/mui-packages/compare/@ethberry/auth-firebase@4.1.2...@ethberry/auth-firebase@4.2.0) (2025-02-21)
 
 ### Features

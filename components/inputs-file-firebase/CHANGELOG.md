@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 8.0.6 (2025-02-23)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([ea4350a](https://github.com/ethberry/mui-packages/commit/ea4350a63d05fd4b3f1e568a17273a45b22db099))
+
 ## [8.0.5](https://github.com/ethberry/mui-packages/compare/@ethberry/mui-inputs-file-firebase@8.0.4...@ethberry/mui-inputs-file-firebase@8.0.5) (2025-02-19)
 
 **Note:** Version bump only for package @ethberry/mui-inputs-file-firebase
