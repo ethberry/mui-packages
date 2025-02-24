@@ -1,6 +1,6 @@
 import { string } from "yup";
 
-import { emailMaxLength } from "../../../../common-packages/other/constants/src";
+import { emailMaxLength } from "@ethberry/constants";
 
 export const emailValidationSchema = string()
   .max(emailMaxLength, "form.validations.tooLong")

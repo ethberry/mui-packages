@@ -1,6 +1,6 @@
 import { object, string, ValidationError } from "yup";
 
-import { emptyStateString, simpleFormatting } from "../../../../common-packages/react/draft-js-utils/src";
+import { emptyStateString, simpleFormatting } from "@ethberry/draft-js-utils";
 
 import "./draft-has-text";
 

@@ -1,6 +1,6 @@
 import { string } from "yup";
 
-import { lastNameMinLength, lastNameMaxLength } from "../../../../common-packages/other/constants/src";
+import { lastNameMinLength, lastNameMaxLength } from "@ethberry/constants";
 
 export const lastNameValidationSchema = string()
   .min(lastNameMinLength, "form.validations.tooShort")
