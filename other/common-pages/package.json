@@ -12,7 +12,7 @@
     "@ethberry/constants": "0.13.7"
   },
   "devDependencies": {
-    "@mui/material": "6.4.5",
+    "@mui/material": "6.4.6",
     "@types/node": "22.13.5",
     "@types/react": "19.0.10",
     "react": "19.0.0",
