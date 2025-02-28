@@ -17,7 +17,7 @@
   "description": "react widget",
   "devDependencies": {
     "@ethberry/mui-inputs-core": "9.0.6",
-    "@mui/material": "6.4.5",
+    "@mui/material": "6.4.6",
     "@storybook/react": "8.5.8",
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.2.0",
