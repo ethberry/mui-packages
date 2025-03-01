@@ -11,7 +11,7 @@
     "@ethberry/constants": "0.13.7",
     "@ethberry/react-hooks": "3.0.6",
     "@ethberry/types-collection": "1.5.21",
-    "@reduxjs/toolkit": "2.5.1",
+    "@reduxjs/toolkit": "2.6.0",
     "qs": "6.14.0"
   },
   "description": "react hooks",

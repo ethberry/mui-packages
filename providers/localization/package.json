@@ -11,7 +11,7 @@
     "@ethberry/constants": "0.13.7",
     "@ethberry/redux": "1.0.6",
     "@ethberry/utils": "1.6.1",
-    "@reduxjs/toolkit": "2.5.1"
+    "@reduxjs/toolkit": "2.6.0"
   },
   "description": "react i18n provider",
   "devDependencies": {
