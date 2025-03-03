@@ -11,14 +11,14 @@
     "@ethberry/mui-page-layout": "4.0.6",
     "@ethberry/provider-test-id": "2.0.4",
     "clsx": "2.1.1",
-    "react-dropzone": "14.3.6"
+    "react-dropzone": "14.3.8"
   },
   "description": "react widget",
   "devDependencies": {
     "@mui/icons-material": "6.4.5",
     "@mui/material": "6.4.5",
     "@mui/styles": "6.4.5",
-    "@storybook/react": "8.5.8",
+    "@storybook/react": "8.6.3",
     "@types/react": "19.0.10",
     "notistack": "3.0.2",
     "react": "19.0.0",

@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@mui/material": "6.4.5",
-    "@types/node": "22.13.5",
+    "@types/node": "22.13.8",
     "@types/react": "19.0.10",
     "react": "19.0.0",
     "react-intl": "7.1.6",
