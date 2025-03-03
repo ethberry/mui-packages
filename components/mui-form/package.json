@@ -11,7 +11,7 @@
     "@ethberry/mui-page-layout": "4.0.6",
     "@ethberry/provider-test-id": "2.0.4",
     "@ethberry/react-hooks": "3.0.6",
-    "@hookform/resolvers": "4.1.1",
+    "@hookform/resolvers": "4.1.3",
     "use-debounce": "10.0.4",
     "yup": "1.6.1"
   },
